@@ -1,0 +1,7 @@
+%% Header
+clc;
+close all;
+
+%% Load Data
+
+data = readtable(TestData/mixed);
