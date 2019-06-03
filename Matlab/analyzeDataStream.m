@@ -1,4 +1,4 @@
-function features = analyzeDataStream(streamTag, streamData, streamTime)
+function [tFeatures, fFeatures, nlFeatures] = analyzeDataStream(streamTag, streamData, streamTime)
     if ~isempty(streamData)
         switch(streamTag)
             case 'E4_Gsr'
@@ -47,11 +47,11 @@ function features = analyzeDataStream(streamTag, streamData, streamTime)
                 filtData = filter(b, a, streamData);
                 % display filtered data
 
-                % figure;
-                % plot(bvpTime, filtData);
-                % xlabel ('time');
-                % ylabel ('amplitude');
-                % title ('Filtered BVP data');
+                figure;
+                plot(streamTime, filtData);
+                xlabel ('time');
+                ylabel ('amplitude');
+                title ('Filtered BVP data');
 
                 %% detrending
                 detrendData = detrend(filtData);
@@ -213,6 +213,8 @@ function features = analyzeDataStream(streamTag, streamData, streamTime)
 
                 %% FEATURES
                 
+                %% Time Domain
+                
                 % AVNN, average of all NN intevals (avg of als IBI)
                 AV_IBI = meanIbi * 1000;
                 AV_Hr = 60/meanIbi;
@@ -222,16 +224,79 @@ function features = analyzeDataStream(streamTag, streamData, streamTime)
                 N = length(ibiT)-1;
                 
                 SS = 0;
-                RMSSD = 0;
                 
                 for m = 1:(N)
                     SS = SS + (ibiT(m+1) - ibiT(m))^2;
                 end
                 RMSSD = sqrt(SS/N);
           
+                %% Frequency Domain
+                % band power approach
+                y = ibiT;   
+                L =length(y);
+                NFFT = 2^nextpow2(L); % Next power of 2 from length of y
+                Y = fft(y,NFFT)/L;
+                f = Fs/2*linspace(0,1,NFFT/2+1);
+
+                % Plot single-sided amplitude spectrum.
+                figure;
+                plot(f,2*abs(Y(1:NFFT/2+1))) 
+                title('Single-Sided Amplitude Spectrum of y(t)')
+                xlabel('Frequency (Hz)')
+                ylabel('|Y(f)|')
                 
+                % create signal bands by filtering
+                % total spectral power of all NN intervals below 0,4 Hz
+                S_POW = bandpower(y);
                 
-                features = [throwPerc, AV_IBI, SD_IBI, RMSSD, AV_Hr];
+                T_POW = bandpower(y, Fs, [0 0.4]);
+                T_PERC = 100* (T_POW/S_POW);
+                
+                UVLF_POW = bandpower(y, Fs, [0 0.003]);
+                UVLF_PERC = 100* (UVLF_POW/T_POW);
+                
+                VLF_POW = bandpower(y, Fs, [0.003 0.04]);
+                VLF_PERC = 100* (VLF_POW/T_POW);
+                
+                LF_POW = bandpower(y, Fs, [0.04 0.15]);
+                LF_PERC = 100* (LF_POW/T_POW);
+                
+                HF_POW = bandpower(y, Fs, [0.15 0.4]);
+                HF_PERC = 100* (HF_POW/T_POW);
+                
+                LF_HF = LF_POW/HF_POW;
+                
+                % lomb scargle
+                HRV = 1./ibiT;
+                sum = 0;
+                t = zeros(1,length(ibiT));
+                
+                for i = 1:length(ibiT)
+                    
+                    sum = sum + ibiT(i);
+                    t(i) = sum;
+                end
+                figure;
+                plot(t,HRV);
+                
+                [pxx, f] = plomb(HRV,t);
+                figure;
+                plot(f,pxx)
+                xlabel('Frequency')
+                title('Power Spectrum')
+                grid
+                
+                %powerSpectralDensity(ibiT, 64)
+                figure;
+                
+                tHRV = t;
+                plomb(HRV,tHRV,'Pd',[0.95, 0.5]);
+                
+                tFeatures = [throwPerc, AV_IBI, SD_IBI, RMSSD, AV_Hr];
+                %fFeatures = [S_POW, T_POW, T_PERC, UVLF_POW, UVLF_PERC, VLF_POW, VLF_PERC, LF_POW, LF_PERC, HF_POW, HF_PERC, LF_HF];
+                fFeatures = [pxx, f];
+                nlFeatures = [];
+                
             case 'E4_Ibi'
 
             case 'E4_Hr'
