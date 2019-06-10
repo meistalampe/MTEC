@@ -123,7 +123,8 @@ def get_stream_time(stream: Sample):
             times.append(t)
 
         time = np.array(times)
-        return time
+        time_in_seconds = time - time[0]
+        return time_in_seconds
     else:
         print('The stream is empty! Could not extract time.')
         return []

@@ -2,6 +2,7 @@
   <dictionary name="Dominik">
     <words>
       <w>detrend</w>
+      <w>lowpass</w>
     </words>
   </dictionary>
 </component>
