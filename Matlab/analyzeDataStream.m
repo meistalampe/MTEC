@@ -7,27 +7,27 @@ function [tFeatures, fFeatures, nlFeatures] = analyzeDataStream(streamTag, strea
                 
                 %% RAW DATA
 
-%                 figure;
-%                 plot(streamTime, streamData);
-%                 xlabel ('time');
-%                 ylabel ('amplitude');
-%                 title ('"Raw" BVP data');
-%                 
-%                 Fs = 64;                    % Sampling frequency
-%                 % T = 1/Fs;                   % Sample time
-%                 L = length(streamData);        % Length of signal
-%                 % t = streamTime;                % Time vector
-%                 NFFT = 2^nextpow2(L);       % Next power of 2 from length of y
-%                 y = bvpData;
-%                 Y = fft(y,NFFT)/L;
-%                 f = Fs/2*linspace(0,1,NFFT/2+1);
-% 
-%                 % Plot single-sided amplitude spectrum.
-%                 figure;
-%                 plot(f,2*abs(Y(1:NFFT/2+1))) 
-%                 title('Single-Sided Amplitude Spectrum of y(t)')
-%                 xlabel('Frequency (Hz)')
-%                 ylabel('|Y(f)|')
+                figure;
+                plot(streamTime, streamData);
+                xlabel ('time');
+                ylabel ('amplitude');
+                title ('"Raw" BVP data');
+                
+                Fs = 64;                    % Sampling frequency
+                % T = 1/Fs;                   % Sample time
+                L = length(streamData);        % Length of signal
+                % t = streamTime;                % Time vector
+                NFFT = 2^nextpow2(L);       % Next power of 2 from length of y
+                y = streamData;
+                Y = fft(y,NFFT)/L;
+                f = Fs/2*linspace(0,1,NFFT/2+1);
+
+                % Plot single-sided amplitude spectrum.
+                figure;
+                plot(f,2*abs(Y(1:NFFT/2+1))) 
+                title('Single-Sided Amplitude Spectrum of y(t)')
+                xlabel('Frequency (Hz)')
+                ylabel('|Y(f)|')
                 
                 %% PREPROCESSING
 

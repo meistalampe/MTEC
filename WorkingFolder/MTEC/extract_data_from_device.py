@@ -101,7 +101,7 @@ def get_stream_data(stream: Sample):
     values = []
     if stream:
         for s in stream:
-            v_str = s.value.strip()
+            v_str = s.value.rstrip()
             v_clr = v_str.replace(',', '.')
             v = float(v_clr)
             values.append(v)
@@ -117,7 +117,7 @@ def get_stream_time(stream: Sample):
     times = []
     if stream:
         for s in stream:
-            t_str = s.time.strip()
+            t_str = s.time.rstrip()
             t_clr = t_str.replace(',', '.')
             t = float(t_clr)
             times.append(t)

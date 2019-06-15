@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cceb26c-0173-4b95-b2b1-d5f78585e4fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Dominik.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Dominik.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cwt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Matlab/analyzeDataStream.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../Matlab/analyzeDataStream.m" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MTEC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MTEC.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/extract_data_from_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract_data_from_device.py" afterDir="false" />
@@ -36,13 +38,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/program.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="667">
-              <caret line="65" selection-start-line="65" selection-end-line="65" />
+            <state relative-caret-position="664">
+              <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
               <folding>
                 <element signature="e#126#275#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="715">
+              <caret line="131" selection-start-line="131" selection-end-line="131" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -51,47 +65,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/extract_data_from_device.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2091">
-              <caret line="126" column="30" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
+            <state relative-caret-position="1174">
+              <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#335#344#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/feature_extraction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tcp_server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_types.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -122,20 +100,9 @@
         <option value="$PROJECT_DIR$/process_data.py" />
         <option value="$PROJECT_DIR$/feature_extraction.py" />
         <option value="$PROJECT_DIR$/extract_data_from_device.py" />
-        <option value="$PROJECT_DIR$/data_preprocessing.py" />
+        <option value="$PROJECT_DIR$/cwt.py" />
         <option value="$PROJECT_DIR$/program.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/MTEC.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/other.xml" />
-        <option value="$PROJECT_DIR$/.idea/dictionaries/Dominik.xml" />
+        <option value="$PROJECT_DIR$/data_preprocessing.py" />
       </list>
     </option>
   </component>
@@ -168,11 +135,19 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/program.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="python.debugger.dataview.autoresize" value="false" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings>
+        <option name="useSoftWraps" value="true" />
+      </console-settings>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -186,7 +161,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.program">
+  <component name="RunManager" selected="Python.cwt">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="MTEC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,6 +176,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="cwt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="MTEC" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="E:\GitHub\MTEC\WorkingFolder\MTEC\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cwt.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -277,10 +271,15 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.cwt" />
         <item itemvalue="Python.data_preprocessing" />
         <item itemvalue="Python.tcp_server" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -298,25 +297,37 @@
       <workItem from="1560103608343" duration="1255000" />
       <workItem from="1560166410035" duration="6135000" />
       <workItem from="1560183985733" duration="651000" />
+      <workItem from="1560335455460" duration="3566000" />
+      <workItem from="1560347183932" duration="7198000" />
+      <workItem from="1560608078094" duration="13273000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28799000" />
+    <option name="totallyTimeSpent" value="52836000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49410504" visible="true" weight="0.118336886" />
-      <window_info id="Structure" order="1" sideWeight="0.50589496" side_tool="true" visible="true" weight="0.118336886" />
-      <window_info id="Favorites" order="2" sideWeight="0.50141245" side_tool="true" weight="0.1130064" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4908896" visible="true" weight="0.19509594" />
+      <window_info id="Structure" order="1" sideWeight="0.5091104" side_tool="true" visible="true" weight="0.19509594" />
+      <window_info id="Favorites" order="2" sideWeight="0.5084746" side_tool="true" weight="0.19296375" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3290461" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39978564" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3290461" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3290461" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
@@ -326,17 +337,18 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" x="710" y="370" width="500" height="310" id="SciView" maximized="true" order="3" sideWeight="0.49520767" type="WINDOWED" weight="0.26652452" />
-      <window_info anchor="right" x="0" y="0" width="434" height="866" id="Documentation" order="4" sideWeight="0.5016077" side_tool="true" visible="true" weight="0.32995737" />
-      <window_info active="true" anchor="right" id="Database" order="5" sideWeight="0.49839228" visible="true" weight="0.32995737" />
+      <window_info anchor="right" x="1124" y="349" width="500" height="310" id="SciView" maximized="true" order="3" sideWeight="0.49520767" type="WINDOWED" weight="0.26652452" />
+      <window_info anchor="right" x="0" y="0" width="434" height="866" id="Documentation" order="4" sideWeight="0.50482315" side_tool="true" visible="true" weight="0.24040511" />
+      <window_info anchor="right" id="Database" order="5" sideWeight="0.49517685" visible="true" weight="0.24040511" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MTEC$program.coverage" NAME="program Coverage Results" MODIFIED="1560175460728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MTEC$program.coverage" NAME="program Coverage Results" MODIFIED="1560347239535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MTEC$MTEC.coverage" NAME="program Coverage Results" MODIFIED="1559940200542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/MTEC$cwt.coverage" NAME="cwt Coverage Results" MODIFIED="1560612880972" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/DataRepository/recording_2019-05-23-14-15-10.csv">
@@ -347,32 +359,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/low_pass_filter.py" />
-    <entry file="file://$PROJECT_DIR$/program.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="667">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-          <folding>
-            <element signature="e#126#275#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extract_data_from_device.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2091">
-          <caret line="126" column="30" selection-start-line="126" selection-start-column="30" selection-end-line="126" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="54" column="28" selection-start-line="54" selection-start-column="28" selection-end-line="54" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/DataRepository/rec_bvp.csv">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/feature_extraction.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -392,6 +380,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/matplotlib/axes/_base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="934" selection-start-line="934" selection-end-line="934" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cwt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
+          <folding>
+            <element signature="e#0#149#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extract_data_from_device.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1174">
+          <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
+          <folding>
+            <element signature="e#335#344#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/program.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="664">
+          <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+          <folding>
+            <element signature="e#126#275#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="131" selection-start-line="131" selection-end-line="131" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
