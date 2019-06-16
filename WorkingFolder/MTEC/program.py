@@ -8,7 +8,8 @@ Description:
 from extract_data_from_device import print_header, get_folder_from_user, search_for_latest_file, parse_file_for_tag, \
     get_stream_data, get_stream_time
 from data_preprocessing import butter_lowpass_filter, butter_lowpass, detrend_the_signal, \
-    find_negative_peaks_in_signal, get_frequency_bands, find_positive_peaks_in_signal, pass_only_valid_peaks
+    find_negative_peaks_in_signal, get_frequency_bands, find_positive_peaks_in_signal, pass_only_valid_peaks, \
+    bandpower, plot_spectrum_methods
 from feature_extraction import feature_extraction_frequency_domain, feature_extraction_time_domain, feature_extraction_non_linear
 from tcp_server import wait_for_new_data
 
@@ -74,7 +75,28 @@ def main():
         inter_beat_intervals = np.diff(valid_peaks)
         frequency_band = get_frequency_bands(inter_beat_intervals, (0.0, 0.4))
 
+        # trial code bandpower methods
+        data = inter_beat_intervals
+        sf = 64
+        # Multitaper delta power
+        bp = bandpower(data, sf, [0.0, 0.4], 'multitaper')
+        bp_rel = bandpower(data, sf, [0.0, 0.4], 'multitaper', relative=True)
+        print('Absolute delta power: %.3f' % bp)
+        print('Relative delta power: %.3f' % bp_rel)
+
+        # Delta-beta ratio
+        # One advantage of the multitaper is that we don't need to define a window length.
+        db = bandpower(data, sf, [0.0, 0.4], 'multitaper') / bandpower(data, sf, [12, 30], 'multitaper')
+        # Ratio based on the relative power
+        db_rel = bandpower(data, sf, [0.0, 0.4], 'multitaper', relative=True) / \
+                 bandpower(data, sf, [0.0, 32], 'multitaper', relative=True)
+        print('Delta/beta ratio (absolute): %.3f' % db)
+        print('Delta/beta ratio (relative): %.3f' % db_rel)
+
         print('Finished processing.')
+
+        # Example: plot the 0.5 - 2 Hz band
+        plot_spectrum_methods(data, sf, 4, [0.5, 2], dB=True)
 
 
 if __name__ == '__main__':

@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1cceb26c-0173-4b95-b2b1-d5f78585e4fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/cwt.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Matlab/analyzeDataStream.m" beforeDir="false" afterPath="$PROJECT_DIR$/../../Matlab/analyzeDataStream.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MTEC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MTEC.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_data_from_device.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract_data_from_device.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/program.py" beforeDir="false" afterPath="$PROJECT_DIR$/program.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,44 +33,7 @@
     <favorites_list name="MTEC" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/program.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="664">
-              <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
-              <folding>
-                <element signature="e#126#275#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="715">
-              <caret line="131" selection-start-line="131" selection-end-line="131" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/extract_data_from_device.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1174">
-              <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
-              <folding>
-                <element signature="e#335#344#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -118,7 +77,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -130,6 +88,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -188,6 +147,9 @@
       <module name="MTEC" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="E:\GitHub\MTEC\WorkingFolder\MTEC\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
       <option name="IS_MODULE_SDK" value="true" />
@@ -300,11 +262,13 @@
       <workItem from="1560335455460" duration="3566000" />
       <workItem from="1560347183932" duration="7198000" />
       <workItem from="1560608078094" duration="13273000" />
+      <workItem from="1560689210088" duration="1198000" />
+      <workItem from="1560718684872" duration="891000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52836000" />
+    <option name="totallyTimeSpent" value="54925000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -318,8 +282,8 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4908896" visible="true" weight="0.19509594" />
-      <window_info id="Structure" order="1" sideWeight="0.5091104" side_tool="true" visible="true" weight="0.19509594" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.488746" visible="true" weight="0.19936034" />
+      <window_info id="Structure" order="1" sideWeight="0.511254" side_tool="true" visible="true" weight="0.19936034" />
       <window_info id="Favorites" order="2" sideWeight="0.5084746" side_tool="true" weight="0.19296375" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290461" />
@@ -338,8 +302,8 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" x="1124" y="349" width="500" height="310" id="SciView" maximized="true" order="3" sideWeight="0.49520767" type="WINDOWED" weight="0.26652452" />
-      <window_info anchor="right" x="0" y="0" width="434" height="866" id="Documentation" order="4" sideWeight="0.50482315" side_tool="true" visible="true" weight="0.24040511" />
-      <window_info anchor="right" id="Database" order="5" sideWeight="0.49517685" visible="true" weight="0.24040511" />
+      <window_info anchor="right" x="0" y="0" width="434" height="866" id="Documentation" order="4" sideWeight="0.50696677" side_tool="true" visible="true" weight="0.24040511" />
+      <window_info anchor="right" id="Database" order="5" sideWeight="0.49303323" visible="true" weight="0.24040511" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -402,7 +366,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/extract_data_from_device.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1174">
+        <state relative-caret-position="1972">
           <caret line="119" column="28" selection-start-line="119" selection-start-column="28" selection-end-line="119" selection-end-column="28" />
           <folding>
             <element signature="e#335#344#0" expanded="true" />
@@ -410,22 +374,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/program.py">
+    <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="73" column="51" selection-start-line="73" selection-start-column="51" selection-end-line="73" selection-end-column="51" />
+        <state relative-caret-position="493">
+          <caret line="234" column="70" selection-start-line="234" selection-start-column="70" selection-end-line="234" selection-end-column="70" />
           <folding>
-            <element signature="e#126#275#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
+    <entry file="file://$PROJECT_DIR$/program.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
+        <state relative-caret-position="1292">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#126#281#0" expanded="true" />
           </folding>
         </state>
       </provider>
