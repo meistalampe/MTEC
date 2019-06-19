@@ -5,6 +5,7 @@ function EmpaticaMatlabBLEClient()
     global tcpClient;      % Share the global TCP port obj
     global fileID;
     
+
     % Public variables
     TCPconnected = false;
     ListItemSelected = false;
@@ -220,7 +221,8 @@ function EmpaticaMatlabBLEClient()
 
         % Connect to the TCP server
         tcpClient = tcpip(IP, Port, 'NetworkRole', 'client','InputBufferSize',1024);
-            
+        minutes = 20;
+        tcpClient.TimerPeriod = minutes * 60;    
         % Open/Close the TCP connection
         if (strcmp(IPConnectBtnHdl.String,'Connect'))
             StatusBoxHdl.String = 'Establishing TCP connection ...'; pause(0.1);    % Update status box string
@@ -308,59 +310,39 @@ function EmpaticaMatlabBLEClient()
     %% Data logging callback
     function DataLogCallback(source,callbackdata)
         
-        recInterval = 60;
-        Fs = 64;
-        samples = recInterval * Fs;
-        
-        if (isequal(DeviceConnected,true) && isequal(TCPconnected,true))
+       if (isequal(DeviceConnected,true) && isequal(TCPconnected,true))
             if strcmp(LogButtonHdl.String,'Start Logging')
+                if AccButtonHdl.Value; fprintf(tcpClient,'device_subscribe acc ON'); fscanf(tcpClient); end
+                if GsrButtonHdl.Value; fprintf(tcpClient,'device_subscribe gsr ON'); fscanf(tcpClient); end
+                if BvpButtonHdl.Value; fprintf(tcpClient,'device_subscribe bvp ON'); fscanf(tcpClient); end
+                if TmpButtonHdl.Value; fprintf(tcpClient,'device_subscribe tmp ON'); fscanf(tcpClient); end
+                if IbiButtonHdl.Value; fprintf(tcpClient,'device_subscribe ibi ON'); fscanf(tcpClient); end
                 
-                fprintf(tcpClient,'device_subscribe bvp ON');
-                loop = true;
-                tracker = 1;
+                % Change button text
+                LogButtonHdl.String = 'Stop';
                 
                 % Create dir and write to file
                 repositoryName = 'DataRepository';
                 if ~exist(repositoryName,'dir');
                     mkdir repositoryName;
                 end
-                a =datestr(now,'yyyy-mm-dd-HH-MM-SS'); 
+                a=datestr(now,'yyyy-mm-dd-HH-MM-SS'); 
                 
-                while loop
-                    [data, count] = fscanf(tcpClient, samples);
-
-                    % Change button text
-                    LogButtonHdl.String = 'Stop';
-                   
-                    if count == samples                       
-                        tracker = tracker + 1;
-                        count = 0;
-                        filename = strcat('\recording_', a, '_', num2str(tracker));
-                        fullFilePath = strcat('.\', repositoryName, filename);
-                        fileID = fopen(fullFilePath,'a+');
-
-                        StatusBoxHdl.String = strcat('Data logging started to ', filename);
-                        % Change to callback mode for capturing datastream
-                        tcpClient.BytesAvailableFcn = @BytesReceivedCallback;
-                        pause(0.5);
-                        commandClient();
-                    end
-                    
-                    if strcmp(LogButtonHdl.String,'Stop')
-                        
-                        tcpClient.BytesAvailableFcn = '';
-                        data = [];
-                        fclose(fileID);
-                        StatusBoxHdl.String = 'Data logging stopped'; 
+                filename = strcat('.\', repositoryName, '\recording_', a);
+                fileID = fopen(filename,'a+');
                 
-                        % Change button text
-                        LogButtonHdl.String = 'Start Logging';
-                        loop = false;
-                    end
-                end
+                StatusBoxHdl.String = strcat('Data logging started to ','filename'); 
+                
+                % Change to callback mode for capturing datastream
+                tcpClient.BytesAvailableFcn = @BytesReceivedCallback;
+                
+                % Change to callback mode for new data file 
+                tcpClient.TimerFcn = @TimerReachedCallback;
+                
             elseif strcmp(LogButtonHdl.String,'Stop')
                 tcpClient.BytesAvailableFcn = '';
-                data = [];
+                tcpClient.TimerFcn = '';
+              
                 fclose(fileID);
                 StatusBoxHdl.String = 'Data logging stopped'; 
                 
@@ -371,47 +353,30 @@ function EmpaticaMatlabBLEClient()
             StatusBoxHdl.String = 'Please check either TCP or Device connection'; 
         end
     end
-% if (isequal(DeviceConnected,true) && isequal(TCPconnected,true))
-%             if strcmp(LogButtonHdl.String,'Start Logging')
-%                 if AccButtonHdl.Value; fprintf(tcpClient,'device_subscribe acc ON'); fscanf(tcpClient); end
-%                 if GsrButtonHdl.Value; fprintf(tcpClient,'device_subscribe gsr ON'); fscanf(tcpClient); end
-%                 if BvpButtonHdl.Value; fprintf(tcpClient,'device_subscribe bvp ON'); fscanf(tcpClient); end
-%                 if TmpButtonHdl.Value; fprintf(tcpClient,'device_subscribe tmp ON'); fscanf(tcpClient); end
-%                 if IbiButtonHdl.Value; fprintf(tcpClient,'device_subscribe ibi ON'); fscanf(tcpClient); end
-%                 
-%                 % Change button text
-%                 LogButtonHdl.String = 'Stop';
-%                 
-%                 % Create dir and write to file
-%                 repositoryName = 'DataRepository';
-%                 if ~exist(repositoryName,'dir');
-%                     mkdir repositoryName;
-%                 end
-%                 % a=datestr(now,'yyyy-mm-dd-HH-MM-SS'); 
-%                 tracker = 1;
-%                 filename = strcat('.\', repositoryName, '\recording_', num2str(tracker));
-%                 fileID = fopen(filename,'a+');
-%                 
-%                 StatusBoxHdl.String = strcat('Data logging started to ','filename'); 
-%                 
-%                 % Change to callback mode for capturing datastream
-%                 tcpClient.BytesAvailableFcn = @BytesReceivedCallback;
-%                 
-%             elseif strcmp(LogButtonHdl.String,'Stop')
-%                 tcpClient.BytesAvailableFcn = '';
-%                 
-%                 fclose(fileID);
-%                 StatusBoxHdl.String = 'Data logging stopped'; 
-%                 
-%                 % Change button text
-%                 LogButtonHdl.String = 'Start Logging';
-%             end
-%         else
-%             StatusBoxHdl.String = 'Please check either TCP or Device connection'; 
-%         end
-%     end
     % BytesAvailable callback function
     function BytesReceivedCallback(source,callbackdata)
-        fwrite(fileID, data);
+        FListOpen = fopen('all'); %get the names of the open files
+        if ismember(fileID,FListOpen) %see if myfile is open
+            fwrite(fileID, fscanf(tcpClient));
+        end
+        
+        
+    end
+    % Timer reached callback function
+    function TimerReachedCallback(source,callbackdata)       
+        disp('Timer Event');
+        
+        FListOpen = fopen('all'); %get the names of the open files
+        if ismember(fileID,FListOpen) %see if myfile is open
+            fclose(fileID);
+        end
+        
+        repositoryName = 'DataRepository';
+        if ~exist(repositoryName,'dir');
+            mkdir repositoryName;
+        end
+        a=datestr(now,'yyyy-mm-dd-HH-MM-SS'); 
+        filename = strcat('.\', repositoryName, '\recording_', a);
+        fileID = fopen(filename,'a+');
     end
 end
