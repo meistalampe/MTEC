@@ -4,13 +4,15 @@ function EmpaticaMatlabBLEClient()
     % Global variable
     global tcpClient;      % Share the global TCP port obj
     global fileID;
+    global tcpPython;
     
-
     % Public variables
     TCPconnected = false;
     ListItemSelected = false;
     DeviceConnected = false;
     LogItemSelected = false;
+    
+    tcpPython = tcpip('localhost', 8632);
 
     % Open the GUI
     MainGUIHdl = figure('Visible','Off',...
@@ -221,7 +223,7 @@ function EmpaticaMatlabBLEClient()
 
         % Connect to the TCP server
         tcpClient = tcpip(IP, Port, 'NetworkRole', 'client','InputBufferSize',1024);
-        minutes = 20;
+        minutes = 1;
         tcpClient.TimerPeriod = minutes * 60;    
         % Open/Close the TCP connection
         if (strcmp(IPConnectBtnHdl.String,'Connect'))
@@ -342,7 +344,21 @@ function EmpaticaMatlabBLEClient()
             elseif strcmp(LogButtonHdl.String,'Stop')
                 tcpClient.BytesAvailableFcn = '';
                 tcpClient.TimerFcn = '';
-              
+                
+                % deactivate python server
+                try 
+                    statusIndex = 'inactive';
+                    commandClient(tcpPython, statusIndex)
+                catch err
+                    if (strcmp(err.identifier,'instrument:fopen:opfailed'))
+                        disp('Couldnt connect to Python Server.');
+                    else
+                        disp('Couldnt connect, Please try again.'); 
+                    end
+                end  
+            
+                pause(1);
+                
                 fclose(fileID);
                 StatusBoxHdl.String = 'Data logging stopped'; 
                 
@@ -369,6 +385,19 @@ function EmpaticaMatlabBLEClient()
         FListOpen = fopen('all'); %get the names of the open files
         if ismember(fileID,FListOpen) %see if myfile is open
             fclose(fileID);
+            
+            try 
+                statusIndex = 'active';
+                commandClient(tcpPython, statusIndex)
+            catch err
+                if (strcmp(err.identifier,'instrument:fopen:opfailed'))
+                    disp('Couldnt connect to Python Server.');
+                else
+                    disp('Couldnt connect, Please try again.'); 
+                end
+            end  
+            
+            pause(1);
         end
         
         repositoryName = 'DataRepository';

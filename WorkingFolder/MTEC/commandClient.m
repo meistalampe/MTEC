@@ -1,4 +1,4 @@
-function commandClient()
+function commandClient(tcp_client, status)
 %% File header
 % title: testClient.m
 % author: Dominik Limbach
@@ -8,11 +8,15 @@ function commandClient()
 %     
 
 %% Set up
-port = 8632;
-% echotcpip('on', port)
-tcp_client = tcpip('localhost', port);
-
-message = 'start';
+% port = 8632;
+% % echotcpip('on', port)
+% tcp_client = tcpip('localhost', port);
+switch status
+    case 'active'        
+        message = 'start';        
+    case 'inactive'
+        message = 'stop';        
+end
 
 fopen(tcp_client);
 fwrite(tcp_client, message);

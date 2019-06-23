@@ -28,75 +28,77 @@ def main():
     else:
         print(folder)
 
-    # while 1:                                                          # turn off for testing
-        # command = wait_for_new_data()                                 # turn off for testing
-        print('Valid command received. Start processing...')
+    while 1:                                                          # turn off for testing
+        server_status = wait_for_new_data()                           # turn off for testing
 
-        search_text = 'rec'
-        latest_file = search_for_latest_file(folder, search_text)
-        # print(latest_file)
-        stream_tag = 'E4_Bvp'
-        stream = parse_file_for_tag(latest_file, stream_tag)
-        # print(stream)
-        raw_data = get_stream_data(stream)
-        time_in_seconds = get_stream_time(stream)
+        if server_status == 'read stop':
+            break
+        else:
 
-        # filtering (lowpass butterworth, at 3.6 Hz)
-        filter_order = 6
-        sampling_frequency = 64  # Hz
-        max_heart_rate = 220  # bpm
-        cutoff_frequency = round((max_heart_rate / 60), ndigits=3)  # desired max frequency in Hz
+            search_text = 'rec'
+            latest_file = search_for_latest_file(folder, search_text)
+            # print(latest_file)
+            stream_tag = 'E4_Bvp'
+            stream = parse_file_for_tag(latest_file, stream_tag)
+            # print(stream)
+            raw_data = get_stream_data(stream)
+            time_in_seconds = get_stream_time(stream)
 
-        # filter the raw signal data
-        filtered_data = butter_lowpass_filter(raw_data, cutoff_frequency, sampling_frequency, filter_order)
-        # display filtered signal
+            # filtering (lowpass butterworth, at 3.6 Hz)
+            filter_order = 6
+            sampling_frequency = 64  # Hz
+            max_heart_rate = 220  # bpm
+            cutoff_frequency = round((max_heart_rate / 60), ndigits=3)  # desired max frequency in Hz
 
-        plt.subplot(2, 1, 2)
-        plt.plot(time_in_seconds, raw_data, 'b-', label='data')
-        plt.plot(time_in_seconds, filtered_data, 'g-', linewidth=2, label='filtered data')
-        plt.xlabel('Time [sec]')
-        plt.grid()
-        plt.legend()
+            # filter the raw signal data
+            filtered_data = butter_lowpass_filter(raw_data, cutoff_frequency, sampling_frequency, filter_order)
+            # display filtered signal
 
-        plt.subplots_adjust(hspace=0.35)
-        plt.show()
+            plt.subplot(2, 1, 2)
+            plt.plot(time_in_seconds, raw_data, 'b-', label='data')
+            plt.plot(time_in_seconds, filtered_data, 'g-', linewidth=2, label='filtered data')
+            plt.xlabel('Time [sec]')
+            plt.grid()
+            plt.legend()
 
-        # detrend the filtered signal data
-        detrend_data = detrend_the_signal(filtered_data)
-
-        # peak detection
-        negative_peaks, properties = find_negative_peaks_in_signal(detrend_data, sampling_frequency,
-                                                                   distance_factor=0.3, peak_prominence=25)
-        threshold = 25
-        positive_peaks, properties = find_positive_peaks_in_signal(detrend_data, sampling_frequency,
-                                                                   distance_factor=0.3, peak_height=threshold)
-        valid_peaks = pass_only_valid_peaks(negative_peaks, positive_peaks)
-
-        inter_beat_intervals = np.diff(valid_peaks)
-        frequency_band = get_frequency_bands(inter_beat_intervals, (0.0, 0.4))
-
-        # trial code bandpower methods
-        data = inter_beat_intervals
-        sf = 64
-        # Multitaper delta power
-        bp = bandpower(data, sf, [0.0, 0.4], 'multitaper')
-        bp_rel = bandpower(data, sf, [0.0, 0.4], 'multitaper', relative=True)
-        print('Absolute delta power: %.3f' % bp)
-        print('Relative delta power: %.3f' % bp_rel)
-
-        # Delta-beta ratio
-        # One advantage of the multitaper is that we don't need to define a window length.
-        db = bandpower(data, sf, [0.0, 0.4], 'multitaper') / bandpower(data, sf, [12, 30], 'multitaper')
-        # Ratio based on the relative power
-        db_rel = bandpower(data, sf, [0.0, 0.4], 'multitaper', relative=True) / \
-                 bandpower(data, sf, [0.0, 32], 'multitaper', relative=True)
-        print('Delta/beta ratio (absolute): %.3f' % db)
-        print('Delta/beta ratio (relative): %.3f' % db_rel)
-
-        print('Finished processing.')
-
-        # Example: plot the 0.5 - 2 Hz band
-        plot_spectrum_methods(data, sf, 4, [0.5, 2], dB=True)
+            plt.subplots_adjust(hspace=0.35)
+            plt.show()
+            #
+            # # detrend the filtered signal data
+            # detrend_data = detrend_the_signal(filtered_data)
+            #
+            # # peak detection
+            # negative_peaks, properties = find_negative_peaks_in_signal(detrend_data, sampling_frequency,
+            #                                                            distance_factor=0.3, peak_prominence=25)
+            # threshold = 25
+            # positive_peaks, properties = find_positive_peaks_in_signal(detrend_data, peak_height=threshold)
+            # valid_peaks = pass_only_valid_peaks(negative_peaks, positive_peaks)
+            #
+            # inter_beat_intervals = np.diff(valid_peaks)
+            # frequency_band = get_frequency_bands(inter_beat_intervals, (0.0, 0.4))
+            #
+            # # trial code bandpower methods
+            # data = inter_beat_intervals
+            # sf = 64
+            # # Multitaper delta power
+            # bp = bandpower(data, sf, [0.0, 0.4], 'multitaper')
+            # bp_rel = bandpower(data, sf, [0.0, 0.4], 'multitaper', relative=True)
+            # print('Absolute delta power: %.3f' % bp)
+            # print('Relative delta power: %.3f' % bp_rel)
+            #
+            # # Delta-beta ratio
+            # # One advantage of the multitaper is that we don't need to define a window length.
+            # db = bandpower(data, sf, [0.0, 0.4], 'multitaper') / bandpower(data, sf, [12, 30], 'multitaper')
+            # # Ratio based on the relative power
+            # db_rel = bandpower(data, sf, [0.0, 0.4], 'multitaper', relative=True) / \
+            #          bandpower(data, sf, [0.0, 32], 'multitaper', relative=True)
+            # print('Delta/beta ratio (absolute): %.3f' % db)
+            # print('Delta/beta ratio (relative): %.3f' % db_rel)
+            print()
+            print('Finished processing.')
+            print('--------------------------------------------------')
+            # # Example: plot the 0.5 - 2 Hz band
+            # plot_spectrum_methods(data, sf, 4, [0.5, 2], dB=True)
 
 
 if __name__ == '__main__':

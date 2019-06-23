@@ -48,9 +48,9 @@ def main():
 
 
 def print_header():
-    print('-------------------------------')
-    print('     MTEC APP')
-    print('-------------------------------')
+    print('--------------------------------------------------')
+    print('                   MTEC APP')
+    print('--------------------------------------------------')
     print()
 
 
@@ -60,6 +60,7 @@ def get_folder_from_user():
 
     if not folder or not folder.strip():    # check if input is empty, if so return default path
         print('Using default path.')
+        print()
         default_folder = 'DataRepository'
         return os.path.abspath(os.path.join('.', default_folder))
 
@@ -94,6 +95,7 @@ def parse_file_for_tag(filename, stream_tag):
             return stream
         else:
             print('We could not find a stream with the tag {}.'.format(stream_tag))
+            print()
             return []
 
 
@@ -110,6 +112,7 @@ def get_stream_data(stream: Sample):
         return data
     else:
         print('The stream is empty! Could not extract data.')
+        print()
         return []
 
 
@@ -127,6 +130,7 @@ def get_stream_time(stream: Sample):
         return time_in_seconds
     else:
         print('The stream is empty! Could not extract time.')
+        print()
         return []
 
 

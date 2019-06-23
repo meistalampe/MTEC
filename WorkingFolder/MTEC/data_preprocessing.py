@@ -58,9 +58,11 @@ def find_negative_peaks_in_signal(data, sampling_frequency, distance_factor, pea
     return peaks, properties
 
 
-def find_positive_peaks_in_signal(data, sampling_frequency, distance_factor, peak_height):
-    min_peak_distance = distance_factor * sampling_frequency * 0.01     # extra factor to minimize it
-    peaks, properties = find_peaks(data, distance=min_peak_distance, height=peak_height)
+#def find_positive_peaks_in_signal(data, sampling_frequency, distance_factor, peak_height):
+def find_positive_peaks_in_signal(data, peak_height):
+    #min_peak_distance = distance_factor * sampling_frequency * 0.01     # extra factor to minimize it
+    #peaks, properties = find_peaks(data, distance=min_peak_distance, height=peak_height)
+    peaks, properties = find_peaks(data, height=peak_height)
     plt.plot(data)
     plt.plot(peaks, data[peaks], "x")
     plt.plot(np.zeros_like(data), "--", color="gray")

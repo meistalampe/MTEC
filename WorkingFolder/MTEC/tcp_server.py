@@ -21,36 +21,56 @@ def wait_for_new_data():
     s.bind((TCP_IP, TCP_PORT))
     s.listen(1)
 
-
-    # loop = True
     while True:
-        print('listening...')
+        print('--------------------------------------------------')
+        print('Start listening...')
+        print()
+
         conn, addr = s.accept()
-        print('Connection address:', addr)
+        print('Connection established: ')
+        print('Connection address: ', addr)
+        print()
 
         data = conn.recv(BUFFER_SIZE)
 
         if not data:
             response = 'ee'
-            print('No data received.')
+            print('--------------------------------------------------')
+            print('No command received.')
+            print()
             conn.send(response.encode('utf-8'))  # echo
+            server_status = 'read empty'
         else:
             cmd = data.decode('utf-8')
-            print('Data received: ' + cmd)
+            print('Command received: ' + cmd)
 
             if cmd == 'start':
                 response = 'ok'
                 conn.send(response.encode('utf-8'))  # echo
-                # loop = False
+                server_status = 'read data'
+                print('--------------------------------------------------')
+                print('Valid command received. Start processing...')
+                print()
+                break
+            elif cmd == 'stop':
+                response = 'stopped listening.'
+                conn.send(response.encode('utf-8'))  # echo
+                server_status = 'read stop'
+                print('--------------------------------------------------')
+                print('Stop command received. Program will be terminated.')
+                print('--------------------------------------------------')
+                print()
                 break
             else:
                 response = 'ew'
                 conn.send(response.encode('utf-8'))  # echo
-                # loop = True
-                continue
+                server_status = 'read misc'
+                print('--------------------------------------------------')
+                print('Invalid command received.')
+                print()
 
         conn.close()
 
     del s
 
-    return cmd
+    return server_status
