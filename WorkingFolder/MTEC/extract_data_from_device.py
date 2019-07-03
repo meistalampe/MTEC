@@ -62,7 +62,7 @@ def get_folder_from_user():
         print('Using default path.')
         print()
         default_folder = 'DataRepository'
-        return os.path.abspath(os.path.join('.', default_folder))
+        return os.path.abspath(os.path.join('.', 'MTEC', default_folder))
 
     if not os.path.isdir(folder):   # check if input path is a directory
         return None

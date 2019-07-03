@@ -70,26 +70,71 @@ def find_positive_peaks_in_signal(data, peak_height):
     return peaks, properties
 
 
-def pass_only_valid_peaks(negative_peaks, positive_peaks):
+def pass_only_valid_peaks(negative_peaks, positive_peaks, Fs):
     i = 0
     valid_peak_locations = np.zeros(shape=(1, len(positive_peaks)))
-
-    while i <= len(negative_peaks)+1:
+    print(len(negative_peaks))
+    while i <= len(negative_peaks):
 
         if i == 0:
             interval_peak_locations = positive_peaks[positive_peaks <= negative_peaks[i]]
-        elif (i > 0) & (i <= len(negative_peaks)):
-            interval_peak_locations = np.logical_and(positive_peaks >= negative_peaks[i - 1], positive_peaks <= negative_peaks[i])
-        elif i == len(negative_peaks)+1:
+        elif (i > 0) & (i < len(negative_peaks)):
+            # interval_peak_locations = positive_peaks(np.logical_and(positive_peaks >= negative_peaks[i - 1], positive_peaks <= negative_peaks[i]))
+            interval_peak_locations = positive_peaks[(positive_peaks >= negative_peaks[i - 1]) & (positive_peaks <= negative_peaks[i])]
+        elif i == len(negative_peaks):
             interval_peak_locations = positive_peaks[positive_peaks >= negative_peaks[i-1]]
 
-        if interval_peak_locations:
-            valid_peak_locations[i] = interval_peak_locations[0]
+        if len(interval_peak_locations) > 0:
+            np.put(valid_peak_locations, [i], interval_peak_locations[0])
+        else:
+            np.put(valid_peak_locations, [i], math.nan) # todo: fill the nan elements with interpolated values
 
         i += 1
 
-    valid_peak_locations = valid_peak_locations > 0
-    valid_peaks = positive_peaks[valid_peak_locations]
+    # interpolation
+    # find invalid intervals (e.g. intervals where no peaks were found due to artifacts)
+    # creating a mask to identify faulty intervals
+    nan_mask = np.isnan(valid_peak_locations)
+    # get the position of each element
+    # np.where returns to arrays , arr1: rows (will be 0 for all indices because we have only on dimensional array,
+    # and arr2: the column indices (which is what we want)
+    pos = np.where(nan_mask)
+    column_indices = pos[1]
+    # work through the invalid intervals
+    for ci in column_indices:
+        print(ci)
+        if nan_mask[0][ci] and not nan_mask[0][ci+1]:
+            interpolation_pos = math.floor(valid_peak_locations[0][ci-1] +
+                                           ((valid_peak_locations[0][ci+1] - valid_peak_locations[0][ci-1])/2))
+            print('Found NaN at position ', ci, ' and substituted with ', interpolation_pos,
+                  ' from the values [', valid_peak_locations[0][ci-1], ',', valid_peak_locations[0][ci+1], ']')
+
+        else:
+            peaks_for_peak_distances = valid_peak_locations[valid_peak_locations > 0]
+            peak_distances = np.diff(peaks_for_peak_distances)
+            avg_peak_distance = np.mean(peak_distances)
+            interpolation_pos = math.floor(valid_peak_locations[0][ci-1] + avg_peak_distance)
+
+            print('Found NaN at position ', ci, ' and substituted with ', interpolation_pos,
+                  ' from the previous location ', valid_peak_locations[0][ci - 1], ', and an avg of ', avg_peak_distance)
+
+        np.put(valid_peak_locations, [ci], interpolation_pos)
+
+        # if ci == 0:
+        #     interpolation_pos = 0
+        #
+        # elif ci > 0 & pos <= len(nan_mask)-1:
+        #     interpolation_pos = math.floor((nan_mask(pos-1) + nan_mask(pos+1))/2)
+        #
+        # elif ci == len(nan_mask):
+        #     interpolation_pos = math.floor(nan_mask(pos-1) + (nan_mask(pos-1) - nan_mask(pos-2)/2))
+        #
+        # print('Found NaN at ', pos, ' and substituted with ', interpolation_pos)
+        # np.put(valid_peak_locations, pos, interpolation_pos)
+
+
+    valid_peak_locations = valid_peak_locations[valid_peak_locations > 0]
+    valid_peaks = valid_peak_locations / Fs
 
     return valid_peaks
 
