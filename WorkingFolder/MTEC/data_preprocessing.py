@@ -51,6 +51,7 @@ def find_negative_peaks_in_signal(data, sampling_frequency, distance_factor, pea
     inverted_data = -data
     min_peak_distance = distance_factor * sampling_frequency
     peaks, properties = find_peaks(inverted_data, distance=min_peak_distance, prominence=peak_prominence)
+    plt.figure(dpi=600)
     plt.plot(inverted_data)
     plt.plot(peaks, inverted_data[peaks], "x")
     plt.plot(np.zeros_like(inverted_data), "--", color="gray")
@@ -63,6 +64,7 @@ def find_positive_peaks_in_signal(data, peak_height):
     #min_peak_distance = distance_factor * sampling_frequency * 0.01     # extra factor to minimize it
     #peaks, properties = find_peaks(data, distance=min_peak_distance, height=peak_height)
     peaks, properties = find_peaks(data, height=peak_height)
+    plt.figure(dpi=600)
     plt.plot(data)
     plt.plot(peaks, data[peaks], "x")
     plt.plot(np.zeros_like(data), "--", color="gray")
@@ -79,7 +81,6 @@ def pass_only_valid_peaks(negative_peaks, positive_peaks, Fs):
         if i == 0:
             interval_peak_locations = positive_peaks[positive_peaks <= negative_peaks[i]]
         elif (i > 0) & (i < len(negative_peaks)):
-            # interval_peak_locations = positive_peaks(np.logical_and(positive_peaks >= negative_peaks[i - 1], positive_peaks <= negative_peaks[i]))
             interval_peak_locations = positive_peaks[(positive_peaks >= negative_peaks[i - 1]) & (positive_peaks <= negative_peaks[i])]
         elif i == len(negative_peaks):
             interval_peak_locations = positive_peaks[positive_peaks >= negative_peaks[i-1]]
@@ -87,38 +88,38 @@ def pass_only_valid_peaks(negative_peaks, positive_peaks, Fs):
         if len(interval_peak_locations) > 0:
             np.put(valid_peak_locations, [i], interval_peak_locations[0])
         else:
-            np.put(valid_peak_locations, [i], math.nan) # todo: fill the nan elements with interpolated values
+            np.put(valid_peak_locations, [i], -1)   # -1 represents the error value
 
         i += 1
 
     # interpolation
     # find invalid intervals (e.g. intervals where no peaks were found due to artifacts)
     # creating a mask to identify faulty intervals
-    nan_mask = np.isnan(valid_peak_locations)
-    # get the position of each element
-    # np.where returns to arrays , arr1: rows (will be 0 for all indices because we have only on dimensional array,
-    # and arr2: the column indices (which is what we want)
-    pos = np.where(nan_mask)
-    column_indices = pos[1]
-    # work through the invalid intervals
-    for ci in column_indices:
-        print(ci)
-        if nan_mask[0][ci] and not nan_mask[0][ci+1]:
-            interpolation_pos = math.floor(valid_peak_locations[0][ci-1] +
-                                           ((valid_peak_locations[0][ci+1] - valid_peak_locations[0][ci-1])/2))
-            print('Found NaN at position ', ci, ' and substituted with ', interpolation_pos,
-                  ' from the values [', valid_peak_locations[0][ci-1], ',', valid_peak_locations[0][ci+1], ']')
-
-        else:
-            peaks_for_peak_distances = valid_peak_locations[valid_peak_locations > 0]
-            peak_distances = np.diff(peaks_for_peak_distances)
-            avg_peak_distance = np.mean(peak_distances)
-            interpolation_pos = math.floor(valid_peak_locations[0][ci-1] + avg_peak_distance)
-
-            print('Found NaN at position ', ci, ' and substituted with ', interpolation_pos,
-                  ' from the previous location ', valid_peak_locations[0][ci - 1], ', and an avg of ', avg_peak_distance)
-
-        np.put(valid_peak_locations, [ci], interpolation_pos)
+    # nan_mask = np.isnan(valid_peak_locations)
+    # # get the position of each element
+    # # np.where returns to arrays , arr1: rows (will be 0 for all indices because we have only on dimensional array,
+    # # and arr2: the column indices (which is what we want)
+    # pos = np.where(nan_mask)
+    # column_indices = pos[1]
+    # # work through the invalid intervals
+    # for ci in column_indices:
+    #     print(ci)
+    #     if nan_mask[0][ci] and not nan_mask[0][ci+1]:
+    #         interpolation_pos = math.floor(valid_peak_locations[0][ci-1] +
+    #                                        ((valid_peak_locations[0][ci+1] - valid_peak_locations[0][ci-1])/2))
+    #         print('Found NaN at position ', ci, ' and substituted with ', interpolation_pos,
+    #               ' from the values [', valid_peak_locations[0][ci-1], ',', valid_peak_locations[0][ci+1], ']')
+    #
+    #     else:
+    #         peaks_for_peak_distances = valid_peak_locations[valid_peak_locations > 0]
+    #         peak_distances = np.diff(peaks_for_peak_distances)
+    #         avg_peak_distance = np.mean(peak_distances)
+    #         interpolation_pos = math.floor(valid_peak_locations[0][ci-1] + avg_peak_distance)
+    #
+    #         print('Found NaN at position ', ci, ' and substituted with ', interpolation_pos,
+    #               ' from the previous location ', valid_peak_locations[0][ci - 1], ', and an avg of ', avg_peak_distance)
+    #
+    #     np.put(valid_peak_locations, [ci], interpolation_pos)
 
         # if ci == 0:
         #     interpolation_pos = 0
@@ -132,11 +133,17 @@ def pass_only_valid_peaks(negative_peaks, positive_peaks, Fs):
         # print('Found NaN at ', pos, ' and substituted with ', interpolation_pos)
         # np.put(valid_peak_locations, pos, interpolation_pos)
 
-
     valid_peak_locations = valid_peak_locations[valid_peak_locations > 0]
+
     valid_peaks = valid_peak_locations / Fs
 
     return valid_peaks
+
+
+def get_interpolated_ibi(valid_peak_data):
+    ibi = np.diff(valid_peak_data)
+
+    # interpolation
 
 
 def get_frequency_bands(ibi_data, frequencies: tuple):
@@ -144,40 +151,40 @@ def get_frequency_bands(ibi_data, frequencies: tuple):
     min_frequency = frequencies[0]
     max_frequency = frequencies[1]
 
-    # print(signal)
+    print(signal)
+    plt.figure(dpi=600)
+    plt.plot(signal)
+    plt.xlabel('sample')
+    plt.ylabel('HRV')
+    plt.show()
+
+    # hanning_window = np.hanning(len(signal))
+    # ft_signal = np.fft.fft(hanning_window * signal)
+    # n = math.floor(len(ft_signal) / 2) + 1
+    # fa = 1.0 / 64
+    # # print('fa=%.4f Hz  (Frequency)' % fa)
+    #
+    # ft_frequency_range = np.linspace(0, fa / 2, n, endpoint=True)
+    # ft_signal_pv = 2.0 * np.abs(ft_signal[:n]) / n  # get physical values for fft amplitudes by mult with 2/n
+    #
     # plt.figure(dpi=600)
-    # plt.plot(signal)
-    # plt.xlabel('sample')
-    # plt.ylabel('HRV')
+    # plt.plot(ft_frequency_range, ft_signal_pv)
+    # plt.xlabel('Frequency (Hz)')
+    # plt.ylabel('Amplitude')
     # plt.show()
-
-    hanning_window = np.hanning(len(signal))
-    ft_signal = np.fft.fft(hanning_window * signal)
-    n = math.floor(len(ft_signal) / 2) + 1
-    fa = 1.0 / 64
-    # print('fa=%.4f Hz  (Frequency)' % fa)
-
-    ft_frequency_range = np.linspace(0, fa / 2, n, endpoint=True)
-    ft_signal_pv = 2.0 * np.abs(ft_signal[:n]) / n  # get physical values for fft amplitudes by mult with 2/n
-
-    plt.figure(dpi=600)
-    plt.plot(ft_frequency_range, ft_signal_pv)
-    plt.xlabel('Frequency (Hz)')
-    plt.ylabel('Amplitude')
-    plt.show()
-
-    index_mask = np.logical_and(ft_frequency_range >= min_frequency, ft_frequency_range <= max_frequency)
-    # print(index_mask)
-    ft_frequency_band = ft_signal_pv[index_mask]
-    # ft_frequency_band = ft_signal_pv[np.logical_and(ft_frequency_range >= min_frequency,
-    #                                                 ft_frequency_range <= max_frequency)]
-    ft_band_range = ft_frequency_range[index_mask]
-
-    plt.figure(dpi=600)
-    plt.plot(ft_band_range, ft_frequency_band)
-    plt.xlabel('Frequency Hz')
-    plt.ylabel('A')
-    plt.show()
+    #
+    # index_mask = np.logical_and(ft_frequency_range >= min_frequency, ft_frequency_range <= max_frequency)
+    # # print(index_mask)
+    # ft_frequency_band = ft_signal_pv[index_mask]
+    # # ft_frequency_band = ft_signal_pv[np.logical_and(ft_frequency_range >= min_frequency,
+    # #                                                 ft_frequency_range <= max_frequency)]
+    # ft_band_range = ft_frequency_range[index_mask]
+    #
+    # plt.figure(dpi=600)
+    # plt.plot(ft_band_range, ft_frequency_band)
+    # plt.xlabel('Frequency Hz')
+    # plt.ylabel('A')
+    # plt.show()
 
 
 # https://raphaelvallat.com/bandpower.html

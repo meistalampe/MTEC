@@ -2,7 +2,7 @@ from extract_data_from_device import print_header, get_folder_from_user, search_
     get_stream_data, get_stream_time
 from data_preprocessing import butter_lowpass_filter, butter_lowpass, detrend_the_signal, \
     find_negative_peaks_in_signal, get_frequency_bands, find_positive_peaks_in_signal, pass_only_valid_peaks, \
-    bandpower, plot_spectrum_methods
+    bandpower, plot_spectrum_methods, get_interpolated_ibi
 from feature_extraction import feature_extraction_frequency_domain, feature_extraction_time_domain, feature_extraction_non_linear
 from tcp_server import wait_for_new_data
 
@@ -48,7 +48,6 @@ def main():
     # plt.show()
     #
     import pywt
-    import numpy as np
     import matplotlib.pyplot as plt
     # x = time_in_seconds[0:1000]
     # y = filtered_data[0:1000]
@@ -73,23 +72,25 @@ def main():
     positive_peaks, properties = find_positive_peaks_in_signal(detrend_data, peak_height=threshold)
 
     valid_peaks = pass_only_valid_peaks(negative_peaks, positive_peaks, sampling_frequency)
-    print('valid_peaks: ', valid_peaks)
-    inter_beat_intervals = np.diff(valid_peaks)
-    print('ibi: ', inter_beat_intervals)
-    x = time_in_seconds
-    y = inter_beat_intervals
-    coef, freqs = pywt.cwt(y, np.arange(1, 250), 'gaus1')
-    plt.matshow(coef)
-    plt.show()
+    # print('valid_peaks: ', valid_peaks)
+    inter_beat_intervals = get_interpolated_ibi(valid_peaks)
+    # print('ibi: ', inter_beat_intervals)
 
-    t = time_in_seconds
-    sig = inter_beat_intervals
-    widths = np.arange(1, 31)
-    cwtmatr, freqs = pywt.cwt(sig, widths, 'mexh')
-    plt.imshow(cwtmatr, extent=[-1, 1, 1, 31], cmap='PRGn', aspect='auto',
-               vmax=abs(cwtmatr).max(), vmin=-abs(cwtmatr).max())
-    plt.show()
-    # frequency_band = get_frequency_bands(inter_beat_intervals, (0.0, 0.4))
+    # x = time_in_seconds
+    # y = inter_beat_intervals
+    # coef, freqs = pywt.cwt(y, np.arange(1, 250), 'gaus1')
+    # plt.matshow(coef)
+    # plt.show()
+    #
+    # t = time_in_seconds
+    # sig = inter_beat_intervals
+    # widths = np.arange(1, 31)
+    # cwtmatr, freqs = pywt.cwt(sig, widths, 'mexh')
+    # plt.imshow(cwtmatr, extent=[-1, 1, 1, 31], cmap='PRGn', aspect='auto',
+    #            vmax=abs(cwtmatr).max(), vmin=-abs(cwtmatr).max())
+    # plt.show()
+
+    frequency_band = get_frequency_bands(inter_beat_intervals, (0.02, 0.4))
     #
     # # trial code bandpower methods
     # data = inter_beat_intervals
