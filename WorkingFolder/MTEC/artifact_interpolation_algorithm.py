@@ -22,13 +22,17 @@ def main():
     index_sequences, value_sequences = mark_ectopic_beat_sequences(ectopic_beat_indices=ectopic_beat_indices,
                                                                    ectopic_beat_values=ectopic_beats)
     print()
-    n_beats_to_replace, n_beats_to_insert, interpolation_mode, new_ibi_data, indices_to_replace = \
+    n_beats_to_replace, n_beats_to_insert, interpolation_mode, adapted_ibi_data, indices_to_replace = \
         calculate_number_of_substitution_intervals(ibi_data=ibi_data, ectopic_beat_indices=ectopic_beat_indices,
                                                    eb_index_sequences=index_sequences,
                                                    eb_value_sequences=value_sequences,
                                                    normal_beat_values=normal_beats)
 
     print()
+    norm_beat_percentage = interval_dismissal_decider(n_beats_to_replace, normal_beat_indices)
+    print()
+    linear_interpolation(new_ibi_data=adapted_ibi_data, interpolation_mode=interpolation_mode,
+                         number_of_beats_to_insert=n_beats_to_insert, indices_to_replace=indices_to_replace)
 
 
 def get_inter_beat_intervals(peak_data):
@@ -273,25 +277,76 @@ def interval_dismissal_decider(number_of_beats_to_replace, normal_beat_indices):
     """A function that evaluates the level of noise in the data set, according to percentage of beats that were marked
     as irregular in comparison to the normal beats in the set. It is suggested that a set with a percentage of normal
     beats below 80% should lead to the dismissal of the interval."""
-    normal_beats = len(normal_beat_indices)
-    irregular_beats = sum(number_of_beats_to_replace)
-    normal_beat_percentage = (normal_beats - irregular_beats) / 100
+    normal_beats = len(normal_beat_indices[0])
+    irregular_beats = 0
+    for e in number_of_beats_to_replace:
+        irregular_beats = irregular_beats + sum(e)
+    normal_beat_percentage = 100 - (irregular_beats / normal_beats) * 100
     return normal_beat_percentage
 
 
 def linear_interpolation(new_ibi_data, interpolation_mode, number_of_beats_to_insert, indices_to_replace):
+    print(len(indices_to_replace))
+
     for n in range(len(indices_to_replace)):
-        if interpolation_mode[n] == 'interpolate':
+        if interpolation_mode[n][0] == 'interpolate':
             # print('Number of beats to insert: ', n)
-            if number_of_beats_to_insert == len(indices_to_replace):
-                start_index = indices_to_replace[n][0]
-                target_index = indices_to_replace[n][-1]
-                x_to_interpolation = np.linspace(start_index, target_index, endpoint=True)
-                x = [start_index-1, target_index+1]
-                y = [new_ibi_data[start_index-1], new_ibi_data[target_index+1]]
+
+            start_index = 1
+            target_index = int(number_of_beats_to_insert[n][0])
+            x_to_interpolation = np.linspace(start_index, target_index, endpoint=True, num=target_index)
+            x = [start_index-1, target_index+1]
+
+            grab_start_pos = indices_to_replace[n][0][0]-1
+            grab_end_pos = indices_to_replace[n][0][-1]+1
+            y = [new_ibi_data[grab_start_pos], new_ibi_data[grab_end_pos]]
+            interpolated_beats = np.interp(x_to_interpolation, x, y)
+
+            plt.figure(dpi=400)
+            plt.plot(x, y, 'o')
+            plt.plot(x_to_interpolation, interpolated_beats, '-x')
+            plt.show()
+
+            # remove the irregular beats from the ibi data set
+            if grab_start_pos == 0:
+                rem_ibi_data_pre = np.array([new_ibi_data[grab_start_pos]])
             else:
-                #todo: generate enough space for interpolated values and the place them at the index of the extopic beat
-                #   inside the ibi data set interpolated_data = ibi_set[:, ind-1] , interpolated values , ibi_set[ind+len(interpolated values)+1,:]
+                rem_ibi_data_pre = new_ibi_data[0:grab_start_pos]
+            if grab_end_pos == len(new_ibi_data):
+                rem_ibi_data_post = new_ibi_data[grab_end_pos]
+            else:
+                rem_ibi_data_post = new_ibi_data[grab_end_pos:]
+
+            corrected_ibi_data = np.concatenate([rem_ibi_data_pre, interpolated_beats, rem_ibi_data_post], axis=0)
+            # generate enough space for interpolated values and the place them at the index of the extopic beat
+            # inside the ibi data set interpolated_data = ibi_set[:, ind-1] , interpolated values ,
+            # ibi_set[ind+len(interpolated values)+1,:]
+        elif interpolation_mode[n][0] == 'delete':
+            grab_start_pos = indices_to_replace[n][0][0] - 1
+            grab_end_pos = indices_to_replace[n][0][-1] + 1
+
+            if grab_start_pos == 0:
+                rem_ibi_data_pre = np.array([new_ibi_data[grab_start_pos]])
+            else:
+                rem_ibi_data_pre = new_ibi_data[0:grab_start_pos]
+            if grab_end_pos == len(new_ibi_data):
+                rem_ibi_data_post = new_ibi_data[grab_end_pos]
+            else:
+                rem_ibi_data_post = new_ibi_data[grab_end_pos:]
+            # rem_ibi_data_pre = new_ibi_data[:, indices_to_replace[n][0]-1]
+            # rem_ibi_data_post = new_ibi_data[indices_to_replace[n][-1]+1, :]
+            corrected_ibi_data = np.concatenate([rem_ibi_data_pre, rem_ibi_data_post], axis=0)
+        else:
+            print('No indicator for interpolation mode found.')
+
+    return corrected_ibi_data
+
+    # todo: find some solution for the possibility of alternating ectopic beats, eb nb eb,
+    #  (interpolating algorithm as is would use an eb to interpolate), if distance initial eb to next eb_index == 2 :
+    #  use a random value from a normal beat pool
+
+    # todo: plot the initial ibi data against the corrected, showing the interpolated beats in a different color
+
 
 if __name__ == '__main__':
     main()
