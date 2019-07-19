@@ -18,7 +18,36 @@ import matplotlib.pyplot as plt
 
 
 def main():
+    """ Main function process order:
+        - print program header
+        - request user input (data folder)
+        - server start up
+        - listen for client commands (on 'start' command: handle data processing, return to listening
+                                      on 'stop' command: shut down server, stop program)
 
+        Data processing process order:
+        - track most recent file
+        - scan file for data tag
+        - extract data from file (resulting in two np.arrays (data, time))
+
+        - run peak detection algorithm (filtering, clipping, squaring, moving averages, thresholding, block of interest,
+                                        peak detection, block validation)
+        - run artifact interpolation algorithm (calculate inter beat intervals, mark ectopic beats, mark ectopic beat
+                                                sequences, calculate number of substitution intervals, interval
+                                                dismissal, "linear interpolation")
+
+        Data evaluation algorithm:
+        - bvp recording
+        - microcomputer digesting
+        - artifact identification
+        - "RR" data editing
+        - "RR" interval rejection
+        => Ibi data sequence
+                |-----------------------------------------> - Interpolation
+                v                                           - Resampling
+        => TIME DOMAIN                                      => FREQUENCY DOMAIN
+               HRV                                                  HRV
+        """
     print_header()  # imported from process data
 
     folder = get_folder_from_user()

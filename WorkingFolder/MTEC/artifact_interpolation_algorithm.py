@@ -104,8 +104,8 @@ def mark_ectopic_beat_sequences(ectopic_beat_indices, ectopic_beat_values):
         if ebi < loop_len:
             if (ectopic_beat_indices[0][ebi+1] - ectopic_beat_indices[0][ebi]) == 1:
                 # ebi and ebi +1 are a sequence
-                if i_sequence.count(ectopic_beat_indices[0][ebi].astype(int)) == 0:
-                    i_sequence.append(ectopic_beat_indices[0][ebi].astype(int))
+                if i_sequence.count(ectopic_beat_indices[0][ebi].astype(int)) == 0:     # check if index was already added
+                    i_sequence.append(ectopic_beat_indices[0][ebi].astype(int))         # if not then add index
                     v_sequence.append(ectopic_beat_values[ebi].astype(int))
                     is_sequence = True
             else:
@@ -318,7 +318,7 @@ def linear_interpolation(new_ibi_data, interpolation_mode, number_of_beats_to_in
                 rem_ibi_data_post = new_ibi_data[grab_end_pos:]
 
             corrected_ibi_data = np.concatenate([rem_ibi_data_pre, interpolated_beats, rem_ibi_data_post], axis=0)
-            # generate enough space for interpolated values and the place them at the index of the extopic beat
+            # generate enough space for interpolated values and the place them at the index of the ectopic beat
             # inside the ibi data set interpolated_data = ibi_set[:, ind-1] , interpolated values ,
             # ibi_set[ind+len(interpolated values)+1,:]
         elif interpolation_mode[n][0] == 'delete':
