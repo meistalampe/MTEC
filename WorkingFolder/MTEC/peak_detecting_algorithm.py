@@ -102,6 +102,8 @@ def bandpass_butterworth(filter_order, cutoff_frequency_low, cutoff_frequency_hi
     low_cut = cutoff_frequency_low / nyquist_frequency
     high_cut = cutoff_frequency_high / nyquist_frequency
     b, a = butter(filter_order, [low_cut, high_cut], btype='band')
+    print(type(a))
+    print(type(b))
     return b, a
 
 
@@ -264,6 +266,55 @@ def find_valid_peaks(block_array, signal, second_threshold):
     valid_peaks_location = valid_peaks_location[valid_peaks_location > 0]
 
     return valid_peaks_amplitude, valid_peaks_location
+
+
+def peak_detection_bvp(raw_data):
+    fs = 64
+    # step 1: Bandpass filtering
+    filtered_signal = zero_phase_filtering(data=raw_data, f_min=0.5, f_max=8, sampling_frequency=fs, filter_order=2)
+    # step 2: Clipping
+    clipped_signal = clipping(filtered_signal)
+    # step 3: Squaring
+    squared_clipped_signal = squaring(clipped_signal)
+    # step 4: Moving averages
+    MA_peak, MA_beat, samples_peak = generate_moving_averages(data=squared_clipped_signal,
+                                                              sampling_frequency=fs, window_for_peak=0.111
+                                                              , window_for_beat=0.667)
+    # step 5: Thresholds and Offset
+    first_threshold, second_threshold = thresholding(data=squared_clipped_signal, moving_average_beat=MA_beat,
+                                                     window_for_peak_in_samples=samples_peak)
+    # step 6: generate blocks of interest
+    blocks_of_interest = np.zeros(len(MA_peak))
+
+    for n in range(len(MA_peak)):
+        if MA_peak[n] >= first_threshold[n]:
+            np.put(blocks_of_interest, [n], 5000.0)
+        else:
+            np.put(blocks_of_interest, [n], 0.0)
+
+    # # plotting
+    # plt.figure(dpi=1200)
+    # plt.plot(squared_clipped_signal, linewidth=0.3)
+    # plt.plot(MA_peak, color='green', linewidth=0.3)
+    # plt.plot(first_threshold, color='black', linewidth=0.3)
+    # # plt.legend(('input', 'MA peak', 'MA beat'))
+    # plt.plot(blocks_of_interest, color='grey', linewidth=0.3)
+    # plt.show()
+
+    # step 7: find valid blocks
+    peak_amplitudes, peak_locations = find_valid_peaks(blocks_of_interest, squared_clipped_signal, second_threshold)
+
+    # plotting
+    plt.figure(dpi=1200)
+    plt.plot(squared_clipped_signal, color='blue', linewidth=0.3, linestyle='-')
+    plt.plot(MA_peak, color='red', linewidth=0.3, linestyle='-.')
+    plt.plot(first_threshold, color='black', linewidth=0.3, linestyle=':')
+    # plt.legend(('input', 'MA peak', 'MA beat'))
+    plt.plot(blocks_of_interest, color='grey', linewidth=0.3, linestyle='--')
+    plt.plot(peak_locations, peak_amplitudes, '*y', markersize=0.3)
+    plt.show()
+
+    return peak_amplitudes, peak_locations
 
 
 if __name__ == '__main__':

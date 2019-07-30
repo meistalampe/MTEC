@@ -31,8 +31,9 @@ def main():
     print()
     norm_beat_percentage = interval_dismissal_decider(n_beats_to_replace, normal_beat_indices)
     print()
-    linear_interpolation(new_ibi_data=adapted_ibi_data, interpolation_mode=interpolation_mode,
-                         number_of_beats_to_insert=n_beats_to_insert, indices_to_replace=indices_to_replace)
+    interpolated_ibi_data = linear_interpolation(new_ibi_data=adapted_ibi_data, interpolation_mode=interpolation_mode,
+                                                 number_of_beats_to_insert=n_beats_to_insert,
+                                                 indices_to_replace=indices_to_replace)
 
 
 def get_inter_beat_intervals(peak_data):
@@ -341,6 +342,32 @@ def linear_interpolation(new_ibi_data, interpolation_mode, number_of_beats_to_in
 
     return corrected_ibi_data
 
+
+def artifact_interpolation_bvp(peak_locations):
+    ibi_data = get_inter_beat_intervals(peak_data=peak_locations)
+
+    ectopic_beat_indices, ectopic_beats, normal_beat_indices, normal_beats = mark_ectopic_beats(ibi_data)
+
+    print()
+    for ebi in range(len(ectopic_beat_indices[0])):
+        print('Ectopic beat found at pos ', ectopic_beat_indices[0][ebi], ' with the value of ', ectopic_beats[ebi])
+    index_sequences, value_sequences = mark_ectopic_beat_sequences(ectopic_beat_indices=ectopic_beat_indices,
+                                                                   ectopic_beat_values=ectopic_beats)
+    print()
+    n_beats_to_replace, n_beats_to_insert, interpolation_mode, adapted_ibi_data, indices_to_replace = \
+        calculate_number_of_substitution_intervals(ibi_data=ibi_data, ectopic_beat_indices=ectopic_beat_indices,
+                                                   eb_index_sequences=index_sequences,
+                                                   eb_value_sequences=value_sequences,
+                                                   normal_beat_values=normal_beats)
+
+    print()
+    norm_beat_percentage = interval_dismissal_decider(n_beats_to_replace, normal_beat_indices)
+    print()
+    interpolated_ibi_data = linear_interpolation(new_ibi_data=adapted_ibi_data, interpolation_mode=interpolation_mode,
+                                                 number_of_beats_to_insert=n_beats_to_insert,
+                                                 indices_to_replace=indices_to_replace)
+
+    return interpolated_ibi_data
     # todo: find some solution for the possibility of alternating ectopic beats, eb nb eb,
     #  (interpolating algorithm as is would use an eb to interpolate), if distance initial eb to next eb_index == 2 :
     #  use a random value from a normal beat pool

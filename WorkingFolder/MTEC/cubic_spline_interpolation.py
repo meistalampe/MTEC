@@ -7,8 +7,8 @@ def main():
     pass
 
 
-def csi_resampling(data, time, sampling_frequency, interpolation_mode='cubic'):
-    resampling_frequency = 7        # 7 Hz recommended by GD Clifford
+def csi_resampling(data, time, sampling_frequency, resampling_frequency, interpolation_mode='cubic'):
+    # 7 Hz recommended by GD Clifford
     print('rec length [method=sum] = ', sum(time))
     print('rec length [method=len/fs] = ', round(len(time) / sampling_frequency))
     new_num_of_samples = round(len(time) / sampling_frequency) * resampling_frequency

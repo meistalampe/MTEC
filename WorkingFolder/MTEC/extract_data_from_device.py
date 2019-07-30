@@ -62,7 +62,7 @@ def get_folder_from_user():
         print('Using default path.')
         print()
         default_folder = 'DataRepository'
-        return os.path.abspath(os.path.join('.', 'MTEC', default_folder))
+        return os.path.abspath(os.path.join('.', "MTEC", default_folder))
 
     if not os.path.isdir(folder):   # check if input path is a directory
         return None
@@ -99,7 +99,7 @@ def parse_file_for_tag(filename, stream_tag):
             return []
 
 
-def get_stream_data(stream: Sample):
+def get_stream_data(stream: Sample, return_type='ndarray'):
     values = []
     if stream:
         for s in stream:
@@ -108,7 +108,16 @@ def get_stream_data(stream: Sample):
             v = float(v_clr)
             values.append(v)
 
-        data = np.array(values)
+        if return_type == 'list':
+            data = values
+        elif return_type == 'ndarray':
+            data = np.array(values)
+        else:
+            print('ERROR: choose a proper return type. ["ndarray, "list"].')
+            print('CAVE: data returned as type "list".')
+            print()
+            data = values
+
         return data
     else:
         print('The stream is empty! Could not extract data.')
@@ -116,7 +125,7 @@ def get_stream_data(stream: Sample):
         return []
 
 
-def get_stream_time(stream: Sample):
+def get_stream_time(stream: Sample, return_type='ndarray'):
     times = []
     if stream:
         for s in stream:
@@ -125,8 +134,19 @@ def get_stream_time(stream: Sample):
             t = float(t_clr)
             times.append(t)
 
-        time = np.array(times)
-        time_in_seconds = time - time[0]
+        if return_type == 'list':
+            time = times
+            time_in_seconds = [x - time[0] for x in time]
+        elif return_type == 'ndarray':
+            time = np.array(times)
+            time_in_seconds = time - time[0]
+        else:
+            print('ERROR: choose a proper return type. ["ndarray, "list"].')
+            print('CAVE: data returned as type "list".')
+            print()
+            time = times
+            time_in_seconds = [x - time[0] for x in time]
+
         return time_in_seconds
     else:
         print('The stream is empty! Could not extract time.')
