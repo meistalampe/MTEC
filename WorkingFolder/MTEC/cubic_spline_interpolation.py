@@ -2,9 +2,7 @@ import numpy as np
 from scipy import interpolate
 import matplotlib.pyplot as plt
 
-
-def main():
-    pass
+__all__ = ["csi_resampling"]
 
 
 def csi_resampling(data, time, sampling_frequency, resampling_frequency, interpolation_mode='cubic'):
@@ -19,6 +17,3 @@ def csi_resampling(data, time, sampling_frequency, resampling_frequency, interpo
 
     return new_data, new_time
 
-
-if __name__ == '__main__':
-    main()

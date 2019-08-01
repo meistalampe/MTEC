@@ -9,6 +9,7 @@ import collections
 from typing import Tuple
 from typing import List
 import numpy as np
+import scipy.io as sio
 import matplotlib.pyplot as plt
 
 # Initialize named tuple Sample
@@ -41,8 +42,8 @@ data_tags = list(['E4_Acc', 'E4_Bvp', 'E4_Gsr', 'E4_Temperature', 'E4_Ibi', 'E4_
 # E4_Tag: Tag data
 #   - The tags taken from the device. Time values.
 
-__all__ = ['data_extraction', 'print_header', 'get_folder_from_user', 'search_for_latest_file', 'parse_file_for_tag', 'get_stream_data',
-           'get_stream_time']
+__all__ = ['data_extraction', 'print_header', 'get_folder_from_user', 'search_for_latest_file', 'parse_file_for_tag',
+           'get_stream_data', 'get_stream_time', 'extract_all','save_dict_to_mat']
 
 
 # ----------------- UI / User Input ----------------- #
@@ -68,6 +69,7 @@ def main():
 def data_extraction(folder: str, stream_tag: str, file_label: str, verbose: bool = False):
     """
     Function that prints a program header. Requires initial execution of the function get_folder_from_user.
+
     Parameters
     ----------
     folder: string
@@ -85,7 +87,8 @@ def data_extraction(folder: str, stream_tag: str, file_label: str, verbose: bool
         numpy array holding raw data values.
     time: np.ndarray
         numpy array holding time values.
-
+    latest_file: str
+        returns current filename.
     References
     -----------
     No references needed.
@@ -94,13 +97,68 @@ def data_extraction(folder: str, stream_tag: str, file_label: str, verbose: bool
         print("We can't search file in this location.")
         return
     else:
-        print(folder)
+        pass
+        # print(folder)
 
     latest_file = search_for_latest_file(folder=folder, search_text=file_label, verbose=verbose)
     stream = parse_file_for_tag(file_path=latest_file, stream_tag=stream_tag)
     data = get_stream_data(stream=stream)
     time = get_stream_time(stream=stream)
-    return data, time
+    return data, time, latest_file
+
+
+def extract_all(folder: str, file_label: str, verbose: bool = False):
+    """
+    A function that executes data extraction for all possible tags.
+
+    Parameters
+    ----------
+    folder: string
+        full path to the data folder.
+    file_label: str
+        look for file_label in data folder files.
+    verbose: bool
+        print information about function progress.
+
+    Returns
+    ----------
+    data: dictionary
+
+    References
+    -----------
+    No references needed.
+    """
+    stream_tags = list(['E4_Acc', 'E4_Bvp', 'E4_Gsr', 'E4_Temperature', 'E4_Tag'])
+    # stream_fs = list([32, 64, 4, 4, 0])
+
+    stream_data = {
+        'Filename': '',
+        'E4_Acc_data': [],
+        'E4_Acc_time': [],
+        'E4_Bvp_data': [],
+        'E4_Bvp_time': [],
+        'E4_Gsr_data': [],
+        'E4_Gsr_time': [],
+        'E4_Temperature_data': [],
+        'E4_Temperature_time': [],
+        'E4_Tag_data': [],
+        'E4_Tag_time': [],
+    }
+
+    for tag in stream_tags:
+        data_name = tag + '_data'
+        time_name = tag + '_time'
+
+        stream_data[data_name], stream_data[time_name], stream_data['Filename'] = \
+            data_extraction(folder=folder, stream_tag=tag,  file_label=file_label, verbose=verbose)
+
+        if verbose:
+            if stream_data[data_name].size > 0:
+                print('Tag: {} was successfully extracted from file.'.format(tag))
+            else:
+                print('Could not locate {}. No data with this tag extracted.'.format(tag))
+
+    return stream_data
 
 
 def print_header():
@@ -195,7 +253,7 @@ def search_for_latest_file(folder: str, search_text: str, verbose: bool = False)
         latest_file = max(all_files, key=os.path.getctime)
 
         if verbose:
-            print('Latest file:', latest_file.name)
+            print('Latest file: ', latest_file.name)
 
         file_path = os.path.abspath(os.path.join(folder, latest_file.name))
         return file_path
@@ -204,7 +262,7 @@ def search_for_latest_file(folder: str, search_text: str, verbose: bool = False)
         return ''
 
 
-def parse_file_for_tag(file_path: str, stream_tag: str) -> List[Sample]:
+def parse_file_for_tag(file_path: str, stream_tag: str, verbose: bool = False) -> List[Sample]:
     """
     Function that retrieves the name of the most recently created/edited file in the data folder.
     Parameters
@@ -213,6 +271,8 @@ def parse_file_for_tag(file_path: str, stream_tag: str) -> List[Sample]:
         full path of the csv file containing the raw data recorded from the empatica E4 device.
     stream_tag: string
         tag to indicate for which kind of data the file will be parsed
+    verbose: bool
+        if true print additional information.
 
     Returns
     ----------
@@ -233,18 +293,21 @@ def parse_file_for_tag(file_path: str, stream_tag: str) -> List[Sample]:
         if stream:
             return stream
         else:
-            print('We could not find a stream with the tag {}.'.format(stream_tag))
-            print()
+            if verbose:
+                print('We could not find a stream with the tag {}.'.format(stream_tag))
+                print()
             return []
 
 
-def get_stream_data(stream: List[Sample]) -> np.ndarray:
+def get_stream_data(stream: List[Sample], verbose: bool = False) -> np.ndarray:
     """
     Function that extracts the value element from a list of Samples.
     Parameters
     ----------
     stream: list[Samples]
         list of samples with a certain tag that were retrieved from the raw data file.
+    verbose: bool
+        if true print additional information.
 
     Returns
     ----------
@@ -269,18 +332,22 @@ def get_stream_data(stream: List[Sample]) -> np.ndarray:
         data = np.array(values)
         return data
     else:
-        print('The stream is empty! Could not extract data.')
-        print()
+        if verbose:
+            print('The stream is empty! Could not extract data.')
+            print()
         return np.array([])
 
 
-def get_stream_time(stream: List[Sample]) -> np.ndarray:
+def get_stream_time(stream: List[Sample], verbose: bool = False) -> np.ndarray:
     """
     Function that extracts the time element of a list of Samples.
+
     Parameters
     ----------
     stream: list[Samples]
         list of samples with a certain tag that were retrieved from the raw data file.
+    verbose: bool
+        if true print additional information.
 
     Returns
     ----------
@@ -309,9 +376,45 @@ def get_stream_time(stream: List[Sample]) -> np.ndarray:
         time_in_seconds = time - time[0]
         return time_in_seconds
     else:
-        print('The stream is empty! Could not extract time.')
-        print()
+        if verbose:
+            print('The stream is empty! Could not extract time.')
+            print()
         return np.array([])
+
+
+def save_dict_to_mat(dictionary: dict, data_file_name: str, save_file_label: str,
+                     verbose: bool = False):
+    """
+    A function that saves a dictionary to a mat file.
+
+    Parameters
+    ----------
+    dictionary: dict
+        a dictionary holding some kind of information or results from processing a data file.
+
+    data_file_name: str
+        name of the data file whose information was stored in dictionary.
+
+    verbose: bool
+        if True print information about saving process.
+
+    save_file_label: str
+        prefix to identify the contents of dictionary.
+
+    Returns
+    ----------
+    None
+
+    References
+    -----------
+    No references needed.
+    """
+    save_file_label = '_' + save_file_label + '.mat'
+    save_file_name = data_file_name + save_file_label
+    sio.savemat(save_file_name, dictionary)
+
+    if verbose:
+        print('File has been saved to path: {}'.format(save_file_name))
 
 
 if __name__ == '__main__':

@@ -15,7 +15,6 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-
 # Static name for methods params
 MALIK_RULE = "malik"
 KARLSSON_RULE = "karlsson"
@@ -52,6 +51,7 @@ __all__ = ["bvp_peak_detection", "bandpass_butterworth", "zero_phase_filtering",
            "prepare_interpolation", "interpolate_nan_values", "is_outlier", "remove_ectopic_beats_old",
            "remove_ectopic_beats", "get_nn_intervals_old", "get_nn_intervals", "nan_check"]
 
+
 # ----------------- Bvp peak detection algorithm ----------------- #
 
 
@@ -82,19 +82,19 @@ def bvp_peak_detection(bvp_raw_data: np.ndarray, sampling_frequency: int = 64, v
     """
     # step 1: Bandpass filtering
     filtered_signal = zero_phase_filtering(data=bvp_raw_data, f_min=0.5, f_max=8.0,
-                                           sampling_frequency=sampling_frequency, filter_order=2, verbose=False)
+                                           sampling_frequency=sampling_frequency, filter_order=2, verbose=verbose)
     # step 2: Clipping
-    clipped_signal = clipping(data=filtered_signal, verbose=False)
+    clipped_signal = clipping(data=filtered_signal, verbose=verbose)
     # step 3: Squaring
-    squared_clipped_signal = squaring(data=clipped_signal, verbose=False)
+    squared_clipped_signal = squaring(data=clipped_signal, verbose=verbose)
     # step 4: Moving averages
     MA_peak, MA_beat, samples_peak = generate_moving_averages(data=squared_clipped_signal,
                                                               sampling_frequency=sampling_frequency,
                                                               window_for_peak=0.111, window_for_beat=0.667,
-                                                              verbose=False)
+                                                              verbose=verbose)
     # step 5: Thresholds and Offset
     first_threshold, second_threshold = thresholding(data=squared_clipped_signal, moving_average_beat=MA_beat,
-                                                     window_for_peak_in_samples=samples_peak, verbose=False)
+                                                     window_for_peak_in_samples=samples_peak, verbose=verbose)
     # step 6: generate blocks of interest
     blocks_of_interest = np.zeros(len(MA_peak))
 
@@ -420,7 +420,7 @@ def find_valid_peaks(block_array: np.ndarray, signal: np.ndarray, second_thresho
         -----------
         No references needed.
         """
-    diff_mask = np.diff(block_array, n=1,)
+    diff_mask = np.diff(block_array, n=1, )
 
     get_flanks = np.argwhere(diff_mask != 0)
 
@@ -430,12 +430,18 @@ def find_valid_peaks(block_array: np.ndarray, signal: np.ndarray, second_thresho
         start_index = 0
 
     get_flanks = get_flanks[start_index:]
+
+    if len(get_flanks) % 2 != 0:
+        get_flanks = get_flanks[:-1]
+    else:
+        pass
+
     valid_peaks_amplitude = np.zeros((len(get_flanks)))
     valid_peaks_location = np.zeros((len(get_flanks)))
 
     for f in range(0, len(get_flanks), 2):
         block_start = get_flanks[f][0]
-        block_end = get_flanks[f+1][0]
+        block_end = get_flanks[f + 1][0]
         block_width = block_end - block_start
 
         # signal_block = signal[block_start:block_end]
@@ -452,6 +458,7 @@ def find_valid_peaks(block_array: np.ndarray, signal: np.ndarray, second_thresho
     valid_peaks_location = valid_peaks_location[valid_peaks_location > 0]
 
     return valid_peaks_amplitude, valid_peaks_location
+
 
 # ----------------- Calculate inter beat intervals ----------------- #
 
@@ -479,14 +486,14 @@ def get_inter_beat_intervals(peak_data: np.ndarray):
     measurement, physiological interpretation, and clinical use
     """
 
-    inter_beat_intervals = np.zeros(len(peak_data)-1)
+    inter_beat_intervals = np.zeros(len(peak_data) - 1)
 
     for p in range(len(peak_data)):
         if p > 0:
-            ibi = peak_data[p] - peak_data[p-1]
-            np.put(inter_beat_intervals, [p-1], ibi)
+            ibi = peak_data[p] - peak_data[p - 1]
+            np.put(inter_beat_intervals, [p - 1], ibi)
 
-    return list(inter_beat_intervals)                 # returns ibi in samples
+    return list(inter_beat_intervals)  # returns ibi in samples
 
 
 def samples_to_ms(inter_beat_intervals: List[float], sampling_frequency: int = 64) -> list:
@@ -512,6 +519,7 @@ def samples_to_ms(inter_beat_intervals: List[float], sampling_frequency: int = 6
     # ibi (samples) --> number of samples / sampling frequency * 1000 = ibi (ms)
     inter_beat_intervals_ms = [int((x / sampling_frequency) * 1000) for x in inter_beat_intervals]
     return inter_beat_intervals_ms
+
 
 # ----------------- Remove outliers and ectopic beats ----------------- #
 
@@ -616,6 +624,16 @@ def find_sequences(outlier_indices: list, outlier_values: list, verbose: bool = 
     v_sequence = list([])
     loop_len = len(outlier_indices) - 1
 
+    # if len(outlier_indices) == 0:
+    #     sequence_indices = list([])
+    #     sequence_values = list([])
+    #     if verbose:
+    #         print('There were no ectopic beats found.')
+    #     return sequence_indices, sequence_values
+    # else:
+    #     if verbose:
+    #         print('Ectopic beats found. Starting interpolation...')
+
     o = 0
     while True:
 
@@ -714,9 +732,15 @@ def calculate_substitution_intervals(inter_beat_intervals: list, outlier_indices
     #  being NaN and if so replace by random valid ibi
     # check if there were any ectopic beats in ibi_data
     if len(outlier_indices) == 0:
+        number_of_beats_to_replace = []
+        number_of_beats_to_insert = []
+        interpolation_mode = []
+        new_ibi_data = inter_beat_intervals
+        indices_to_replace = []
+
         if verbose:
             print('There were no ectopic beats found.')
-        return []
+
     else:
         if verbose:
             print('Ectopic beats found. Starting interpolation...')
@@ -1047,8 +1071,8 @@ def remove_ectopic_beats(inter_beat_intervals: List[float], method: str = 'kamat
             valid_beat_indices.append(i + 1)
         else:
             nn_intervals.append(np.nan)
-            ectopic_beats.append(inter_beat_intervals[i+1])
-            ectopic_beat_indices.append(i+1)
+            ectopic_beats.append(inter_beat_intervals[i + 1])
+            ectopic_beat_indices.append(i + 1)
             outlier_count += 1
             previous_outlier = True
 
@@ -1116,12 +1140,12 @@ def _remove_outlier_karlsson(inter_beat_intervals: List[float], removing_rule: f
 
     for i in range(len(inter_beat_intervals)):
         # Condition to go out of loop at limits of list
-        if i == len(inter_beat_intervals)-2:
+        if i == len(inter_beat_intervals) - 2:
             nn_intervals.append(inter_beat_intervals[i + 1])
             break
-        mean_prev_next_ibi = (inter_beat_intervals[i] + inter_beat_intervals[i+2]) / 2
-        if abs(mean_prev_next_ibi - inter_beat_intervals[i+1]) < removing_rule * mean_prev_next_ibi:
-            nn_intervals.append(inter_beat_intervals[i+1])
+        mean_prev_next_ibi = (inter_beat_intervals[i] + inter_beat_intervals[i + 2]) / 2
+        if abs(mean_prev_next_ibi - inter_beat_intervals[i + 1]) < removing_rule * mean_prev_next_ibi:
+            nn_intervals.append(inter_beat_intervals[i + 1])
         else:
             nn_intervals.append(np.nan)
             outlier_count += 1
@@ -1258,63 +1282,70 @@ def get_nn_intervals(inter_beat_intervals: List[float], low_ibi: int = 300, high
     inter_beat_intervals_mo, outlier_list, outlier_indices, valid_list, valid_indices = \
         remove_outliers(inter_beat_intervals_ms, low_ibi=low_ibi, high_ibi=high_ibi, verbose=verbose)
 
-    # check for sequences of outliers
-    o_sequence_indices, o_sequence_values = find_sequences(outlier_indices=outlier_indices, outlier_values=outlier_list,
-                                                           verbose=True)
+    if not empty_check(outlier_list):
+        # check for sequences of outliers
+        o_sequence_indices, o_sequence_values = find_sequences(outlier_indices=outlier_indices,
+                                                               outlier_values=outlier_list, verbose=True)
 
-    # calculate size of substitution intervals
-    outliers_to_replace, outliers_to_insert, interpolation_mode, new_ibi_data, outlier_indices_to_replace = \
-        calculate_substitution_intervals(inter_beat_intervals=inter_beat_intervals_ms, outlier_indices=outlier_indices,
-                                         sequence_indices=o_sequence_indices, sequence_values=o_sequence_values,
-                                         valid_intervals=valid_list, verbose=True)
+        # calculate size of substitution intervals
+        outliers_to_replace, outliers_to_insert, interpolation_mode, new_ibi_data, outlier_indices_to_replace = \
+            calculate_substitution_intervals(inter_beat_intervals=inter_beat_intervals_ms,
+                                             outlier_indices=outlier_indices, sequence_indices=o_sequence_indices,
+                                             sequence_values=o_sequence_values, valid_intervals=valid_list,
+                                             verbose=True)
 
-    # check for artifact sequences
-    inter_beat_intervals_za = remove_artifacts(inter_beat_intervals=new_ibi_data,
-                                               interpolation_mode=interpolation_mode,
-                                               indices_to_replace=outlier_indices_to_replace)
+        # check for artifact sequences
+        inter_beat_intervals_za = remove_artifacts(inter_beat_intervals=new_ibi_data,
+                                                   interpolation_mode=interpolation_mode,
+                                                   indices_to_replace=outlier_indices_to_replace)
 
-    # insert substitution intervals, remove artifact intervals, calculate interpolation limit
-    inter_beat_intervals_cleaned, o_limit = prepare_interpolation(inter_beat_intervals=inter_beat_intervals_za,
-                                                                  interpolation_mode=interpolation_mode,
-                                                                  indices_to_replace=outlier_indices_to_replace,
-                                                                  number_of_beats_to_insert=outliers_to_insert)
-
-    # interpolate outliers
-    interpolated_inter_beat_intervals = interpolate_nan_values(inter_beat_intervals=inter_beat_intervals_cleaned,
-                                                               interpolation_method=interpolation_method,
-                                                               limit=o_limit)
+        # insert substitution intervals, remove artifact intervals, calculate interpolation limit
+        inter_beat_intervals_cleaned, o_limit = prepare_interpolation(inter_beat_intervals=inter_beat_intervals_za,
+                                                                      interpolation_mode=interpolation_mode,
+                                                                      indices_to_replace=outlier_indices_to_replace,
+                                                                      number_of_beats_to_insert=outliers_to_insert)
+        # interpolate outliers
+        interpolated_inter_beat_intervals = interpolate_nan_values(inter_beat_intervals=inter_beat_intervals_cleaned,
+                                                                   interpolation_method=interpolation_method,
+                                                                   limit=o_limit)
+    else:
+        interpolated_inter_beat_intervals = inter_beat_intervals_ms
 
     # remove ectopic beats according to kamath method
     nn_intervals, ectopic_beat_list, ectopic_beat_indices, valid_beat_list, valid_beat_indices = \
         remove_ectopic_beats(inter_beat_intervals=interpolated_inter_beat_intervals,
                              method=ectopic_beats_removal_method, verbose=True)
 
-    # todo: using this part of the algorithm causes immense rise in energy of the ULF and LF components
-    # # check for sequences of ectopic beats
-    # eb_sequence_indices, eb_sequence_values = find_sequences(outlier_indices=ectopic_beat_indices,
-    #                                                          outlier_values=ectopic_beat_list, verbose=True)
-    #
-    # # calculate the size of substitution intervals
-    # ectopic_beats_to_replace, ectopic_beats_to_insert, interpolation_mode, new_nn_data, eb_indices_to_replace = \
-    #     calculate_substitution_intervals(inter_beat_intervals=nn_intervals,
-    #                                      outlier_indices=ectopic_beat_indices, sequence_indices=eb_sequence_indices,
-    #                                      sequence_values=eb_sequence_values, valid_intervals=valid_list, verbose=True)
-    #
-    # # check for artifacts
-    # nn_intervals_za = remove_artifacts(inter_beat_intervals=new_nn_data, interpolation_mode=interpolation_mode,
-    #                                    indices_to_replace=eb_indices_to_replace)
-    #
-    # # insert substitution intervals, remove artifact intervals, calculate interpolation limit
-    # nn_intervals_cleaned, eb_limit = prepare_interpolation(inter_beat_intervals=nn_intervals_za,
-    #                                                        interpolation_mode=interpolation_mode,
-    #                                                        indices_to_replace=eb_indices_to_replace,
-    #                                                        number_of_beats_to_insert=ectopic_beats_to_insert)
+    if not empty_check(ectopic_beat_list):
+        # todo: using this part of the algorithm causes immense rise in energy of the ULF and LF components
+        # # check for sequences of ectopic beats
+        # eb_sequence_indices, eb_sequence_values = find_sequences(outlier_indices=ectopic_beat_indices,
+        #                                                          outlier_values=ectopic_beat_list, verbose=True)
+        #
+        # # calculate the size of substitution intervals
+        # ectopic_beats_to_replace, ectopic_beats_to_insert, interpolation_mode, new_nn_data, eb_indices_to_replace = \
+        #     calculate_substitution_intervals(inter_beat_intervals=nn_intervals,
+        #                                      outlier_indices=ectopic_beat_indices, sequence_indices=eb_sequence_indices,
+        #                                      sequence_values=eb_sequence_values, valid_intervals=valid_list, verbose=True)
+        #
+        # # check for artifacts
+        # nn_intervals_za = remove_artifacts(inter_beat_intervals=new_nn_data, interpolation_mode=interpolation_mode,
+        #                                    indices_to_replace=eb_indices_to_replace)
+        #
+        # # insert substitution intervals, remove artifact intervals, calculate interpolation limit
+        # nn_intervals_cleaned, eb_limit = prepare_interpolation(inter_beat_intervals=nn_intervals_za,
+        #                                                        interpolation_mode=interpolation_mode,
+        #                                                        indices_to_replace=eb_indices_to_replace,
+        #                                                        number_of_beats_to_insert=ectopic_beats_to_insert)
 
-    # interpolate ectopic beats
-    interpolated_nn_intervals = interpolate_nan_values(inter_beat_intervals=nn_intervals,
-                                                       interpolation_method=interpolation_method, limit=2)
-    # if any NaN are left run interpolation again
-    nan_found = nan_check(interpolated_nn_intervals)
+        # interpolate ectopic beats
+        interpolated_nn_intervals = interpolate_nan_values(inter_beat_intervals=nn_intervals,
+                                                           interpolation_method=interpolation_method, limit=2)
+        # if any NaN are left run interpolation again
+        nan_found = nan_check(interpolated_nn_intervals)
+    else:
+        interpolated_nn_intervals = interpolated_inter_beat_intervals
+
     # data sample validation
     outlier_total = len(outlier_list) + len(ectopic_beat_list)
     validation_result = is_valid_sample(nn_intervals=interpolated_nn_intervals, outlier_count=outlier_total,
@@ -1322,7 +1353,28 @@ def get_nn_intervals(inter_beat_intervals: List[float], low_ibi: int = 300, high
 
     return interpolated_nn_intervals, interpolated_inter_beat_intervals, validation_result
 
+
 # ----------------- Data Sample Validation ----------------- #
+
+
+def empty_check(a_list: list):
+    """
+    A function that checks if a list is empty.
+
+    Parameters
+    ---------
+    a_list: list
+        a list.
+
+    Returns
+    ---------
+    True, False: bool
+
+    """
+    if len(a_list) == 0:
+        return True
+    else:
+        return False
 
 
 def nan_check(data: list, verbose: bool = False) -> bool:
@@ -1378,4 +1430,3 @@ def is_valid_sample(nn_intervals: List[float], outlier_count: int, removing_rule
         print("Not enough Heart beat for Nyquist criteria ! ")
         result = False
     return result
-

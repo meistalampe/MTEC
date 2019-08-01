@@ -223,7 +223,7 @@ function EmpaticaMatlabBLEClient()
 
         % Connect to the TCP server
         tcpClient = tcpip(IP, Port, 'NetworkRole', 'client','InputBufferSize',1024);
-        minutes = 1;
+        minutes = 6;
         tcpClient.TimerPeriod = minutes * 60;    
         % Open/Close the TCP connection
         if (strcmp(IPConnectBtnHdl.String,'Connect'))
@@ -326,14 +326,14 @@ function EmpaticaMatlabBLEClient()
                 % Create dir and write to file
                 repositoryName = 'DataRepository';
                 if ~exist(repositoryName,'dir');
-                    mkdir repositoryName;
+                    mkdir('DataRepository');
                 end
                 a=datestr(now,'yyyy-mm-dd-HH-MM-SS'); 
                 
-                filename = strcat('.\', repositoryName, '\recording_', a);
+                filename = strcat('.\DataRepository\recording_', a);
                 fileID = fopen(filename,'a+');
                 
-                StatusBoxHdl.String = strcat('Data logging started to ','filename'); 
+                StatusBoxHdl.String = strcat('Data logging started to ', filename); 
                 
                 % Change to callback mode for capturing datastream
                 tcpClient.BytesAvailableFcn = @BytesReceivedCallback;
@@ -345,19 +345,19 @@ function EmpaticaMatlabBLEClient()
                 tcpClient.BytesAvailableFcn = '';
                 tcpClient.TimerFcn = '';
                 
-                % deactivate python server
-                try 
-                    statusIndex = 'inactive';
-                    commandClient(tcpPython, statusIndex)
-                catch err
-                    if (strcmp(err.identifier,'instrument:fopen:opfailed'))
-                        disp('Couldnt connect to Python Server.');
-                    else
-                        disp('Couldnt connect, Please try again.'); 
-                    end
-                end  
+%                 % deactivate python server
+%                 try 
+%                     statusIndex = 'inactive';
+%                     commandClient(tcpPython, statusIndex)
+%                 catch err
+%                     if (strcmp(err.identifier,'instrument:fopen:opfailed'))
+%                         disp('Couldnt connect to Python Server.');
+%                     else
+%                         disp('Couldnt connect, Please try again.'); 
+%                     end
+%                 end  
             
-                pause(1);
+%                 pause(1);
                 
                 fclose(fileID);
                 StatusBoxHdl.String = 'Data logging stopped'; 
@@ -369,14 +369,13 @@ function EmpaticaMatlabBLEClient()
             StatusBoxHdl.String = 'Please check either TCP or Device connection'; 
         end
     end
+
     % BytesAvailable callback function
     function BytesReceivedCallback(source,callbackdata)
         FListOpen = fopen('all'); %get the names of the open files
         if ismember(fileID,FListOpen) %see if myfile is open
             fwrite(fileID, fscanf(tcpClient));
-        end
-        
-        
+        end      
     end
     % Timer reached callback function
     function TimerReachedCallback(source,callbackdata)       
@@ -385,27 +384,27 @@ function EmpaticaMatlabBLEClient()
         FListOpen = fopen('all'); %get the names of the open files
         if ismember(fileID,FListOpen) %see if myfile is open
             fclose(fileID);
-            
-            try 
-                statusIndex = 'active';
-                commandClient(tcpPython, statusIndex)
-            catch err
-                if (strcmp(err.identifier,'instrument:fopen:opfailed'))
-                    disp('Couldnt connect to Python Server.');
-                else
-                    disp('Couldnt connect, Please try again.'); 
-                end
-            end  
-            
+             
+% %             try 
+% %                 statusIndex = 'active';
+% %                 commandClient(tcpPython, statusIndex)
+% %             catch err
+% %                 if (strcmp(err.identifier,'instrument:fopen:opfailed'))
+% %                     disp('Couldnt connect to Python Server.');
+% %                 else
+% %                     disp('Couldnt connect, Please try again.'); 
+% %                 end
+% %             end  
+%             
             pause(1);
         end
         
-        repositoryName = 'DataRepository';
-        if ~exist(repositoryName,'dir');
-            mkdir repositoryName;
+        if ~exist('DataRepository','dir');
+            mkdir('DataRepository');
         end
         a=datestr(now,'yyyy-mm-dd-HH-MM-SS'); 
-        filename = strcat('.\', repositoryName, '\recording_', a);
+                
+        filename = strcat('.\DataRepository\recording_', a);
         fileID = fopen(filename,'a+');
     end
 end
