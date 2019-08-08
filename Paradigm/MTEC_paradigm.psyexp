@@ -1,0 +1,814 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="3.1.3">
+  <Settings>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="html" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="JS libs" updates="None" val="packaged" valType="str"/>
+    <Param name="Monitor" updates="None" val="testMonitor" valType="str"/>
+    <Param name="Save csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="True" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="1" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="height" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1920, 1080]" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[0.85,0.85,0.85]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="MTEC_paradigm" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="exp" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="Welcome_Screen">
+      <TextComponent name="text_welcome_screen">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_welcome_screen" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="  Welcome &amp;#10;     to the &amp;#10;Experiment&amp;#10;&amp;#10;&amp;#10;" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_welcome_screen">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_welcome_screen" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="text_instructions_welcome_screen">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_instructions_welcome_screen" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="(Press 'Space' to continue)" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="Blank_Screen">
+      <TextComponent name="text_blank_screen">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_blank_screen" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="0.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="Baseline_Screen">
+      <TextComponent name="text_baseline_screen">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_baseline_screen" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="5.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="    Baseline &amp;#10;Measurement" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_baseline_screen_title">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_baseline_screen_title" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="5.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Segment One:" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="Baseline_Measurement">
+      <TextComponent name="text_baseline_measurement">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.3" valType="code"/>
+        <Param name="name" updates="None" val="text_baseline_measurement" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="+" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="Baseline_End">
+      <TextComponent name="text_baseline_end">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_baseline_end" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Ending Segment One." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_baseline_end_instructions">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_baseline_end_instructions" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="(Press 'Space' to continue)" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_baseline_end">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_baseline_end" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Baseline_Instructions">
+      <TextComponent name="text_baseline_instructions">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_baseline_instructions" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="  Please try to relax.&amp;#10;&amp;#10;The Measurement will&amp;#10;       start shortly." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_baseline_countdown">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_baseline_countdown" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.5" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="10" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="set every frame" val="$str(round(routineTimer.getTime(),0)) " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="Stress_Screen">
+      <TextComponent name="text_stress_screen_title">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_stress_screen_title" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="5.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Segment Two:" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_stress_screen">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_stress_screen" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="5.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Stress Measurement" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="Stress_Part_One_Instructions">
+      <TextComponent name="text_stress_part_one_instructions_title">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_stress_part_one_instructions_title" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Instructions:" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_stress_part_one_instructions">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_stress_part_one_instructions" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Count down from 1400 in steps of 7.&amp;#10;&amp;#10;Try to match the speed of the metronome dot on the screen.&amp;#10;&amp;#10;(Press 'Space' to start)" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_text_stress_part_one_instructions">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_text_stress_part_one_instructions" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Stress_Part_Two_Instructions">
+      <TextComponent name="text_part_two_instructions_title">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_part_two_instructions_title" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Instructions:" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_part_two_instructions">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_part_two_instructions" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Choose the color of the word by using the arrow keys.&amp;#10;&amp;#10;(Press 'Space' to start)" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="Stress_Part_One_Measurement">
+      <PolygonComponent name="metronome">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="set every repeat" val="$Color" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="black" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="32" valType="int"/>
+        <Param name="name" updates="None" val="metronome" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.25, 0.25)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="0.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+    </Routine>
+    <Routine name="Stress_Part_Two_Measurement"/>
+    <Routine name="Stress_Part_One_End">
+      <TextComponent name="text_part_one_end">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_part_one_end" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Ending Part One." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_par_one_end_instructions">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_par_one_end_instructions" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="(Press 'Space' to continue)" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="key_resp_part_one_end">
+        <Param name="allowedKeys" updates="constant" val="'space'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="key_resp_part_one_end" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="store" updates="constant" val="nothing" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="Stress_Part_Two_End"/>
+    <Routine name="Metronom_Tic">
+      <TextComponent name="text_metronom_tic">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_metronom_tic" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="0.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="Stress_Part_One">
+      <TextComponent name="text_stress_part_one_title">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_stress_part_one_title" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="5.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Part One:" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_stress_part_one">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_stress_part_one" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="5.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="7-Row" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="Stress_Part_Two">
+      <TextComponent name="text_part_two_title">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_part_two_title" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="5.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Part Two:" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_part_two">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text_part_two" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="5.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Stroop Test" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="Stress_Evaluation">
+      <TextComponent name="text_part_one_evaluation">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
+        <Param name="name" updates="None" val="text_part_one_evaluation" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Task finished.&amp;#10;&amp;#10;Please rate the difficulty of the task." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <RatingScaleComponent name="rating_part_one">
+        <Param name="categoryChoices" updates="constant" val="" valType="str"/>
+        <Param name="customize_everything" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="disappear" updates="constant" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="high" updates="constant" val="10" valType="code"/>
+        <Param name="labels" updates="constant" val="very easy, very hard" valType="str"/>
+        <Param name="low" updates="constant" val="1" valType="code"/>
+        <Param name="marker" updates="constant" val="triangle" valType="str"/>
+        <Param name="markerStart" updates="constant" val="5" valType="str"/>
+        <Param name="name" updates="None" val="rating_part_one" valType="code"/>
+        <Param name="pos" updates="constant" val="0, -0.2" valType="str"/>
+        <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
+        <Param name="scaleDescription" updates="constant" val="" valType="str"/>
+        <Param name="showAccept" updates="constant" val="True" valType="bool"/>
+        <Param name="singleClick" updates="constant" val="False" valType="bool"/>
+        <Param name="size" updates="constant" val="1.0" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="" valType="code"/>
+        <Param name="storeHistory" updates="constant" val="False" valType="bool"/>
+        <Param name="storeRating" updates="constant" val="True" valType="bool"/>
+        <Param name="storeRatingTime" updates="constant" val="True" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="None" val="False" valType="bool"/>
+        <Param name="tickHeight" updates="constant" val="" valType="str"/>
+        <Param name="visualAnalogScale" updates="constant" val="False" valType="bool"/>
+      </RatingScaleComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <Routine name="Welcome_Screen"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Baseline_Screen"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Baseline_Instructions"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Baseline_Measurement"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Baseline_End"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Stress_Screen"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Stress_Part_One"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Stress_Part_One_Instructions"/>
+    <Routine name="Blank_Screen"/>
+    <LoopInitiator loopType="TrialHandler" name="tick">
+      <Param name="Selected rows" updates="None" val="1:301" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('Tick', 1), ('Color', 'green')]), OrderedDict([('Tick', 2), ('Color', 'green')]), OrderedDict([('Tick', 3), ('Color', 'green')]), OrderedDict([('Tick', 4), ('Color', 'green')]), OrderedDict([('Tick', 5), ('Color', 'green')]), OrderedDict([('Tick', 6), ('Color', 'green')]), OrderedDict([('Tick', 7), ('Color', 'green')]), OrderedDict([('Tick', 8), ('Color', 'green')]), OrderedDict([('Tick', 9), ('Color', 'green')]), OrderedDict([('Tick', 10), ('Color', 'green')]), OrderedDict([('Tick', 11), ('Color', 'green')]), OrderedDict([('Tick', 12), ('Color', 'green')]), OrderedDict([('Tick', 13), ('Color', 'green')]), OrderedDict([('Tick', 14), ('Color', 'green')]), OrderedDict([('Tick', 15), ('Color', 'green')]), OrderedDict([('Tick', 16), ('Color', 'green')]), OrderedDict([('Tick', 17), ('Color', 'green')]), OrderedDict([('Tick', 18), ('Color', 'green')]), OrderedDict([('Tick', 19), ('Color', 'green')]), OrderedDict([('Tick', 20), ('Color', 'green')]), OrderedDict([('Tick', 21), ('Color', 'green')]), OrderedDict([('Tick', 22), ('Color', 'green')]), OrderedDict([('Tick', 23), ('Color', 'green')]), OrderedDict([('Tick', 24), ('Color', 'green')]), OrderedDict([('Tick', 25), ('Color', 'green')]), OrderedDict([('Tick', 26), ('Color', 'green')]), OrderedDict([('Tick', 27), ('Color', 'green')]), OrderedDict([('Tick', 28), ('Color', 'green')]), OrderedDict([('Tick', 29), ('Color', 'green')]), OrderedDict([('Tick', 30), ('Color', 'green')]), OrderedDict([('Tick', 31), ('Color', 'green')]), OrderedDict([('Tick', 32), ('Color', 'green')]), OrderedDict([('Tick', 33), ('Color', 'green')]), OrderedDict([('Tick', 34), ('Color', 'green')]), OrderedDict([('Tick', 35), ('Color', 'green')]), OrderedDict([('Tick', 36), ('Color', 'green')]), OrderedDict([('Tick', 37), ('Color', 'green')]), OrderedDict([('Tick', 38), ('Color', 'green')]), OrderedDict([('Tick', 39), ('Color', 'green')]), OrderedDict([('Tick', 40), ('Color', 'green')]), OrderedDict([('Tick', 41), ('Color', 'green')]), OrderedDict([('Tick', 42), ('Color', 'green')]), OrderedDict([('Tick', 43), ('Color', 'green')]), OrderedDict([('Tick', 44), ('Color', 'green')]), OrderedDict([('Tick', 45), ('Color', 'green')]), OrderedDict([('Tick', 46), ('Color', 'green')]), OrderedDict([('Tick', 47), ('Color', 'green')]), OrderedDict([('Tick', 48), ('Color', 'green')]), OrderedDict([('Tick', 49), ('Color', 'green')]), OrderedDict([('Tick', 50), ('Color', 'green')]), OrderedDict([('Tick', 51), ('Color', 'green')]), OrderedDict([('Tick', 52), ('Color', 'green')]), OrderedDict([('Tick', 53), ('Color', 'green')]), OrderedDict([('Tick', 54), ('Color', 'green')]), OrderedDict([('Tick', 55), ('Color', 'green')]), OrderedDict([('Tick', 56), ('Color', 'green')]), OrderedDict([('Tick', 57), ('Color', 'green')]), OrderedDict([('Tick', 58), ('Color', 'green')]), OrderedDict([('Tick', 59), ('Color', 'green')]), OrderedDict([('Tick', 60), ('Color', 'green')]), OrderedDict([('Tick', 61), ('Color', 'green')]), OrderedDict([('Tick', 62), ('Color', 'green')]), OrderedDict([('Tick', 63), ('Color', 'green')]), OrderedDict([('Tick', 64), ('Color', 'green')]), OrderedDict([('Tick', 65), ('Color', 'green')]), OrderedDict([('Tick', 66), ('Color', 'green')]), OrderedDict([('Tick', 67), ('Color', 'green')]), OrderedDict([('Tick', 68), ('Color', 'green')]), OrderedDict([('Tick', 69), ('Color', 'green')]), OrderedDict([('Tick', 70), ('Color', 'green')]), OrderedDict([('Tick', 71), ('Color', 'green')]), OrderedDict([('Tick', 72), ('Color', 'green')]), OrderedDict([('Tick', 73), ('Color', 'green')]), OrderedDict([('Tick', 74), ('Color', 'green')]), OrderedDict([('Tick', 75), ('Color', 'green')]), OrderedDict([('Tick', 76), ('Color', 'green')]), OrderedDict([('Tick', 77), ('Color', 'green')]), OrderedDict([('Tick', 78), ('Color', 'green')]), OrderedDict([('Tick', 79), ('Color', 'green')]), OrderedDict([('Tick', 80), ('Color', 'green')]), OrderedDict([('Tick', 81), ('Color', 'green')]), OrderedDict([('Tick', 82), ('Color', 'green')]), OrderedDict([('Tick', 83), ('Color', 'green')]), OrderedDict([('Tick', 84), ('Color', 'green')]), OrderedDict([('Tick', 85), ('Color', 'green')]), OrderedDict([('Tick', 86), ('Color', 'green')]), OrderedDict([('Tick', 87), ('Color', 'green')]), OrderedDict([('Tick', 88), ('Color', 'green')]), OrderedDict([('Tick', 89), ('Color', 'green')]), OrderedDict([('Tick', 90), ('Color', 'green')]), OrderedDict([('Tick', 91), ('Color', 'green')]), OrderedDict([('Tick', 92), ('Color', 'green')]), OrderedDict([('Tick', 93), ('Color', 'green')]), OrderedDict([('Tick', 94), ('Color', 'green')]), OrderedDict([('Tick', 95), ('Color', 'green')]), OrderedDict([('Tick', 96), ('Color', 'green')]), OrderedDict([('Tick', 97), ('Color', 'green')]), OrderedDict([('Tick', 98), ('Color', 'green')]), OrderedDict([('Tick', 99), ('Color', 'green')]), OrderedDict([('Tick', 100), ('Color', 'green')]), OrderedDict([('Tick', 101), ('Color', 'green')]), OrderedDict([('Tick', 102), ('Color', 'green')]), OrderedDict([('Tick', 103), ('Color', 'green')]), OrderedDict([('Tick', 104), ('Color', 'green')]), OrderedDict([('Tick', 105), ('Color', 'green')]), OrderedDict([('Tick', 106), ('Color', 'green')]), OrderedDict([('Tick', 107), ('Color', 'green')]), OrderedDict([('Tick', 108), ('Color', 'green')]), OrderedDict([('Tick', 109), ('Color', 'green')]), OrderedDict([('Tick', 110), ('Color', 'green')]), OrderedDict([('Tick', 111), ('Color', 'green')]), OrderedDict([('Tick', 112), ('Color', 'green')]), OrderedDict([('Tick', 113), ('Color', 'green')]), OrderedDict([('Tick', 114), ('Color', 'green')]), OrderedDict([('Tick', 115), ('Color', 'green')]), OrderedDict([('Tick', 116), ('Color', 'green')]), OrderedDict([('Tick', 117), ('Color', 'green')]), OrderedDict([('Tick', 118), ('Color', 'green')]), OrderedDict([('Tick', 119), ('Color', 'green')]), OrderedDict([('Tick', 120), ('Color', 'green')]), OrderedDict([('Tick', 121), ('Color', 'green')]), OrderedDict([('Tick', 122), ('Color', 'green')]), OrderedDict([('Tick', 123), ('Color', 'green')]), OrderedDict([('Tick', 124), ('Color', 'green')]), OrderedDict([('Tick', 125), ('Color', 'green')]), OrderedDict([('Tick', 126), ('Color', 'green')]), OrderedDict([('Tick', 127), ('Color', 'green')]), OrderedDict([('Tick', 128), ('Color', 'green')]), OrderedDict([('Tick', 129), ('Color', 'green')]), OrderedDict([('Tick', 130), ('Color', 'green')]), OrderedDict([('Tick', 131), ('Color', 'green')]), OrderedDict([('Tick', 132), ('Color', 'green')]), OrderedDict([('Tick', 133), ('Color', 'green')]), OrderedDict([('Tick', 134), ('Color', 'green')]), OrderedDict([('Tick', 135), ('Color', 'green')]), OrderedDict([('Tick', 136), ('Color', 'green')]), OrderedDict([('Tick', 137), ('Color', 'green')]), OrderedDict([('Tick', 138), ('Color', 'green')]), OrderedDict([('Tick', 139), ('Color', 'green')]), OrderedDict([('Tick', 140), ('Color', 'green')]), OrderedDict([('Tick', 141), ('Color', 'green')]), OrderedDict([('Tick', 142), ('Color', 'green')]), OrderedDict([('Tick', 143), ('Color', 'green')]), OrderedDict([('Tick', 144), ('Color', 'green')]), OrderedDict([('Tick', 145), ('Color', 'green')]), OrderedDict([('Tick', 146), ('Color', 'green')]), OrderedDict([('Tick', 147), ('Color', 'green')]), OrderedDict([('Tick', 148), ('Color', 'green')]), OrderedDict([('Tick', 149), ('Color', 'green')]), OrderedDict([('Tick', 150), ('Color', 'green')]), OrderedDict([('Tick', 151), ('Color', 'green')]), OrderedDict([('Tick', 152), ('Color', 'green')]), OrderedDict([('Tick', 153), ('Color', 'green')]), OrderedDict([('Tick', 154), ('Color', 'green')]), OrderedDict([('Tick', 155), ('Color', 'green')]), OrderedDict([('Tick', 156), ('Color', 'green')]), OrderedDict([('Tick', 157), ('Color', 'green')]), OrderedDict([('Tick', 158), ('Color', 'green')]), OrderedDict([('Tick', 159), ('Color', 'green')]), OrderedDict([('Tick', 160), ('Color', 'green')]), OrderedDict([('Tick', 161), ('Color', 'green')]), OrderedDict([('Tick', 162), ('Color', 'green')]), OrderedDict([('Tick', 163), ('Color', 'green')]), OrderedDict([('Tick', 164), ('Color', 'green')]), OrderedDict([('Tick', 165), ('Color', 'green')]), OrderedDict([('Tick', 166), ('Color', 'green')]), OrderedDict([('Tick', 167), ('Color', 'green')]), OrderedDict([('Tick', 168), ('Color', 'green')]), OrderedDict([('Tick', 169), ('Color', 'green')]), OrderedDict([('Tick', 170), ('Color', 'green')]), OrderedDict([('Tick', 171), ('Color', 'green')]), OrderedDict([('Tick', 172), ('Color', 'green')]), OrderedDict([('Tick', 173), ('Color', 'green')]), OrderedDict([('Tick', 174), ('Color', 'green')]), OrderedDict([('Tick', 175), ('Color', 'green')]), OrderedDict([('Tick', 176), ('Color', 'green')]), OrderedDict([('Tick', 177), ('Color', 'green')]), OrderedDict([('Tick', 178), ('Color', 'green')]), OrderedDict([('Tick', 179), ('Color', 'green')]), OrderedDict([('Tick', 180), ('Color', 'green')]), OrderedDict([('Tick', 181), ('Color', 'green')]), OrderedDict([('Tick', 182), ('Color', 'green')]), OrderedDict([('Tick', 183), ('Color', 'green')]), OrderedDict([('Tick', 184), ('Color', 'green')]), OrderedDict([('Tick', 185), ('Color', 'green')]), OrderedDict([('Tick', 186), ('Color', 'green')]), OrderedDict([('Tick', 187), ('Color', 'green')]), OrderedDict([('Tick', 188), ('Color', 'green')]), OrderedDict([('Tick', 189), ('Color', 'green')]), OrderedDict([('Tick', 190), ('Color', 'green')]), OrderedDict([('Tick', 191), ('Color', 'green')]), OrderedDict([('Tick', 192), ('Color', 'green')]), OrderedDict([('Tick', 193), ('Color', 'green')]), OrderedDict([('Tick', 194), ('Color', 'green')]), OrderedDict([('Tick', 195), ('Color', 'green')]), OrderedDict([('Tick', 196), ('Color', 'green')]), OrderedDict([('Tick', 197), ('Color', 'green')]), OrderedDict([('Tick', 198), ('Color', 'green')]), OrderedDict([('Tick', 199), ('Color', 'green')]), OrderedDict([('Tick', 200), ('Color', 'green')]), OrderedDict([('Tick', 201), ('Color', 'green')]), OrderedDict([('Tick', 202), ('Color', 'green')]), OrderedDict([('Tick', 203), ('Color', 'green')]), OrderedDict([('Tick', 204), ('Color', 'green')]), OrderedDict([('Tick', 205), ('Color', 'green')]), OrderedDict([('Tick', 206), ('Color', 'green')]), OrderedDict([('Tick', 207), ('Color', 'green')]), OrderedDict([('Tick', 208), ('Color', 'green')]), OrderedDict([('Tick', 209), ('Color', 'green')]), OrderedDict([('Tick', 210), ('Color', 'green')]), OrderedDict([('Tick', 211), ('Color', 'green')]), OrderedDict([('Tick', 212), ('Color', 'green')]), OrderedDict([('Tick', 213), ('Color', 'green')]), OrderedDict([('Tick', 214), ('Color', 'green')]), OrderedDict([('Tick', 215), ('Color', 'green')]), OrderedDict([('Tick', 216), ('Color', 'green')]), OrderedDict([('Tick', 217), ('Color', 'green')]), OrderedDict([('Tick', 218), ('Color', 'green')]), OrderedDict([('Tick', 219), ('Color', 'green')]), OrderedDict([('Tick', 220), ('Color', 'green')]), OrderedDict([('Tick', 221), ('Color', 'green')]), OrderedDict([('Tick', 222), ('Color', 'green')]), OrderedDict([('Tick', 223), ('Color', 'green')]), OrderedDict([('Tick', 224), ('Color', 'green')]), OrderedDict([('Tick', 225), ('Color', 'green')]), OrderedDict([('Tick', 226), ('Color', 'green')]), OrderedDict([('Tick', 227), ('Color', 'green')]), OrderedDict([('Tick', 228), ('Color', 'green')]), OrderedDict([('Tick', 229), ('Color', 'green')]), OrderedDict([('Tick', 230), ('Color', 'green')]), OrderedDict([('Tick', 231), ('Color', 'green')]), OrderedDict([('Tick', 232), ('Color', 'green')]), OrderedDict([('Tick', 233), ('Color', 'green')]), OrderedDict([('Tick', 234), ('Color', 'green')]), OrderedDict([('Tick', 235), ('Color', 'green')]), OrderedDict([('Tick', 236), ('Color', 'green')]), OrderedDict([('Tick', 237), ('Color', 'green')]), OrderedDict([('Tick', 238), ('Color', 'green')]), OrderedDict([('Tick', 239), ('Color', 'green')]), OrderedDict([('Tick', 240), ('Color', 'green')]), OrderedDict([('Tick', 241), ('Color', 'green')]), OrderedDict([('Tick', 242), ('Color', 'green')]), OrderedDict([('Tick', 243), ('Color', 'green')]), OrderedDict([('Tick', 244), ('Color', 'green')]), OrderedDict([('Tick', 245), ('Color', 'green')]), OrderedDict([('Tick', 246), ('Color', 'green')]), OrderedDict([('Tick', 247), ('Color', 'green')]), OrderedDict([('Tick', 248), ('Color', 'green')]), OrderedDict([('Tick', 249), ('Color', 'green')]), OrderedDict([('Tick', 250), ('Color', 'green')]), OrderedDict([('Tick', 251), ('Color', 'green')]), OrderedDict([('Tick', 252), ('Color', 'green')]), OrderedDict([('Tick', 253), ('Color', 'green')]), OrderedDict([('Tick', 254), ('Color', 'green')]), OrderedDict([('Tick', 255), ('Color', 'green')]), OrderedDict([('Tick', 256), ('Color', 'green')]), OrderedDict([('Tick', 257), ('Color', 'green')]), OrderedDict([('Tick', 258), ('Color', 'green')]), OrderedDict([('Tick', 259), ('Color', 'green')]), OrderedDict([('Tick', 260), ('Color', 'green')]), OrderedDict([('Tick', 261), ('Color', 'green')]), OrderedDict([('Tick', 262), ('Color', 'green')]), OrderedDict([('Tick', 263), ('Color', 'green')]), OrderedDict([('Tick', 264), ('Color', 'green')]), OrderedDict([('Tick', 265), ('Color', 'green')]), OrderedDict([('Tick', 266), ('Color', 'green')]), OrderedDict([('Tick', 267), ('Color', 'green')]), OrderedDict([('Tick', 268), ('Color', 'green')]), OrderedDict([('Tick', 269), ('Color', 'green')]), OrderedDict([('Tick', 270), ('Color', 'green')]), OrderedDict([('Tick', 271), ('Color', 'green')]), OrderedDict([('Tick', 272), ('Color', 'green')]), OrderedDict([('Tick', 273), ('Color', 'green')]), OrderedDict([('Tick', 274), ('Color', 'green')]), OrderedDict([('Tick', 275), ('Color', 'green')]), OrderedDict([('Tick', 276), ('Color', 'green')]), OrderedDict([('Tick', 277), ('Color', 'green')]), OrderedDict([('Tick', 278), ('Color', 'green')]), OrderedDict([('Tick', 279), ('Color', 'green')]), OrderedDict([('Tick', 280), ('Color', 'green')]), OrderedDict([('Tick', 281), ('Color', 'green')]), OrderedDict([('Tick', 282), ('Color', 'green')]), OrderedDict([('Tick', 283), ('Color', 'green')]), OrderedDict([('Tick', 284), ('Color', 'green')]), OrderedDict([('Tick', 285), ('Color', 'green')]), OrderedDict([('Tick', 286), ('Color', 'green')]), OrderedDict([('Tick', 287), ('Color', 'green')]), OrderedDict([('Tick', 288), ('Color', 'green')]), OrderedDict([('Tick', 289), ('Color', 'green')]), OrderedDict([('Tick', 290), ('Color', 'green')]), OrderedDict([('Tick', 291), ('Color', 'green')]), OrderedDict([('Tick', 292), ('Color', 'green')]), OrderedDict([('Tick', 293), ('Color', 'green')]), OrderedDict([('Tick', 294), ('Color', 'green')]), OrderedDict([('Tick', 295), ('Color', 'green')]), OrderedDict([('Tick', 296), ('Color', 'green')]), OrderedDict([('Tick', 297), ('Color', 'green')]), OrderedDict([('Tick', 298), ('Color', 'green')]), OrderedDict([('Tick', 299), ('Color', 'green')]), OrderedDict([('Tick', 300), ('Color', 'green')]), OrderedDict([('Tick', 301), ('Color', 'green')]), OrderedDict([('Tick', 302), ('Color', 'green')]), OrderedDict([('Tick', 303), ('Color', 'green')]), OrderedDict([('Tick', 304), ('Color', 'green')]), OrderedDict([('Tick', 305), ('Color', 'green')]), OrderedDict([('Tick', 306), ('Color', 'green')]), OrderedDict([('Tick', 307), ('Color', 'green')]), OrderedDict([('Tick', 308), ('Color', 'green')]), OrderedDict([('Tick', 309), ('Color', 'green')]), OrderedDict([('Tick', 310), ('Color', 'green')]), OrderedDict([('Tick', 311), ('Color', 'green')]), OrderedDict([('Tick', 312), ('Color', 'green')]), OrderedDict([('Tick', 313), ('Color', 'green')]), OrderedDict([('Tick', 314), ('Color', 'green')]), OrderedDict([('Tick', 315), ('Color', 'green')]), OrderedDict([('Tick', 316), ('Color', 'green')]), OrderedDict([('Tick', 317), ('Color', 'green')]), OrderedDict([('Tick', 318), ('Color', 'green')]), OrderedDict([('Tick', 319), ('Color', 'green')]), OrderedDict([('Tick', 320), ('Color', 'green')]), OrderedDict([('Tick', 321), ('Color', 'green')]), OrderedDict([('Tick', 322), ('Color', 'green')]), OrderedDict([('Tick', 323), ('Color', 'green')]), OrderedDict([('Tick', 324), ('Color', 'green')]), OrderedDict([('Tick', 325), ('Color', 'green')]), OrderedDict([('Tick', 326), ('Color', 'green')]), OrderedDict([('Tick', 327), ('Color', 'green')]), OrderedDict([('Tick', 328), ('Color', 'green')]), OrderedDict([('Tick', 329), ('Color', 'green')]), OrderedDict([('Tick', 330), ('Color', 'green')]), OrderedDict([('Tick', 331), ('Color', 'green')]), OrderedDict([('Tick', 332), ('Color', 'green')]), OrderedDict([('Tick', 333), ('Color', 'green')]), OrderedDict([('Tick', 334), ('Color', 'green')]), OrderedDict([('Tick', 335), ('Color', 'green')]), OrderedDict([('Tick', 336), ('Color', 'green')]), OrderedDict([('Tick', 337), ('Color', 'green')]), OrderedDict([('Tick', 338), ('Color', 'green')]), OrderedDict([('Tick', 339), ('Color', 'green')]), OrderedDict([('Tick', 340), ('Color', 'green')]), OrderedDict([('Tick', 341), ('Color', 'green')]), OrderedDict([('Tick', 342), ('Color', 'green')]), OrderedDict([('Tick', 343), ('Color', 'green')]), OrderedDict([('Tick', 344), ('Color', 'green')]), OrderedDict([('Tick', 345), ('Color', 'green')]), OrderedDict([('Tick', 346), ('Color', 'green')]), OrderedDict([('Tick', 347), ('Color', 'green')]), OrderedDict([('Tick', 348), ('Color', 'green')]), OrderedDict([('Tick', 349), ('Color', 'green')]), OrderedDict([('Tick', 350), ('Color', 'green')]), OrderedDict([('Tick', 351), ('Color', 'green')]), OrderedDict([('Tick', 352), ('Color', 'green')]), OrderedDict([('Tick', 353), ('Color', 'green')]), OrderedDict([('Tick', 354), ('Color', 'green')]), OrderedDict([('Tick', 355), ('Color', 'green')]), OrderedDict([('Tick', 356), ('Color', 'green')]), OrderedDict([('Tick', 357), ('Color', 'green')]), OrderedDict([('Tick', 358), ('Color', 'green')]), OrderedDict([('Tick', 359), ('Color', 'green')]), OrderedDict([('Tick', 360), ('Color', 'green')]), OrderedDict([('Tick', 361), ('Color', 'green')]), OrderedDict([('Tick', 362), ('Color', 'green')]), OrderedDict([('Tick', 363), ('Color', 'green')]), OrderedDict([('Tick', 364), ('Color', 'green')]), OrderedDict([('Tick', 365), ('Color', 'green')]), OrderedDict([('Tick', 366), ('Color', 'green')]), OrderedDict([('Tick', 367), ('Color', 'green')]), OrderedDict([('Tick', 368), ('Color', 'green')]), OrderedDict([('Tick', 369), ('Color', 'green')]), OrderedDict([('Tick', 370), ('Color', 'green')]), OrderedDict([('Tick', 371), ('Color', 'green')]), OrderedDict([('Tick', 372), ('Color', 'green')]), OrderedDict([('Tick', 373), ('Color', 'green')]), OrderedDict([('Tick', 374), ('Color', 'green')]), OrderedDict([('Tick', 375), ('Color', 'green')]), OrderedDict([('Tick', 376), ('Color', 'green')]), OrderedDict([('Tick', 377), ('Color', 'green')]), OrderedDict([('Tick', 378), ('Color', 'green')]), OrderedDict([('Tick', 379), ('Color', 'green')]), OrderedDict([('Tick', 380), ('Color', 'green')]), OrderedDict([('Tick', 381), ('Color', 'green')]), OrderedDict([('Tick', 382), ('Color', 'green')]), OrderedDict([('Tick', 383), ('Color', 'green')]), OrderedDict([('Tick', 384), ('Color', 'green')]), OrderedDict([('Tick', 385), ('Color', 'green')]), OrderedDict([('Tick', 386), ('Color', 'green')]), OrderedDict([('Tick', 387), ('Color', 'green')]), OrderedDict([('Tick', 388), ('Color', 'green')]), OrderedDict([('Tick', 389), ('Color', 'green')]), OrderedDict([('Tick', 390), ('Color', 'green')]), OrderedDict([('Tick', 391), ('Color', 'green')]), OrderedDict([('Tick', 392), ('Color', 'green')]), OrderedDict([('Tick', 393), ('Color', 'green')]), OrderedDict([('Tick', 394), ('Color', 'green')]), OrderedDict([('Tick', 395), ('Color', 'green')]), OrderedDict([('Tick', 396), ('Color', 'green')]), OrderedDict([('Tick', 397), ('Color', 'green')]), OrderedDict([('Tick', 398), ('Color', 'green')]), OrderedDict([('Tick', 399), ('Color', 'green')]), OrderedDict([('Tick', 400), ('Color', 'green')]), OrderedDict([('Tick', 401), ('Color', 'green')]), OrderedDict([('Tick', 402), ('Color', 'green')]), OrderedDict([('Tick', 403), ('Color', 'green')]), OrderedDict([('Tick', 404), ('Color', 'green')]), OrderedDict([('Tick', 405), ('Color', 'green')]), OrderedDict([('Tick', 406), ('Color', 'green')]), OrderedDict([('Tick', 407), ('Color', 'green')]), OrderedDict([('Tick', 408), ('Color', 'green')]), OrderedDict([('Tick', 409), ('Color', 'green')]), OrderedDict([('Tick', 410), ('Color', 'green')]), OrderedDict([('Tick', 411), ('Color', 'green')]), OrderedDict([('Tick', 412), ('Color', 'green')]), OrderedDict([('Tick', 413), ('Color', 'green')]), OrderedDict([('Tick', 414), ('Color', 'green')]), OrderedDict([('Tick', 415), ('Color', 'green')]), OrderedDict([('Tick', 416), ('Color', 'green')]), OrderedDict([('Tick', 417), ('Color', 'green')]), OrderedDict([('Tick', 418), ('Color', 'green')]), OrderedDict([('Tick', 419), ('Color', 'green')]), OrderedDict([('Tick', 420), ('Color', 'green')]), OrderedDict([('Tick', 421), ('Color', 'green')]), OrderedDict([('Tick', 422), ('Color', 'green')]), OrderedDict([('Tick', 423), ('Color', 'green')]), OrderedDict([('Tick', 424), ('Color', 'green')]), OrderedDict([('Tick', 425), ('Color', 'green')]), OrderedDict([('Tick', 426), ('Color', 'green')]), OrderedDict([('Tick', 427), ('Color', 'green')]), OrderedDict([('Tick', 428), ('Color', 'green')]), OrderedDict([('Tick', 429), ('Color', 'green')]), OrderedDict([('Tick', 430), ('Color', 'green')]), OrderedDict([('Tick', 431), ('Color', 'green')]), OrderedDict([('Tick', 432), ('Color', 'green')]), OrderedDict([('Tick', 433), ('Color', 'green')]), OrderedDict([('Tick', 434), ('Color', 'green')]), OrderedDict([('Tick', 435), ('Color', 'green')]), OrderedDict([('Tick', 436), ('Color', 'green')]), OrderedDict([('Tick', 437), ('Color', 'green')]), OrderedDict([('Tick', 438), ('Color', 'green')]), OrderedDict([('Tick', 439), ('Color', 'green')]), OrderedDict([('Tick', 440), ('Color', 'green')]), OrderedDict([('Tick', 441), ('Color', 'green')]), OrderedDict([('Tick', 442), ('Color', 'green')]), OrderedDict([('Tick', 443), ('Color', 'green')]), OrderedDict([('Tick', 444), ('Color', 'green')]), OrderedDict([('Tick', 445), ('Color', 'green')]), OrderedDict([('Tick', 446), ('Color', 'green')]), OrderedDict([('Tick', 447), ('Color', 'green')]), OrderedDict([('Tick', 448), ('Color', 'green')]), OrderedDict([('Tick', 449), ('Color', 'green')]), OrderedDict([('Tick', 450), ('Color', 'green')]), OrderedDict([('Tick', 451), ('Color', 'green')]), OrderedDict([('Tick', 452), ('Color', 'green')]), OrderedDict([('Tick', 453), ('Color', 'green')]), OrderedDict([('Tick', 454), ('Color', 'green')]), OrderedDict([('Tick', 455), ('Color', 'green')]), OrderedDict([('Tick', 456), ('Color', 'green')]), OrderedDict([('Tick', 457), ('Color', 'green')]), OrderedDict([('Tick', 458), ('Color', 'green')]), OrderedDict([('Tick', 459), ('Color', 'green')]), OrderedDict([('Tick', 460), ('Color', 'green')]), OrderedDict([('Tick', 461), ('Color', 'green')]), OrderedDict([('Tick', 462), ('Color', 'green')]), OrderedDict([('Tick', 463), ('Color', 'green')]), OrderedDict([('Tick', 464), ('Color', 'green')]), OrderedDict([('Tick', 465), ('Color', 'green')]), OrderedDict([('Tick', 466), ('Color', 'green')]), OrderedDict([('Tick', 467), ('Color', 'green')]), OrderedDict([('Tick', 468), ('Color', 'green')]), OrderedDict([('Tick', 469), ('Color', 'green')]), OrderedDict([('Tick', 470), ('Color', 'green')]), OrderedDict([('Tick', 471), ('Color', 'green')]), OrderedDict([('Tick', 472), ('Color', 'green')]), OrderedDict([('Tick', 473), ('Color', 'green')]), OrderedDict([('Tick', 474), ('Color', 'green')]), OrderedDict([('Tick', 475), ('Color', 'green')]), OrderedDict([('Tick', 476), ('Color', 'green')]), OrderedDict([('Tick', 477), ('Color', 'green')]), OrderedDict([('Tick', 478), ('Color', 'green')]), OrderedDict([('Tick', 479), ('Color', 'green')]), OrderedDict([('Tick', 480), ('Color', 'green')]), OrderedDict([('Tick', 481), ('Color', 'rot')]), OrderedDict([('Tick', 482), ('Color', 'rot')]), OrderedDict([('Tick', 483), ('Color', 'rot')]), OrderedDict([('Tick', 484), ('Color', 'rot')]), OrderedDict([('Tick', 485), ('Color', 'rot')]), OrderedDict([('Tick', 486), ('Color', 'rot')]), OrderedDict([('Tick', 487), ('Color', 'rot')]), OrderedDict([('Tick', 488), ('Color', 'rot')]), OrderedDict([('Tick', 489), ('Color', 'rot')]), OrderedDict([('Tick', 490), ('Color', 'rot')]), OrderedDict([('Tick', 491), ('Color', 'rot')]), OrderedDict([('Tick', 492), ('Color', 'rot')]), OrderedDict([('Tick', 493), ('Color', 'rot')]), OrderedDict([('Tick', 494), ('Color', 'rot')]), OrderedDict([('Tick', 495), ('Color', 'rot')]), OrderedDict([('Tick', 496), ('Color', 'rot')]), OrderedDict([('Tick', 497), ('Color', 'rot')]), OrderedDict([('Tick', 498), ('Color', 'rot')]), OrderedDict([('Tick', 499), ('Color', 'rot')]), OrderedDict([('Tick', 500), ('Color', 'rot')]), OrderedDict([('Tick', 501), ('Color', 'rot')]), OrderedDict([('Tick', 502), ('Color', 'rot')]), OrderedDict([('Tick', 503), ('Color', 'rot')]), OrderedDict([('Tick', 504), ('Color', 'rot')]), OrderedDict([('Tick', 505), ('Color', 'rot')]), OrderedDict([('Tick', 506), ('Color', 'rot')]), OrderedDict([('Tick', 507), ('Color', 'rot')]), OrderedDict([('Tick', 508), ('Color', 'rot')]), OrderedDict([('Tick', 509), ('Color', 'rot')]), OrderedDict([('Tick', 510), ('Color', 'rot')]), OrderedDict([('Tick', 511), ('Color', 'rot')]), OrderedDict([('Tick', 512), ('Color', 'rot')]), OrderedDict([('Tick', 513), ('Color', 'rot')]), OrderedDict([('Tick', 514), ('Color', 'rot')]), OrderedDict([('Tick', 515), ('Color', 'rot')]), OrderedDict([('Tick', 516), ('Color', 'rot')]), OrderedDict([('Tick', 517), ('Color', 'rot')]), OrderedDict([('Tick', 518), ('Color', 'rot')]), OrderedDict([('Tick', 519), ('Color', 'rot')]), OrderedDict([('Tick', 520), ('Color', 'rot')]), OrderedDict([('Tick', 521), ('Color', 'rot')]), OrderedDict([('Tick', 522), ('Color', 'rot')]), OrderedDict([('Tick', 523), ('Color', 'rot')]), OrderedDict([('Tick', 524), ('Color', 'rot')]), OrderedDict([('Tick', 525), ('Color', 'rot')]), OrderedDict([('Tick', 526), ('Color', 'rot')]), OrderedDict([('Tick', 527), ('Color', 'rot')]), OrderedDict([('Tick', 528), ('Color', 'rot')]), OrderedDict([('Tick', 529), ('Color', 'rot')]), OrderedDict([('Tick', 530), ('Color', 'rot')]), OrderedDict([('Tick', 531), ('Color', 'rot')]), OrderedDict([('Tick', 532), ('Color', 'rot')]), OrderedDict([('Tick', 533), ('Color', 'rot')]), OrderedDict([('Tick', 534), ('Color', 'rot')]), OrderedDict([('Tick', 535), ('Color', 'rot')]), OrderedDict([('Tick', 536), ('Color', 'rot')]), OrderedDict([('Tick', 537), ('Color', 'rot')]), OrderedDict([('Tick', 538), ('Color', 'rot')]), OrderedDict([('Tick', 539), ('Color', 'rot')]), OrderedDict([('Tick', 540), ('Color', 'rot')]), OrderedDict([('Tick', 541), ('Color', 'rot')]), OrderedDict([('Tick', 542), ('Color', 'rot')]), OrderedDict([('Tick', 543), ('Color', 'rot')]), OrderedDict([('Tick', 544), ('Color', 'rot')]), OrderedDict([('Tick', 545), ('Color', 'rot')]), OrderedDict([('Tick', 546), ('Color', 'rot')]), OrderedDict([('Tick', 547), ('Color', 'rot')]), OrderedDict([('Tick', 548), ('Color', 'rot')]), OrderedDict([('Tick', 549), ('Color', 'rot')]), OrderedDict([('Tick', 550), ('Color', 'rot')]), OrderedDict([('Tick', 551), ('Color', 'rot')]), OrderedDict([('Tick', 552), ('Color', 'rot')]), OrderedDict([('Tick', 553), ('Color', 'rot')]), OrderedDict([('Tick', 554), ('Color', 'rot')]), OrderedDict([('Tick', 555), ('Color', 'rot')]), OrderedDict([('Tick', 556), ('Color', 'rot')]), OrderedDict([('Tick', 557), ('Color', 'rot')]), OrderedDict([('Tick', 558), ('Color', 'rot')]), OrderedDict([('Tick', 559), ('Color', 'rot')]), OrderedDict([('Tick', 560), ('Color', 'rot')]), OrderedDict([('Tick', 561), ('Color', 'rot')]), OrderedDict([('Tick', 562), ('Color', 'rot')]), OrderedDict([('Tick', 563), ('Color', 'rot')]), OrderedDict([('Tick', 564), ('Color', 'rot')]), OrderedDict([('Tick', 565), ('Color', 'rot')]), OrderedDict([('Tick', 566), ('Color', 'rot')]), OrderedDict([('Tick', 567), ('Color', 'rot')]), OrderedDict([('Tick', 568), ('Color', 'rot')]), OrderedDict([('Tick', 569), ('Color', 'rot')]), OrderedDict([('Tick', 570), ('Color', 'rot')]), OrderedDict([('Tick', 571), ('Color', 'rot')]), OrderedDict([('Tick', 572), ('Color', 'rot')]), OrderedDict([('Tick', 573), ('Color', 'rot')]), OrderedDict([('Tick', 574), ('Color', 'rot')]), OrderedDict([('Tick', 575), ('Color', 'rot')]), OrderedDict([('Tick', 576), ('Color', 'rot')]), OrderedDict([('Tick', 577), ('Color', 'rot')]), OrderedDict([('Tick', 578), ('Color', 'rot')]), OrderedDict([('Tick', 579), ('Color', 'rot')]), OrderedDict([('Tick', 580), ('Color', 'rot')]), OrderedDict([('Tick', 581), ('Color', 'rot')]), OrderedDict([('Tick', 582), ('Color', 'rot')]), OrderedDict([('Tick', 583), ('Color', 'rot')]), OrderedDict([('Tick', 584), ('Color', 'rot')]), OrderedDict([('Tick', 585), ('Color', 'rot')]), OrderedDict([('Tick', 586), ('Color', 'rot')]), OrderedDict([('Tick', 587), ('Color', 'rot')]), OrderedDict([('Tick', 588), ('Color', 'rot')]), OrderedDict([('Tick', 589), ('Color', 'rot')]), OrderedDict([('Tick', 590), ('Color', 'rot')]), OrderedDict([('Tick', 591), ('Color', 'rot')]), OrderedDict([('Tick', 592), ('Color', 'rot')]), OrderedDict([('Tick', 593), ('Color', 'rot')]), OrderedDict([('Tick', 594), ('Color', 'rot')]), OrderedDict([('Tick', 595), ('Color', 'rot')]), OrderedDict([('Tick', 596), ('Color', 'rot')]), OrderedDict([('Tick', 597), ('Color', 'rot')]), OrderedDict([('Tick', 598), ('Color', 'rot')]), OrderedDict([('Tick', 599), ('Color', 'rot')]), OrderedDict([('Tick', 600), ('Color', 'rot')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="stimuli files\metronome.xlsx" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="tick" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="Stress_Part_One_Measurement"/>
+    <Routine name="Metronom_Tic"/>
+    <LoopTerminator name="tick"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Stress_Evaluation"/>
+    <Routine name="Stress_Part_One_End"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Stress_Part_Two"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Stress_Part_Two_Instructions"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Stress_Part_Two_Measurement"/>
+    <Routine name="Blank_Screen"/>
+    <Routine name="Stress_Part_Two_End"/>
+    <Routine name="Blank_Screen"/>
+  </Flow>
+</PsychoPy2experiment>

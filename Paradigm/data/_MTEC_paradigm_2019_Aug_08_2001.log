@@ -1,0 +1,261 @@
+5.0366 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0.85, 0.85, 0.85]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002EA34AE17F0>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002EA34AA6550>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.0366 	EXP 	window1: recordFrameIntervals = False
+5.1039 	EXP 	window1: recordFrameIntervals = True
+5.1784 	EXP 	window1: recordFrameIntervals = False
+5.5756 	EXP 	Created text_welcome_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_welcome_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+5.5879 	EXP 	Created text_instructions_welcome_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_instructions_welcome_screen', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+5.5884 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.5997 	EXP 	Created text_baseline_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='    Baseline \nMeasurement', units='height', win=Window(...), wrapWidth=1)
+5.6046 	EXP 	Created text_baseline_screen_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_screen_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Segment One:', units='height', win=Window(...), wrapWidth=1)
+5.6051 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.6259 	EXP 	Created text_baseline_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+5.6337 	EXP 	Created text_baseline_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_countdown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+5.6342 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7146 	EXP 	Created text_baseline_measurement = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.3, italic=False, languageStyle='LTR', name='text_baseline_measurement', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='height', win=Window(...), wrapWidth=1)
+5.7151 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7248 	EXP 	Created text_baseline_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Segment One.', units='height', win=Window(...), wrapWidth=1)
+5.7284 	EXP 	Created text_baseline_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+5.7289 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7324 	EXP 	Created text_stress_screen_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_screen_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Segment Two:', units='height', win=Window(...), wrapWidth=1)
+5.7377 	EXP 	Created text_stress_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_stress_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Stress Measurement', units='height', win=Window(...), wrapWidth=1)
+5.7381 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7405 	EXP 	Created text_stress_part_one_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_part_one_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Part One:', units='height', win=Window(...), wrapWidth=1)
+5.7458 	EXP 	Created text_stress_part_one = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_stress_part_one', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='7-Row', units='height', win=Window(...), wrapWidth=1)
+5.7463 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7534 	EXP 	Created text_stress_part_one_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_stress_part_one_instructions_title', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+5.7696 	EXP 	Created text_stress_part_one_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_part_one_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+5.7702 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7721 	EXP 	Created metronome = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', fillRGB=array([1., 1., 1.]), interpolate=True, lineColor='black', lineColorSpace='named', lineRGB=array([0., 0., 0.]), lineWidth=1, name='metronome', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.25, 0.25]), units='height', vertices=ndarray(...), win=Window(...))
+5.7725 	EXP 	Created text_metronom_tic = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_metronom_tic', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7729 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7733 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7737 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7741 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7745 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.7748 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+5.8998 	EXP 	text_welcome_screen: autoDraw = True
+5.8998 	EXP 	text_instructions_welcome_screen: autoDraw = True
+7.0796 	DATA 	Keypress: space
+7.0890 	EXP 	text_welcome_screen: autoDraw = False
+7.0890 	EXP 	text_instructions_welcome_screen: autoDraw = False
+7.0890 	EXP 	text_blank_screen: autoDraw = True
+7.5892 	EXP 	text_blank_screen: autoDraw = False
+7.5892 	EXP 	text_blank_screen: autoDraw = False
+7.5892 	EXP 	text_baseline_screen: autoDraw = True
+7.5892 	EXP 	text_baseline_screen_title: autoDraw = True
+12.5924 	EXP 	text_baseline_screen: autoDraw = False
+12.5924 	EXP 	text_baseline_screen_title: autoDraw = False
+12.5924 	EXP 	text_blank_screen: autoDraw = True
+13.0903 	EXP 	text_blank_screen: autoDraw = False
+13.0903 	EXP 	text_blank_screen: autoDraw = False
+13.0903 	EXP 	text_baseline_instructions: autoDraw = True
+18.0936 	EXP 	text_baseline_instructions: autoDraw = False
+18.5946 	EXP 	text_baseline_countdown: autoDraw = True
+28.3378 	DATA 	Mouse: Left button down, pos=(100,565)
+28.4575 	DATA 	Mouse:  Left button up, pos=(100,565)
+28.5904 	EXP 	text_baseline_countdown: autoDraw = False
+28.5904 	EXP 	text_baseline_instructions: autoDraw = False
+28.5904 	EXP 	text_baseline_countdown: autoDraw = False
+28.5904 	EXP 	text_blank_screen: autoDraw = True
+29.0924 	EXP 	text_blank_screen: autoDraw = False
+29.0924 	EXP 	text_baseline_measurement: autoDraw = True
+34.0925 	EXP 	text_baseline_measurement: autoDraw = False
+34.0925 	EXP 	text_blank_screen: autoDraw = True
+34.5928 	EXP 	text_blank_screen: autoDraw = False
+34.5928 	EXP 	text_baseline_end: autoDraw = True
+34.5928 	EXP 	text_baseline_end_instructions: autoDraw = True
+36.4326 	DATA 	Keypress: space
+36.4333 	EXP 	text_baseline_end: autoDraw = False
+36.4333 	EXP 	text_baseline_end_instructions: autoDraw = False
+36.4333 	EXP 	text_blank_screen: autoDraw = True
+36.9366 	EXP 	text_blank_screen: autoDraw = False
+36.9366 	EXP 	text_blank_screen: autoDraw = False
+36.9366 	EXP 	text_stress_screen_title: autoDraw = True
+36.9366 	EXP 	text_stress_screen: autoDraw = True
+41.9387 	EXP 	text_stress_screen_title: autoDraw = False
+41.9387 	EXP 	text_stress_screen: autoDraw = False
+41.9387 	EXP 	text_blank_screen: autoDraw = True
+42.4395 	EXP 	text_blank_screen: autoDraw = False
+42.4395 	EXP 	text_stress_part_one_title: autoDraw = True
+42.4395 	EXP 	text_stress_part_one: autoDraw = True
+47.4354 	EXP 	text_stress_part_one_title: autoDraw = False
+47.4354 	EXP 	text_stress_part_one: autoDraw = False
+47.4354 	EXP 	text_stress_part_one_title: autoDraw = False
+47.4354 	EXP 	text_stress_part_one: autoDraw = False
+47.4354 	EXP 	text_blank_screen: autoDraw = True
+47.9334 	EXP 	text_blank_screen: autoDraw = False
+47.9334 	EXP 	text_blank_screen: autoDraw = False
+47.9334 	EXP 	text_stress_part_one_instructions_title: autoDraw = True
+47.9334 	EXP 	text_stress_part_one_instructions: autoDraw = True
+77.4334 	DATA 	Keypress: space
+77.4344 	EXP 	text_stress_part_one_instructions_title: autoDraw = False
+77.4344 	EXP 	text_stress_part_one_instructions: autoDraw = False
+77.4344 	EXP 	text_blank_screen: autoDraw = True
+77.9733 	EXP 	Imported stimuli files\metronome.xlsx as conditions, 600 conditions, 2 params
+77.9743 	EXP 	Created sequence: sequential, trialTypes=600, nReps=1, seed=None
+77.9745 	EXP 	New trial (rep=0, index=0): OrderedDict([('Tick', 1), ('Color', 'green')])
+77.9771 	EXP 	text_blank_screen: autoDraw = False
+77.9771 	EXP 	text_blank_screen: autoDraw = False
+77.9771 	EXP 	metronome: fillColor = 'green (named)'
+77.9771 	EXP 	metronome: autoDraw = True
+78.4432 	EXP 	metronome: autoDraw = False
+78.4432 	EXP 	text_metronom_tic: autoDraw = True
+78.9374 	EXP 	New trial (rep=0, index=1): OrderedDict([('Tick', 2), ('Color', 'green')])
+78.9438 	EXP 	text_metronom_tic: autoDraw = False
+78.9438 	EXP 	metronome: fillColor = 'green (named)'
+78.9438 	EXP 	metronome: autoDraw = True
+79.4441 	EXP 	metronome: autoDraw = False
+79.4441 	EXP 	text_metronom_tic: autoDraw = True
+79.9321 	EXP 	New trial (rep=0, index=2): OrderedDict([('Tick', 3), ('Color', 'green')])
+79.9385 	EXP 	text_metronom_tic: autoDraw = False
+79.9385 	EXP 	metronome: fillColor = 'green (named)'
+79.9385 	EXP 	metronome: autoDraw = True
+80.4389 	EXP 	metronome: autoDraw = False
+80.4389 	EXP 	text_metronom_tic: autoDraw = True
+80.9343 	EXP 	New trial (rep=0, index=3): OrderedDict([('Tick', 4), ('Color', 'green')])
+80.9407 	EXP 	text_metronom_tic: autoDraw = False
+80.9407 	EXP 	metronome: fillColor = 'green (named)'
+80.9407 	EXP 	metronome: autoDraw = True
+81.4409 	EXP 	metronome: autoDraw = False
+81.4409 	EXP 	text_metronom_tic: autoDraw = True
+81.9349 	EXP 	New trial (rep=0, index=4): OrderedDict([('Tick', 5), ('Color', 'green')])
+81.9413 	EXP 	text_metronom_tic: autoDraw = False
+81.9413 	EXP 	metronome: fillColor = 'green (named)'
+81.9413 	EXP 	metronome: autoDraw = True
+82.4414 	EXP 	metronome: autoDraw = False
+82.4414 	EXP 	text_metronom_tic: autoDraw = True
+82.9358 	EXP 	New trial (rep=0, index=5): OrderedDict([('Tick', 6), ('Color', 'green')])
+82.9422 	EXP 	text_metronom_tic: autoDraw = False
+82.9422 	EXP 	metronome: fillColor = 'green (named)'
+82.9422 	EXP 	metronome: autoDraw = True
+83.4424 	EXP 	metronome: autoDraw = False
+83.4424 	EXP 	text_metronom_tic: autoDraw = True
+83.9331 	EXP 	New trial (rep=0, index=6): OrderedDict([('Tick', 7), ('Color', 'green')])
+83.9376 	EXP 	text_metronom_tic: autoDraw = False
+83.9376 	EXP 	text_metronom_tic: autoDraw = False
+83.9376 	EXP 	metronome: fillColor = 'green (named)'
+83.9376 	EXP 	metronome: autoDraw = True
+84.4378 	EXP 	metronome: autoDraw = False
+84.4378 	EXP 	text_metronom_tic: autoDraw = True
+84.9302 	EXP 	New trial (rep=0, index=7): OrderedDict([('Tick', 8), ('Color', 'green')])
+84.9345 	EXP 	text_metronom_tic: autoDraw = False
+84.9345 	EXP 	text_metronom_tic: autoDraw = False
+84.9345 	EXP 	metronome: fillColor = 'green (named)'
+84.9345 	EXP 	metronome: autoDraw = True
+85.4348 	EXP 	metronome: autoDraw = False
+85.4348 	EXP 	metronome: autoDraw = False
+85.4348 	EXP 	text_metronom_tic: autoDraw = True
+85.9282 	EXP 	New trial (rep=0, index=8): OrderedDict([('Tick', 9), ('Color', 'green')])
+85.9332 	EXP 	text_metronom_tic: autoDraw = False
+85.9332 	EXP 	text_metronom_tic: autoDraw = False
+85.9332 	EXP 	metronome: fillColor = 'green (named)'
+85.9332 	EXP 	metronome: autoDraw = True
+86.4334 	EXP 	metronome: autoDraw = False
+86.4334 	EXP 	metronome: autoDraw = False
+86.4334 	EXP 	text_metronom_tic: autoDraw = True
+86.9261 	EXP 	New trial (rep=0, index=9): OrderedDict([('Tick', 10), ('Color', 'green')])
+86.9305 	EXP 	text_metronom_tic: autoDraw = False
+86.9305 	EXP 	text_metronom_tic: autoDraw = False
+86.9305 	EXP 	metronome: fillColor = 'green (named)'
+86.9305 	EXP 	metronome: autoDraw = True
+87.4307 	EXP 	metronome: autoDraw = False
+87.4307 	EXP 	metronome: autoDraw = False
+87.4307 	EXP 	text_metronom_tic: autoDraw = True
+87.9272 	EXP 	New trial (rep=0, index=10): OrderedDict([('Tick', 11), ('Color', 'green')])
+87.9318 	EXP 	text_metronom_tic: autoDraw = False
+87.9318 	EXP 	text_metronom_tic: autoDraw = False
+87.9318 	EXP 	metronome: fillColor = 'green (named)'
+87.9318 	EXP 	metronome: autoDraw = True
+88.4320 	EXP 	metronome: autoDraw = False
+88.4320 	EXP 	metronome: autoDraw = False
+88.4320 	EXP 	text_metronom_tic: autoDraw = True
+88.9292 	EXP 	New trial (rep=0, index=11): OrderedDict([('Tick', 12), ('Color', 'green')])
+88.9338 	EXP 	text_metronom_tic: autoDraw = False
+88.9338 	EXP 	text_metronom_tic: autoDraw = False
+88.9338 	EXP 	metronome: fillColor = 'green (named)'
+88.9338 	EXP 	metronome: autoDraw = True
+89.4351 	EXP 	metronome: autoDraw = False
+89.4351 	EXP 	metronome: autoDraw = False
+89.4351 	EXP 	text_metronom_tic: autoDraw = True
+89.9312 	EXP 	New trial (rep=0, index=12): OrderedDict([('Tick', 13), ('Color', 'green')])
+89.9363 	EXP 	text_metronom_tic: autoDraw = False
+89.9363 	EXP 	text_metronom_tic: autoDraw = False
+89.9363 	EXP 	metronome: fillColor = 'green (named)'
+89.9363 	EXP 	metronome: autoDraw = True
+90.4365 	EXP 	metronome: autoDraw = False
+90.4365 	EXP 	metronome: autoDraw = False
+90.4365 	EXP 	text_metronom_tic: autoDraw = True
+90.9319 	EXP 	New trial (rep=0, index=13): OrderedDict([('Tick', 14), ('Color', 'green')])
+90.9383 	EXP 	text_metronom_tic: autoDraw = False
+90.9383 	EXP 	metronome: fillColor = 'green (named)'
+90.9383 	EXP 	metronome: autoDraw = True
+91.4384 	EXP 	metronome: autoDraw = False
+91.4384 	EXP 	text_metronom_tic: autoDraw = True
+91.9331 	EXP 	New trial (rep=0, index=14): OrderedDict([('Tick', 15), ('Color', 'green')])
+91.9396 	EXP 	text_metronom_tic: autoDraw = False
+91.9396 	EXP 	metronome: fillColor = 'green (named)'
+91.9396 	EXP 	metronome: autoDraw = True
+92.4396 	EXP 	metronome: autoDraw = False
+92.4396 	EXP 	text_metronom_tic: autoDraw = True
+92.9335 	EXP 	New trial (rep=0, index=15): OrderedDict([('Tick', 16), ('Color', 'green')])
+92.9399 	EXP 	text_metronom_tic: autoDraw = False
+92.9399 	EXP 	metronome: fillColor = 'green (named)'
+92.9399 	EXP 	metronome: autoDraw = True
+93.4401 	EXP 	metronome: autoDraw = False
+93.4401 	EXP 	text_metronom_tic: autoDraw = True
+93.9338 	EXP 	New trial (rep=0, index=16): OrderedDict([('Tick', 17), ('Color', 'green')])
+93.9402 	EXP 	text_metronom_tic: autoDraw = False
+93.9402 	EXP 	metronome: fillColor = 'green (named)'
+93.9402 	EXP 	metronome: autoDraw = True
+94.4405 	EXP 	metronome: autoDraw = False
+94.4405 	EXP 	text_metronom_tic: autoDraw = True
+94.9352 	EXP 	New trial (rep=0, index=17): OrderedDict([('Tick', 18), ('Color', 'green')])
+94.9416 	EXP 	text_metronom_tic: autoDraw = False
+94.9416 	EXP 	metronome: fillColor = 'green (named)'
+94.9416 	EXP 	metronome: autoDraw = True
+95.4422 	EXP 	metronome: autoDraw = False
+95.4422 	EXP 	text_metronom_tic: autoDraw = True
+95.9357 	EXP 	New trial (rep=0, index=18): OrderedDict([('Tick', 19), ('Color', 'green')])
+95.9420 	EXP 	text_metronom_tic: autoDraw = False
+95.9420 	EXP 	metronome: fillColor = 'green (named)'
+95.9420 	EXP 	metronome: autoDraw = True
+96.4421 	EXP 	metronome: autoDraw = False
+96.4421 	EXP 	text_metronom_tic: autoDraw = True
+96.9365 	EXP 	New trial (rep=0, index=19): OrderedDict([('Tick', 20), ('Color', 'green')])
+96.9429 	EXP 	text_metronom_tic: autoDraw = False
+96.9429 	EXP 	metronome: fillColor = 'green (named)'
+96.9429 	EXP 	metronome: autoDraw = True
+97.4431 	EXP 	metronome: autoDraw = False
+97.4431 	EXP 	text_metronom_tic: autoDraw = True
+97.9377 	EXP 	New trial (rep=0, index=20): OrderedDict([('Tick', 21), ('Color', 'green')])
+97.9442 	EXP 	text_metronom_tic: autoDraw = False
+97.9442 	EXP 	metronome: fillColor = 'green (named)'
+97.9442 	EXP 	metronome: autoDraw = True
+98.4441 	EXP 	metronome: autoDraw = False
+98.4441 	EXP 	text_metronom_tic: autoDraw = True
+98.9330 	EXP 	New trial (rep=0, index=21): OrderedDict([('Tick', 22), ('Color', 'green')])
+98.9393 	EXP 	text_metronom_tic: autoDraw = False
+98.9393 	EXP 	metronome: fillColor = 'green (named)'
+98.9393 	EXP 	metronome: autoDraw = True
+99.4396 	EXP 	metronome: autoDraw = False
+99.4396 	EXP 	text_metronom_tic: autoDraw = True
+99.9347 	EXP 	New trial (rep=0, index=22): OrderedDict([('Tick', 23), ('Color', 'green')])
+99.9408 	EXP 	text_metronom_tic: autoDraw = False
+99.9408 	EXP 	metronome: fillColor = 'green (named)'
+99.9408 	EXP 	metronome: autoDraw = True
+100.4410 	EXP 	metronome: autoDraw = False
+100.4410 	EXP 	text_metronom_tic: autoDraw = True
+100.9352 	EXP 	New trial (rep=0, index=23): OrderedDict([('Tick', 24), ('Color', 'green')])
+100.9414 	EXP 	text_metronom_tic: autoDraw = False
+100.9414 	EXP 	metronome: fillColor = 'green (named)'
+100.9414 	EXP 	metronome: autoDraw = True
+101.4415 	EXP 	metronome: autoDraw = False
+101.4415 	EXP 	text_metronom_tic: autoDraw = True
+101.9355 	EXP 	New trial (rep=0, index=24): OrderedDict([('Tick', 25), ('Color', 'green')])
+101.9422 	EXP 	text_metronom_tic: autoDraw = False
+101.9422 	EXP 	metronome: fillColor = 'green (named)'
+101.9422 	EXP 	metronome: autoDraw = True
+102.4420 	EXP 	metronome: autoDraw = False
+102.4420 	EXP 	text_metronom_tic: autoDraw = True
+102.5045 	DATA 	Keypress: escape
+102.6318 	EXP 	window1: mouseVisible = True

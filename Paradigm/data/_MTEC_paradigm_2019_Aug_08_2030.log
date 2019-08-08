@@ -1,0 +1,2096 @@
+7.6040 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0.85, 0.85, 0.85]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000280A70DF048>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000280A7117CF8>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.6040 	EXP 	window1: recordFrameIntervals = False
+7.6712 	EXP 	window1: recordFrameIntervals = True
+7.7456 	EXP 	window1: recordFrameIntervals = False
+8.1453 	EXP 	Created text_welcome_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_welcome_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.1572 	EXP 	Created text_instructions_welcome_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_instructions_welcome_screen', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+8.1577 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.1688 	EXP 	Created text_baseline_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='    Baseline \nMeasurement', units='height', win=Window(...), wrapWidth=1)
+8.1745 	EXP 	Created text_baseline_screen_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_screen_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Segment One:', units='height', win=Window(...), wrapWidth=1)
+8.1750 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.1959 	EXP 	Created text_baseline_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.2029 	EXP 	Created text_baseline_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_countdown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+8.2034 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.2833 	EXP 	Created text_baseline_measurement = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.3, italic=False, languageStyle='LTR', name='text_baseline_measurement', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='height', win=Window(...), wrapWidth=1)
+8.2838 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.2929 	EXP 	Created text_baseline_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Segment One.', units='height', win=Window(...), wrapWidth=1)
+8.2985 	EXP 	Created text_baseline_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+8.2992 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.3033 	EXP 	Created text_stress_screen_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_screen_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Segment Two:', units='height', win=Window(...), wrapWidth=1)
+8.3087 	EXP 	Created text_stress_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_stress_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Stress Measurement', units='height', win=Window(...), wrapWidth=1)
+8.3092 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.3124 	EXP 	Created text_stress_part_one_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_part_one_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Part One:', units='height', win=Window(...), wrapWidth=1)
+8.3180 	EXP 	Created text_stress_part_one = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_stress_part_one', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='7-Row', units='height', win=Window(...), wrapWidth=1)
+8.3185 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.3218 	EXP 	Created text_stress_part_one_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_part_one_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+8.3373 	EXP 	Created text_stress_part_one_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_part_one_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.3380 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.3408 	EXP 	Created metronome = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', fillRGB=array([1., 1., 1.]), interpolate=True, lineColor='black', lineColorSpace='named', lineRGB=array([0., 0., 0.]), lineWidth=1, name='metronome', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.25, 0.25]), units='height', vertices=ndarray(...), win=Window(...))
+8.3413 	EXP 	Created text_metronom_tic = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_metronom_tic', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.3417 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.3502 	EXP 	Created text_part_one_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_one_evaluation', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.3830 	EXP 	Created rating_part_one = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_part_one', noMouse=False, pos=[0.0, -0.2], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+8.3902 	EXP 	Created text_part_one_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_part_one_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Part One.', units='height', win=Window(...), wrapWidth=1)
+8.3956 	EXP 	Created text_par_one_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_par_one_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([255., 255., 255.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+8.3961 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.3992 	EXP 	Created text_part_two_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_two_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Part Two:', units='height', win=Window(...), wrapWidth=1)
+8.4038 	EXP 	Created text_part_two = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_part_two', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Stroop Test', units='height', win=Window(...), wrapWidth=1)
+8.4042 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.4070 	EXP 	Created text_part_two_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_two_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+8.4166 	EXP 	Created text_part_two_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_two_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.4171 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.4175 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.4179 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.5345 	EXP 	rating_part_one: flipVert = False
+8.5345 	EXP 	rating_part_one: autoLog = True
+8.5345 	EXP 	text_welcome_screen: autoDraw = True
+8.5345 	EXP 	text_instructions_welcome_screen: autoDraw = True
+10.0826 	DATA 	Keypress: space
+10.0836 	EXP 	text_welcome_screen: autoDraw = False
+10.0836 	EXP 	text_instructions_welcome_screen: autoDraw = False
+10.0836 	EXP 	text_blank_screen: autoDraw = True
+10.5839 	EXP 	text_blank_screen: autoDraw = False
+10.5839 	EXP 	text_blank_screen: autoDraw = False
+10.5839 	EXP 	text_baseline_screen: autoDraw = True
+10.5839 	EXP 	text_baseline_screen_title: autoDraw = True
+15.5847 	EXP 	text_baseline_screen: autoDraw = False
+15.5847 	EXP 	text_baseline_screen_title: autoDraw = False
+15.5847 	EXP 	text_baseline_screen: autoDraw = False
+15.5847 	EXP 	text_baseline_screen_title: autoDraw = False
+15.5847 	EXP 	text_blank_screen: autoDraw = True
+16.0849 	EXP 	text_blank_screen: autoDraw = False
+16.0849 	EXP 	text_blank_screen: autoDraw = False
+16.0849 	EXP 	text_baseline_instructions: autoDraw = True
+21.0830 	EXP 	text_baseline_instructions: autoDraw = False
+21.5901 	EXP 	text_baseline_countdown: autoDraw = True
+31.5832 	EXP 	text_baseline_countdown: autoDraw = False
+31.5832 	EXP 	text_baseline_instructions: autoDraw = False
+31.5832 	EXP 	text_baseline_countdown: autoDraw = False
+31.5832 	EXP 	text_blank_screen: autoDraw = True
+32.0835 	EXP 	text_blank_screen: autoDraw = False
+32.0835 	EXP 	text_blank_screen: autoDraw = False
+32.0835 	EXP 	text_baseline_measurement: autoDraw = True
+37.0814 	EXP 	text_baseline_measurement: autoDraw = False
+37.0814 	EXP 	text_baseline_measurement: autoDraw = False
+37.0814 	EXP 	text_blank_screen: autoDraw = True
+37.5826 	EXP 	text_blank_screen: autoDraw = False
+37.5826 	EXP 	text_blank_screen: autoDraw = False
+37.5826 	EXP 	text_baseline_end: autoDraw = True
+37.5826 	EXP 	text_baseline_end_instructions: autoDraw = True
+39.3116 	DATA 	Keypress: space
+39.3213 	EXP 	text_baseline_end: autoDraw = False
+39.3213 	EXP 	text_baseline_end_instructions: autoDraw = False
+39.3213 	EXP 	text_blank_screen: autoDraw = True
+39.8211 	EXP 	text_blank_screen: autoDraw = False
+39.8211 	EXP 	text_blank_screen: autoDraw = False
+39.8211 	EXP 	text_stress_screen_title: autoDraw = True
+39.8211 	EXP 	text_stress_screen: autoDraw = True
+40.7696 	DATA 	Keypress: space
+42.9516 	DATA 	Keypress: space
+44.8242 	EXP 	text_stress_screen_title: autoDraw = False
+44.8242 	EXP 	text_stress_screen: autoDraw = False
+44.8242 	EXP 	text_stress_screen_title: autoDraw = False
+44.8242 	EXP 	text_stress_screen: autoDraw = False
+44.8242 	EXP 	text_blank_screen: autoDraw = True
+45.3245 	EXP 	text_blank_screen: autoDraw = False
+45.3245 	EXP 	text_blank_screen: autoDraw = False
+45.3245 	EXP 	text_stress_part_one_title: autoDraw = True
+45.3245 	EXP 	text_stress_part_one: autoDraw = True
+50.3242 	EXP 	text_stress_part_one_title: autoDraw = False
+50.3242 	EXP 	text_stress_part_one: autoDraw = False
+50.3242 	EXP 	text_stress_part_one_title: autoDraw = False
+50.3242 	EXP 	text_stress_part_one: autoDraw = False
+50.3242 	EXP 	text_blank_screen: autoDraw = True
+50.8250 	EXP 	text_blank_screen: autoDraw = False
+50.8250 	EXP 	text_blank_screen: autoDraw = False
+50.8250 	EXP 	text_stress_part_one_instructions_title: autoDraw = True
+50.8250 	EXP 	text_stress_part_one_instructions: autoDraw = True
+74.5646 	DATA 	Keypress: space
+74.5737 	EXP 	text_stress_part_one_instructions_title: autoDraw = False
+74.5737 	EXP 	text_stress_part_one_instructions: autoDraw = False
+74.5737 	EXP 	text_blank_screen: autoDraw = True
+75.1044 	EXP 	Imported stimuli files\metronome.xlsx as conditions, 299 conditions, 2 params
+75.1050 	EXP 	Created sequence: sequential, trialTypes=299, nReps=1, seed=None
+75.1052 	EXP 	New trial (rep=0, index=0): OrderedDict([('Tick', 2), ('Color', 'green')])
+75.1080 	EXP 	text_blank_screen: autoDraw = False
+75.1080 	EXP 	text_blank_screen: autoDraw = False
+75.1080 	EXP 	metronome: fillColor = 'green (named)'
+75.1080 	EXP 	metronome: autoDraw = True
+75.5820 	EXP 	metronome: autoDraw = False
+75.5820 	EXP 	text_metronom_tic: autoDraw = True
+76.0760 	EXP 	New trial (rep=0, index=1): OrderedDict([('Tick', 3), ('Color', 'green')])
+76.0824 	EXP 	text_metronom_tic: autoDraw = False
+76.0824 	EXP 	metronome: fillColor = 'green (named)'
+76.0824 	EXP 	metronome: autoDraw = True
+76.5829 	EXP 	metronome: autoDraw = False
+76.5829 	EXP 	text_metronom_tic: autoDraw = True
+77.0771 	EXP 	New trial (rep=0, index=2): OrderedDict([('Tick', 4), ('Color', 'green')])
+77.0833 	EXP 	text_metronom_tic: autoDraw = False
+77.0833 	EXP 	metronome: fillColor = 'green (named)'
+77.0833 	EXP 	metronome: autoDraw = True
+77.5774 	EXP 	metronome: autoDraw = False
+77.5774 	EXP 	text_metronom_tic: autoDraw = True
+78.0710 	EXP 	New trial (rep=0, index=3): OrderedDict([('Tick', 5), ('Color', 'green')])
+78.0777 	EXP 	text_metronom_tic: autoDraw = False
+78.0777 	EXP 	metronome: fillColor = 'green (named)'
+78.0777 	EXP 	metronome: autoDraw = True
+78.5782 	EXP 	metronome: autoDraw = False
+78.5782 	EXP 	text_metronom_tic: autoDraw = True
+79.0719 	EXP 	New trial (rep=0, index=4): OrderedDict([('Tick', 6), ('Color', 'green')])
+79.0786 	EXP 	text_metronom_tic: autoDraw = False
+79.0786 	EXP 	metronome: fillColor = 'green (named)'
+79.0786 	EXP 	metronome: autoDraw = True
+79.5799 	EXP 	metronome: autoDraw = False
+79.5799 	EXP 	text_metronom_tic: autoDraw = True
+80.0737 	EXP 	New trial (rep=0, index=5): OrderedDict([('Tick', 7), ('Color', 'green')])
+80.0803 	EXP 	text_metronom_tic: autoDraw = False
+80.0803 	EXP 	metronome: fillColor = 'green (named)'
+80.0803 	EXP 	metronome: autoDraw = True
+80.5823 	EXP 	metronome: autoDraw = False
+80.5823 	EXP 	text_metronom_tic: autoDraw = True
+81.0707 	EXP 	New trial (rep=0, index=6): OrderedDict([('Tick', 8), ('Color', 'green')])
+81.0775 	EXP 	text_metronom_tic: autoDraw = False
+81.0775 	EXP 	metronome: fillColor = 'green (named)'
+81.0775 	EXP 	metronome: autoDraw = True
+81.5784 	EXP 	metronome: autoDraw = False
+81.5784 	EXP 	text_metronom_tic: autoDraw = True
+82.0724 	EXP 	New trial (rep=0, index=7): OrderedDict([('Tick', 9), ('Color', 'green')])
+82.0790 	EXP 	text_metronom_tic: autoDraw = False
+82.0790 	EXP 	metronome: fillColor = 'green (named)'
+82.0790 	EXP 	metronome: autoDraw = True
+82.5772 	EXP 	metronome: autoDraw = False
+82.5772 	EXP 	text_metronom_tic: autoDraw = True
+83.0713 	EXP 	New trial (rep=0, index=8): OrderedDict([('Tick', 10), ('Color', 'green')])
+83.0777 	EXP 	text_metronom_tic: autoDraw = False
+83.0777 	EXP 	metronome: fillColor = 'green (named)'
+83.0777 	EXP 	metronome: autoDraw = True
+83.5749 	EXP 	metronome: autoDraw = False
+83.5749 	EXP 	metronome: autoDraw = False
+83.5749 	EXP 	text_metronom_tic: autoDraw = True
+84.0712 	EXP 	New trial (rep=0, index=9): OrderedDict([('Tick', 11), ('Color', 'green')])
+84.0757 	EXP 	text_metronom_tic: autoDraw = False
+84.0757 	EXP 	text_metronom_tic: autoDraw = False
+84.0757 	EXP 	metronome: fillColor = 'green (named)'
+84.0757 	EXP 	metronome: autoDraw = True
+84.5791 	EXP 	metronome: autoDraw = False
+84.5791 	EXP 	text_metronom_tic: autoDraw = True
+85.0729 	EXP 	New trial (rep=0, index=10): OrderedDict([('Tick', 12), ('Color', 'green')])
+85.0794 	EXP 	text_metronom_tic: autoDraw = False
+85.0794 	EXP 	metronome: fillColor = 'green (named)'
+85.0794 	EXP 	metronome: autoDraw = True
+85.5792 	EXP 	metronome: autoDraw = False
+85.5792 	EXP 	text_metronom_tic: autoDraw = True
+86.0733 	EXP 	New trial (rep=0, index=11): OrderedDict([('Tick', 13), ('Color', 'green')])
+86.0797 	EXP 	text_metronom_tic: autoDraw = False
+86.0797 	EXP 	metronome: fillColor = 'green (named)'
+86.0797 	EXP 	metronome: autoDraw = True
+86.5772 	EXP 	metronome: autoDraw = False
+86.5772 	EXP 	text_metronom_tic: autoDraw = True
+87.0710 	EXP 	New trial (rep=0, index=12): OrderedDict([('Tick', 14), ('Color', 'green')])
+87.0775 	EXP 	text_metronom_tic: autoDraw = False
+87.0775 	EXP 	metronome: fillColor = 'green (named)'
+87.0775 	EXP 	metronome: autoDraw = True
+87.5786 	EXP 	metronome: autoDraw = False
+87.5786 	EXP 	text_metronom_tic: autoDraw = True
+88.0722 	EXP 	New trial (rep=0, index=13): OrderedDict([('Tick', 15), ('Color', 'green')])
+88.0787 	EXP 	text_metronom_tic: autoDraw = False
+88.0787 	EXP 	metronome: fillColor = 'green (named)'
+88.0787 	EXP 	metronome: autoDraw = True
+88.5795 	EXP 	metronome: autoDraw = False
+88.5795 	EXP 	text_metronom_tic: autoDraw = True
+89.0735 	EXP 	New trial (rep=0, index=14): OrderedDict([('Tick', 16), ('Color', 'green')])
+89.0800 	EXP 	text_metronom_tic: autoDraw = False
+89.0800 	EXP 	metronome: fillColor = 'green (named)'
+89.0800 	EXP 	metronome: autoDraw = True
+89.5815 	EXP 	metronome: autoDraw = False
+89.5815 	EXP 	text_metronom_tic: autoDraw = True
+90.0756 	EXP 	New trial (rep=0, index=15): OrderedDict([('Tick', 17), ('Color', 'green')])
+90.0820 	EXP 	text_metronom_tic: autoDraw = False
+90.0820 	EXP 	metronome: fillColor = 'green (named)'
+90.0820 	EXP 	metronome: autoDraw = True
+90.5831 	EXP 	metronome: autoDraw = False
+90.5831 	EXP 	text_metronom_tic: autoDraw = True
+91.0709 	EXP 	New trial (rep=0, index=16): OrderedDict([('Tick', 18), ('Color', 'green')])
+91.0768 	EXP 	text_metronom_tic: autoDraw = False
+91.0768 	EXP 	metronome: fillColor = 'green (named)'
+91.0768 	EXP 	metronome: autoDraw = True
+91.5789 	EXP 	metronome: autoDraw = False
+91.5789 	EXP 	text_metronom_tic: autoDraw = True
+92.0727 	EXP 	New trial (rep=0, index=17): OrderedDict([('Tick', 19), ('Color', 'green')])
+92.0793 	EXP 	text_metronom_tic: autoDraw = False
+92.0793 	EXP 	metronome: fillColor = 'green (named)'
+92.0793 	EXP 	metronome: autoDraw = True
+92.5786 	EXP 	metronome: autoDraw = False
+92.5786 	EXP 	text_metronom_tic: autoDraw = True
+93.0722 	EXP 	New trial (rep=0, index=18): OrderedDict([('Tick', 20), ('Color', 'green')])
+93.0787 	EXP 	text_metronom_tic: autoDraw = False
+93.0787 	EXP 	metronome: fillColor = 'green (named)'
+93.0787 	EXP 	metronome: autoDraw = True
+93.5773 	EXP 	metronome: autoDraw = False
+93.5773 	EXP 	text_metronom_tic: autoDraw = True
+94.0712 	EXP 	New trial (rep=0, index=19): OrderedDict([('Tick', 21), ('Color', 'green')])
+94.0777 	EXP 	text_metronom_tic: autoDraw = False
+94.0777 	EXP 	metronome: fillColor = 'green (named)'
+94.0777 	EXP 	metronome: autoDraw = True
+94.5786 	EXP 	metronome: autoDraw = False
+94.5786 	EXP 	text_metronom_tic: autoDraw = True
+95.0724 	EXP 	New trial (rep=0, index=20): OrderedDict([('Tick', 22), ('Color', 'green')])
+95.0789 	EXP 	text_metronom_tic: autoDraw = False
+95.0789 	EXP 	metronome: fillColor = 'green (named)'
+95.0789 	EXP 	metronome: autoDraw = True
+95.5798 	EXP 	metronome: autoDraw = False
+95.5798 	EXP 	text_metronom_tic: autoDraw = True
+96.0736 	EXP 	New trial (rep=0, index=21): OrderedDict([('Tick', 23), ('Color', 'green')])
+96.0801 	EXP 	text_metronom_tic: autoDraw = False
+96.0801 	EXP 	metronome: fillColor = 'green (named)'
+96.0801 	EXP 	metronome: autoDraw = True
+96.5815 	EXP 	metronome: autoDraw = False
+96.5815 	EXP 	text_metronom_tic: autoDraw = True
+97.0756 	EXP 	New trial (rep=0, index=22): OrderedDict([('Tick', 24), ('Color', 'green')])
+97.0820 	EXP 	text_metronom_tic: autoDraw = False
+97.0820 	EXP 	metronome: fillColor = 'green (named)'
+97.0820 	EXP 	metronome: autoDraw = True
+97.5829 	EXP 	metronome: autoDraw = False
+97.5829 	EXP 	text_metronom_tic: autoDraw = True
+98.0767 	EXP 	New trial (rep=0, index=23): OrderedDict([('Tick', 25), ('Color', 'green')])
+98.0831 	EXP 	text_metronom_tic: autoDraw = False
+98.0831 	EXP 	metronome: fillColor = 'green (named)'
+98.0831 	EXP 	metronome: autoDraw = True
+98.5771 	EXP 	metronome: autoDraw = False
+98.5771 	EXP 	text_metronom_tic: autoDraw = True
+99.0709 	EXP 	New trial (rep=0, index=24): OrderedDict([('Tick', 26), ('Color', 'green')])
+99.0774 	EXP 	text_metronom_tic: autoDraw = False
+99.0774 	EXP 	metronome: fillColor = 'green (named)'
+99.0774 	EXP 	metronome: autoDraw = True
+99.5784 	EXP 	metronome: autoDraw = False
+99.5784 	EXP 	text_metronom_tic: autoDraw = True
+100.0724 	EXP 	New trial (rep=0, index=25): OrderedDict([('Tick', 27), ('Color', 'green')])
+100.0789 	EXP 	text_metronom_tic: autoDraw = False
+100.0789 	EXP 	metronome: fillColor = 'green (named)'
+100.0789 	EXP 	metronome: autoDraw = True
+100.5806 	EXP 	metronome: autoDraw = False
+100.5806 	EXP 	text_metronom_tic: autoDraw = True
+101.0745 	EXP 	New trial (rep=0, index=26): OrderedDict([('Tick', 28), ('Color', 'green')])
+101.0811 	EXP 	text_metronom_tic: autoDraw = False
+101.0811 	EXP 	metronome: fillColor = 'green (named)'
+101.0811 	EXP 	metronome: autoDraw = True
+101.5800 	EXP 	metronome: autoDraw = False
+101.5800 	EXP 	text_metronom_tic: autoDraw = True
+102.0740 	EXP 	New trial (rep=0, index=27): OrderedDict([('Tick', 29), ('Color', 'green')])
+102.0805 	EXP 	text_metronom_tic: autoDraw = False
+102.0805 	EXP 	metronome: fillColor = 'green (named)'
+102.0805 	EXP 	metronome: autoDraw = True
+102.5778 	EXP 	metronome: autoDraw = False
+102.5778 	EXP 	text_metronom_tic: autoDraw = True
+103.0716 	EXP 	New trial (rep=0, index=28): OrderedDict([('Tick', 30), ('Color', 'green')])
+103.0781 	EXP 	text_metronom_tic: autoDraw = False
+103.0781 	EXP 	metronome: fillColor = 'green (named)'
+103.0781 	EXP 	metronome: autoDraw = True
+103.5790 	EXP 	metronome: autoDraw = False
+103.5790 	EXP 	text_metronom_tic: autoDraw = True
+104.0729 	EXP 	New trial (rep=0, index=29): OrderedDict([('Tick', 31), ('Color', 'green')])
+104.0794 	EXP 	text_metronom_tic: autoDraw = False
+104.0794 	EXP 	metronome: fillColor = 'green (named)'
+104.0794 	EXP 	metronome: autoDraw = True
+104.5799 	EXP 	metronome: autoDraw = False
+104.5799 	EXP 	text_metronom_tic: autoDraw = True
+105.0737 	EXP 	New trial (rep=0, index=30): OrderedDict([('Tick', 32), ('Color', 'green')])
+105.0802 	EXP 	text_metronom_tic: autoDraw = False
+105.0802 	EXP 	metronome: fillColor = 'green (named)'
+105.0802 	EXP 	metronome: autoDraw = True
+105.5807 	EXP 	metronome: autoDraw = False
+105.5807 	EXP 	text_metronom_tic: autoDraw = True
+106.0746 	EXP 	New trial (rep=0, index=31): OrderedDict([('Tick', 33), ('Color', 'green')])
+106.0812 	EXP 	text_metronom_tic: autoDraw = False
+106.0812 	EXP 	metronome: fillColor = 'green (named)'
+106.0812 	EXP 	metronome: autoDraw = True
+106.5822 	EXP 	metronome: autoDraw = False
+106.5822 	EXP 	text_metronom_tic: autoDraw = True
+107.0761 	EXP 	New trial (rep=0, index=32): OrderedDict([('Tick', 34), ('Color', 'green')])
+107.0826 	EXP 	text_metronom_tic: autoDraw = False
+107.0826 	EXP 	metronome: fillColor = 'green (named)'
+107.0826 	EXP 	metronome: autoDraw = True
+107.5831 	EXP 	metronome: autoDraw = False
+107.5831 	EXP 	text_metronom_tic: autoDraw = True
+108.0768 	EXP 	New trial (rep=0, index=33): OrderedDict([('Tick', 35), ('Color', 'green')])
+108.0832 	EXP 	text_metronom_tic: autoDraw = False
+108.0832 	EXP 	metronome: fillColor = 'green (named)'
+108.0832 	EXP 	metronome: autoDraw = True
+108.5788 	EXP 	metronome: autoDraw = False
+108.5788 	EXP 	text_metronom_tic: autoDraw = True
+109.0726 	EXP 	New trial (rep=0, index=34): OrderedDict([('Tick', 36), ('Color', 'green')])
+109.0791 	EXP 	text_metronom_tic: autoDraw = False
+109.0791 	EXP 	metronome: fillColor = 'green (named)'
+109.0791 	EXP 	metronome: autoDraw = True
+109.5808 	EXP 	metronome: autoDraw = False
+109.5808 	EXP 	text_metronom_tic: autoDraw = True
+110.0747 	EXP 	New trial (rep=0, index=35): OrderedDict([('Tick', 37), ('Color', 'green')])
+110.0813 	EXP 	text_metronom_tic: autoDraw = False
+110.0813 	EXP 	metronome: fillColor = 'green (named)'
+110.0813 	EXP 	metronome: autoDraw = True
+110.5801 	EXP 	metronome: autoDraw = False
+110.5801 	EXP 	text_metronom_tic: autoDraw = True
+111.0740 	EXP 	New trial (rep=0, index=36): OrderedDict([('Tick', 38), ('Color', 'green')])
+111.0805 	EXP 	text_metronom_tic: autoDraw = False
+111.0805 	EXP 	metronome: fillColor = 'green (named)'
+111.0805 	EXP 	metronome: autoDraw = True
+111.5814 	EXP 	metronome: autoDraw = False
+111.5814 	EXP 	text_metronom_tic: autoDraw = True
+112.0752 	EXP 	New trial (rep=0, index=37): OrderedDict([('Tick', 39), ('Color', 'green')])
+112.0817 	EXP 	text_metronom_tic: autoDraw = False
+112.0817 	EXP 	metronome: fillColor = 'green (named)'
+112.0817 	EXP 	metronome: autoDraw = True
+112.5829 	EXP 	metronome: autoDraw = False
+112.5829 	EXP 	text_metronom_tic: autoDraw = True
+113.0764 	EXP 	New trial (rep=0, index=38): OrderedDict([('Tick', 40), ('Color', 'green')])
+113.0829 	EXP 	text_metronom_tic: autoDraw = False
+113.0829 	EXP 	metronome: fillColor = 'green (named)'
+113.0829 	EXP 	metronome: autoDraw = True
+113.5771 	EXP 	metronome: autoDraw = False
+113.5771 	EXP 	text_metronom_tic: autoDraw = True
+114.0710 	EXP 	New trial (rep=0, index=39): OrderedDict([('Tick', 41), ('Color', 'green')])
+114.0777 	EXP 	text_metronom_tic: autoDraw = False
+114.0777 	EXP 	metronome: fillColor = 'green (named)'
+114.0777 	EXP 	metronome: autoDraw = True
+114.5792 	EXP 	metronome: autoDraw = False
+114.5792 	EXP 	text_metronom_tic: autoDraw = True
+115.0733 	EXP 	New trial (rep=0, index=40): OrderedDict([('Tick', 42), ('Color', 'green')])
+115.0798 	EXP 	text_metronom_tic: autoDraw = False
+115.0798 	EXP 	metronome: fillColor = 'green (named)'
+115.0798 	EXP 	metronome: autoDraw = True
+115.5815 	EXP 	metronome: autoDraw = False
+115.5815 	EXP 	text_metronom_tic: autoDraw = True
+116.0756 	EXP 	New trial (rep=0, index=41): OrderedDict([('Tick', 43), ('Color', 'green')])
+116.0820 	EXP 	text_metronom_tic: autoDraw = False
+116.0820 	EXP 	metronome: fillColor = 'green (named)'
+116.0820 	EXP 	metronome: autoDraw = True
+116.5830 	EXP 	metronome: autoDraw = False
+116.5830 	EXP 	text_metronom_tic: autoDraw = True
+117.0768 	EXP 	New trial (rep=0, index=42): OrderedDict([('Tick', 44), ('Color', 'green')])
+117.0832 	EXP 	text_metronom_tic: autoDraw = False
+117.0832 	EXP 	metronome: fillColor = 'green (named)'
+117.0832 	EXP 	metronome: autoDraw = True
+117.5780 	EXP 	metronome: autoDraw = False
+117.5780 	EXP 	text_metronom_tic: autoDraw = True
+118.0711 	EXP 	New trial (rep=0, index=43): OrderedDict([('Tick', 45), ('Color', 'green')])
+118.0777 	EXP 	text_metronom_tic: autoDraw = False
+118.0777 	EXP 	metronome: fillColor = 'green (named)'
+118.0777 	EXP 	metronome: autoDraw = True
+118.5782 	EXP 	metronome: autoDraw = False
+118.5782 	EXP 	text_metronom_tic: autoDraw = True
+119.0722 	EXP 	New trial (rep=0, index=44): OrderedDict([('Tick', 46), ('Color', 'green')])
+119.0786 	EXP 	text_metronom_tic: autoDraw = False
+119.0786 	EXP 	metronome: fillColor = 'green (named)'
+119.0786 	EXP 	metronome: autoDraw = True
+119.5793 	EXP 	metronome: autoDraw = False
+119.5793 	EXP 	text_metronom_tic: autoDraw = True
+120.0732 	EXP 	New trial (rep=0, index=45): OrderedDict([('Tick', 47), ('Color', 'green')])
+120.0797 	EXP 	text_metronom_tic: autoDraw = False
+120.0797 	EXP 	metronome: fillColor = 'green (named)'
+120.0797 	EXP 	metronome: autoDraw = True
+120.5805 	EXP 	metronome: autoDraw = False
+120.5805 	EXP 	text_metronom_tic: autoDraw = True
+121.0745 	EXP 	New trial (rep=0, index=46): OrderedDict([('Tick', 48), ('Color', 'green')])
+121.0810 	EXP 	text_metronom_tic: autoDraw = False
+121.0810 	EXP 	metronome: fillColor = 'green (named)'
+121.0810 	EXP 	metronome: autoDraw = True
+121.5767 	EXP 	metronome: autoDraw = False
+121.5767 	EXP 	metronome: autoDraw = False
+121.5767 	EXP 	text_metronom_tic: autoDraw = True
+122.0706 	EXP 	New trial (rep=0, index=47): OrderedDict([('Tick', 49), ('Color', 'green')])
+122.0771 	EXP 	text_metronom_tic: autoDraw = False
+122.0771 	EXP 	metronome: fillColor = 'green (named)'
+122.0771 	EXP 	metronome: autoDraw = True
+122.5743 	EXP 	metronome: autoDraw = False
+122.5743 	EXP 	metronome: autoDraw = False
+122.5743 	EXP 	text_metronom_tic: autoDraw = True
+123.0691 	EXP 	New trial (rep=0, index=48): OrderedDict([('Tick', 50), ('Color', 'green')])
+123.0744 	EXP 	text_metronom_tic: autoDraw = False
+123.0744 	EXP 	text_metronom_tic: autoDraw = False
+123.0744 	EXP 	metronome: fillColor = 'green (named)'
+123.0744 	EXP 	metronome: autoDraw = True
+123.5732 	EXP 	metronome: autoDraw = False
+123.5732 	EXP 	metronome: autoDraw = False
+123.5732 	EXP 	text_metronom_tic: autoDraw = True
+124.0691 	EXP 	New trial (rep=0, index=49): OrderedDict([('Tick', 51), ('Color', 'green')])
+124.0737 	EXP 	text_metronom_tic: autoDraw = False
+124.0737 	EXP 	text_metronom_tic: autoDraw = False
+124.0737 	EXP 	metronome: fillColor = 'green (named)'
+124.0737 	EXP 	metronome: autoDraw = True
+124.5773 	EXP 	metronome: autoDraw = False
+124.5773 	EXP 	text_metronom_tic: autoDraw = True
+125.0712 	EXP 	New trial (rep=0, index=50): OrderedDict([('Tick', 52), ('Color', 'green')])
+125.0778 	EXP 	text_metronom_tic: autoDraw = False
+125.0778 	EXP 	metronome: fillColor = 'green (named)'
+125.0778 	EXP 	metronome: autoDraw = True
+125.5753 	EXP 	metronome: autoDraw = False
+125.5753 	EXP 	metronome: autoDraw = False
+125.5753 	EXP 	text_metronom_tic: autoDraw = True
+126.0711 	EXP 	New trial (rep=0, index=51): OrderedDict([('Tick', 53), ('Color', 'green')])
+126.0756 	EXP 	text_metronom_tic: autoDraw = False
+126.0756 	EXP 	text_metronom_tic: autoDraw = False
+126.0756 	EXP 	metronome: fillColor = 'green (named)'
+126.0756 	EXP 	metronome: autoDraw = True
+126.5762 	EXP 	metronome: autoDraw = False
+126.5762 	EXP 	metronome: autoDraw = False
+126.5762 	EXP 	text_metronom_tic: autoDraw = True
+127.0702 	EXP 	New trial (rep=0, index=52): OrderedDict([('Tick', 54), ('Color', 'green')])
+127.0768 	EXP 	text_metronom_tic: autoDraw = False
+127.0768 	EXP 	metronome: fillColor = 'green (named)'
+127.0768 	EXP 	metronome: autoDraw = True
+127.5780 	EXP 	metronome: autoDraw = False
+127.5780 	EXP 	text_metronom_tic: autoDraw = True
+128.0714 	EXP 	New trial (rep=0, index=53): OrderedDict([('Tick', 55), ('Color', 'green')])
+128.0780 	EXP 	text_metronom_tic: autoDraw = False
+128.0780 	EXP 	metronome: fillColor = 'green (named)'
+128.0780 	EXP 	metronome: autoDraw = True
+128.5783 	EXP 	metronome: autoDraw = False
+128.5783 	EXP 	text_metronom_tic: autoDraw = True
+129.0721 	EXP 	New trial (rep=0, index=54): OrderedDict([('Tick', 56), ('Color', 'green')])
+129.0786 	EXP 	text_metronom_tic: autoDraw = False
+129.0786 	EXP 	metronome: fillColor = 'green (named)'
+129.0786 	EXP 	metronome: autoDraw = True
+129.5798 	EXP 	metronome: autoDraw = False
+129.5798 	EXP 	text_metronom_tic: autoDraw = True
+130.0738 	EXP 	New trial (rep=0, index=55): OrderedDict([('Tick', 57), ('Color', 'green')])
+130.0804 	EXP 	text_metronom_tic: autoDraw = False
+130.0804 	EXP 	metronome: fillColor = 'green (named)'
+130.0804 	EXP 	metronome: autoDraw = True
+130.5819 	EXP 	metronome: autoDraw = False
+130.5819 	EXP 	text_metronom_tic: autoDraw = True
+131.0759 	EXP 	New trial (rep=0, index=56): OrderedDict([('Tick', 58), ('Color', 'green')])
+131.0823 	EXP 	text_metronom_tic: autoDraw = False
+131.0823 	EXP 	metronome: fillColor = 'green (named)'
+131.0823 	EXP 	metronome: autoDraw = True
+131.5767 	EXP 	metronome: autoDraw = False
+131.5767 	EXP 	text_metronom_tic: autoDraw = True
+132.0708 	EXP 	New trial (rep=0, index=57): OrderedDict([('Tick', 59), ('Color', 'green')])
+132.0773 	EXP 	text_metronom_tic: autoDraw = False
+132.0773 	EXP 	metronome: fillColor = 'green (named)'
+132.0773 	EXP 	metronome: autoDraw = True
+132.5789 	EXP 	metronome: autoDraw = False
+132.5789 	EXP 	text_metronom_tic: autoDraw = True
+133.0726 	EXP 	New trial (rep=0, index=58): OrderedDict([('Tick', 60), ('Color', 'green')])
+133.0791 	EXP 	text_metronom_tic: autoDraw = False
+133.0791 	EXP 	metronome: fillColor = 'green (named)'
+133.0791 	EXP 	metronome: autoDraw = True
+133.5784 	EXP 	metronome: autoDraw = False
+133.5784 	EXP 	text_metronom_tic: autoDraw = True
+134.0722 	EXP 	New trial (rep=0, index=59): OrderedDict([('Tick', 61), ('Color', 'green')])
+134.0788 	EXP 	text_metronom_tic: autoDraw = False
+134.0788 	EXP 	metronome: fillColor = 'green (named)'
+134.0788 	EXP 	metronome: autoDraw = True
+134.5798 	EXP 	metronome: autoDraw = False
+134.5798 	EXP 	text_metronom_tic: autoDraw = True
+135.0737 	EXP 	New trial (rep=0, index=60): OrderedDict([('Tick', 62), ('Color', 'green')])
+135.0802 	EXP 	text_metronom_tic: autoDraw = False
+135.0802 	EXP 	metronome: fillColor = 'green (named)'
+135.0802 	EXP 	metronome: autoDraw = True
+135.5770 	EXP 	metronome: autoDraw = False
+135.5770 	EXP 	text_metronom_tic: autoDraw = True
+136.0710 	EXP 	New trial (rep=0, index=61): OrderedDict([('Tick', 63), ('Color', 'green')])
+136.0774 	EXP 	text_metronom_tic: autoDraw = False
+136.0774 	EXP 	metronome: fillColor = 'green (named)'
+136.0774 	EXP 	metronome: autoDraw = True
+136.5761 	EXP 	metronome: autoDraw = False
+136.5761 	EXP 	metronome: autoDraw = False
+136.5761 	EXP 	text_metronom_tic: autoDraw = True
+137.0711 	EXP 	New trial (rep=0, index=62): OrderedDict([('Tick', 64), ('Color', 'green')])
+137.0765 	EXP 	text_metronom_tic: autoDraw = False
+137.0765 	EXP 	text_metronom_tic: autoDraw = False
+137.0765 	EXP 	metronome: fillColor = 'green (named)'
+137.0765 	EXP 	metronome: autoDraw = True
+137.5734 	EXP 	metronome: autoDraw = False
+137.5734 	EXP 	metronome: autoDraw = False
+137.5734 	EXP 	text_metronom_tic: autoDraw = True
+138.0691 	EXP 	New trial (rep=0, index=63): OrderedDict([('Tick', 65), ('Color', 'green')])
+138.0735 	EXP 	text_metronom_tic: autoDraw = False
+138.0735 	EXP 	text_metronom_tic: autoDraw = False
+138.0735 	EXP 	metronome: fillColor = 'green (named)'
+138.0735 	EXP 	metronome: autoDraw = True
+138.5758 	EXP 	metronome: autoDraw = False
+138.5758 	EXP 	metronome: autoDraw = False
+138.5758 	EXP 	text_metronom_tic: autoDraw = True
+139.0712 	EXP 	New trial (rep=0, index=64): OrderedDict([('Tick', 66), ('Color', 'green')])
+139.0761 	EXP 	text_metronom_tic: autoDraw = False
+139.0761 	EXP 	text_metronom_tic: autoDraw = False
+139.0761 	EXP 	metronome: fillColor = 'green (named)'
+139.0761 	EXP 	metronome: autoDraw = True
+139.5767 	EXP 	metronome: autoDraw = False
+139.5767 	EXP 	metronome: autoDraw = False
+139.5767 	EXP 	text_metronom_tic: autoDraw = True
+140.0705 	EXP 	New trial (rep=0, index=65): OrderedDict([('Tick', 67), ('Color', 'green')])
+140.0771 	EXP 	text_metronom_tic: autoDraw = False
+140.0771 	EXP 	metronome: fillColor = 'green (named)'
+140.0771 	EXP 	metronome: autoDraw = True
+140.5782 	EXP 	metronome: autoDraw = False
+140.5782 	EXP 	text_metronom_tic: autoDraw = True
+141.0718 	EXP 	New trial (rep=0, index=66): OrderedDict([('Tick', 68), ('Color', 'green')])
+141.0784 	EXP 	text_metronom_tic: autoDraw = False
+141.0784 	EXP 	metronome: fillColor = 'green (named)'
+141.0784 	EXP 	metronome: autoDraw = True
+141.5797 	EXP 	metronome: autoDraw = False
+141.5797 	EXP 	text_metronom_tic: autoDraw = True
+142.0736 	EXP 	New trial (rep=0, index=67): OrderedDict([('Tick', 69), ('Color', 'green')])
+142.0800 	EXP 	text_metronom_tic: autoDraw = False
+142.0800 	EXP 	metronome: fillColor = 'green (named)'
+142.0800 	EXP 	metronome: autoDraw = True
+142.5808 	EXP 	metronome: autoDraw = False
+142.5808 	EXP 	text_metronom_tic: autoDraw = True
+143.0744 	EXP 	New trial (rep=0, index=68): OrderedDict([('Tick', 70), ('Color', 'green')])
+143.0809 	EXP 	text_metronom_tic: autoDraw = False
+143.0809 	EXP 	metronome: fillColor = 'green (named)'
+143.0809 	EXP 	metronome: autoDraw = True
+143.5775 	EXP 	metronome: autoDraw = False
+143.5775 	EXP 	text_metronom_tic: autoDraw = True
+144.0716 	EXP 	New trial (rep=0, index=69): OrderedDict([('Tick', 71), ('Color', 'green')])
+144.0782 	EXP 	text_metronom_tic: autoDraw = False
+144.0782 	EXP 	metronome: fillColor = 'green (named)'
+144.0782 	EXP 	metronome: autoDraw = True
+144.5771 	EXP 	metronome: autoDraw = False
+144.5771 	EXP 	text_metronom_tic: autoDraw = True
+145.0709 	EXP 	New trial (rep=0, index=70): OrderedDict([('Tick', 72), ('Color', 'green')])
+145.0774 	EXP 	text_metronom_tic: autoDraw = False
+145.0774 	EXP 	metronome: fillColor = 'green (named)'
+145.0774 	EXP 	metronome: autoDraw = True
+145.5777 	EXP 	metronome: autoDraw = False
+145.5777 	EXP 	text_metronom_tic: autoDraw = True
+146.0716 	EXP 	New trial (rep=0, index=71): OrderedDict([('Tick', 73), ('Color', 'green')])
+146.0782 	EXP 	text_metronom_tic: autoDraw = False
+146.0782 	EXP 	metronome: fillColor = 'green (named)'
+146.0782 	EXP 	metronome: autoDraw = True
+146.5747 	EXP 	metronome: autoDraw = False
+146.5747 	EXP 	metronome: autoDraw = False
+146.5747 	EXP 	text_metronom_tic: autoDraw = True
+147.0701 	EXP 	New trial (rep=0, index=72): OrderedDict([('Tick', 74), ('Color', 'green')])
+147.0753 	EXP 	text_metronom_tic: autoDraw = False
+147.0753 	EXP 	text_metronom_tic: autoDraw = False
+147.0753 	EXP 	metronome: fillColor = 'green (named)'
+147.0753 	EXP 	metronome: autoDraw = True
+147.5758 	EXP 	metronome: autoDraw = False
+147.5758 	EXP 	metronome: autoDraw = False
+147.5758 	EXP 	text_metronom_tic: autoDraw = True
+148.0712 	EXP 	New trial (rep=0, index=73): OrderedDict([('Tick', 75), ('Color', 'green')])
+148.0761 	EXP 	text_metronom_tic: autoDraw = False
+148.0761 	EXP 	text_metronom_tic: autoDraw = False
+148.0761 	EXP 	metronome: fillColor = 'green (named)'
+148.0761 	EXP 	metronome: autoDraw = True
+148.5769 	EXP 	metronome: autoDraw = False
+148.5769 	EXP 	text_metronom_tic: autoDraw = True
+149.0706 	EXP 	New trial (rep=0, index=74): OrderedDict([('Tick', 76), ('Color', 'green')])
+149.0772 	EXP 	text_metronom_tic: autoDraw = False
+149.0772 	EXP 	metronome: fillColor = 'green (named)'
+149.0772 	EXP 	metronome: autoDraw = True
+149.5787 	EXP 	metronome: autoDraw = False
+149.5787 	EXP 	text_metronom_tic: autoDraw = True
+150.0725 	EXP 	New trial (rep=0, index=75): OrderedDict([('Tick', 77), ('Color', 'green')])
+150.0790 	EXP 	text_metronom_tic: autoDraw = False
+150.0790 	EXP 	metronome: fillColor = 'green (named)'
+150.0790 	EXP 	metronome: autoDraw = True
+150.5799 	EXP 	metronome: autoDraw = False
+150.5799 	EXP 	text_metronom_tic: autoDraw = True
+151.0737 	EXP 	New trial (rep=0, index=76): OrderedDict([('Tick', 78), ('Color', 'green')])
+151.0802 	EXP 	text_metronom_tic: autoDraw = False
+151.0802 	EXP 	metronome: fillColor = 'green (named)'
+151.0802 	EXP 	metronome: autoDraw = True
+151.5819 	EXP 	metronome: autoDraw = False
+151.5819 	EXP 	text_metronom_tic: autoDraw = True
+152.0759 	EXP 	New trial (rep=0, index=77): OrderedDict([('Tick', 79), ('Color', 'green')])
+152.0824 	EXP 	text_metronom_tic: autoDraw = False
+152.0824 	EXP 	metronome: fillColor = 'green (named)'
+152.0824 	EXP 	metronome: autoDraw = True
+152.5834 	EXP 	metronome: autoDraw = False
+152.5834 	EXP 	text_metronom_tic: autoDraw = True
+153.0703 	EXP 	New trial (rep=0, index=78): OrderedDict([('Tick', 80), ('Color', 'green')])
+153.0769 	EXP 	text_metronom_tic: autoDraw = False
+153.0769 	EXP 	metronome: fillColor = 'green (named)'
+153.0769 	EXP 	metronome: autoDraw = True
+153.5774 	EXP 	metronome: autoDraw = False
+153.5774 	EXP 	text_metronom_tic: autoDraw = True
+154.0712 	EXP 	New trial (rep=0, index=79): OrderedDict([('Tick', 81), ('Color', 'green')])
+154.0777 	EXP 	text_metronom_tic: autoDraw = False
+154.0777 	EXP 	metronome: fillColor = 'green (named)'
+154.0777 	EXP 	metronome: autoDraw = True
+154.5786 	EXP 	metronome: autoDraw = False
+154.5786 	EXP 	text_metronom_tic: autoDraw = True
+155.0728 	EXP 	New trial (rep=0, index=80): OrderedDict([('Tick', 82), ('Color', 'green')])
+155.0793 	EXP 	text_metronom_tic: autoDraw = False
+155.0793 	EXP 	metronome: fillColor = 'green (named)'
+155.0793 	EXP 	metronome: autoDraw = True
+155.5776 	EXP 	metronome: autoDraw = False
+155.5776 	EXP 	text_metronom_tic: autoDraw = True
+156.0718 	EXP 	New trial (rep=0, index=81): OrderedDict([('Tick', 83), ('Color', 'green')])
+156.0784 	EXP 	text_metronom_tic: autoDraw = False
+156.0784 	EXP 	metronome: fillColor = 'green (named)'
+156.0784 	EXP 	metronome: autoDraw = True
+156.5764 	EXP 	metronome: autoDraw = False
+156.5764 	EXP 	metronome: autoDraw = False
+156.5764 	EXP 	text_metronom_tic: autoDraw = True
+157.0702 	EXP 	New trial (rep=0, index=82): OrderedDict([('Tick', 84), ('Color', 'green')])
+157.0768 	EXP 	text_metronom_tic: autoDraw = False
+157.0768 	EXP 	metronome: fillColor = 'green (named)'
+157.0768 	EXP 	metronome: autoDraw = True
+157.5749 	EXP 	metronome: autoDraw = False
+157.5749 	EXP 	metronome: autoDraw = False
+157.5749 	EXP 	text_metronom_tic: autoDraw = True
+158.0701 	EXP 	New trial (rep=0, index=83): OrderedDict([('Tick', 85), ('Color', 'green')])
+158.0753 	EXP 	text_metronom_tic: autoDraw = False
+158.0753 	EXP 	text_metronom_tic: autoDraw = False
+158.0753 	EXP 	metronome: fillColor = 'green (named)'
+158.0753 	EXP 	metronome: autoDraw = True
+158.5733 	EXP 	metronome: autoDraw = False
+158.5733 	EXP 	metronome: autoDraw = False
+158.5733 	EXP 	text_metronom_tic: autoDraw = True
+159.0691 	EXP 	New trial (rep=0, index=84): OrderedDict([('Tick', 86), ('Color', 'green')])
+159.0737 	EXP 	text_metronom_tic: autoDraw = False
+159.0737 	EXP 	text_metronom_tic: autoDraw = False
+159.0737 	EXP 	metronome: fillColor = 'green (named)'
+159.0737 	EXP 	metronome: autoDraw = True
+159.5750 	EXP 	metronome: autoDraw = False
+159.5750 	EXP 	metronome: autoDraw = False
+159.5750 	EXP 	text_metronom_tic: autoDraw = True
+160.0711 	EXP 	New trial (rep=0, index=85): OrderedDict([('Tick', 87), ('Color', 'green')])
+160.0756 	EXP 	text_metronom_tic: autoDraw = False
+160.0756 	EXP 	text_metronom_tic: autoDraw = False
+160.0756 	EXP 	metronome: fillColor = 'green (named)'
+160.0756 	EXP 	metronome: autoDraw = True
+160.5766 	EXP 	metronome: autoDraw = False
+160.5766 	EXP 	metronome: autoDraw = False
+160.5766 	EXP 	text_metronom_tic: autoDraw = True
+161.0707 	EXP 	New trial (rep=0, index=86): OrderedDict([('Tick', 88), ('Color', 'green')])
+161.0772 	EXP 	text_metronom_tic: autoDraw = False
+161.0772 	EXP 	metronome: fillColor = 'green (named)'
+161.0772 	EXP 	metronome: autoDraw = True
+161.5778 	EXP 	metronome: autoDraw = False
+161.5778 	EXP 	text_metronom_tic: autoDraw = True
+162.0717 	EXP 	New trial (rep=0, index=87): OrderedDict([('Tick', 89), ('Color', 'green')])
+162.0785 	EXP 	text_metronom_tic: autoDraw = False
+162.0785 	EXP 	metronome: fillColor = 'green (named)'
+162.0785 	EXP 	metronome: autoDraw = True
+162.5788 	EXP 	metronome: autoDraw = False
+162.5788 	EXP 	text_metronom_tic: autoDraw = True
+163.0725 	EXP 	New trial (rep=0, index=88): OrderedDict([('Tick', 90), ('Color', 'green')])
+163.0790 	EXP 	text_metronom_tic: autoDraw = False
+163.0790 	EXP 	metronome: fillColor = 'green (named)'
+163.0790 	EXP 	metronome: autoDraw = True
+163.5800 	EXP 	metronome: autoDraw = False
+163.5800 	EXP 	text_metronom_tic: autoDraw = True
+164.0739 	EXP 	New trial (rep=0, index=89): OrderedDict([('Tick', 91), ('Color', 'green')])
+164.0804 	EXP 	text_metronom_tic: autoDraw = False
+164.0804 	EXP 	metronome: fillColor = 'green (named)'
+164.0804 	EXP 	metronome: autoDraw = True
+164.5787 	EXP 	metronome: autoDraw = False
+164.5787 	EXP 	text_metronom_tic: autoDraw = True
+165.0722 	EXP 	New trial (rep=0, index=90): OrderedDict([('Tick', 92), ('Color', 'green')])
+165.0787 	EXP 	text_metronom_tic: autoDraw = False
+165.0787 	EXP 	metronome: fillColor = 'green (named)'
+165.0787 	EXP 	metronome: autoDraw = True
+165.5781 	EXP 	metronome: autoDraw = False
+165.5781 	EXP 	text_metronom_tic: autoDraw = True
+166.0719 	EXP 	New trial (rep=0, index=91): OrderedDict([('Tick', 93), ('Color', 'green')])
+166.0785 	EXP 	text_metronom_tic: autoDraw = False
+166.0785 	EXP 	metronome: fillColor = 'green (named)'
+166.0785 	EXP 	metronome: autoDraw = True
+166.5798 	EXP 	metronome: autoDraw = False
+166.5798 	EXP 	text_metronom_tic: autoDraw = True
+167.0738 	EXP 	New trial (rep=0, index=92): OrderedDict([('Tick', 94), ('Color', 'green')])
+167.0803 	EXP 	text_metronom_tic: autoDraw = False
+167.0803 	EXP 	metronome: fillColor = 'green (named)'
+167.0803 	EXP 	metronome: autoDraw = True
+167.5822 	EXP 	metronome: autoDraw = False
+167.5822 	EXP 	text_metronom_tic: autoDraw = True
+168.0766 	EXP 	New trial (rep=0, index=93): OrderedDict([('Tick', 95), ('Color', 'green')])
+168.0824 	EXP 	text_metronom_tic: autoDraw = False
+168.0824 	EXP 	metronome: fillColor = 'green (named)'
+168.0824 	EXP 	metronome: autoDraw = True
+168.5828 	EXP 	metronome: autoDraw = False
+168.5828 	EXP 	text_metronom_tic: autoDraw = True
+169.0769 	EXP 	New trial (rep=0, index=94): OrderedDict([('Tick', 96), ('Color', 'green')])
+169.0833 	EXP 	text_metronom_tic: autoDraw = False
+169.0833 	EXP 	metronome: fillColor = 'green (named)'
+169.0833 	EXP 	metronome: autoDraw = True
+169.5770 	EXP 	metronome: autoDraw = False
+169.5770 	EXP 	text_metronom_tic: autoDraw = True
+170.0708 	EXP 	New trial (rep=0, index=95): OrderedDict([('Tick', 97), ('Color', 'green')])
+170.0774 	EXP 	text_metronom_tic: autoDraw = False
+170.0774 	EXP 	metronome: fillColor = 'green (named)'
+170.0774 	EXP 	metronome: autoDraw = True
+170.5726 	EXP 	metronome: autoDraw = False
+170.5726 	EXP 	metronome: autoDraw = False
+170.5726 	EXP 	text_metronom_tic: autoDraw = True
+171.0681 	EXP 	New trial (rep=0, index=96): OrderedDict([('Tick', 98), ('Color', 'green')])
+171.0732 	EXP 	text_metronom_tic: autoDraw = False
+171.0732 	EXP 	text_metronom_tic: autoDraw = False
+171.0732 	EXP 	metronome: fillColor = 'green (named)'
+171.0732 	EXP 	metronome: autoDraw = True
+171.5737 	EXP 	metronome: autoDraw = False
+171.5737 	EXP 	metronome: autoDraw = False
+171.5737 	EXP 	text_metronom_tic: autoDraw = True
+172.0691 	EXP 	New trial (rep=0, index=97): OrderedDict([('Tick', 99), ('Color', 'green')])
+172.0740 	EXP 	text_metronom_tic: autoDraw = False
+172.0740 	EXP 	text_metronom_tic: autoDraw = False
+172.0740 	EXP 	metronome: fillColor = 'green (named)'
+172.0740 	EXP 	metronome: autoDraw = True
+172.5759 	EXP 	metronome: autoDraw = False
+172.5759 	EXP 	metronome: autoDraw = False
+172.5759 	EXP 	text_metronom_tic: autoDraw = True
+173.0711 	EXP 	New trial (rep=0, index=98): OrderedDict([('Tick', 100), ('Color', 'green')])
+173.0763 	EXP 	text_metronom_tic: autoDraw = False
+173.0763 	EXP 	text_metronom_tic: autoDraw = False
+173.0763 	EXP 	metronome: fillColor = 'green (named)'
+173.0763 	EXP 	metronome: autoDraw = True
+173.5770 	EXP 	metronome: autoDraw = False
+173.5770 	EXP 	text_metronom_tic: autoDraw = True
+174.0708 	EXP 	New trial (rep=0, index=99): OrderedDict([('Tick', 101), ('Color', 'green')])
+174.0774 	EXP 	text_metronom_tic: autoDraw = False
+174.0774 	EXP 	metronome: fillColor = 'green (named)'
+174.0774 	EXP 	metronome: autoDraw = True
+174.5753 	EXP 	metronome: autoDraw = False
+174.5753 	EXP 	metronome: autoDraw = False
+174.5753 	EXP 	text_metronom_tic: autoDraw = True
+175.0712 	EXP 	New trial (rep=0, index=100): OrderedDict([('Tick', 102), ('Color', 'green')])
+175.0757 	EXP 	text_metronom_tic: autoDraw = False
+175.0757 	EXP 	text_metronom_tic: autoDraw = False
+175.0757 	EXP 	metronome: fillColor = 'green (named)'
+175.0757 	EXP 	metronome: autoDraw = True
+175.5764 	EXP 	metronome: autoDraw = False
+175.5764 	EXP 	metronome: autoDraw = False
+175.5764 	EXP 	text_metronom_tic: autoDraw = True
+176.0704 	EXP 	New trial (rep=0, index=101): OrderedDict([('Tick', 103), ('Color', 'green')])
+176.0770 	EXP 	text_metronom_tic: autoDraw = False
+176.0770 	EXP 	metronome: fillColor = 'green (named)'
+176.0770 	EXP 	metronome: autoDraw = True
+176.5778 	EXP 	metronome: autoDraw = False
+176.5778 	EXP 	text_metronom_tic: autoDraw = True
+177.0720 	EXP 	New trial (rep=0, index=102): OrderedDict([('Tick', 104), ('Color', 'green')])
+177.0783 	EXP 	text_metronom_tic: autoDraw = False
+177.0783 	EXP 	metronome: fillColor = 'green (named)'
+177.0783 	EXP 	metronome: autoDraw = True
+177.5795 	EXP 	metronome: autoDraw = False
+177.5795 	EXP 	text_metronom_tic: autoDraw = True
+178.0731 	EXP 	New trial (rep=0, index=103): OrderedDict([('Tick', 105), ('Color', 'green')])
+178.0796 	EXP 	text_metronom_tic: autoDraw = False
+178.0796 	EXP 	metronome: fillColor = 'green (named)'
+178.0796 	EXP 	metronome: autoDraw = True
+178.5803 	EXP 	metronome: autoDraw = False
+178.5803 	EXP 	text_metronom_tic: autoDraw = True
+179.0743 	EXP 	New trial (rep=0, index=104): OrderedDict([('Tick', 106), ('Color', 'green')])
+179.0808 	EXP 	text_metronom_tic: autoDraw = False
+179.0808 	EXP 	metronome: fillColor = 'green (named)'
+179.0808 	EXP 	metronome: autoDraw = True
+179.5817 	EXP 	metronome: autoDraw = False
+179.5817 	EXP 	text_metronom_tic: autoDraw = True
+180.0756 	EXP 	New trial (rep=0, index=105): OrderedDict([('Tick', 107), ('Color', 'green')])
+180.0821 	EXP 	text_metronom_tic: autoDraw = False
+180.0821 	EXP 	metronome: fillColor = 'green (named)'
+180.0821 	EXP 	metronome: autoDraw = True
+180.5772 	EXP 	metronome: autoDraw = False
+180.5772 	EXP 	text_metronom_tic: autoDraw = True
+181.0712 	EXP 	New trial (rep=0, index=106): OrderedDict([('Tick', 108), ('Color', 'green')])
+181.0777 	EXP 	text_metronom_tic: autoDraw = False
+181.0777 	EXP 	metronome: fillColor = 'green (named)'
+181.0777 	EXP 	metronome: autoDraw = True
+181.5790 	EXP 	metronome: autoDraw = False
+181.5790 	EXP 	text_metronom_tic: autoDraw = True
+182.0728 	EXP 	New trial (rep=0, index=107): OrderedDict([('Tick', 109), ('Color', 'green')])
+182.0793 	EXP 	text_metronom_tic: autoDraw = False
+182.0793 	EXP 	metronome: fillColor = 'green (named)'
+182.0793 	EXP 	metronome: autoDraw = True
+182.5809 	EXP 	metronome: autoDraw = False
+182.5809 	EXP 	text_metronom_tic: autoDraw = True
+183.0746 	EXP 	New trial (rep=0, index=108): OrderedDict([('Tick', 110), ('Color', 'green')])
+183.0811 	EXP 	text_metronom_tic: autoDraw = False
+183.0811 	EXP 	metronome: fillColor = 'green (named)'
+183.0811 	EXP 	metronome: autoDraw = True
+183.5792 	EXP 	metronome: autoDraw = False
+183.5792 	EXP 	text_metronom_tic: autoDraw = True
+184.0731 	EXP 	New trial (rep=0, index=109): OrderedDict([('Tick', 111), ('Color', 'green')])
+184.0795 	EXP 	text_metronom_tic: autoDraw = False
+184.0795 	EXP 	metronome: fillColor = 'green (named)'
+184.0795 	EXP 	metronome: autoDraw = True
+184.5779 	EXP 	metronome: autoDraw = False
+184.5779 	EXP 	text_metronom_tic: autoDraw = True
+185.0721 	EXP 	New trial (rep=0, index=110): OrderedDict([('Tick', 112), ('Color', 'green')])
+185.0783 	EXP 	text_metronom_tic: autoDraw = False
+185.0783 	EXP 	metronome: fillColor = 'green (named)'
+185.0783 	EXP 	metronome: autoDraw = True
+185.5782 	EXP 	metronome: autoDraw = False
+185.5782 	EXP 	text_metronom_tic: autoDraw = True
+186.0722 	EXP 	New trial (rep=0, index=111): OrderedDict([('Tick', 113), ('Color', 'green')])
+186.0788 	EXP 	text_metronom_tic: autoDraw = False
+186.0788 	EXP 	metronome: fillColor = 'green (named)'
+186.0788 	EXP 	metronome: autoDraw = True
+186.5740 	EXP 	metronome: autoDraw = False
+186.5740 	EXP 	metronome: autoDraw = False
+186.5740 	EXP 	text_metronom_tic: autoDraw = True
+187.0691 	EXP 	New trial (rep=0, index=112): OrderedDict([('Tick', 114), ('Color', 'green')])
+187.0745 	EXP 	text_metronom_tic: autoDraw = False
+187.0745 	EXP 	text_metronom_tic: autoDraw = False
+187.0745 	EXP 	metronome: fillColor = 'green (named)'
+187.0745 	EXP 	metronome: autoDraw = True
+187.5761 	EXP 	metronome: autoDraw = False
+187.5761 	EXP 	metronome: autoDraw = False
+187.5761 	EXP 	text_metronom_tic: autoDraw = True
+188.0711 	EXP 	New trial (rep=0, index=113): OrderedDict([('Tick', 115), ('Color', 'green')])
+188.0763 	EXP 	text_metronom_tic: autoDraw = False
+188.0763 	EXP 	text_metronom_tic: autoDraw = False
+188.0763 	EXP 	metronome: fillColor = 'green (named)'
+188.0763 	EXP 	metronome: autoDraw = True
+188.5769 	EXP 	metronome: autoDraw = False
+188.5769 	EXP 	text_metronom_tic: autoDraw = True
+189.0708 	EXP 	New trial (rep=0, index=114): OrderedDict([('Tick', 116), ('Color', 'green')])
+189.0773 	EXP 	text_metronom_tic: autoDraw = False
+189.0773 	EXP 	metronome: fillColor = 'green (named)'
+189.0773 	EXP 	metronome: autoDraw = True
+189.5779 	EXP 	metronome: autoDraw = False
+189.5779 	EXP 	text_metronom_tic: autoDraw = True
+190.0721 	EXP 	New trial (rep=0, index=115): OrderedDict([('Tick', 117), ('Color', 'green')])
+190.0784 	EXP 	text_metronom_tic: autoDraw = False
+190.0784 	EXP 	metronome: fillColor = 'green (named)'
+190.0784 	EXP 	metronome: autoDraw = True
+190.5797 	EXP 	metronome: autoDraw = False
+190.5797 	EXP 	text_metronom_tic: autoDraw = True
+191.0735 	EXP 	New trial (rep=0, index=116): OrderedDict([('Tick', 118), ('Color', 'green')])
+191.0800 	EXP 	text_metronom_tic: autoDraw = False
+191.0800 	EXP 	metronome: fillColor = 'green (named)'
+191.0800 	EXP 	metronome: autoDraw = True
+191.5807 	EXP 	metronome: autoDraw = False
+191.5807 	EXP 	text_metronom_tic: autoDraw = True
+192.0746 	EXP 	New trial (rep=0, index=117): OrderedDict([('Tick', 119), ('Color', 'green')])
+192.0812 	EXP 	text_metronom_tic: autoDraw = False
+192.0812 	EXP 	metronome: fillColor = 'green (named)'
+192.0812 	EXP 	metronome: autoDraw = True
+192.5830 	EXP 	metronome: autoDraw = False
+192.5830 	EXP 	text_metronom_tic: autoDraw = True
+193.0766 	EXP 	New trial (rep=0, index=118): OrderedDict([('Tick', 120), ('Color', 'green')])
+193.0831 	EXP 	text_metronom_tic: autoDraw = False
+193.0831 	EXP 	metronome: fillColor = 'green (named)'
+193.0831 	EXP 	metronome: autoDraw = True
+193.5790 	EXP 	metronome: autoDraw = False
+193.5790 	EXP 	text_metronom_tic: autoDraw = True
+194.0725 	EXP 	New trial (rep=0, index=119): OrderedDict([('Tick', 121), ('Color', 'green')])
+194.0791 	EXP 	text_metronom_tic: autoDraw = False
+194.0791 	EXP 	metronome: fillColor = 'green (named)'
+194.0791 	EXP 	metronome: autoDraw = True
+194.5772 	EXP 	metronome: autoDraw = False
+194.5772 	EXP 	text_metronom_tic: autoDraw = True
+195.0712 	EXP 	New trial (rep=0, index=120): OrderedDict([('Tick', 122), ('Color', 'green')])
+195.0777 	EXP 	text_metronom_tic: autoDraw = False
+195.0777 	EXP 	metronome: fillColor = 'green (named)'
+195.0777 	EXP 	metronome: autoDraw = True
+195.5747 	EXP 	metronome: autoDraw = False
+195.5747 	EXP 	metronome: autoDraw = False
+195.5747 	EXP 	text_metronom_tic: autoDraw = True
+196.0701 	EXP 	New trial (rep=0, index=121): OrderedDict([('Tick', 123), ('Color', 'green')])
+196.0750 	EXP 	text_metronom_tic: autoDraw = False
+196.0750 	EXP 	text_metronom_tic: autoDraw = False
+196.0750 	EXP 	metronome: fillColor = 'green (named)'
+196.0750 	EXP 	metronome: autoDraw = True
+196.5763 	EXP 	metronome: autoDraw = False
+196.5763 	EXP 	metronome: autoDraw = False
+196.5763 	EXP 	text_metronom_tic: autoDraw = True
+197.0702 	EXP 	New trial (rep=0, index=122): OrderedDict([('Tick', 124), ('Color', 'green')])
+197.0768 	EXP 	text_metronom_tic: autoDraw = False
+197.0768 	EXP 	metronome: fillColor = 'green (named)'
+197.0768 	EXP 	metronome: autoDraw = True
+197.5748 	EXP 	metronome: autoDraw = False
+197.5748 	EXP 	metronome: autoDraw = False
+197.5748 	EXP 	text_metronom_tic: autoDraw = True
+198.0701 	EXP 	New trial (rep=0, index=123): OrderedDict([('Tick', 125), ('Color', 'green')])
+198.0750 	EXP 	text_metronom_tic: autoDraw = False
+198.0750 	EXP 	text_metronom_tic: autoDraw = False
+198.0750 	EXP 	metronome: fillColor = 'green (named)'
+198.0750 	EXP 	metronome: autoDraw = True
+198.5757 	EXP 	metronome: autoDraw = False
+198.5757 	EXP 	metronome: autoDraw = False
+198.5757 	EXP 	text_metronom_tic: autoDraw = True
+199.0711 	EXP 	New trial (rep=0, index=124): OrderedDict([('Tick', 126), ('Color', 'green')])
+199.0762 	EXP 	text_metronom_tic: autoDraw = False
+199.0762 	EXP 	text_metronom_tic: autoDraw = False
+199.0762 	EXP 	metronome: fillColor = 'green (named)'
+199.0762 	EXP 	metronome: autoDraw = True
+199.5771 	EXP 	metronome: autoDraw = False
+199.5771 	EXP 	text_metronom_tic: autoDraw = True
+200.0709 	EXP 	New trial (rep=0, index=125): OrderedDict([('Tick', 127), ('Color', 'green')])
+200.0775 	EXP 	text_metronom_tic: autoDraw = False
+200.0775 	EXP 	metronome: fillColor = 'green (named)'
+200.0775 	EXP 	metronome: autoDraw = True
+200.5791 	EXP 	metronome: autoDraw = False
+200.5791 	EXP 	text_metronom_tic: autoDraw = True
+201.0729 	EXP 	New trial (rep=0, index=126): OrderedDict([('Tick', 128), ('Color', 'green')])
+201.0794 	EXP 	text_metronom_tic: autoDraw = False
+201.0794 	EXP 	metronome: fillColor = 'green (named)'
+201.0794 	EXP 	metronome: autoDraw = True
+201.5801 	EXP 	metronome: autoDraw = False
+201.5801 	EXP 	text_metronom_tic: autoDraw = True
+202.0742 	EXP 	New trial (rep=0, index=127): OrderedDict([('Tick', 129), ('Color', 'green')])
+202.0807 	EXP 	text_metronom_tic: autoDraw = False
+202.0807 	EXP 	metronome: fillColor = 'green (named)'
+202.0807 	EXP 	metronome: autoDraw = True
+202.5823 	EXP 	metronome: autoDraw = False
+202.5823 	EXP 	text_metronom_tic: autoDraw = True
+203.0760 	EXP 	New trial (rep=0, index=128): OrderedDict([('Tick', 130), ('Color', 'green')])
+203.0825 	EXP 	text_metronom_tic: autoDraw = False
+203.0825 	EXP 	metronome: fillColor = 'green (named)'
+203.0825 	EXP 	metronome: autoDraw = True
+203.5832 	EXP 	metronome: autoDraw = False
+203.5832 	EXP 	text_metronom_tic: autoDraw = True
+204.0703 	EXP 	New trial (rep=0, index=129): OrderedDict([('Tick', 131), ('Color', 'green')])
+204.0768 	EXP 	text_metronom_tic: autoDraw = False
+204.0768 	EXP 	metronome: fillColor = 'green (named)'
+204.0768 	EXP 	metronome: autoDraw = True
+204.5778 	EXP 	metronome: autoDraw = False
+204.5778 	EXP 	text_metronom_tic: autoDraw = True
+205.0717 	EXP 	New trial (rep=0, index=130): OrderedDict([('Tick', 132), ('Color', 'green')])
+205.0783 	EXP 	text_metronom_tic: autoDraw = False
+205.0783 	EXP 	metronome: fillColor = 'green (named)'
+205.0783 	EXP 	metronome: autoDraw = True
+205.5791 	EXP 	metronome: autoDraw = False
+205.5791 	EXP 	text_metronom_tic: autoDraw = True
+206.0730 	EXP 	New trial (rep=0, index=131): OrderedDict([('Tick', 133), ('Color', 'green')])
+206.0795 	EXP 	text_metronom_tic: autoDraw = False
+206.0795 	EXP 	metronome: fillColor = 'green (named)'
+206.0795 	EXP 	metronome: autoDraw = True
+206.5801 	EXP 	metronome: autoDraw = False
+206.5801 	EXP 	text_metronom_tic: autoDraw = True
+207.0741 	EXP 	New trial (rep=0, index=132): OrderedDict([('Tick', 134), ('Color', 'green')])
+207.0806 	EXP 	text_metronom_tic: autoDraw = False
+207.0806 	EXP 	metronome: fillColor = 'green (named)'
+207.0806 	EXP 	metronome: autoDraw = True
+207.5777 	EXP 	metronome: autoDraw = False
+207.5777 	EXP 	text_metronom_tic: autoDraw = True
+208.0715 	EXP 	New trial (rep=0, index=133): OrderedDict([('Tick', 135), ('Color', 'green')])
+208.0780 	EXP 	text_metronom_tic: autoDraw = False
+208.0780 	EXP 	metronome: fillColor = 'green (named)'
+208.0780 	EXP 	metronome: autoDraw = True
+208.5764 	EXP 	metronome: autoDraw = False
+208.5764 	EXP 	metronome: autoDraw = False
+208.5764 	EXP 	text_metronom_tic: autoDraw = True
+209.0711 	EXP 	New trial (rep=0, index=134): OrderedDict([('Tick', 136), ('Color', 'green')])
+209.0765 	EXP 	text_metronom_tic: autoDraw = False
+209.0765 	EXP 	text_metronom_tic: autoDraw = False
+209.0765 	EXP 	metronome: fillColor = 'green (named)'
+209.0765 	EXP 	metronome: autoDraw = True
+209.5775 	EXP 	metronome: autoDraw = False
+209.5775 	EXP 	text_metronom_tic: autoDraw = True
+210.0713 	EXP 	New trial (rep=0, index=135): OrderedDict([('Tick', 137), ('Color', 'green')])
+210.0778 	EXP 	text_metronom_tic: autoDraw = False
+210.0778 	EXP 	metronome: fillColor = 'green (named)'
+210.0778 	EXP 	metronome: autoDraw = True
+210.5795 	EXP 	metronome: autoDraw = False
+210.5795 	EXP 	text_metronom_tic: autoDraw = True
+211.0734 	EXP 	New trial (rep=0, index=136): OrderedDict([('Tick', 138), ('Color', 'green')])
+211.0799 	EXP 	text_metronom_tic: autoDraw = False
+211.0799 	EXP 	metronome: fillColor = 'green (named)'
+211.0799 	EXP 	metronome: autoDraw = True
+211.5784 	EXP 	metronome: autoDraw = False
+211.5784 	EXP 	text_metronom_tic: autoDraw = True
+212.0725 	EXP 	New trial (rep=0, index=137): OrderedDict([('Tick', 139), ('Color', 'green')])
+212.0794 	EXP 	text_metronom_tic: autoDraw = False
+212.0794 	EXP 	metronome: fillColor = 'green (named)'
+212.0794 	EXP 	metronome: autoDraw = True
+212.5798 	EXP 	metronome: autoDraw = False
+212.5798 	EXP 	text_metronom_tic: autoDraw = True
+213.0735 	EXP 	New trial (rep=0, index=138): OrderedDict([('Tick', 140), ('Color', 'green')])
+213.0800 	EXP 	text_metronom_tic: autoDraw = False
+213.0800 	EXP 	metronome: fillColor = 'green (named)'
+213.0800 	EXP 	metronome: autoDraw = True
+213.5820 	EXP 	metronome: autoDraw = False
+213.5820 	EXP 	text_metronom_tic: autoDraw = True
+214.0760 	EXP 	New trial (rep=0, index=139): OrderedDict([('Tick', 141), ('Color', 'green')])
+214.0825 	EXP 	text_metronom_tic: autoDraw = False
+214.0825 	EXP 	metronome: fillColor = 'green (named)'
+214.0825 	EXP 	metronome: autoDraw = True
+214.5832 	EXP 	metronome: autoDraw = False
+214.5832 	EXP 	text_metronom_tic: autoDraw = True
+215.0704 	EXP 	New trial (rep=0, index=140): OrderedDict([('Tick', 142), ('Color', 'green')])
+215.0770 	EXP 	text_metronom_tic: autoDraw = False
+215.0770 	EXP 	metronome: fillColor = 'green (named)'
+215.0770 	EXP 	metronome: autoDraw = True
+215.5773 	EXP 	metronome: autoDraw = False
+215.5773 	EXP 	text_metronom_tic: autoDraw = True
+216.0712 	EXP 	New trial (rep=0, index=141): OrderedDict([('Tick', 143), ('Color', 'green')])
+216.0777 	EXP 	text_metronom_tic: autoDraw = False
+216.0777 	EXP 	metronome: fillColor = 'green (named)'
+216.0777 	EXP 	metronome: autoDraw = True
+216.5786 	EXP 	metronome: autoDraw = False
+216.5786 	EXP 	text_metronom_tic: autoDraw = True
+217.0726 	EXP 	New trial (rep=0, index=142): OrderedDict([('Tick', 144), ('Color', 'green')])
+217.0795 	EXP 	text_metronom_tic: autoDraw = False
+217.0795 	EXP 	metronome: fillColor = 'green (named)'
+217.0795 	EXP 	metronome: autoDraw = True
+217.5745 	EXP 	metronome: autoDraw = False
+217.5745 	EXP 	metronome: autoDraw = False
+217.5745 	EXP 	text_metronom_tic: autoDraw = True
+218.0701 	EXP 	New trial (rep=0, index=143): OrderedDict([('Tick', 145), ('Color', 'green')])
+218.0748 	EXP 	text_metronom_tic: autoDraw = False
+218.0748 	EXP 	text_metronom_tic: autoDraw = False
+218.0748 	EXP 	metronome: fillColor = 'green (named)'
+218.0748 	EXP 	metronome: autoDraw = True
+218.5778 	EXP 	metronome: autoDraw = False
+218.5778 	EXP 	text_metronom_tic: autoDraw = True
+219.0716 	EXP 	New trial (rep=0, index=144): OrderedDict([('Tick', 146), ('Color', 'green')])
+219.0783 	EXP 	text_metronom_tic: autoDraw = False
+219.0783 	EXP 	metronome: fillColor = 'green (named)'
+219.0783 	EXP 	metronome: autoDraw = True
+219.5746 	EXP 	metronome: autoDraw = False
+219.5746 	EXP 	metronome: autoDraw = False
+219.5746 	EXP 	text_metronom_tic: autoDraw = True
+220.0701 	EXP 	New trial (rep=0, index=145): OrderedDict([('Tick', 147), ('Color', 'green')])
+220.0751 	EXP 	text_metronom_tic: autoDraw = False
+220.0751 	EXP 	text_metronom_tic: autoDraw = False
+220.0751 	EXP 	metronome: fillColor = 'green (named)'
+220.0751 	EXP 	metronome: autoDraw = True
+220.5759 	EXP 	metronome: autoDraw = False
+220.5759 	EXP 	metronome: autoDraw = False
+220.5759 	EXP 	text_metronom_tic: autoDraw = True
+221.0711 	EXP 	New trial (rep=0, index=146): OrderedDict([('Tick', 148), ('Color', 'green')])
+221.0765 	EXP 	text_metronom_tic: autoDraw = False
+221.0765 	EXP 	text_metronom_tic: autoDraw = False
+221.0765 	EXP 	metronome: fillColor = 'green (named)'
+221.0765 	EXP 	metronome: autoDraw = True
+221.5775 	EXP 	metronome: autoDraw = False
+221.5775 	EXP 	text_metronom_tic: autoDraw = True
+222.0713 	EXP 	New trial (rep=0, index=147): OrderedDict([('Tick', 149), ('Color', 'green')])
+222.0779 	EXP 	text_metronom_tic: autoDraw = False
+222.0779 	EXP 	metronome: fillColor = 'green (named)'
+222.0779 	EXP 	metronome: autoDraw = True
+222.5731 	EXP 	metronome: autoDraw = False
+222.5731 	EXP 	metronome: autoDraw = False
+222.5731 	EXP 	text_metronom_tic: autoDraw = True
+223.0691 	EXP 	New trial (rep=0, index=148): OrderedDict([('Tick', 150), ('Color', 'green')])
+223.0734 	EXP 	text_metronom_tic: autoDraw = False
+223.0734 	EXP 	text_metronom_tic: autoDraw = False
+223.0734 	EXP 	metronome: fillColor = 'green (named)'
+223.0734 	EXP 	metronome: autoDraw = True
+223.5742 	EXP 	metronome: autoDraw = False
+223.5742 	EXP 	metronome: autoDraw = False
+223.5742 	EXP 	text_metronom_tic: autoDraw = True
+224.0691 	EXP 	New trial (rep=0, index=149): OrderedDict([('Tick', 151), ('Color', 'green')])
+224.0745 	EXP 	text_metronom_tic: autoDraw = False
+224.0745 	EXP 	text_metronom_tic: autoDraw = False
+224.0745 	EXP 	metronome: fillColor = 'green (named)'
+224.0745 	EXP 	metronome: autoDraw = True
+224.5764 	EXP 	metronome: autoDraw = False
+224.5764 	EXP 	metronome: autoDraw = False
+224.5764 	EXP 	text_metronom_tic: autoDraw = True
+225.0702 	EXP 	New trial (rep=0, index=150): OrderedDict([('Tick', 152), ('Color', 'green')])
+225.0769 	EXP 	text_metronom_tic: autoDraw = False
+225.0769 	EXP 	metronome: fillColor = 'green (named)'
+225.0769 	EXP 	metronome: autoDraw = True
+225.5778 	EXP 	metronome: autoDraw = False
+225.5778 	EXP 	text_metronom_tic: autoDraw = True
+226.0716 	EXP 	New trial (rep=0, index=151): OrderedDict([('Tick', 153), ('Color', 'green')])
+226.0782 	EXP 	text_metronom_tic: autoDraw = False
+226.0782 	EXP 	metronome: fillColor = 'green (named)'
+226.0782 	EXP 	metronome: autoDraw = True
+226.5791 	EXP 	metronome: autoDraw = False
+226.5791 	EXP 	text_metronom_tic: autoDraw = True
+227.0730 	EXP 	New trial (rep=0, index=152): OrderedDict([('Tick', 154), ('Color', 'green')])
+227.0795 	EXP 	text_metronom_tic: autoDraw = False
+227.0795 	EXP 	metronome: fillColor = 'green (named)'
+227.0795 	EXP 	metronome: autoDraw = True
+227.5769 	EXP 	metronome: autoDraw = False
+227.5769 	EXP 	text_metronom_tic: autoDraw = True
+228.0705 	EXP 	New trial (rep=0, index=153): OrderedDict([('Tick', 155), ('Color', 'green')])
+228.0771 	EXP 	text_metronom_tic: autoDraw = False
+228.0771 	EXP 	metronome: fillColor = 'green (named)'
+228.0771 	EXP 	metronome: autoDraw = True
+228.5750 	EXP 	metronome: autoDraw = False
+228.5750 	EXP 	metronome: autoDraw = False
+228.5750 	EXP 	text_metronom_tic: autoDraw = True
+229.0701 	EXP 	New trial (rep=0, index=154): OrderedDict([('Tick', 156), ('Color', 'green')])
+229.0754 	EXP 	text_metronom_tic: autoDraw = False
+229.0754 	EXP 	text_metronom_tic: autoDraw = False
+229.0754 	EXP 	metronome: fillColor = 'green (named)'
+229.0754 	EXP 	metronome: autoDraw = True
+229.5737 	EXP 	metronome: autoDraw = False
+229.5737 	EXP 	metronome: autoDraw = False
+229.5737 	EXP 	text_metronom_tic: autoDraw = True
+230.0691 	EXP 	New trial (rep=0, index=155): OrderedDict([('Tick', 157), ('Color', 'green')])
+230.0740 	EXP 	text_metronom_tic: autoDraw = False
+230.0740 	EXP 	text_metronom_tic: autoDraw = False
+230.0740 	EXP 	metronome: fillColor = 'green (named)'
+230.0740 	EXP 	metronome: autoDraw = True
+230.5747 	EXP 	metronome: autoDraw = False
+230.5747 	EXP 	metronome: autoDraw = False
+230.5747 	EXP 	text_metronom_tic: autoDraw = True
+231.0701 	EXP 	New trial (rep=0, index=156): OrderedDict([('Tick', 158), ('Color', 'green')])
+231.0753 	EXP 	text_metronom_tic: autoDraw = False
+231.0753 	EXP 	text_metronom_tic: autoDraw = False
+231.0753 	EXP 	metronome: fillColor = 'green (named)'
+231.0753 	EXP 	metronome: autoDraw = True
+231.5766 	EXP 	metronome: autoDraw = False
+231.5766 	EXP 	metronome: autoDraw = False
+231.5766 	EXP 	text_metronom_tic: autoDraw = True
+232.0705 	EXP 	New trial (rep=0, index=157): OrderedDict([('Tick', 159), ('Color', 'green')])
+232.0771 	EXP 	text_metronom_tic: autoDraw = False
+232.0771 	EXP 	metronome: fillColor = 'green (named)'
+232.0771 	EXP 	metronome: autoDraw = True
+232.5779 	EXP 	metronome: autoDraw = False
+232.5779 	EXP 	text_metronom_tic: autoDraw = True
+233.0714 	EXP 	New trial (rep=0, index=158): OrderedDict([('Tick', 160), ('Color', 'green')])
+233.0780 	EXP 	text_metronom_tic: autoDraw = False
+233.0780 	EXP 	metronome: fillColor = 'green (named)'
+233.0780 	EXP 	metronome: autoDraw = True
+233.5786 	EXP 	metronome: autoDraw = False
+233.5786 	EXP 	text_metronom_tic: autoDraw = True
+234.0724 	EXP 	New trial (rep=0, index=159): OrderedDict([('Tick', 161), ('Color', 'green')])
+234.0789 	EXP 	text_metronom_tic: autoDraw = False
+234.0789 	EXP 	metronome: fillColor = 'green (named)'
+234.0789 	EXP 	metronome: autoDraw = True
+234.5803 	EXP 	metronome: autoDraw = False
+234.5803 	EXP 	text_metronom_tic: autoDraw = True
+235.0743 	EXP 	New trial (rep=0, index=160): OrderedDict([('Tick', 162), ('Color', 'green')])
+235.0808 	EXP 	text_metronom_tic: autoDraw = False
+235.0808 	EXP 	metronome: fillColor = 'green (named)'
+235.0808 	EXP 	metronome: autoDraw = True
+235.5764 	EXP 	metronome: autoDraw = False
+235.5764 	EXP 	metronome: autoDraw = False
+235.5764 	EXP 	text_metronom_tic: autoDraw = True
+236.0703 	EXP 	New trial (rep=0, index=161): OrderedDict([('Tick', 163), ('Color', 'green')])
+236.0768 	EXP 	text_metronom_tic: autoDraw = False
+236.0768 	EXP 	metronome: fillColor = 'green (named)'
+236.0768 	EXP 	metronome: autoDraw = True
+236.5746 	EXP 	metronome: autoDraw = False
+236.5746 	EXP 	metronome: autoDraw = False
+236.5746 	EXP 	text_metronom_tic: autoDraw = True
+237.0701 	EXP 	New trial (rep=0, index=162): OrderedDict([('Tick', 164), ('Color', 'green')])
+237.0753 	EXP 	text_metronom_tic: autoDraw = False
+237.0753 	EXP 	text_metronom_tic: autoDraw = False
+237.0753 	EXP 	metronome: fillColor = 'green (named)'
+237.0753 	EXP 	metronome: autoDraw = True
+237.5760 	EXP 	metronome: autoDraw = False
+237.5760 	EXP 	metronome: autoDraw = False
+237.5760 	EXP 	text_metronom_tic: autoDraw = True
+238.0711 	EXP 	New trial (rep=0, index=163): OrderedDict([('Tick', 165), ('Color', 'green')])
+238.0762 	EXP 	text_metronom_tic: autoDraw = False
+238.0762 	EXP 	text_metronom_tic: autoDraw = False
+238.0762 	EXP 	metronome: fillColor = 'green (named)'
+238.0762 	EXP 	metronome: autoDraw = True
+238.5768 	EXP 	metronome: autoDraw = False
+238.5768 	EXP 	text_metronom_tic: autoDraw = True
+239.0705 	EXP 	New trial (rep=0, index=164): OrderedDict([('Tick', 166), ('Color', 'green')])
+239.0771 	EXP 	text_metronom_tic: autoDraw = False
+239.0771 	EXP 	metronome: fillColor = 'green (named)'
+239.0771 	EXP 	metronome: autoDraw = True
+239.5780 	EXP 	metronome: autoDraw = False
+239.5780 	EXP 	text_metronom_tic: autoDraw = True
+240.0717 	EXP 	New trial (rep=0, index=165): OrderedDict([('Tick', 167), ('Color', 'green')])
+240.0783 	EXP 	text_metronom_tic: autoDraw = False
+240.0783 	EXP 	metronome: fillColor = 'green (named)'
+240.0783 	EXP 	metronome: autoDraw = True
+240.5761 	EXP 	metronome: autoDraw = False
+240.5761 	EXP 	metronome: autoDraw = False
+240.5761 	EXP 	text_metronom_tic: autoDraw = True
+241.0711 	EXP 	New trial (rep=0, index=166): OrderedDict([('Tick', 168), ('Color', 'green')])
+241.0763 	EXP 	text_metronom_tic: autoDraw = False
+241.0763 	EXP 	text_metronom_tic: autoDraw = False
+241.0763 	EXP 	metronome: fillColor = 'green (named)'
+241.0763 	EXP 	metronome: autoDraw = True
+241.5773 	EXP 	metronome: autoDraw = False
+241.5773 	EXP 	text_metronom_tic: autoDraw = True
+242.0715 	EXP 	New trial (rep=0, index=167): OrderedDict([('Tick', 169), ('Color', 'green')])
+242.0781 	EXP 	text_metronom_tic: autoDraw = False
+242.0781 	EXP 	metronome: fillColor = 'green (named)'
+242.0781 	EXP 	metronome: autoDraw = True
+242.5734 	EXP 	metronome: autoDraw = False
+242.5734 	EXP 	metronome: autoDraw = False
+242.5734 	EXP 	text_metronom_tic: autoDraw = True
+243.0691 	EXP 	New trial (rep=0, index=168): OrderedDict([('Tick', 170), ('Color', 'green')])
+243.0735 	EXP 	text_metronom_tic: autoDraw = False
+243.0735 	EXP 	text_metronom_tic: autoDraw = False
+243.0735 	EXP 	metronome: fillColor = 'green (named)'
+243.0735 	EXP 	metronome: autoDraw = True
+243.5710 	EXP 	metronome: autoDraw = False
+243.5710 	EXP 	metronome: autoDraw = False
+243.5710 	EXP 	text_metronom_tic: autoDraw = True
+244.0661 	EXP 	New trial (rep=0, index=169): OrderedDict([('Tick', 171), ('Color', 'green')])
+244.0714 	EXP 	text_metronom_tic: autoDraw = False
+244.0714 	EXP 	text_metronom_tic: autoDraw = False
+244.0714 	EXP 	metronome: fillColor = 'green (named)'
+244.0714 	EXP 	metronome: autoDraw = True
+244.5728 	EXP 	metronome: autoDraw = False
+244.5728 	EXP 	metronome: autoDraw = False
+244.5728 	EXP 	text_metronom_tic: autoDraw = True
+245.0681 	EXP 	New trial (rep=0, index=170): OrderedDict([('Tick', 172), ('Color', 'green')])
+245.0731 	EXP 	text_metronom_tic: autoDraw = False
+245.0731 	EXP 	text_metronom_tic: autoDraw = False
+245.0731 	EXP 	metronome: fillColor = 'green (named)'
+245.0731 	EXP 	metronome: autoDraw = True
+245.5722 	EXP 	metronome: autoDraw = False
+245.5722 	EXP 	metronome: autoDraw = False
+245.5722 	EXP 	text_metronom_tic: autoDraw = True
+246.0681 	EXP 	New trial (rep=0, index=171): OrderedDict([('Tick', 173), ('Color', 'green')])
+246.0729 	EXP 	text_metronom_tic: autoDraw = False
+246.0729 	EXP 	text_metronom_tic: autoDraw = False
+246.0729 	EXP 	metronome: fillColor = 'green (named)'
+246.0729 	EXP 	metronome: autoDraw = True
+246.5760 	EXP 	metronome: autoDraw = False
+246.5760 	EXP 	metronome: autoDraw = False
+246.5760 	EXP 	text_metronom_tic: autoDraw = True
+247.0711 	EXP 	New trial (rep=0, index=172): OrderedDict([('Tick', 174), ('Color', 'green')])
+247.0765 	EXP 	text_metronom_tic: autoDraw = False
+247.0765 	EXP 	text_metronom_tic: autoDraw = False
+247.0765 	EXP 	metronome: fillColor = 'green (named)'
+247.0765 	EXP 	metronome: autoDraw = True
+247.5743 	EXP 	metronome: autoDraw = False
+247.5743 	EXP 	metronome: autoDraw = False
+247.5743 	EXP 	text_metronom_tic: autoDraw = True
+248.0691 	EXP 	New trial (rep=0, index=173): OrderedDict([('Tick', 175), ('Color', 'green')])
+248.0745 	EXP 	text_metronom_tic: autoDraw = False
+248.0745 	EXP 	text_metronom_tic: autoDraw = False
+248.0745 	EXP 	metronome: fillColor = 'green (named)'
+248.0745 	EXP 	metronome: autoDraw = True
+248.5760 	EXP 	metronome: autoDraw = False
+248.5760 	EXP 	metronome: autoDraw = False
+248.5760 	EXP 	text_metronom_tic: autoDraw = True
+249.0711 	EXP 	New trial (rep=0, index=174): OrderedDict([('Tick', 176), ('Color', 'green')])
+249.0764 	EXP 	text_metronom_tic: autoDraw = False
+249.0764 	EXP 	text_metronom_tic: autoDraw = False
+249.0764 	EXP 	metronome: fillColor = 'green (named)'
+249.0764 	EXP 	metronome: autoDraw = True
+249.5770 	EXP 	metronome: autoDraw = False
+249.5770 	EXP 	text_metronom_tic: autoDraw = True
+250.0709 	EXP 	New trial (rep=0, index=175): OrderedDict([('Tick', 177), ('Color', 'green')])
+250.0775 	EXP 	text_metronom_tic: autoDraw = False
+250.0775 	EXP 	metronome: fillColor = 'green (named)'
+250.0775 	EXP 	metronome: autoDraw = True
+250.5782 	EXP 	metronome: autoDraw = False
+250.5782 	EXP 	text_metronom_tic: autoDraw = True
+251.0721 	EXP 	New trial (rep=0, index=176): OrderedDict([('Tick', 178), ('Color', 'green')])
+251.0786 	EXP 	text_metronom_tic: autoDraw = False
+251.0786 	EXP 	metronome: fillColor = 'green (named)'
+251.0786 	EXP 	metronome: autoDraw = True
+251.5800 	EXP 	metronome: autoDraw = False
+251.5800 	EXP 	text_metronom_tic: autoDraw = True
+252.0740 	EXP 	New trial (rep=0, index=177): OrderedDict([('Tick', 179), ('Color', 'green')])
+252.0805 	EXP 	text_metronom_tic: autoDraw = False
+252.0805 	EXP 	metronome: fillColor = 'green (named)'
+252.0805 	EXP 	metronome: autoDraw = True
+252.5817 	EXP 	metronome: autoDraw = False
+252.5817 	EXP 	text_metronom_tic: autoDraw = True
+253.0757 	EXP 	New trial (rep=0, index=178): OrderedDict([('Tick', 180), ('Color', 'yellow')])
+253.0820 	EXP 	text_metronom_tic: autoDraw = False
+253.0820 	EXP 	metronome: fillColor = 'yellow (named)'
+253.0820 	EXP 	metronome: autoDraw = True
+253.5830 	EXP 	metronome: autoDraw = False
+253.5830 	EXP 	text_metronom_tic: autoDraw = True
+254.0766 	EXP 	New trial (rep=0, index=179): OrderedDict([('Tick', 181), ('Color', 'yellow')])
+254.0831 	EXP 	text_metronom_tic: autoDraw = False
+254.0831 	EXP 	metronome: fillColor = 'yellow (named)'
+254.0831 	EXP 	metronome: autoDraw = True
+254.5770 	EXP 	metronome: autoDraw = False
+254.5770 	EXP 	text_metronom_tic: autoDraw = True
+255.0711 	EXP 	New trial (rep=0, index=180): OrderedDict([('Tick', 182), ('Color', 'yellow')])
+255.0777 	EXP 	text_metronom_tic: autoDraw = False
+255.0777 	EXP 	metronome: fillColor = 'yellow (named)'
+255.0777 	EXP 	metronome: autoDraw = True
+255.5744 	EXP 	metronome: autoDraw = False
+255.5744 	EXP 	metronome: autoDraw = False
+255.5744 	EXP 	text_metronom_tic: autoDraw = True
+256.0701 	EXP 	New trial (rep=0, index=181): OrderedDict([('Tick', 183), ('Color', 'yellow')])
+256.0747 	EXP 	text_metronom_tic: autoDraw = False
+256.0747 	EXP 	text_metronom_tic: autoDraw = False
+256.0747 	EXP 	metronome: fillColor = 'yellow (named)'
+256.0747 	EXP 	metronome: autoDraw = True
+256.5781 	EXP 	metronome: autoDraw = False
+256.5781 	EXP 	text_metronom_tic: autoDraw = True
+257.0721 	EXP 	New trial (rep=0, index=182): OrderedDict([('Tick', 184), ('Color', 'yellow')])
+257.0786 	EXP 	text_metronom_tic: autoDraw = False
+257.0786 	EXP 	metronome: fillColor = 'yellow (named)'
+257.0786 	EXP 	metronome: autoDraw = True
+257.5800 	EXP 	metronome: autoDraw = False
+257.5800 	EXP 	text_metronom_tic: autoDraw = True
+258.0736 	EXP 	New trial (rep=0, index=183): OrderedDict([('Tick', 185), ('Color', 'yellow')])
+258.0801 	EXP 	text_metronom_tic: autoDraw = False
+258.0801 	EXP 	metronome: fillColor = 'yellow (named)'
+258.0801 	EXP 	metronome: autoDraw = True
+258.5794 	EXP 	metronome: autoDraw = False
+258.5794 	EXP 	text_metronom_tic: autoDraw = True
+259.0733 	EXP 	New trial (rep=0, index=184): OrderedDict([('Tick', 186), ('Color', 'yellow')])
+259.0800 	EXP 	text_metronom_tic: autoDraw = False
+259.0800 	EXP 	metronome: fillColor = 'yellow (named)'
+259.0800 	EXP 	metronome: autoDraw = True
+259.5816 	EXP 	metronome: autoDraw = False
+259.5816 	EXP 	text_metronom_tic: autoDraw = True
+260.0756 	EXP 	New trial (rep=0, index=185): OrderedDict([('Tick', 187), ('Color', 'yellow')])
+260.0820 	EXP 	text_metronom_tic: autoDraw = False
+260.0820 	EXP 	metronome: fillColor = 'yellow (named)'
+260.0820 	EXP 	metronome: autoDraw = True
+260.5829 	EXP 	metronome: autoDraw = False
+260.5829 	EXP 	text_metronom_tic: autoDraw = True
+261.0768 	EXP 	New trial (rep=0, index=186): OrderedDict([('Tick', 188), ('Color', 'yellow')])
+261.0833 	EXP 	text_metronom_tic: autoDraw = False
+261.0833 	EXP 	metronome: fillColor = 'yellow (named)'
+261.0833 	EXP 	metronome: autoDraw = True
+261.5794 	EXP 	metronome: autoDraw = False
+261.5794 	EXP 	text_metronom_tic: autoDraw = True
+262.0736 	EXP 	New trial (rep=0, index=187): OrderedDict([('Tick', 189), ('Color', 'yellow')])
+262.0802 	EXP 	text_metronom_tic: autoDraw = False
+262.0802 	EXP 	metronome: fillColor = 'yellow (named)'
+262.0802 	EXP 	metronome: autoDraw = True
+262.5807 	EXP 	metronome: autoDraw = False
+262.5807 	EXP 	text_metronom_tic: autoDraw = True
+263.0744 	EXP 	New trial (rep=0, index=188): OrderedDict([('Tick', 190), ('Color', 'yellow')])
+263.0809 	EXP 	text_metronom_tic: autoDraw = False
+263.0809 	EXP 	metronome: fillColor = 'yellow (named)'
+263.0809 	EXP 	metronome: autoDraw = True
+263.5817 	EXP 	metronome: autoDraw = False
+263.5817 	EXP 	text_metronom_tic: autoDraw = True
+264.0757 	EXP 	New trial (rep=0, index=189): OrderedDict([('Tick', 191), ('Color', 'yellow')])
+264.0822 	EXP 	text_metronom_tic: autoDraw = False
+264.0822 	EXP 	metronome: fillColor = 'yellow (named)'
+264.0822 	EXP 	metronome: autoDraw = True
+264.5828 	EXP 	metronome: autoDraw = False
+264.5828 	EXP 	text_metronom_tic: autoDraw = True
+265.0769 	EXP 	New trial (rep=0, index=190): OrderedDict([('Tick', 192), ('Color', 'yellow')])
+265.0833 	EXP 	text_metronom_tic: autoDraw = False
+265.0833 	EXP 	metronome: fillColor = 'yellow (named)'
+265.0833 	EXP 	metronome: autoDraw = True
+265.5770 	EXP 	metronome: autoDraw = False
+265.5770 	EXP 	text_metronom_tic: autoDraw = True
+266.0709 	EXP 	New trial (rep=0, index=191): OrderedDict([('Tick', 193), ('Color', 'yellow')])
+266.0773 	EXP 	text_metronom_tic: autoDraw = False
+266.0773 	EXP 	metronome: fillColor = 'yellow (named)'
+266.0773 	EXP 	metronome: autoDraw = True
+266.5739 	EXP 	metronome: autoDraw = False
+266.5739 	EXP 	metronome: autoDraw = False
+266.5739 	EXP 	text_metronom_tic: autoDraw = True
+267.0691 	EXP 	New trial (rep=0, index=192): OrderedDict([('Tick', 194), ('Color', 'yellow')])
+267.0743 	EXP 	text_metronom_tic: autoDraw = False
+267.0743 	EXP 	text_metronom_tic: autoDraw = False
+267.0743 	EXP 	metronome: fillColor = 'yellow (named)'
+267.0743 	EXP 	metronome: autoDraw = True
+267.5718 	EXP 	metronome: autoDraw = False
+267.5718 	EXP 	metronome: autoDraw = False
+267.5718 	EXP 	text_metronom_tic: autoDraw = True
+268.0671 	EXP 	New trial (rep=0, index=193): OrderedDict([('Tick', 195), ('Color', 'yellow')])
+268.0720 	EXP 	text_metronom_tic: autoDraw = False
+268.0720 	EXP 	text_metronom_tic: autoDraw = False
+268.0720 	EXP 	metronome: fillColor = 'yellow (named)'
+268.0720 	EXP 	metronome: autoDraw = True
+268.5713 	EXP 	metronome: autoDraw = False
+268.5713 	EXP 	metronome: autoDraw = False
+268.5713 	EXP 	text_metronom_tic: autoDraw = True
+269.0671 	EXP 	New trial (rep=0, index=194): OrderedDict([('Tick', 196), ('Color', 'yellow')])
+269.0716 	EXP 	text_metronom_tic: autoDraw = False
+269.0716 	EXP 	text_metronom_tic: autoDraw = False
+269.0716 	EXP 	metronome: fillColor = 'yellow (named)'
+269.0716 	EXP 	metronome: autoDraw = True
+269.5751 	EXP 	metronome: autoDraw = False
+269.5751 	EXP 	metronome: autoDraw = False
+269.5751 	EXP 	text_metronom_tic: autoDraw = True
+270.0701 	EXP 	New trial (rep=0, index=195): OrderedDict([('Tick', 197), ('Color', 'yellow')])
+270.0755 	EXP 	text_metronom_tic: autoDraw = False
+270.0755 	EXP 	text_metronom_tic: autoDraw = False
+270.0755 	EXP 	metronome: fillColor = 'yellow (named)'
+270.0755 	EXP 	metronome: autoDraw = True
+270.5742 	EXP 	metronome: autoDraw = False
+270.5742 	EXP 	metronome: autoDraw = False
+270.5742 	EXP 	text_metronom_tic: autoDraw = True
+271.0701 	EXP 	New trial (rep=0, index=196): OrderedDict([('Tick', 198), ('Color', 'yellow')])
+271.0745 	EXP 	text_metronom_tic: autoDraw = False
+271.0745 	EXP 	text_metronom_tic: autoDraw = False
+271.0745 	EXP 	metronome: fillColor = 'yellow (named)'
+271.0745 	EXP 	metronome: autoDraw = True
+271.5751 	EXP 	metronome: autoDraw = False
+271.5751 	EXP 	metronome: autoDraw = False
+271.5751 	EXP 	text_metronom_tic: autoDraw = True
+272.0711 	EXP 	New trial (rep=0, index=197): OrderedDict([('Tick', 199), ('Color', 'yellow')])
+272.0757 	EXP 	text_metronom_tic: autoDraw = False
+272.0757 	EXP 	text_metronom_tic: autoDraw = False
+272.0757 	EXP 	metronome: fillColor = 'yellow (named)'
+272.0757 	EXP 	metronome: autoDraw = True
+272.5764 	EXP 	metronome: autoDraw = False
+272.5764 	EXP 	metronome: autoDraw = False
+272.5764 	EXP 	text_metronom_tic: autoDraw = True
+273.0711 	EXP 	New trial (rep=0, index=198): OrderedDict([('Tick', 200), ('Color', 'yellow')])
+273.0764 	EXP 	text_metronom_tic: autoDraw = False
+273.0764 	EXP 	text_metronom_tic: autoDraw = False
+273.0764 	EXP 	metronome: fillColor = 'yellow (named)'
+273.0764 	EXP 	metronome: autoDraw = True
+273.5771 	EXP 	metronome: autoDraw = False
+273.5771 	EXP 	text_metronom_tic: autoDraw = True
+274.0709 	EXP 	New trial (rep=0, index=199): OrderedDict([('Tick', 201), ('Color', 'yellow')])
+274.0775 	EXP 	text_metronom_tic: autoDraw = False
+274.0775 	EXP 	metronome: fillColor = 'yellow (named)'
+274.0775 	EXP 	metronome: autoDraw = True
+274.5781 	EXP 	metronome: autoDraw = False
+274.5781 	EXP 	text_metronom_tic: autoDraw = True
+275.0722 	EXP 	New trial (rep=0, index=200): OrderedDict([('Tick', 202), ('Color', 'yellow')])
+275.0788 	EXP 	text_metronom_tic: autoDraw = False
+275.0788 	EXP 	metronome: fillColor = 'yellow (named)'
+275.0788 	EXP 	metronome: autoDraw = True
+275.5795 	EXP 	metronome: autoDraw = False
+275.5795 	EXP 	text_metronom_tic: autoDraw = True
+276.0736 	EXP 	New trial (rep=0, index=201): OrderedDict([('Tick', 203), ('Color', 'yellow')])
+276.0798 	EXP 	text_metronom_tic: autoDraw = False
+276.0798 	EXP 	metronome: fillColor = 'yellow (named)'
+276.0798 	EXP 	metronome: autoDraw = True
+276.5805 	EXP 	metronome: autoDraw = False
+276.5805 	EXP 	text_metronom_tic: autoDraw = True
+277.0745 	EXP 	New trial (rep=0, index=202): OrderedDict([('Tick', 204), ('Color', 'yellow')])
+277.0810 	EXP 	text_metronom_tic: autoDraw = False
+277.0810 	EXP 	metronome: fillColor = 'yellow (named)'
+277.0810 	EXP 	metronome: autoDraw = True
+277.5824 	EXP 	metronome: autoDraw = False
+277.5824 	EXP 	text_metronom_tic: autoDraw = True
+278.0762 	EXP 	New trial (rep=0, index=203): OrderedDict([('Tick', 205), ('Color', 'yellow')])
+278.0830 	EXP 	text_metronom_tic: autoDraw = False
+278.0830 	EXP 	metronome: fillColor = 'yellow (named)'
+278.0830 	EXP 	metronome: autoDraw = True
+278.5833 	EXP 	metronome: autoDraw = False
+278.5833 	EXP 	text_metronom_tic: autoDraw = True
+279.0705 	EXP 	New trial (rep=0, index=204): OrderedDict([('Tick', 206), ('Color', 'yellow')])
+279.0771 	EXP 	text_metronom_tic: autoDraw = False
+279.0771 	EXP 	metronome: fillColor = 'yellow (named)'
+279.0771 	EXP 	metronome: autoDraw = True
+279.5777 	EXP 	metronome: autoDraw = False
+279.5777 	EXP 	text_metronom_tic: autoDraw = True
+280.0717 	EXP 	New trial (rep=0, index=205): OrderedDict([('Tick', 207), ('Color', 'yellow')])
+280.0783 	EXP 	text_metronom_tic: autoDraw = False
+280.0783 	EXP 	metronome: fillColor = 'yellow (named)'
+280.0783 	EXP 	metronome: autoDraw = True
+280.5757 	EXP 	metronome: autoDraw = False
+280.5757 	EXP 	metronome: autoDraw = False
+280.5757 	EXP 	text_metronom_tic: autoDraw = True
+281.0711 	EXP 	New trial (rep=0, index=206): OrderedDict([('Tick', 208), ('Color', 'yellow')])
+281.0762 	EXP 	text_metronom_tic: autoDraw = False
+281.0762 	EXP 	text_metronom_tic: autoDraw = False
+281.0762 	EXP 	metronome: fillColor = 'yellow (named)'
+281.0762 	EXP 	metronome: autoDraw = True
+281.5734 	EXP 	metronome: autoDraw = False
+281.5734 	EXP 	metronome: autoDraw = False
+281.5734 	EXP 	text_metronom_tic: autoDraw = True
+282.0691 	EXP 	New trial (rep=0, index=207): OrderedDict([('Tick', 209), ('Color', 'yellow')])
+282.0739 	EXP 	text_metronom_tic: autoDraw = False
+282.0739 	EXP 	text_metronom_tic: autoDraw = False
+282.0739 	EXP 	metronome: fillColor = 'yellow (named)'
+282.0739 	EXP 	metronome: autoDraw = True
+282.5724 	EXP 	metronome: autoDraw = False
+282.5724 	EXP 	metronome: autoDraw = False
+282.5724 	EXP 	text_metronom_tic: autoDraw = True
+283.0681 	EXP 	New trial (rep=0, index=208): OrderedDict([('Tick', 210), ('Color', 'yellow')])
+283.0726 	EXP 	text_metronom_tic: autoDraw = False
+283.0726 	EXP 	text_metronom_tic: autoDraw = False
+283.0726 	EXP 	metronome: fillColor = 'yellow (named)'
+283.0726 	EXP 	metronome: autoDraw = True
+283.5762 	EXP 	metronome: autoDraw = False
+283.5762 	EXP 	metronome: autoDraw = False
+283.5762 	EXP 	text_metronom_tic: autoDraw = True
+284.0711 	EXP 	New trial (rep=0, index=209): OrderedDict([('Tick', 211), ('Color', 'yellow')])
+284.0765 	EXP 	text_metronom_tic: autoDraw = False
+284.0765 	EXP 	text_metronom_tic: autoDraw = False
+284.0765 	EXP 	metronome: fillColor = 'yellow (named)'
+284.0765 	EXP 	metronome: autoDraw = True
+284.5774 	EXP 	metronome: autoDraw = False
+284.5774 	EXP 	text_metronom_tic: autoDraw = True
+285.0713 	EXP 	New trial (rep=0, index=210): OrderedDict([('Tick', 212), ('Color', 'yellow')])
+285.0778 	EXP 	text_metronom_tic: autoDraw = False
+285.0778 	EXP 	metronome: fillColor = 'yellow (named)'
+285.0778 	EXP 	metronome: autoDraw = True
+285.5755 	EXP 	metronome: autoDraw = False
+285.5755 	EXP 	metronome: autoDraw = False
+285.5755 	EXP 	text_metronom_tic: autoDraw = True
+286.0711 	EXP 	New trial (rep=0, index=211): OrderedDict([('Tick', 213), ('Color', 'yellow')])
+286.0758 	EXP 	text_metronom_tic: autoDraw = False
+286.0758 	EXP 	text_metronom_tic: autoDraw = False
+286.0758 	EXP 	metronome: fillColor = 'yellow (named)'
+286.0758 	EXP 	metronome: autoDraw = True
+286.5767 	EXP 	metronome: autoDraw = False
+286.5767 	EXP 	metronome: autoDraw = False
+286.5767 	EXP 	text_metronom_tic: autoDraw = True
+287.0705 	EXP 	New trial (rep=0, index=212): OrderedDict([('Tick', 214), ('Color', 'yellow')])
+287.0771 	EXP 	text_metronom_tic: autoDraw = False
+287.0771 	EXP 	metronome: fillColor = 'yellow (named)'
+287.0771 	EXP 	metronome: autoDraw = True
+287.5781 	EXP 	metronome: autoDraw = False
+287.5781 	EXP 	text_metronom_tic: autoDraw = True
+288.0717 	EXP 	New trial (rep=0, index=213): OrderedDict([('Tick', 215), ('Color', 'yellow')])
+288.0782 	EXP 	text_metronom_tic: autoDraw = False
+288.0782 	EXP 	metronome: fillColor = 'yellow (named)'
+288.0782 	EXP 	metronome: autoDraw = True
+288.5787 	EXP 	metronome: autoDraw = False
+288.5787 	EXP 	text_metronom_tic: autoDraw = True
+289.0725 	EXP 	New trial (rep=0, index=214): OrderedDict([('Tick', 216), ('Color', 'yellow')])
+289.0791 	EXP 	text_metronom_tic: autoDraw = False
+289.0791 	EXP 	metronome: fillColor = 'yellow (named)'
+289.0791 	EXP 	metronome: autoDraw = True
+289.5796 	EXP 	metronome: autoDraw = False
+289.5796 	EXP 	text_metronom_tic: autoDraw = True
+290.0738 	EXP 	New trial (rep=0, index=215): OrderedDict([('Tick', 217), ('Color', 'yellow')])
+290.0800 	EXP 	text_metronom_tic: autoDraw = False
+290.0800 	EXP 	metronome: fillColor = 'yellow (named)'
+290.0800 	EXP 	metronome: autoDraw = True
+290.5809 	EXP 	metronome: autoDraw = False
+290.5809 	EXP 	text_metronom_tic: autoDraw = True
+291.0750 	EXP 	New trial (rep=0, index=216): OrderedDict([('Tick', 218), ('Color', 'yellow')])
+291.0815 	EXP 	text_metronom_tic: autoDraw = False
+291.0815 	EXP 	metronome: fillColor = 'yellow (named)'
+291.0815 	EXP 	metronome: autoDraw = True
+291.5831 	EXP 	metronome: autoDraw = False
+291.5831 	EXP 	text_metronom_tic: autoDraw = True
+292.0702 	EXP 	New trial (rep=0, index=217): OrderedDict([('Tick', 219), ('Color', 'yellow')])
+292.0767 	EXP 	text_metronom_tic: autoDraw = False
+292.0767 	EXP 	metronome: fillColor = 'yellow (named)'
+292.0767 	EXP 	metronome: autoDraw = True
+292.5720 	EXP 	metronome: autoDraw = False
+292.5720 	EXP 	metronome: autoDraw = False
+292.5720 	EXP 	text_metronom_tic: autoDraw = True
+293.0671 	EXP 	New trial (rep=0, index=218): OrderedDict([('Tick', 220), ('Color', 'yellow')])
+293.0722 	EXP 	text_metronom_tic: autoDraw = False
+293.0722 	EXP 	text_metronom_tic: autoDraw = False
+293.0722 	EXP 	metronome: fillColor = 'yellow (named)'
+293.0722 	EXP 	metronome: autoDraw = True
+293.5709 	EXP 	metronome: autoDraw = False
+293.5709 	EXP 	metronome: autoDraw = False
+293.5709 	EXP 	text_metronom_tic: autoDraw = True
+294.0661 	EXP 	New trial (rep=0, index=219): OrderedDict([('Tick', 221), ('Color', 'yellow')])
+294.0715 	EXP 	text_metronom_tic: autoDraw = False
+294.0715 	EXP 	text_metronom_tic: autoDraw = False
+294.0715 	EXP 	metronome: fillColor = 'yellow (named)'
+294.0715 	EXP 	metronome: autoDraw = True
+294.5699 	EXP 	metronome: autoDraw = False
+294.5699 	EXP 	metronome: autoDraw = False
+294.5699 	EXP 	text_metronom_tic: autoDraw = True
+295.0651 	EXP 	New trial (rep=0, index=220): OrderedDict([('Tick', 222), ('Color', 'yellow')])
+295.0702 	EXP 	text_metronom_tic: autoDraw = False
+295.0702 	EXP 	text_metronom_tic: autoDraw = False
+295.0702 	EXP 	metronome: fillColor = 'yellow (named)'
+295.0702 	EXP 	metronome: autoDraw = True
+295.5730 	EXP 	metronome: autoDraw = False
+295.5730 	EXP 	metronome: autoDraw = False
+295.5730 	EXP 	text_metronom_tic: autoDraw = True
+296.0691 	EXP 	New trial (rep=0, index=221): OrderedDict([('Tick', 223), ('Color', 'yellow')])
+296.0737 	EXP 	text_metronom_tic: autoDraw = False
+296.0737 	EXP 	text_metronom_tic: autoDraw = False
+296.0737 	EXP 	metronome: fillColor = 'yellow (named)'
+296.0737 	EXP 	metronome: autoDraw = True
+296.5750 	EXP 	metronome: autoDraw = False
+296.5750 	EXP 	metronome: autoDraw = False
+296.5750 	EXP 	text_metronom_tic: autoDraw = True
+297.0711 	EXP 	New trial (rep=0, index=222): OrderedDict([('Tick', 224), ('Color', 'yellow')])
+297.0756 	EXP 	text_metronom_tic: autoDraw = False
+297.0756 	EXP 	text_metronom_tic: autoDraw = False
+297.0756 	EXP 	metronome: fillColor = 'yellow (named)'
+297.0756 	EXP 	metronome: autoDraw = True
+297.5763 	EXP 	metronome: autoDraw = False
+297.5763 	EXP 	metronome: autoDraw = False
+297.5763 	EXP 	text_metronom_tic: autoDraw = True
+298.0721 	EXP 	New trial (rep=0, index=223): OrderedDict([('Tick', 225), ('Color', 'yellow')])
+298.0766 	EXP 	text_metronom_tic: autoDraw = False
+298.0766 	EXP 	text_metronom_tic: autoDraw = False
+298.0766 	EXP 	metronome: fillColor = 'yellow (named)'
+298.0766 	EXP 	metronome: autoDraw = True
+298.5770 	EXP 	metronome: autoDraw = False
+298.5770 	EXP 	text_metronom_tic: autoDraw = True
+299.0708 	EXP 	New trial (rep=0, index=224): OrderedDict([('Tick', 226), ('Color', 'yellow')])
+299.0773 	EXP 	text_metronom_tic: autoDraw = False
+299.0773 	EXP 	metronome: fillColor = 'yellow (named)'
+299.0773 	EXP 	metronome: autoDraw = True
+299.5782 	EXP 	metronome: autoDraw = False
+299.5782 	EXP 	text_metronom_tic: autoDraw = True
+300.0720 	EXP 	New trial (rep=0, index=225): OrderedDict([('Tick', 227), ('Color', 'yellow')])
+300.0786 	EXP 	text_metronom_tic: autoDraw = False
+300.0786 	EXP 	metronome: fillColor = 'yellow (named)'
+300.0786 	EXP 	metronome: autoDraw = True
+300.5798 	EXP 	metronome: autoDraw = False
+300.5798 	EXP 	text_metronom_tic: autoDraw = True
+301.0740 	EXP 	New trial (rep=0, index=226): OrderedDict([('Tick', 228), ('Color', 'yellow')])
+301.0802 	EXP 	text_metronom_tic: autoDraw = False
+301.0802 	EXP 	metronome: fillColor = 'yellow (named)'
+301.0802 	EXP 	metronome: autoDraw = True
+301.5784 	EXP 	metronome: autoDraw = False
+301.5784 	EXP 	text_metronom_tic: autoDraw = True
+302.0724 	EXP 	New trial (rep=0, index=227): OrderedDict([('Tick', 229), ('Color', 'yellow')])
+302.0790 	EXP 	text_metronom_tic: autoDraw = False
+302.0790 	EXP 	metronome: fillColor = 'yellow (named)'
+302.0790 	EXP 	metronome: autoDraw = True
+302.5769 	EXP 	metronome: autoDraw = False
+302.5769 	EXP 	text_metronom_tic: autoDraw = True
+303.0705 	EXP 	New trial (rep=0, index=228): OrderedDict([('Tick', 230), ('Color', 'yellow')])
+303.0771 	EXP 	text_metronom_tic: autoDraw = False
+303.0771 	EXP 	metronome: fillColor = 'yellow (named)'
+303.0771 	EXP 	metronome: autoDraw = True
+303.5777 	EXP 	metronome: autoDraw = False
+303.5777 	EXP 	text_metronom_tic: autoDraw = True
+304.0717 	EXP 	New trial (rep=0, index=229): OrderedDict([('Tick', 231), ('Color', 'yellow')])
+304.0782 	EXP 	text_metronom_tic: autoDraw = False
+304.0782 	EXP 	metronome: fillColor = 'yellow (named)'
+304.0782 	EXP 	metronome: autoDraw = True
+304.5793 	EXP 	metronome: autoDraw = False
+304.5793 	EXP 	text_metronom_tic: autoDraw = True
+305.0731 	EXP 	New trial (rep=0, index=230): OrderedDict([('Tick', 232), ('Color', 'yellow')])
+305.0796 	EXP 	text_metronom_tic: autoDraw = False
+305.0796 	EXP 	metronome: fillColor = 'yellow (named)'
+305.0796 	EXP 	metronome: autoDraw = True
+305.5815 	EXP 	metronome: autoDraw = False
+305.5815 	EXP 	text_metronom_tic: autoDraw = True
+306.0756 	EXP 	New trial (rep=0, index=231): OrderedDict([('Tick', 233), ('Color', 'yellow')])
+306.0820 	EXP 	text_metronom_tic: autoDraw = False
+306.0820 	EXP 	metronome: fillColor = 'yellow (named)'
+306.0820 	EXP 	metronome: autoDraw = True
+306.5807 	EXP 	metronome: autoDraw = False
+306.5807 	EXP 	text_metronom_tic: autoDraw = True
+307.0745 	EXP 	New trial (rep=0, index=232): OrderedDict([('Tick', 234), ('Color', 'yellow')])
+307.0811 	EXP 	text_metronom_tic: autoDraw = False
+307.0811 	EXP 	metronome: fillColor = 'yellow (named)'
+307.0811 	EXP 	metronome: autoDraw = True
+307.5816 	EXP 	metronome: autoDraw = False
+307.5816 	EXP 	text_metronom_tic: autoDraw = True
+308.0754 	EXP 	New trial (rep=0, index=233): OrderedDict([('Tick', 235), ('Color', 'yellow')])
+308.0818 	EXP 	text_metronom_tic: autoDraw = False
+308.0818 	EXP 	metronome: fillColor = 'yellow (named)'
+308.0818 	EXP 	metronome: autoDraw = True
+308.5772 	EXP 	metronome: autoDraw = False
+308.5772 	EXP 	text_metronom_tic: autoDraw = True
+309.0710 	EXP 	New trial (rep=0, index=234): OrderedDict([('Tick', 236), ('Color', 'yellow')])
+309.0776 	EXP 	text_metronom_tic: autoDraw = False
+309.0776 	EXP 	metronome: fillColor = 'yellow (named)'
+309.0776 	EXP 	metronome: autoDraw = True
+309.5750 	EXP 	metronome: autoDraw = False
+309.5750 	EXP 	metronome: autoDraw = False
+309.5750 	EXP 	text_metronom_tic: autoDraw = True
+310.0701 	EXP 	New trial (rep=0, index=235): OrderedDict([('Tick', 237), ('Color', 'yellow')])
+310.0755 	EXP 	text_metronom_tic: autoDraw = False
+310.0755 	EXP 	text_metronom_tic: autoDraw = False
+310.0755 	EXP 	metronome: fillColor = 'yellow (named)'
+310.0755 	EXP 	metronome: autoDraw = True
+310.5754 	EXP 	metronome: autoDraw = False
+310.5754 	EXP 	metronome: autoDraw = False
+310.5754 	EXP 	text_metronom_tic: autoDraw = True
+311.0711 	EXP 	New trial (rep=0, index=236): OrderedDict([('Tick', 238), ('Color', 'yellow')])
+311.0760 	EXP 	text_metronom_tic: autoDraw = False
+311.0760 	EXP 	text_metronom_tic: autoDraw = False
+311.0760 	EXP 	metronome: fillColor = 'yellow (named)'
+311.0760 	EXP 	metronome: autoDraw = True
+311.5766 	EXP 	metronome: autoDraw = False
+311.5766 	EXP 	metronome: autoDraw = False
+311.5766 	EXP 	text_metronom_tic: autoDraw = True
+312.0705 	EXP 	New trial (rep=0, index=237): OrderedDict([('Tick', 239), ('Color', 'yellow')])
+312.0771 	EXP 	text_metronom_tic: autoDraw = False
+312.0771 	EXP 	metronome: fillColor = 'yellow (named)'
+312.0771 	EXP 	metronome: autoDraw = True
+312.5776 	EXP 	metronome: autoDraw = False
+312.5776 	EXP 	text_metronom_tic: autoDraw = True
+313.0712 	EXP 	New trial (rep=0, index=238): OrderedDict([('Tick', 240), ('Color', 'red')])
+313.0777 	EXP 	text_metronom_tic: autoDraw = False
+313.0777 	EXP 	metronome: fillColor = 'red (named)'
+313.0777 	EXP 	metronome: autoDraw = True
+313.5780 	EXP 	metronome: autoDraw = False
+313.5780 	EXP 	text_metronom_tic: autoDraw = True
+314.0717 	EXP 	New trial (rep=0, index=239): OrderedDict([('Tick', 241), ('Color', 'red')])
+314.0782 	EXP 	text_metronom_tic: autoDraw = False
+314.0782 	EXP 	metronome: fillColor = 'red (named)'
+314.0782 	EXP 	metronome: autoDraw = True
+314.5789 	EXP 	metronome: autoDraw = False
+314.5789 	EXP 	text_metronom_tic: autoDraw = True
+315.0726 	EXP 	New trial (rep=0, index=240): OrderedDict([('Tick', 242), ('Color', 'red')])
+315.0792 	EXP 	text_metronom_tic: autoDraw = False
+315.0792 	EXP 	metronome: fillColor = 'red (named)'
+315.0792 	EXP 	metronome: autoDraw = True
+315.5799 	EXP 	metronome: autoDraw = False
+315.5799 	EXP 	text_metronom_tic: autoDraw = True
+316.0738 	EXP 	New trial (rep=0, index=241): OrderedDict([('Tick', 243), ('Color', 'red')])
+316.0803 	EXP 	text_metronom_tic: autoDraw = False
+316.0803 	EXP 	metronome: fillColor = 'red (named)'
+316.0803 	EXP 	metronome: autoDraw = True
+316.5821 	EXP 	metronome: autoDraw = False
+316.5821 	EXP 	text_metronom_tic: autoDraw = True
+317.0760 	EXP 	New trial (rep=0, index=242): OrderedDict([('Tick', 244), ('Color', 'red')])
+317.0825 	EXP 	text_metronom_tic: autoDraw = False
+317.0825 	EXP 	metronome: fillColor = 'red (named)'
+317.0825 	EXP 	metronome: autoDraw = True
+317.5835 	EXP 	metronome: autoDraw = False
+317.5835 	EXP 	text_metronom_tic: autoDraw = True
+318.0704 	EXP 	New trial (rep=0, index=243): OrderedDict([('Tick', 245), ('Color', 'red')])
+318.0769 	EXP 	text_metronom_tic: autoDraw = False
+318.0769 	EXP 	metronome: fillColor = 'red (named)'
+318.0769 	EXP 	metronome: autoDraw = True
+318.5778 	EXP 	metronome: autoDraw = False
+318.5778 	EXP 	text_metronom_tic: autoDraw = True
+319.0717 	EXP 	New trial (rep=0, index=244): OrderedDict([('Tick', 246), ('Color', 'red')])
+319.0782 	EXP 	text_metronom_tic: autoDraw = False
+319.0782 	EXP 	metronome: fillColor = 'red (named)'
+319.0782 	EXP 	metronome: autoDraw = True
+319.5795 	EXP 	metronome: autoDraw = False
+319.5795 	EXP 	text_metronom_tic: autoDraw = True
+320.0734 	EXP 	New trial (rep=0, index=245): OrderedDict([('Tick', 247), ('Color', 'red')])
+320.0799 	EXP 	text_metronom_tic: autoDraw = False
+320.0799 	EXP 	metronome: fillColor = 'red (named)'
+320.0799 	EXP 	metronome: autoDraw = True
+320.5782 	EXP 	metronome: autoDraw = False
+320.5782 	EXP 	text_metronom_tic: autoDraw = True
+321.0720 	EXP 	New trial (rep=0, index=246): OrderedDict([('Tick', 248), ('Color', 'red')])
+321.0785 	EXP 	text_metronom_tic: autoDraw = False
+321.0785 	EXP 	metronome: fillColor = 'red (named)'
+321.0785 	EXP 	metronome: autoDraw = True
+321.5757 	EXP 	metronome: autoDraw = False
+321.5757 	EXP 	metronome: autoDraw = False
+321.5757 	EXP 	text_metronom_tic: autoDraw = True
+322.0711 	EXP 	New trial (rep=0, index=247): OrderedDict([('Tick', 249), ('Color', 'red')])
+322.0764 	EXP 	text_metronom_tic: autoDraw = False
+322.0764 	EXP 	text_metronom_tic: autoDraw = False
+322.0764 	EXP 	metronome: fillColor = 'red (named)'
+322.0764 	EXP 	metronome: autoDraw = True
+322.5734 	EXP 	metronome: autoDraw = False
+322.5734 	EXP 	metronome: autoDraw = False
+322.5734 	EXP 	text_metronom_tic: autoDraw = True
+323.0691 	EXP 	New trial (rep=0, index=248): OrderedDict([('Tick', 250), ('Color', 'red')])
+323.0736 	EXP 	text_metronom_tic: autoDraw = False
+323.0736 	EXP 	text_metronom_tic: autoDraw = False
+323.0736 	EXP 	metronome: fillColor = 'red (named)'
+323.0736 	EXP 	metronome: autoDraw = True
+323.5744 	EXP 	metronome: autoDraw = False
+323.5744 	EXP 	metronome: autoDraw = False
+323.5744 	EXP 	text_metronom_tic: autoDraw = True
+324.0701 	EXP 	New trial (rep=0, index=249): OrderedDict([('Tick', 251), ('Color', 'red')])
+324.0749 	EXP 	text_metronom_tic: autoDraw = False
+324.0749 	EXP 	text_metronom_tic: autoDraw = False
+324.0749 	EXP 	metronome: fillColor = 'red (named)'
+324.0749 	EXP 	metronome: autoDraw = True
+324.5757 	EXP 	metronome: autoDraw = False
+324.5757 	EXP 	metronome: autoDraw = False
+324.5757 	EXP 	text_metronom_tic: autoDraw = True
+325.0711 	EXP 	New trial (rep=0, index=250): OrderedDict([('Tick', 252), ('Color', 'red')])
+325.0762 	EXP 	text_metronom_tic: autoDraw = False
+325.0762 	EXP 	text_metronom_tic: autoDraw = False
+325.0762 	EXP 	metronome: fillColor = 'red (named)'
+325.0762 	EXP 	metronome: autoDraw = True
+325.5767 	EXP 	metronome: autoDraw = False
+325.5767 	EXP 	text_metronom_tic: autoDraw = True
+326.0707 	EXP 	New trial (rep=0, index=251): OrderedDict([('Tick', 253), ('Color', 'red')])
+326.0772 	EXP 	text_metronom_tic: autoDraw = False
+326.0772 	EXP 	metronome: fillColor = 'red (named)'
+326.0772 	EXP 	metronome: autoDraw = True
+326.5782 	EXP 	metronome: autoDraw = False
+326.5782 	EXP 	text_metronom_tic: autoDraw = True
+327.0720 	EXP 	New trial (rep=0, index=252): OrderedDict([('Tick', 254), ('Color', 'red')])
+327.0785 	EXP 	text_metronom_tic: autoDraw = False
+327.0785 	EXP 	metronome: fillColor = 'red (named)'
+327.0785 	EXP 	metronome: autoDraw = True
+327.5790 	EXP 	metronome: autoDraw = False
+327.5790 	EXP 	text_metronom_tic: autoDraw = True
+328.0728 	EXP 	New trial (rep=0, index=253): OrderedDict([('Tick', 255), ('Color', 'red')])
+328.0793 	EXP 	text_metronom_tic: autoDraw = False
+328.0793 	EXP 	metronome: fillColor = 'red (named)'
+328.0793 	EXP 	metronome: autoDraw = True
+328.5797 	EXP 	metronome: autoDraw = False
+328.5797 	EXP 	text_metronom_tic: autoDraw = True
+329.0736 	EXP 	New trial (rep=0, index=254): OrderedDict([('Tick', 256), ('Color', 'red')])
+329.0801 	EXP 	text_metronom_tic: autoDraw = False
+329.0801 	EXP 	metronome: fillColor = 'red (named)'
+329.0801 	EXP 	metronome: autoDraw = True
+329.5805 	EXP 	metronome: autoDraw = False
+329.5805 	EXP 	text_metronom_tic: autoDraw = True
+330.0745 	EXP 	New trial (rep=0, index=255): OrderedDict([('Tick', 257), ('Color', 'red')])
+330.0811 	EXP 	text_metronom_tic: autoDraw = False
+330.0811 	EXP 	metronome: fillColor = 'red (named)'
+330.0811 	EXP 	metronome: autoDraw = True
+330.5817 	EXP 	metronome: autoDraw = False
+330.5817 	EXP 	text_metronom_tic: autoDraw = True
+331.0756 	EXP 	New trial (rep=0, index=256): OrderedDict([('Tick', 258), ('Color', 'red')])
+331.0820 	EXP 	text_metronom_tic: autoDraw = False
+331.0820 	EXP 	metronome: fillColor = 'red (named)'
+331.0820 	EXP 	metronome: autoDraw = True
+331.5774 	EXP 	metronome: autoDraw = False
+331.5774 	EXP 	text_metronom_tic: autoDraw = True
+332.0714 	EXP 	New trial (rep=0, index=257): OrderedDict([('Tick', 259), ('Color', 'red')])
+332.0779 	EXP 	text_metronom_tic: autoDraw = False
+332.0779 	EXP 	metronome: fillColor = 'red (named)'
+332.0779 	EXP 	metronome: autoDraw = True
+332.5792 	EXP 	metronome: autoDraw = False
+332.5792 	EXP 	text_metronom_tic: autoDraw = True
+333.0728 	EXP 	New trial (rep=0, index=258): OrderedDict([('Tick', 260), ('Color', 'red')])
+333.0793 	EXP 	text_metronom_tic: autoDraw = False
+333.0793 	EXP 	metronome: fillColor = 'red (named)'
+333.0793 	EXP 	metronome: autoDraw = True
+333.5779 	EXP 	metronome: autoDraw = False
+333.5779 	EXP 	text_metronom_tic: autoDraw = True
+334.0718 	EXP 	New trial (rep=0, index=259): OrderedDict([('Tick', 261), ('Color', 'red')])
+334.0783 	EXP 	text_metronom_tic: autoDraw = False
+334.0783 	EXP 	metronome: fillColor = 'red (named)'
+334.0783 	EXP 	metronome: autoDraw = True
+334.5754 	EXP 	metronome: autoDraw = False
+334.5754 	EXP 	metronome: autoDraw = False
+334.5754 	EXP 	text_metronom_tic: autoDraw = True
+335.0711 	EXP 	New trial (rep=0, index=260): OrderedDict([('Tick', 262), ('Color', 'red')])
+335.0757 	EXP 	text_metronom_tic: autoDraw = False
+335.0757 	EXP 	text_metronom_tic: autoDraw = False
+335.0757 	EXP 	metronome: fillColor = 'red (named)'
+335.0757 	EXP 	metronome: autoDraw = True
+335.5746 	EXP 	metronome: autoDraw = False
+335.5746 	EXP 	metronome: autoDraw = False
+335.5746 	EXP 	text_metronom_tic: autoDraw = True
+336.0701 	EXP 	New trial (rep=0, index=261): OrderedDict([('Tick', 263), ('Color', 'red')])
+336.0751 	EXP 	text_metronom_tic: autoDraw = False
+336.0751 	EXP 	text_metronom_tic: autoDraw = False
+336.0751 	EXP 	metronome: fillColor = 'red (named)'
+336.0751 	EXP 	metronome: autoDraw = True
+336.5758 	EXP 	metronome: autoDraw = False
+336.5758 	EXP 	metronome: autoDraw = False
+336.5758 	EXP 	text_metronom_tic: autoDraw = True
+337.0711 	EXP 	New trial (rep=0, index=262): OrderedDict([('Tick', 264), ('Color', 'red')])
+337.0763 	EXP 	text_metronom_tic: autoDraw = False
+337.0763 	EXP 	text_metronom_tic: autoDraw = False
+337.0763 	EXP 	metronome: fillColor = 'red (named)'
+337.0763 	EXP 	metronome: autoDraw = True
+337.5778 	EXP 	metronome: autoDraw = False
+337.5778 	EXP 	text_metronom_tic: autoDraw = True
+338.0715 	EXP 	New trial (rep=0, index=263): OrderedDict([('Tick', 265), ('Color', 'red')])
+338.0782 	EXP 	text_metronom_tic: autoDraw = False
+338.0782 	EXP 	metronome: fillColor = 'red (named)'
+338.0782 	EXP 	metronome: autoDraw = True
+338.5788 	EXP 	metronome: autoDraw = False
+338.5788 	EXP 	text_metronom_tic: autoDraw = True
+339.0726 	EXP 	New trial (rep=0, index=264): OrderedDict([('Tick', 266), ('Color', 'red')])
+339.0792 	EXP 	text_metronom_tic: autoDraw = False
+339.0792 	EXP 	metronome: fillColor = 'red (named)'
+339.0792 	EXP 	metronome: autoDraw = True
+339.5796 	EXP 	metronome: autoDraw = False
+339.5796 	EXP 	text_metronom_tic: autoDraw = True
+340.0733 	EXP 	New trial (rep=0, index=265): OrderedDict([('Tick', 267), ('Color', 'red')])
+340.0798 	EXP 	text_metronom_tic: autoDraw = False
+340.0798 	EXP 	metronome: fillColor = 'red (named)'
+340.0798 	EXP 	metronome: autoDraw = True
+340.5813 	EXP 	metronome: autoDraw = False
+340.5813 	EXP 	text_metronom_tic: autoDraw = True
+341.0751 	EXP 	New trial (rep=0, index=266): OrderedDict([('Tick', 268), ('Color', 'red')])
+341.0816 	EXP 	text_metronom_tic: autoDraw = False
+341.0816 	EXP 	metronome: fillColor = 'red (named)'
+341.0816 	EXP 	metronome: autoDraw = True
+341.5823 	EXP 	metronome: autoDraw = False
+341.5823 	EXP 	text_metronom_tic: autoDraw = True
+342.0763 	EXP 	New trial (rep=0, index=267): OrderedDict([('Tick', 269), ('Color', 'red')])
+342.0830 	EXP 	text_metronom_tic: autoDraw = False
+342.0830 	EXP 	metronome: fillColor = 'red (named)'
+342.0830 	EXP 	metronome: autoDraw = True
+342.5770 	EXP 	metronome: autoDraw = False
+342.5770 	EXP 	text_metronom_tic: autoDraw = True
+343.0706 	EXP 	New trial (rep=0, index=268): OrderedDict([('Tick', 270), ('Color', 'red')])
+343.0771 	EXP 	text_metronom_tic: autoDraw = False
+343.0771 	EXP 	metronome: fillColor = 'red (named)'
+343.0771 	EXP 	metronome: autoDraw = True
+343.5777 	EXP 	metronome: autoDraw = False
+343.5777 	EXP 	text_metronom_tic: autoDraw = True
+344.0716 	EXP 	New trial (rep=0, index=269): OrderedDict([('Tick', 271), ('Color', 'red')])
+344.0781 	EXP 	text_metronom_tic: autoDraw = False
+344.0781 	EXP 	metronome: fillColor = 'red (named)'
+344.0781 	EXP 	metronome: autoDraw = True
+344.5791 	EXP 	metronome: autoDraw = False
+344.5791 	EXP 	text_metronom_tic: autoDraw = True
+345.0729 	EXP 	New trial (rep=0, index=270): OrderedDict([('Tick', 272), ('Color', 'red')])
+345.0794 	EXP 	text_metronom_tic: autoDraw = False
+345.0794 	EXP 	metronome: fillColor = 'red (named)'
+345.0794 	EXP 	metronome: autoDraw = True
+345.5784 	EXP 	metronome: autoDraw = False
+345.5784 	EXP 	text_metronom_tic: autoDraw = True
+346.0723 	EXP 	New trial (rep=0, index=271): OrderedDict([('Tick', 273), ('Color', 'red')])
+346.0788 	EXP 	text_metronom_tic: autoDraw = False
+346.0788 	EXP 	metronome: fillColor = 'red (named)'
+346.0788 	EXP 	metronome: autoDraw = True
+346.5762 	EXP 	metronome: autoDraw = False
+346.5762 	EXP 	metronome: autoDraw = False
+346.5762 	EXP 	text_metronom_tic: autoDraw = True
+347.0721 	EXP 	New trial (rep=0, index=272): OrderedDict([('Tick', 274), ('Color', 'red')])
+347.0766 	EXP 	text_metronom_tic: autoDraw = False
+347.0766 	EXP 	text_metronom_tic: autoDraw = False
+347.0766 	EXP 	metronome: fillColor = 'red (named)'
+347.0766 	EXP 	metronome: autoDraw = True
+347.5774 	EXP 	metronome: autoDraw = False
+347.5774 	EXP 	text_metronom_tic: autoDraw = True
+348.0711 	EXP 	New trial (rep=0, index=273): OrderedDict([('Tick', 275), ('Color', 'red')])
+348.0776 	EXP 	text_metronom_tic: autoDraw = False
+348.0776 	EXP 	metronome: fillColor = 'red (named)'
+348.0776 	EXP 	metronome: autoDraw = True
+348.5784 	EXP 	metronome: autoDraw = False
+348.5784 	EXP 	text_metronom_tic: autoDraw = True
+349.0722 	EXP 	New trial (rep=0, index=274): OrderedDict([('Tick', 276), ('Color', 'red')])
+349.0788 	EXP 	text_metronom_tic: autoDraw = False
+349.0788 	EXP 	metronome: fillColor = 'red (named)'
+349.0788 	EXP 	metronome: autoDraw = True
+349.5797 	EXP 	metronome: autoDraw = False
+349.5797 	EXP 	text_metronom_tic: autoDraw = True
+350.0737 	EXP 	New trial (rep=0, index=275): OrderedDict([('Tick', 277), ('Color', 'red')])
+350.0800 	EXP 	text_metronom_tic: autoDraw = False
+350.0800 	EXP 	metronome: fillColor = 'red (named)'
+350.0800 	EXP 	metronome: autoDraw = True
+350.5808 	EXP 	metronome: autoDraw = False
+350.5808 	EXP 	text_metronom_tic: autoDraw = True
+351.0748 	EXP 	New trial (rep=0, index=276): OrderedDict([('Tick', 278), ('Color', 'red')])
+351.0815 	EXP 	text_metronom_tic: autoDraw = False
+351.0815 	EXP 	metronome: fillColor = 'red (named)'
+351.0815 	EXP 	metronome: autoDraw = True
+351.5765 	EXP 	metronome: autoDraw = False
+351.5765 	EXP 	metronome: autoDraw = False
+351.5765 	EXP 	text_metronom_tic: autoDraw = True
+352.0704 	EXP 	New trial (rep=0, index=277): OrderedDict([('Tick', 279), ('Color', 'red')])
+352.0770 	EXP 	text_metronom_tic: autoDraw = False
+352.0770 	EXP 	metronome: fillColor = 'red (named)'
+352.0770 	EXP 	metronome: autoDraw = True
+352.5780 	EXP 	metronome: autoDraw = False
+352.5780 	EXP 	text_metronom_tic: autoDraw = True
+353.0716 	EXP 	New trial (rep=0, index=278): OrderedDict([('Tick', 280), ('Color', 'red')])
+353.0782 	EXP 	text_metronom_tic: autoDraw = False
+353.0782 	EXP 	metronome: fillColor = 'red (named)'
+353.0782 	EXP 	metronome: autoDraw = True
+353.5754 	EXP 	metronome: autoDraw = False
+353.5754 	EXP 	metronome: autoDraw = False
+353.5754 	EXP 	text_metronom_tic: autoDraw = True
+354.0711 	EXP 	New trial (rep=0, index=279): OrderedDict([('Tick', 281), ('Color', 'red')])
+354.0758 	EXP 	text_metronom_tic: autoDraw = False
+354.0758 	EXP 	text_metronom_tic: autoDraw = False
+354.0758 	EXP 	metronome: fillColor = 'red (named)'
+354.0758 	EXP 	metronome: autoDraw = True
+354.5741 	EXP 	metronome: autoDraw = False
+354.5741 	EXP 	metronome: autoDraw = False
+354.5741 	EXP 	text_metronom_tic: autoDraw = True
+355.0691 	EXP 	New trial (rep=0, index=280): OrderedDict([('Tick', 282), ('Color', 'red')])
+355.0746 	EXP 	text_metronom_tic: autoDraw = False
+355.0746 	EXP 	text_metronom_tic: autoDraw = False
+355.0746 	EXP 	metronome: fillColor = 'red (named)'
+355.0746 	EXP 	metronome: autoDraw = True
+355.5733 	EXP 	metronome: autoDraw = False
+355.5733 	EXP 	metronome: autoDraw = False
+355.5733 	EXP 	text_metronom_tic: autoDraw = True
+356.0691 	EXP 	New trial (rep=0, index=281): OrderedDict([('Tick', 283), ('Color', 'red')])
+356.0737 	EXP 	text_metronom_tic: autoDraw = False
+356.0737 	EXP 	text_metronom_tic: autoDraw = False
+356.0737 	EXP 	metronome: fillColor = 'red (named)'
+356.0737 	EXP 	metronome: autoDraw = True
+356.5769 	EXP 	metronome: autoDraw = False
+356.5769 	EXP 	text_metronom_tic: autoDraw = True
+357.0708 	EXP 	New trial (rep=0, index=282): OrderedDict([('Tick', 284), ('Color', 'red')])
+357.0773 	EXP 	text_metronom_tic: autoDraw = False
+357.0773 	EXP 	metronome: fillColor = 'red (named)'
+357.0773 	EXP 	metronome: autoDraw = True
+357.5792 	EXP 	metronome: autoDraw = False
+357.5792 	EXP 	text_metronom_tic: autoDraw = True
+358.0728 	EXP 	New trial (rep=0, index=283): OrderedDict([('Tick', 285), ('Color', 'red')])
+358.0793 	EXP 	text_metronom_tic: autoDraw = False
+358.0793 	EXP 	metronome: fillColor = 'red (named)'
+358.0793 	EXP 	metronome: autoDraw = True
+358.5805 	EXP 	metronome: autoDraw = False
+358.5805 	EXP 	text_metronom_tic: autoDraw = True
+359.0743 	EXP 	New trial (rep=0, index=284): OrderedDict([('Tick', 286), ('Color', 'red')])
+359.0808 	EXP 	text_metronom_tic: autoDraw = False
+359.0808 	EXP 	metronome: fillColor = 'red (named)'
+359.0808 	EXP 	metronome: autoDraw = True
+359.5796 	EXP 	metronome: autoDraw = False
+359.5796 	EXP 	text_metronom_tic: autoDraw = True
+360.0735 	EXP 	New trial (rep=0, index=285): OrderedDict([('Tick', 287), ('Color', 'red')])
+360.0800 	EXP 	text_metronom_tic: autoDraw = False
+360.0800 	EXP 	metronome: fillColor = 'red (named)'
+360.0800 	EXP 	metronome: autoDraw = True
+360.5811 	EXP 	metronome: autoDraw = False
+360.5811 	EXP 	text_metronom_tic: autoDraw = True
+361.0750 	EXP 	New trial (rep=0, index=286): OrderedDict([('Tick', 288), ('Color', 'red')])
+361.0816 	EXP 	text_metronom_tic: autoDraw = False
+361.0816 	EXP 	metronome: fillColor = 'red (named)'
+361.0816 	EXP 	metronome: autoDraw = True
+361.5819 	EXP 	metronome: autoDraw = False
+361.5819 	EXP 	text_metronom_tic: autoDraw = True
+362.0758 	EXP 	New trial (rep=0, index=287): OrderedDict([('Tick', 289), ('Color', 'red')])
+362.0823 	EXP 	text_metronom_tic: autoDraw = False
+362.0823 	EXP 	metronome: fillColor = 'red (named)'
+362.0823 	EXP 	metronome: autoDraw = True
+362.5800 	EXP 	metronome: autoDraw = False
+362.5800 	EXP 	text_metronom_tic: autoDraw = True
+363.0735 	EXP 	New trial (rep=0, index=288): OrderedDict([('Tick', 290), ('Color', 'red')])
+363.0800 	EXP 	text_metronom_tic: autoDraw = False
+363.0800 	EXP 	metronome: fillColor = 'red (named)'
+363.0800 	EXP 	metronome: autoDraw = True
+363.5791 	EXP 	metronome: autoDraw = False
+363.5791 	EXP 	text_metronom_tic: autoDraw = True
+364.0730 	EXP 	New trial (rep=0, index=289): OrderedDict([('Tick', 291), ('Color', 'red')])
+364.0796 	EXP 	text_metronom_tic: autoDraw = False
+364.0796 	EXP 	metronome: fillColor = 'red (named)'
+364.0796 	EXP 	metronome: autoDraw = True
+364.5803 	EXP 	metronome: autoDraw = False
+364.5803 	EXP 	text_metronom_tic: autoDraw = True
+365.0741 	EXP 	New trial (rep=0, index=290): OrderedDict([('Tick', 292), ('Color', 'red')])
+365.0806 	EXP 	text_metronom_tic: autoDraw = False
+365.0806 	EXP 	metronome: fillColor = 'red (named)'
+365.0806 	EXP 	metronome: autoDraw = True
+365.5813 	EXP 	metronome: autoDraw = False
+365.5813 	EXP 	text_metronom_tic: autoDraw = True
+366.0752 	EXP 	New trial (rep=0, index=291): OrderedDict([('Tick', 293), ('Color', 'red')])
+366.0817 	EXP 	text_metronom_tic: autoDraw = False
+366.0817 	EXP 	metronome: fillColor = 'red (named)'
+366.0817 	EXP 	metronome: autoDraw = True
+366.5768 	EXP 	metronome: autoDraw = False
+366.5768 	EXP 	text_metronom_tic: autoDraw = True
+367.0707 	EXP 	New trial (rep=0, index=292): OrderedDict([('Tick', 294), ('Color', 'red')])
+367.0773 	EXP 	text_metronom_tic: autoDraw = False
+367.0773 	EXP 	metronome: fillColor = 'red (named)'
+367.0773 	EXP 	metronome: autoDraw = True
+367.5782 	EXP 	metronome: autoDraw = False
+367.5782 	EXP 	text_metronom_tic: autoDraw = True
+368.0718 	EXP 	New trial (rep=0, index=293): OrderedDict([('Tick', 295), ('Color', 'red')])
+368.0783 	EXP 	text_metronom_tic: autoDraw = False
+368.0783 	EXP 	metronome: fillColor = 'red (named)'
+368.0783 	EXP 	metronome: autoDraw = True
+368.5788 	EXP 	metronome: autoDraw = False
+368.5788 	EXP 	text_metronom_tic: autoDraw = True
+369.0726 	EXP 	New trial (rep=0, index=294): OrderedDict([('Tick', 296), ('Color', 'red')])
+369.0791 	EXP 	text_metronom_tic: autoDraw = False
+369.0791 	EXP 	metronome: fillColor = 'red (named)'
+369.0791 	EXP 	metronome: autoDraw = True
+369.5807 	EXP 	metronome: autoDraw = False
+369.5807 	EXP 	text_metronom_tic: autoDraw = True
+370.0746 	EXP 	New trial (rep=0, index=295): OrderedDict([('Tick', 297), ('Color', 'red')])
+370.0811 	EXP 	text_metronom_tic: autoDraw = False
+370.0811 	EXP 	metronome: fillColor = 'red (named)'
+370.0811 	EXP 	metronome: autoDraw = True
+370.5780 	EXP 	metronome: autoDraw = False
+370.5780 	EXP 	text_metronom_tic: autoDraw = True
+371.0718 	EXP 	New trial (rep=0, index=296): OrderedDict([('Tick', 298), ('Color', 'red')])
+371.0784 	EXP 	text_metronom_tic: autoDraw = False
+371.0784 	EXP 	metronome: fillColor = 'red (named)'
+371.0784 	EXP 	metronome: autoDraw = True
+371.5792 	EXP 	metronome: autoDraw = False
+371.5792 	EXP 	text_metronom_tic: autoDraw = True
+372.0730 	EXP 	New trial (rep=0, index=297): OrderedDict([('Tick', 299), ('Color', 'red')])
+372.0795 	EXP 	text_metronom_tic: autoDraw = False
+372.0795 	EXP 	metronome: fillColor = 'red (named)'
+372.0795 	EXP 	metronome: autoDraw = True
+372.5803 	EXP 	metronome: autoDraw = False
+372.5803 	EXP 	text_metronom_tic: autoDraw = True
+373.0740 	EXP 	New trial (rep=0, index=298): OrderedDict([('Tick', 300), ('Color', 'red')])
+373.0806 	EXP 	text_metronom_tic: autoDraw = False
+373.0806 	EXP 	metronome: fillColor = 'red (named)'
+373.0806 	EXP 	metronome: autoDraw = True
+373.5821 	EXP 	metronome: autoDraw = False
+373.5821 	EXP 	text_metronom_tic: autoDraw = True
+374.1207 	EXP 	text_metronom_tic: autoDraw = False
+374.1207 	EXP 	text_blank_screen: autoDraw = True
+374.5770 	EXP 	RatingScale rating_part_one: reset()
+374.5855 	EXP 	text_blank_screen: autoDraw = False
+374.5855 	EXP 	text_part_one_evaluation: autoDraw = True
+374.5855 	EXP 	rating_part_one: autoDraw = True
+717.2857 	DATA 	Mouse: Left button down, pos=(1019,450)
+717.3993 	DATA 	Mouse:  Left button up, pos=(1019,450)
+718.3800 	DATA 	Mouse: Left button down, pos=(1104,440)
+718.5042 	DATA 	Mouse:  Left button up, pos=(1104,440)
+719.3162 	DATA 	Mouse: Left button down, pos=(859,443)
+719.4582 	DATA 	Mouse:  Left button up, pos=(859,443)
+720.1411 	DATA 	Mouse: Left button down, pos=(722,438)
+720.2351 	DATA 	Mouse:  Left button up, pos=(722,438)
+720.7802 	DATA 	Mouse: Left button down, pos=(1051,446)
+720.8681 	DATA 	Mouse:  Left button up, pos=(1051,446)
+725.4052 	DATA 	Mouse: Left button down, pos=(983,299)
+725.4054 	DATA 	RatingScale rating_part_one: (mouse response) rating=7
+725.4054 	DATA 	RatingScale rating_part_one: rating RT=350.826
+725.4054 	DATA 	RatingScale rating_part_one: history=[(5.0, 0.0), (6, 342.707), (8, 343.801), (4, 344.737), (2, 345.562), (7, 346.201), (7, 350.826)]
+725.4158 	EXP 	text_part_one_evaluation: autoDraw = False
+725.4158 	EXP 	rating_part_one: autoDraw = False
+725.4158 	EXP 	text_part_one_end: autoDraw = True
+725.4158 	EXP 	text_par_one_end_instructions: autoDraw = True
+725.5304 	DATA 	Mouse:  Left button up, pos=(983,299)
+728.0265 	DATA 	Mouse: Left button down, pos=(973,299)
+728.1684 	DATA 	Mouse:  Left button up, pos=(973,299)
+733.1936 	DATA 	Keypress: space
+736.0336 	DATA 	Keypress: space
+747.3447 	DATA 	Keypress: escape
+747.9263 	EXP 	window1: mouseVisible = True

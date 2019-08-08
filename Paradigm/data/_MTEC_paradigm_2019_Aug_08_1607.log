@@ -1,0 +1,18 @@
+7.4041 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0.85, 0.85, 0.85]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000002B4182D3A90>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000002B4183227F0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+7.4042 	EXP 	window1: recordFrameIntervals = False
+7.4691 	EXP 	window1: recordFrameIntervals = True
+7.5433 	EXP 	window1: recordFrameIntervals = False
+8.3213 	EXP 	Created text_welcome_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='cyan', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_welcome_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([  0., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+8.3340 	EXP 	Created text_instructions_welcome_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_instructions_welcome_screen', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+8.3345 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+8.3695 	EXP 	text_welcome_screen: autoDraw = True
+8.3695 	EXP 	text_instructions_welcome_screen: autoDraw = True
+10.0981 	DATA 	Mouse: Left button down, pos=(433,643)
+10.2331 	DATA 	Mouse:  Left button up, pos=(433,643)
+10.5375 	DATA 	Keypress: space
+10.5467 	EXP 	text_welcome_screen: autoDraw = False
+10.5467 	EXP 	text_instructions_welcome_screen: autoDraw = False
+10.5467 	EXP 	text_blank_screen: autoDraw = True
+11.0473 	EXP 	text_blank_screen: autoDraw = False
+11.0473 	EXP 	text_blank_screen: autoDraw = False
+13.3419 	EXP 	window1: mouseVisible = True
