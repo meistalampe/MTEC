@@ -1,0 +1,1580 @@
+5.6438 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0.85, 0.85, 0.85]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001590252F0F0>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000015902569E10>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+5.6439 	EXP 	window1: recordFrameIntervals = False
+5.7111 	EXP 	window1: recordFrameIntervals = True
+5.7856 	EXP 	window1: recordFrameIntervals = False
+6.0565 	EXP 	Created text_welcome_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_welcome_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.0682 	EXP 	Created text_instructions_welcome_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_instructions_welcome_screen', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+6.0790 	EXP 	Created text_baseline_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='    Baseline \nMeasurement', units='height', win=Window(...), wrapWidth=1)
+6.0839 	EXP 	Created text_baseline_screen_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_screen_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Segment One:', units='height', win=Window(...), wrapWidth=1)
+6.1086 	EXP 	Created text_baseline_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_baseline_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.1374 	EXP 	Created text_baseline_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.2, italic=False, languageStyle='LTR', name='text_baseline_countdown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+6.1410 	EXP 	Created text_baseline_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+6.1845 	EXP 	Created text_baseline_measurement = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.4, italic=False, languageStyle='LTR', name='text_baseline_measurement', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='height', win=Window(...), wrapWidth=1)
+6.2143 	EXP 	Created rating_baseline = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_baseline', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+6.2190 	EXP 	Created text_baseline_evaluation_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_evaluation_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:', units='height', win=Window(...), wrapWidth=1)
+6.2300 	EXP 	Created text_baseline_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_baseline_evaluation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.2413 	EXP 	Created text_baseline_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Segment One.', units='height', win=Window(...), wrapWidth=1)
+6.2455 	EXP 	Created text_baseline_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+6.2493 	EXP 	Created text_stress_screen_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_screen_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Segment Two:', units='height', win=Window(...), wrapWidth=1)
+6.2555 	EXP 	Created text_stress_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_stress_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Stress Measurement', units='height', win=Window(...), wrapWidth=1)
+6.2581 	EXP 	Created text_stress_part_one_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_part_one_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Part One:', units='height', win=Window(...), wrapWidth=1)
+6.2658 	EXP 	Created text_stress_part_one = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_stress_part_one', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='7-Row', units='height', win=Window(...), wrapWidth=1)
+6.2686 	EXP 	Created text_stress_part_one_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_part_one_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+6.2962 	EXP 	Created text_stress_part_one_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='text_stress_part_one_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.2976 	EXP 	Created metronome = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', fillRGB=array([1., 1., 1.]), interpolate=True, lineColor='black', lineColorSpace='named', lineRGB=array([0., 0., 0.]), lineWidth=1, name='metronome', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.2, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+6.2982 	EXP 	Created text_metronom_tic = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_metronom_tic', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+6.3016 	EXP 	Created text_part_one_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_one_evaluation', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:\n\n', units='height', win=Window(...), wrapWidth=1)
+6.3146 	EXP 	Created rating_stress_part_one = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_stress_part_one', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+6.3254 	EXP 	Created text_part_one_evaluation_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_part_one_evaluation_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.3338 	EXP 	Created text_part_one_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_part_one_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Part One.', units='height', win=Window(...), wrapWidth=1)
+6.3376 	EXP 	Created text_par_one_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_par_one_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+6.3402 	EXP 	Created text_part_two_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_two_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Part Two:', units='height', win=Window(...), wrapWidth=1)
+6.3458 	EXP 	Created text_part_two = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_part_two', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Stroop Test', units='height', win=Window(...), wrapWidth=1)
+6.3483 	EXP 	Created text_part_two_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_two_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+6.3698 	EXP 	Created text_part_two_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_part_two_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.3914 	EXP 	Created text_word_item = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.15, italic=False, languageStyle='LTR', name='text_word_item', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+6.3972 	EXP 	Created text_left_ans = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_left_ans', opacity=1.0, ori=0, pos=array([-0.6,  0. ]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+6.4019 	EXP 	Created text_right_ans = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_right_ans', opacity=1.0, ori=0, pos=array([0.6, 0. ]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+6.4057 	EXP 	Created text_part_two_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_two_evaluation', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:', units='height', win=Window(...), wrapWidth=1)
+6.4166 	EXP 	Created text_part_two_evaluation_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_part_two_evaluation_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.4296 	EXP 	Created rating_stress_part_two = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_stress_part_two', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+6.4362 	EXP 	Created text_stress_part_two_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_stress_part_two_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending part two.', units='height', win=Window(...), wrapWidth=1)
+6.4405 	EXP 	Created text_stress_part_two_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_part_two_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+6.4438 	EXP 	Created text_cooldown_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Intermission:', units='height', win=Window(...), wrapWidth=1)
+6.4508 	EXP 	Created text_cooldown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Cooldown Phase', units='height', win=Window(...), wrapWidth=1)
+6.4610 	EXP 	Created text_cooldown_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.4656 	EXP 	Created text_cooldown_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.2, italic=False, languageStyle='LTR', name='text_cooldown_countdown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+6.4680 	EXP 	Created text_cooldown_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+6.4699 	EXP 	Created text_cooldown_measurement = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.4, italic=False, languageStyle='LTR', name='text_cooldown_measurement', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='height', win=Window(...), wrapWidth=1)
+6.4840 	EXP 	Created rating_cooldown = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_cooldown', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+6.4869 	EXP 	Created text_cooldown_evaluation_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_evaluation_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:', units='height', win=Window(...), wrapWidth=1)
+6.4952 	EXP 	Created text_cooldown_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_evaluation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.5031 	EXP 	Created text_cooldown_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Intermission.', units='height', win=Window(...), wrapWidth=1)
+6.5069 	EXP 	Created text_cooldown_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+6.5096 	EXP 	Created text_emotion_screen_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_emotion_screen_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Segment Three:', units='height', win=Window(...), wrapWidth=1)
+6.5182 	EXP 	Created text_emotion_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_emotion_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Visual Stimulation Test', units='height', win=Window(...), wrapWidth=1)
+6.5212 	EXP 	Created text_emotion_screen_pos_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_emotion_screen_pos_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Part One:', units='height', win=Window(...), wrapWidth=1)
+6.5262 	EXP 	Created text_emotion_pos_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_emotion_pos_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Positive', units='height', win=Window(...), wrapWidth=1)
+6.5288 	EXP 	Created text_emotion_instruction_pos_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_emotion_instruction_pos_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+6.5627 	EXP 	Created text_emotion_instructions_pos = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_emotion_instructions_pos', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.5668 	EXP 	Created image_emotion_meas_pos = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_emotion_meas_pos', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='height', win=Window(...))
+6.5695 	EXP 	Created image_emotion_evaluation_pos = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_emotion_evaluation_pos', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.3, 0.3]), texRes=128, units='height', win=Window(...))
+6.5831 	EXP 	Created rating_emotion_evaluation_pos = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=4, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=2.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_emotion_evaluation_pos', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=['1', '2', '3', '4'], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=3.0, win=Window(...))
+6.5859 	EXP 	Created text_cooldown_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Intermission:', units='height', win=Window(...), wrapWidth=1)
+6.5924 	EXP 	Created text_cooldown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Cooldown Phase', units='height', win=Window(...), wrapWidth=1)
+6.6033 	EXP 	Created text_cooldown_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.6081 	EXP 	Created text_cooldown_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.2, italic=False, languageStyle='LTR', name='text_cooldown_countdown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+6.6114 	EXP 	Created text_cooldown_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+6.6244 	EXP 	Created rating_cooldown = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_cooldown', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+6.6273 	EXP 	Created text_cooldown_evaluation_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_evaluation_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:', units='height', win=Window(...), wrapWidth=1)
+6.6354 	EXP 	Created text_cooldown_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_evaluation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.6426 	EXP 	Created text_cooldown_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Intermission.', units='height', win=Window(...), wrapWidth=1)
+6.6461 	EXP 	Created text_cooldown_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+6.6488 	EXP 	Created text_emotion_screen_neg_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_emotion_screen_neg_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Part Two:', units='height', win=Window(...), wrapWidth=1)
+6.6545 	EXP 	Created text_emotion_neg_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_emotion_neg_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Negative', units='height', win=Window(...), wrapWidth=1)
+6.6570 	EXP 	Created text_emotion_instruction_neg_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_emotion_instruction_neg_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+6.6857 	EXP 	Created text_emotion_instructions_neg = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_emotion_instructions_neg', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.6873 	EXP 	Created image_emotion_meas_neg = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_emotion_meas_neg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='height', win=Window(...))
+6.6885 	EXP 	Created image_emotion_evaluation_neg = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_emotion_evaluation_neg', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.3, 0.3]), texRes=128, units='height', win=Window(...))
+6.7005 	EXP 	Created rating_emotion_evaluation_neg = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=4, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=2.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_emotion_evaluation_neg', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=['1', '2', '3', '4'], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=3.0, win=Window(...))
+6.7029 	EXP 	Created text_cooldown_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Intermission:', units='height', win=Window(...), wrapWidth=1)
+6.7081 	EXP 	Created text_cooldown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Cooldown Phase', units='height', win=Window(...), wrapWidth=1)
+6.7174 	EXP 	Created text_cooldown_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.7220 	EXP 	Created text_cooldown_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.2, italic=False, languageStyle='LTR', name='text_cooldown_countdown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+6.7245 	EXP 	Created text_cooldown_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+6.7261 	EXP 	Created text_cooldown_measurement = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.4, italic=False, languageStyle='LTR', name='text_cooldown_measurement', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='height', win=Window(...), wrapWidth=1)
+6.7380 	EXP 	Created rating_cooldown = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_cooldown', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+6.7409 	EXP 	Created text_cooldown_evaluation_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_evaluation_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:', units='height', win=Window(...), wrapWidth=1)
+6.7495 	EXP 	Created text_cooldown_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_evaluation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.7575 	EXP 	Created text_cooldown_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Intermission.', units='height', win=Window(...), wrapWidth=1)
+6.7611 	EXP 	Created text_cooldown_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+6.7646 	EXP 	Created text_ending_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_ending_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='The End\n\n', units='height', win=Window(...), wrapWidth=1)
+6.7697 	EXP 	Created text_ending_subtitle = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_ending_subtitle', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([255., 255., 255.]), text='Thank you for participating!', units='height', win=Window(...), wrapWidth=1)
+6.8430 	EXP 	rating_baseline: flipVert = False
+6.8430 	EXP 	rating_baseline: autoLog = True
+6.8430 	EXP 	rating_stress_part_one: flipVert = False
+6.8430 	EXP 	rating_stress_part_one: autoLog = True
+6.8430 	EXP 	rating_stress_part_two: flipVert = False
+6.8430 	EXP 	rating_stress_part_two: autoLog = True
+6.8430 	EXP 	rating_cooldown: flipVert = False
+6.8430 	EXP 	rating_cooldown: autoLog = True
+6.8430 	EXP 	rating_emotion_evaluation_pos: flipVert = False
+6.8430 	EXP 	rating_emotion_evaluation_pos: autoLog = True
+6.8430 	EXP 	rating_cooldown: flipVert = False
+6.8430 	EXP 	rating_cooldown: autoLog = True
+6.8430 	EXP 	rating_emotion_evaluation_neg: flipVert = False
+6.8430 	EXP 	rating_emotion_evaluation_neg: autoLog = True
+6.8430 	EXP 	rating_cooldown: flipVert = False
+6.8430 	EXP 	rating_cooldown: autoLog = True
+6.8430 	EXP 	text_welcome_screen: autoDraw = True
+6.8430 	EXP 	text_instructions_welcome_screen: autoDraw = True
+8.8009 	DATA 	Keypress: space
+8.8018 	EXP 	text_welcome_screen: autoDraw = False
+8.8018 	EXP 	text_instructions_welcome_screen: autoDraw = False
+8.8018 	EXP 	text_baseline_screen: autoDraw = True
+8.8018 	EXP 	text_baseline_screen_title: autoDraw = True
+13.8019 	EXP 	text_baseline_screen: autoDraw = False
+13.8019 	EXP 	text_baseline_screen_title: autoDraw = False
+13.8019 	EXP 	text_baseline_screen: autoDraw = False
+13.8019 	EXP 	text_baseline_screen_title: autoDraw = False
+13.8019 	EXP 	text_baseline_instructions: autoDraw = True
+13.8019 	EXP 	text_baseline_instructions_title: autoDraw = True
+18.8029 	EXP 	text_baseline_instructions: autoDraw = False
+18.8029 	EXP 	text_baseline_instructions_title: autoDraw = False
+19.3160 	EXP 	text_baseline_countdown: autoDraw = True
+29.3036 	EXP 	text_baseline_countdown: autoDraw = False
+29.3036 	EXP 	text_baseline_instructions: autoDraw = False
+29.3036 	EXP 	text_baseline_countdown: autoDraw = False
+29.3036 	EXP 	text_baseline_instructions_title: autoDraw = False
+29.3036 	EXP 	text_baseline_measurement: autoDraw = True
+34.3034 	EXP 	RatingScale rating_baseline: reset()
+34.3093 	EXP 	text_baseline_measurement: autoDraw = False
+34.3093 	EXP 	text_baseline_measurement: autoDraw = False
+34.3093 	EXP 	rating_baseline: autoDraw = True
+34.3093 	EXP 	text_baseline_evaluation_title: autoDraw = True
+34.3093 	EXP 	text_baseline_evaluation: autoDraw = True
+140.9702 	DATA 	Mouse: Left button down, pos=(698,354)
+141.0589 	DATA 	Mouse:  Left button up, pos=(698,355)
+141.4723 	DATA 	Mouse: Left button down, pos=(899,223)
+141.4790 	DATA 	RatingScale rating_baseline: (mouse response) rating=1
+141.4790 	DATA 	RatingScale rating_baseline: rating RT=107.174
+141.4790 	DATA 	RatingScale rating_baseline: history=[(5.0, 0.0), (1, 106.666), (1, 107.174)]
+141.4913 	EXP 	rating_baseline: autoDraw = False
+141.4913 	EXP 	text_baseline_evaluation_title: autoDraw = False
+141.4913 	EXP 	text_baseline_evaluation: autoDraw = False
+141.4913 	EXP 	text_baseline_end: autoDraw = True
+141.4913 	EXP 	text_baseline_end_instructions: autoDraw = True
+141.5633 	DATA 	Mouse:  Left button up, pos=(899,223)
+142.6375 	DATA 	Keypress: space
+142.6382 	EXP 	text_baseline_end: autoDraw = False
+142.6382 	EXP 	text_baseline_end_instructions: autoDraw = False
+142.6382 	EXP 	text_stress_screen_title: autoDraw = True
+142.6382 	EXP 	text_stress_screen: autoDraw = True
+147.6399 	EXP 	text_stress_screen_title: autoDraw = False
+147.6399 	EXP 	text_stress_screen: autoDraw = False
+147.6399 	EXP 	text_stress_screen_title: autoDraw = False
+147.6399 	EXP 	text_stress_screen: autoDraw = False
+147.6399 	EXP 	text_stress_part_one_title: autoDraw = True
+147.6399 	EXP 	text_stress_part_one: autoDraw = True
+152.6415 	EXP 	text_stress_part_one_title: autoDraw = False
+152.6415 	EXP 	text_stress_part_one: autoDraw = False
+152.6415 	EXP 	text_stress_part_one_title: autoDraw = False
+152.6415 	EXP 	text_stress_part_one: autoDraw = False
+152.6415 	EXP 	text_stress_part_one_instructions_title: autoDraw = True
+152.6415 	EXP 	text_stress_part_one_instructions: autoDraw = True
+156.0964 	DATA 	Keypress: space
+156.1394 	EXP 	Imported stimuli files\metronome.xlsx as conditions, 9 conditions, 2 params
+156.1396 	EXP 	Created sequence: sequential, trialTypes=9, nReps=1, seed=None
+156.1398 	EXP 	New trial (rep=0, index=0): OrderedDict([('Tick', 2), ('Color', 'green')])
+156.1426 	EXP 	text_stress_part_one_instructions_title: autoDraw = False
+156.1426 	EXP 	text_stress_part_one_instructions: autoDraw = False
+156.1426 	EXP 	metronome: fillColor = 'green (named)'
+156.1426 	EXP 	metronome: autoDraw = True
+156.6166 	EXP 	metronome: autoDraw = False
+156.6166 	EXP 	text_metronom_tic: autoDraw = True
+157.1109 	EXP 	New trial (rep=0, index=1): OrderedDict([('Tick', 3), ('Color', 'green')])
+157.1173 	EXP 	text_metronom_tic: autoDraw = False
+157.1173 	EXP 	metronome: fillColor = 'green (named)'
+157.1173 	EXP 	metronome: autoDraw = True
+157.6116 	EXP 	metronome: autoDraw = False
+157.6116 	EXP 	text_metronom_tic: autoDraw = True
+158.1060 	EXP 	New trial (rep=0, index=2): OrderedDict([('Tick', 4), ('Color', 'green')])
+158.1126 	EXP 	text_metronom_tic: autoDraw = False
+158.1126 	EXP 	metronome: fillColor = 'green (named)'
+158.1126 	EXP 	metronome: autoDraw = True
+158.6093 	EXP 	metronome: autoDraw = False
+158.6093 	EXP 	metronome: autoDraw = False
+158.6093 	EXP 	text_metronom_tic: autoDraw = True
+159.1049 	EXP 	New trial (rep=0, index=3): OrderedDict([('Tick', 5), ('Color', 'green')])
+159.1101 	EXP 	text_metronom_tic: autoDraw = False
+159.1101 	EXP 	text_metronom_tic: autoDraw = False
+159.1101 	EXP 	metronome: fillColor = 'green (named)'
+159.1101 	EXP 	metronome: autoDraw = True
+159.6115 	EXP 	metronome: autoDraw = False
+159.6115 	EXP 	text_metronom_tic: autoDraw = True
+160.1058 	EXP 	New trial (rep=0, index=4): OrderedDict([('Tick', 6), ('Color', 'green')])
+160.1123 	EXP 	text_metronom_tic: autoDraw = False
+160.1123 	EXP 	metronome: fillColor = 'green (named)'
+160.1123 	EXP 	metronome: autoDraw = True
+160.6099 	EXP 	metronome: autoDraw = False
+160.6099 	EXP 	metronome: autoDraw = False
+160.6099 	EXP 	text_metronom_tic: autoDraw = True
+161.1059 	EXP 	New trial (rep=0, index=5): OrderedDict([('Tick', 7), ('Color', 'green')])
+161.1106 	EXP 	text_metronom_tic: autoDraw = False
+161.1106 	EXP 	text_metronom_tic: autoDraw = False
+161.1106 	EXP 	metronome: fillColor = 'green (named)'
+161.1106 	EXP 	metronome: autoDraw = True
+161.6142 	EXP 	metronome: autoDraw = False
+161.6142 	EXP 	text_metronom_tic: autoDraw = True
+162.1084 	EXP 	New trial (rep=0, index=6): OrderedDict([('Tick', 8), ('Color', 'green')])
+162.1150 	EXP 	text_metronom_tic: autoDraw = False
+162.1150 	EXP 	metronome: fillColor = 'green (named)'
+162.1150 	EXP 	metronome: autoDraw = True
+162.6148 	EXP 	metronome: autoDraw = False
+162.6148 	EXP 	text_metronom_tic: autoDraw = True
+163.1091 	EXP 	New trial (rep=0, index=7): OrderedDict([('Tick', 9), ('Color', 'green')])
+163.1155 	EXP 	text_metronom_tic: autoDraw = False
+163.1155 	EXP 	metronome: fillColor = 'green (named)'
+163.1155 	EXP 	metronome: autoDraw = True
+163.6116 	EXP 	metronome: autoDraw = False
+163.6116 	EXP 	text_metronom_tic: autoDraw = True
+164.1057 	EXP 	New trial (rep=0, index=8): OrderedDict([('Tick', 10), ('Color', 'green')])
+164.1123 	EXP 	text_metronom_tic: autoDraw = False
+164.1123 	EXP 	metronome: fillColor = 'green (named)'
+164.1123 	EXP 	metronome: autoDraw = True
+164.6139 	EXP 	metronome: autoDraw = False
+164.6139 	EXP 	text_metronom_tic: autoDraw = True
+165.1254 	EXP 	RatingScale rating_stress_part_one: reset()
+165.1334 	EXP 	text_metronom_tic: autoDraw = False
+165.1334 	EXP 	text_part_one_evaluation: autoDraw = True
+165.1334 	EXP 	rating_stress_part_one: autoDraw = True
+165.1334 	EXP 	text_part_one_evaluation_2: autoDraw = True
+167.1958 	DATA 	Mouse: Left button down, pos=(741,341)
+167.2899 	DATA 	Mouse:  Left button up, pos=(741,341)
+167.6165 	DATA 	Mouse: Left button down, pos=(923,208)
+167.6166 	DATA 	RatingScale rating_stress_part_one: (mouse response) rating=2
+167.6167 	DATA 	RatingScale rating_stress_part_one: rating RT=2.490
+167.6167 	DATA 	RatingScale rating_stress_part_one: history=[(5.0, 0.0), (2, 2.069), (2, 2.49)]
+167.6290 	EXP 	text_part_one_evaluation: autoDraw = False
+167.6290 	EXP 	rating_stress_part_one: autoDraw = False
+167.6290 	EXP 	text_part_one_evaluation_2: autoDraw = False
+167.6290 	EXP 	text_part_one_end: autoDraw = True
+167.6290 	EXP 	text_par_one_end_instructions: autoDraw = True
+167.7003 	DATA 	Mouse:  Left button up, pos=(923,208)
+169.4405 	DATA 	Keypress: space
+169.4520 	EXP 	text_part_one_end: autoDraw = False
+169.4520 	EXP 	text_par_one_end_instructions: autoDraw = False
+169.4520 	EXP 	text_part_two_title: autoDraw = True
+169.4520 	EXP 	text_part_two: autoDraw = True
+174.4539 	EXP 	text_part_two_title: autoDraw = False
+174.4539 	EXP 	text_part_two: autoDraw = False
+174.4539 	EXP 	text_part_two_title: autoDraw = False
+174.4539 	EXP 	text_part_two: autoDraw = False
+174.4539 	EXP 	text_part_two_instructions_title: autoDraw = True
+174.4539 	EXP 	text_part_two_instructions: autoDraw = True
+178.1124 	EXP 	Imported stimuli files\stroop_stimuli.xlsx as conditions, 1 conditions, 5 params
+178.1127 	EXP 	Created sequence: random, trialTypes=1, nReps=1, seed=None
+178.1129 	EXP 	New trial (rep=0, index=0): OrderedDict([('WordItem', 'red'), ('WordColor', 'green'), ('AnsLeft', 'red'), ('AnsRight', 'green'), ('AnsCorr', 'right')])
+178.1273 	DATA 	Keypress: space
+178.1281 	EXP 	text_part_two_instructions_title: autoDraw = False
+178.1281 	EXP 	text_part_two_instructions: autoDraw = False
+178.1281 	EXP 	text_word_item: color = 'green (named)'
+178.1281 	EXP 	text_word_item: text = 'red'
+178.1281 	EXP 	text_left_ans: text = 'red'
+178.1281 	EXP 	text_right_ans: text = 'green'
+178.1281 	EXP 	text_word_item: autoDraw = True
+178.1281 	EXP 	text_left_ans: autoDraw = True
+178.1281 	EXP 	text_right_ans: autoDraw = True
+179.8893 	EXP 	RatingScale rating_stress_part_two: reset()
+179.8965 	DATA 	Keypress: right
+179.8977 	EXP 	text_word_item: autoDraw = False
+179.8977 	EXP 	text_left_ans: autoDraw = False
+179.8977 	EXP 	text_right_ans: autoDraw = False
+179.8977 	EXP 	text_part_two_evaluation: autoDraw = True
+179.8977 	EXP 	text_part_two_evaluation_2: autoDraw = True
+179.8977 	EXP 	rating_stress_part_two: autoDraw = True
+181.5688 	DATA 	Mouse: Left button down, pos=(689,358)
+181.6641 	DATA 	Mouse:  Left button up, pos=(689,358)
+182.0283 	DATA 	Mouse: Left button down, pos=(932,219)
+182.0286 	DATA 	RatingScale rating_stress_part_two: (mouse response) rating=1
+182.0286 	DATA 	RatingScale rating_stress_part_two: rating RT=2.138
+182.0286 	DATA 	RatingScale rating_stress_part_two: history=[(5.0, 0.0), (1, 1.678), (1, 2.138)]
+182.0414 	EXP 	text_part_two_evaluation: autoDraw = False
+182.0414 	EXP 	text_part_two_evaluation_2: autoDraw = False
+182.0414 	EXP 	rating_stress_part_two: autoDraw = False
+182.0414 	EXP 	text_stress_part_two_end: autoDraw = True
+182.0414 	EXP 	text_stress_part_two_end_instructions: autoDraw = True
+182.1263 	DATA 	Mouse:  Left button up, pos=(934,219)
+183.1846 	DATA 	Keypress: space
+183.1853 	EXP 	text_stress_part_two_end: autoDraw = False
+183.1853 	EXP 	text_stress_part_two_end_instructions: autoDraw = False
+183.1853 	EXP 	text_cooldown_title: autoDraw = True
+183.1853 	EXP 	text_cooldown: autoDraw = True
+188.1870 	EXP 	text_cooldown_title: autoDraw = False
+188.1870 	EXP 	text_cooldown: autoDraw = False
+188.1870 	EXP 	text_cooldown_title: autoDraw = False
+188.1870 	EXP 	text_cooldown: autoDraw = False
+188.1870 	EXP 	text_cooldown_instructions: autoDraw = True
+188.1870 	EXP 	text_cooldown_instructions_title: autoDraw = True
+193.1876 	EXP 	text_cooldown_instructions: autoDraw = False
+193.1876 	EXP 	text_cooldown_instructions_title: autoDraw = False
+193.6962 	EXP 	text_cooldown_countdown: autoDraw = True
+203.6906 	EXP 	text_cooldown_instructions: autoDraw = False
+203.6906 	EXP 	text_cooldown_countdown: autoDraw = False
+203.6906 	EXP 	text_cooldown_instructions_title: autoDraw = False
+203.6906 	EXP 	text_cooldown_measurement: autoDraw = True
+208.6863 	EXP 	RatingScale rating_cooldown: reset()
+208.6924 	EXP 	text_cooldown_measurement: autoDraw = False
+208.6924 	EXP 	text_cooldown_measurement: autoDraw = False
+208.6924 	EXP 	rating_cooldown: autoDraw = True
+208.6924 	EXP 	text_cooldown_evaluation_title: autoDraw = True
+208.6924 	EXP 	text_cooldown_evaluation: autoDraw = True
+220.2317 	DATA 	Mouse: Left button down, pos=(688,346)
+220.3059 	DATA 	Mouse:  Left button up, pos=(688,346)
+220.6852 	DATA 	Mouse: Left button down, pos=(885,210)
+220.6854 	DATA 	RatingScale rating_cooldown: (mouse response) rating=1
+220.6854 	DATA 	RatingScale rating_cooldown: rating RT=11.998
+220.6854 	DATA 	RatingScale rating_cooldown: history=[(5.0, 0.0), (1, 11.55), (1, 11.998)]
+220.6971 	EXP 	rating_cooldown: autoDraw = False
+220.6971 	EXP 	text_cooldown_evaluation_title: autoDraw = False
+220.6971 	EXP 	text_cooldown_evaluation: autoDraw = False
+220.6971 	EXP 	text_cooldown_end: autoDraw = True
+220.6971 	EXP 	text_cooldown_end_instructions: autoDraw = True
+220.7622 	DATA 	Mouse:  Left button up, pos=(887,208)
+221.8448 	DATA 	Keypress: space
+221.8455 	EXP 	text_cooldown_end: autoDraw = False
+221.8455 	EXP 	text_cooldown_end_instructions: autoDraw = False
+221.8455 	EXP 	text_emotion_screen_title: autoDraw = True
+221.8455 	EXP 	text_emotion_screen: autoDraw = True
+226.8480 	EXP 	text_emotion_screen_title: autoDraw = False
+226.8480 	EXP 	text_emotion_screen: autoDraw = False
+226.8480 	EXP 	text_emotion_screen_title: autoDraw = False
+226.8480 	EXP 	text_emotion_screen: autoDraw = False
+226.8480 	EXP 	text_emotion_screen_pos_title: autoDraw = True
+226.8480 	EXP 	text_emotion_pos_screen: autoDraw = True
+231.8501 	EXP 	text_emotion_screen_pos_title: autoDraw = False
+231.8501 	EXP 	text_emotion_pos_screen: autoDraw = False
+231.8501 	EXP 	text_emotion_screen_pos_title: autoDraw = False
+231.8501 	EXP 	text_emotion_pos_screen: autoDraw = False
+231.8501 	EXP 	text_emotion_instruction_pos_title: autoDraw = True
+231.8501 	EXP 	text_emotion_instructions_pos: autoDraw = True
+259.7035 	EXP 	Imported stimuli files\picture_list.xlsx as conditions, 35 conditions, 11 params
+259.7038 	EXP 	Created sequence: random, trialTypes=35, nReps=1, seed=None
+259.7040 	EXP 	New trial (rep=0, index=0): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 5910.0), ('description', 'fireworks'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\5910.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+259.7545 	DATA 	Keypress: space
+259.7562 	EXP 	text_emotion_instruction_pos_title: autoDraw = False
+259.7562 	EXP 	text_emotion_instructions_pos: autoDraw = False
+259.7562 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+259.7562 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\5910.jpg'
+259.7562 	EXP 	image_emotion_meas_pos: autoDraw = True
+269.7449 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+269.7520 	EXP 	image_emotion_meas_pos: autoDraw = False
+269.7520 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\5910.jpg'
+269.7520 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+269.7520 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+272.0320 	DATA 	Mouse: Left button down, pos=(1253,340)
+272.1342 	DATA 	Mouse:  Left button up, pos=(1253,340)
+272.6991 	DATA 	Mouse: Left button down, pos=(1041,196)
+272.6993 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+272.6993 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.952
+272.6993 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 2.285), (4, 2.952)]
+272.7051 	EXP 	New trial (rep=0, index=1): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 5833.0), ('description', 'sunny beach'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\5833.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+272.7350 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+272.7350 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+272.7350 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+272.7350 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\5833.jpg'
+272.7350 	EXP 	image_emotion_meas_pos: autoDraw = True
+272.8100 	DATA 	Mouse:  Left button up, pos=(1041,196)
+282.7320 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+282.7373 	EXP 	image_emotion_meas_pos: autoDraw = False
+282.7373 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\5833.jpg'
+282.7373 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+282.7373 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+287.2694 	DATA 	Mouse: Left button down, pos=(1191,352)
+287.3605 	DATA 	Mouse:  Left button up, pos=(1192,352)
+287.8493 	DATA 	Mouse: Left button down, pos=(1013,221)
+287.8494 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+287.8495 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=5.115
+287.8495 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 4.536), (4, 5.115)]
+287.8546 	EXP 	New trial (rep=0, index=2): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 8380.0), ('description', 'team medals'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\8380.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+287.8774 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+287.8774 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+287.8774 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+287.8774 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\8380.jpg'
+287.8774 	EXP 	image_emotion_meas_pos: autoDraw = True
+287.9584 	DATA 	Mouse:  Left button up, pos=(1013,220)
+297.8765 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+297.8804 	EXP 	image_emotion_meas_pos: autoDraw = False
+297.8804 	EXP 	image_emotion_meas_pos: autoDraw = False
+297.8804 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\8380.jpg'
+297.8804 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+297.8804 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+299.4488 	DATA 	Mouse: Left button down, pos=(1256,332)
+299.5300 	DATA 	Mouse:  Left button up, pos=(1253,331)
+299.9225 	DATA 	Mouse: Left button down, pos=(1006,201)
+299.9227 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+299.9227 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.044
+299.9227 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.57), (4, 2.044)]
+299.9286 	EXP 	New trial (rep=0, index=3): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2091.0), ('description', 'children and kitten'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2091.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+299.9530 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+299.9530 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+299.9530 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+299.9530 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2091.jpg'
+299.9530 	EXP 	image_emotion_meas_pos: autoDraw = True
+299.9948 	DATA 	Mouse:  Left button up, pos=(1007,200)
+309.9510 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+309.9557 	EXP 	image_emotion_meas_pos: autoDraw = False
+309.9557 	EXP 	image_emotion_meas_pos: autoDraw = False
+309.9557 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2091.jpg'
+309.9557 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+309.9557 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+311.5495 	DATA 	Mouse: Left button down, pos=(1256,341)
+311.6307 	DATA 	Mouse:  Left button up, pos=(1256,341)
+312.2329 	DATA 	Mouse: Left button down, pos=(1022,208)
+312.2331 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+312.2331 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.280
+312.2331 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.596), (4, 2.28)]
+312.2387 	EXP 	New trial (rep=0, index=4): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 8501.0), ('description', 'money'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\8501.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+312.2609 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+312.2609 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+312.2609 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+312.2609 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\8501.jpg'
+312.2609 	EXP 	image_emotion_meas_pos: autoDraw = True
+312.3496 	DATA 	Mouse:  Left button up, pos=(1022,208)
+322.2594 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+322.2633 	EXP 	image_emotion_meas_pos: autoDraw = False
+322.2633 	EXP 	image_emotion_meas_pos: autoDraw = False
+322.2633 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\8501.jpg'
+322.2633 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+322.2633 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+323.5873 	DATA 	Mouse: Left button down, pos=(1226,344)
+323.6756 	DATA 	Mouse:  Left button up, pos=(1226,344)
+324.0616 	DATA 	Mouse: Left button down, pos=(1007,210)
+324.0617 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+324.0618 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.800
+324.0618 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.326), (4, 1.8)]
+324.0677 	EXP 	New trial (rep=0, index=5): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 1710.0), ('description', 'three dogs'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\1710.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+324.0881 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+324.0881 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+324.0881 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+324.0881 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\1710.jpg'
+324.0881 	EXP 	image_emotion_meas_pos: autoDraw = True
+324.1095 	DATA 	Mouse:  Left button up, pos=(1011,210)
+334.0893 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+334.0933 	EXP 	image_emotion_meas_pos: autoDraw = False
+334.0933 	EXP 	image_emotion_meas_pos: autoDraw = False
+334.0933 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\1710.jpg'
+334.0933 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+334.0933 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+336.9203 	DATA 	Mouse: Left button down, pos=(1235,327)
+337.0021 	DATA 	Mouse:  Left button up, pos=(1235,327)
+337.3669 	DATA 	Mouse: Left button down, pos=(1011,187)
+337.3671 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+337.3671 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=3.276
+337.3671 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 2.829), (4, 3.276)]
+337.3726 	EXP 	New trial (rep=0, index=6): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2311.0), ('description', 'mother daughter'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2311.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+337.3960 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+337.3960 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+337.3960 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+337.3960 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2311.jpg'
+337.3960 	EXP 	image_emotion_meas_pos: autoDraw = True
+337.4446 	DATA 	Mouse:  Left button up, pos=(1014,187)
+347.3932 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+347.3973 	EXP 	image_emotion_meas_pos: autoDraw = False
+347.3973 	EXP 	image_emotion_meas_pos: autoDraw = False
+347.3973 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2311.jpg'
+347.3973 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+347.3973 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+348.5043 	DATA 	Mouse: Left button down, pos=(1229,330)
+348.5934 	DATA 	Mouse:  Left button up, pos=(1229,330)
+348.9395 	DATA 	Mouse: Left button down, pos=(1022,196)
+348.9396 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+348.9396 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.544
+348.9396 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.109), (4, 1.544)]
+348.9446 	EXP 	New trial (rep=0, index=7): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2154.0), ('description', 'father and son'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2154.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+348.9651 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+348.9651 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+348.9651 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+348.9651 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2154.jpg'
+348.9651 	EXP 	image_emotion_meas_pos: autoDraw = True
+349.0136 	DATA 	Mouse:  Left button up, pos=(1025,196)
+358.9632 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+358.9680 	EXP 	image_emotion_meas_pos: autoDraw = False
+358.9680 	EXP 	image_emotion_meas_pos: autoDraw = False
+358.9680 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2154.jpg'
+358.9680 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+358.9680 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+360.0542 	DATA 	Mouse: Left button down, pos=(1233,347)
+360.1359 	DATA 	Mouse:  Left button up, pos=(1233,347)
+360.4744 	DATA 	Mouse: Left button down, pos=(1022,202)
+360.4746 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+360.4746 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.509
+360.4746 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.089), (4, 1.509)]
+360.4797 	EXP 	New trial (rep=0, index=8): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2550.0), ('description', 'happy elderly couple'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2550.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+360.5002 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+360.5002 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+360.5002 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+360.5002 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2550.jpg'
+360.5002 	EXP 	image_emotion_meas_pos: autoDraw = True
+360.5627 	DATA 	Mouse:  Left button up, pos=(1022,202)
+370.5034 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+370.5072 	EXP 	image_emotion_meas_pos: autoDraw = False
+370.5072 	EXP 	image_emotion_meas_pos: autoDraw = False
+370.5072 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2550.jpg'
+370.5072 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+370.5072 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+371.4914 	DATA 	Mouse: Left button down, pos=(1269,333)
+371.5808 	DATA 	Mouse:  Left button up, pos=(1269,333)
+372.1086 	DATA 	Mouse: Left button down, pos=(1048,210)
+372.1088 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+372.1088 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.603
+372.1088 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 0.986), (4, 1.603)]
+372.1146 	EXP 	New trial (rep=0, index=9): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 1441.0), ('description', 'polar bears'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\1441.jpg'), ('pic_width', 800), ('pic_height', 600), ('new_width', 2.4), ('new_height', 1), ('new_size', '(2.4, 1)')])
+372.1539 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+372.1539 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+372.1539 	EXP 	image_emotion_meas_pos: size = array([2.4, 1. ])
+372.1539 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\1441.jpg'
+372.1539 	EXP 	image_emotion_meas_pos: autoDraw = True
+372.2226 	DATA 	Mouse:  Left button up, pos=(1048,210)
+382.1413 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+382.1453 	EXP 	image_emotion_meas_pos: autoDraw = False
+382.1453 	EXP 	image_emotion_meas_pos: autoDraw = False
+382.1453 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\1441.jpg'
+382.1453 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+382.1453 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+394.4981 	DATA 	Mouse: Left button down, pos=(1242,358)
+394.5907 	DATA 	Mouse:  Left button up, pos=(1242,358)
+395.1996 	DATA 	Mouse: Left button down, pos=(1019,207)
+395.1998 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+395.1998 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=13.057
+395.1998 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 12.356), (4, 13.056)]
+395.2057 	EXP 	New trial (rep=0, index=10): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 1942.0), ('description', 'group of turtles'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\1942.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+395.2498 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+395.2498 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+395.2498 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+395.2498 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\1942.jpg'
+395.2498 	EXP 	image_emotion_meas_pos: autoDraw = True
+395.2715 	DATA 	Mouse:  Left button up, pos=(1019,207)
+405.2474 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+405.2517 	EXP 	image_emotion_meas_pos: autoDraw = False
+405.2517 	EXP 	image_emotion_meas_pos: autoDraw = False
+405.2517 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\1942.jpg'
+405.2517 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+405.2517 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+406.4287 	DATA 	Mouse: Left button down, pos=(1271,340)
+406.5066 	DATA 	Mouse:  Left button up, pos=(1270,340)
+406.9347 	DATA 	Mouse: Left button down, pos=(1043,220)
+406.9349 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+406.9349 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.685
+406.9349 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.18), (4, 1.685)]
+406.9407 	EXP 	New trial (rep=0, index=11): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 5760.0), ('description', 'flowers'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\5760.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+406.9620 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+406.9620 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+406.9620 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+406.9620 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\5760.jpg'
+406.9620 	EXP 	image_emotion_meas_pos: autoDraw = True
+407.0235 	DATA 	Mouse:  Left button up, pos=(1043,220)
+416.9610 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+416.9646 	EXP 	image_emotion_meas_pos: autoDraw = False
+416.9646 	EXP 	image_emotion_meas_pos: autoDraw = False
+416.9646 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\5760.jpg'
+416.9646 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+416.9646 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+418.5866 	DATA 	Mouse: Left button down, pos=(1248,314)
+418.6744 	DATA 	Mouse:  Left button up, pos=(1247,314)
+419.0065 	DATA 	Mouse: Left button down, pos=(1088,208)
+419.0067 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+419.0067 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.044
+419.0067 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.624), (4, 2.044)]
+419.0126 	EXP 	New trial (rep=0, index=12): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 1750.0), ('description', 'rabit'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\1750.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+419.0351 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+419.0351 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+419.0351 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+419.0351 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\1750.jpg'
+419.0351 	EXP 	image_emotion_meas_pos: autoDraw = True
+419.0837 	DATA 	Mouse:  Left button up, pos=(1088,208)
+429.0356 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+429.0396 	EXP 	image_emotion_meas_pos: autoDraw = False
+429.0396 	EXP 	image_emotion_meas_pos: autoDraw = False
+429.0396 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\1750.jpg'
+429.0396 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+429.0396 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+430.4931 	DATA 	Mouse: Left button down, pos=(1251,337)
+430.5814 	DATA 	Mouse:  Left button up, pos=(1251,337)
+431.3187 	DATA 	Mouse: Left button down, pos=(1055,196)
+431.3189 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+431.3189 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.282
+431.3189 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.456), (4, 2.282)]
+431.3247 	EXP 	New trial (rep=0, index=13): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 1811.0), ('description', 'group of apes'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\1811.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+431.3459 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+431.3459 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+431.3459 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+431.3459 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\1811.jpg'
+431.3459 	EXP 	image_emotion_meas_pos: autoDraw = True
+431.4486 	DATA 	Mouse:  Left button up, pos=(1055,196)
+441.3424 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+441.3462 	EXP 	image_emotion_meas_pos: autoDraw = False
+441.3462 	EXP 	image_emotion_meas_pos: autoDraw = False
+441.3462 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\1811.jpg'
+441.3462 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+441.3462 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+442.4442 	DATA 	Mouse: Left button down, pos=(1261,352)
+442.5114 	DATA 	Mouse:  Left button up, pos=(1257,349)
+442.8605 	DATA 	Mouse: Left button down, pos=(1013,207)
+442.8607 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+442.8607 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.516
+442.8607 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.1), (4, 1.516)]
+442.8667 	EXP 	New trial (rep=0, index=14): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2040.0), ('description', 'baby on belly'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2040.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+442.8920 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+442.8920 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+442.8920 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+442.8920 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2040.jpg'
+442.8920 	EXP 	image_emotion_meas_pos: autoDraw = True
+442.9406 	DATA 	Mouse:  Left button up, pos=(1014,207)
+452.8893 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+452.8934 	EXP 	image_emotion_meas_pos: autoDraw = False
+452.8934 	EXP 	image_emotion_meas_pos: autoDraw = False
+452.8934 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2040.jpg'
+452.8934 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+452.8934 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+454.3723 	DATA 	Mouse: Left button down, pos=(1254,343)
+454.4407 	DATA 	Mouse:  Left button up, pos=(1253,343)
+454.8266 	DATA 	Mouse: Left button down, pos=(968,195)
+454.8267 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+454.8267 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.935
+454.8267 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.481), (4, 1.935)]
+454.8327 	EXP 	New trial (rep=0, index=15): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 7502.0), ('description', 'disney land'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\7502.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+454.8534 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+454.8534 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+454.8534 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+454.8534 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\7502.jpg'
+454.8534 	EXP 	image_emotion_meas_pos: autoDraw = True
+454.9148 	DATA 	Mouse:  Left button up, pos=(968,195)
+464.8552 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+464.8594 	EXP 	image_emotion_meas_pos: autoDraw = False
+464.8594 	EXP 	image_emotion_meas_pos: autoDraw = False
+464.8594 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\7502.jpg'
+464.8594 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+464.8594 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+465.8233 	DATA 	Mouse: Left button down, pos=(1239,348)
+465.9045 	DATA 	Mouse:  Left button up, pos=(1239,348)
+466.2425 	DATA 	Mouse: Left button down, pos=(1001,209)
+466.2427 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+466.2427 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.385
+466.2427 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 0.966), (4, 1.385)]
+466.2488 	EXP 	New trial (rep=0, index=16): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 1463.0), ('description', 'group of cats'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\1463.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+466.2696 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+466.2696 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+466.2696 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+466.2696 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\1463.jpg'
+466.2696 	EXP 	image_emotion_meas_pos: autoDraw = True
+466.3305 	DATA 	Mouse:  Left button up, pos=(1001,209)
+476.2813 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+476.2858 	EXP 	image_emotion_meas_pos: autoDraw = False
+476.2858 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\1463.jpg'
+476.2858 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+476.2858 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+477.4744 	DATA 	Mouse: Left button down, pos=(1250,331)
+477.5486 	DATA 	Mouse:  Left button up, pos=(1250,331)
+478.3215 	DATA 	Mouse: Left button down, pos=(1032,211)
+478.3216 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+478.3216 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.038
+478.3217 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.191), (4, 2.038)]
+478.3266 	EXP 	New trial (rep=0, index=17): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 8497.0), ('description', 'family on rollercoaster'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\8497.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+478.3459 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+478.3459 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+478.3459 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+478.3459 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\8497.jpg'
+478.3459 	EXP 	image_emotion_meas_pos: autoDraw = True
+478.4345 	DATA 	Mouse:  Left button up, pos=(1032,211)
+488.3450 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+488.3488 	EXP 	image_emotion_meas_pos: autoDraw = False
+488.3488 	EXP 	image_emotion_meas_pos: autoDraw = False
+488.3488 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\8497.jpg'
+488.3488 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+488.3488 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+489.3451 	DATA 	Mouse: Left button down, pos=(1229,339)
+489.4133 	DATA 	Mouse:  Left button up, pos=(1229,339)
+489.8406 	DATA 	Mouse: Left button down, pos=(1024,190)
+489.8408 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+489.8408 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.495
+489.8408 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 0.999), (4, 1.494)]
+489.8456 	EXP 	New trial (rep=0, index=18): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 5982.0), ('description', 'clouds 2'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\5982.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+489.8672 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+489.8672 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+489.8672 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+489.8672 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\5982.jpg'
+489.8672 	EXP 	image_emotion_meas_pos: autoDraw = True
+489.9225 	DATA 	Mouse:  Left button up, pos=(1026,190)
+499.8654 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+499.8699 	EXP 	image_emotion_meas_pos: autoDraw = False
+499.8699 	EXP 	image_emotion_meas_pos: autoDraw = False
+499.8699 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\5982.jpg'
+499.8699 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+499.8699 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+501.0573 	DATA 	Mouse: Left button down, pos=(1277,346)
+501.1656 	DATA 	Mouse:  Left button up, pos=(1277,346)
+501.8917 	DATA 	Mouse: Left button down, pos=(1045,194)
+501.8919 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+501.8919 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.024
+501.8919 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.19), (4, 2.024)]
+501.8977 	EXP 	New trial (rep=0, index=19): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2070.0), ('description', 'baby suprise'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2070.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+501.9225 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+501.9225 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+501.9225 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+501.9225 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2070.jpg'
+501.9225 	EXP 	image_emotion_meas_pos: autoDraw = True
+501.9976 	DATA 	Mouse:  Left button up, pos=(1045,194)
+511.9201 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+511.9244 	EXP 	image_emotion_meas_pos: autoDraw = False
+511.9244 	EXP 	image_emotion_meas_pos: autoDraw = False
+511.9244 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2070.jpg'
+511.9244 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+511.9244 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+513.0254 	DATA 	Mouse: Left button down, pos=(1274,334)
+513.0796 	DATA 	Mouse:  Left button up, pos=(1274,334)
+513.4999 	DATA 	Mouse: Left button down, pos=(1061,205)
+513.5001 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+513.5001 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.578
+513.5001 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.103), (4, 1.578)]
+513.5058 	EXP 	New trial (rep=0, index=20): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 5780.0), ('description', 'lakeview'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\5780.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+513.5326 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+513.5326 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+513.5326 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+513.5326 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\5780.jpg'
+513.5326 	EXP 	image_emotion_meas_pos: autoDraw = True
+513.5678 	DATA 	Mouse:  Left button up, pos=(1061,205)
+523.5277 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+523.5313 	EXP 	image_emotion_meas_pos: autoDraw = False
+523.5313 	EXP 	image_emotion_meas_pos: autoDraw = False
+523.5313 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\5780.jpg'
+523.5313 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+523.5313 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+524.7874 	DATA 	Mouse: Left button down, pos=(1235,331)
+524.8686 	DATA 	Mouse:  Left button up, pos=(1235,331)
+525.1873 	DATA 	Mouse: Left button down, pos=(1046,208)
+525.1874 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+525.1874 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.658
+525.1875 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.258), (4, 1.658)]
+525.1928 	EXP 	New trial (rep=0, index=21): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 1460.0), ('description', 'tiger cub'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\1460.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+525.2160 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+525.2160 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+525.2160 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+525.2160 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\1460.jpg'
+525.2160 	EXP 	image_emotion_meas_pos: autoDraw = True
+525.2646 	DATA 	Mouse:  Left button up, pos=(1046,208)
+535.2204 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+535.2249 	EXP 	image_emotion_meas_pos: autoDraw = False
+535.2249 	EXP 	image_emotion_meas_pos: autoDraw = False
+535.2249 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\1460.jpg'
+535.2249 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+535.2249 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+536.3175 	DATA 	Mouse: Left button down, pos=(1256,324)
+536.4114 	DATA 	Mouse:  Left button up, pos=(1256,324)
+536.8116 	DATA 	Mouse: Left button down, pos=(1053,205)
+536.8117 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+536.8118 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.589
+536.8118 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.095), (4, 1.589)]
+536.8177 	EXP 	New trial (rep=0, index=22): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 8330.0), ('description', 'women and trophy'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\8330.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+536.8430 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+536.8430 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+536.8430 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+536.8430 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\8330.jpg'
+536.8430 	EXP 	image_emotion_meas_pos: autoDraw = True
+536.8975 	DATA 	Mouse:  Left button up, pos=(1053,205)
+546.8389 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+546.8423 	EXP 	image_emotion_meas_pos: autoDraw = False
+546.8423 	EXP 	image_emotion_meas_pos: autoDraw = False
+546.8423 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\8330.jpg'
+546.8423 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+546.8423 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+548.0844 	DATA 	Mouse: Left button down, pos=(1226,334)
+548.1784 	DATA 	Mouse:  Left button up, pos=(1226,334)
+548.5055 	DATA 	Mouse: Left button down, pos=(1042,194)
+548.5057 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+548.5057 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.665
+548.5057 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.244), (4, 1.665)]
+548.5096 	EXP 	New trial (rep=0, index=23): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2391.0), ('description', 'boy and grandpa fishing'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2391.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+548.5352 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+548.5352 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+548.5352 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+548.5352 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2391.jpg'
+548.5352 	EXP 	image_emotion_meas_pos: autoDraw = True
+548.5977 	DATA 	Mouse:  Left button up, pos=(1042,194)
+558.5305 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+558.5357 	EXP 	image_emotion_meas_pos: autoDraw = False
+558.5357 	EXP 	image_emotion_meas_pos: autoDraw = False
+558.5357 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2391.jpg'
+558.5357 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+558.5357 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+559.7493 	DATA 	Mouse: Left button down, pos=(1273,335)
+559.8376 	DATA 	Mouse:  Left button up, pos=(1273,334)
+560.1898 	DATA 	Mouse: Left button down, pos=(1050,210)
+560.1899 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+560.1899 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.658
+560.1899 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.217), (4, 1.658)]
+560.1957 	EXP 	New trial (rep=0, index=24): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2339.0), ('description', 'football group'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2339.jpg'), ('pic_width', 800), ('pic_height', 600), ('new_width', 2.4), ('new_height', 1), ('new_size', '(2.4, 1)')])
+560.2247 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+560.2247 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+560.2247 	EXP 	image_emotion_meas_pos: size = array([2.4, 1. ])
+560.2247 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2339.jpg'
+560.2247 	EXP 	image_emotion_meas_pos: autoDraw = True
+560.2736 	DATA 	Mouse:  Left button up, pos=(1052,211)
+570.2276 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+570.2315 	EXP 	image_emotion_meas_pos: autoDraw = False
+570.2315 	EXP 	image_emotion_meas_pos: autoDraw = False
+570.2315 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2339.jpg'
+570.2315 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+570.2315 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+571.1728 	DATA 	Keypress: lctrl
+573.9224 	DATA 	Mouse: Left button down, pos=(1286,345)
+573.9826 	DATA 	Mouse:  Left button up, pos=(1286,345)
+574.3897 	DATA 	Mouse: Left button down, pos=(1226,321)
+574.4497 	DATA 	Mouse:  Left button up, pos=(1223,323)
+574.8576 	DATA 	Mouse: Left button down, pos=(1017,190)
+574.8578 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+574.8578 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=4.629
+574.8578 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 4.16), (4, 4.628)]
+574.8637 	EXP 	New trial (rep=0, index=25): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 7325.0), ('description', 'girl and watermelon'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\7325.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+574.9120 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+574.9120 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+574.9120 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+574.9120 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\7325.jpg'
+574.9120 	EXP 	image_emotion_meas_pos: autoDraw = True
+574.9396 	DATA 	Mouse:  Left button up, pos=(1017,190)
+584.9134 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+584.9177 	EXP 	image_emotion_meas_pos: autoDraw = False
+584.9177 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\7325.jpg'
+584.9177 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+584.9177 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+588.9482 	DATA 	Mouse: Left button down, pos=(1214,364)
+589.0436 	DATA 	Mouse:  Left button up, pos=(1227,362)
+589.5249 	DATA 	Mouse: Left button down, pos=(1017,198)
+589.5251 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+589.5251 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=4.610
+589.5251 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 4.108), (4, 4.61)]
+589.5296 	EXP 	New trial (rep=0, index=26): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 8470.0), ('description', 'gymnist success'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\8470.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+589.5529 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+589.5529 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+589.5529 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+589.5529 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\8470.jpg'
+589.5529 	EXP 	image_emotion_meas_pos: autoDraw = True
+589.6066 	DATA 	Mouse:  Left button up, pos=(1017,198)
+599.5476 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+599.5516 	EXP 	image_emotion_meas_pos: autoDraw = False
+599.5516 	EXP 	image_emotion_meas_pos: autoDraw = False
+599.5516 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\8470.jpg'
+599.5516 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+599.5516 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+601.5554 	DATA 	Mouse: Left button down, pos=(1235,334)
+601.6455 	DATA 	Mouse:  Left button up, pos=(1235,334)
+601.9577 	DATA 	Mouse: Left button down, pos=(1009,196)
+601.9578 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+601.9578 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.409
+601.9578 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 2.006), (4, 2.409)]
+601.9626 	EXP 	New trial (rep=0, index=27): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2057.0), ('description', 'sitting baby'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2057.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+601.9819 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+601.9819 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+601.9819 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+601.9819 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2057.jpg'
+601.9819 	EXP 	image_emotion_meas_pos: autoDraw = True
+602.0436 	DATA 	Mouse:  Left button up, pos=(1009,196)
+611.9878 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+611.9920 	EXP 	image_emotion_meas_pos: autoDraw = False
+611.9920 	EXP 	image_emotion_meas_pos: autoDraw = False
+611.9920 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2057.jpg'
+611.9920 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+611.9920 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+614.2997 	DATA 	Mouse: Left button down, pos=(1268,355)
+614.3803 	DATA 	Mouse:  Left button up, pos=(1264,351)
+614.7415 	DATA 	Mouse: Left button down, pos=(1037,226)
+614.7417 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+614.7417 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.752
+614.7417 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 2.31), (4, 2.752)]
+614.7476 	EXP 	New trial (rep=0, index=28): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 5831.0), ('description', 'father and son beach'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\5831.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+614.7700 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+614.7700 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+614.7700 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+614.7700 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\5831.jpg'
+614.7700 	EXP 	image_emotion_meas_pos: autoDraw = True
+614.8186 	DATA 	Mouse:  Left button up, pos=(1037,226)
+624.7708 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+624.7745 	EXP 	image_emotion_meas_pos: autoDraw = False
+624.7745 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\5831.jpg'
+624.7745 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+624.7745 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+627.4714 	DATA 	Mouse: Left button down, pos=(1229,343)
+627.5398 	DATA 	Mouse:  Left button up, pos=(1229,343)
+628.1426 	DATA 	Mouse: Left button down, pos=(983,182)
+628.1427 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+628.1427 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=3.370
+628.1427 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 2.699), (4, 3.37)]
+628.1476 	EXP 	New trial (rep=0, index=29): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2332.0), ('description', 'girl and dog'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2332.jpg'), ('pic_width', 800), ('pic_height', 600), ('new_width', 2.4), ('new_height', 1), ('new_size', '(2.4, 1)')])
+628.1807 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+628.1807 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+628.1807 	EXP 	image_emotion_meas_pos: size = array([2.4, 1. ])
+628.1807 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2332.jpg'
+628.1807 	EXP 	image_emotion_meas_pos: autoDraw = True
+628.2356 	DATA 	Mouse:  Left button up, pos=(983,182)
+638.1789 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+638.1824 	EXP 	image_emotion_meas_pos: autoDraw = False
+638.1824 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2332.jpg'
+638.1824 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+638.1824 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+641.4152 	DATA 	Mouse: Left button down, pos=(1226,344)
+641.5166 	DATA 	Mouse:  Left button up, pos=(1226,344)
+641.8697 	DATA 	Mouse: Left button down, pos=(1013,223)
+641.8699 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+641.8699 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=3.690
+641.8699 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 3.235), (4, 3.69)]
+641.8747 	EXP 	New trial (rep=0, index=30): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 4626.0), ('description', 'marriage scene'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\4626.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+641.9202 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+641.9202 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+641.9202 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+641.9202 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\4626.jpg'
+641.9202 	EXP 	image_emotion_meas_pos: autoDraw = True
+641.9689 	DATA 	Mouse:  Left button up, pos=(1013,223)
+651.9214 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+651.9258 	EXP 	image_emotion_meas_pos: autoDraw = False
+651.9258 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\4626.jpg'
+651.9258 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+651.9258 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+653.3704 	DATA 	Mouse: Left button down, pos=(1227,336)
+653.4517 	DATA 	Mouse:  Left button up, pos=(1227,336)
+653.8515 	DATA 	Mouse: Left button down, pos=(1018,204)
+653.8516 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+653.8516 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.928
+653.8517 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.447), (4, 1.928)]
+653.8577 	EXP 	New trial (rep=0, index=31): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 5891.0), ('description', 'clouds 1'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\5891.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+653.8790 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+653.8790 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+653.8790 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+653.8790 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\5891.jpg'
+653.8790 	EXP 	image_emotion_meas_pos: autoDraw = True
+653.9615 	DATA 	Mouse:  Left button up, pos=(1018,204)
+663.8776 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+663.8814 	EXP 	image_emotion_meas_pos: autoDraw = False
+663.8814 	EXP 	image_emotion_meas_pos: autoDraw = False
+663.8814 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\5891.jpg'
+663.8814 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+663.8814 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+665.7538 	DATA 	Mouse: Left button down, pos=(1271,334)
+665.8474 	DATA 	Mouse:  Left button up, pos=(1270,334)
+666.4095 	DATA 	Mouse: Left button down, pos=(1063,217)
+666.4097 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+666.4097 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.530
+666.4097 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.875), (4, 2.53)]
+666.4157 	EXP 	New trial (rep=0, index=32): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2655.0), ('description', 'boy and dog'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2655.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+666.4369 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+666.4369 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+666.4369 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+666.4369 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2655.jpg'
+666.4369 	EXP 	image_emotion_meas_pos: autoDraw = True
+666.5055 	DATA 	Mouse:  Left button up, pos=(1063,217)
+676.4354 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+676.4400 	EXP 	image_emotion_meas_pos: autoDraw = False
+676.4400 	EXP 	image_emotion_meas_pos: autoDraw = False
+676.4400 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2655.jpg'
+676.4400 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+676.4400 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+677.6954 	DATA 	Mouse: Left button down, pos=(1206,307)
+677.7896 	DATA 	Mouse:  Left button up, pos=(1206,307)
+678.1418 	DATA 	Mouse: Left button down, pos=(1034,210)
+678.1420 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+678.1420 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.705
+678.1420 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 1.258), (4, 1.705)]
+678.1477 	EXP 	New trial (rep=0, index=33): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2304.0), ('description', 'smiling girl'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2304.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+678.1697 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+678.1697 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+678.1697 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+678.1697 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2304.jpg'
+678.1697 	EXP 	image_emotion_meas_pos: autoDraw = True
+678.2316 	DATA 	Mouse:  Left button up, pos=(1034,210)
+688.1697 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+688.1738 	EXP 	image_emotion_meas_pos: autoDraw = False
+688.1738 	EXP 	image_emotion_meas_pos: autoDraw = False
+688.1738 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2304.jpg'
+688.1738 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+688.1738 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+690.2554 	DATA 	Mouse: Left button down, pos=(1240,337)
+690.3577 	DATA 	Mouse:  Left button up, pos=(1240,337)
+700.0127 	DATA 	Keypress: lctrl
+706.8803 	DATA 	Mouse: Left button down, pos=(1042,202)
+706.8817 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+706.8817 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=18.710
+706.8817 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 2.084), (4, 18.71)]
+706.8867 	EXP 	New trial (rep=0, index=34): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 2341.0), ('description', 'children and kitten'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\2341.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+706.9201 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+706.9201 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+706.9201 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+706.9201 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\2341.jpg'
+706.9201 	EXP 	image_emotion_meas_pos: autoDraw = True
+706.9616 	DATA 	Mouse:  Left button up, pos=(1042,202)
+716.9094 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+716.9133 	EXP 	image_emotion_meas_pos: autoDraw = False
+716.9133 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\2341.jpg'
+716.9133 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+716.9133 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+719.1325 	DATA 	Mouse: Left button down, pos=(1245,361)
+719.2208 	DATA 	Mouse:  Left button up, pos=(1247,360)
+719.8226 	DATA 	Mouse: Left button down, pos=(1035,211)
+719.8228 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=4
+719.8228 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.911
+719.8228 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (4, 2.221), (4, 2.911)]
+719.8989 	DATA 	Mouse:  Left button up, pos=(1035,211)
+719.9000 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+719.9000 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+719.9000 	EXP 	text_cooldown_title: autoDraw = True
+719.9000 	EXP 	text_cooldown: autoDraw = True
+724.9036 	EXP 	text_cooldown_title: autoDraw = False
+724.9036 	EXP 	text_cooldown: autoDraw = False
+724.9036 	EXP 	text_cooldown_title: autoDraw = False
+724.9036 	EXP 	text_cooldown: autoDraw = False
+724.9036 	EXP 	text_cooldown_instructions: autoDraw = True
+724.9036 	EXP 	text_cooldown_instructions_title: autoDraw = True
+729.9083 	EXP 	text_cooldown_instructions: autoDraw = False
+729.9083 	EXP 	text_cooldown_instructions_title: autoDraw = False
+730.4087 	EXP 	text_cooldown_countdown: autoDraw = True
+740.4052 	EXP 	RatingScale rating_cooldown: reset()
+740.4094 	EXP 	text_cooldown_countdown: autoDraw = False
+740.4094 	EXP 	text_cooldown_instructions: autoDraw = False
+740.4094 	EXP 	text_cooldown_countdown: autoDraw = False
+740.4094 	EXP 	text_cooldown_instructions_title: autoDraw = False
+740.4094 	EXP 	rating_cooldown: autoDraw = True
+740.4094 	EXP 	text_cooldown_evaluation_title: autoDraw = True
+740.4094 	EXP 	text_cooldown_evaluation: autoDraw = True
+742.4033 	DATA 	Mouse: Left button down, pos=(753,338)
+742.4990 	DATA 	Mouse:  Left button up, pos=(753,338)
+742.9665 	DATA 	Mouse: Left button down, pos=(929,216)
+742.9666 	DATA 	RatingScale rating_cooldown: (mouse response) rating=2
+742.9666 	DATA 	RatingScale rating_cooldown: rating RT=2.559
+742.9666 	DATA 	RatingScale rating_cooldown: history=[(5.0, 0.0), (2, 1.996), (2, 2.559)]
+742.9785 	EXP 	rating_cooldown: autoDraw = False
+742.9785 	EXP 	text_cooldown_evaluation_title: autoDraw = False
+742.9785 	EXP 	text_cooldown_evaluation: autoDraw = False
+742.9785 	EXP 	text_cooldown_end: autoDraw = True
+742.9785 	EXP 	text_cooldown_end_instructions: autoDraw = True
+743.0568 	DATA 	Mouse:  Left button up, pos=(929,216)
+744.4633 	DATA 	Keypress: space
+744.4640 	EXP 	text_cooldown_end: autoDraw = False
+744.4640 	EXP 	text_cooldown_end_instructions: autoDraw = False
+744.4640 	EXP 	text_emotion_screen_neg_title: autoDraw = True
+744.4640 	EXP 	text_emotion_neg_screen: autoDraw = True
+749.4685 	EXP 	text_emotion_screen_neg_title: autoDraw = False
+749.4685 	EXP 	text_emotion_neg_screen: autoDraw = False
+749.4685 	EXP 	text_emotion_instruction_neg_title: autoDraw = True
+749.4685 	EXP 	text_emotion_instructions_neg: autoDraw = True
+754.1823 	DATA 	Keypress: space
+754.2018 	EXP 	Imported stimuli files\picture_list.xlsx as conditions, 28 conditions, 11 params
+754.2020 	EXP 	Created sequence: random, trialTypes=28, nReps=1, seed=None
+754.2023 	EXP 	New trial (rep=0, index=0): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 2410.0), ('description', 'math problem'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\2410.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+754.2470 	EXP 	text_emotion_instruction_neg_title: autoDraw = False
+754.2470 	EXP 	text_emotion_instructions_neg: autoDraw = False
+754.2470 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+754.2470 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\2410.jpg'
+754.2470 	EXP 	image_emotion_meas_neg: autoDraw = True
+764.2344 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+764.2414 	EXP 	image_emotion_meas_neg: autoDraw = False
+764.2414 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\2410.jpg'
+764.2414 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+764.2414 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+769.3042 	DATA 	Mouse: Left button down, pos=(1243,344)
+769.4336 	DATA 	Mouse:  Left button up, pos=(1243,344)
+770.0064 	DATA 	Mouse: Left button down, pos=(1008,198)
+770.0066 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=4
+770.0066 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=5.770
+770.0066 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (4, 5.068), (4, 5.77)]
+770.0117 	EXP 	New trial (rep=0, index=1): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 7380.0), ('description', 'cockroaches food'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\7380.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+770.0327 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+770.0327 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+770.0327 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+770.0327 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\7380.jpg'
+770.0327 	EXP 	image_emotion_meas_neg: autoDraw = True
+770.1146 	DATA 	Mouse:  Left button up, pos=(1008,198)
+780.0319 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+780.0356 	EXP 	image_emotion_meas_neg: autoDraw = False
+780.0356 	EXP 	image_emotion_meas_neg: autoDraw = False
+780.0356 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\7380.jpg'
+780.0356 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+780.0356 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+783.9222 	DATA 	Mouse: Left button down, pos=(1235,346)
+784.0645 	DATA 	Mouse:  Left button up, pos=(1235,345)
+785.0027 	DATA 	Mouse: Left button down, pos=(1031,219)
+785.0029 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=4
+785.0029 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=4.970
+785.0029 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (4, 3.889), (4, 4.97)]
+785.0087 	EXP 	New trial (rep=0, index=2): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 2688.0), ('description', 'poacher'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\2688.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+785.0331 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+785.0331 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+785.0331 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+785.0331 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\2688.jpg'
+785.0331 	EXP 	image_emotion_meas_neg: autoDraw = True
+785.1695 	DATA 	Mouse:  Left button up, pos=(1031,219)
+795.0343 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+795.0389 	EXP 	image_emotion_meas_neg: autoDraw = False
+795.0389 	EXP 	image_emotion_meas_neg: autoDraw = False
+795.0389 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\2688.jpg'
+795.0389 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+795.0389 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+796.8962 	DATA 	Mouse: Left button down, pos=(1246,336)
+796.9979 	DATA 	Mouse:  Left button up, pos=(1246,336)
+797.5398 	DATA 	Mouse: Left button down, pos=(1046,219)
+797.5399 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=4
+797.5400 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=2.504
+797.5400 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (4, 1.86), (4, 2.504)]
+797.5458 	EXP 	New trial (rep=0, index=3): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 1300.0), ('description', 'dog threat 1'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\1300.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+797.5670 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+797.5670 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+797.5670 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+797.5670 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\1300.jpg'
+797.5670 	EXP 	image_emotion_meas_neg: autoDraw = True
+797.6286 	DATA 	Mouse:  Left button up, pos=(1046,219)
+807.5681 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+807.5729 	EXP 	image_emotion_meas_neg: autoDraw = False
+807.5729 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\1300.jpg'
+807.5729 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+807.5729 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+808.7194 	DATA 	Mouse: Left button down, pos=(1235,323)
+808.8225 	DATA 	Mouse:  Left button up, pos=(1235,323)
+809.1126 	DATA 	Mouse: Left button down, pos=(1025,204)
+809.1127 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=4
+809.1127 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.542
+809.1127 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (4, 1.149), (4, 1.542)]
+809.1177 	EXP 	New trial (rep=0, index=4): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 2694.0), ('description', 'prison scene'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\2694.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+809.1390 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+809.1390 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+809.1390 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+809.1390 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\2694.jpg'
+809.1390 	EXP 	image_emotion_meas_neg: autoDraw = True
+809.1946 	DATA 	Mouse:  Left button up, pos=(1025,204)
+819.1395 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+819.1435 	EXP 	image_emotion_meas_neg: autoDraw = False
+819.1435 	EXP 	image_emotion_meas_neg: autoDraw = False
+819.1435 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\2694.jpg'
+819.1435 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+819.1435 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+820.4074 	DATA 	Mouse: Left button down, pos=(1238,340)
+820.5165 	DATA 	Mouse:  Left button up, pos=(1237,340)
+820.8705 	DATA 	Mouse: Left button down, pos=(987,199)
+820.8707 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=4
+820.8707 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.729
+820.8707 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (4, 1.266), (4, 1.729)]
+820.8767 	EXP 	New trial (rep=0, index=5): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 1301.0), ('description', ' dog threat 2'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\1301.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+820.8960 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+820.8960 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+820.8960 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+820.8960 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\1301.jpg'
+820.8960 	EXP 	image_emotion_meas_neg: autoDraw = True
+820.9446 	DATA 	Mouse:  Left button up, pos=(987,199)
+830.8971 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+830.9016 	EXP 	image_emotion_meas_neg: autoDraw = False
+830.9016 	EXP 	image_emotion_meas_neg: autoDraw = False
+830.9016 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\1301.jpg'
+830.9016 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+830.9016 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+832.0413 	DATA 	Mouse: Left button down, pos=(1235,348)
+832.1355 	DATA 	Mouse:  Left button up, pos=(1235,348)
+832.5084 	DATA 	Mouse: Left button down, pos=(996,215)
+832.5086 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=4
+832.5086 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.609
+832.5086 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (4, 1.142), (4, 1.609)]
+832.5149 	EXP 	New trial (rep=0, index=6): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 8400.0), ('description', 'rafting'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\8400.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+832.5350 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+832.5350 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+832.5350 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+832.5350 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\8400.jpg'
+832.5350 	EXP 	image_emotion_meas_neg: autoDraw = True
+832.5976 	DATA 	Mouse:  Left button up, pos=(996,215)
+842.5438 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+842.5475 	EXP 	image_emotion_meas_neg: autoDraw = False
+842.5475 	EXP 	image_emotion_meas_neg: autoDraw = False
+842.5475 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\8400.jpg'
+842.5475 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+842.5475 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+847.2553 	DATA 	Mouse: Left button down, pos=(1030,211)
+847.2554 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+847.2554 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=4.710
+847.2554 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 4.71)]
+847.2606 	EXP 	New trial (rep=0, index=7): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 9341.0), ('description', 'child in garbage river'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\9341.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+847.2831 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+847.2831 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+847.2831 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+847.2831 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\9341.jpg'
+847.2831 	EXP 	image_emotion_meas_neg: autoDraw = True
+847.4339 	DATA 	Mouse:  Left button up, pos=(1030,211)
+857.2793 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+857.2834 	EXP 	image_emotion_meas_neg: autoDraw = False
+857.2834 	EXP 	image_emotion_meas_neg: autoDraw = False
+857.2834 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\9341.jpg'
+857.2834 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+857.2834 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+858.9642 	DATA 	Mouse: Left button down, pos=(996,206)
+858.9644 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+858.9645 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.683
+858.9645 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.683)]
+858.9706 	EXP 	New trial (rep=0, index=8): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 2278.0), ('description', 'poor children'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\2278.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+858.9922 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+858.9922 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+858.9922 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+858.9922 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\2278.jpg'
+858.9922 	EXP 	image_emotion_meas_neg: autoDraw = True
+859.0476 	DATA 	Mouse:  Left button up, pos=(992,202)
+868.9979 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+869.0016 	EXP 	image_emotion_meas_neg: autoDraw = False
+869.0016 	EXP 	image_emotion_meas_neg: autoDraw = False
+869.0016 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\2278.jpg'
+869.0016 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+869.0016 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+870.0464 	DATA 	Mouse: Left button down, pos=(882,204)
+870.0466 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+870.0466 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.047
+870.0466 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.047)]
+870.0526 	EXP 	New trial (rep=0, index=9): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 7640.0), ('description', 'risky work place'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\7640.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+870.0730 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+870.0730 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+870.0730 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+870.0730 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\7640.jpg'
+870.0730 	EXP 	image_emotion_meas_neg: autoDraw = True
+870.1415 	DATA 	Mouse:  Left button up, pos=(882,204)
+880.0713 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+880.0756 	EXP 	image_emotion_meas_neg: autoDraw = False
+880.0756 	EXP 	image_emotion_meas_neg: autoDraw = False
+880.0756 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\7640.jpg'
+880.0756 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+880.0756 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+882.8963 	DATA 	Mouse: Left button down, pos=(902,213)
+882.8965 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+882.8965 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=2.823
+882.8965 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 2.823)]
+882.9017 	EXP 	New trial (rep=0, index=10): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 2375.1), ('description', 'famine'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\2375.1.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+882.9199 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+882.9199 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+882.9199 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+882.9199 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\2375.1.jpg'
+882.9199 	EXP 	image_emotion_meas_neg: autoDraw = True
+883.0296 	DATA 	Mouse:  Left button up, pos=(902,213)
+892.9207 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+892.9242 	EXP 	image_emotion_meas_neg: autoDraw = False
+892.9242 	EXP 	image_emotion_meas_neg: autoDraw = False
+892.9242 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\2375.1.jpg'
+892.9242 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+892.9242 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+896.7074 	DATA 	Mouse: Left button down, pos=(887,207)
+896.7077 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+896.7077 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=3.785
+896.7077 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 3.785)]
+896.7127 	EXP 	New trial (rep=0, index=11): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 2691.0), ('description', 'riot scene 2'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\2691.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+896.7341 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+896.7341 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+896.7341 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+896.7341 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\2691.jpg'
+896.7341 	EXP 	image_emotion_meas_neg: autoDraw = True
+896.8966 	DATA 	Mouse:  Left button up, pos=(887,207)
+906.7474 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+906.7516 	EXP 	image_emotion_meas_neg: autoDraw = False
+906.7516 	EXP 	image_emotion_meas_neg: autoDraw = False
+906.7516 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\2691.jpg'
+906.7516 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+906.7516 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+907.6893 	DATA 	Mouse: Left button down, pos=(878,205)
+907.6894 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+907.6894 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=0.940
+907.6894 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 0.94)]
+907.6957 	EXP 	New trial (rep=0, index=12): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 8185.0), ('description', 'skydiving'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\8185.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+907.7162 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+907.7162 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+907.7162 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+907.7162 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\8185.jpg'
+907.7162 	EXP 	image_emotion_meas_neg: autoDraw = True
+907.7846 	DATA 	Mouse:  Left button up, pos=(878,205)
+917.7284 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+917.7329 	EXP 	image_emotion_meas_neg: autoDraw = False
+917.7329 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\8185.jpg'
+917.7329 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+917.7329 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+919.3166 	DATA 	Mouse: Left button down, pos=(870,205)
+919.3167 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+919.3168 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.586
+919.3168 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.586)]
+919.3227 	EXP 	New trial (rep=0, index=13): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 2206.0), ('description', 'fingerprints'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\2206.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+919.3451 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+919.3451 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+919.3451 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+919.3451 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\2206.jpg'
+919.3451 	EXP 	image_emotion_meas_neg: autoDraw = True
+919.5285 	DATA 	Mouse:  Left button up, pos=(870,205)
+929.3545 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+929.3587 	EXP 	image_emotion_meas_neg: autoDraw = False
+929.3587 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\2206.jpg'
+929.3587 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+929.3587 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+930.9515 	DATA 	Mouse: Left button down, pos=(869,205)
+930.9516 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+930.9516 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.595
+930.9517 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.595)]
+930.9576 	EXP 	New trial (rep=0, index=14): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 1112.0), ('description', 'snake at feet'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\1112.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+930.9785 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+930.9785 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+930.9785 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+930.9785 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\1112.jpg'
+930.9785 	EXP 	image_emotion_meas_neg: autoDraw = True
+931.1346 	DATA 	Mouse:  Left button up, pos=(869,205)
+940.9881 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+940.9930 	EXP 	image_emotion_meas_neg: autoDraw = False
+940.9930 	EXP 	image_emotion_meas_neg: autoDraw = False
+940.9930 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\1112.jpg'
+940.9930 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+940.9930 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+942.5042 	DATA 	Mouse: Left button down, pos=(873,204)
+942.5043 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+942.5043 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.514
+942.5044 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.514)]
+942.5108 	EXP 	New trial (rep=0, index=15): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 9584.0), ('description', 'dentist'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\9584.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+942.5321 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+942.5321 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+942.5321 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+942.5321 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\9584.jpg'
+942.5321 	EXP 	image_emotion_meas_neg: autoDraw = True
+942.6235 	DATA 	Mouse:  Left button up, pos=(873,204)
+952.5276 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+952.5315 	EXP 	image_emotion_meas_neg: autoDraw = False
+952.5315 	EXP 	image_emotion_meas_neg: autoDraw = False
+952.5315 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\9584.jpg'
+952.5315 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+952.5315 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+986.8833 	DATA 	Mouse: Left button down, pos=(943,201)
+986.8835 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+986.8835 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=34.354
+986.8835 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 34.354)]
+986.8896 	EXP 	New trial (rep=0, index=16): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 2399.0), ('description', 'headache'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\2399.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+986.9081 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+986.9081 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+986.9081 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+986.9081 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\2399.jpg'
+986.9081 	EXP 	image_emotion_meas_neg: autoDraw = True
+987.0307 	DATA 	Mouse:  Left button up, pos=(943,201)
+996.9051 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+996.9099 	EXP 	image_emotion_meas_neg: autoDraw = False
+996.9099 	EXP 	image_emotion_meas_neg: autoDraw = False
+996.9099 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\2399.jpg'
+996.9099 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+996.9099 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1252.5355 	DATA 	Mouse: Left button down, pos=(861,357)
+1252.6315 	DATA 	Mouse:  Left button up, pos=(861,362)
+1253.1057 	DATA 	Mouse: Left button down, pos=(880,183)
+1253.1059 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1253.1059 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=256.199
+1253.1059 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 256.199)]
+1253.1117 	EXP 	New trial (rep=0, index=17): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 2683.0), ('description', 'riot scene 1'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\2683.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+1253.1350 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1253.1350 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1253.1350 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+1253.1350 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\2683.jpg'
+1253.1350 	EXP 	image_emotion_meas_neg: autoDraw = True
+1253.1695 	DATA 	Mouse:  Left button up, pos=(881,183)
+1263.1366 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+1263.1413 	EXP 	image_emotion_meas_neg: autoDraw = False
+1263.1413 	EXP 	image_emotion_meas_neg: autoDraw = False
+1263.1413 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\2683.jpg'
+1263.1413 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+1263.1413 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1266.7622 	DATA 	Mouse: Left button down, pos=(824,346)
+1266.8511 	DATA 	Mouse:  Left button up, pos=(824,346)
+1267.2369 	DATA 	Mouse: Left button down, pos=(914,215)
+1267.2371 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1267.2371 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=4.099
+1267.2371 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 4.099)]
+1267.2417 	EXP 	New trial (rep=0, index=18): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 2221.0), ('description', 'judge'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\2221.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+1267.2616 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1267.2616 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1267.2616 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+1267.2616 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\2221.jpg'
+1267.2616 	EXP 	image_emotion_meas_neg: autoDraw = True
+1267.3296 	DATA 	Mouse:  Left button up, pos=(914,215)
+1277.2633 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+1277.2683 	EXP 	image_emotion_meas_neg: autoDraw = False
+1277.2683 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\2221.jpg'
+1277.2683 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+1277.2683 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1278.3889 	DATA 	Mouse: Left button down, pos=(913,198)
+1278.3891 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1278.3891 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.124
+1278.3891 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.124)]
+1278.3948 	EXP 	New trial (rep=0, index=19): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 9417.0), ('description', 'getting a ticket'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\9417.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+1278.4151 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1278.4151 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1278.4151 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+1278.4151 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\9417.jpg'
+1278.4151 	EXP 	image_emotion_meas_neg: autoDraw = True
+1278.5107 	DATA 	Mouse:  Left button up, pos=(915,198)
+1288.4120 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+1288.4154 	EXP 	image_emotion_meas_neg: autoDraw = False
+1288.4154 	EXP 	image_emotion_meas_neg: autoDraw = False
+1288.4154 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\9417.jpg'
+1288.4154 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+1288.4154 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1289.3047 	DATA 	Mouse: Left button down, pos=(875,222)
+1289.3049 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1289.3049 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=0.892
+1289.3049 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 0.891)]
+1289.3107 	EXP 	New trial (rep=0, index=20): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 2276.0), ('description', 'child crying'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\2276.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+1289.3290 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1289.3290 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1289.3290 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+1289.3290 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\2276.jpg'
+1289.3290 	EXP 	image_emotion_meas_neg: autoDraw = True
+1289.4247 	DATA 	Mouse:  Left button up, pos=(874,222)
+1299.3261 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+1299.3293 	EXP 	image_emotion_meas_neg: autoDraw = False
+1299.3293 	EXP 	image_emotion_meas_neg: autoDraw = False
+1299.3293 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\2276.jpg'
+1299.3293 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+1299.3293 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1300.5218 	DATA 	Mouse: Left button down, pos=(935,211)
+1300.5221 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1300.5221 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.195
+1300.5221 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.195)]
+1300.5277 	EXP 	New trial (rep=0, index=21): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 8179.0), ('description', 'bungee jump'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\8179.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+1300.5500 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1300.5500 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1300.5500 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+1300.5500 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\8179.jpg'
+1300.5500 	EXP 	image_emotion_meas_neg: autoDraw = True
+1300.6796 	DATA 	Mouse:  Left button up, pos=(935,211)
+1310.5470 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+1310.5503 	EXP 	image_emotion_meas_neg: autoDraw = False
+1310.5503 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\8179.jpg'
+1310.5503 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+1310.5503 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1312.0546 	DATA 	Mouse: Left button down, pos=(875,202)
+1312.0547 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1312.0548 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.506
+1312.0548 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.506)]
+1312.0607 	EXP 	New trial (rep=0, index=22): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 1240.0), ('description', 'spider'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\1240.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+1312.0790 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1312.0790 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1312.0790 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+1312.0790 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\1240.jpg'
+1312.0790 	EXP 	image_emotion_meas_neg: autoDraw = True
+1312.1946 	DATA 	Mouse:  Left button up, pos=(875,201)
+1322.0786 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+1322.0823 	EXP 	image_emotion_meas_neg: autoDraw = False
+1322.0823 	EXP 	image_emotion_meas_neg: autoDraw = False
+1322.0823 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\1240.jpg'
+1322.0823 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+1322.0823 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1323.1560 	DATA 	Mouse: Left button down, pos=(929,196)
+1323.1563 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1323.1563 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.076
+1323.1563 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.076)]
+1323.1607 	EXP 	New trial (rep=0, index=23): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 5971.0), ('description', 'tornado 1'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\5971.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+1323.1811 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1323.1811 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1323.1811 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+1323.1811 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\5971.jpg'
+1323.1811 	EXP 	image_emotion_meas_neg: autoDraw = True
+1323.2707 	DATA 	Mouse:  Left button up, pos=(929,196)
+1333.1792 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+1333.1835 	EXP 	image_emotion_meas_neg: autoDraw = False
+1333.1835 	EXP 	image_emotion_meas_neg: autoDraw = False
+1333.1835 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\5971.jpg'
+1333.1835 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+1333.1835 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1334.1715 	DATA 	Mouse: Left button down, pos=(998,195)
+1334.1717 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1334.1717 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=0.990
+1334.1717 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 0.99)]
+1334.1769 	EXP 	New trial (rep=0, index=24): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 7211.0), ('description', '5 min before midnight'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\7211.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+1334.2004 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1334.2004 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1334.2004 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+1334.2004 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\7211.jpg'
+1334.2004 	EXP 	image_emotion_meas_neg: autoDraw = True
+1334.2688 	DATA 	Mouse:  Left button up, pos=(998,195)
+1344.1965 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+1344.2004 	EXP 	image_emotion_meas_neg: autoDraw = False
+1344.2004 	EXP 	image_emotion_meas_neg: autoDraw = False
+1344.2004 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\7211.jpg'
+1344.2004 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+1344.2004 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1345.2442 	DATA 	Mouse: Left button down, pos=(968,189)
+1345.2444 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1345.2444 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.046
+1345.2444 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.046)]
+1345.2509 	EXP 	New trial (rep=0, index=25): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 7590.0), ('description', 'traffic jam'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\7590.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+1345.2705 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1345.2705 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1345.2705 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+1345.2705 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\7590.jpg'
+1345.2705 	EXP 	image_emotion_meas_neg: autoDraw = True
+1345.3866 	DATA 	Mouse:  Left button up, pos=(968,189)
+1355.2699 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+1355.2736 	EXP 	image_emotion_meas_neg: autoDraw = False
+1355.2736 	EXP 	image_emotion_meas_neg: autoDraw = False
+1355.2736 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\7590.jpg'
+1355.2736 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+1355.2736 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1356.7797 	DATA 	Mouse: Left button down, pos=(975,189)
+1356.7798 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1356.7798 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.508
+1356.7798 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.508)]
+1356.7858 	EXP 	New trial (rep=0, index=26): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 5972.0), ('description', 'tornado 2'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\5972.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+1356.8047 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1356.8047 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1356.8047 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+1356.8047 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\5972.jpg'
+1356.8047 	EXP 	image_emotion_meas_neg: autoDraw = True
+1356.9336 	DATA 	Mouse:  Left button up, pos=(975,189)
+1366.8039 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+1366.8076 	EXP 	image_emotion_meas_neg: autoDraw = False
+1366.8076 	EXP 	image_emotion_meas_neg: autoDraw = False
+1366.8076 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\5972.jpg'
+1366.8076 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+1366.8076 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1367.9884 	DATA 	Mouse: Left button down, pos=(1019,174)
+1367.9886 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1367.9886 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.183
+1367.9886 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.183)]
+1367.9947 	EXP 	New trial (rep=0, index=27): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 9280.0), ('description', 'pollution'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\9280.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+1368.0161 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1368.0161 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1368.0161 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+1368.0161 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\9280.jpg'
+1368.0161 	EXP 	image_emotion_meas_neg: autoDraw = True
+1368.1457 	DATA 	Mouse:  Left button up, pos=(1019,173)
+1378.0148 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+1378.0194 	EXP 	image_emotion_meas_neg: autoDraw = False
+1378.0194 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\9280.jpg'
+1378.0194 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+1378.0194 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+1391.0574 	DATA 	Mouse: Left button down, pos=(949,209)
+1391.0575 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+1391.0575 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=13.041
+1391.0575 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 13.041)]
+1391.1264 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+1391.1264 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+1391.1264 	EXP 	text_cooldown_title: autoDraw = True
+1391.1264 	EXP 	text_cooldown: autoDraw = True
+1391.1829 	DATA 	Mouse:  Left button up, pos=(949,209)
+1396.1297 	EXP 	text_cooldown_title: autoDraw = False
+1396.1297 	EXP 	text_cooldown: autoDraw = False
+1396.1297 	EXP 	text_cooldown_title: autoDraw = False
+1396.1297 	EXP 	text_cooldown: autoDraw = False
+1396.1297 	EXP 	text_cooldown_instructions: autoDraw = True
+1396.1297 	EXP 	text_cooldown_instructions_title: autoDraw = True
+1401.1300 	EXP 	text_cooldown_instructions: autoDraw = False
+1401.1300 	EXP 	text_cooldown_instructions_title: autoDraw = False
+1401.6381 	EXP 	text_cooldown_countdown: autoDraw = True
+1411.6288 	EXP 	text_cooldown_countdown: autoDraw = False
+1411.6288 	EXP 	text_cooldown_instructions: autoDraw = False
+1411.6288 	EXP 	text_cooldown_countdown: autoDraw = False
+1411.6288 	EXP 	text_cooldown_instructions_title: autoDraw = False
+1411.6288 	EXP 	text_cooldown_measurement: autoDraw = True
+1416.6274 	EXP 	RatingScale rating_cooldown: reset()
+1416.6312 	EXP 	text_cooldown_measurement: autoDraw = False
+1416.6312 	EXP 	text_cooldown_measurement: autoDraw = False
+1416.6312 	EXP 	rating_cooldown: autoDraw = True
+1416.6312 	EXP 	text_cooldown_evaluation_title: autoDraw = True
+1416.6312 	EXP 	text_cooldown_evaluation: autoDraw = True
+1419.9183 	DATA 	Mouse: Left button down, pos=(742,349)
+1420.0204 	DATA 	Mouse:  Left button up, pos=(742,349)
+1420.4871 	DATA 	Mouse: Left button down, pos=(954,215)
+1420.4873 	DATA 	RatingScale rating_cooldown: (mouse response) rating=2
+1420.4873 	DATA 	RatingScale rating_cooldown: rating RT=3.858
+1420.4873 	DATA 	RatingScale rating_cooldown: history=[(5.0, 0.0), (2, 3.289), (2, 3.858)]
+1420.4994 	EXP 	rating_cooldown: autoDraw = False
+1420.4994 	EXP 	text_cooldown_evaluation_title: autoDraw = False
+1420.4994 	EXP 	text_cooldown_evaluation: autoDraw = False
+1420.4994 	EXP 	text_cooldown_end: autoDraw = True
+1420.4994 	EXP 	text_cooldown_end_instructions: autoDraw = True
+1420.5242 	DATA 	Mouse:  Left button up, pos=(953,215)
+1421.9000 	DATA 	Keypress: space
+1421.9115 	EXP 	text_cooldown_end: autoDraw = False
+1421.9115 	EXP 	text_cooldown_end_instructions: autoDraw = False
+1421.9115 	EXP 	text_ending_screen: autoDraw = True
+1421.9115 	EXP 	text_ending_subtitle: autoDraw = True
+1431.9135 	EXP 	text_ending_screen: autoDraw = False
+1431.9135 	EXP 	text_ending_subtitle: autoDraw = False
+1431.9135 	EXP 	text_ending_screen: autoDraw = False
+1431.9135 	EXP 	text_ending_subtitle: autoDraw = False
+1432.0048 	EXP 	window1: mouseVisible = True
