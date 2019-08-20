@@ -60,43 +60,46 @@ def main():
     # pre-processing
     gsr_fs = 4
     gsr_raw = stream_data['E4_Gsr_data']
-    gsr_raw_array = np.array(gsr_raw)
-    gsr_time = stream_data['E4_Gsr_time']
-    gsr_time_array = np.array(gsr_time)
-    gsr_mov_avg = gsr_generate_moving_averages(data=gsr_raw_array, sampling_frequency=gsr_fs, window=4, mode='same',
-                                               verbose=False)
-    print(gsr_raw_array)
-    gsr_filtered = gsr_zero_phase_filtering(data=gsr_raw_array, sampling_frequency=gsr_fs, f_cut=1.0, filter_order=4,
-                                            verbose=set_verbose)
-    # feature extraction
 
-    # plot results
-    if set_plot:
-        plt.figure()
-        plt.plot(gsr_time, gsr_raw_array)
-        plt.plot(gsr_time, gsr_filtered)
-        plt.plot(gsr_time, gsr_mov_avg)
-        plt.show()
+    if len(gsr_raw) > 0:
+        gsr_raw_array = np.array(gsr_raw)
+        gsr_time = stream_data['E4_Gsr_time']
+        gsr_time_array = np.array(gsr_time)
+        gsr_mov_avg = gsr_generate_moving_averages(data=gsr_raw_array, sampling_frequency=gsr_fs, window=4, mode='same',
+                                                   verbose=set_verbose)
+        print(gsr_raw_array)
+        gsr_filtered = gsr_zero_phase_filtering(data=gsr_raw_array, sampling_frequency=gsr_fs, f_cut=1.0,
+                                                filter_order=4, verbose=set_verbose)
+        # feature extraction
+
+        # plot results
+        if set_plot:
+            plt.figure()
+            plt.plot(gsr_time, gsr_raw_array)
+            plt.plot(gsr_time, gsr_filtered)
+            plt.plot(gsr_time, gsr_mov_avg)
+            plt.show()
 
     # ----------------- TEMPERATURE ----------------- #
 
     # pre-processing
     temp_fs = 4
     temp_raw = stream_data['E4_Temperature_data']
-    temp_raw_array = np.array(temp_raw)
-    temp_time = stream_data['E4_Temperature_time']
-    temp_time_array = np.array(temp_time)
+    if len(temp_raw) > 0:
+        temp_raw_array = np.array(temp_raw)
+        temp_time = stream_data['E4_Temperature_time']
+        temp_time_array = np.array(temp_time)
 
-    temp_mov_avg = gsr_generate_moving_averages(data=temp_raw_array, sampling_frequency=temp_fs, window=5, mode='same',
-                                                verbose=False)
-    # feature extraction
+        temp_mov_avg = gsr_generate_moving_averages(data=temp_raw_array, sampling_frequency=temp_fs, window=5,
+                                                    mode='same', verbose=set_verbose)
+        # feature extraction
 
-    # plot results
-    if set_plot:
-        plt.figure()
-        plt.plot(temp_time, temp_raw)
-        plt.plot(temp_time, temp_mov_avg)
-        plt.show()
+        # plot results
+        if set_plot:
+            plt.figure()
+            plt.plot(temp_time, temp_raw)
+            plt.plot(temp_time, temp_mov_avg)
+            plt.show()
     # ----------------- TAGS ----------------- #
 
     # pre-processing

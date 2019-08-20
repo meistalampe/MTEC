@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v3.1.3),
-    on August 15, 2019, at 00:14
+This experiment was created using PsychoPy3 Experiment Builder (v3.1.5),
+    on August 20, 2019, at 11:33
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -28,7 +28,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '3.1.3'
+psychopyVersion = '3.1.5'
 expName = 'MTEC_paradigm'  # from the Builder filename that created this script
 expInfo = {'participant': '', 'session': '001'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -44,7 +44,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='E:\\GitHub\\MTEC\\Paradigm\\MTEC_paradigm_lastrun.py',
+    originPath='C:\\Users\\Dominik\\Desktop\\GitHub\\MTEC\\Paradigm\\MTEC_paradigm_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -892,7 +892,7 @@ text_ending_subtitle = visual.TextStim(win=win, name='text_ending_subtitle',
     text='Thank you for participating!',
     font='Arial',
     pos=(0, -0.2), height=0.04, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
+    color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 
@@ -1155,6 +1155,8 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Baseline_ScreenComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
+thisExp.addData('text_baseline_screen.started', text_baseline_screen.tStartRefresh)
+thisExp.addData('text_baseline_screen.stopped', text_baseline_screen.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -1295,8 +1297,8 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Baseline_InstructionsComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('text_baseline_instructions_title.started', text_baseline_instructions_title.tStartRefresh)
-thisExp.addData('text_baseline_instructions_title.stopped', text_baseline_instructions_title.tStopRefresh)
+thisExp.addData('text_baseline_countdown.started', text_baseline_countdown.tStartRefresh)
+thisExp.addData('text_baseline_countdown.stopped', text_baseline_countdown.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -1784,6 +1786,8 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Stress_ScreenComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
+thisExp.addData('text_stress_screen.started', text_stress_screen.tStartRefresh)
+thisExp.addData('text_stress_screen.stopped', text_stress_screen.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -2360,14 +2364,12 @@ while continueRoutine:
 for thisComponent in Stress_EvaluationComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('text_part_one_evaluation.started', text_part_one_evaluation.tStartRefresh)
-thisExp.addData('text_part_one_evaluation.stopped', text_part_one_evaluation.tStopRefresh)
 # store data for thisExp (ExperimentHandler)
 thisExp.addData('rating_stress_part_one.response', rating_stress_part_one.getRating())
 thisExp.addData('rating_stress_part_one.rt', rating_stress_part_one.getRT())
 thisExp.nextEntry()
-thisExp.addData('text_part_one_evaluation_2.started', text_part_one_evaluation_2.tStartRefresh)
-thisExp.addData('text_part_one_evaluation_2.stopped', text_part_one_evaluation_2.tStopRefresh)
+thisExp.addData('rating_stress_part_one.started', rating_stress_part_one.tStart)
+thisExp.addData('rating_stress_part_one.stopped', rating_stress_part_one.tStop)
 # the Routine "Stress_Evaluation" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -2806,7 +2808,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 stroop_trials = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\stroop_stimuli.xlsx', selection='1:2'),
+    trialList=data.importConditions('stimuli files\\stroop_stimuli.xlsx', selection='1:6'),
     seed=None, name='stroop_trials')
 thisExp.addLoop(stroop_trials)  # add the loop to the experiment
 thisStroop_trial = stroop_trials.trialList[0]  # so we can initialise stimuli with some values
@@ -2918,8 +2920,6 @@ for thisStroop_trial in stroop_trials:
     for thisComponent in Stress_Part_Two_MeasurementComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    stroop_trials.addData('text_word_item.started', text_word_item.tStartRefresh)
-    stroop_trials.addData('text_word_item.stopped', text_word_item.tStopRefresh)
     # check responses
     if key_resp_stress_part_two.keys in ['', [], None]:  # No response was made
         key_resp_stress_part_two.keys = None
@@ -3114,6 +3114,8 @@ for thisComponent in Stress_Evaluation_2Components:
 thisExp.addData('rating_stress_part_two.response', rating_stress_part_two.getRating())
 thisExp.addData('rating_stress_part_two.rt', rating_stress_part_two.getRT())
 thisExp.nextEntry()
+thisExp.addData('rating_stress_part_two.started', rating_stress_part_two.tStart)
+thisExp.addData('rating_stress_part_two.stopped', rating_stress_part_two.tStop)
 # the Routine "Stress_Evaluation_2" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -3370,10 +3372,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Cooldown_ScreenComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('text_cooldown_title.started', text_cooldown_title.tStartRefresh)
-thisExp.addData('text_cooldown_title.stopped', text_cooldown_title.tStopRefresh)
-thisExp.addData('text_cooldown.started', text_cooldown.tStartRefresh)
-thisExp.addData('text_cooldown.stopped', text_cooldown.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -3514,8 +3512,8 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Cooldown_InstructionsComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('text_cooldown_instructions_title.started', text_cooldown_instructions_title.tStartRefresh)
-thisExp.addData('text_cooldown_instructions_title.stopped', text_cooldown_instructions_title.tStopRefresh)
+thisExp.addData('text_cooldown_countdown.started', text_cooldown_countdown.tStartRefresh)
+thisExp.addData('text_cooldown_countdown.stopped', text_cooldown_countdown.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -3747,6 +3745,8 @@ for thisComponent in Cooldown_EvaluationComponents:
 thisExp.addData('rating_cooldown.response', rating_cooldown.getRating())
 thisExp.addData('rating_cooldown.rt', rating_cooldown.getRT())
 thisExp.nextEntry()
+thisExp.addData('rating_cooldown.started', rating_cooldown.tStart)
+thisExp.addData('rating_cooldown.stopped', rating_cooldown.tStop)
 # the Routine "Cooldown_Evaluation" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -4003,10 +4003,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Emotion_ScreenComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('text_emotion_screen_title.started', text_emotion_screen_title.tStartRefresh)
-thisExp.addData('text_emotion_screen_title.stopped', text_emotion_screen_title.tStopRefresh)
-thisExp.addData('text_emotion_screen.started', text_emotion_screen.tStartRefresh)
-thisExp.addData('text_emotion_screen.stopped', text_emotion_screen.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -4130,10 +4126,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Emotion_Screen_PosComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('text_emotion_screen_pos_title.started', text_emotion_screen_pos_title.tStartRefresh)
-thisExp.addData('text_emotion_screen_pos_title.stopped', text_emotion_screen_pos_title.tStopRefresh)
-thisExp.addData('text_emotion_pos_screen.started', text_emotion_pos_screen.tStartRefresh)
-thisExp.addData('text_emotion_pos_screen.stopped', text_emotion_pos_screen.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -4316,7 +4308,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 emotion_trials_pos = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='1:36'),
+    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='32:36'),
     seed=None, name='emotion_trials_pos')
 thisExp.addLoop(emotion_trials_pos)  # add the loop to the experiment
 thisEmotion_trials_po = emotion_trials_pos.trialList[0]  # so we can initialise stimuli with some values
@@ -4509,6 +4501,8 @@ for thisEmotion_trials_po in emotion_trials_pos:
     # store data for emotion_trials_pos (TrialHandler)
     emotion_trials_pos.addData('rating_emotion_evaluation_pos.response', rating_emotion_evaluation_pos.getRating())
     emotion_trials_pos.addData('rating_emotion_evaluation_pos.rt', rating_emotion_evaluation_pos.getRT())
+    emotion_trials_pos.addData('rating_emotion_evaluation_pos.started', rating_emotion_evaluation_pos.tStart)
+    emotion_trials_pos.addData('rating_emotion_evaluation_pos.stopped', rating_emotion_evaluation_pos.tStop)
     # the Routine "Emotion_Evaluation_Pos" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
@@ -4650,10 +4644,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Cooldown_ScreenComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('text_cooldown_title.started', text_cooldown_title.tStartRefresh)
-thisExp.addData('text_cooldown_title.stopped', text_cooldown_title.tStopRefresh)
-thisExp.addData('text_cooldown.started', text_cooldown.tStartRefresh)
-thisExp.addData('text_cooldown.stopped', text_cooldown.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -4794,8 +4784,8 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Cooldown_InstructionsComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('text_cooldown_instructions_title.started', text_cooldown_instructions_title.tStartRefresh)
-thisExp.addData('text_cooldown_instructions_title.stopped', text_cooldown_instructions_title.tStopRefresh)
+thisExp.addData('text_cooldown_countdown.started', text_cooldown_countdown.tStartRefresh)
+thisExp.addData('text_cooldown_countdown.stopped', text_cooldown_countdown.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -4917,6 +4907,8 @@ for thisComponent in Cooldown_EvaluationComponents:
 thisExp.addData('rating_cooldown.response', rating_cooldown.getRating())
 thisExp.addData('rating_cooldown.rt', rating_cooldown.getRT())
 thisExp.nextEntry()
+thisExp.addData('rating_cooldown.started', rating_cooldown.tStart)
+thisExp.addData('rating_cooldown.stopped', rating_cooldown.tStop)
 # the Routine "Cooldown_Evaluation" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -5173,10 +5165,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Emotion_Screen_NegComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('text_emotion_screen_neg_title.started', text_emotion_screen_neg_title.tStartRefresh)
-thisExp.addData('text_emotion_screen_neg_title.stopped', text_emotion_screen_neg_title.tStopRefresh)
-thisExp.addData('text_emotion_neg_screen.started', text_emotion_neg_screen.tStartRefresh)
-thisExp.addData('text_emotion_neg_screen.stopped', text_emotion_neg_screen.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -5359,7 +5347,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 emotion_trials_neg = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='37:-1'),
+    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='37:40'),
     seed=None, name='emotion_trials_neg')
 thisExp.addLoop(emotion_trials_neg)  # add the loop to the experiment
 thisEmotion_trials_neg = emotion_trials_neg.trialList[0]  # so we can initialise stimuli with some values
@@ -5552,6 +5540,8 @@ for thisEmotion_trials_neg in emotion_trials_neg:
     # store data for emotion_trials_neg (TrialHandler)
     emotion_trials_neg.addData('rating_emotion_evaluation_neg.response', rating_emotion_evaluation_neg.getRating())
     emotion_trials_neg.addData('rating_emotion_evaluation_neg.rt', rating_emotion_evaluation_neg.getRT())
+    emotion_trials_neg.addData('rating_emotion_evaluation_neg.started', rating_emotion_evaluation_neg.tStart)
+    emotion_trials_neg.addData('rating_emotion_evaluation_neg.stopped', rating_emotion_evaluation_neg.tStop)
     # the Routine "Emotion_Evaluation_Neg" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     thisExp.nextEntry()
@@ -5693,10 +5683,6 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Cooldown_ScreenComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('text_cooldown_title.started', text_cooldown_title.tStartRefresh)
-thisExp.addData('text_cooldown_title.stopped', text_cooldown_title.tStopRefresh)
-thisExp.addData('text_cooldown.started', text_cooldown.tStartRefresh)
-thisExp.addData('text_cooldown.stopped', text_cooldown.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -5837,8 +5823,8 @@ while continueRoutine and routineTimer.getTime() > 0:
 for thisComponent in Cooldown_InstructionsComponents:
     if hasattr(thisComponent, "setAutoDraw"):
         thisComponent.setAutoDraw(False)
-thisExp.addData('text_cooldown_instructions_title.started', text_cooldown_instructions_title.tStartRefresh)
-thisExp.addData('text_cooldown_instructions_title.stopped', text_cooldown_instructions_title.tStopRefresh)
+thisExp.addData('text_cooldown_countdown.started', text_cooldown_countdown.tStartRefresh)
+thisExp.addData('text_cooldown_countdown.stopped', text_cooldown_countdown.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -6070,6 +6056,8 @@ for thisComponent in Cooldown_EvaluationComponents:
 thisExp.addData('rating_cooldown.response', rating_cooldown.getRating())
 thisExp.addData('rating_cooldown.rt', rating_cooldown.getRT())
 thisExp.nextEntry()
+thisExp.addData('rating_cooldown.started', rating_cooldown.tStart)
+thisExp.addData('rating_cooldown.stopped', rating_cooldown.tStop)
 # the Routine "Cooldown_Evaluation" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
@@ -6328,8 +6316,6 @@ for thisComponent in Ending_ScreenComponents:
         thisComponent.setAutoDraw(False)
 thisExp.addData('text_ending_screen.started', text_ending_screen.tStartRefresh)
 thisExp.addData('text_ending_screen.stopped', text_ending_screen.tStopRefresh)
-thisExp.addData('text_ending_subtitle.started', text_ending_subtitle.tStartRefresh)
-thisExp.addData('text_ending_subtitle.stopped', text_ending_subtitle.tStopRefresh)
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting
