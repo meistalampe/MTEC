@@ -1,0 +1,13 @@
+﻿path,weight,name,description,type,pictures,pic_width,pic_height,new_width,new_height,new_size,n,image_emotion_evaluation_neg.started_mean,image_emotion_evaluation_neg.started_raw,image_emotion_evaluation_neg.started_std,image_emotion_evaluation_neg.stopped_raw,rating_emotion_evaluation_neg.response_mean,rating_emotion_evaluation_neg.response_raw,rating_emotion_evaluation_neg.response_std,rating_emotion_evaluation_neg.rt_mean,rating_emotion_evaluation_neg.rt_raw,rating_emotion_evaluation_neg.rt_std,rating_emotion_evaluation_neg.started_mean,rating_emotion_evaluation_neg.started_raw,rating_emotion_evaluation_neg.started_std,rating_emotion_evaluation_neg.stopped_raw,order
+resources\pictures\,Negative\,1112.0,snake at feet,.jpg,resources\pictures\Negative\1112.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,276.0254211425781,276.0254211425781,0.0,,2.0,2.0,0.0,2.4149999618530273,2.4149999618530273,0.0,0.03954780101776123,0.03954780101776123,0.0,,0.0
+resources\pictures\,Negative\,1240.0,spider,.jpg,resources\pictures\Negative\1240.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,279.69036865234375,279.69036865234375,0.0,,2.0,2.0,0.0,1.3270000219345093,1.3270000219345093,0.0,0.017242200672626495,0.017242200672626495,0.0,,2.0
+resources\pictures\,Negative\,1300.0,dog threat 1,.jpg,resources\pictures\Negative\1300.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,278.4658508300781,278.4658508300781,0.0,,2.0,2.0,0.0,1.1979999542236328,1.1979999542236328,0.0,0.01786090061068535,0.01786090061068535,0.0,,1.0
+
+extraInfo
+participant,dominik
+session,001
+startTime,
+date,2019_Aug_22_1639
+expName,MTEC_paradigm
+psychopyVersion,3.1.3
+frameRate,147.90055155927558

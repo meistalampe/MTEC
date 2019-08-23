@@ -1,0 +1,601 @@
+6.3266 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0.85, 0.85, 0.85]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001DE96286048>, gamma=None, kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001DE962C8D68>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.3266 	EXP 	window1: recordFrameIntervals = False
+6.3939 	EXP 	window1: recordFrameIntervals = True
+6.4683 	EXP 	window1: recordFrameIntervals = False
+6.7277 	EXP 	Created text_welcome_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_welcome_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.7384 	EXP 	Created text_instructions_welcome_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_instructions_welcome_screen', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+6.7484 	EXP 	Created text_baseline_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='    Baseline \nMeasurement', units='height', win=Window(...), wrapWidth=1)
+6.7533 	EXP 	Created text_baseline_screen_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_screen_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Segment One:', units='height', win=Window(...), wrapWidth=1)
+6.7764 	EXP 	Created text_baseline_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_baseline_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.8042 	EXP 	Created text_baseline_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.2, italic=False, languageStyle='LTR', name='text_baseline_countdown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+6.8076 	EXP 	Created text_baseline_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+6.8428 	EXP 	Created text_baseline_measurement = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.4, italic=False, languageStyle='LTR', name='text_baseline_measurement', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='height', win=Window(...), wrapWidth=1)
+6.8691 	EXP 	Created rating_baseline = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_baseline', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+6.8737 	EXP 	Created text_baseline_evaluation_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_evaluation_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:', units='height', win=Window(...), wrapWidth=1)
+6.8832 	EXP 	Created text_baseline_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_baseline_evaluation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.8931 	EXP 	Created text_baseline_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Segment One.', units='height', win=Window(...), wrapWidth=1)
+6.8970 	EXP 	Created text_baseline_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+6.9002 	EXP 	Created text_stress_screen_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_screen_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Segment Two:', units='height', win=Window(...), wrapWidth=1)
+6.9060 	EXP 	Created text_stress_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_stress_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Stress Measurement', units='height', win=Window(...), wrapWidth=1)
+6.9083 	EXP 	Created text_stress_part_one_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_part_one_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Part One:', units='height', win=Window(...), wrapWidth=1)
+6.9140 	EXP 	Created text_stress_part_one = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_stress_part_one', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='7-Row', units='height', win=Window(...), wrapWidth=1)
+6.9166 	EXP 	Created text_stress_part_one_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_part_one_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+6.9424 	EXP 	Created text_stress_part_one_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='text_stress_part_one_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.9438 	EXP 	Created metronome = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=0.0, fillColor=array([1., 1., 1.]), fillColorSpace='rgb', fillRGB=array([1., 1., 1.]), interpolate=True, lineColor='black', lineColorSpace='named', lineRGB=array([0., 0., 0.]), lineWidth=1, name='metronome', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.2, 0.2]), units='height', vertices=ndarray(...), win=Window(...))
+6.9443 	EXP 	Created text_metronom_tic = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_metronom_tic', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+6.9474 	EXP 	Created text_part_one_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_one_evaluation', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:\n\n', units='height', win=Window(...), wrapWidth=1)
+6.9591 	EXP 	Created rating_stress_part_one = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_stress_part_one', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+6.9692 	EXP 	Created text_part_one_evaluation_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_part_one_evaluation_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+6.9756 	EXP 	Created text_part_one_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_part_one_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Part One.', units='height', win=Window(...), wrapWidth=1)
+6.9790 	EXP 	Created text_par_one_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_par_one_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+6.9813 	EXP 	Created text_part_two_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_two_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Part Two:', units='height', win=Window(...), wrapWidth=1)
+6.9865 	EXP 	Created text_part_two = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_part_two', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Stroop Test', units='height', win=Window(...), wrapWidth=1)
+6.9887 	EXP 	Created text_part_two_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_two_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+7.0088 	EXP 	Created text_part_two_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_part_two_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+7.0276 	EXP 	Created text_word_item = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.15, italic=False, languageStyle='LTR', name='text_word_item', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+7.0332 	EXP 	Created text_left_ans = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_left_ans', opacity=1.0, ori=0, pos=array([-0.6,  0. ]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+7.0377 	EXP 	Created text_right_ans = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_right_ans', opacity=1.0, ori=0, pos=array([0.6, 0. ]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+7.0413 	EXP 	Created text_part_two_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_part_two_evaluation', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:', units='height', win=Window(...), wrapWidth=1)
+7.0507 	EXP 	Created text_part_two_evaluation_2 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_part_two_evaluation_2', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+7.0624 	EXP 	Created rating_stress_part_two = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_stress_part_two', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+7.0684 	EXP 	Created text_stress_part_two_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_stress_part_two_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending part two.', units='height', win=Window(...), wrapWidth=1)
+7.0723 	EXP 	Created text_stress_part_two_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_stress_part_two_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+7.0750 	EXP 	Created text_cooldown_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Intermission:', units='height', win=Window(...), wrapWidth=1)
+7.0808 	EXP 	Created text_cooldown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Cooldown Phase', units='height', win=Window(...), wrapWidth=1)
+7.0898 	EXP 	Created text_cooldown_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+7.0938 	EXP 	Created text_cooldown_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.2, italic=False, languageStyle='LTR', name='text_cooldown_countdown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+7.0961 	EXP 	Created text_cooldown_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+7.0979 	EXP 	Created text_cooldown_measurement = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.4, italic=False, languageStyle='LTR', name='text_cooldown_measurement', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='height', win=Window(...), wrapWidth=1)
+7.1097 	EXP 	Created rating_cooldown = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_cooldown', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+7.1124 	EXP 	Created text_cooldown_evaluation_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_evaluation_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:', units='height', win=Window(...), wrapWidth=1)
+7.1201 	EXP 	Created text_cooldown_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_evaluation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+7.1274 	EXP 	Created text_cooldown_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Intermission.', units='height', win=Window(...), wrapWidth=1)
+7.1308 	EXP 	Created text_cooldown_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+7.1334 	EXP 	Created text_emotion_screen_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_emotion_screen_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Segment Three:', units='height', win=Window(...), wrapWidth=1)
+7.1418 	EXP 	Created text_emotion_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_emotion_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Visual Stimulation Test', units='height', win=Window(...), wrapWidth=1)
+7.1445 	EXP 	Created text_emotion_screen_pos_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_emotion_screen_pos_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Part One:', units='height', win=Window(...), wrapWidth=1)
+7.1486 	EXP 	Created text_emotion_pos_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_emotion_pos_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Positive', units='height', win=Window(...), wrapWidth=1)
+7.1509 	EXP 	Created text_emotion_instruction_pos_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_emotion_instruction_pos_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+7.1785 	EXP 	Created text_emotion_instructions_pos = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_emotion_instructions_pos', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+7.1808 	EXP 	Created image_emotion_meas_pos = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_emotion_meas_pos', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='height', win=Window(...))
+7.1831 	EXP 	Created image_emotion_evaluation_pos = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_emotion_evaluation_pos', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.3, 0.3]), texRes=128, units='height', win=Window(...))
+7.1948 	EXP 	Created rating_emotion_evaluation_pos = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=4, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=2.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_emotion_evaluation_pos', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=['1', '2', '3', '4'], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=3.0, win=Window(...))
+7.1971 	EXP 	Created text_cooldown_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Intermission:', units='height', win=Window(...), wrapWidth=1)
+7.2020 	EXP 	Created text_cooldown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Cooldown Phase', units='height', win=Window(...), wrapWidth=1)
+7.2106 	EXP 	Created text_cooldown_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+7.2147 	EXP 	Created text_cooldown_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.2, italic=False, languageStyle='LTR', name='text_cooldown_countdown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+7.2169 	EXP 	Created text_cooldown_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+7.2283 	EXP 	Created rating_cooldown = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_cooldown', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+7.2310 	EXP 	Created text_cooldown_evaluation_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_evaluation_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:', units='height', win=Window(...), wrapWidth=1)
+7.2386 	EXP 	Created text_cooldown_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_evaluation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+7.2450 	EXP 	Created text_cooldown_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Intermission.', units='height', win=Window(...), wrapWidth=1)
+7.2483 	EXP 	Created text_cooldown_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+7.2507 	EXP 	Created text_emotion_screen_neg_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_emotion_screen_neg_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Part Two:', units='height', win=Window(...), wrapWidth=1)
+7.2557 	EXP 	Created text_emotion_neg_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_emotion_neg_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Negative', units='height', win=Window(...), wrapWidth=1)
+7.2583 	EXP 	Created text_emotion_instruction_neg_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_emotion_instruction_neg_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+7.2880 	EXP 	Created text_emotion_instructions_neg = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_emotion_instructions_neg', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+7.2900 	EXP 	Created image_emotion_meas_neg = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_emotion_meas_neg', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1., 1.]), texRes=128, units='height', win=Window(...))
+7.2923 	EXP 	Created image_emotion_evaluation_neg = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='image_emotion_evaluation_neg', opacity=1.0, ori=0.0, pos=array([0. , 0.2]), size=array([0.3, 0.3]), texRes=128, units='height', win=Window(...))
+7.3039 	EXP 	Created rating_emotion_evaluation_neg = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=4, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=2.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_emotion_evaluation_neg', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=['1', '2', '3', '4'], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=3.0, win=Window(...))
+7.3064 	EXP 	Created text_cooldown_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text='Intermission:', units='height', win=Window(...), wrapWidth=1)
+7.3116 	EXP 	Created text_cooldown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Cooldown Phase', units='height', win=Window(...), wrapWidth=1)
+7.3206 	EXP 	Created text_cooldown_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+7.3249 	EXP 	Created text_cooldown_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.2, italic=False, languageStyle='LTR', name='text_cooldown_countdown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+7.3272 	EXP 	Created text_cooldown_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+7.3288 	EXP 	Created text_cooldown_measurement = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.4, italic=False, languageStyle='LTR', name='text_cooldown_measurement', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='height', win=Window(...), wrapWidth=1)
+7.3403 	EXP 	Created rating_cooldown = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_cooldown', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+7.3430 	EXP 	Created text_cooldown_evaluation_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_evaluation_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='Task finished:', units='height', win=Window(...), wrapWidth=1)
+7.3508 	EXP 	Created text_cooldown_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.075, italic=False, languageStyle='LTR', name='text_cooldown_evaluation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+7.3572 	EXP 	Created text_cooldown_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_cooldown_end', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Ending Intermission.', units='height', win=Window(...), wrapWidth=1)
+7.3606 	EXP 	Created text_cooldown_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_cooldown_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text="(Press 'Space' to continue)", units='height', win=Window(...), wrapWidth=1)
+7.3642 	EXP 	Created text_ending_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_ending_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='The End\n\n', units='height', win=Window(...), wrapWidth=1)
+7.3689 	EXP 	Created text_ending_subtitle = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_ending_subtitle', opacity=1.0, ori=0, pos=array([ 0. , -0.2]), rgb=array([0., 0., 0.]), text='Thank you for participating!', units='height', win=Window(...), wrapWidth=1)
+7.4396 	EXP 	rating_baseline: flipVert = False
+7.4396 	EXP 	rating_baseline: autoLog = True
+7.4396 	EXP 	rating_stress_part_one: flipVert = False
+7.4396 	EXP 	rating_stress_part_one: autoLog = True
+7.4396 	EXP 	rating_stress_part_two: flipVert = False
+7.4396 	EXP 	rating_stress_part_two: autoLog = True
+7.4396 	EXP 	rating_cooldown: flipVert = False
+7.4396 	EXP 	rating_cooldown: autoLog = True
+7.4396 	EXP 	rating_emotion_evaluation_pos: flipVert = False
+7.4396 	EXP 	rating_emotion_evaluation_pos: autoLog = True
+7.4396 	EXP 	rating_cooldown: flipVert = False
+7.4396 	EXP 	rating_cooldown: autoLog = True
+7.4396 	EXP 	rating_emotion_evaluation_neg: flipVert = False
+7.4396 	EXP 	rating_emotion_evaluation_neg: autoLog = True
+7.4396 	EXP 	rating_cooldown: flipVert = False
+7.4396 	EXP 	rating_cooldown: autoLog = True
+7.4396 	EXP 	text_welcome_screen: autoDraw = True
+7.4396 	EXP 	text_instructions_welcome_screen: autoDraw = True
+8.9481 	DATA 	Keypress: space
+8.9490 	EXP 	text_welcome_screen: autoDraw = False
+8.9490 	EXP 	text_instructions_welcome_screen: autoDraw = False
+8.9490 	EXP 	text_baseline_screen: autoDraw = True
+8.9490 	EXP 	text_baseline_screen_title: autoDraw = True
+13.9512 	EXP 	text_baseline_screen: autoDraw = False
+13.9512 	EXP 	text_baseline_screen_title: autoDraw = False
+13.9512 	EXP 	text_baseline_screen: autoDraw = False
+13.9512 	EXP 	text_baseline_screen_title: autoDraw = False
+13.9512 	EXP 	text_baseline_instructions: autoDraw = True
+13.9512 	EXP 	text_baseline_instructions_title: autoDraw = True
+18.9521 	EXP 	text_baseline_instructions: autoDraw = False
+18.9521 	EXP 	text_baseline_instructions_title: autoDraw = False
+19.4609 	EXP 	text_baseline_countdown: autoDraw = True
+29.4508 	EXP 	text_baseline_countdown: autoDraw = False
+29.4508 	EXP 	text_baseline_instructions: autoDraw = False
+29.4508 	EXP 	text_baseline_countdown: autoDraw = False
+29.4508 	EXP 	text_baseline_instructions_title: autoDraw = False
+29.4508 	EXP 	text_baseline_measurement: autoDraw = True
+34.4514 	EXP 	RatingScale rating_baseline: reset()
+34.4574 	EXP 	text_baseline_measurement: autoDraw = False
+34.4574 	EXP 	text_baseline_measurement: autoDraw = False
+34.4574 	EXP 	rating_baseline: autoDraw = True
+34.4574 	EXP 	text_baseline_evaluation_title: autoDraw = True
+34.4574 	EXP 	text_baseline_evaluation: autoDraw = True
+53.3576 	DATA 	Mouse: Left button down, pos=(710,322)
+53.4528 	DATA 	Mouse:  Left button up, pos=(711,322)
+53.7910 	DATA 	Mouse: Left button down, pos=(924,220)
+53.7912 	DATA 	RatingScale rating_baseline: (mouse response) rating=2
+53.7912 	DATA 	RatingScale rating_baseline: rating RT=19.338
+53.7912 	DATA 	RatingScale rating_baseline: history=[(5.0, 0.0), (2, 18.905), (2, 19.338)]
+53.8040 	EXP 	rating_baseline: autoDraw = False
+53.8040 	EXP 	text_baseline_evaluation_title: autoDraw = False
+53.8040 	EXP 	text_baseline_evaluation: autoDraw = False
+53.8040 	EXP 	text_baseline_end: autoDraw = True
+53.8040 	EXP 	text_baseline_end_instructions: autoDraw = True
+53.8554 	DATA 	Mouse:  Left button up, pos=(925,220)
+54.8055 	DATA 	Keypress: space
+54.8160 	EXP 	text_baseline_end: autoDraw = False
+54.8160 	EXP 	text_baseline_end_instructions: autoDraw = False
+54.8160 	EXP 	text_stress_screen_title: autoDraw = True
+54.8160 	EXP 	text_stress_screen: autoDraw = True
+59.8195 	EXP 	text_stress_screen_title: autoDraw = False
+59.8195 	EXP 	text_stress_screen: autoDraw = False
+59.8195 	EXP 	text_stress_part_one_title: autoDraw = True
+59.8195 	EXP 	text_stress_part_one: autoDraw = True
+64.8229 	EXP 	text_stress_part_one_title: autoDraw = False
+64.8229 	EXP 	text_stress_part_one: autoDraw = False
+64.8229 	EXP 	text_stress_part_one_title: autoDraw = False
+64.8229 	EXP 	text_stress_part_one: autoDraw = False
+64.8229 	EXP 	text_stress_part_one_instructions_title: autoDraw = True
+64.8229 	EXP 	text_stress_part_one_instructions: autoDraw = True
+65.7034 	DATA 	Keypress: space
+65.7430 	EXP 	Imported stimuli files\metronome.xlsx as conditions, 9 conditions, 2 params
+65.7431 	EXP 	Created sequence: sequential, trialTypes=9, nReps=1, seed=None
+65.7433 	EXP 	New trial (rep=0, index=0): OrderedDict([('Tick', 2), ('Color', 'green')])
+65.7457 	EXP 	text_stress_part_one_instructions_title: autoDraw = False
+65.7457 	EXP 	text_stress_part_one_instructions: autoDraw = False
+65.7457 	EXP 	metronome: fillColor = 'green (named)'
+65.7457 	EXP 	metronome: autoDraw = True
+66.2185 	EXP 	metronome: autoDraw = False
+66.2185 	EXP 	text_metronom_tic: autoDraw = True
+66.7121 	EXP 	New trial (rep=0, index=1): OrderedDict([('Tick', 3), ('Color', 'green')])
+66.7186 	EXP 	text_metronom_tic: autoDraw = False
+66.7186 	EXP 	metronome: fillColor = 'green (named)'
+66.7186 	EXP 	metronome: autoDraw = True
+67.2194 	EXP 	metronome: autoDraw = False
+67.2194 	EXP 	text_metronom_tic: autoDraw = True
+67.7129 	EXP 	New trial (rep=0, index=2): OrderedDict([('Tick', 4), ('Color', 'green')])
+67.7194 	EXP 	text_metronom_tic: autoDraw = False
+67.7194 	EXP 	metronome: fillColor = 'green (named)'
+67.7194 	EXP 	metronome: autoDraw = True
+68.2201 	EXP 	metronome: autoDraw = False
+68.2201 	EXP 	text_metronom_tic: autoDraw = True
+68.7136 	EXP 	New trial (rep=0, index=3): OrderedDict([('Tick', 5), ('Color', 'green')])
+68.7201 	EXP 	text_metronom_tic: autoDraw = False
+68.7201 	EXP 	metronome: fillColor = 'green (named)'
+68.7201 	EXP 	metronome: autoDraw = True
+69.2218 	EXP 	metronome: autoDraw = False
+69.2218 	EXP 	text_metronom_tic: autoDraw = True
+69.7155 	EXP 	New trial (rep=0, index=4): OrderedDict([('Tick', 6), ('Color', 'green')])
+69.7221 	EXP 	text_metronom_tic: autoDraw = False
+69.7221 	EXP 	metronome: fillColor = 'green (named)'
+69.7221 	EXP 	metronome: autoDraw = True
+70.2233 	EXP 	metronome: autoDraw = False
+70.2233 	EXP 	text_metronom_tic: autoDraw = True
+70.7169 	EXP 	New trial (rep=0, index=5): OrderedDict([('Tick', 7), ('Color', 'green')])
+70.7235 	EXP 	text_metronom_tic: autoDraw = False
+70.7235 	EXP 	metronome: fillColor = 'green (named)'
+70.7235 	EXP 	metronome: autoDraw = True
+71.2244 	EXP 	metronome: autoDraw = False
+71.2244 	EXP 	text_metronom_tic: autoDraw = True
+71.7177 	EXP 	New trial (rep=0, index=6): OrderedDict([('Tick', 8), ('Color', 'green')])
+71.7243 	EXP 	text_metronom_tic: autoDraw = False
+71.7243 	EXP 	metronome: fillColor = 'green (named)'
+71.7243 	EXP 	metronome: autoDraw = True
+72.2243 	EXP 	metronome: autoDraw = False
+72.2243 	EXP 	text_metronom_tic: autoDraw = True
+72.7178 	EXP 	New trial (rep=0, index=7): OrderedDict([('Tick', 9), ('Color', 'green')])
+72.7243 	EXP 	text_metronom_tic: autoDraw = False
+72.7243 	EXP 	metronome: fillColor = 'green (named)'
+72.7243 	EXP 	metronome: autoDraw = True
+73.2252 	EXP 	metronome: autoDraw = False
+73.2252 	EXP 	text_metronom_tic: autoDraw = True
+73.7187 	EXP 	New trial (rep=0, index=8): OrderedDict([('Tick', 10), ('Color', 'green')])
+73.7252 	EXP 	text_metronom_tic: autoDraw = False
+73.7252 	EXP 	metronome: fillColor = 'green (named)'
+73.7252 	EXP 	metronome: autoDraw = True
+74.2225 	EXP 	metronome: autoDraw = False
+74.2225 	EXP 	text_metronom_tic: autoDraw = True
+74.7335 	EXP 	RatingScale rating_stress_part_one: reset()
+74.7394 	EXP 	text_metronom_tic: autoDraw = False
+74.7394 	EXP 	text_part_one_evaluation: autoDraw = True
+74.7394 	EXP 	rating_stress_part_one: autoDraw = True
+74.7394 	EXP 	text_part_one_evaluation_2: autoDraw = True
+76.5178 	DATA 	Mouse: Left button down, pos=(756,322)
+76.6130 	DATA 	Mouse:  Left button up, pos=(754,323)
+77.0642 	DATA 	Mouse: Left button down, pos=(908,195)
+77.0643 	DATA 	RatingScale rating_stress_part_one: (mouse response) rating=2
+77.0643 	DATA 	RatingScale rating_stress_part_one: rating RT=2.329
+77.0643 	DATA 	RatingScale rating_stress_part_one: history=[(5.0, 0.0), (2, 1.783), (2, 2.329)]
+77.0769 	EXP 	text_part_one_evaluation: autoDraw = False
+77.0769 	EXP 	rating_stress_part_one: autoDraw = False
+77.0769 	EXP 	text_part_one_evaluation_2: autoDraw = False
+77.0769 	EXP 	text_part_one_end: autoDraw = True
+77.0769 	EXP 	text_par_one_end_instructions: autoDraw = True
+77.1343 	DATA 	Mouse:  Left button up, pos=(908,195)
+78.7495 	DATA 	Keypress: space
+78.7610 	EXP 	text_part_one_end: autoDraw = False
+78.7610 	EXP 	text_par_one_end_instructions: autoDraw = False
+78.7610 	EXP 	text_part_two_title: autoDraw = True
+78.7610 	EXP 	text_part_two: autoDraw = True
+83.7661 	EXP 	text_part_two_title: autoDraw = False
+83.7661 	EXP 	text_part_two: autoDraw = False
+83.7661 	EXP 	text_part_two_instructions_title: autoDraw = True
+83.7661 	EXP 	text_part_two_instructions: autoDraw = True
+85.2786 	DATA 	Keypress: space
+85.3004 	EXP 	Imported stimuli files\stroop_stimuli.xlsx as conditions, 5 conditions, 5 params
+85.3006 	EXP 	Created sequence: random, trialTypes=5, nReps=1, seed=None
+85.3008 	EXP 	New trial (rep=0, index=0): OrderedDict([('WordItem', 'red'), ('WordColor', 'magenta'), ('AnsLeft', 'red'), ('AnsRight', 'magenta'), ('AnsCorr', 'right')])
+85.3154 	EXP 	text_part_two_instructions_title: autoDraw = False
+85.3154 	EXP 	text_part_two_instructions: autoDraw = False
+85.3154 	EXP 	text_word_item: color = 'magenta (named)'
+85.3154 	EXP 	text_word_item: text = 'red'
+85.3154 	EXP 	text_left_ans: text = 'red'
+85.3154 	EXP 	text_right_ans: text = 'magenta'
+85.3154 	EXP 	text_word_item: autoDraw = True
+85.3154 	EXP 	text_left_ans: autoDraw = True
+85.3154 	EXP 	text_right_ans: autoDraw = True
+86.6436 	DATA 	Keypress: right
+86.6520 	EXP 	New trial (rep=0, index=1): OrderedDict([('WordItem', 'red'), ('WordColor', 'orange'), ('AnsLeft', 'red'), ('AnsRight', 'orange'), ('AnsCorr', 'right')])
+86.6600 	EXP 	text_word_item: autoDraw = False
+86.6600 	EXP 	text_left_ans: autoDraw = False
+86.6600 	EXP 	text_right_ans: autoDraw = False
+86.6600 	EXP 	text_word_item: color = 'orange (named)'
+86.6600 	EXP 	text_word_item: text = 'red'
+86.6600 	EXP 	text_left_ans: text = 'red'
+86.6600 	EXP 	text_right_ans: text = 'orange'
+86.6600 	EXP 	text_word_item: autoDraw = True
+86.6600 	EXP 	text_left_ans: autoDraw = True
+86.6600 	EXP 	text_right_ans: autoDraw = True
+86.9476 	DATA 	Keypress: right
+86.9560 	EXP 	New trial (rep=0, index=2): OrderedDict([('WordItem', 'red'), ('WordColor', 'yellow'), ('AnsLeft', 'red'), ('AnsRight', 'yellow'), ('AnsCorr', 'right')])
+86.9641 	EXP 	text_word_item: autoDraw = False
+86.9641 	EXP 	text_left_ans: autoDraw = False
+86.9641 	EXP 	text_right_ans: autoDraw = False
+86.9641 	EXP 	text_word_item: color = 'yellow (named)'
+86.9641 	EXP 	text_word_item: text = 'red'
+86.9641 	EXP 	text_left_ans: text = 'red'
+86.9641 	EXP 	text_right_ans: text = 'yellow'
+86.9641 	EXP 	text_word_item: autoDraw = True
+86.9641 	EXP 	text_left_ans: autoDraw = True
+86.9641 	EXP 	text_right_ans: autoDraw = True
+87.2116 	DATA 	Keypress: right
+87.2200 	EXP 	New trial (rep=0, index=3): OrderedDict([('WordItem', 'red'), ('WordColor', 'cyan'), ('AnsLeft', 'red'), ('AnsRight', 'cyan'), ('AnsCorr', 'right')])
+87.2270 	EXP 	text_word_item: autoDraw = False
+87.2270 	EXP 	text_left_ans: autoDraw = False
+87.2270 	EXP 	text_right_ans: autoDraw = False
+87.2270 	EXP 	text_word_item: color = 'cyan (named)'
+87.2270 	EXP 	text_word_item: text = 'red'
+87.2270 	EXP 	text_left_ans: text = 'red'
+87.2270 	EXP 	text_right_ans: text = 'cyan'
+87.2270 	EXP 	text_word_item: autoDraw = True
+87.2270 	EXP 	text_left_ans: autoDraw = True
+87.2270 	EXP 	text_right_ans: autoDraw = True
+87.4607 	DATA 	Keypress: right
+87.4690 	EXP 	New trial (rep=0, index=4): OrderedDict([('WordItem', 'red'), ('WordColor', 'green'), ('AnsLeft', 'red'), ('AnsRight', 'green'), ('AnsCorr', 'right')])
+87.4759 	EXP 	text_word_item: autoDraw = False
+87.4759 	EXP 	text_left_ans: autoDraw = False
+87.4759 	EXP 	text_right_ans: autoDraw = False
+87.4759 	EXP 	text_word_item: color = 'green (named)'
+87.4759 	EXP 	text_word_item: text = 'red'
+87.4759 	EXP 	text_left_ans: text = 'red'
+87.4759 	EXP 	text_right_ans: text = 'green'
+87.4759 	EXP 	text_word_item: autoDraw = True
+87.4759 	EXP 	text_left_ans: autoDraw = True
+87.4759 	EXP 	text_right_ans: autoDraw = True
+87.7625 	EXP 	RatingScale rating_stress_part_two: reset()
+87.7675 	DATA 	Keypress: right
+87.7688 	EXP 	text_word_item: autoDraw = False
+87.7688 	EXP 	text_left_ans: autoDraw = False
+87.7688 	EXP 	text_right_ans: autoDraw = False
+87.7688 	EXP 	text_part_two_evaluation: autoDraw = True
+87.7688 	EXP 	text_part_two_evaluation_2: autoDraw = True
+87.7688 	EXP 	rating_stress_part_two: autoDraw = True
+88.8798 	DATA 	Mouse: Left button down, pos=(827,356)
+88.9612 	DATA 	Mouse:  Left button up, pos=(827,356)
+89.3540 	DATA 	Mouse: Left button down, pos=(921,198)
+89.3541 	DATA 	RatingScale rating_stress_part_two: (mouse response) rating=3
+89.3541 	DATA 	RatingScale rating_stress_part_two: rating RT=1.590
+89.3542 	DATA 	RatingScale rating_stress_part_two: history=[(5.0, 0.0), (3, 1.116), (3, 1.59)]
+89.3671 	EXP 	text_part_two_evaluation: autoDraw = False
+89.3671 	EXP 	text_part_two_evaluation_2: autoDraw = False
+89.3671 	EXP 	rating_stress_part_two: autoDraw = False
+89.3671 	EXP 	text_stress_part_two_end: autoDraw = True
+89.3671 	EXP 	text_stress_part_two_end_instructions: autoDraw = True
+89.4114 	DATA 	Mouse:  Left button up, pos=(921,198)
+90.4815 	DATA 	Keypress: space
+90.4929 	EXP 	text_stress_part_two_end: autoDraw = False
+90.4929 	EXP 	text_stress_part_two_end_instructions: autoDraw = False
+90.4929 	EXP 	text_cooldown_title: autoDraw = True
+90.4929 	EXP 	text_cooldown: autoDraw = True
+95.4929 	EXP 	text_cooldown_title: autoDraw = False
+95.4929 	EXP 	text_cooldown: autoDraw = False
+95.4929 	EXP 	text_cooldown_title: autoDraw = False
+95.4929 	EXP 	text_cooldown: autoDraw = False
+95.4929 	EXP 	text_cooldown_instructions: autoDraw = True
+95.4929 	EXP 	text_cooldown_instructions_title: autoDraw = True
+100.4926 	EXP 	text_cooldown_instructions: autoDraw = False
+100.4926 	EXP 	text_cooldown_instructions_title: autoDraw = False
+100.9993 	EXP 	text_cooldown_countdown: autoDraw = True
+110.9966 	EXP 	text_cooldown_instructions: autoDraw = False
+110.9966 	EXP 	text_cooldown_countdown: autoDraw = False
+110.9966 	EXP 	text_cooldown_instructions_title: autoDraw = False
+110.9966 	EXP 	text_cooldown_measurement: autoDraw = True
+115.9914 	EXP 	RatingScale rating_cooldown: reset()
+115.9971 	EXP 	text_cooldown_measurement: autoDraw = False
+115.9971 	EXP 	text_cooldown_measurement: autoDraw = False
+115.9971 	EXP 	rating_cooldown: autoDraw = True
+115.9971 	EXP 	text_cooldown_evaluation_title: autoDraw = True
+115.9971 	EXP 	text_cooldown_evaluation: autoDraw = True
+119.0566 	DATA 	Mouse: Left button down, pos=(828,341)
+119.1169 	DATA 	Mouse:  Left button up, pos=(828,341)
+119.5769 	DATA 	Mouse: Left button down, pos=(939,190)
+119.5770 	DATA 	RatingScale rating_cooldown: (mouse response) rating=3
+119.5770 	DATA 	RatingScale rating_cooldown: rating RT=3.584
+119.5770 	DATA 	RatingScale rating_cooldown: history=[(5.0, 0.0), (3, 3.064), (3, 3.584)]
+119.5900 	EXP 	rating_cooldown: autoDraw = False
+119.5900 	EXP 	text_cooldown_evaluation_title: autoDraw = False
+119.5900 	EXP 	text_cooldown_evaluation: autoDraw = False
+119.5900 	EXP 	text_cooldown_end: autoDraw = True
+119.5900 	EXP 	text_cooldown_end_instructions: autoDraw = True
+119.6616 	DATA 	Mouse:  Left button up, pos=(939,190)
+120.8226 	DATA 	Keypress: space
+120.8232 	EXP 	text_cooldown_end: autoDraw = False
+120.8232 	EXP 	text_cooldown_end_instructions: autoDraw = False
+120.8232 	EXP 	text_emotion_screen_title: autoDraw = True
+120.8232 	EXP 	text_emotion_screen: autoDraw = True
+125.8249 	EXP 	text_emotion_screen_title: autoDraw = False
+125.8249 	EXP 	text_emotion_screen: autoDraw = False
+125.8249 	EXP 	text_emotion_screen_title: autoDraw = False
+125.8249 	EXP 	text_emotion_screen: autoDraw = False
+125.8249 	EXP 	text_emotion_screen_pos_title: autoDraw = True
+125.8249 	EXP 	text_emotion_pos_screen: autoDraw = True
+130.8302 	EXP 	text_emotion_screen_pos_title: autoDraw = False
+130.8302 	EXP 	text_emotion_pos_screen: autoDraw = False
+130.8302 	EXP 	text_emotion_screen_pos_title: autoDraw = False
+130.8302 	EXP 	text_emotion_pos_screen: autoDraw = False
+130.8302 	EXP 	text_emotion_instruction_pos_title: autoDraw = True
+130.8302 	EXP 	text_emotion_instructions_pos: autoDraw = True
+133.7125 	DATA 	Keypress: space
+133.7325 	EXP 	Imported stimuli files\picture_list.xlsx as conditions, 4 conditions, 11 params
+133.7327 	EXP 	Created sequence: random, trialTypes=4, nReps=1, seed=None
+133.7329 	EXP 	New trial (rep=0, index=0): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 8497.0), ('description', 'family on rollercoaster'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\8497.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+133.7750 	EXP 	text_emotion_instruction_pos_title: autoDraw = False
+133.7750 	EXP 	text_emotion_instructions_pos: autoDraw = False
+133.7750 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+133.7750 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\8497.jpg'
+133.7750 	EXP 	image_emotion_meas_pos: autoDraw = True
+143.7675 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+143.7737 	EXP 	image_emotion_meas_pos: autoDraw = False
+143.7737 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\8497.jpg'
+143.7737 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+143.7737 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+145.8337 	DATA 	Mouse: Left button down, pos=(1056,346)
+145.9150 	DATA 	Mouse:  Left button up, pos=(1056,345)
+146.2193 	DATA 	Mouse: Left button down, pos=(1044,222)
+146.2194 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=3
+146.2195 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.450
+146.2195 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (3, 2.065), (3, 2.45)]
+146.2254 	EXP 	New trial (rep=0, index=1): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 8470.0), ('description', 'gymnist success'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\8470.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+146.2448 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+146.2448 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+146.2448 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+146.2448 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\8470.jpg'
+146.2448 	EXP 	image_emotion_meas_pos: autoDraw = True
+146.2991 	DATA 	Mouse:  Left button up, pos=(1043,222)
+156.2458 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+156.2499 	EXP 	image_emotion_meas_pos: autoDraw = False
+156.2499 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\8470.jpg'
+156.2499 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+156.2499 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+157.0698 	DATA 	Mouse: Left button down, pos=(1050,315)
+157.1310 	DATA 	Mouse:  Left button up, pos=(1050,315)
+157.3811 	DATA 	Mouse: Left button down, pos=(1053,200)
+157.3812 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=3
+157.3812 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=1.133
+157.3812 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (3, 0.822), (3, 1.133)]
+157.3863 	EXP 	New trial (rep=0, index=2): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 8501.0), ('description', 'money'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\8501.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+157.4075 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+157.4075 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+157.4075 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+157.4075 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\8501.jpg'
+157.4075 	EXP 	image_emotion_meas_pos: autoDraw = True
+157.4621 	DATA 	Mouse:  Left button up, pos=(1051,200)
+167.4097 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+167.4125 	EXP 	image_emotion_meas_pos: autoDraw = False
+167.4125 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\8501.jpg'
+167.4125 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+167.4125 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+169.7348 	DATA 	Mouse: Left button down, pos=(1046,342)
+169.8230 	DATA 	Mouse:  Left button up, pos=(1048,342)
+170.1200 	DATA 	Mouse: Left button down, pos=(1043,206)
+170.1201 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=3
+170.1201 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.709
+170.1201 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (3, 2.324), (3, 2.709)]
+170.1263 	EXP 	New trial (rep=0, index=3): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Positive\\'), ('name', 8380.0), ('description', 'team medals'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Positive\\8380.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+170.1466 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+170.1466 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+170.1466 	EXP 	image_emotion_meas_pos: size = array([1.9, 1. ])
+170.1466 	EXP 	image_emotion_meas_pos: image = 'resources\\pictures\\Positive\\8380.jpg'
+170.1466 	EXP 	image_emotion_meas_pos: autoDraw = True
+170.2082 	DATA 	Mouse:  Left button up, pos=(1042,202)
+180.1472 	EXP 	RatingScale rating_emotion_evaluation_pos: reset()
+180.1508 	EXP 	image_emotion_meas_pos: autoDraw = False
+180.1508 	EXP 	image_emotion_evaluation_pos: image = 'resources\\pictures\\Positive\\8380.jpg'
+180.1508 	EXP 	image_emotion_evaluation_pos: autoDraw = True
+180.1508 	EXP 	rating_emotion_evaluation_pos: autoDraw = True
+182.2297 	DATA 	Mouse: Left button down, pos=(1047,324)
+182.3180 	DATA 	Mouse:  Left button up, pos=(1047,324)
+182.6020 	DATA 	Mouse: Left button down, pos=(1028,205)
+182.6021 	DATA 	RatingScale rating_emotion_evaluation_pos: (mouse response) rating=3
+182.6021 	DATA 	RatingScale rating_emotion_evaluation_pos: rating RT=2.453
+182.6021 	DATA 	RatingScale rating_emotion_evaluation_pos: history=[(2.0, 0.0), (3, 2.081), (3, 2.453)]
+182.6450 	EXP 	image_emotion_evaluation_pos: autoDraw = False
+182.6450 	EXP 	rating_emotion_evaluation_pos: autoDraw = False
+182.6450 	EXP 	text_cooldown_title: autoDraw = True
+182.6450 	EXP 	text_cooldown: autoDraw = True
+182.7073 	DATA 	Mouse:  Left button up, pos=(1027,204)
+187.6461 	EXP 	text_cooldown_title: autoDraw = False
+187.6461 	EXP 	text_cooldown: autoDraw = False
+187.6461 	EXP 	text_cooldown_title: autoDraw = False
+187.6461 	EXP 	text_cooldown: autoDraw = False
+187.6461 	EXP 	text_cooldown_instructions: autoDraw = True
+187.6461 	EXP 	text_cooldown_instructions_title: autoDraw = True
+192.6499 	EXP 	text_cooldown_instructions: autoDraw = False
+192.6499 	EXP 	text_cooldown_instructions_title: autoDraw = False
+193.1538 	EXP 	text_cooldown_countdown: autoDraw = True
+203.1467 	EXP 	RatingScale rating_cooldown: reset()
+203.1507 	EXP 	text_cooldown_countdown: autoDraw = False
+203.1507 	EXP 	text_cooldown_instructions: autoDraw = False
+203.1507 	EXP 	text_cooldown_countdown: autoDraw = False
+203.1507 	EXP 	text_cooldown_instructions_title: autoDraw = False
+203.1507 	EXP 	rating_cooldown: autoDraw = True
+203.1507 	EXP 	text_cooldown_evaluation_title: autoDraw = True
+203.1507 	EXP 	text_cooldown_evaluation: autoDraw = True
+209.6682 	DATA 	Mouse: Left button down, pos=(787,336)
+209.7490 	DATA 	Mouse:  Left button up, pos=(787,336)
+210.0699 	DATA 	Mouse: Left button down, pos=(921,219)
+210.0701 	DATA 	RatingScale rating_cooldown: (mouse response) rating=3
+210.0701 	DATA 	RatingScale rating_cooldown: rating RT=6.921
+210.0701 	DATA 	RatingScale rating_cooldown: history=[(5.0, 0.0), (3, 6.526), (3, 6.921)]
+210.0829 	EXP 	rating_cooldown: autoDraw = False
+210.0829 	EXP 	text_cooldown_evaluation_title: autoDraw = False
+210.0829 	EXP 	text_cooldown_evaluation: autoDraw = False
+210.0829 	EXP 	text_cooldown_end: autoDraw = True
+210.0829 	EXP 	text_cooldown_end_instructions: autoDraw = True
+210.1674 	DATA 	Mouse:  Left button up, pos=(921,219)
+211.1657 	DATA 	Keypress: space
+211.1663 	EXP 	text_cooldown_end: autoDraw = False
+211.1663 	EXP 	text_cooldown_end_instructions: autoDraw = False
+211.1663 	EXP 	text_emotion_screen_neg_title: autoDraw = True
+211.1663 	EXP 	text_emotion_neg_screen: autoDraw = True
+216.1709 	EXP 	text_emotion_screen_neg_title: autoDraw = False
+216.1709 	EXP 	text_emotion_neg_screen: autoDraw = False
+216.1709 	EXP 	text_emotion_screen_neg_title: autoDraw = False
+216.1709 	EXP 	text_emotion_neg_screen: autoDraw = False
+216.1709 	EXP 	text_emotion_instruction_neg_title: autoDraw = True
+216.1709 	EXP 	text_emotion_instructions_neg: autoDraw = True
+227.9525 	DATA 	Keypress: space
+227.9727 	EXP 	Imported stimuli files\picture_list.xlsx as conditions, 3 conditions, 11 params
+227.9729 	EXP 	Created sequence: random, trialTypes=3, nReps=1, seed=None
+227.9732 	EXP 	New trial (rep=0, index=0): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 1240.0), ('description', 'spider'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\1240.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+228.0146 	EXP 	text_emotion_instruction_neg_title: autoDraw = False
+228.0146 	EXP 	text_emotion_instructions_neg: autoDraw = False
+228.0146 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+228.0146 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\1240.jpg'
+228.0146 	EXP 	image_emotion_meas_neg: autoDraw = True
+238.0039 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+238.0109 	EXP 	image_emotion_meas_neg: autoDraw = False
+238.0109 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\1240.jpg'
+238.0109 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+238.0109 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+239.6918 	DATA 	Mouse: Left button down, pos=(863,342)
+239.7330 	DATA 	Mouse:  Left button up, pos=(864,342)
+240.0783 	DATA 	Mouse: Left button down, pos=(921,195)
+240.0785 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+240.0785 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=2.073
+240.0785 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 2.072)]
+240.0834 	EXP 	New trial (rep=0, index=1): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 1112.0), ('description', 'snake at feet'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\1112.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+240.1036 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+240.1036 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+240.1036 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+240.1036 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\1112.jpg'
+240.1036 	EXP 	image_emotion_meas_neg: autoDraw = True
+240.1581 	DATA 	Mouse:  Left button up, pos=(921,195)
+250.1026 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+250.1059 	EXP 	image_emotion_meas_neg: autoDraw = False
+250.1059 	EXP 	image_emotion_meas_neg: autoDraw = False
+250.1059 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\1112.jpg'
+250.1059 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+250.1059 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+251.2907 	DATA 	Mouse: Left button down, pos=(858,340)
+251.3989 	DATA 	Mouse:  Left button up, pos=(858,340)
+251.7100 	DATA 	Mouse: Left button down, pos=(890,207)
+251.7101 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+251.7101 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=1.606
+251.7101 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 1.606)]
+251.7163 	EXP 	New trial (rep=0, index=2): OrderedDict([('path', 'resources\\pictures\\'), ('weight', 'Negative\\'), ('name', 1300.0), ('description', 'dog threat 1'), ('type', '.jpg'), ('pictures', 'resources\\pictures\\Negative\\1300.jpg'), ('pic_width', 1024), ('pic_height', 768), ('new_width', 1.9), ('new_height', 1), ('new_size', '(1.9, 1)')])
+251.7356 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+251.7356 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+251.7356 	EXP 	image_emotion_meas_neg: size = array([1.9, 1. ])
+251.7356 	EXP 	image_emotion_meas_neg: image = 'resources\\pictures\\Negative\\1300.jpg'
+251.7356 	EXP 	image_emotion_meas_neg: autoDraw = True
+251.7901 	DATA 	Mouse:  Left button up, pos=(890,207)
+261.7361 	EXP 	RatingScale rating_emotion_evaluation_neg: reset()
+261.7399 	EXP 	image_emotion_meas_neg: autoDraw = False
+261.7399 	EXP 	image_emotion_evaluation_neg: image = 'resources\\pictures\\Negative\\1300.jpg'
+261.7399 	EXP 	image_emotion_evaluation_neg: autoDraw = True
+261.7399 	EXP 	rating_emotion_evaluation_neg: autoDraw = True
+279.6260 	DATA 	Mouse: Left button down, pos=(888,207)
+279.6261 	DATA 	RatingScale rating_emotion_evaluation_neg: (mouse response) rating=2
+279.6261 	DATA 	RatingScale rating_emotion_evaluation_neg: rating RT=17.888
+279.6261 	DATA 	RatingScale rating_emotion_evaluation_neg: history=[(2.0, 0.0), (2, 17.888)]
+279.6740 	EXP 	image_emotion_evaluation_neg: autoDraw = False
+279.6740 	EXP 	rating_emotion_evaluation_neg: autoDraw = False
+279.6740 	EXP 	text_cooldown_title: autoDraw = True
+279.6740 	EXP 	text_cooldown: autoDraw = True
+279.8243 	DATA 	Mouse:  Left button up, pos=(888,207)
+284.6742 	EXP 	text_cooldown_title: autoDraw = False
+284.6742 	EXP 	text_cooldown: autoDraw = False
+284.6742 	EXP 	text_cooldown_title: autoDraw = False
+284.6742 	EXP 	text_cooldown: autoDraw = False
+284.6742 	EXP 	text_cooldown_instructions: autoDraw = True
+284.6742 	EXP 	text_cooldown_instructions_title: autoDraw = True
+289.6769 	EXP 	text_cooldown_instructions: autoDraw = False
+289.6769 	EXP 	text_cooldown_instructions_title: autoDraw = False
+290.1816 	EXP 	text_cooldown_countdown: autoDraw = True
+300.1754 	EXP 	text_cooldown_countdown: autoDraw = False
+300.1754 	EXP 	text_cooldown_instructions: autoDraw = False
+300.1754 	EXP 	text_cooldown_countdown: autoDraw = False
+300.1754 	EXP 	text_cooldown_instructions_title: autoDraw = False
+300.1754 	EXP 	text_cooldown_measurement: autoDraw = True
+305.1757 	EXP 	RatingScale rating_cooldown: reset()
+305.1797 	EXP 	text_cooldown_measurement: autoDraw = False
+305.1797 	EXP 	text_cooldown_measurement: autoDraw = False
+305.1797 	EXP 	rating_cooldown: autoDraw = True
+305.1797 	EXP 	text_cooldown_evaluation_title: autoDraw = True
+305.1797 	EXP 	text_cooldown_evaluation: autoDraw = True
+311.6138 	DATA 	Mouse: Left button down, pos=(741,349)
+311.6879 	DATA 	Mouse:  Left button up, pos=(741,349)
+312.1220 	DATA 	Mouse: Left button down, pos=(918,207)
+312.1221 	DATA 	RatingScale rating_cooldown: (mouse response) rating=2
+312.1221 	DATA 	RatingScale rating_cooldown: rating RT=6.944
+312.1221 	DATA 	RatingScale rating_cooldown: history=[(5.0, 0.0), (2, 6.436), (2, 6.944)]
+312.1338 	EXP 	rating_cooldown: autoDraw = False
+312.1338 	EXP 	text_cooldown_evaluation_title: autoDraw = False
+312.1338 	EXP 	text_cooldown_evaluation: autoDraw = False
+312.1338 	EXP 	text_cooldown_end: autoDraw = True
+312.1338 	EXP 	text_cooldown_end_instructions: autoDraw = True
+312.2124 	DATA 	Mouse:  Left button up, pos=(918,207)
+314.1996 	DATA 	Keypress: space
+314.2003 	EXP 	text_cooldown_end: autoDraw = False
+314.2003 	EXP 	text_cooldown_end_instructions: autoDraw = False
+314.2003 	EXP 	text_ending_screen: autoDraw = True
+314.2003 	EXP 	text_ending_subtitle: autoDraw = True
+324.2025 	EXP 	text_ending_screen: autoDraw = False
+324.2025 	EXP 	text_ending_subtitle: autoDraw = False
+324.2025 	EXP 	text_ending_screen: autoDraw = False
+324.2025 	EXP 	text_ending_subtitle: autoDraw = False
+324.2872 	EXP 	window1: mouseVisible = True
