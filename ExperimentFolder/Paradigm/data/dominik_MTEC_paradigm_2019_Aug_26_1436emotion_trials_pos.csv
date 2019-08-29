@@ -1,0 +1,52 @@
+﻿path,weight,name,description,type,pictures,pic_width,pic_height,new_width,new_height,new_size,n,image_emotion_meas_pos.started_mean,image_emotion_meas_pos.started_raw,image_emotion_meas_pos.started_std,image_emotion_meas_pos.stopped_raw,order
+resources\pictures\,Positive\,1463.0,group of cats,.jpg,resources\pictures\Positive\1463.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1650.68994140625,1650.68994140625,0.0,,16.0
+resources\pictures\,Positive\,1710.0,three dogs,.jpg,resources\pictures\Positive\1710.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1520.669921875,1520.669921875,0.0,1520.6699646000052,3.0
+resources\pictures\,Positive\,1750.0,rabit,.jpg,resources\pictures\Positive\1750.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1780.7119140625,1780.7119140625,0.0,1780.7119615999982,29.0
+resources\pictures\,Positive\,1811.0,group of apes,.jpg,resources\pictures\Positive\1811.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1840.72509765625,1840.72509765625,0.0,,35.0
+resources\pictures\,Positive\,1942.0,group of turtles,.jpg,resources\pictures\Positive\1942.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1700.6968994140625,1700.6968994140625,0.0,1700.6969448000018,21.0
+resources\pictures\,Positive\,2040.0,baby on belly,.jpg,resources\pictures\Positive\2040.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1510.67724609375,1510.67724609375,0.0,1510.677277700015,2.0
+resources\pictures\,Positive\,2057.0,sitting baby,.jpg,resources\pictures\Positive\2057.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1490.7152099609375,1490.7152099609375,0.0,,0.0
+resources\pictures\,Positive\,2070.0,baby suprise,.jpg,resources\pictures\Positive\2070.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1670.68994140625,1670.68994140625,0.0,,18.0
+resources\pictures\,Positive\,2091.0,children and kitten,.jpg,resources\pictures\Positive\2091.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1740.7059326171875,1740.7059326171875,0.0,,25.0
+resources\pictures\,Positive\,2154.0,father and son,.jpg,resources\pictures\Positive\2154.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1790.7099609375,1790.7099609375,0.0,1790.709924099996,30.0
+resources\pictures\,Positive\,2304.0,smiling girl,.jpg,resources\pictures\Positive\2304.jpg,1024,768,1.7999999999999998,1,"(1.8, 1)",1.0,1530.6658935546875,1530.6658935546875,0.0,1530.665902800014,4.0
+resources\pictures\,Positive\,2311.0,mother daughter,.jpg,resources\pictures\Positive\2311.jpg,1024,768,1.7999999999999998,1,"(1.8, 1)",1.0,1890.73291015625,1890.73291015625,0.0,1890.7329619000084,40.0
+resources\pictures\,Positive\,2332.0,girl and dog,.jpg,resources\pictures\Positive\2332.jpg,800,600,2.1999999999999997,1,"(2.2, 1)",1.0,1680.70263671875,1680.70263671875,0.0,,19.0
+resources\pictures\,Positive\,2339.0,football group,.jpg,resources\pictures\Positive\2339.jpg,800,600,2.1999999999999997,1,"(2.2, 1)",1.0,1850.732421875,1850.732421875,0.0,1850.7324169000203,36.0
+resources\pictures\,Positive\,2341.0,children ,.jpg,resources\pictures\Positive\2341.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1610.68505859375,1610.68505859375,0.0,,12.0
+resources\pictures\,Positive\,2391.0,boy and grandpa fishing,.jpg,resources\pictures\Positive\2391.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1800.714111328125,1800.714111328125,0.0,,31.0
+resources\pictures\,Positive\,2550.0,happy elderly couple,.jpg,resources\pictures\Positive\2550.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1620.68798828125,1620.68798828125,0.0,1620.6879324000038,13.0
+resources\pictures\,Positive\,2655.0,boy and dog,.jpg,resources\pictures\Positive\2655.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1900.736083984375,1900.736083984375,0.0,,41.0
+resources\pictures\,Positive\,4626.0,marriage scene,.jpg,resources\pictures\Positive\4626.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1630.6868896484375,1630.6868896484375,0.0,1630.686924300011,14.0
+resources\pictures\,Positive\,5760.0,flowers,.jpg,resources\pictures\Positive\5760.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1710.700927734375,1710.700927734375,0.0,1710.7009551000083,22.0
+resources\pictures\,Positive\,5780.0,lakeview,.jpg,resources\pictures\Positive\5780.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1570.6944580078125,1570.6944580078125,0.0,1570.6944317000161,8.0
+resources\pictures\,Positive\,5831.0,father and son beach,.jpg,resources\pictures\Positive\5831.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1580.680908203125,1580.680908203125,0.0,,9.0
+resources\pictures\,Positive\,5833.0,sunny beach,.jpg,resources\pictures\Positive\5833.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1760.7099609375,1760.7099609375,0.0,1760.709935299994,27.0
+resources\pictures\,Positive\,5891.0,clouds 1,.jpg,resources\pictures\Positive\5891.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1660.68798828125,1660.68798828125,0.0,1660.6879961999948,17.0
+resources\pictures\,Positive\,1340.0,women and parrots,.jpg,resources\pictures\Positive\1340.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1590.68994140625,1590.68994140625,0.0,1590.6899486000184,10.0
+resources\pictures\,Positive\,5982.0,clouds 2,.jpg,resources\pictures\Positive\5982.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1560.68603515625,1560.68603515625,0.0,,7.0
+resources\pictures\,Positive\,7325.0,girl and watermelon,.jpg,resources\pictures\Positive\7325.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1870.73095703125,1870.73095703125,0.0,,38.0
+resources\pictures\,Positive\,7502.0,disney land,.jpg,resources\pictures\Positive\7502.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1550.67724609375,1550.67724609375,0.0,,6.0
+resources\pictures\,Positive\,8330.0,women and trophy,.jpg,resources\pictures\Positive\8330.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1810.7159423828125,1810.7159423828125,0.0,,32.0
+resources\pictures\,Positive\,8380.0,team medals,.jpg,resources\pictures\Positive\8380.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1600.68505859375,1600.68505859375,0.0,,11.0
+resources\pictures\,Positive\,8470.0,gymnist success,.jpg,resources\pictures\Positive\8470.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1770.7113037109375,1770.7113037109375,0.0,,28.0
+resources\pictures\,Positive\,8497.0,family on rollercoaster,.jpg,resources\pictures\Positive\8497.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1820.7188720703125,1820.7188720703125,0.0,,33.0
+resources\pictures\,Positive\,8502.0,money,.jpg,resources\pictures\Positive\8502.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1830.7239990234375,1830.7239990234375,0.0,,34.0
+resources\pictures\,Positive\,1601.0,man feeding giraffe,.jpg,resources\pictures\Positive\1601.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1750.7060546875,1750.7060546875,0.0,1750.7060267000052,26.0
+resources\pictures\,Positive\,1812.0,elefants,.jpg,resources\pictures\Positive\1812.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1880.734130859375,1880.734130859375,0.0,1880.7340748000133,39.0
+resources\pictures\,Positive\,1920.0,dolphins playing,.jpg,resources\pictures\Positive\1920.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1730.705078125,1730.705078125,0.0,1730.7050527000101,24.0
+resources\pictures\,Positive\,2005.0,smiling man,.jpg,resources\pictures\Positive\2005.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1720.701904296875,1720.701904296875,0.0,,23.0
+resources\pictures\,Positive\,2010.0,smiling man 2,.jpg,resources\pictures\Positive\2010.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1860.7490234375,1860.7490234375,0.0,,37.0
+resources\pictures\,Positive\,2058.0,baby holding hand,.jpg,resources\pictures\Positive\2058.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1640.68701171875,1640.68701171875,0.0,1640.6869631000154,15.0
+resources\pictures\,Positive\,2071.0,baby smiling,.jpg,resources\pictures\Positive\2071.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1500.6650390625,1500.6650390625,0.0,,1.0
+resources\pictures\,Positive\,8540.0,victory,.jpg,resources\pictures\Positive\8540.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1540.680908203125,1540.680908203125,0.0,1540.68094380002,5.0
+resources\pictures\,Negative\,1022.0,snake close up,.jpg,resources\pictures\Negative\1022.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1690.72802734375,1690.72802734375,0.0,,20.0
+
+extraInfo
+participant,dominik
+session,001
+startTime,
+date,2019_Aug_26_1436
+expName,MTEC_paradigm
+psychopyVersion,3.1.3
+frameRate,148.16351323223356

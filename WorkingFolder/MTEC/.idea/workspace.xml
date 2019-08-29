@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cceb26c-0173-4b95-b2b1-d5f78585e4fe" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/hellobuubuu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MTEC.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MTEC.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ExperimentFolder/Paradigm/MTEC_paradigm_lastrun.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../ExperimentFolder/Paradigm/MTEC_paradigm_lastrun.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -77,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hellobuubuu">
+  <component name="RunManager" selected="Python.testingScript">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="MTEC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,6 +146,9 @@
       <module name="MTEC" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="E:\GitHub\MTEC\WorkingFolder\MTEC\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
       <option name="IS_MODULE_SDK" value="true" />
@@ -228,8 +229,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.hellobuubuu" />
         <item itemvalue="Python.testingScript" />
+        <item itemvalue="Python.hellobuubuu" />
         <item itemvalue="Python.empatica_data_extraction" />
         <item itemvalue="Python.artifact_interpolation_algorithm" />
         <item itemvalue="Python.peak_detecting_algorithm" />
@@ -309,6 +310,8 @@
       <workItem from="1564646265807" duration="12623000" />
       <workItem from="1564993180192" duration="3138000" />
       <workItem from="1566466277118" duration="2474000" />
+      <workItem from="1566583068765" duration="2533000" />
+      <workItem from="1566826340269" duration="813000" />
     </task>
     <servers />
   </component>

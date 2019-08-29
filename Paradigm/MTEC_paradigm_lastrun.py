@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.3),
-    on August 22, 2019, at 16:53
+    on August 26, 2019, at 20:33
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -262,7 +262,7 @@ metronome = visual.Polygon(
     lineWidth=1, lineColor='black', lineColorSpace='rgb',
     fillColor=1.0, fillColorSpace='rgb',
     opacity=1, depth=0.0, interpolate=True)
-sound_1 = sound.Sound('A', secs=0.4, stereo=True)
+sound_1 = sound.Sound('A', secs=0.5, stereo=True)
 sound_1.setVolume(0.5)
 
 # Initialize components for Routine "Metronom_Tic"
@@ -669,6 +669,19 @@ text_cooldown_instructions_title = visual.TextStim(win=win, name='text_cooldown_
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
+
+# Initialize components for Routine "Blank_Screen"
+Blank_ScreenClock = core.Clock()
+
+# Initialize components for Routine "Cooldown_Measurement"
+Cooldown_MeasurementClock = core.Clock()
+text_cooldown_measurement = visual.TextStim(win=win, name='text_cooldown_measurement',
+    text='+',
+    font='Arial',
+    pos=(0, 0), height=0.4, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
@@ -1326,7 +1339,7 @@ t = 0
 Baseline_MeasurementClock.reset()  # clock
 frameN = -1
 continueRoutine = True
-routineTimer.add(5.000000)
+routineTimer.add(360.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
 Baseline_MeasurementComponents = [text_baseline_measurement]
@@ -1352,7 +1365,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         text_baseline_measurement.frameNStart = frameN  # exact frame index
         win.timeOnFlip(text_baseline_measurement, 'tStartRefresh')  # time at next scr refresh
         text_baseline_measurement.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
+    frameRemains = 0.0 + 360- win.monitorFramePeriod * 0.75  # most of one frame period left
     if text_baseline_measurement.status == STARTED and t >= frameRemains:
         # keep track of stop time/frame for later
         text_baseline_measurement.tStop = t  # not accounting for scr refresh
@@ -2067,7 +2080,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 tick = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\metronome.xlsx', selection='1:10'),
+    trialList=data.importConditions('stimuli files\\metronome.xlsx', selection='1:600'),
     seed=None, name='tick')
 thisExp.addLoop(tick)  # add the loop to the experiment
 thisTick = tick.trialList[0]  # so we can initialise stimuli with some values
@@ -2091,7 +2104,7 @@ for thisTick in tick:
     routineTimer.add(0.500000)
     # update component parameters for each repeat
     metronome.setFillColor(Color)
-    sound_1.setSound('A', secs=0.4)
+    sound_1.setSound('A', secs=0.5)
     sound_1.setVolume(0.5, log=False)
     # keep track of which components have finished
     Stress_Part_One_MeasurementComponents = [metronome, sound_1]
@@ -2131,13 +2144,13 @@ for thisTick in tick:
             sound_1.frameNStart = frameN  # exact frame index
             win.timeOnFlip(sound_1, 'tStartRefresh')  # time at next scr refresh
             win.callOnFlip(sound_1.play)  # screen flip
-        frameRemains = 0.0 + 0.4- win.monitorFramePeriod * 0.75  # most of one frame period left
+        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
         if sound_1.status == STARTED and t >= frameRemains:
             # keep track of stop time/frame for later
             sound_1.tStop = t  # not accounting for scr refresh
             sound_1.frameNStop = frameN  # exact frame index
             win.timeOnFlip(sound_1, 'tStopRefresh')  # time at next scr refresh
-            if 0.4 > 0.5:  # don't force-stop brief sounds
+            if 0.5 > 0.5:  # don't force-stop brief sounds
                 sound_1.stop()
         
         # check for quit (typically the Esc key)
@@ -2802,7 +2815,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 stroop_trials = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\stroop_stimuli.xlsx', selection='1:6'),
+    trialList=data.importConditions('stimuli files\\stroop_stimuli.xlsx', selection='1:220'),
     seed=None, name='stroop_trials')
 thisExp.addLoop(stroop_trials)  # add the loop to the experiment
 thisStroop_trial = stroop_trials.trialList[0]  # so we can initialise stimuli with some values
@@ -3561,7 +3574,7 @@ t = 0
 Cooldown_MeasurementClock.reset()  # clock
 frameN = -1
 continueRoutine = True
-routineTimer.add(5.000000)
+routineTimer.add(360.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
 Cooldown_MeasurementComponents = [text_cooldown_measurement]
@@ -3587,7 +3600,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         text_cooldown_measurement.frameNStart = frameN  # exact frame index
         win.timeOnFlip(text_cooldown_measurement, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_measurement.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
+    frameRemains = 0.0 + 360- win.monitorFramePeriod * 0.75  # most of one frame period left
     if text_cooldown_measurement.status == STARTED and t >= frameRemains:
         # keep track of stop time/frame for later
         text_cooldown_measurement.tStop = t  # not accounting for scr refresh
@@ -4302,7 +4315,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 emotion_trials_pos = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='32:36'),
+    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='2:44'),
     seed=None, name='emotion_trials_pos')
 thisExp.addLoop(emotion_trials_pos)  # add the loop to the experiment
 thisEmotion_trials_po = emotion_trials_pos.trialList[0]  # so we can initialise stimuli with some values
@@ -4496,7 +4509,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 emotion_evaluation_pos = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='32:36'),
+    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='2:44'),
     seed=None, name='emotion_evaluation_pos')
 thisExp.addLoop(emotion_evaluation_pos)  # add the loop to the experiment
 thisEmotion_evaluation_po = emotion_evaluation_pos.trialList[0]  # so we can initialise stimuli with some values
@@ -4912,6 +4925,116 @@ for thisComponent in Cooldown_InstructionsComponents:
         thisComponent.setAutoDraw(False)
 thisExp.addData('text_cooldown_countdown.started', text_cooldown_countdown.tStartRefresh)
 thisExp.addData('text_cooldown_countdown.stopped', text_cooldown_countdown.tStopRefresh)
+
+# ------Prepare to start Routine "Blank_Screen"-------
+t = 0
+Blank_ScreenClock.reset()  # clock
+frameN = -1
+continueRoutine = True
+# update component parameters for each repeat
+# keep track of which components have finished
+Blank_ScreenComponents = []
+for thisComponent in Blank_ScreenComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+# -------Start Routine "Blank_Screen"-------
+while continueRoutine:
+    # get current time
+    t = Blank_ScreenClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in Blank_ScreenComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "Blank_Screen"-------
+for thisComponent in Blank_ScreenComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# the Routine "Blank_Screen" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# ------Prepare to start Routine "Cooldown_Measurement"-------
+t = 0
+Cooldown_MeasurementClock.reset()  # clock
+frameN = -1
+continueRoutine = True
+routineTimer.add(360.000000)
+# update component parameters for each repeat
+# keep track of which components have finished
+Cooldown_MeasurementComponents = [text_cooldown_measurement]
+for thisComponent in Cooldown_MeasurementComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+# -------Start Routine "Cooldown_Measurement"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = Cooldown_MeasurementClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_cooldown_measurement* updates
+    if t >= 0.0 and text_cooldown_measurement.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_cooldown_measurement.tStart = t  # not accounting for scr refresh
+        text_cooldown_measurement.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_cooldown_measurement, 'tStartRefresh')  # time at next scr refresh
+        text_cooldown_measurement.setAutoDraw(True)
+    frameRemains = 0.0 + 360- win.monitorFramePeriod * 0.75  # most of one frame period left
+    if text_cooldown_measurement.status == STARTED and t >= frameRemains:
+        # keep track of stop time/frame for later
+        text_cooldown_measurement.tStop = t  # not accounting for scr refresh
+        text_cooldown_measurement.frameNStop = frameN  # exact frame index
+        win.timeOnFlip(text_cooldown_measurement, 'tStopRefresh')  # time at next scr refresh
+        text_cooldown_measurement.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in Cooldown_MeasurementComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "Cooldown_Measurement"-------
+for thisComponent in Cooldown_MeasurementComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('text_cooldown_measurement.started', text_cooldown_measurement.tStartRefresh)
+thisExp.addData('text_cooldown_measurement.stopped', text_cooldown_measurement.tStopRefresh)
 
 # ------Prepare to start Routine "Blank_Screen"-------
 t = 0
@@ -5473,7 +5596,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 emotion_trials_neg = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='37:40'),
+    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='45:-1'),
     seed=None, name='emotion_trials_neg')
 thisExp.addLoop(emotion_trials_neg)  # add the loop to the experiment
 thisEmotion_trials_neg = emotion_trials_neg.trialList[0]  # so we can initialise stimuli with some values
@@ -5667,7 +5790,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 emotion_evaluation_neg = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='37:40'),
+    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='45:-1'),
     seed=None, name='emotion_evaluation_neg')
 thisExp.addLoop(emotion_evaluation_neg)  # add the loop to the experiment
 thisEmotion_evaluation_neg = emotion_evaluation_neg.trialList[0]  # so we can initialise stimuli with some values
@@ -6136,7 +6259,7 @@ t = 0
 Cooldown_MeasurementClock.reset()  # clock
 frameN = -1
 continueRoutine = True
-routineTimer.add(5.000000)
+routineTimer.add(360.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
 Cooldown_MeasurementComponents = [text_cooldown_measurement]
@@ -6162,7 +6285,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         text_cooldown_measurement.frameNStart = frameN  # exact frame index
         win.timeOnFlip(text_cooldown_measurement, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_measurement.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
+    frameRemains = 0.0 + 360- win.monitorFramePeriod * 0.75  # most of one frame period left
     if text_cooldown_measurement.status == STARTED and t >= frameRemains:
         # keep track of stop time/frame for later
         text_cooldown_measurement.tStop = t  # not accounting for scr refresh

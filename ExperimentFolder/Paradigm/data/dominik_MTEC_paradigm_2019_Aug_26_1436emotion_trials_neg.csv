@@ -1,0 +1,45 @@
+﻿path,weight,name,description,type,pictures,pic_width,pic_height,new_width,new_height,new_size,n,image_emotion_meas_neg.started_mean,image_emotion_meas_neg.started_raw,image_emotion_meas_neg.started_std,image_emotion_meas_neg.stopped_raw,order
+resources\pictures\,Negative\,1240.0,spider,.jpg,resources\pictures\Negative\1240.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2452.824951171875,2452.824951171875,0.0,2452.824945200002,9.0
+resources\pictures\,Negative\,1300.0,dog threat 1,.jpg,resources\pictures\Negative\1300.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2402.821044921875,2402.821044921875,0.0,2402.8209239999996,4.0
+resources\pictures\,Negative\,1302.0, dog threat 2,.jpg,resources\pictures\Negative\1302.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2682.850830078125,2682.850830078125,0.0,2682.8509406000085,32.0
+resources\pictures\,Negative\,2206.0,fingerprints,.jpg,resources\pictures\Negative\2206.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2442.825927734375,2442.825927734375,0.0,2442.825955700013,8.0
+resources\pictures\,Negative\,2221.0,judge,.jpg,resources\pictures\Negative\2221.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2462.824951171875,2462.824951171875,0.0,2462.8249570000044,10.0
+resources\pictures\,Negative\,2276.0,child crying,.jpg,resources\pictures\Negative\2276.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2512.831787109375,2512.831787109375,0.0,2512.8319010999985,15.0
+resources\pictures\,Negative\,2278.0,poor children,.jpg,resources\pictures\Negative\2278.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2672.862060546875,2672.862060546875,0.0,2672.861972999992,31.0
+resources\pictures\,Negative\,2375.1,famine,.jpg,resources\pictures\Negative\2375.1.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2582.85693359375,2582.85693359375,0.0,2582.856908400019,22.0
+resources\pictures\,Negative\,2399.0,headache,.jpg,resources\pictures\Negative\2399.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2602.8388671875,2602.8388671875,0.0,2602.8389212000184,24.0
+resources\pictures\,Negative\,2410.0,math problem,.jpg,resources\pictures\Negative\2410.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2472.846923828125,2472.846923828125,0.0,,11.0
+resources\pictures\,Negative\,2683.0,riot scene 1,.jpg,resources\pictures\Negative\2683.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2662.849853515625,2662.849853515625,0.0,,30.0
+resources\pictures\,Negative\,2688.0,poacher,.jpg,resources\pictures\Negative\2688.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2363.21533203125,2363.21533203125,0.0,,0.0
+resources\pictures\,Negative\,2691.0,riot scene 2,.jpg,resources\pictures\Negative\2691.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2542.841064453125,2542.841064453125,0.0,2542.8409562000015,18.0
+resources\pictures\,Negative\,2694.0,prison scene,.jpg,resources\pictures\Negative\2694.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2372.81787109375,2372.81787109375,0.0,,1.0
+resources\pictures\,Negative\,5971.0,tornado 1,.jpg,resources\pictures\Negative\5971.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2482.827880859375,2482.827880859375,0.0,2482.8279780000157,12.0
+resources\pictures\,Negative\,5972.0,tornado 2,.jpg,resources\pictures\Negative\5972.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2592.8408203125,2592.8408203125,0.0,2592.8409331000003,23.0
+resources\pictures\,Negative\,7211.0,5 min before midnight,.jpg,resources\pictures\Negative\7211.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2522.837890625,2522.837890625,0.0,2522.8379845000163,16.0
+resources\pictures\,Negative\,7380.0,cockroaches food,.jpg,resources\pictures\Negative\7380.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2422.8369140625,2422.8369140625,0.0,2422.8369506000017,6.0
+resources\pictures\,Negative\,7590.0,traffic jam,.jpg,resources\pictures\Negative\7590.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2702.85205078125,2702.85205078125,0.0,,34.0
+resources\pictures\,Negative\,7640.0,risky work place,.jpg,resources\pictures\Negative\7640.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2492.83203125,2492.83203125,0.0,2492.8319384999922,13.0
+resources\pictures\,Negative\,8179.0,bungee jump,.jpg,resources\pictures\Negative\8179.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2552.843017578125,2552.843017578125,0.0,2552.842969899997,19.0
+resources\pictures\,Negative\,8185.0,skydiving,.jpg,resources\pictures\Negative\8185.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2532.8388671875,2532.8388671875,0.0,2532.8389588000136,17.0
+resources\pictures\,Negative\,8400.0,rafting,.jpg,resources\pictures\Negative\8400.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2642.847900390625,2642.847900390625,0.0,2642.8479546000017,28.0
+resources\pictures\,Negative\,9280.0,pollution,.jpg,resources\pictures\Negative\9280.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2382.8310546875,2382.8310546875,0.0,2382.8309534,2.0
+resources\pictures\,Negative\,9341.0,child in garbage river,.jpg,resources\pictures\Negative\9341.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2572.843017578125,2572.843017578125,0.0,2572.8429710000055,21.0
+resources\pictures\,Negative\,9417.0,getting a ticket,.jpg,resources\pictures\Negative\9417.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2562.840087890625,2562.840087890625,0.0,2562.839969499997,20.0
+resources\pictures\,Negative\,9584.0,dentist,.jpg,resources\pictures\Negative\9584.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2692.848876953125,2692.848876953125,0.0,2692.8489424000145,33.0
+resources\pictures\,Negative\,9592.0,syringe,.jpg,resources\pictures\Negative\9592.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2652.845947265625,2652.845947265625,0.0,2652.846043400001,29.0
+resources\pictures\,Negative\,1201.0,spider on shoulder,.jpg,resources\pictures\Negative\1201.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2412.821044921875,2412.821044921875,0.0,2412.8209341000183,5.0
+resources\pictures\,Negative\,1726.0,roaring tiger,.jpg,resources\pictures\Negative\1726.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2392.822998046875,2392.822998046875,0.0,,3.0
+resources\pictures\,Negative\,1931.0,shark,.jpg,resources\pictures\Negative\1931.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2622.841064453125,2622.841064453125,0.0,2622.840959299996,26.0
+resources\pictures\,Negative\,2100.0,angry man,.jpg,resources\pictures\Negative\2100.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2612.851806640625,2612.851806640625,0.0,2612.8519126000174,25.0
+resources\pictures\,Negative\,2110.0, angry man 2,.jpg,resources\pictures\Negative\2110.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2432.824951171875,2432.824951171875,0.0,,7.0
+resources\pictures\,Negative\,2692.0,bomb,.jpg,resources\pictures\Negative\2692.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2632.843017578125,2632.843017578125,0.0,,27.0
+resources\pictures\,Negative\,6000.0,prison  ,.jpg,resources\pictures\Negative\6000.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2502.833984375,2502.833984375,0.0,2502.834002000018,14.0
+
+extraInfo
+participant,dominik
+session,001
+startTime,
+date,2019_Aug_26_1436
+expName,MTEC_paradigm
+psychopyVersion,3.1.3
+frameRate,148.16351323223356
