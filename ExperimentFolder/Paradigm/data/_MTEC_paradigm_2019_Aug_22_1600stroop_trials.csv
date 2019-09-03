@@ -1,0 +1,15 @@
+﻿WordItem,WordColor,AnsLeft,AnsRight,AnsCorr,n,key_resp_stress_part_two.keys_raw,key_resp_stress_part_two.rt_mean,key_resp_stress_part_two.rt_raw,key_resp_stress_part_two.rt_std,key_resp_stress_part_two.started_mean,key_resp_stress_part_two.started_raw,key_resp_stress_part_two.started_std,key_resp_stress_part_two.stopped_raw,order
+red,green,red,green,right,1.0,'right',0.2408961057662964,0.2408961057662964,0.0,87.4759521484375,87.4759521484375,0.0,,4.0
+red,magenta,red,magenta,right,1.0,'right',1.3264292478561401,1.3264292478561401,0.0,85.31539154052734,85.31539154052734,0.0,,0.0
+red,cyan,red,cyan,right,1.0,'right',0.23080499470233917,0.23080499470233917,0.0,87.22700500488281,87.22700500488281,0.0,,3.0
+red,yellow,red,yellow,right,1.0,'right',0.2457175999879837,0.2457175999879837,0.0,86.96410369873047,86.96410369873047,0.0,,2.0
+red,orange,red,orange,right,1.0,'right',0.2847956120967865,0.2847956120967865,0.0,86.6600112915039,86.6600112915039,0.0,,1.0
+
+extraInfo
+participant,
+session,001
+startTime,16:00:47.454914
+date,2019_Aug_22_1600
+expName,MTEC_paradigm
+psychopyVersion,3.1.3
+frameRate,147.92636813040139

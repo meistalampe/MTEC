@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.3),
-    on August 26, 2019, at 14:35
+    on September 03, 2019, at 22:26
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -44,7 +44,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='E:\\GitHub\\MTEC\\ExperimentFolder\\Paradigm\\MTEC_paradigm_lastrun.py',
+    originPath='F:\\Master Thesis\\Paradigm\\MTEC_paradigm_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -359,6 +359,152 @@ text_part_two_instructions = visual.TextStim(win=win, name='text_part_two_instru
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
 
+# Initialize components for Routine "Color_Instructions"
+Color_InstructionsClock = core.Clock()
+rec_red = visual.Rect(
+    win=win, name='rec_red',
+    width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
+    ori=0, pos=(-0.8, 0.1),
+    lineWidth=1, lineColor=[1,0,0], lineColorSpace='rgb',
+    fillColor=[1,0,0], fillColorSpace='rgb',
+    opacity=1, depth=0.0, interpolate=True)
+rec_magenta = visual.Rect(
+    win=win, name='rec_magenta',
+    width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
+    ori=0, pos=(-0.6, 0.1),
+    lineWidth=1, lineColor=[1,0,1], lineColorSpace='rgb',
+    fillColor=[1,0,1], fillColorSpace='rgb',
+    opacity=1, depth=-1.0, interpolate=True)
+rec_orange = visual.Rect(
+    win=win, name='rec_orange',
+    width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
+    ori=0, pos=(-0.4, 0.1),
+    lineWidth=1, lineColor=[1,0.65,0], lineColorSpace='rgb',
+    fillColor=[1,0.65,0], fillColorSpace='rgb',
+    opacity=1, depth=-2.0, interpolate=True)
+rec_yellow = visual.Rect(
+    win=win, name='rec_yellow',
+    width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
+    ori=0, pos=(-0.2, 0.1),
+    lineWidth=1, lineColor=[1,1,0], lineColorSpace='rgb',
+    fillColor=[1,1,0], fillColorSpace='rgb',
+    opacity=1, depth=-3.0, interpolate=True)
+rec_green = visual.Rect(
+    win=win, name='rec_green',
+    width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
+    ori=0, pos=(0.0, 0.1),
+    lineWidth=1, lineColor=[0,0.5,0], lineColorSpace='rgb',
+    fillColor=[0,0.5,0], fillColorSpace='rgb',
+    opacity=1, depth=-4.0, interpolate=True)
+text_red = visual.TextStim(win=win, name='text_red',
+    text='red',
+    font='Arial',
+    pos=(-0.8, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-5.0);
+text_magenta = visual.TextStim(win=win, name='text_magenta',
+    text='magenta',
+    font='Arial',
+    pos=(-0.6, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-6.0);
+text_orange = visual.TextStim(win=win, name='text_orange',
+    text='orange',
+    font='Arial',
+    pos=(-0.4, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-7.0);
+text_yellow = visual.TextStim(win=win, name='text_yellow',
+    text='yellow',
+    font='Arial',
+    pos=(-0.2, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-8.0);
+text_green = visual.TextStim(win=win, name='text_green',
+    text='green',
+    font='Arial',
+    pos=(0.0, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-9.0);
+text_continue = visual.TextStim(win=win, name='text_continue',
+    text="(Press 'Space' to continue)",
+    font='Arial',
+    pos=(0, -0.4), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-10.0);
+rec_blue = visual.Rect(
+    win=win, name='rec_blue',
+    width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
+    ori=0, pos=(0.4, 0.1),
+    lineWidth=1, lineColor=[0,0,1], lineColorSpace='rgb',
+    fillColor=[0,0,1], fillColorSpace='rgb',
+    opacity=1, depth=-12.0, interpolate=True)
+rec_cyan = visual.Rect(
+    win=win, name='rec_cyan',
+    width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
+    ori=0, pos=(0.2, 0.1),
+    lineWidth=1, lineColor=[0,1,1], lineColorSpace='rgb',
+    fillColor=[0,1,1], fillColorSpace='rgb',
+    opacity=1, depth=-13.0, interpolate=True)
+rec_purple = visual.Rect(
+    win=win, name='rec_purple',
+    width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
+    ori=0, pos=(0.6, 0.1),
+    lineWidth=1, lineColor=[0.5,0,0.5], lineColorSpace='rgb',
+    fillColor=[0.5,0,0.5], fillColorSpace='rgb',
+    opacity=1, depth=-14.0, interpolate=True)
+rec_brown = visual.Rect(
+    win=win, name='rec_brown',
+    width=(0.1, 0.1)[0], height=(0.1, 0.1)[1],
+    ori=0, pos=(0.8, 0.1),
+    lineWidth=1, lineColor=[0.65,0.17,0.17], lineColorSpace='rgb',
+    fillColor=[0.65,0.17,0.17], fillColorSpace='rgb',
+    opacity=1, depth=-15.0, interpolate=True)
+text_cyan = visual.TextStim(win=win, name='text_cyan',
+    text='cyan',
+    font='Arial',
+    pos=(0.2, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-16.0);
+text_blue = visual.TextStim(win=win, name='text_blue',
+    text='blue',
+    font='Arial',
+    pos=(0.4, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-17.0);
+text_purple = visual.TextStim(win=win, name='text_purple',
+    text='purple',
+    font='Arial',
+    pos=(0.6, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-18.0);
+text_brown = visual.TextStim(win=win, name='text_brown',
+    text='brown',
+    font='Arial',
+    pos=(0.8, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-19.0);
+text_colors = visual.TextStim(win=win, name='text_colors',
+    text='Stroop Colors',
+    font='Arial',
+    pos=(0, 0.4), height=0.05, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-20.0);
+
+# Initialize components for Routine "Blank_Screen"
+Blank_ScreenClock = core.Clock()
+
 # Initialize components for Routine "Stress_Part_Two_Measurement"
 Stress_Part_Two_MeasurementClock = core.Clock()
 text_word_item = visual.TextStim(win=win, name='text_word_item',
@@ -605,6 +751,19 @@ image_emotion_meas_pos = visual.ImageStim(
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
 
+# Initialize components for Routine "fix_screen"
+fix_screenClock = core.Clock()
+text_fix = visual.TextStim(win=win, name='text_fix',
+    text='+',
+    font='Arial',
+    pos=(0, 0), height=0.4, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
+
+# Initialize components for Routine "Blank_Screen"
+Blank_ScreenClock = core.Clock()
+
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
 
@@ -777,6 +936,19 @@ image_emotion_meas_neg = visual.ImageStim(
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
+
+# Initialize components for Routine "Blank_Screen"
+Blank_ScreenClock = core.Clock()
+
+# Initialize components for Routine "fix_screen"
+fix_screenClock = core.Clock()
+text_fix = visual.TextStim(win=win, name='text_fix',
+    text='+',
+    font='Arial',
+    pos=(0, 0), height=0.4, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
@@ -1339,7 +1511,7 @@ t = 0
 Baseline_MeasurementClock.reset()  # clock
 frameN = -1
 continueRoutine = True
-routineTimer.add(360.000000)
+routineTimer.add(5.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
 Baseline_MeasurementComponents = [text_baseline_measurement]
@@ -1365,7 +1537,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         text_baseline_measurement.frameNStart = frameN  # exact frame index
         win.timeOnFlip(text_baseline_measurement, 'tStartRefresh')  # time at next scr refresh
         text_baseline_measurement.setAutoDraw(True)
-    frameRemains = 0.0 + 360- win.monitorFramePeriod * 0.75  # most of one frame period left
+    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
     if text_baseline_measurement.status == STARTED and t >= frameRemains:
         # keep track of stop time/frame for later
         text_baseline_measurement.tStop = t  # not accounting for scr refresh
@@ -2080,7 +2252,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 tick = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\metronome.xlsx', selection='1:600'),
+    trialList=data.importConditions('stimuli files\\metronome.xlsx', selection='1:30'),
     seed=None, name='tick')
 thisExp.addLoop(tick)  # add the loop to the experiment
 thisTick = tick.trialList[0]  # so we can initialise stimuli with some values
@@ -2812,10 +2984,337 @@ for thisComponent in Blank_ScreenComponents:
 # the Routine "Blank_Screen" was not non-slip safe, so reset the non-slip timer
 routineTimer.reset()
 
+# ------Prepare to start Routine "Color_Instructions"-------
+t = 0
+Color_InstructionsClock.reset()  # clock
+frameN = -1
+continueRoutine = True
+# update component parameters for each repeat
+key_resp_colors = keyboard.Keyboard()
+# keep track of which components have finished
+Color_InstructionsComponents = [rec_red, rec_magenta, rec_orange, rec_yellow, rec_green, text_red, text_magenta, text_orange, text_yellow, text_green, text_continue, key_resp_colors, rec_blue, rec_cyan, rec_purple, rec_brown, text_cyan, text_blue, text_purple, text_brown, text_colors]
+for thisComponent in Color_InstructionsComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+# -------Start Routine "Color_Instructions"-------
+while continueRoutine:
+    # get current time
+    t = Color_InstructionsClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *rec_red* updates
+    if t >= 0.0 and rec_red.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        rec_red.tStart = t  # not accounting for scr refresh
+        rec_red.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(rec_red, 'tStartRefresh')  # time at next scr refresh
+        rec_red.setAutoDraw(True)
+    
+    # *rec_magenta* updates
+    if t >= 0.0 and rec_magenta.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        rec_magenta.tStart = t  # not accounting for scr refresh
+        rec_magenta.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(rec_magenta, 'tStartRefresh')  # time at next scr refresh
+        rec_magenta.setAutoDraw(True)
+    
+    # *rec_orange* updates
+    if t >= 0.0 and rec_orange.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        rec_orange.tStart = t  # not accounting for scr refresh
+        rec_orange.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(rec_orange, 'tStartRefresh')  # time at next scr refresh
+        rec_orange.setAutoDraw(True)
+    
+    # *rec_yellow* updates
+    if t >= 0.0 and rec_yellow.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        rec_yellow.tStart = t  # not accounting for scr refresh
+        rec_yellow.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(rec_yellow, 'tStartRefresh')  # time at next scr refresh
+        rec_yellow.setAutoDraw(True)
+    
+    # *rec_green* updates
+    if t >= 0.0 and rec_green.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        rec_green.tStart = t  # not accounting for scr refresh
+        rec_green.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(rec_green, 'tStartRefresh')  # time at next scr refresh
+        rec_green.setAutoDraw(True)
+    
+    # *text_red* updates
+    if t >= 0.0 and text_red.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_red.tStart = t  # not accounting for scr refresh
+        text_red.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_red, 'tStartRefresh')  # time at next scr refresh
+        text_red.setAutoDraw(True)
+    
+    # *text_magenta* updates
+    if t >= 0.0 and text_magenta.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_magenta.tStart = t  # not accounting for scr refresh
+        text_magenta.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_magenta, 'tStartRefresh')  # time at next scr refresh
+        text_magenta.setAutoDraw(True)
+    
+    # *text_orange* updates
+    if t >= 0.0 and text_orange.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_orange.tStart = t  # not accounting for scr refresh
+        text_orange.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_orange, 'tStartRefresh')  # time at next scr refresh
+        text_orange.setAutoDraw(True)
+    
+    # *text_yellow* updates
+    if t >= 0.0 and text_yellow.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_yellow.tStart = t  # not accounting for scr refresh
+        text_yellow.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_yellow, 'tStartRefresh')  # time at next scr refresh
+        text_yellow.setAutoDraw(True)
+    
+    # *text_green* updates
+    if t >= 0.0 and text_green.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_green.tStart = t  # not accounting for scr refresh
+        text_green.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_green, 'tStartRefresh')  # time at next scr refresh
+        text_green.setAutoDraw(True)
+    
+    # *text_continue* updates
+    if t >= 0.0 and text_continue.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_continue.tStart = t  # not accounting for scr refresh
+        text_continue.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_continue, 'tStartRefresh')  # time at next scr refresh
+        text_continue.setAutoDraw(True)
+    
+    # *key_resp_colors* updates
+    if t >= 0.0 and key_resp_colors.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        key_resp_colors.tStart = t  # not accounting for scr refresh
+        key_resp_colors.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(key_resp_colors, 'tStartRefresh')  # time at next scr refresh
+        key_resp_colors.status = STARTED
+        # keyboard checking is just starting
+        win.callOnFlip(key_resp_colors.clock.reset)  # t=0 on next screen flip
+        key_resp_colors.clearEvents(eventType='keyboard')
+    if key_resp_colors.status == STARTED:
+        theseKeys = key_resp_colors.getKeys(keyList=['space'], waitRelease=False)
+        if len(theseKeys):
+            theseKeys = theseKeys[0]  # at least one key was pressed
+            
+            # check for quit:
+            if "escape" == theseKeys:
+                endExpNow = True
+            key_resp_colors.keys = theseKeys.name  # just the last key pressed
+            key_resp_colors.rt = theseKeys.rt
+            # a response ends the routine
+            continueRoutine = False
+    
+    # *rec_blue* updates
+    if t >= 0.0 and rec_blue.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        rec_blue.tStart = t  # not accounting for scr refresh
+        rec_blue.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(rec_blue, 'tStartRefresh')  # time at next scr refresh
+        rec_blue.setAutoDraw(True)
+    
+    # *rec_cyan* updates
+    if t >= 0.0 and rec_cyan.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        rec_cyan.tStart = t  # not accounting for scr refresh
+        rec_cyan.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(rec_cyan, 'tStartRefresh')  # time at next scr refresh
+        rec_cyan.setAutoDraw(True)
+    
+    # *rec_purple* updates
+    if t >= 0.0 and rec_purple.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        rec_purple.tStart = t  # not accounting for scr refresh
+        rec_purple.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(rec_purple, 'tStartRefresh')  # time at next scr refresh
+        rec_purple.setAutoDraw(True)
+    
+    # *rec_brown* updates
+    if t >= 0.0 and rec_brown.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        rec_brown.tStart = t  # not accounting for scr refresh
+        rec_brown.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(rec_brown, 'tStartRefresh')  # time at next scr refresh
+        rec_brown.setAutoDraw(True)
+    
+    # *text_cyan* updates
+    if t >= 0.0 and text_cyan.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_cyan.tStart = t  # not accounting for scr refresh
+        text_cyan.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_cyan, 'tStartRefresh')  # time at next scr refresh
+        text_cyan.setAutoDraw(True)
+    
+    # *text_blue* updates
+    if t >= 0.0 and text_blue.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_blue.tStart = t  # not accounting for scr refresh
+        text_blue.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_blue, 'tStartRefresh')  # time at next scr refresh
+        text_blue.setAutoDraw(True)
+    
+    # *text_purple* updates
+    if t >= 0.0 and text_purple.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_purple.tStart = t  # not accounting for scr refresh
+        text_purple.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_purple, 'tStartRefresh')  # time at next scr refresh
+        text_purple.setAutoDraw(True)
+    
+    # *text_brown* updates
+    if t >= 0.0 and text_brown.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_brown.tStart = t  # not accounting for scr refresh
+        text_brown.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_brown, 'tStartRefresh')  # time at next scr refresh
+        text_brown.setAutoDraw(True)
+    
+    # *text_colors* updates
+    if t >= 0.0 and text_colors.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_colors.tStart = t  # not accounting for scr refresh
+        text_colors.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_colors, 'tStartRefresh')  # time at next scr refresh
+        text_colors.setAutoDraw(True)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in Color_InstructionsComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "Color_Instructions"-------
+for thisComponent in Color_InstructionsComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('rec_red.started', rec_red.tStartRefresh)
+thisExp.addData('rec_red.stopped', rec_red.tStopRefresh)
+thisExp.addData('rec_magenta.started', rec_magenta.tStartRefresh)
+thisExp.addData('rec_magenta.stopped', rec_magenta.tStopRefresh)
+thisExp.addData('rec_orange.started', rec_orange.tStartRefresh)
+thisExp.addData('rec_orange.stopped', rec_orange.tStopRefresh)
+thisExp.addData('rec_yellow.started', rec_yellow.tStartRefresh)
+thisExp.addData('rec_yellow.stopped', rec_yellow.tStopRefresh)
+thisExp.addData('rec_green.started', rec_green.tStartRefresh)
+thisExp.addData('rec_green.stopped', rec_green.tStopRefresh)
+thisExp.addData('text_red.started', text_red.tStartRefresh)
+thisExp.addData('text_red.stopped', text_red.tStopRefresh)
+thisExp.addData('text_magenta.started', text_magenta.tStartRefresh)
+thisExp.addData('text_magenta.stopped', text_magenta.tStopRefresh)
+thisExp.addData('text_orange.started', text_orange.tStartRefresh)
+thisExp.addData('text_orange.stopped', text_orange.tStopRefresh)
+thisExp.addData('text_yellow.started', text_yellow.tStartRefresh)
+thisExp.addData('text_yellow.stopped', text_yellow.tStopRefresh)
+thisExp.addData('text_green.started', text_green.tStartRefresh)
+thisExp.addData('text_green.stopped', text_green.tStopRefresh)
+thisExp.addData('text_continue.started', text_continue.tStartRefresh)
+thisExp.addData('text_continue.stopped', text_continue.tStopRefresh)
+# check responses
+if key_resp_colors.keys in ['', [], None]:  # No response was made
+    key_resp_colors.keys = None
+thisExp.addData('key_resp_colors.keys',key_resp_colors.keys)
+if key_resp_colors.keys != None:  # we had a response
+    thisExp.addData('key_resp_colors.rt', key_resp_colors.rt)
+thisExp.addData('key_resp_colors.started', key_resp_colors.tStartRefresh)
+thisExp.addData('key_resp_colors.stopped', key_resp_colors.tStopRefresh)
+thisExp.nextEntry()
+thisExp.addData('rec_blue.started', rec_blue.tStartRefresh)
+thisExp.addData('rec_blue.stopped', rec_blue.tStopRefresh)
+thisExp.addData('rec_cyan.started', rec_cyan.tStartRefresh)
+thisExp.addData('rec_cyan.stopped', rec_cyan.tStopRefresh)
+thisExp.addData('rec_purple.started', rec_purple.tStartRefresh)
+thisExp.addData('rec_purple.stopped', rec_purple.tStopRefresh)
+thisExp.addData('rec_brown.started', rec_brown.tStartRefresh)
+thisExp.addData('rec_brown.stopped', rec_brown.tStopRefresh)
+thisExp.addData('text_cyan.started', text_cyan.tStartRefresh)
+thisExp.addData('text_cyan.stopped', text_cyan.tStopRefresh)
+thisExp.addData('text_blue.started', text_blue.tStartRefresh)
+thisExp.addData('text_blue.stopped', text_blue.tStopRefresh)
+thisExp.addData('text_purple.started', text_purple.tStartRefresh)
+thisExp.addData('text_purple.stopped', text_purple.tStopRefresh)
+thisExp.addData('text_brown.started', text_brown.tStartRefresh)
+thisExp.addData('text_brown.stopped', text_brown.tStopRefresh)
+thisExp.addData('text_colors.started', text_colors.tStartRefresh)
+thisExp.addData('text_colors.stopped', text_colors.tStopRefresh)
+# the Routine "Color_Instructions" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
+# ------Prepare to start Routine "Blank_Screen"-------
+t = 0
+Blank_ScreenClock.reset()  # clock
+frameN = -1
+continueRoutine = True
+# update component parameters for each repeat
+# keep track of which components have finished
+Blank_ScreenComponents = []
+for thisComponent in Blank_ScreenComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+# -------Start Routine "Blank_Screen"-------
+while continueRoutine:
+    # get current time
+    t = Blank_ScreenClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in Blank_ScreenComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "Blank_Screen"-------
+for thisComponent in Blank_ScreenComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+# the Routine "Blank_Screen" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
+
 # set up handler to look after randomisation of conditions etc
 stroop_trials = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\stroop_stimuli.xlsx', selection='1:220'),
+    trialList=data.importConditions('stimuli files\\stroop_stimuli.xlsx', selection='1:10'),
     seed=None, name='stroop_trials')
 thisExp.addLoop(stroop_trials)  # add the loop to the experiment
 thisStroop_trial = stroop_trials.trialList[0]  # so we can initialise stimuli with some values
@@ -3574,7 +4073,7 @@ t = 0
 Cooldown_MeasurementClock.reset()  # clock
 frameN = -1
 continueRoutine = True
-routineTimer.add(360.000000)
+routineTimer.add(5.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
 Cooldown_MeasurementComponents = [text_cooldown_measurement]
@@ -3600,7 +4099,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         text_cooldown_measurement.frameNStart = frameN  # exact frame index
         win.timeOnFlip(text_cooldown_measurement, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_measurement.setAutoDraw(True)
-    frameRemains = 0.0 + 360- win.monitorFramePeriod * 0.75  # most of one frame period left
+    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
     if text_cooldown_measurement.status == STARTED and t >= frameRemains:
         # keep track of stop time/frame for later
         text_cooldown_measurement.tStop = t  # not accounting for scr refresh
@@ -4315,7 +4814,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 emotion_trials_pos = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='2:44'),
+    trialList=data.importConditions('stimuli files\\picture_list_pos.xlsx', selection='1:-1'),
     seed=None, name='emotion_trials_pos')
 thisExp.addLoop(emotion_trials_pos)  # add the loop to the experiment
 thisEmotion_trials_po = emotion_trials_pos.trialList[0]  # so we can initialise stimuli with some values
@@ -4336,7 +4835,7 @@ for thisEmotion_trials_po in emotion_trials_pos:
     Emotion_Measurement_PosClock.reset()  # clock
     frameN = -1
     continueRoutine = True
-    routineTimer.add(10.000000)
+    routineTimer.add(6.000000)
     # update component parameters for each repeat
     image_emotion_meas_pos.setSize((new_width, new_height))
     image_emotion_meas_pos.setImage(pictures)
@@ -4364,7 +4863,7 @@ for thisEmotion_trials_po in emotion_trials_pos:
             image_emotion_meas_pos.frameNStart = frameN  # exact frame index
             win.timeOnFlip(image_emotion_meas_pos, 'tStartRefresh')  # time at next scr refresh
             image_emotion_meas_pos.setAutoDraw(True)
-        frameRemains = 0.0 + 10- win.monitorFramePeriod * 0.75  # most of one frame period left
+        frameRemains = 0.0 + 6- win.monitorFramePeriod * 0.75  # most of one frame period left
         if image_emotion_meas_pos.status == STARTED and t >= frameRemains:
             # keep track of stop time/frame for later
             image_emotion_meas_pos.tStop = t  # not accounting for scr refresh
@@ -4395,6 +4894,116 @@ for thisEmotion_trials_po in emotion_trials_pos:
             thisComponent.setAutoDraw(False)
     emotion_trials_pos.addData('image_emotion_meas_pos.started', image_emotion_meas_pos.tStartRefresh)
     emotion_trials_pos.addData('image_emotion_meas_pos.stopped', image_emotion_meas_pos.tStopRefresh)
+    
+    # ------Prepare to start Routine "Blank_Screen"-------
+    t = 0
+    Blank_ScreenClock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    # update component parameters for each repeat
+    # keep track of which components have finished
+    Blank_ScreenComponents = []
+    for thisComponent in Blank_ScreenComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "Blank_Screen"-------
+    while continueRoutine:
+        # get current time
+        t = Blank_ScreenClock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in Blank_ScreenComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "Blank_Screen"-------
+    for thisComponent in Blank_ScreenComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # the Routine "Blank_Screen" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # ------Prepare to start Routine "fix_screen"-------
+    t = 0
+    fix_screenClock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    routineTimer.add(3.000000)
+    # update component parameters for each repeat
+    # keep track of which components have finished
+    fix_screenComponents = [text_fix]
+    for thisComponent in fix_screenComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "fix_screen"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = fix_screenClock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *text_fix* updates
+        if t >= 0.0 and text_fix.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            text_fix.tStart = t  # not accounting for scr refresh
+            text_fix.frameNStart = frameN  # exact frame index
+            win.timeOnFlip(text_fix, 'tStartRefresh')  # time at next scr refresh
+            text_fix.setAutoDraw(True)
+        frameRemains = 0.0 + 3.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if text_fix.status == STARTED and t >= frameRemains:
+            # keep track of stop time/frame for later
+            text_fix.tStop = t  # not accounting for scr refresh
+            text_fix.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_fix, 'tStopRefresh')  # time at next scr refresh
+            text_fix.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in fix_screenComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "fix_screen"-------
+    for thisComponent in fix_screenComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    emotion_trials_pos.addData('text_fix.started', text_fix.tStartRefresh)
+    emotion_trials_pos.addData('text_fix.stopped', text_fix.tStopRefresh)
     
     # ------Prepare to start Routine "Blank_Screen"-------
     t = 0
@@ -4509,7 +5118,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 emotion_evaluation_pos = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='2:44'),
+    trialList=data.importConditions('stimuli files\\picture_list_pos.xlsx', selection='1:-1'),
     seed=None, name='emotion_evaluation_pos')
 thisExp.addLoop(emotion_evaluation_pos)  # add the loop to the experiment
 thisEmotion_evaluation_po = emotion_evaluation_pos.trialList[0]  # so we can initialise stimuli with some values
@@ -4978,7 +5587,7 @@ t = 0
 Cooldown_MeasurementClock.reset()  # clock
 frameN = -1
 continueRoutine = True
-routineTimer.add(360.000000)
+routineTimer.add(5.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
 Cooldown_MeasurementComponents = [text_cooldown_measurement]
@@ -5004,7 +5613,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         text_cooldown_measurement.frameNStart = frameN  # exact frame index
         win.timeOnFlip(text_cooldown_measurement, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_measurement.setAutoDraw(True)
-    frameRemains = 0.0 + 360- win.monitorFramePeriod * 0.75  # most of one frame period left
+    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
     if text_cooldown_measurement.status == STARTED and t >= frameRemains:
         # keep track of stop time/frame for later
         text_cooldown_measurement.tStop = t  # not accounting for scr refresh
@@ -5596,7 +6205,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 emotion_trials_neg = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='45:-1'),
+    trialList=data.importConditions('stimuli files\\picture_list_neg.xlsx', selection='1:-1'),
     seed=None, name='emotion_trials_neg')
 thisExp.addLoop(emotion_trials_neg)  # add the loop to the experiment
 thisEmotion_trials_neg = emotion_trials_neg.trialList[0]  # so we can initialise stimuli with some values
@@ -5617,7 +6226,7 @@ for thisEmotion_trials_neg in emotion_trials_neg:
     Emotion_Measurement_NegClock.reset()  # clock
     frameN = -1
     continueRoutine = True
-    routineTimer.add(10.000000)
+    routineTimer.add(6.000000)
     # update component parameters for each repeat
     image_emotion_meas_neg.setSize((new_width, new_height))
     image_emotion_meas_neg.setImage(pictures)
@@ -5645,7 +6254,7 @@ for thisEmotion_trials_neg in emotion_trials_neg:
             image_emotion_meas_neg.frameNStart = frameN  # exact frame index
             win.timeOnFlip(image_emotion_meas_neg, 'tStartRefresh')  # time at next scr refresh
             image_emotion_meas_neg.setAutoDraw(True)
-        frameRemains = 0.0 + 10- win.monitorFramePeriod * 0.75  # most of one frame period left
+        frameRemains = 0.0 + 6- win.monitorFramePeriod * 0.75  # most of one frame period left
         if image_emotion_meas_neg.status == STARTED and t >= frameRemains:
             # keep track of stop time/frame for later
             image_emotion_meas_neg.tStop = t  # not accounting for scr refresh
@@ -5676,6 +6285,116 @@ for thisEmotion_trials_neg in emotion_trials_neg:
             thisComponent.setAutoDraw(False)
     emotion_trials_neg.addData('image_emotion_meas_neg.started', image_emotion_meas_neg.tStartRefresh)
     emotion_trials_neg.addData('image_emotion_meas_neg.stopped', image_emotion_meas_neg.tStopRefresh)
+    
+    # ------Prepare to start Routine "Blank_Screen"-------
+    t = 0
+    Blank_ScreenClock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    # update component parameters for each repeat
+    # keep track of which components have finished
+    Blank_ScreenComponents = []
+    for thisComponent in Blank_ScreenComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "Blank_Screen"-------
+    while continueRoutine:
+        # get current time
+        t = Blank_ScreenClock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in Blank_ScreenComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "Blank_Screen"-------
+    for thisComponent in Blank_ScreenComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # the Routine "Blank_Screen" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    
+    # ------Prepare to start Routine "fix_screen"-------
+    t = 0
+    fix_screenClock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    routineTimer.add(3.000000)
+    # update component parameters for each repeat
+    # keep track of which components have finished
+    fix_screenComponents = [text_fix]
+    for thisComponent in fix_screenComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "fix_screen"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = fix_screenClock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *text_fix* updates
+        if t >= 0.0 and text_fix.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            text_fix.tStart = t  # not accounting for scr refresh
+            text_fix.frameNStart = frameN  # exact frame index
+            win.timeOnFlip(text_fix, 'tStartRefresh')  # time at next scr refresh
+            text_fix.setAutoDraw(True)
+        frameRemains = 0.0 + 3.0- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if text_fix.status == STARTED and t >= frameRemains:
+            # keep track of stop time/frame for later
+            text_fix.tStop = t  # not accounting for scr refresh
+            text_fix.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_fix, 'tStopRefresh')  # time at next scr refresh
+            text_fix.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in fix_screenComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "fix_screen"-------
+    for thisComponent in fix_screenComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    emotion_trials_neg.addData('text_fix.started', text_fix.tStartRefresh)
+    emotion_trials_neg.addData('text_fix.stopped', text_fix.tStopRefresh)
     
     # ------Prepare to start Routine "Blank_Screen"-------
     t = 0
@@ -5790,7 +6509,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 emotion_evaluation_neg = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli files\\picture_list.xlsx', selection='45:-1'),
+    trialList=data.importConditions('stimuli files\\picture_list_neg.xlsx', selection='1:-1'),
     seed=None, name='emotion_evaluation_neg')
 thisExp.addLoop(emotion_evaluation_neg)  # add the loop to the experiment
 thisEmotion_evaluation_neg = emotion_evaluation_neg.trialList[0]  # so we can initialise stimuli with some values
@@ -6259,7 +6978,7 @@ t = 0
 Cooldown_MeasurementClock.reset()  # clock
 frameN = -1
 continueRoutine = True
-routineTimer.add(360.000000)
+routineTimer.add(5.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
 Cooldown_MeasurementComponents = [text_cooldown_measurement]
@@ -6285,7 +7004,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         text_cooldown_measurement.frameNStart = frameN  # exact frame index
         win.timeOnFlip(text_cooldown_measurement, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_measurement.setAutoDraw(True)
-    frameRemains = 0.0 + 360- win.monitorFramePeriod * 0.75  # most of one frame period left
+    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
     if text_cooldown_measurement.status == STARTED and t >= frameRemains:
         # keep track of stop time/frame for later
         text_cooldown_measurement.tStop = t  # not accounting for scr refresh

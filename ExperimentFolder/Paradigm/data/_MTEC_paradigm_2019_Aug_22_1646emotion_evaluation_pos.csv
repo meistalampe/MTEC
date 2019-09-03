@@ -1,0 +1,14 @@
+﻿path,weight,name,description,type,pictures,pic_width,pic_height,new_width,new_height,new_size,n,image_emotion_evaluation_pos.started_mean,image_emotion_evaluation_pos.started_raw,image_emotion_evaluation_pos.started_std,image_emotion_evaluation_pos.stopped_raw,rating_emotion_evaluation_pos.response_mean,rating_emotion_evaluation_pos.response_raw,rating_emotion_evaluation_pos.response_std,rating_emotion_evaluation_pos.rt_mean,rating_emotion_evaluation_pos.rt_raw,rating_emotion_evaluation_pos.rt_std,rating_emotion_evaluation_pos.started_mean,rating_emotion_evaluation_pos.started_raw,rating_emotion_evaluation_pos.started_std,rating_emotion_evaluation_pos.stopped_raw,order
+resources\pictures\,Positive\,8380.0,team medals,.jpg,resources\pictures\Positive\8380.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,204.43980407714844,204.43980407714844,0.0,,3.0,3.0,0.0,1.690000057220459,1.690000057220459,0.0,0.02009049989283085,0.02009049989283085,0.0,,3.0
+resources\pictures\,Positive\,8470.0,gymnist success,.jpg,resources\pictures\Positive\8470.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,202.0260009765625,202.0260009765625,0.0,,3.0,3.0,0.0,2.384000062942505,2.384000062942505,0.0,0.01883460022509098,0.01883460022509098,0.0,,2.0
+resources\pictures\,Positive\,8497.0,family on rollercoaster,.jpg,resources\pictures\Positive\8497.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,199.5038604736328,199.5038604736328,0.0,,3.0,3.0,0.0,2.493000030517578,2.493000030517578,0.0,0.018828099593520164,0.018828099593520164,0.0,,1.0
+resources\pictures\,Positive\,8501.0,money,.jpg,resources\pictures\Positive\8501.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,195.5424041748047,195.5424041748047,0.0,,3.0,3.0,0.0,3.936000108718872,3.936000108718872,0.0,0.042967699468135834,0.042967699468135834,0.0,,0.0
+
+extraInfo
+participant,
+session,001
+startTime,
+date,2019_Aug_22_1646
+expName,MTEC_paradigm
+psychopyVersion,3.1.3
+frameRate,148.17207536636292
