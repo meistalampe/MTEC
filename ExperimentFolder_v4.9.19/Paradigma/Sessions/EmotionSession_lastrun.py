@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.3),
-    on September 05, 2019, at 02:21
+    on September 05, 2019, at 12:41
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -44,7 +44,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='I:\\Master Thesis\\ExperimentFolder\\Paradigma\\Sessions\\EmotionSession_lastrun.py',
+    originPath='D:\\Master Thesis\\ExperimentFolder_v4.9.19\\Paradigma\\Sessions\\EmotionSession_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -246,7 +246,7 @@ image_emotion_p_eval_t = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 text_emotion_p_eval_t = visual.TextStim(win=win, name='text_emotion_p_eval_t',
-    text='please rate the feeling of the picture.',
+    text='Please rate the feeling of the picture.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.3),
-    on September 05, 2019, at 02:41
+    on September 05, 2019, at 12:15
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -44,7 +44,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='I:\\Master Thesis\\ExperimentFolder\\Paradigma\\Sessions\\StressSession_lastrun.py',
+    originPath='D:\\Master Thesis\\ExperimentFolder_v4.9.19\\Paradigma\\Sessions\\StressSession_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -71,17 +71,6 @@ else:
 
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard()
-
-# Initialize components for Routine "te"
-teClock = core.Clock()
-sound_1 = sound.Sound('A', secs=-1, stereo=True)
-sound_1.setVolume(1)
-sound_2 = sound.Sound('660', secs=-1, stereo=True)
-sound_2.setVolume(1)
-sound_3 = sound.Sound('880', secs=-1, stereo=True)
-sound_3.setVolume(1)
-sound_4 = sound.Sound('1100', secs=-1, stereo=True)
-sound_4.setVolume(1)
 
 # Initialize components for Routine "Stress_Screen"
 Stress_ScreenClock = core.Clock()
@@ -771,132 +760,6 @@ text_stress_end_instructions = visual.TextStim(win=win, name='text_stress_end_in
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
-
-# ------Prepare to start Routine "te"-------
-t = 0
-teClock.reset()  # clock
-frameN = -1
-continueRoutine = True
-routineTimer.add(20.000000)
-# update component parameters for each repeat
-sound_1.setSound('A', secs=5)
-sound_1.setVolume(1, log=False)
-sound_2.setSound('660', secs=5)
-sound_2.setVolume(1, log=False)
-sound_3.setSound('880', secs=5)
-sound_3.setVolume(1, log=False)
-sound_4.setSound('1100', secs=5)
-sound_4.setVolume(1, log=False)
-# keep track of which components have finished
-teComponents = [sound_1, sound_2, sound_3, sound_4]
-for thisComponent in teComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-
-# -------Start Routine "te"-------
-while continueRoutine and routineTimer.getTime() > 0:
-    # get current time
-    t = teClock.getTime()
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    # start/stop sound_1
-    if t >= 0.0 and sound_1.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        sound_1.tStart = t  # not accounting for scr refresh
-        sound_1.frameNStart = frameN  # exact frame index
-        win.timeOnFlip(sound_1, 'tStartRefresh')  # time at next scr refresh
-        win.callOnFlip(sound_1.play)  # screen flip
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if sound_1.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        sound_1.tStop = t  # not accounting for scr refresh
-        sound_1.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(sound_1, 'tStopRefresh')  # time at next scr refresh
-        if 5 > 0.5:  # don't force-stop brief sounds
-            sound_1.stop()
-    # start/stop sound_2
-    if t >= 5 and sound_2.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        sound_2.tStart = t  # not accounting for scr refresh
-        sound_2.frameNStart = frameN  # exact frame index
-        win.timeOnFlip(sound_2, 'tStartRefresh')  # time at next scr refresh
-        win.callOnFlip(sound_2.play)  # screen flip
-    frameRemains = 5 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if sound_2.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        sound_2.tStop = t  # not accounting for scr refresh
-        sound_2.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(sound_2, 'tStopRefresh')  # time at next scr refresh
-        if 5 > 0.5:  # don't force-stop brief sounds
-            sound_2.stop()
-    # start/stop sound_3
-    if t >= 10 and sound_3.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        sound_3.tStart = t  # not accounting for scr refresh
-        sound_3.frameNStart = frameN  # exact frame index
-        win.timeOnFlip(sound_3, 'tStartRefresh')  # time at next scr refresh
-        win.callOnFlip(sound_3.play)  # screen flip
-    frameRemains = 10 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if sound_3.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        sound_3.tStop = t  # not accounting for scr refresh
-        sound_3.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(sound_3, 'tStopRefresh')  # time at next scr refresh
-        if 5 > 0.5:  # don't force-stop brief sounds
-            sound_3.stop()
-    # start/stop sound_4
-    if t >= 15 and sound_4.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        sound_4.tStart = t  # not accounting for scr refresh
-        sound_4.frameNStart = frameN  # exact frame index
-        win.timeOnFlip(sound_4, 'tStartRefresh')  # time at next scr refresh
-        win.callOnFlip(sound_4.play)  # screen flip
-    frameRemains = 15 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if sound_4.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        sound_4.tStop = t  # not accounting for scr refresh
-        sound_4.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(sound_4, 'tStopRefresh')  # time at next scr refresh
-        if 5 > 0.5:  # don't force-stop brief sounds
-            sound_4.stop()
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in teComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "te"-------
-for thisComponent in teComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-sound_1.stop()  # ensure sound has stopped at end of routine
-thisExp.addData('sound_1.started', sound_1.tStartRefresh)
-thisExp.addData('sound_1.stopped', sound_1.tStopRefresh)
-sound_2.stop()  # ensure sound has stopped at end of routine
-thisExp.addData('sound_2.started', sound_2.tStartRefresh)
-thisExp.addData('sound_2.stopped', sound_2.tStopRefresh)
-sound_3.stop()  # ensure sound has stopped at end of routine
-thisExp.addData('sound_3.started', sound_3.tStartRefresh)
-thisExp.addData('sound_3.stopped', sound_3.tStopRefresh)
-sound_4.stop()  # ensure sound has stopped at end of routine
-thisExp.addData('sound_4.started', sound_4.tStartRefresh)
-thisExp.addData('sound_4.stopped', sound_4.tStopRefresh)
 
 # ------Prepare to start Routine "Stress_Screen"-------
 t = 0
@@ -2575,7 +2438,7 @@ for thisComponent in Blank_ScreenComponents:
 # set up handler to look after randomisation of conditions etc
 stroop_trials = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('..\\Resources\\StimuliFiles\\stroop_stimuli.xlsx', selection='1:10'),
+    trialList=data.importConditions('..\\Resources\\StimuliFiles\\stroop_stimuli.xlsx'),
     seed=None, name='stroop_trials')
 thisExp.addLoop(stroop_trials)  # add the loop to the experiment
 thisStroop_trial = stroop_trials.trialList[0]  # so we can initialise stimuli with some values
@@ -3661,7 +3524,7 @@ t = 0
 Cooldown_MeasurementClock.reset()  # clock
 frameN = -1
 continueRoutine = True
-routineTimer.add(10.000000)
+routineTimer.add(300.000000)
 # update component parameters for each repeat
 thisExp.addData("start_cooldown_measurement", time.strftime("%Y-%m-%d_%H:%M:%S"))
 # keep track of which components have finished
@@ -3688,7 +3551,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         text_cooldown_measurement.frameNStart = frameN  # exact frame index
         win.timeOnFlip(text_cooldown_measurement, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_measurement.setAutoDraw(True)
-    frameRemains = 0.0 + 10- win.monitorFramePeriod * 0.75  # most of one frame period left
+    frameRemains = 0.0 + 300- win.monitorFramePeriod * 0.75  # most of one frame period left
     if text_cooldown_measurement.status == STARTED and t >= frameRemains:
         # keep track of stop time/frame for later
         text_cooldown_measurement.tStop = t  # not accounting for scr refresh

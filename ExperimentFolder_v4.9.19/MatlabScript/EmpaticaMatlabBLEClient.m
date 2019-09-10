@@ -223,7 +223,7 @@ function EmpaticaMatlabBLEClient()
 
         % Connect to the TCP server
         tcpClient = tcpip(IP, Port, 'NetworkRole', 'client','InputBufferSize',1024);
-        minutes = 6;
+        minutes = 1;
         tcpClient.TimerPeriod = minutes * 60;    
         % Open/Close the TCP connection
         if (strcmp(IPConnectBtnHdl.String,'Connect'))

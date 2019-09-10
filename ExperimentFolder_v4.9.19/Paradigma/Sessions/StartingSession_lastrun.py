@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.3),
-    on September 05, 2019, at 00:49
+    on September 05, 2019, at 12:07
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -44,7 +44,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='I:\\Master Thesis\\ExperimentFolder\\Paradigma\\Sessions\\StartingSession_lastrun.py',
+    originPath='D:\\Master Thesis\\ExperimentFolder_v4.9.19\\Paradigma\\Sessions\\StartingSession_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -800,7 +800,7 @@ t = 0
 Baseline_MeasurementClock.reset()  # clock
 frameN = -1
 continueRoutine = True
-routineTimer.add(10.000000)
+routineTimer.add(300.000000)
 # update component parameters for each repeat
 thisExp.addData("start_baseline_measurement", time.strftime("%Y-%m-%d_%H:%M:%S"))
 # keep track of which components have finished
@@ -827,7 +827,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         text_baseline_measurement.frameNStart = frameN  # exact frame index
         win.timeOnFlip(text_baseline_measurement, 'tStartRefresh')  # time at next scr refresh
         text_baseline_measurement.setAutoDraw(True)
-    frameRemains = 0.0 + 10- win.monitorFramePeriod * 0.75  # most of one frame period left
+    frameRemains = 0.0 + 300- win.monitorFramePeriod * 0.75  # most of one frame period left
     if text_baseline_measurement.status == STARTED and t >= frameRemains:
         # keep track of stop time/frame for later
         text_baseline_measurement.tStop = t  # not accounting for scr refresh
