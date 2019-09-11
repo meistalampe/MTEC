@@ -43,7 +43,8 @@ data_tags = list(['E4_Acc', 'E4_Bvp', 'E4_Gsr', 'E4_Temperature', 'E4_Ibi', 'E4_
 #   - The tags taken from the device. Time values.
 
 __all__ = ['data_extraction', 'print_header', 'get_folder_from_user', 'search_for_latest_file', 'parse_file_for_tag',
-           'get_stream_data', 'get_stream_time', 'extract_all','save_dict_to_mat']
+           'get_stream_data', 'get_stream_time', 'extract_all','save_dict_to_mat', 'write_to_text_file',
+           'read_list_from_text_file']
 
 
 # ----------------- UI / User Input ----------------- #
@@ -161,7 +162,7 @@ def extract_all(folder: str, file_label: str, verbose: bool = False):
     return stream_data
 
 
-def print_header():
+def print_header(program_label: str):
     """
     Function that prints a program header.
     Parameters
@@ -177,12 +178,12 @@ def print_header():
     No references needed.
     """
     print('--------------------------------------------------')
-    print('                   MTEC APP')
+    print('                  ' + program_label)
     print('--------------------------------------------------')
     print()
 
 
-def get_folder_from_user() -> str:
+def get_folder_from_user(default_folder_name: str) -> str:
     """
     Function that handles user input regarding the folder in which the data recordings have been stored.
     Parameters
@@ -205,8 +206,8 @@ def get_folder_from_user() -> str:
     if not folder or not folder.strip():
         print('Using default path.')
         print()
-        default_folder = 'DataRepository'
-        folder_path = os.path.abspath(os.path.join('.', 'MTEC', default_folder))
+        # default_folder = 'DataRepository'
+        folder_path = os.path.abspath(os.path.join('.', 'MTEC', default_folder_name))
         return folder_path
     # check if input path is a directory
     if not os.path.isdir(folder):
@@ -415,6 +416,66 @@ def save_dict_to_mat(dictionary: dict, data_file_name: str, save_file_label: str
 
     if verbose:
         print('File has been saved to path: {}'.format(save_file_name))
+
+
+def write_to_text_file(file_name: str, file_index: str, folder: str, data_list: List, file_type: str = '.txt'):
+    """
+        A function that writes a list to a text file, line by line.
+
+        Parameters
+        ----------
+        file_name: str
+            name of the data file that will be created
+
+        file_index: str
+            index, which is added to the file_name for identification, usually subject initials
+
+        folder: str
+            folder to which the file will be saved
+
+        data_list: List[Sample]
+            list that will be stored in the new file.
+
+        file_type: str
+            file ending, file type
+
+        Returns
+        ----------
+        None
+
+        References
+        -----------
+        No references needed.
+        """
+    # create file name
+    file_name = file_name + file_index + file_type
+    file_path = os.path.abspath(os.path.join(folder, file_name))
+
+    # create merge file
+    if os.path.isfile(file_path):
+        # clear and then write
+        print('file found')
+        file = open(file_path, 'w')
+        file.truncate()
+        print('file cleared')
+        file.close()
+    else:
+        file = open(file_path, 'w')
+        print('new file created')
+        file.close()
+
+    with open(file_path, 'w') as fout:
+        for i in data_list:
+            fout.write(str(i))
+            fout.write('\n')
+
+
+def read_list_from_text_file(file_path: str):
+    stream = list()
+    with open(file_path) as f:
+        for line in f:
+            stream.append(line.rstrip('\n'))
+    return stream
 
 
 if __name__ == '__main__':

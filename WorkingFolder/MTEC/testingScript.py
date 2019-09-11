@@ -14,11 +14,11 @@ import matplotlib.pyplot as plt
 
 def main():
     # ----------------- DATA EXTRACTION ----------------- #
-
-    print_header()
+    label = 'MTEC APP'
+    print_header(program_label=label)
 
     # Get user input
-    folder = get_folder_from_user()
+    folder = get_folder_from_user(default_folder_name='DataRepository')
     if not folder:
         print("We can't search file in this location.")
         return
