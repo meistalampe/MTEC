@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.3),
-    on September 05, 2019, at 12:15
+    on September 17, 2019, at 20:20
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -44,7 +44,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\Master Thesis\\ExperimentFolder_v4.9.19\\Paradigma\\Sessions\\StressSession_lastrun.py',
+    originPath='E:\\GitHub\\MTEC\\ExperimentFolder_v4.9.19\\Paradigma\\Sessions\\StressSession_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -71,6 +71,30 @@ else:
 
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard()
+
+# Initialize components for Routine "Part_Two_Measurement"
+Part_Two_MeasurementClock = core.Clock()
+text_word_item = visual.TextStim(win=win, name='text_word_item',
+    text='default text',
+    font='Arial',
+    pos=(0, 0), height=0.15, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
+text_left_ans = visual.TextStim(win=win, name='text_left_ans',
+    text='default text',
+    font='Arial',
+    pos=(-0.55, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-1.0);
+text_right_ans = visual.TextStim(win=win, name='text_right_ans',
+    text='default text',
+    font='Arial',
+    pos=(0.55, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-2.0);
 
 # Initialize components for Routine "Stress_Screen"
 Stress_ScreenClock = core.Clock()
@@ -510,14 +534,14 @@ text_word_item = visual.TextStim(win=win, name='text_word_item',
 text_left_ans = visual.TextStim(win=win, name='text_left_ans',
     text='default text',
     font='Arial',
-    pos=(-0.5, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(-0.55, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 text_right_ans = visual.TextStim(win=win, name='text_right_ans',
     text='default text',
     font='Arial',
-    pos=(0.5, 0), height=0.1, wrapWidth=None, ori=0, 
+    pos=(0.55, 0), height=0.1, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
@@ -760,6 +784,150 @@ text_stress_end_instructions = visual.TextStim(win=win, name='text_stress_end_in
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
+
+# set up handler to look after randomisation of conditions etc
+trials = data.TrialHandler(nReps=1, method='random', 
+    extraInfo=expInfo, originPath=-1,
+    trialList=data.importConditions('..\\Resources\\StimuliFiles\\stroop_stimuli.xlsx'),
+    seed=None, name='trials')
+thisExp.addLoop(trials)  # add the loop to the experiment
+thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
+# abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+if thisTrial != None:
+    for paramName in thisTrial:
+        exec('{} = thisTrial[paramName]'.format(paramName))
+
+for thisTrial in trials:
+    currentLoop = trials
+    # abbreviate parameter names if possible (e.g. rgb = thisTrial.rgb)
+    if thisTrial != None:
+        for paramName in thisTrial:
+            exec('{} = thisTrial[paramName]'.format(paramName))
+    
+    # ------Prepare to start Routine "Part_Two_Measurement"-------
+    t = 0
+    Part_Two_MeasurementClock.reset()  # clock
+    frameN = -1
+    continueRoutine = True
+    # update component parameters for each repeat
+    text_word_item.setColor(WordColor, colorSpace='rgb')
+    text_word_item.setText(WordItem)
+    text_left_ans.setColor('white', colorSpace='rgb')
+    text_left_ans.setText(AnsLeft)
+    text_right_ans.setColor('white', colorSpace='rgb')
+    text_right_ans.setText(AnsRight)
+    key_resp_part_two_meas = keyboard.Keyboard()
+    # keep track of which components have finished
+    Part_Two_MeasurementComponents = [text_word_item, text_left_ans, text_right_ans, key_resp_part_two_meas]
+    for thisComponent in Part_Two_MeasurementComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    
+    # -------Start Routine "Part_Two_Measurement"-------
+    while continueRoutine:
+        # get current time
+        t = Part_Two_MeasurementClock.getTime()
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *text_word_item* updates
+        if t >= 0.0 and text_word_item.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            text_word_item.tStart = t  # not accounting for scr refresh
+            text_word_item.frameNStart = frameN  # exact frame index
+            win.timeOnFlip(text_word_item, 'tStartRefresh')  # time at next scr refresh
+            text_word_item.setAutoDraw(True)
+        
+        # *text_left_ans* updates
+        if t >= 0.0 and text_left_ans.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            text_left_ans.tStart = t  # not accounting for scr refresh
+            text_left_ans.frameNStart = frameN  # exact frame index
+            win.timeOnFlip(text_left_ans, 'tStartRefresh')  # time at next scr refresh
+            text_left_ans.setAutoDraw(True)
+        
+        # *text_right_ans* updates
+        if t >= 0.0 and text_right_ans.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            text_right_ans.tStart = t  # not accounting for scr refresh
+            text_right_ans.frameNStart = frameN  # exact frame index
+            win.timeOnFlip(text_right_ans, 'tStartRefresh')  # time at next scr refresh
+            text_right_ans.setAutoDraw(True)
+        
+        # *key_resp_part_two_meas* updates
+        if t >= 0.0 and key_resp_part_two_meas.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            key_resp_part_two_meas.tStart = t  # not accounting for scr refresh
+            key_resp_part_two_meas.frameNStart = frameN  # exact frame index
+            win.timeOnFlip(key_resp_part_two_meas, 'tStartRefresh')  # time at next scr refresh
+            key_resp_part_two_meas.status = STARTED
+            # keyboard checking is just starting
+            win.callOnFlip(key_resp_part_two_meas.clock.reset)  # t=0 on next screen flip
+            key_resp_part_two_meas.clearEvents(eventType='keyboard')
+        if key_resp_part_two_meas.status == STARTED:
+            theseKeys = key_resp_part_two_meas.getKeys(keyList=['left', 'right'], waitRelease=False)
+            if len(theseKeys):
+                theseKeys = theseKeys[0]  # at least one key was pressed
+                
+                # check for quit:
+                if "escape" == theseKeys:
+                    endExpNow = True
+                key_resp_part_two_meas.keys = theseKeys.name  # just the last key pressed
+                key_resp_part_two_meas.rt = theseKeys.rt
+                # a response ends the routine
+                continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in Part_Two_MeasurementComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "Part_Two_Measurement"-------
+    for thisComponent in Part_Two_MeasurementComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    # check responses
+    if key_resp_part_two_meas.keys in ['', [], None]:  # No response was made
+        key_resp_part_two_meas.keys = None
+    trials.addData('key_resp_part_two_meas.keys',key_resp_part_two_meas.keys)
+    if key_resp_part_two_meas.keys != None:  # we had a response
+        trials.addData('key_resp_part_two_meas.rt', key_resp_part_two_meas.rt)
+    trials.addData('key_resp_part_two_meas.started', key_resp_part_two_meas.tStartRefresh)
+    trials.addData('key_resp_part_two_meas.stopped', key_resp_part_two_meas.tStopRefresh)
+    # the Routine "Part_Two_Measurement" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset()
+    thisExp.nextEntry()
+    
+# completed 1 repeats of 'trials'
+
+# get names of stimulus parameters
+if trials.trialList in ([], [None], None):
+    params = []
+else:
+    params = trials.trialList[0].keys()
+# save data for this loop
+trials.saveAsExcel(filename + '.xlsx', sheetName='trials',
+    stimOut=params,
+    dataOut=['n','all_mean','all_std', 'all_raw'])
+trials.saveAsText(filename + 'trials.csv', delim=',',
+    stimOut=params,
+    dataOut=['n','all_mean','all_std', 'all_raw'])
 
 # ------Prepare to start Routine "Stress_Screen"-------
 t = 0
