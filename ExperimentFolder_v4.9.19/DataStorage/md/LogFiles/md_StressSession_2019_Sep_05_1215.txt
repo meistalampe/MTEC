@@ -1,0 +1,527 @@
+Tick	Color	Tone	TimeDur	WordItem	WordColor	AnsLeft	AnsRight	AnsCorr	tick.thisRepN	tick.thisTrialN	tick.thisN	tick.thisIndex	stroop_trials.thisRepN	stroop_trials.thisTrialN	stroop_trials.thisN	stroop_trials.thisIndex	start_session_two	start_stress_one	end_stress_one	rating_evaluation_one.response	rating_evaluation_one.rt	rating_evaluation_two.response	rating_evaluation_two.rt	start_stress_two	key_resp_part_two_meas.keys	key_resp_part_two_meas.rt	key_resp_part_two_meas.started	key_resp_part_two_meas.stopped	end_stress_two	start_cooldown_measurement	end_cooldown_measurement	end_session_two	participant	session	date	expName	psychopyVersion	frameRate
+1	green	440	1						0	0	0	0					12:15:37	12:16:48															md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+2	green	440	1						0	1	1	1																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+3	green	440	1						0	2	2	2																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+4	green	440	1						0	3	3	3																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+5	green	440	1						0	4	4	4																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+6	green	440	1						0	5	5	5																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+7	green	440	1						0	6	6	6																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+8	green	440	1						0	7	7	7																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+9	green	440	1						0	8	8	8																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+10	green	440	1						0	9	9	9																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+11	green	440	1						0	10	10	10																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+12	green	440	1						0	11	11	11																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+13	green	440	1						0	12	12	12																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+14	green	440	1						0	13	13	13																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+15	green	440	1						0	14	14	14																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+16	green	440	1						0	15	15	15																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+17	green	440	1						0	16	16	16																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+18	green	440	1						0	17	17	17																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+19	green	440	1						0	18	18	18																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+20	green	440	1						0	19	19	19																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+21	green	440	1						0	20	20	20																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+22	green	440	1						0	21	21	21																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+23	green	440	1						0	22	22	22																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+24	green	440	1						0	23	23	23																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+25	green	440	1						0	24	24	24																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+26	green	440	1						0	25	25	25																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+27	green	440	1						0	26	26	26																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+28	green	440	1						0	27	27	27																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+29	green	440	1						0	28	28	28																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+30	green	440	1						0	29	29	29																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+31	green	440	1						0	30	30	30																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+32	green	440	1						0	31	31	31																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+33	green	440	1						0	32	32	32																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+34	green	440	1						0	33	33	33																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+35	green	440	1						0	34	34	34																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+36	green	440	1						0	35	35	35																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+37	green	440	1						0	36	36	36																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+38	green	440	1						0	37	37	37																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+39	green	440	1						0	38	38	38																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+40	green	440	1						0	39	39	39																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+41	green	440	1						0	40	40	40																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+42	green	440	1						0	41	41	41																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+43	green	440	1						0	42	42	42																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+44	green	440	1						0	43	43	43																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+45	green	440	1						0	44	44	44																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+46	green	440	1						0	45	45	45																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+47	green	440	1						0	46	46	46																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+48	green	440	1						0	47	47	47																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+49	green	440	1						0	48	48	48																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+50	green	440	1						0	49	49	49																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+51	green	440	1						0	50	50	50																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+52	green	440	1						0	51	51	51																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+53	green	440	1						0	52	52	52																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+54	green	440	1						0	53	53	53																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+55	green	440	1						0	54	54	54																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+56	green	440	1						0	55	55	55																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+57	green	440	1						0	56	56	56																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+58	green	440	1						0	57	57	57																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+59	green	440	1						0	58	58	58																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+60	green	440	1						0	59	59	59																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+61	green	440	1						0	60	60	60																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+62	green	440	1						0	61	61	61																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+63	green	440	1						0	62	62	62																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+64	green	440	1						0	63	63	63																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+65	green	440	1						0	64	64	64																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+66	green	440	1						0	65	65	65																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+67	green	440	1						0	66	66	66																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+68	green	440	1						0	67	67	67																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+69	green	440	1						0	68	68	68																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+70	green	440	1						0	69	69	69																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+71	green	440	1						0	70	70	70																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+72	green	440	1						0	71	71	71																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+73	green	440	1						0	72	72	72																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+74	green	440	1						0	73	73	73																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+75	green	440	1						0	74	74	74																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+76	green	440	1						0	75	75	75																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+77	green	440	1						0	76	76	76																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+78	green	440	1						0	77	77	77																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+79	green	440	1						0	78	78	78																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+80	green	440	1						0	79	79	79																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+81	green	440	1						0	80	80	80																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+82	green	440	1						0	81	81	81																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+83	green	440	1						0	82	82	82																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+84	green	440	1						0	83	83	83																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+85	green	440	1						0	84	84	84																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+86	green	440	1						0	85	85	85																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+87	green	440	1						0	86	86	86																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+88	green	440	1						0	87	87	87																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+89	green	440	1						0	88	88	88																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+90	green	440	1						0	89	89	89																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+91	green	440	1						0	90	90	90																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+92	green	440	1						0	91	91	91																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+93	green	440	1						0	92	92	92																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+94	green	440	1						0	93	93	93																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+95	green	440	1						0	94	94	94																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+96	green	440	1						0	95	95	95																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+97	green	440	1						0	96	96	96																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+98	green	440	1						0	97	97	97																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+99	green	440	1						0	98	98	98																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+100	green	440	1						0	99	99	99																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+101	green	440	1						0	100	100	100																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+102	green	440	1						0	101	101	101																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+103	green	440	1						0	102	102	102																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+104	green	440	1						0	103	103	103																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+105	green	440	1						0	104	104	104																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+106	green	440	1						0	105	105	105																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+107	green	440	1						0	106	106	106																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+108	green	440	1						0	107	107	107																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+109	green	440	1						0	108	108	108																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+110	green	440	1						0	109	109	109																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+111	green	440	1						0	110	110	110																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+112	green	440	1						0	111	111	111																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+113	green	440	1						0	112	112	112																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+114	green	440	1						0	113	113	113																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+115	green	440	1						0	114	114	114																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+116	green	440	1						0	115	115	115																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+117	green	440	1						0	116	116	116																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+118	green	440	1						0	117	117	117																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+119	green	440	1						0	118	118	118																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+120	green	440	1						0	119	119	119																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+121	green	440	1						0	120	120	120																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+122	green	440	1						0	121	121	121																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+123	green	440	1						0	122	122	122																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+124	green	440	1						0	123	123	123																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+125	green	440	1						0	124	124	124																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+126	green	440	1						0	125	125	125																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+127	green	440	1						0	126	126	126																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+128	green	440	1						0	127	127	127																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+129	green	440	1						0	128	128	128																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+130	green	440	1						0	129	129	129																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+131	green	440	1						0	130	130	130																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+132	green	440	1						0	131	131	131																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+133	green	440	1						0	132	132	132																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+134	green	440	1						0	133	133	133																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+135	green	440	1						0	134	134	134																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+136	green	440	1						0	135	135	135																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+137	green	440	1						0	136	136	136																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+138	green	440	1						0	137	137	137																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+139	green	440	1						0	138	138	138																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+140	green	440	1						0	139	139	139																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+141	green	440	1						0	140	140	140																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+142	green	440	1						0	141	141	141																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+143	green	440	1						0	142	142	142																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+144	green	440	1						0	143	143	143																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+145	green	440	1						0	144	144	144																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+146	green	440	1						0	145	145	145																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+147	green	440	1						0	146	146	146																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+148	green	440	1						0	147	147	147																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+149	green	440	1						0	148	148	148																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+150	green	440	1						0	149	149	149																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+151	green	440	1						0	150	150	150																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+152	green	440	1						0	151	151	151																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+153	green	440	1						0	152	152	152																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+154	green	440	1						0	153	153	153																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+155	green	440	1						0	154	154	154																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+156	green	440	1						0	155	155	155																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+157	green	440	1						0	156	156	156																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+158	green	440	1						0	157	157	157																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+159	green	440	1						0	158	158	158																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+160	green	440	1						0	159	159	159																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+161	green	440	1						0	160	160	160																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+162	green	440	1						0	161	161	161																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+163	green	440	1						0	162	162	162																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+164	green	440	1						0	163	163	163																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+165	green	440	1						0	164	164	164																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+166	green	440	1						0	165	165	165																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+167	green	440	1						0	166	166	166																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+168	green	440	1						0	167	167	167																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+169	green	440	1						0	168	168	168																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+170	green	440	1						0	169	169	169																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+171	green	440	1						0	170	170	170																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+172	green	440	1						0	171	171	171																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+173	green	440	1						0	172	172	172																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+174	green	440	1						0	173	173	173																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+175	green	440	1						0	174	174	174																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+176	green	440	1						0	175	175	175																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+177	green	440	1						0	176	176	176																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+178	green	440	1						0	177	177	177																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+179	green	440	1						0	178	178	178																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+180	yellow	880	0.5						0	179	179	179																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+181	yellow	880	0.5						0	180	180	180																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+182	yellow	880	0.5						0	181	181	181																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+183	yellow	880	0.5						0	182	182	182																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+184	yellow	880	0.5						0	183	183	183																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+185	yellow	880	0.5						0	184	184	184																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+186	yellow	880	0.5						0	185	185	185																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+187	yellow	880	0.5						0	186	186	186																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+188	yellow	880	0.5						0	187	187	187																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+189	yellow	880	0.5						0	188	188	188																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+190	yellow	880	0.5						0	189	189	189																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+191	yellow	880	0.5						0	190	190	190																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+192	yellow	880	0.5						0	191	191	191																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+193	yellow	880	0.5						0	192	192	192																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+194	yellow	880	0.5						0	193	193	193																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+195	yellow	880	0.5						0	194	194	194																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+196	yellow	880	0.5						0	195	195	195																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+197	yellow	880	0.5						0	196	196	196																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+198	yellow	880	0.5						0	197	197	197																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+199	yellow	880	0.5						0	198	198	198																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+200	yellow	880	0.5						0	199	199	199																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+201	yellow	880	0.5						0	200	200	200																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+202	yellow	880	0.5						0	201	201	201																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+203	yellow	880	0.5						0	202	202	202																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+204	yellow	880	0.5						0	203	203	203																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+205	yellow	880	0.5						0	204	204	204																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+206	yellow	880	0.5						0	205	205	205																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+207	yellow	880	0.5						0	206	206	206																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+208	yellow	880	0.5						0	207	207	207																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+209	yellow	880	0.5						0	208	208	208																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+210	yellow	880	0.5						0	209	209	209																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+211	yellow	880	0.5						0	210	210	210																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+212	yellow	880	0.5						0	211	211	211																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+213	yellow	880	0.5						0	212	212	212																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+214	yellow	880	0.5						0	213	213	213																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+215	yellow	880	0.5						0	214	214	214																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+216	yellow	880	0.5						0	215	215	215																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+217	yellow	880	0.5						0	216	216	216																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+218	yellow	880	0.5						0	217	217	217																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+219	yellow	880	0.5						0	218	218	218																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+220	yellow	880	0.5						0	219	219	219																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+221	yellow	880	0.5						0	220	220	220																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+222	yellow	880	0.5						0	221	221	221																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+223	yellow	880	0.5						0	222	222	222																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+224	yellow	880	0.5						0	223	223	223																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+225	yellow	880	0.5						0	224	224	224																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+226	yellow	880	0.5						0	225	225	225																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+227	yellow	880	0.5						0	226	226	226																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+228	yellow	880	0.5						0	227	227	227																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+229	yellow	880	0.5						0	228	228	228																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+230	yellow	880	0.5						0	229	229	229																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+231	yellow	880	0.5						0	230	230	230																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+232	yellow	880	0.5						0	231	231	231																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+233	yellow	880	0.5						0	232	232	232																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+234	yellow	880	0.5						0	233	233	233																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+235	yellow	880	0.5						0	234	234	234																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+236	yellow	880	0.5						0	235	235	235																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+237	yellow	880	0.5						0	236	236	236																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+238	yellow	880	0.5						0	237	237	237																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+239	yellow	880	0.5						0	238	238	238																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+240	red	1760	0.5						0	239	239	239																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+241	red	1760	0.5						0	240	240	240																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+242	red	1760	0.5						0	241	241	241																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+243	red	1760	0.5						0	242	242	242																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+244	red	1760	0.5						0	243	243	243																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+245	red	1760	0.5						0	244	244	244																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+246	red	1760	0.5						0	245	245	245																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+247	red	1760	0.5						0	246	246	246																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+248	red	1760	0.5						0	247	247	247																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+249	red	1760	0.5						0	248	248	248																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+250	red	1760	0.5						0	249	249	249																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+251	red	1760	0.5						0	250	250	250																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+252	red	1760	0.5						0	251	251	251																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+253	red	1760	0.5						0	252	252	252																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+254	red	1760	0.5						0	253	253	253																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+255	red	1760	0.5						0	254	254	254																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+256	red	1760	0.5						0	255	255	255																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+257	red	1760	0.5						0	256	256	256																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+258	red	1760	0.5						0	257	257	257																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+259	red	1760	0.5						0	258	258	258																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+260	red	1760	0.5						0	259	259	259																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+261	red	1760	0.5						0	260	260	260																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+262	red	1760	0.5						0	261	261	261																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+263	red	1760	0.5						0	262	262	262																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+264	red	1760	0.5						0	263	263	263																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+265	red	1760	0.5						0	264	264	264																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+266	red	1760	0.5						0	265	265	265																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+267	red	1760	0.5						0	266	266	266																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+268	red	1760	0.5						0	267	267	267																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+269	red	1760	0.5						0	268	268	268																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+270	red	1760	0.5						0	269	269	269																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+271	red	1760	0.5						0	270	270	270																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+272	red	1760	0.5						0	271	271	271																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+273	red	1760	0.5						0	272	272	272																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+274	red	1760	0.5						0	273	273	273																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+275	red	1760	0.5						0	274	274	274																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+276	red	1760	0.5						0	275	275	275																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+277	red	1760	0.5						0	276	276	276																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+278	red	1760	0.5						0	277	277	277																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+279	red	1760	0.5						0	278	278	278																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+280	red	1760	0.5						0	279	279	279																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+281	red	1760	0.5						0	280	280	280																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+282	red	1760	0.5						0	281	281	281																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+283	red	1760	0.5						0	282	282	282																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+284	red	1760	0.5						0	283	283	283																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+285	red	1760	0.5						0	284	284	284																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+286	red	1760	0.5						0	285	285	285																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+287	red	1760	0.5						0	286	286	286																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+288	red	1760	0.5						0	287	287	287																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+289	red	1760	0.5						0	288	288	288																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+290	red	1760	0.5						0	289	289	289																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+291	red	1760	0.5						0	290	290	290																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+292	red	1760	0.5						0	291	291	291																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+293	red	1760	0.5						0	292	292	292																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+294	red	1760	0.5						0	293	293	293																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+295	red	1760	0.5						0	294	294	294																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+296	red	1760	0.5						0	295	295	295																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+297	red	1760	0.5						0	296	296	296																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+298	red	1760	0.5						0	297	297	297																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+299	red	1760	0.5						0	298	298	298																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+300	red	1760	0.5						0	299	299	299																					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+																			12:23:23	7	57.354												md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+																						7	34.337										md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	yellow	yellow	orange	left					0	0	0	179								12:27:27	right	0.895371431	721.834111	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	green	red	green	right					0	1	1	1									left	1.622273811	723.2675859	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	magenta	magenta	red	left					0	2	2	112									left	1.978108568	725.4151901	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	red	red	orange	left					0	3	3	174									left	1.498549759	727.9347545	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	cyan	cyan	brown	left					0	4	4	196									left	1.208818525	729.9768968	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	brown	brown	cyan	left					0	5	5	153									left	1.641886414	731.7197834	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	blue	blue	magenta	left					0	6	6	148									left	1.417468516	733.9040993	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	green	green	black	left					0	7	7	212									left	1.22998633	735.8676048	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	black	black	yellow	left					0	8	8	164									left	1.170678759	737.6306984	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	yellow	yellow	purple	left					0	9	9	188									left	1.613950817	739.3473714	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	brown	white	brown	right					0	10	10	99									left	1.146365992	741.4955426	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	green	green	brown	left					0	11	11	194									left	1.57377713	743.1635406	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	yellow	orange	yellow	right					0	12	12	69									right	1.529785625	745.2721278	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	purple	orange	purple	right					0	13	13	60									right	1.60546313	747.3243416	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	yellow	brown	yellow	right					0	14	14	87									right	1.342526586	749.4668898	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	orange	red	orange	right					0	15	15	5									right	1.966744718	751.3466367	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	brown	purple	brown	right					0	16	16	70									right	1.688612428	753.8488127	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	magenta	brown	magenta	right					0	17	17	85									right	1.410023177	756.0798375	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	purple	green	purple	right					0	18	18	24									right	1.40664184	758.0270626	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	cyan	red	cyan	right					0	19	19	3									right	0.903620184	759.9537083	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	magenta	magenta	brown	left					0	20	20	195									left	1.362929803	761.3909541	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	red	yellow	red	right					0	21	21	55									right	0.991939833	763.28943	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	cyan	brown	cyan	right					0	22	22	86									right	0.997891838	764.8199196	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	green	green	purple	left					0	23	23	185									left	1.980523077	766.3572598	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	green	brown	green	right					0	24	24	84									right	1.414857314	768.8668662	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	brown	red	brown	right					0	25	25	7									right	1.149786581	770.8120873	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	white	white	cyan	left					0	26	26	154									left	1.312189706	772.4976858	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	brown	blue	brown	right					0	27	27	16									right	1.263974199	774.3453614	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	red	magenta	red	right					0	28	28	37									right	1.029308612	776.1480714	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	white	white	purple	left					0	29	29	181									left	1.313250401	777.7121077	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	white	magenta	white	right					0	30	30	35									right	1.492119887	779.5651777	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	blue	blue	white	left					0	31	31	202									left	1.177447831	781.5841989	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	magenta	orange	magenta	right					0	32	32	67									right	1.227048727	783.31055	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	yellow	yellow	cyan	left					0	33	33	150									left	0.810262451	785.0714279	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	blue	blue	orange	left					0	34	34	175									left	1.042512676	786.4230365	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	blue	magenta	blue	right					0	35	35	38									right	1.224698218	788.0088956	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	purple	purple	red	left					0	36	36	116									left	1.165411128	789.7644815	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	orange	cyan	orange	right					0	37	37	41									left	0.989541538	791.4679936	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	green	green	blue	left					0	38	38	120									left	1.256417499	793.0013321	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	magenta	white	magenta	right					0	39	39	94									right	1.441534243	794.8002618	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	red	red	brown	left					0	40	40	192									left	1.217277199	796.7761244	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	black	yellow	black	right					0	41	41	54									right	0.856415024	798.5289954	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	cyan	cyan	purple	left					0	42	42	187									left	1.618092474	799.9274274	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	black	magenta	black	right					0	43	43	36									right	0.898416553	802.0789547	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	black	cyan	black	right					0	44	44	45									right	1.567246564	803.4983164	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	black	red	black	right					0	45	45	9									right	1.711719007	805.5941283	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	white	brown	white	right					0	46	46	80									right	1.038273739	807.8354055	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	orange	orange	cyan	left					0	47	47	151									left	1.167266276	809.4185625	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	green	green	red	left					0	48	48	111									left	1.145452497	811.112079	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	blue	blue	red	left					0	49	49	110									left	0.927759298	812.7861071	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	blue	yellow	blue	right					0	50	50	56									right	0.975881366	814.2496535	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	blue	green	blue	right					0	51	51	29									right	0.728515182	815.7535217	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	brown	cyan	brown	right					0	52	52	43									right	1.183704903	817.0098018	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	magenta	magenta	orange	left					0	53	53	177									left	0.943257125	818.730599	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	black	black	magenta	left					0	54	54	146									left	0.75371115	820.2160633	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	blue	white	blue	right					0	55	55	92									right	1.059518344	821.510403	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	purple	red	purple	right					0	56	56	6									right	1.090289144	823.1032005	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	purple	magenta	purple	right					0	57	57	33									right	0.776741783	824.7206999	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	purple	purple	white	left					0	58	58	208									left	1.322311955	826.0391121	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	green	white	green	right					0	59	59	93									right	1.034565149	827.8953143	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	black	black	red	left					0	60	60	119									left	0.737010549	829.4648836	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	magenta	blue	magenta	right					0	61	61	11									right	0.858332892	830.735341	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	red	cyan	red	right					0	62	62	46									right	0.887427317	832.1303912	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	brown	green	brown	right					0	63	63	25									right	0.782396401	833.5474735	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	orange	magenta	orange	right					0	64	64	32									left	1.099160405	834.870353	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	brown	brown	magenta	left					0	65	65	144									left	1.341748345	836.5079706	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	red	red	white	left					0	66	66	201									left	1.399947008	838.393896	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	white	white	black	left					0	67	67	219									left	1.169845052	840.3275476	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	red	red	black	left					0	68	68	210									left	1.349714645	842.0279027	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	purple	purple	black	left					0	69	69	217									left	1.138434251	843.8954819	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	cyan	cyan	orange	left					0	70	70	178									left	1.035311817	845.5743071	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	green	green	magenta	left					0	71	71	149									left	1.008836701	847.1605113	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	blue	blue	black	left					0	72	72	211									right	0.922013373	848.7033546	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	yellow	cyan	yellow	right					0	73	73	40									right	2.434196424	850.1676929	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	orange	orange	purple	left					0	74	74	189									left	1.050036523	853.1355248	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	blue	black	blue	right					0	75	75	101									right	0.798053801	854.7153017	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	blue	blue	yellow	left					0	76	76	166									left	0.849235925	856.0486016	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	purple	purple	magenta	left					0	77	77	143									left	1.024040127	857.4339528	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	white	white	red	left					0	78	78	118									left	1.235373001	858.9900173	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	yellow	yellow	blue	left					0	79	79	123									left	1.266943374	860.7589007	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	yellow	green	yellow	right					0	80	80	22									right	0.796315986	862.5576035	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	red	green	red	right					0	81	81	28									right	0.900989782	863.8766557	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	yellow	yellow	red	left					0	82	82	114									left	1.337584928	865.3123582	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	yellow	yellow	black	left					0	83	83	215									left	0.755617925	867.1821719	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	green	green	white	left					0	84	84	203									left	0.923860415	868.4694907	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	cyan	cyan	blue	left					0	85	85	122									left	0.843540346	869.9341405	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	yellow	yellow	brown	left					0	86	86	197									left	1.217383439	871.3202422	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	green	purple	green	right					0	87	87	75									right	1.437176693	873.0682915	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	red	blue	red	right					0	88	88	19									right	0.876023788	875.0453632	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	cyan	white	cyan	right					0	89	89	95									right	0.787214325	876.4623556	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	red	orange	red	right					0	90	90	64									left	0.718136933	877.7797165	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	brown	magenta	brown	right					0	91	91	34									right	0.960936073	879.0324595	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	blue	orange	blue	right					0	92	92	65									right	0.79240985	880.5292101	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	purple	purple	green	left					0	93	93	134									left	0.910084617	881.8598864	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	purple	purple	yellow	left					0	94	94	161									left	1.241646713	883.304115	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	white	blue	white	right					0	95	95	17									right	0.872334824	885.0894209	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	magenta	magenta	blue	left					0	96	96	121									left	1.476204353	886.5012463	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	white	white	green	left					0	97	97	136									left	0.897549566	888.5203286	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	orange	blue	orange	right					0	98	98	14									right	0.888771745	889.9527121	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	blue	blue	cyan	left					0	99	99	157									left	1.154671492	891.3753031	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	white	yellow	white	right					0	100	100	53									right	0.926182764	893.0677573	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	black	blue	black	right					0	101	101	18									right	1.762928011	894.5349253	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	brown	black	brown	right					0	102	102	108									right	0.772446952	896.8292274	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	brown	yellow	brown	right					0	103	103	52									right	0.724819392	898.1408616	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	cyan	purple	cyan	right					0	104	104	77									right	0.798834602	899.3952025	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	red	red	blue	left					0	105	105	129									left	0.805976154	900.7236529	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	purple	white	purple	right					0	106	106	98									right	0.821265341	902.0602185	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	brown	brown	red	left					0	107	107	117									left	1.942030457	903.4196445	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	yellow	red	yellow	right					0	108	108	4									right	0.745944103	905.895831	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	orange	orange	white	left					0	109	109	207									left	1.349194111	907.1727191	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	blue	red	blue	right					0	110	110	0									right	0.624385813	909.049382	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	white	white	yellow	left					0	111	111	163									left	0.764881719	910.2210071	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	white	white	magenta	left					0	112	112	145									left	1.131864433	911.51758	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	orange	orange	brown	left					0	113	113	198									left	1.970999869	913.1827462	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	blue	blue	purple	left					0	114	114	184									left	1.398014206	915.6999767	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	black	black	cyan	left					0	115	115	155									left	0.836848074	917.6288466	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	black	green	black	right					0	116	116	27									right	0.830604655	918.995046	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	black	black	orange	left					0	117	117	173									left	0.843787387	920.3656413	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	white	white	blue	left					0	118	118	127									left	0.668414437	921.7416237	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	yellow	yellow	white	left					0	119	119	206									left	0.681175621	922.9842487	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	green	green	orange	left					0	120	120	176									left	0.712367968	924.2095187	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	red	black	red	right					0	121	121	100									right	0.946225447	925.4557853	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	orange	orange	blue	left					0	122	122	124									left	1.806516742	926.9391867	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	magenta	black	magenta	right					0	123	123	103									right	0.69506662	929.2904007	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	white	black	white	right					0	124	124	109									right	0.743224528	930.5063155	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	orange	black	orange	right					0	125	125	106									right	0.996374184	931.7733434	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	magenta	magenta	white	left					0	126	126	204									left	0.732176838	933.3016702	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	blue	cyan	blue	right					0	127	127	47									right	0.691742457	934.5658313	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	magenta	magenta	cyan	left					0	128	128	159									left	0.690456909	935.791458	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	red	white	red	right					0	129	129	91									right	0.919084304	937.0108757	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	yellow	black	yellow	right					0	130	130	105									right	0.754464644	938.463284	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	magenta	red	magenta	right					0	131	131	2									right	1.37873355	939.7591942	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	magenta	cyan	magenta	right					0	132	132	49									right	0.682502556	941.6713648	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	black	black	blue	left					0	133	133	128									left	0.974279231	942.8911935	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	black	black	brown	left					0	134	134	191									left	0.976732567	944.4009215	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	orange	white	orange	right					0	135	135	97									right	0.821778195	945.9077559	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	purple	black	purple	right					0	136	136	107									right	0.744408529	947.2734543	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	green	blue	green	right					0	137	137	10									right	0.785590857	948.5523141	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	brown	orange	brown	right					0	138	138	61									right	1.138638625	949.8708837	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	black	white	black	right					0	139	139	90									left	0.962533515	951.5511872	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	cyan	cyan	magenta	left					0	140	140	140									left	1.395568551	953.0544146	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	white	green	white	right					0	141	141	26									right	0.900649729	954.9813419	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	green	cyan	green	right					0	142	142	48									right	0.981684891	956.4123199	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	brown	brown	purple	left					0	143	143	180									left	1.079465881	957.9305531	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	purple	purple	cyan	left					0	144	144	152									left	1.767964815	959.545516	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	green	green	cyan	left					0	145	145	158									left	0.774142954	961.8433667	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	black	brown	black	right					0	146	146	81									right	1.114052791	963.1595214	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	orange	orange	red	left					0	147	147	115									left	0.778305944	964.8071781	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	red	red	yellow	left					0	148	148	165									left	0.791090168	966.1225401	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	orange	orange	magenta	left					0	149	149	142									left	0.81253488	967.461198	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	yellow	yellow	magenta	left					0	150	150	141									left	0.753117656	968.7925477	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	white	orange	white	right					0	151	151	62									left	1.584414792	970.0891299	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	cyan	cyan	red	left					0	152	152	113									left	1.085085939	972.2128778	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	purple	blue	purple	right					0	153	153	15									right	1.064604642	973.833337	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	orange	orange	black	left					0	154	154	216									left	1.103588782	975.4338888	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	magenta	magenta	yellow	left					0	155	155	168									left	1.117941007	977.0837646	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	blue	blue	green	left					0	156	156	139									left	0.632109766	978.7453634	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	white	cyan	white	right					0	157	157	44									right	0.612018016	979.9098218	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	purple	brown	purple	right					0	158	158	89									right	0.965273144	981.0602654	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	orange	green	orange	right					0	159	159	23									right	1.018468709	982.5596818	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	red	purple	red	right					0	160	160	73									right	0.869930982	984.1078008	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	red	red	purple	left					0	161	161	183									left	1.10507401	985.4969754	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	brown	brown	black	left					0	162	162	218									left	0.925762497	987.1400283	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	purple	yellow	purple	right					0	163	163	51									right	1.416233742	988.6095024	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	red	red	cyan	left					0	164	164	156									left	0.627391255	990.5661547	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	magenta	purple	magenta	right					0	165	165	76									right	1.846788563	991.7391238	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	orange	brown	orange	right					0	166	166	88									right	1.868260154	994.117333	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	purple	purple	blue	left					0	167	167	125									right	1.390929827	996.5147635	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	cyan	cyan	green	left					0	168	168	131									left	0.804073646	998.4455172	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	orange	purple	orange	right					0	169	169	79									right	1.236656842	999.7808199	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	brown	brown	green	left					0	170	170	135									left	0.825759851	1001.559925	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	cyan	green	cyan	right					0	171	171	21									right	0.716952932	1002.916632	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	black	black	purple	left					0	172	172	182									left	0.727266327	1004.178257	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	red	red	magenta	left					0	173	173	147									left	0.750256427	1005.443377	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	brown	brown	blue	left					0	174	174	126									right	0.694555899	1006.723153	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	orange	orange	yellow	left					0	175	175	160									right	1.362617483	1007.959379	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	black	black	green	left					0	176	176	137									left	1.516224014	1009.853718	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	magenta	magenta	green	left					0	177	177	130									left	1.173769535	1011.891732	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	brown	brown	white	left					0	178	178	209									left	1.141814734	1013.603767	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	cyan	yellow	cyan	right					0	179	179	59									right	0.852740568	1015.284894	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	blue	brown	blue	right					0	180	180	83									right	1.336071967	1016.68157	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	yellow	magenta	yellow	right					0	181	181	31									left	0.705789616	1018.551844	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	cyan	cyan	yellow	left					0	182	182	169									left	0.851862487	1019.790205	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	purple	purple	brown	left					0	183	183	199									left	1.190906616	1021.178886	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				red	white	red	white	right					0	184	184	8									right	0.992927567	1022.904629	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	black	orange	black	right					0	185	185	63									right	0.765287053	1024.444678	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	magenta	magenta	black	left					0	186	186	213									left	1.458021084	1025.735715	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	magenta	yellow	magenta	right					0	187	187	58									right	2.33181639	1027.725731	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	yellow	white	yellow	right					0	188	188	96									right	0.869890022	1030.587972	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	green	yellow	green	right					0	189	189	57									right	0.621831784	1032.003782	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	blue	purple	blue	right					0	190	190	74									right	0.647668606	1033.170301	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	white	purple	white	right					0	191	191	71									right	1.335826207	1034.337745	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	red	red	green	left					0	192	192	138									left	0.829275588	1036.212535	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	cyan	orange	cyan	right					0	193	193	68									right	0.713723916	1037.584392	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	orange	yellow	orange	right					0	194	194	50									right	1.505906352	1038.83174	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	green	magenta	green	right					0	195	195	39									right	1.192213924	1040.881895	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	magenta	green	magenta	right					0	196	196	20									right	0.758855901	1042.610777	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	white	white	orange	left					0	197	197	172									left	0.746559784	1043.911021	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	cyan	black	cyan	right					0	198	198	104									right	0.72218899	1045.191409	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	cyan	blue	cyan	right					0	199	199	12									right	0.817915578	1046.447807	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	yellow	purple	yellow	right					0	200	200	78									right	0.865303778	1047.80879	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	white	white	brown	left					0	201	201	190									left	0.724815979	1049.204825	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	purple	purple	orange	left					0	202	202	170									left	1.76133569	1050.47279	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				blue	yellow	blue	yellow	right					0	203	203	13									right	1.034014322	1052.768085	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	blue	blue	brown	left					0	204	204	193									left	1.957180123	1054.324387	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	green	black	green	right					0	205	205	102									right	1.442299684	1056.81572	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	black	purple	black	right					0	206	206	72									right	0.951635585	1058.801945	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				purple	magenta	magenta	purple	left					0	207	207	186									left	1.25040192	1060.295585	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	black	black	white	left					0	208	208	200									left	1.243413968	1062.078711	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				magenta	cyan	magenta	cyan	right					0	209	209	30									right	0.746478717	1063.863606	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	orange	orange	green	left					0	210	210	133									left	0.820103953	1065.141662	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	brown	brown	yellow	left					0	211	211	162									left	1.085393993	1066.492207	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				green	yellow	yellow	green	left					0	212	212	132									left	0.928228632	1068.105868	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				black	cyan	cyan	black	left					0	213	213	214									left	0.727504834	1069.570373	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				cyan	purple	cyan	purple	right					0	214	214	42									right	1.138802892	1070.831223	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				brown	red	brown	red	right					0	215	215	82									right	1.054328793	1072.499717	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	green	orange	green	right					0	216	216	66									right	0.787527925	1074.086091	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				white	cyan	cyan	white	left					0	217	217	205									left	1.041945636	1075.4159	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				yellow	green	green	yellow	left					0	218	218	167									left	1.521509992	1077.000137	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+				orange	brown	brown	orange	left					0	219	219	171									left	0.792645796	1079.065239	None					md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+																				4	30.956								2019-09-05_12:33:28				md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+																						4	10.468										md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+																				1	13.134									2019-09-05_12:35:02	2019-09-05_12:40:02		md	2	2019_Sep_05_1215	StressSession	03.01.2003	60.02253648
+																																2019-09-05_12:40:18						

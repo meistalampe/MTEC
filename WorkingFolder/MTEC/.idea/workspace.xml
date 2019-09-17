@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cceb26c-0173-4b95-b2b1-d5f78585e4fe" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/extract_features.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ExperimentFolder_v4.9.19/DataStorage/md/LogFiles/md_EmotionSession_2019_Sep_05_1241.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ExperimentFolder_v4.9.19/DataStorage/md/LogFiles/md_StartingSession_2019_Sep_05_1208.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ExperimentFolder_v4.9.19/DataStorage/md/LogFiles/md_StressSession_2019_Sep_05_1215.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Dominik.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Dominik.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_bvp_data_md_stress_one_360_760.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cut_segment.py" beforeDir="false" afterPath="$PROJECT_DIR$/cut_segment.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/empatica_data_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/empatica_data_extraction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/process_raw.py" beforeDir="false" afterPath="$PROJECT_DIR$/process_raw.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +84,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.cut_segment">
+  <component name="RunManager" selected="Python.extract_features">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="MTEC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -120,20 +129,17 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="hellobuubuu" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="extract_features" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MTEC" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="E:\GitHub\MTEC\WorkingFolder\MTEC\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hellobuubuu.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/extract_features.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -232,11 +238,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.extract_features" />
         <item itemvalue="Python.cut_segment" />
         <item itemvalue="Python.process_raw" />
         <item itemvalue="Python.merge_csv_files" />
         <item itemvalue="Python.testingScript" />
-        <item itemvalue="Python.hellobuubuu" />
       </list>
     </recent_temporary>
   </component>
@@ -322,6 +328,8 @@
       <workItem from="1568211297503" duration="4530000" />
       <workItem from="1568215958244" duration="4692000" />
       <workItem from="1568279945895" duration="7431000" />
+      <workItem from="1568648460363" duration="4503000" />
+      <workItem from="1568732750777" duration="5806000" />
     </task>
     <servers />
   </component>
@@ -419,12 +427,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/empatica_data_extraction.py</url>
-          <line>253</line>
+          <line>254</line>
           <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/empatica_data_extraction.py</url>
-          <line>248</line>
+          <line>249</line>
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -462,6 +470,41 @@
           <line>86</line>
           <option name="timeStamp" value="86" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/extract_features.py</url>
+          <line>86</line>
+          <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/extract_features.py</url>
+          <line>91</line>
+          <option name="timeStamp" value="88" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/extract_features.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="89" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/extract_features.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="90" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/extract_features.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="91" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/extract_features.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="92" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/extract_features.py</url>
+          <line>77</line>
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -478,6 +521,7 @@
     </watches-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/MTEC$extract_features.coverage" NAME="extract_features Coverage Results" MODIFIED="1568743930752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/MTEC$peak_detecting_algorithm.coverage" NAME="peak_detecting_algorithm Coverage Results" MODIFIED="1562709046120" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/MTEC$hellobuubuu.coverage" NAME="hellobuubuu Coverage Results" MODIFIED="1566466654002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/MTEC$merge_csv_files.coverage" NAME="merge_csv_files Coverage Results" MODIFIED="1568129470578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />

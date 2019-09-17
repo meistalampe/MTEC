@@ -22,7 +22,7 @@ def main():
     }
 
     # ----------------- DATA EXTRACTION ----------------- #
-    label = 'CUT SEGMENT APP'
+    label = 'CUT SEGMENT'
     print_header(program_label=label)
 
     # Get user input

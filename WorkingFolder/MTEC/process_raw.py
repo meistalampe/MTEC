@@ -9,7 +9,7 @@ def main():
     set_verbose = False
 
     # ----------------- DATA EXTRACTION ----------------- #
-    label = 'PRE-PROCESSING APP'
+    label = 'PRE-PROCESSING'
     print_header(program_label=label)
 
     # Get user input

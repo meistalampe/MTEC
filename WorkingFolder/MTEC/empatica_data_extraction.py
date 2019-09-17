@@ -5,6 +5,7 @@
    recording protocol."""
 
 import os
+import csv
 import collections
 from typing import Tuple
 from typing import List
@@ -44,7 +45,7 @@ data_tags = list(['E4_Acc', 'E4_Bvp', 'E4_Gsr', 'E4_Temperature', 'E4_Ibi', 'E4_
 
 __all__ = ['data_extraction', 'print_header', 'get_folder_from_user', 'search_for_latest_file', 'parse_file_for_tag',
            'get_stream_data', 'get_stream_time', 'extract_all','save_dict_to_mat', 'write_to_text_file',
-           'read_list_from_text_file']
+           'read_list_from_text_file', 'write_dict_to_csv']
 
 
 # ----------------- UI / User Input ----------------- #
@@ -476,6 +477,56 @@ def read_list_from_text_file(file_path: str):
         for line in f:
             stream.append(line.rstrip('\n'))
     return stream
+
+
+def write_dict_to_csv(my_dict: dict, file_name: str, file_index: str, folder: str = 'FeatureRepository',
+                      header: List[str] = ['feature', 'value']):
+    """
+    A function that takes a dictionary and writes its content to a csv file.
+
+    Parameters
+        ----------
+        my_dict: dict
+            the dictionary that will be saved to the file
+
+        file_name: str
+            name of the data file that will be created
+
+        file_index: str
+            index, which is added to the file_name for identification, usually subject initials
+
+        folder: str
+            folder to which the file will be saved, default is set to FeatureRepository
+
+        header: List[str]
+            first line of the csv file, contains all keys of the dictionary, default is set to feature and value
+
+
+        Returns
+        ----------
+        None
+
+        References
+        -----------
+        No references needed.
+        """
+
+    csv_columns = header
+    dict_data = my_dict
+
+    # create file name
+    csv_file = file_name + file_index + '.csv'
+    file_path = os.path.abspath(os.path.join(folder, csv_file))
+
+    try:
+        with open(file_path, 'w') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
+            writer.writeheader()
+            for key in dict_data.keys():
+                # writer.writerow(data)
+                csvfile.write('{}, {} \n'.format(key, my_dict[key]))
+    except IOError:
+        print("I/O error")
 
 
 if __name__ == '__main__':

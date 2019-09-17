@@ -1,0 +1,3 @@
+start_session_one	start_baseline_measurement	end_baseline_measurement	rating_baseline.response	rating_baseline.rt	end_session_one	participant	session	date	expName	psychopyVersion	frameRate	tStartExperiment	tElapsed	tMeasured	tEndMeasurement	segmentStart	segmentEnd
+2019-09-05_12:08:16	0.506111111	0.509583333	1	13.271		md	1	2019_Sep_05_1208	StartingSession	03.01.2003	60.0372968	0.503553241	0.00255787	0.003472222	0.006030093	221	521
+					2019-09-05_12:14:05												
