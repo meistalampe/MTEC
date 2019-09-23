@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v3.1.3),
-    on September 05, 2019, at 12:41
+    on September 23, 2019, at 11:11
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -44,7 +44,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\Master Thesis\\ExperimentFolder_v4.9.19\\Paradigma\\Sessions\\EmotionSession_lastrun.py',
+    originPath='E:\\GitHub\\MTEC\\ExperimentFolder_v4.9.19\\Paradigma\\Sessions\\EmotionSession_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -71,6 +71,17 @@ else:
 
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard()
+
+# Initialize components for Routine "Emotion_Evaluation_N_T"
+Emotion_Evaluation_N_TClock = core.Clock()
+text_emotion_n_eval_t = visual.TextStim(win=win, name='text_emotion_n_eval_t',
+    text='please rate the feeling of the picture.',
+    font='Arial',
+    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
+rating_emotion_n_eval_t = visual.RatingScale(win=win, name='rating_emotion_n_eval_t', marker='triangle', size=1.0, pos=[0.0, -0.4], low=1, high=7, labels=['very negative', ' very positive'], scale='', markerStart='2')
 
 # Initialize components for Routine "Emotion_Screen"
 Emotion_ScreenClock = core.Clock()
@@ -559,22 +570,14 @@ text_blank = visual.TextStim(win=win, name='text_blank',
 
 # Initialize components for Routine "Emotion_Evaluation_N_T"
 Emotion_Evaluation_N_TClock = core.Clock()
-image_emotion_n_eval_t = visual.ImageStim(
-    win=win,
-    name='image_emotion_n_eval_t', 
-    image='sin', mask=None,
-    ori=0, pos=(0, 0.2), size=1.0,
-    color=[1,1,1], colorSpace='rgb', opacity=1,
-    flipHoriz=False, flipVert=False,
-    texRes=128, interpolate=True, depth=0.0)
 text_emotion_n_eval_t = visual.TextStim(win=win, name='text_emotion_n_eval_t',
     text='please rate the feeling of the picture.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=-1.0);
-rating_emotion_n_eval_t = visual.RatingScale(win=win, name='rating_emotion_n_eval_t', marker='triangle', size=1.0, pos=[0.0, -0.4], low=1, high=2, labels=['negative', ' positive'], scale='', markerStart='2')
+    depth=0.0);
+rating_emotion_n_eval_t = visual.RatingScale(win=win, name='rating_emotion_n_eval_t', marker='triangle', size=1.0, pos=[0.0, -0.4], low=1, high=7, labels=['very negative', ' very positive'], scale='', markerStart='2')
 
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
@@ -738,6 +741,76 @@ text_ending_subtitle = visual.TextStim(win=win, name='text_ending_subtitle',
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
+
+# ------Prepare to start Routine "Emotion_Evaluation_N_T"-------
+t = 0
+Emotion_Evaluation_N_TClock.reset()  # clock
+frameN = -1
+continueRoutine = True
+# update component parameters for each repeat
+rating_emotion_n_eval_t.reset()
+# keep track of which components have finished
+Emotion_Evaluation_N_TComponents = [text_emotion_n_eval_t, rating_emotion_n_eval_t]
+for thisComponent in Emotion_Evaluation_N_TComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+
+# -------Start Routine "Emotion_Evaluation_N_T"-------
+while continueRoutine:
+    # get current time
+    t = Emotion_Evaluation_N_TClock.getTime()
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *text_emotion_n_eval_t* updates
+    if t >= 0.0 and text_emotion_n_eval_t.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        text_emotion_n_eval_t.tStart = t  # not accounting for scr refresh
+        text_emotion_n_eval_t.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(text_emotion_n_eval_t, 'tStartRefresh')  # time at next scr refresh
+        text_emotion_n_eval_t.setAutoDraw(True)
+    # *rating_emotion_n_eval_t* updates
+    if t >= 0.0 and rating_emotion_n_eval_t.status == NOT_STARTED:
+        # keep track of start time/frame for later
+        rating_emotion_n_eval_t.tStart = t  # not accounting for scr refresh
+        rating_emotion_n_eval_t.frameNStart = frameN  # exact frame index
+        win.timeOnFlip(rating_emotion_n_eval_t, 'tStartRefresh')  # time at next scr refresh
+        rating_emotion_n_eval_t.setAutoDraw(True)
+    continueRoutine &= rating_emotion_n_eval_t.noResponse  # a response ends the trial
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in Emotion_Evaluation_N_TComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "Emotion_Evaluation_N_T"-------
+for thisComponent in Emotion_Evaluation_N_TComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('text_emotion_n_eval_t.started', text_emotion_n_eval_t.tStartRefresh)
+thisExp.addData('text_emotion_n_eval_t.stopped', text_emotion_n_eval_t.tStopRefresh)
+# store data for thisExp (ExperimentHandler)
+thisExp.addData('rating_emotion_n_eval_t.response', rating_emotion_n_eval_t.getRating())
+thisExp.addData('rating_emotion_n_eval_t.rt', rating_emotion_n_eval_t.getRT())
+thisExp.nextEntry()
+# the Routine "Emotion_Evaluation_N_T" was not non-slip safe, so reset the non-slip timer
+routineTimer.reset()
 
 # ------Prepare to start Routine "Emotion_Screen"-------
 t = 0
@@ -3489,11 +3562,9 @@ for thisEmotion_evaluation_n in emotion_evaluation_n:
     frameN = -1
     continueRoutine = True
     # update component parameters for each repeat
-    image_emotion_n_eval_t.setSize((n_new_width*0.3, n_new_height*0.3))
-    image_emotion_n_eval_t.setImage(n_pictures)
     rating_emotion_n_eval_t.reset()
     # keep track of which components have finished
-    Emotion_Evaluation_N_TComponents = [image_emotion_n_eval_t, text_emotion_n_eval_t, rating_emotion_n_eval_t]
+    Emotion_Evaluation_N_TComponents = [text_emotion_n_eval_t, rating_emotion_n_eval_t]
     for thisComponent in Emotion_Evaluation_N_TComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3508,14 +3579,6 @@ for thisEmotion_evaluation_n in emotion_evaluation_n:
         t = Emotion_Evaluation_N_TClock.getTime()
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
-        
-        # *image_emotion_n_eval_t* updates
-        if t >= 0.0 and image_emotion_n_eval_t.status == NOT_STARTED:
-            # keep track of start time/frame for later
-            image_emotion_n_eval_t.tStart = t  # not accounting for scr refresh
-            image_emotion_n_eval_t.frameNStart = frameN  # exact frame index
-            win.timeOnFlip(image_emotion_n_eval_t, 'tStartRefresh')  # time at next scr refresh
-            image_emotion_n_eval_t.setAutoDraw(True)
         
         # *text_emotion_n_eval_t* updates
         if t >= 0.0 and text_emotion_n_eval_t.status == NOT_STARTED:

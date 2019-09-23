@@ -576,11 +576,11 @@
         <Param name="disappear" updates="constant" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="high" updates="constant" val="2" valType="code"/>
-        <Param name="labels" updates="constant" val="negative, positive" valType="str"/>
+        <Param name="high" updates="constant" val="7" valType="code"/>
+        <Param name="labels" updates="constant" val="very negative, very positive" valType="str"/>
         <Param name="low" updates="constant" val="1" valType="code"/>
         <Param name="marker" updates="constant" val="triangle" valType="str"/>
-        <Param name="markerStart" updates="constant" val="2" valType="str"/>
+        <Param name="markerStart" updates="constant" val="3" valType="str"/>
         <Param name="name" updates="None" val="rating_emotion_n_eval_t" valType="code"/>
         <Param name="pos" updates="constant" val="0, -0.4" valType="str"/>
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
@@ -829,11 +829,11 @@
         <Param name="disappear" updates="constant" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
-        <Param name="high" updates="constant" val="2" valType="code"/>
-        <Param name="labels" updates="constant" val="negative, positive" valType="str"/>
+        <Param name="high" updates="constant" val="7" valType="code"/>
+        <Param name="labels" updates="constant" val="very negative, very positive" valType="str"/>
         <Param name="low" updates="constant" val="1" valType="code"/>
         <Param name="marker" updates="constant" val="triangle" valType="str"/>
-        <Param name="markerStart" updates="constant" val="1" valType="str"/>
+        <Param name="markerStart" updates="constant" val="5" valType="str"/>
         <Param name="name" updates="None" val="rating_emotion_p_eval_t" valType="code"/>
         <Param name="pos" updates="constant" val="0, -0.4" valType="str"/>
         <Param name="saveStartStop" updates="None" val="False" valType="bool"/>
