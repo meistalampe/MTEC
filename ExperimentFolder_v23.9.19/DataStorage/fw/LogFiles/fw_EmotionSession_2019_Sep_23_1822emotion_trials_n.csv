@@ -1,0 +1,39 @@
+﻿n_path,n_weight,n_name,n_description,n_type,n_pictures,n_pic_width,n_pic_height,n_new_width,n_new_height,n_new_size,n,image_emotion_n.started_mean,image_emotion_n.started_raw,image_emotion_n.started_std,image_emotion_n.stopped_raw,order
+Resources\Pictures\,Negative\,1022.0,snake close up,.jpg,Resources\Pictures\Negative\1022.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1868.3782958984375,1868.3782958984375,0.0,,17.0
+Resources\Pictures\,Negative\,1240.0,spider,.jpg,Resources\Pictures\Negative\1240.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1808.3726806640625,1808.3726806640625,0.0,,11.0
+Resources\Pictures\,Negative\,1300.0,dog threat 1,.jpg,Resources\Pictures\Negative\1300.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1718.3875732421875,1718.3875732421875,0.0,,2.0
+Resources\Pictures\,Negative\,1302.0, dog threat 2,.jpg,Resources\Pictures\Negative\1302.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1888.380126953125,1888.380126953125,0.0,,19.0
+Resources\Pictures\,Negative\,2206.0,fingerprints,.jpg,Resources\Pictures\Negative\2206.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1948.37451171875,1948.37451171875,0.0,,25.0
+Resources\Pictures\,Negative\,2276.0,child crying,.jpg,Resources\Pictures\Negative\2276.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1738.375,1738.375,0.0,,4.0
+Resources\Pictures\,Negative\,2278.0,poor children,.jpg,Resources\Pictures\Negative\2278.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1978.401123046875,1978.401123046875,0.0,,28.0
+Resources\Pictures\,Negative\,2375.1,famine,.jpg,Resources\Pictures\Negative\2375.1.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1958.38916015625,1958.38916015625,0.0,,26.0
+Resources\Pictures\,Negative\,2399.0,headache,.jpg,Resources\Pictures\Negative\2399.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1778.3802490234375,1778.3802490234375,0.0,,8.0
+Resources\Pictures\,Negative\,2410.0,math problem,.jpg,Resources\Pictures\Negative\2410.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1828.392578125,1828.392578125,0.0,,13.0
+Resources\Pictures\,Negative\,2683.0,riot scene 1,.jpg,Resources\Pictures\Negative\2683.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1788.3990478515625,1788.3990478515625,0.0,,9.0
+Resources\Pictures\,Negative\,2688.0,poacher,.jpg,Resources\Pictures\Negative\2688.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1848.3990478515625,1848.3990478515625,0.0,,15.0
+Resources\Pictures\,Negative\,2691.0,riot scene 2,.jpg,Resources\Pictures\Negative\2691.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1728.3944091796875,1728.3944091796875,0.0,,3.0
+Resources\Pictures\,Negative\,2694.0,prison scene,.jpg,Resources\Pictures\Negative\2694.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1818.390625,1818.390625,0.0,,12.0
+Resources\Pictures\,Negative\,5971.0,tornado 1,.jpg,Resources\Pictures\Negative\5971.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1758.39404296875,1758.39404296875,0.0,,6.0
+Resources\Pictures\,Negative\,5972.0,tornado 2,.jpg,Resources\Pictures\Negative\5972.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1908.3841552734375,1908.3841552734375,0.0,,21.0
+Resources\Pictures\,Negative\,7380.0,cockroaches food,.jpg,Resources\Pictures\Negative\7380.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1928.3875732421875,1928.3875732421875,0.0,,23.0
+Resources\Pictures\,Negative\,8179.0,bungee jump,.jpg,Resources\Pictures\Negative\8179.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1938.39306640625,1938.39306640625,0.0,,24.0
+Resources\Pictures\,Negative\,9280.0,pollution,.jpg,Resources\Pictures\Negative\9280.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1698.41845703125,1698.41845703125,0.0,,0.0
+Resources\Pictures\,Negative\,9341.0,child in garbage river,.jpg,Resources\Pictures\Negative\9341.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1968.406982421875,1968.406982421875,0.0,,27.0
+Resources\Pictures\,Negative\,9584.0,dentist,.jpg,Resources\Pictures\Negative\9584.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1748.3736572265625,1748.3736572265625,0.0,,5.0
+Resources\Pictures\,Negative\,9592.0,syringe,.jpg,Resources\Pictures\Negative\9592.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1838.3905029296875,1838.3905029296875,0.0,,14.0
+Resources\Pictures\,Negative\,1201.0,spider on shoulder,.jpg,Resources\Pictures\Negative\1201.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1858.3873291015625,1858.3873291015625,0.0,,16.0
+Resources\Pictures\,Negative\,1726.0,roaring tiger,.jpg,Resources\Pictures\Negative\1726.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1768.4063720703125,1768.4063720703125,0.0,,7.0
+Resources\Pictures\,Negative\,1931.0,shark,.jpg,Resources\Pictures\Negative\1931.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1918.3934326171875,1918.3934326171875,0.0,,22.0
+Resources\Pictures\,Negative\,2100.0,angry man,.jpg,Resources\Pictures\Negative\2100.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1898.3668212890625,1898.3668212890625,0.0,,20.0
+Resources\Pictures\,Negative\,2110.0, angry man 2,.jpg,Resources\Pictures\Negative\2110.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1878.3685302734375,1878.3685302734375,0.0,,18.0
+Resources\Pictures\,Negative\,2692.0,bomb,.jpg,Resources\Pictures\Negative\2692.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1798.3839111328125,1798.3839111328125,0.0,,10.0
+Resources\Pictures\,Negative\,6000.0,prison  ,.jpg,Resources\Pictures\Negative\6000.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1708.3948974609375,1708.3948974609375,0.0,,1.0
+Resources\Pictures\,Negative\,9560.0,bird in oil,.jpg,Resources\Pictures\Negative\9560.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1988.39111328125,1988.39111328125,0.0,,29.0
+
+extraInfo
+participant,fw
+session,003
+date,2019_Sep_23_1822
+expName,EmotionSession
+psychopyVersion,3.2.3
+frameRate,60.00751294194122
