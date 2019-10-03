@@ -1,0 +1,41 @@
+﻿p_path,p_weight,p_name,p_description,p_type,p_pictures,p_pic_width,p_pic_height,p_new_width,p_new_height,p_new_size,n,rating_emotion_p_eval_o.response_mean,rating_emotion_p_eval_o.response_raw,rating_emotion_p_eval_o.response_std,rating_emotion_p_eval_o.rt_mean,rating_emotion_p_eval_o.rt_raw,rating_emotion_p_eval_o.rt_std,rating_emotion_p_eval_t.response_mean,rating_emotion_p_eval_t.response_raw,rating_emotion_p_eval_t.response_std,rating_emotion_p_eval_t.rt_mean,rating_emotion_p_eval_t.rt_raw,rating_emotion_p_eval_t.rt_std,order
+Resources\Pictures\,Positive\,1440,seal,.jpg,Resources\Pictures\Positive\1440.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,6.0,6.0,0.0,15.135000228881836,15.135000228881836,0.0,6.0,6.0,0.0,15.039999961853027,15.039999961853027,0.0,0.0
+Resources\Pictures\,Positive\,1460,tiger cub,.jpg,Resources\Pictures\Positive\1460.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,8.0,8.0,0.0,14.449999809265137,14.449999809265137,0.0,7.0,7.0,0.0,5.478000164031982,5.478000164031982,0.0,1.0
+Resources\Pictures\,Positive\,1463,group of cats,.jpg,Resources\Pictures\Positive\1463.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,7.0,7.0,0.0,15.269000053405762,15.269000053405762,0.0,5.0,5.0,0.0,3.7200000286102295,3.7200000286102295,0.0,2.0
+Resources\Pictures\,Positive\,1710,three dogs,.jpg,Resources\Pictures\Positive\1710.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,5.0,5.0,0.0,12.454999923706055,12.454999923706055,0.0,5.0,5.0,0.0,3.4709999561309814,3.4709999561309814,0.0,3.0
+Resources\Pictures\,Positive\,1750,rabit,.jpg,Resources\Pictures\Positive\1750.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,9.0,9.0,0.0,9.954000473022461,9.954000473022461,0.0,7.0,7.0,0.0,4.369999885559082,4.369999885559082,0.0,4.0
+Resources\Pictures\,Positive\,1811,group of apes,.jpg,Resources\Pictures\Positive\1811.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,5.0,5.0,0.0,4.771999835968018,4.771999835968018,0.0,4.0,4.0,0.0,3.5399999618530273,3.5399999618530273,0.0,5.0
+Resources\Pictures\,Positive\,1942,group of turtles,.jpg,Resources\Pictures\Positive\1942.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,3.0,3.0,0.0,8.852999687194824,8.852999687194824,0.0,4.0,4.0,0.0,2.321000099182129,2.321000099182129,0.0,6.0
+Resources\Pictures\,Positive\,2040,baby on belly,.jpg,Resources\Pictures\Positive\2040.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,4.0,4.0,0.0,6.072000026702881,6.072000026702881,0.0,4.0,4.0,0.0,2.3540000915527344,2.3540000915527344,0.0,7.0
+Resources\Pictures\,Positive\,2057,sitting baby,.jpg,Resources\Pictures\Positive\2057.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,10.0,10.0,0.0,4.770999908447266,4.770999908447266,0.0,7.0,7.0,0.0,2.2750000953674316,2.2750000953674316,0.0,8.0
+Resources\Pictures\,Positive\,2070,baby suprise,.jpg,Resources\Pictures\Positive\2070.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,10.0,10.0,0.0,2.50600004196167,2.50600004196167,0.0,7.0,7.0,0.0,2.2039999961853027,2.2039999961853027,0.0,9.0
+Resources\Pictures\,Positive\,2091,children and kitten,.jpg,Resources\Pictures\Positive\2091.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,3.0,3.0,0.0,12.286999702453613,12.286999702453613,0.0,4.0,4.0,0.0,4.921000003814697,4.921000003814697,0.0,10.0
+Resources\Pictures\,Positive\,2154,father and son,.jpg,Resources\Pictures\Positive\2154.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,7.0,7.0,0.0,5.421999931335449,5.421999931335449,0.0,5.0,5.0,0.0,2.6070001125335693,2.6070001125335693,0.0,11.0
+Resources\Pictures\,Positive\,2304,smiling girl,.jpg,Resources\Pictures\Positive\2304.jpg,1024,768,1.7999999999999998,1,"(1.8, 1)",1.0,4.0,4.0,0.0,4.291999816894531,4.291999816894531,0.0,4.0,4.0,0.0,3.7249999046325684,3.7249999046325684,0.0,12.0
+Resources\Pictures\,Positive\,2311,mother daughter,.jpg,Resources\Pictures\Positive\2311.jpg,1024,768,1.7999999999999998,1,"(1.8, 1)",1.0,5.0,5.0,0.0,7.4710001945495605,7.4710001945495605,0.0,5.0,5.0,0.0,4.769999980926514,4.769999980926514,0.0,13.0
+Resources\Pictures\,Positive\,2332,girl and dog,.jpg,Resources\Pictures\Positive\2332.jpg,800,600,2.1999999999999997,1,"(2.2, 1)",1.0,4.0,4.0,0.0,9.744000434875488,9.744000434875488,0.0,5.0,5.0,0.0,4.046000003814697,4.046000003814697,0.0,14.0
+Resources\Pictures\,Positive\,2550,happy elderly couple,.jpg,Resources\Pictures\Positive\2550.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,8.0,8.0,0.0,7.921999931335449,7.921999931335449,0.0,6.0,6.0,0.0,4.000999927520752,4.000999927520752,0.0,15.0
+Resources\Pictures\,Positive\,2655,boy and dog,.jpg,Resources\Pictures\Positive\2655.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,3.0,3.0,0.0,6.6539998054504395,6.6539998054504395,0.0,4.0,4.0,0.0,3.0889999866485596,3.0889999866485596,0.0,16.0
+Resources\Pictures\,Positive\,4626,marriage scene,.jpg,Resources\Pictures\Positive\4626.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,10.0,10.0,0.0,4.3520002365112305,4.3520002365112305,0.0,7.0,7.0,0.0,3.171999931335449,3.171999931335449,0.0,17.0
+Resources\Pictures\,Positive\,5760,flowers,.jpg,Resources\Pictures\Positive\5760.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,7.0,7.0,0.0,4.750999927520752,4.750999927520752,0.0,6.0,6.0,0.0,2.4030001163482666,2.4030001163482666,0.0,18.0
+Resources\Pictures\,Positive\,5831,father and son beach,.jpg,Resources\Pictures\Positive\5831.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,4.0,4.0,0.0,8.786999702453613,8.786999702453613,0.0,4.0,4.0,0.0,3.321000099182129,3.321000099182129,0.0,19.0
+Resources\Pictures\,Positive\,5833,sunny beach,.jpg,Resources\Pictures\Positive\5833.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,6.0,6.0,0.0,4.388000011444092,4.388000011444092,0.0,5.0,5.0,0.0,3.5869998931884766,3.5869998931884766,0.0,20.0
+Resources\Pictures\,Positive\,1340,women and parrots,.jpg,Resources\Pictures\Positive\1340.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,10.0,10.0,0.0,7.504000186920166,7.504000186920166,0.0,7.0,7.0,0.0,2.003000020980835,2.003000020980835,0.0,21.0
+Resources\Pictures\,Positive\,7325,girl and watermelon,.jpg,Resources\Pictures\Positive\7325.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,7.0,7.0,0.0,4.039000034332275,4.039000034332275,0.0,5.0,5.0,0.0,7.005000114440918,7.005000114440918,0.0,22.0
+Resources\Pictures\,Positive\,7502,disney land,.jpg,Resources\Pictures\Positive\7502.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,7.0,7.0,0.0,7.019999980926514,7.019999980926514,0.0,6.0,6.0,0.0,3.253999948501587,3.253999948501587,0.0,23.0
+Resources\Pictures\,Positive\,8330,women and trophy,.jpg,Resources\Pictures\Positive\8330.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,1.0,1.0,0.0,6.138000011444092,6.138000011444092,0.0,4.0,4.0,0.0,2.2739999294281006,2.2739999294281006,0.0,24.0
+Resources\Pictures\,Positive\,8380,team medals,.jpg,Resources\Pictures\Positive\8380.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,2.0,2.0,0.0,7.872000217437744,7.872000217437744,0.0,5.0,5.0,0.0,3.489000082015991,3.489000082015991,0.0,25.0
+Resources\Pictures\,Positive\,8497,family on rollercoaster,.jpg,Resources\Pictures\Positive\8497.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,6.0,6.0,0.0,4.703999996185303,4.703999996185303,0.0,5.0,5.0,0.0,2.322999954223633,2.322999954223633,0.0,26.0
+Resources\Pictures\,Positive\,1601,man feeding giraffe,.jpg,Resources\Pictures\Positive\1601.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,7.0,7.0,0.0,5.686999797821045,5.686999797821045,0.0,6.0,6.0,0.0,3.055999994277954,3.055999994277954,0.0,27.0
+Resources\Pictures\,Positive\,2005,smiling man,.jpg,Resources\Pictures\Positive\2005.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,5.0,5.0,0.0,7.489999771118164,7.489999771118164,0.0,6.0,6.0,0.0,3.6549999713897705,3.6549999713897705,0.0,28.0
+Resources\Pictures\,Positive\,2010,smiling man 2,.jpg,Resources\Pictures\Positive\2010.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,4.0,4.0,0.0,11.968000411987305,11.968000411987305,0.0,4.0,4.0,0.0,2.306999921798706,2.306999921798706,0.0,29.0
+Resources\Pictures\,Positive\,2058,baby holding hand,.jpg,Resources\Pictures\Positive\2058.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,4.0,4.0,0.0,7.254000186920166,7.254000186920166,0.0,5.0,5.0,0.0,2.4549999237060547,2.4549999237060547,0.0,30.0
+Resources\Pictures\,Positive\,2071,baby smiling,.jpg,Resources\Pictures\Positive\2071.jpg,1024,768,1.9,1,"(1.9, 1)",1.0,5.0,5.0,0.0,10.404000282287598,10.404000282287598,0.0,5.0,5.0,0.0,2.806999921798706,2.806999921798706,0.0,31.0
+
+extraInfo
+participant,lb
+session,003
+date,2019_Sep_28_0954
+expName,EmotionSession
+psychopyVersion,3.2.3
+frameRate,59.72499032915373

@@ -1,19 +1,24 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v3.1.3),
-    on September 23, 2019, at 11:11
-If you publish work using this script please cite the PsychoPy publications:
-    Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
-        Journal of Neuroscience Methods, 162(1-2), 8-13.
-    Peirce, JW (2009) Generating stimuli for neuroscience using PsychoPy.
-        Frontiers in Neuroinformatics, 2:10. doi: 10.3389/neuro.11.010.2008
+This experiment was created using PsychoPy3 Experiment Builder (v3.2.3),
+    on September 28, 2019, at 11:25
+If you publish work using this script the most relevant publication is:
+
+    Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
+        PsychoPy2: Experiments in behavior made easy Behav Res 51: 195. 
+        https://doi.org/10.3758/s13428-018-01193-y
+
 """
 
 from __future__ import absolute_import, division
-from psychopy import locale_setup, sound, gui, visual, core, data, event, logging, clock
+
+from psychopy import locale_setup
+from psychopy import prefs
+from psychopy import sound, gui, visual, core, data, event, logging, clock
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
+
 import numpy as np  # whole numpy lib is available, prepend 'np.'
 from numpy import (sin, cos, tan, log, log10, pi, average,
                    sqrt, std, deg2rad, rad2deg, linspace, asarray)
@@ -28,7 +33,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '3.1.3'
+psychopyVersion = '3.2.3'
 expName = 'EmotionSession'  # from the Builder filename that created this script
 expInfo = {'participant': '', 'session': '003'}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -44,7 +49,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='E:\\GitHub\\MTEC\\ExperimentFolder_v4.9.19\\Paradigma\\Sessions\\EmotionSession_lastrun.py',
+    originPath='E:\\Master Thesis\\ExperimentFolder_v23.9.19\\Paradigma\\Sessions\\EmotionSession_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -52,6 +57,7 @@ logFile = logging.LogFile(filename+'.log', level=logging.EXP)
 logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
 
 endExpNow = False  # flag for 'escape' or other condition => quit the exp
+frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # Start Code - component code to be run before the window creation
 
@@ -71,17 +77,6 @@ else:
 
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard()
-
-# Initialize components for Routine "Emotion_Evaluation_N_T"
-Emotion_Evaluation_N_TClock = core.Clock()
-text_emotion_n_eval_t = visual.TextStim(win=win, name='text_emotion_n_eval_t',
-    text='please rate the feeling of the picture.',
-    font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
-    color='white', colorSpace='rgb', opacity=1, 
-    languageStyle='LTR',
-    depth=0.0);
-rating_emotion_n_eval_t = visual.RatingScale(win=win, name='rating_emotion_n_eval_t', marker='triangle', size=1.0, pos=[0.0, -0.4], low=1, high=7, labels=['very negative', ' very positive'], scale='', markerStart='2')
 
 # Initialize components for Routine "Emotion_Screen"
 Emotion_ScreenClock = core.Clock()
@@ -155,6 +150,7 @@ text_emotion_instructions = visual.TextStim(win=win, name='text_emotion_instruct
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
+key_resp_emotion_instructions = keyboard.Keyboard()
 
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
@@ -263,7 +259,7 @@ text_emotion_p_eval_t = visual.TextStim(win=win, name='text_emotion_p_eval_t',
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
-rating_emotion_p_eval_t = visual.RatingScale(win=win, name='rating_emotion_p_eval_t', marker='triangle', size=1.0, pos=[0.0, -0.4], low=1, high=2, labels=['negative', ' positive'], scale='', markerStart='1')
+rating_emotion_p_eval_t = visual.RatingScale(win=win, name='rating_emotion_p_eval_t', marker='triangle', size=1.0, pos=[0.0, -0.4], low=1, high=7, labels=['very negative', ' very positive'], scale='', markerStart='5')
 
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
@@ -328,6 +324,7 @@ text_cooldown_instructions_title = visual.TextStim(win=win, name='text_cooldown_
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
+key_resp_cooldown_instructions = keyboard.Keyboard()
 
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
@@ -423,6 +420,7 @@ text_cooldown_end_instructions = visual.TextStim(win=win, name='text_cooldown_en
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
+key_resp_cooldown_end = keyboard.Keyboard()
 
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
@@ -477,6 +475,7 @@ text_emotion_instructions_2 = visual.TextStim(win=win, name='text_emotion_instru
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
+key_resp_emotion_instructions_2 = keyboard.Keyboard()
 
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
@@ -570,14 +569,22 @@ text_blank = visual.TextStim(win=win, name='text_blank',
 
 # Initialize components for Routine "Emotion_Evaluation_N_T"
 Emotion_Evaluation_N_TClock = core.Clock()
+image_emotion_n_eval_t = visual.ImageStim(
+    win=win,
+    name='image_emotion_n_eval_t', 
+    image='sin', mask=None,
+    ori=0, pos=(0, 0.2), size=1.0,
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=0.0)
 text_emotion_n_eval_t = visual.TextStim(win=win, name='text_emotion_n_eval_t',
     text='please rate the feeling of the picture.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
-    depth=0.0);
-rating_emotion_n_eval_t = visual.RatingScale(win=win, name='rating_emotion_n_eval_t', marker='triangle', size=1.0, pos=[0.0, -0.4], low=1, high=7, labels=['very negative', ' very positive'], scale='', markerStart='2')
+    depth=-1.0);
+rating_emotion_n_eval_t = visual.RatingScale(win=win, name='rating_emotion_n_eval_t', marker='triangle', size=1.0, pos=[0.0, -0.4], low=1, high=7, labels=['very negative', ' very positive'], scale='', markerStart='3')
 
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
@@ -642,6 +649,7 @@ text_cooldown_instructions_title = visual.TextStim(win=win, name='text_cooldown_
     color='white', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
+key_resp_cooldown_instructions = keyboard.Keyboard()
 
 # Initialize components for Routine "Blank_Screen"
 Blank_ScreenClock = core.Clock()
@@ -742,81 +750,7 @@ text_ending_subtitle = visual.TextStim(win=win, name='text_ending_subtitle',
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
 
-# ------Prepare to start Routine "Emotion_Evaluation_N_T"-------
-t = 0
-Emotion_Evaluation_N_TClock.reset()  # clock
-frameN = -1
-continueRoutine = True
-# update component parameters for each repeat
-rating_emotion_n_eval_t.reset()
-# keep track of which components have finished
-Emotion_Evaluation_N_TComponents = [text_emotion_n_eval_t, rating_emotion_n_eval_t]
-for thisComponent in Emotion_Evaluation_N_TComponents:
-    thisComponent.tStart = None
-    thisComponent.tStop = None
-    thisComponent.tStartRefresh = None
-    thisComponent.tStopRefresh = None
-    if hasattr(thisComponent, 'status'):
-        thisComponent.status = NOT_STARTED
-
-# -------Start Routine "Emotion_Evaluation_N_T"-------
-while continueRoutine:
-    # get current time
-    t = Emotion_Evaluation_N_TClock.getTime()
-    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-    # update/draw components on each frame
-    
-    # *text_emotion_n_eval_t* updates
-    if t >= 0.0 and text_emotion_n_eval_t.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        text_emotion_n_eval_t.tStart = t  # not accounting for scr refresh
-        text_emotion_n_eval_t.frameNStart = frameN  # exact frame index
-        win.timeOnFlip(text_emotion_n_eval_t, 'tStartRefresh')  # time at next scr refresh
-        text_emotion_n_eval_t.setAutoDraw(True)
-    # *rating_emotion_n_eval_t* updates
-    if t >= 0.0 and rating_emotion_n_eval_t.status == NOT_STARTED:
-        # keep track of start time/frame for later
-        rating_emotion_n_eval_t.tStart = t  # not accounting for scr refresh
-        rating_emotion_n_eval_t.frameNStart = frameN  # exact frame index
-        win.timeOnFlip(rating_emotion_n_eval_t, 'tStartRefresh')  # time at next scr refresh
-        rating_emotion_n_eval_t.setAutoDraw(True)
-    continueRoutine &= rating_emotion_n_eval_t.noResponse  # a response ends the trial
-    
-    # check for quit (typically the Esc key)
-    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
-        core.quit()
-    
-    # check if all components have finished
-    if not continueRoutine:  # a component has requested a forced-end of Routine
-        break
-    continueRoutine = False  # will revert to True if at least one component still running
-    for thisComponent in Emotion_Evaluation_N_TComponents:
-        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-            continueRoutine = True
-            break  # at least one component has not yet finished
-    
-    # refresh the screen
-    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-        win.flip()
-
-# -------Ending Routine "Emotion_Evaluation_N_T"-------
-for thisComponent in Emotion_Evaluation_N_TComponents:
-    if hasattr(thisComponent, "setAutoDraw"):
-        thisComponent.setAutoDraw(False)
-thisExp.addData('text_emotion_n_eval_t.started', text_emotion_n_eval_t.tStartRefresh)
-thisExp.addData('text_emotion_n_eval_t.stopped', text_emotion_n_eval_t.tStopRefresh)
-# store data for thisExp (ExperimentHandler)
-thisExp.addData('rating_emotion_n_eval_t.response', rating_emotion_n_eval_t.getRating())
-thisExp.addData('rating_emotion_n_eval_t.rt', rating_emotion_n_eval_t.getRT())
-thisExp.nextEntry()
-# the Routine "Emotion_Evaluation_N_T" was not non-slip safe, so reset the non-slip timer
-routineTimer.reset()
-
 # ------Prepare to start Routine "Emotion_Screen"-------
-t = 0
-Emotion_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(5.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -828,43 +762,55 @@ for thisComponent in Emotion_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Emotion_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Emotion_Screen"-------
+# -------Run Routine "Emotion_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Emotion_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Emotion_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_emotion_screen_title* updates
-    if t >= 0.0 and text_emotion_screen_title.status == NOT_STARTED:
+    if text_emotion_screen_title.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_emotion_screen_title.tStart = t  # not accounting for scr refresh
         text_emotion_screen_title.frameNStart = frameN  # exact frame index
+        text_emotion_screen_title.tStart = t  # local t and not account for scr refresh
+        text_emotion_screen_title.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_emotion_screen_title, 'tStartRefresh')  # time at next scr refresh
         text_emotion_screen_title.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_emotion_screen_title.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_emotion_screen_title.tStop = t  # not accounting for scr refresh
-        text_emotion_screen_title.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_emotion_screen_title, 'tStopRefresh')  # time at next scr refresh
-        text_emotion_screen_title.setAutoDraw(False)
+    if text_emotion_screen_title.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_emotion_screen_title.tStartRefresh + 5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_emotion_screen_title.tStop = t  # not accounting for scr refresh
+            text_emotion_screen_title.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_emotion_screen_title, 'tStopRefresh')  # time at next scr refresh
+            text_emotion_screen_title.setAutoDraw(False)
     
     # *text_emotion_screen* updates
-    if t >= 0.0 and text_emotion_screen.status == NOT_STARTED:
+    if text_emotion_screen.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_emotion_screen.tStart = t  # not accounting for scr refresh
         text_emotion_screen.frameNStart = frameN  # exact frame index
+        text_emotion_screen.tStart = t  # local t and not account for scr refresh
+        text_emotion_screen.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_emotion_screen, 'tStartRefresh')  # time at next scr refresh
         text_emotion_screen.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_emotion_screen.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_emotion_screen.tStop = t  # not accounting for scr refresh
-        text_emotion_screen.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_emotion_screen, 'tStopRefresh')  # time at next scr refresh
-        text_emotion_screen.setAutoDraw(False)
+    if text_emotion_screen.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_emotion_screen.tStartRefresh + 5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_emotion_screen.tStop = t  # not accounting for scr refresh
+            text_emotion_screen.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_emotion_screen, 'tStopRefresh')  # time at next scr refresh
+            text_emotion_screen.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -889,10 +835,6 @@ for thisComponent in Emotion_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -904,28 +846,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -950,10 +902,6 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Part_One"-------
-t = 0
-Part_OneClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(5.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -965,43 +913,55 @@ for thisComponent in Part_OneComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Part_OneClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Part_One"-------
+# -------Run Routine "Part_One"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Part_OneClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Part_OneClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_part_one_title* updates
-    if t >= 0.0 and text_part_one_title.status == NOT_STARTED:
+    if text_part_one_title.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_part_one_title.tStart = t  # not accounting for scr refresh
         text_part_one_title.frameNStart = frameN  # exact frame index
+        text_part_one_title.tStart = t  # local t and not account for scr refresh
+        text_part_one_title.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_part_one_title, 'tStartRefresh')  # time at next scr refresh
         text_part_one_title.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_part_one_title.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_part_one_title.tStop = t  # not accounting for scr refresh
-        text_part_one_title.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_part_one_title, 'tStopRefresh')  # time at next scr refresh
-        text_part_one_title.setAutoDraw(False)
+    if text_part_one_title.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_part_one_title.tStartRefresh + 5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_part_one_title.tStop = t  # not accounting for scr refresh
+            text_part_one_title.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_part_one_title, 'tStopRefresh')  # time at next scr refresh
+            text_part_one_title.setAutoDraw(False)
     
     # *text_part_one* updates
-    if t >= 0.0 and text_part_one.status == NOT_STARTED:
+    if text_part_one.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_part_one.tStart = t  # not accounting for scr refresh
         text_part_one.frameNStart = frameN  # exact frame index
+        text_part_one.tStart = t  # local t and not account for scr refresh
+        text_part_one.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_part_one, 'tStartRefresh')  # time at next scr refresh
         text_part_one.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_part_one.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_part_one.tStop = t  # not accounting for scr refresh
-        text_part_one.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_part_one, 'tStopRefresh')  # time at next scr refresh
-        text_part_one.setAutoDraw(False)
+    if text_part_one.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_part_one.tStartRefresh + 5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_part_one.tStop = t  # not accounting for scr refresh
+            text_part_one.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_part_one, 'tStopRefresh')  # time at next scr refresh
+            text_part_one.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1026,10 +986,6 @@ for thisComponent in Part_OneComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -1041,28 +997,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1087,12 +1053,9 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Emotion_Instructions"-------
-t = 0
-Emotion_InstructionsClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 # update component parameters for each repeat
-key_resp_emotion_instructions = keyboard.Keyboard()
+key_resp_emotion_instructions.keys = []
+key_resp_emotion_instructions.rt = []
 # keep track of which components have finished
 Emotion_InstructionsComponents = [text_emotion_instruction_title, text_emotion_instructions, key_resp_emotion_instructions]
 for thisComponent in Emotion_InstructionsComponents:
@@ -1102,40 +1065,52 @@ for thisComponent in Emotion_InstructionsComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Emotion_InstructionsClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Emotion_Instructions"-------
+# -------Run Routine "Emotion_Instructions"-------
 while continueRoutine:
     # get current time
     t = Emotion_InstructionsClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Emotion_InstructionsClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_emotion_instruction_title* updates
-    if t >= 0.0 and text_emotion_instruction_title.status == NOT_STARTED:
+    if text_emotion_instruction_title.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_emotion_instruction_title.tStart = t  # not accounting for scr refresh
         text_emotion_instruction_title.frameNStart = frameN  # exact frame index
+        text_emotion_instruction_title.tStart = t  # local t and not account for scr refresh
+        text_emotion_instruction_title.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_emotion_instruction_title, 'tStartRefresh')  # time at next scr refresh
         text_emotion_instruction_title.setAutoDraw(True)
     
     # *text_emotion_instructions* updates
-    if t >= 0.0 and text_emotion_instructions.status == NOT_STARTED:
+    if text_emotion_instructions.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_emotion_instructions.tStart = t  # not accounting for scr refresh
         text_emotion_instructions.frameNStart = frameN  # exact frame index
+        text_emotion_instructions.tStart = t  # local t and not account for scr refresh
+        text_emotion_instructions.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_emotion_instructions, 'tStartRefresh')  # time at next scr refresh
         text_emotion_instructions.setAutoDraw(True)
     
     # *key_resp_emotion_instructions* updates
-    if t >= 0.0 and key_resp_emotion_instructions.status == NOT_STARTED:
+    waitOnFlip = False
+    if key_resp_emotion_instructions.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        key_resp_emotion_instructions.tStart = t  # not accounting for scr refresh
         key_resp_emotion_instructions.frameNStart = frameN  # exact frame index
+        key_resp_emotion_instructions.tStart = t  # local t and not account for scr refresh
+        key_resp_emotion_instructions.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(key_resp_emotion_instructions, 'tStartRefresh')  # time at next scr refresh
         key_resp_emotion_instructions.status = STARTED
         # keyboard checking is just starting
-        key_resp_emotion_instructions.clearEvents(eventType='keyboard')
-    if key_resp_emotion_instructions.status == STARTED:
+        win.callOnFlip(key_resp_emotion_instructions.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if key_resp_emotion_instructions.status == STARTED and not waitOnFlip:
         theseKeys = key_resp_emotion_instructions.getKeys(keyList=['space'], waitRelease=False)
         if len(theseKeys):
             theseKeys = theseKeys[0]  # at least one key was pressed
@@ -1172,10 +1147,6 @@ thisExp.addData("start_emotion_one", time.strftime("%Y-%m-%d_%H:%M:%S"))
 routineTimer.reset()
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -1187,28 +1158,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1252,10 +1233,6 @@ for thisEmotion_trials_p in emotion_trials_p:
             exec('{} = thisEmotion_trials_p[paramName]'.format(paramName))
     
     # ------Prepare to start Routine "Emotion_Measurement_P"-------
-    t = 0
-    Emotion_Measurement_PClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(7.000000)
     # update component parameters for each repeat
     image_emotion_p.setSize((p_new_width, p_new_height))
@@ -1269,28 +1246,38 @@ for thisEmotion_trials_p in emotion_trials_p:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Emotion_Measurement_PClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Emotion_Measurement_P"-------
+    # -------Run Routine "Emotion_Measurement_P"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Emotion_Measurement_PClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Emotion_Measurement_PClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *image_emotion_p* updates
-        if t >= 0.0 and image_emotion_p.status == NOT_STARTED:
+        if image_emotion_p.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            image_emotion_p.tStart = t  # not accounting for scr refresh
             image_emotion_p.frameNStart = frameN  # exact frame index
+            image_emotion_p.tStart = t  # local t and not account for scr refresh
+            image_emotion_p.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(image_emotion_p, 'tStartRefresh')  # time at next scr refresh
             image_emotion_p.setAutoDraw(True)
-        frameRemains = 0.0 + 7- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if image_emotion_p.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            image_emotion_p.tStop = t  # not accounting for scr refresh
-            image_emotion_p.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(image_emotion_p, 'tStopRefresh')  # time at next scr refresh
-            image_emotion_p.setAutoDraw(False)
+        if image_emotion_p.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > image_emotion_p.tStartRefresh + 7-frameTolerance:
+                # keep track of stop time/frame for later
+                image_emotion_p.tStop = t  # not accounting for scr refresh
+                image_emotion_p.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(image_emotion_p, 'tStopRefresh')  # time at next scr refresh
+                image_emotion_p.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1317,10 +1304,6 @@ for thisEmotion_trials_p in emotion_trials_p:
     emotion_trials_p.addData('image_emotion_p.stopped', image_emotion_p.tStopRefresh)
     
     # ------Prepare to start Routine "Blank_Screen"-------
-    t = 0
-    Blank_ScreenClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(0.500000)
     # update component parameters for each repeat
     # keep track of which components have finished
@@ -1332,28 +1315,38 @@ for thisEmotion_trials_p in emotion_trials_p:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Blank_Screen"-------
+    # -------Run Routine "Blank_Screen"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Blank_ScreenClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *text_blank* updates
-        if t >= 0.0 and text_blank.status == NOT_STARTED:
+        if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_blank.tStart = t  # not accounting for scr refresh
             text_blank.frameNStart = frameN  # exact frame index
+            text_blank.tStart = t  # local t and not account for scr refresh
+            text_blank.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
             text_blank.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if text_blank.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            text_blank.tStop = t  # not accounting for scr refresh
-            text_blank.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-            text_blank.setAutoDraw(False)
+        if text_blank.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_blank.tStop = t  # not accounting for scr refresh
+                text_blank.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+                text_blank.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1378,10 +1371,6 @@ for thisEmotion_trials_p in emotion_trials_p:
             thisComponent.setAutoDraw(False)
     
     # ------Prepare to start Routine "Fix_Screen"-------
-    t = 0
-    Fix_ScreenClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(2.000000)
     # update component parameters for each repeat
     # keep track of which components have finished
@@ -1393,28 +1382,38 @@ for thisEmotion_trials_p in emotion_trials_p:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Fix_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Fix_Screen"-------
+    # -------Run Routine "Fix_Screen"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Fix_ScreenClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Fix_ScreenClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *text_fix* updates
-        if t >= 0.0 and text_fix.status == NOT_STARTED:
+        if text_fix.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_fix.tStart = t  # not accounting for scr refresh
             text_fix.frameNStart = frameN  # exact frame index
+            text_fix.tStart = t  # local t and not account for scr refresh
+            text_fix.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_fix, 'tStartRefresh')  # time at next scr refresh
             text_fix.setAutoDraw(True)
-        frameRemains = 0.0 + 2- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if text_fix.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            text_fix.tStop = t  # not accounting for scr refresh
-            text_fix.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(text_fix, 'tStopRefresh')  # time at next scr refresh
-            text_fix.setAutoDraw(False)
+        if text_fix.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_fix.tStartRefresh + 2-frameTolerance:
+                # keep track of stop time/frame for later
+                text_fix.tStop = t  # not accounting for scr refresh
+                text_fix.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_fix, 'tStopRefresh')  # time at next scr refresh
+                text_fix.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1439,10 +1438,6 @@ for thisEmotion_trials_p in emotion_trials_p:
             thisComponent.setAutoDraw(False)
     
     # ------Prepare to start Routine "Blank_Screen"-------
-    t = 0
-    Blank_ScreenClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(0.500000)
     # update component parameters for each repeat
     # keep track of which components have finished
@@ -1454,28 +1449,38 @@ for thisEmotion_trials_p in emotion_trials_p:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Blank_Screen"-------
+    # -------Run Routine "Blank_Screen"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Blank_ScreenClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *text_blank* updates
-        if t >= 0.0 and text_blank.status == NOT_STARTED:
+        if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_blank.tStart = t  # not accounting for scr refresh
             text_blank.frameNStart = frameN  # exact frame index
+            text_blank.tStart = t  # local t and not account for scr refresh
+            text_blank.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
             text_blank.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if text_blank.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            text_blank.tStop = t  # not accounting for scr refresh
-            text_blank.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-            text_blank.setAutoDraw(False)
+        if text_blank.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_blank.tStop = t  # not accounting for scr refresh
+                text_blank.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+                text_blank.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1516,10 +1521,6 @@ emotion_trials_p.saveAsText(filename + 'emotion_trials_p.csv', delim=',',
     dataOut=['n','all_mean','all_std', 'all_raw'])
 
 # ------Prepare to start Routine "Part_One_Meas_End"-------
-t = 0
-Part_One_Meas_EndClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 thisExp.addData("end_emotion_one", time.strftime("%Y-%m-%d_%H:%M:%S")) 
@@ -1532,28 +1533,38 @@ for thisComponent in Part_One_Meas_EndComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Part_One_Meas_EndClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Part_One_Meas_End"-------
+# -------Run Routine "Part_One_Meas_End"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Part_One_Meas_EndClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Part_One_Meas_EndClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_part_one_meas_end* updates
-    if t >= 0.0 and text_part_one_meas_end.status == NOT_STARTED:
+    if text_part_one_meas_end.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_part_one_meas_end.tStart = t  # not accounting for scr refresh
         text_part_one_meas_end.frameNStart = frameN  # exact frame index
+        text_part_one_meas_end.tStart = t  # local t and not account for scr refresh
+        text_part_one_meas_end.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_part_one_meas_end, 'tStartRefresh')  # time at next scr refresh
         text_part_one_meas_end.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_part_one_meas_end.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_part_one_meas_end.tStop = t  # not accounting for scr refresh
-        text_part_one_meas_end.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_part_one_meas_end, 'tStopRefresh')  # time at next scr refresh
-        text_part_one_meas_end.setAutoDraw(False)
+    if text_part_one_meas_end.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_part_one_meas_end.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_part_one_meas_end.tStop = t  # not accounting for scr refresh
+            text_part_one_meas_end.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_part_one_meas_end, 'tStopRefresh')  # time at next scr refresh
+            text_part_one_meas_end.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1597,10 +1608,6 @@ for thisEmotion_evaluation_p in emotion_evaluation_p:
             exec('{} = thisEmotion_evaluation_p[paramName]'.format(paramName))
     
     # ------Prepare to start Routine "Emotion_Evaluation_P_O"-------
-    t = 0
-    Emotion_Evaluation_P_OClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     # update component parameters for each repeat
     image_emotion_p_eval_o.setSize((p_new_width*0.3, p_new_height*0.3))
     image_emotion_p_eval_o.setImage(p_pictures)
@@ -1614,34 +1621,45 @@ for thisEmotion_evaluation_p in emotion_evaluation_p:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Emotion_Evaluation_P_OClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Emotion_Evaluation_P_O"-------
+    # -------Run Routine "Emotion_Evaluation_P_O"-------
     while continueRoutine:
         # get current time
         t = Emotion_Evaluation_P_OClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Emotion_Evaluation_P_OClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *image_emotion_p_eval_o* updates
-        if t >= 0.0 and image_emotion_p_eval_o.status == NOT_STARTED:
+        if image_emotion_p_eval_o.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            image_emotion_p_eval_o.tStart = t  # not accounting for scr refresh
             image_emotion_p_eval_o.frameNStart = frameN  # exact frame index
+            image_emotion_p_eval_o.tStart = t  # local t and not account for scr refresh
+            image_emotion_p_eval_o.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(image_emotion_p_eval_o, 'tStartRefresh')  # time at next scr refresh
             image_emotion_p_eval_o.setAutoDraw(True)
         
         # *text_emotion_p_eval_o* updates
-        if t >= 0.0 and text_emotion_p_eval_o.status == NOT_STARTED:
+        if text_emotion_p_eval_o.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_emotion_p_eval_o.tStart = t  # not accounting for scr refresh
             text_emotion_p_eval_o.frameNStart = frameN  # exact frame index
+            text_emotion_p_eval_o.tStart = t  # local t and not account for scr refresh
+            text_emotion_p_eval_o.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_emotion_p_eval_o, 'tStartRefresh')  # time at next scr refresh
             text_emotion_p_eval_o.setAutoDraw(True)
         # *rating_emotion_p_eval_o* updates
-        if t >= 0.0 and rating_emotion_p_eval_o.status == NOT_STARTED:
+        if rating_emotion_p_eval_o.status == NOT_STARTED and t >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            rating_emotion_p_eval_o.tStart = t  # not accounting for scr refresh
             rating_emotion_p_eval_o.frameNStart = frameN  # exact frame index
+            rating_emotion_p_eval_o.tStart = t  # local t and not account for scr refresh
+            rating_emotion_p_eval_o.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(rating_emotion_p_eval_o, 'tStartRefresh')  # time at next scr refresh
             rating_emotion_p_eval_o.setAutoDraw(True)
         continueRoutine &= rating_emotion_p_eval_o.noResponse  # a response ends the trial
@@ -1674,10 +1692,6 @@ for thisEmotion_evaluation_p in emotion_evaluation_p:
     routineTimer.reset()
     
     # ------Prepare to start Routine "Blank_Screen"-------
-    t = 0
-    Blank_ScreenClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(0.500000)
     # update component parameters for each repeat
     # keep track of which components have finished
@@ -1689,28 +1703,38 @@ for thisEmotion_evaluation_p in emotion_evaluation_p:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Blank_Screen"-------
+    # -------Run Routine "Blank_Screen"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Blank_ScreenClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *text_blank* updates
-        if t >= 0.0 and text_blank.status == NOT_STARTED:
+        if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_blank.tStart = t  # not accounting for scr refresh
             text_blank.frameNStart = frameN  # exact frame index
+            text_blank.tStart = t  # local t and not account for scr refresh
+            text_blank.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
             text_blank.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if text_blank.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            text_blank.tStop = t  # not accounting for scr refresh
-            text_blank.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-            text_blank.setAutoDraw(False)
+        if text_blank.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_blank.tStop = t  # not accounting for scr refresh
+                text_blank.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+                text_blank.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1735,10 +1759,6 @@ for thisEmotion_evaluation_p in emotion_evaluation_p:
             thisComponent.setAutoDraw(False)
     
     # ------Prepare to start Routine "Emotion_Evaluation_P_T"-------
-    t = 0
-    Emotion_Evaluation_P_TClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     # update component parameters for each repeat
     image_emotion_p_eval_t.setSize((p_new_width*0.3, p_new_height*0.3))
     image_emotion_p_eval_t.setImage(p_pictures)
@@ -1752,34 +1772,45 @@ for thisEmotion_evaluation_p in emotion_evaluation_p:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Emotion_Evaluation_P_TClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Emotion_Evaluation_P_T"-------
+    # -------Run Routine "Emotion_Evaluation_P_T"-------
     while continueRoutine:
         # get current time
         t = Emotion_Evaluation_P_TClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Emotion_Evaluation_P_TClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *image_emotion_p_eval_t* updates
-        if t >= 0.0 and image_emotion_p_eval_t.status == NOT_STARTED:
+        if image_emotion_p_eval_t.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            image_emotion_p_eval_t.tStart = t  # not accounting for scr refresh
             image_emotion_p_eval_t.frameNStart = frameN  # exact frame index
+            image_emotion_p_eval_t.tStart = t  # local t and not account for scr refresh
+            image_emotion_p_eval_t.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(image_emotion_p_eval_t, 'tStartRefresh')  # time at next scr refresh
             image_emotion_p_eval_t.setAutoDraw(True)
         
         # *text_emotion_p_eval_t* updates
-        if t >= 0.0 and text_emotion_p_eval_t.status == NOT_STARTED:
+        if text_emotion_p_eval_t.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_emotion_p_eval_t.tStart = t  # not accounting for scr refresh
             text_emotion_p_eval_t.frameNStart = frameN  # exact frame index
+            text_emotion_p_eval_t.tStart = t  # local t and not account for scr refresh
+            text_emotion_p_eval_t.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_emotion_p_eval_t, 'tStartRefresh')  # time at next scr refresh
             text_emotion_p_eval_t.setAutoDraw(True)
         # *rating_emotion_p_eval_t* updates
-        if t >= 0.0 and rating_emotion_p_eval_t.status == NOT_STARTED:
+        if rating_emotion_p_eval_t.status == NOT_STARTED and t >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            rating_emotion_p_eval_t.tStart = t  # not accounting for scr refresh
             rating_emotion_p_eval_t.frameNStart = frameN  # exact frame index
+            rating_emotion_p_eval_t.tStart = t  # local t and not account for scr refresh
+            rating_emotion_p_eval_t.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(rating_emotion_p_eval_t, 'tStartRefresh')  # time at next scr refresh
             rating_emotion_p_eval_t.setAutoDraw(True)
         continueRoutine &= rating_emotion_p_eval_t.noResponse  # a response ends the trial
@@ -1812,10 +1843,6 @@ for thisEmotion_evaluation_p in emotion_evaluation_p:
     routineTimer.reset()
     
     # ------Prepare to start Routine "Blank_Screen"-------
-    t = 0
-    Blank_ScreenClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(0.500000)
     # update component parameters for each repeat
     # keep track of which components have finished
@@ -1827,28 +1854,38 @@ for thisEmotion_evaluation_p in emotion_evaluation_p:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Blank_Screen"-------
+    # -------Run Routine "Blank_Screen"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Blank_ScreenClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *text_blank* updates
-        if t >= 0.0 and text_blank.status == NOT_STARTED:
+        if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_blank.tStart = t  # not accounting for scr refresh
             text_blank.frameNStart = frameN  # exact frame index
+            text_blank.tStart = t  # local t and not account for scr refresh
+            text_blank.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
             text_blank.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if text_blank.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            text_blank.tStop = t  # not accounting for scr refresh
-            text_blank.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-            text_blank.setAutoDraw(False)
+        if text_blank.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_blank.tStop = t  # not accounting for scr refresh
+                text_blank.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+                text_blank.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1889,10 +1926,6 @@ emotion_evaluation_p.saveAsText(filename + 'emotion_evaluation_p.csv', delim=','
     dataOut=['n','all_mean','all_std', 'all_raw'])
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -1904,28 +1937,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1950,10 +1993,6 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Cooldown_Screen"-------
-t = 0
-Cooldown_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(5.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -1965,43 +2004,55 @@ for thisComponent in Cooldown_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Cooldown_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Cooldown_Screen"-------
+# -------Run Routine "Cooldown_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Cooldown_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Cooldown_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_cooldown_title* updates
-    if t >= 0.0 and text_cooldown_title.status == NOT_STARTED:
+    if text_cooldown_title.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_title.tStart = t  # not accounting for scr refresh
         text_cooldown_title.frameNStart = frameN  # exact frame index
+        text_cooldown_title.tStart = t  # local t and not account for scr refresh
+        text_cooldown_title.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_title, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_title.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_cooldown_title.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_cooldown_title.tStop = t  # not accounting for scr refresh
-        text_cooldown_title.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_cooldown_title, 'tStopRefresh')  # time at next scr refresh
-        text_cooldown_title.setAutoDraw(False)
+    if text_cooldown_title.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_cooldown_title.tStartRefresh + 5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_cooldown_title.tStop = t  # not accounting for scr refresh
+            text_cooldown_title.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_cooldown_title, 'tStopRefresh')  # time at next scr refresh
+            text_cooldown_title.setAutoDraw(False)
     
     # *text_cooldown* updates
-    if t >= 0.0 and text_cooldown.status == NOT_STARTED:
+    if text_cooldown.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown.tStart = t  # not accounting for scr refresh
         text_cooldown.frameNStart = frameN  # exact frame index
+        text_cooldown.tStart = t  # local t and not account for scr refresh
+        text_cooldown.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown, 'tStartRefresh')  # time at next scr refresh
         text_cooldown.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_cooldown.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_cooldown.tStop = t  # not accounting for scr refresh
-        text_cooldown.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_cooldown, 'tStopRefresh')  # time at next scr refresh
-        text_cooldown.setAutoDraw(False)
+    if text_cooldown.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_cooldown.tStartRefresh + 5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_cooldown.tStop = t  # not accounting for scr refresh
+            text_cooldown.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_cooldown, 'tStopRefresh')  # time at next scr refresh
+            text_cooldown.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2026,10 +2077,6 @@ for thisComponent in Cooldown_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -2041,28 +2088,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2087,12 +2144,9 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Cooldown_Instructions"-------
-t = 0
-Cooldown_InstructionsClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 # update component parameters for each repeat
-key_resp_cooldown_instructions = keyboard.Keyboard()
+key_resp_cooldown_instructions.keys = []
+key_resp_cooldown_instructions.rt = []
 # keep track of which components have finished
 Cooldown_InstructionsComponents = [text_cooldown_instructions, text_cooldown_instructions_title, key_resp_cooldown_instructions]
 for thisComponent in Cooldown_InstructionsComponents:
@@ -2102,41 +2156,54 @@ for thisComponent in Cooldown_InstructionsComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Cooldown_InstructionsClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Cooldown_Instructions"-------
+# -------Run Routine "Cooldown_Instructions"-------
 while continueRoutine:
     # get current time
     t = Cooldown_InstructionsClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Cooldown_InstructionsClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_cooldown_instructions* updates
-    if t >= 0.0 and text_cooldown_instructions.status == NOT_STARTED:
+    if text_cooldown_instructions.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_instructions.tStart = t  # not accounting for scr refresh
         text_cooldown_instructions.frameNStart = frameN  # exact frame index
+        text_cooldown_instructions.tStart = t  # local t and not account for scr refresh
+        text_cooldown_instructions.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_instructions, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_instructions.setAutoDraw(True)
     
     # *text_cooldown_instructions_title* updates
-    if t >= 0.0 and text_cooldown_instructions_title.status == NOT_STARTED:
+    if text_cooldown_instructions_title.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_instructions_title.tStart = t  # not accounting for scr refresh
         text_cooldown_instructions_title.frameNStart = frameN  # exact frame index
+        text_cooldown_instructions_title.tStart = t  # local t and not account for scr refresh
+        text_cooldown_instructions_title.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_instructions_title, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_instructions_title.setAutoDraw(True)
     
     # *key_resp_cooldown_instructions* updates
-    if t >= 0.0 and key_resp_cooldown_instructions.status == NOT_STARTED:
+    waitOnFlip = False
+    if key_resp_cooldown_instructions.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        key_resp_cooldown_instructions.tStart = t  # not accounting for scr refresh
         key_resp_cooldown_instructions.frameNStart = frameN  # exact frame index
+        key_resp_cooldown_instructions.tStart = t  # local t and not account for scr refresh
+        key_resp_cooldown_instructions.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(key_resp_cooldown_instructions, 'tStartRefresh')  # time at next scr refresh
         key_resp_cooldown_instructions.status = STARTED
         # keyboard checking is just starting
+        waitOnFlip = True
         win.callOnFlip(key_resp_cooldown_instructions.clock.reset)  # t=0 on next screen flip
-        key_resp_cooldown_instructions.clearEvents(eventType='keyboard')
-    if key_resp_cooldown_instructions.status == STARTED:
+        win.callOnFlip(key_resp_cooldown_instructions.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if key_resp_cooldown_instructions.status == STARTED and not waitOnFlip:
         theseKeys = key_resp_cooldown_instructions.getKeys(keyList=['space'], waitRelease=False)
         if len(theseKeys):
             theseKeys = theseKeys[0]  # at least one key was pressed
@@ -2181,10 +2248,6 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -2196,28 +2259,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2242,10 +2315,6 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Countdown_Screen_10"-------
-t = 0
-Countdown_Screen_10Clock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(10.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -2257,28 +2326,38 @@ for thisComponent in Countdown_Screen_10Components:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Countdown_Screen_10Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Countdown_Screen_10"-------
+# -------Run Routine "Countdown_Screen_10"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Countdown_Screen_10Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Countdown_Screen_10Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_countdown* updates
-    if t >= 0.0 and text_countdown.status == NOT_STARTED:
+    if text_countdown.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_countdown.tStart = t  # not accounting for scr refresh
         text_countdown.frameNStart = frameN  # exact frame index
+        text_countdown.tStart = t  # local t and not account for scr refresh
+        text_countdown.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_countdown, 'tStartRefresh')  # time at next scr refresh
         text_countdown.setAutoDraw(True)
-    frameRemains = 0.0 + 10- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_countdown.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_countdown.tStop = t  # not accounting for scr refresh
-        text_countdown.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_countdown, 'tStopRefresh')  # time at next scr refresh
-        text_countdown.setAutoDraw(False)
+    if text_countdown.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_countdown.tStartRefresh + 10-frameTolerance:
+            # keep track of stop time/frame for later
+            text_countdown.tStop = t  # not accounting for scr refresh
+            text_countdown.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_countdown, 'tStopRefresh')  # time at next scr refresh
+            text_countdown.setAutoDraw(False)
     if text_countdown.status == STARTED:  # only update if drawing
         text_countdown.setText(str(round(routineTimer.getTime(),0)) , log=False)
     
@@ -2305,10 +2384,6 @@ for thisComponent in Countdown_Screen_10Components:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -2320,28 +2395,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2366,10 +2451,6 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Cooldown_Measurement"-------
-t = 0
-Cooldown_MeasurementClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(300.000000)
 # update component parameters for each repeat
 thisExp.addData("start_cooldown_measurement", time.strftime("%Y-%m-%d_%H:%M:%S"))
@@ -2382,28 +2463,38 @@ for thisComponent in Cooldown_MeasurementComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Cooldown_MeasurementClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Cooldown_Measurement"-------
+# -------Run Routine "Cooldown_Measurement"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Cooldown_MeasurementClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Cooldown_MeasurementClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_cooldown_measurement* updates
-    if t >= 0.0 and text_cooldown_measurement.status == NOT_STARTED:
+    if text_cooldown_measurement.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_measurement.tStart = t  # not accounting for scr refresh
         text_cooldown_measurement.frameNStart = frameN  # exact frame index
+        text_cooldown_measurement.tStart = t  # local t and not account for scr refresh
+        text_cooldown_measurement.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_measurement, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_measurement.setAutoDraw(True)
-    frameRemains = 0.0 + 300- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_cooldown_measurement.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_cooldown_measurement.tStop = t  # not accounting for scr refresh
-        text_cooldown_measurement.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_cooldown_measurement, 'tStopRefresh')  # time at next scr refresh
-        text_cooldown_measurement.setAutoDraw(False)
+    if text_cooldown_measurement.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_cooldown_measurement.tStartRefresh + 300-frameTolerance:
+            # keep track of stop time/frame for later
+            text_cooldown_measurement.tStop = t  # not accounting for scr refresh
+            text_cooldown_measurement.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_cooldown_measurement, 'tStopRefresh')  # time at next scr refresh
+            text_cooldown_measurement.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2429,10 +2520,6 @@ for thisComponent in Cooldown_MeasurementComponents:
 thisExp.addData("end_cooldown_measurement", time.strftime("%Y-%m-%d_%H:%M:%S"))
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -2444,28 +2531,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2490,10 +2587,6 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Cooldown_Evaluation"-------
-t = 0
-Cooldown_EvaluationClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 # update component parameters for each repeat
 rating_cooldown_evaluation.reset()
 # keep track of which components have finished
@@ -2505,34 +2598,45 @@ for thisComponent in Cooldown_EvaluationComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Cooldown_EvaluationClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Cooldown_Evaluation"-------
+# -------Run Routine "Cooldown_Evaluation"-------
 while continueRoutine:
     # get current time
     t = Cooldown_EvaluationClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Cooldown_EvaluationClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_cooldown_evaluation_title* updates
-    if t >= 0.0 and text_cooldown_evaluation_title.status == NOT_STARTED:
+    if text_cooldown_evaluation_title.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_evaluation_title.tStart = t  # not accounting for scr refresh
         text_cooldown_evaluation_title.frameNStart = frameN  # exact frame index
+        text_cooldown_evaluation_title.tStart = t  # local t and not account for scr refresh
+        text_cooldown_evaluation_title.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_evaluation_title, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_evaluation_title.setAutoDraw(True)
     
     # *text_cooldown_evaluation* updates
-    if t >= 0.0 and text_cooldown_evaluation.status == NOT_STARTED:
+    if text_cooldown_evaluation.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_evaluation.tStart = t  # not accounting for scr refresh
         text_cooldown_evaluation.frameNStart = frameN  # exact frame index
+        text_cooldown_evaluation.tStart = t  # local t and not account for scr refresh
+        text_cooldown_evaluation.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_evaluation, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_evaluation.setAutoDraw(True)
     # *rating_cooldown_evaluation* updates
-    if t >= 0.0 and rating_cooldown_evaluation.status == NOT_STARTED:
+    if rating_cooldown_evaluation.status == NOT_STARTED and t >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        rating_cooldown_evaluation.tStart = t  # not accounting for scr refresh
         rating_cooldown_evaluation.frameNStart = frameN  # exact frame index
+        rating_cooldown_evaluation.tStart = t  # local t and not account for scr refresh
+        rating_cooldown_evaluation.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(rating_cooldown_evaluation, 'tStartRefresh')  # time at next scr refresh
         rating_cooldown_evaluation.setAutoDraw(True)
     continueRoutine &= rating_cooldown_evaluation.noResponse  # a response ends the trial
@@ -2566,10 +2670,6 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -2581,28 +2681,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2627,12 +2737,9 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Cooldown_End"-------
-t = 0
-Cooldown_EndClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 # update component parameters for each repeat
-key_resp_cooldown_end = keyboard.Keyboard()
+key_resp_cooldown_end.keys = []
+key_resp_cooldown_end.rt = []
 # keep track of which components have finished
 Cooldown_EndComponents = [text_cooldown_end, text_cooldown_end_instructions, key_resp_cooldown_end]
 for thisComponent in Cooldown_EndComponents:
@@ -2642,40 +2749,52 @@ for thisComponent in Cooldown_EndComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Cooldown_EndClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Cooldown_End"-------
+# -------Run Routine "Cooldown_End"-------
 while continueRoutine:
     # get current time
     t = Cooldown_EndClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Cooldown_EndClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_cooldown_end* updates
-    if t >= 0.0 and text_cooldown_end.status == NOT_STARTED:
+    if text_cooldown_end.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_end.tStart = t  # not accounting for scr refresh
         text_cooldown_end.frameNStart = frameN  # exact frame index
+        text_cooldown_end.tStart = t  # local t and not account for scr refresh
+        text_cooldown_end.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_end, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_end.setAutoDraw(True)
     
     # *text_cooldown_end_instructions* updates
-    if t >= 0.0 and text_cooldown_end_instructions.status == NOT_STARTED:
+    if text_cooldown_end_instructions.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_end_instructions.tStart = t  # not accounting for scr refresh
         text_cooldown_end_instructions.frameNStart = frameN  # exact frame index
+        text_cooldown_end_instructions.tStart = t  # local t and not account for scr refresh
+        text_cooldown_end_instructions.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_end_instructions, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_end_instructions.setAutoDraw(True)
     
     # *key_resp_cooldown_end* updates
-    if t >= 0.0 and key_resp_cooldown_end.status == NOT_STARTED:
+    waitOnFlip = False
+    if key_resp_cooldown_end.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        key_resp_cooldown_end.tStart = t  # not accounting for scr refresh
         key_resp_cooldown_end.frameNStart = frameN  # exact frame index
+        key_resp_cooldown_end.tStart = t  # local t and not account for scr refresh
+        key_resp_cooldown_end.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(key_resp_cooldown_end, 'tStartRefresh')  # time at next scr refresh
         key_resp_cooldown_end.status = STARTED
         # keyboard checking is just starting
-        key_resp_cooldown_end.clearEvents(eventType='keyboard')
-    if key_resp_cooldown_end.status == STARTED:
+        win.callOnFlip(key_resp_cooldown_end.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if key_resp_cooldown_end.status == STARTED and not waitOnFlip:
         theseKeys = key_resp_cooldown_end.getKeys(keyList=['space'], waitRelease=False)
         if len(theseKeys):
             theseKeys = theseKeys[0]  # at least one key was pressed
@@ -2711,10 +2830,6 @@ for thisComponent in Cooldown_EndComponents:
 routineTimer.reset()
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -2726,28 +2841,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2772,10 +2897,6 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Part_Two"-------
-t = 0
-Part_TwoClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(5.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -2787,43 +2908,55 @@ for thisComponent in Part_TwoComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Part_TwoClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Part_Two"-------
+# -------Run Routine "Part_Two"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Part_TwoClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Part_TwoClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_part_two_title* updates
-    if t >= 0.0 and text_part_two_title.status == NOT_STARTED:
+    if text_part_two_title.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_part_two_title.tStart = t  # not accounting for scr refresh
         text_part_two_title.frameNStart = frameN  # exact frame index
+        text_part_two_title.tStart = t  # local t and not account for scr refresh
+        text_part_two_title.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_part_two_title, 'tStartRefresh')  # time at next scr refresh
         text_part_two_title.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_part_two_title.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_part_two_title.tStop = t  # not accounting for scr refresh
-        text_part_two_title.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_part_two_title, 'tStopRefresh')  # time at next scr refresh
-        text_part_two_title.setAutoDraw(False)
+    if text_part_two_title.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_part_two_title.tStartRefresh + 5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_part_two_title.tStop = t  # not accounting for scr refresh
+            text_part_two_title.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_part_two_title, 'tStopRefresh')  # time at next scr refresh
+            text_part_two_title.setAutoDraw(False)
     
     # *text_part_two* updates
-    if t >= 0.0 and text_part_two.status == NOT_STARTED:
+    if text_part_two.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_part_two.tStart = t  # not accounting for scr refresh
         text_part_two.frameNStart = frameN  # exact frame index
+        text_part_two.tStart = t  # local t and not account for scr refresh
+        text_part_two.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_part_two, 'tStartRefresh')  # time at next scr refresh
         text_part_two.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_part_two.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_part_two.tStop = t  # not accounting for scr refresh
-        text_part_two.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_part_two, 'tStopRefresh')  # time at next scr refresh
-        text_part_two.setAutoDraw(False)
+    if text_part_two.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_part_two.tStartRefresh + 5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_part_two.tStop = t  # not accounting for scr refresh
+            text_part_two.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_part_two, 'tStopRefresh')  # time at next scr refresh
+            text_part_two.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2848,10 +2981,6 @@ for thisComponent in Part_TwoComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -2863,28 +2992,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -2909,12 +3048,9 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Emotion_Instructions_Two"-------
-t = 0
-Emotion_Instructions_TwoClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 # update component parameters for each repeat
-key_resp_emotion_instructions_2 = keyboard.Keyboard()
+key_resp_emotion_instructions_2.keys = []
+key_resp_emotion_instructions_2.rt = []
 # keep track of which components have finished
 Emotion_Instructions_TwoComponents = [text_emotion_instruction_title_2, text_emotion_instructions_2, key_resp_emotion_instructions_2]
 for thisComponent in Emotion_Instructions_TwoComponents:
@@ -2924,40 +3060,52 @@ for thisComponent in Emotion_Instructions_TwoComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Emotion_Instructions_TwoClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Emotion_Instructions_Two"-------
+# -------Run Routine "Emotion_Instructions_Two"-------
 while continueRoutine:
     # get current time
     t = Emotion_Instructions_TwoClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Emotion_Instructions_TwoClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_emotion_instruction_title_2* updates
-    if t >= 0.0 and text_emotion_instruction_title_2.status == NOT_STARTED:
+    if text_emotion_instruction_title_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_emotion_instruction_title_2.tStart = t  # not accounting for scr refresh
         text_emotion_instruction_title_2.frameNStart = frameN  # exact frame index
+        text_emotion_instruction_title_2.tStart = t  # local t and not account for scr refresh
+        text_emotion_instruction_title_2.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_emotion_instruction_title_2, 'tStartRefresh')  # time at next scr refresh
         text_emotion_instruction_title_2.setAutoDraw(True)
     
     # *text_emotion_instructions_2* updates
-    if t >= 0.0 and text_emotion_instructions_2.status == NOT_STARTED:
+    if text_emotion_instructions_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_emotion_instructions_2.tStart = t  # not accounting for scr refresh
         text_emotion_instructions_2.frameNStart = frameN  # exact frame index
+        text_emotion_instructions_2.tStart = t  # local t and not account for scr refresh
+        text_emotion_instructions_2.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_emotion_instructions_2, 'tStartRefresh')  # time at next scr refresh
         text_emotion_instructions_2.setAutoDraw(True)
     
     # *key_resp_emotion_instructions_2* updates
-    if t >= 0.0 and key_resp_emotion_instructions_2.status == NOT_STARTED:
+    waitOnFlip = False
+    if key_resp_emotion_instructions_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        key_resp_emotion_instructions_2.tStart = t  # not accounting for scr refresh
         key_resp_emotion_instructions_2.frameNStart = frameN  # exact frame index
+        key_resp_emotion_instructions_2.tStart = t  # local t and not account for scr refresh
+        key_resp_emotion_instructions_2.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(key_resp_emotion_instructions_2, 'tStartRefresh')  # time at next scr refresh
         key_resp_emotion_instructions_2.status = STARTED
         # keyboard checking is just starting
-        key_resp_emotion_instructions_2.clearEvents(eventType='keyboard')
-    if key_resp_emotion_instructions_2.status == STARTED:
+        win.callOnFlip(key_resp_emotion_instructions_2.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if key_resp_emotion_instructions_2.status == STARTED and not waitOnFlip:
         theseKeys = key_resp_emotion_instructions_2.getKeys(keyList=['space'], waitRelease=False)
         if len(theseKeys):
             theseKeys = theseKeys[0]  # at least one key was pressed
@@ -2994,10 +3142,6 @@ thisExp.addData("start_emotion_two", time.strftime("%Y-%m-%d_%H:%M:%S"))
 routineTimer.reset()
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -3009,28 +3153,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3074,10 +3228,6 @@ for thisEmotion_trials_n in emotion_trials_n:
             exec('{} = thisEmotion_trials_n[paramName]'.format(paramName))
     
     # ------Prepare to start Routine "Emotion_Measurement_N"-------
-    t = 0
-    Emotion_Measurement_NClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(7.000000)
     # update component parameters for each repeat
     image_emotion_n.setSize((n_new_width, n_new_height))
@@ -3091,28 +3241,38 @@ for thisEmotion_trials_n in emotion_trials_n:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Emotion_Measurement_NClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Emotion_Measurement_N"-------
+    # -------Run Routine "Emotion_Measurement_N"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Emotion_Measurement_NClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Emotion_Measurement_NClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *image_emotion_n* updates
-        if t >= 0.0 and image_emotion_n.status == NOT_STARTED:
+        if image_emotion_n.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            image_emotion_n.tStart = t  # not accounting for scr refresh
             image_emotion_n.frameNStart = frameN  # exact frame index
+            image_emotion_n.tStart = t  # local t and not account for scr refresh
+            image_emotion_n.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(image_emotion_n, 'tStartRefresh')  # time at next scr refresh
             image_emotion_n.setAutoDraw(True)
-        frameRemains = 0.0 + 7- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if image_emotion_n.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            image_emotion_n.tStop = t  # not accounting for scr refresh
-            image_emotion_n.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(image_emotion_n, 'tStopRefresh')  # time at next scr refresh
-            image_emotion_n.setAutoDraw(False)
+        if image_emotion_n.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > image_emotion_n.tStartRefresh + 7-frameTolerance:
+                # keep track of stop time/frame for later
+                image_emotion_n.tStop = t  # not accounting for scr refresh
+                image_emotion_n.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(image_emotion_n, 'tStopRefresh')  # time at next scr refresh
+                image_emotion_n.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3139,10 +3299,6 @@ for thisEmotion_trials_n in emotion_trials_n:
     emotion_trials_n.addData('image_emotion_n.stopped', image_emotion_n.tStopRefresh)
     
     # ------Prepare to start Routine "Blank_Screen"-------
-    t = 0
-    Blank_ScreenClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(0.500000)
     # update component parameters for each repeat
     # keep track of which components have finished
@@ -3154,28 +3310,38 @@ for thisEmotion_trials_n in emotion_trials_n:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Blank_Screen"-------
+    # -------Run Routine "Blank_Screen"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Blank_ScreenClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *text_blank* updates
-        if t >= 0.0 and text_blank.status == NOT_STARTED:
+        if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_blank.tStart = t  # not accounting for scr refresh
             text_blank.frameNStart = frameN  # exact frame index
+            text_blank.tStart = t  # local t and not account for scr refresh
+            text_blank.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
             text_blank.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if text_blank.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            text_blank.tStop = t  # not accounting for scr refresh
-            text_blank.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-            text_blank.setAutoDraw(False)
+        if text_blank.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_blank.tStop = t  # not accounting for scr refresh
+                text_blank.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+                text_blank.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3200,10 +3366,6 @@ for thisEmotion_trials_n in emotion_trials_n:
             thisComponent.setAutoDraw(False)
     
     # ------Prepare to start Routine "Fix_Screen"-------
-    t = 0
-    Fix_ScreenClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(2.000000)
     # update component parameters for each repeat
     # keep track of which components have finished
@@ -3215,28 +3377,38 @@ for thisEmotion_trials_n in emotion_trials_n:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Fix_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Fix_Screen"-------
+    # -------Run Routine "Fix_Screen"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Fix_ScreenClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Fix_ScreenClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *text_fix* updates
-        if t >= 0.0 and text_fix.status == NOT_STARTED:
+        if text_fix.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_fix.tStart = t  # not accounting for scr refresh
             text_fix.frameNStart = frameN  # exact frame index
+            text_fix.tStart = t  # local t and not account for scr refresh
+            text_fix.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_fix, 'tStartRefresh')  # time at next scr refresh
             text_fix.setAutoDraw(True)
-        frameRemains = 0.0 + 2- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if text_fix.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            text_fix.tStop = t  # not accounting for scr refresh
-            text_fix.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(text_fix, 'tStopRefresh')  # time at next scr refresh
-            text_fix.setAutoDraw(False)
+        if text_fix.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_fix.tStartRefresh + 2-frameTolerance:
+                # keep track of stop time/frame for later
+                text_fix.tStop = t  # not accounting for scr refresh
+                text_fix.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_fix, 'tStopRefresh')  # time at next scr refresh
+                text_fix.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3261,10 +3433,6 @@ for thisEmotion_trials_n in emotion_trials_n:
             thisComponent.setAutoDraw(False)
     
     # ------Prepare to start Routine "Blank_Screen"-------
-    t = 0
-    Blank_ScreenClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(0.500000)
     # update component parameters for each repeat
     # keep track of which components have finished
@@ -3276,28 +3444,38 @@ for thisEmotion_trials_n in emotion_trials_n:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Blank_Screen"-------
+    # -------Run Routine "Blank_Screen"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Blank_ScreenClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *text_blank* updates
-        if t >= 0.0 and text_blank.status == NOT_STARTED:
+        if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_blank.tStart = t  # not accounting for scr refresh
             text_blank.frameNStart = frameN  # exact frame index
+            text_blank.tStart = t  # local t and not account for scr refresh
+            text_blank.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
             text_blank.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if text_blank.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            text_blank.tStop = t  # not accounting for scr refresh
-            text_blank.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-            text_blank.setAutoDraw(False)
+        if text_blank.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_blank.tStop = t  # not accounting for scr refresh
+                text_blank.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+                text_blank.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3338,10 +3516,6 @@ emotion_trials_n.saveAsText(filename + 'emotion_trials_n.csv', delim=',',
     dataOut=['n','all_mean','all_std', 'all_raw'])
 
 # ------Prepare to start Routine "Part_Two_Meas_End"-------
-t = 0
-Part_Two_Meas_EndClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 thisExp.addData("end_emotion_two", time.strftime("%Y-%m-%d_%H:%M:%S")) 
@@ -3354,28 +3528,38 @@ for thisComponent in Part_Two_Meas_EndComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Part_Two_Meas_EndClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Part_Two_Meas_End"-------
+# -------Run Routine "Part_Two_Meas_End"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Part_Two_Meas_EndClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Part_Two_Meas_EndClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_part_one_meas_end_2* updates
-    if t >= 0.0 and text_part_one_meas_end_2.status == NOT_STARTED:
+    if text_part_one_meas_end_2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_part_one_meas_end_2.tStart = t  # not accounting for scr refresh
         text_part_one_meas_end_2.frameNStart = frameN  # exact frame index
+        text_part_one_meas_end_2.tStart = t  # local t and not account for scr refresh
+        text_part_one_meas_end_2.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_part_one_meas_end_2, 'tStartRefresh')  # time at next scr refresh
         text_part_one_meas_end_2.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_part_one_meas_end_2.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_part_one_meas_end_2.tStop = t  # not accounting for scr refresh
-        text_part_one_meas_end_2.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_part_one_meas_end_2, 'tStopRefresh')  # time at next scr refresh
-        text_part_one_meas_end_2.setAutoDraw(False)
+    if text_part_one_meas_end_2.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_part_one_meas_end_2.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_part_one_meas_end_2.tStop = t  # not accounting for scr refresh
+            text_part_one_meas_end_2.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_part_one_meas_end_2, 'tStopRefresh')  # time at next scr refresh
+            text_part_one_meas_end_2.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3419,10 +3603,6 @@ for thisEmotion_evaluation_n in emotion_evaluation_n:
             exec('{} = thisEmotion_evaluation_n[paramName]'.format(paramName))
     
     # ------Prepare to start Routine "Emotion_Evaluation_N_O"-------
-    t = 0
-    Emotion_Evaluation_N_OClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     # update component parameters for each repeat
     image_emotion_n_eval_o.setSize((n_new_width*0.3, n_new_height*0.3))
     image_emotion_n_eval_o.setImage(n_pictures)
@@ -3436,34 +3616,45 @@ for thisEmotion_evaluation_n in emotion_evaluation_n:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Emotion_Evaluation_N_OClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Emotion_Evaluation_N_O"-------
+    # -------Run Routine "Emotion_Evaluation_N_O"-------
     while continueRoutine:
         # get current time
         t = Emotion_Evaluation_N_OClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Emotion_Evaluation_N_OClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *image_emotion_n_eval_o* updates
-        if t >= 0.0 and image_emotion_n_eval_o.status == NOT_STARTED:
+        if image_emotion_n_eval_o.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            image_emotion_n_eval_o.tStart = t  # not accounting for scr refresh
             image_emotion_n_eval_o.frameNStart = frameN  # exact frame index
+            image_emotion_n_eval_o.tStart = t  # local t and not account for scr refresh
+            image_emotion_n_eval_o.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(image_emotion_n_eval_o, 'tStartRefresh')  # time at next scr refresh
             image_emotion_n_eval_o.setAutoDraw(True)
         
         # *text_emotion_n_eval_o* updates
-        if t >= 0.0 and text_emotion_n_eval_o.status == NOT_STARTED:
+        if text_emotion_n_eval_o.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_emotion_n_eval_o.tStart = t  # not accounting for scr refresh
             text_emotion_n_eval_o.frameNStart = frameN  # exact frame index
+            text_emotion_n_eval_o.tStart = t  # local t and not account for scr refresh
+            text_emotion_n_eval_o.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_emotion_n_eval_o, 'tStartRefresh')  # time at next scr refresh
             text_emotion_n_eval_o.setAutoDraw(True)
         # *rating_emotion_n_eval_o* updates
-        if t >= 0.0 and rating_emotion_n_eval_o.status == NOT_STARTED:
+        if rating_emotion_n_eval_o.status == NOT_STARTED and t >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            rating_emotion_n_eval_o.tStart = t  # not accounting for scr refresh
             rating_emotion_n_eval_o.frameNStart = frameN  # exact frame index
+            rating_emotion_n_eval_o.tStart = t  # local t and not account for scr refresh
+            rating_emotion_n_eval_o.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(rating_emotion_n_eval_o, 'tStartRefresh')  # time at next scr refresh
             rating_emotion_n_eval_o.setAutoDraw(True)
         continueRoutine &= rating_emotion_n_eval_o.noResponse  # a response ends the trial
@@ -3496,10 +3687,6 @@ for thisEmotion_evaluation_n in emotion_evaluation_n:
     routineTimer.reset()
     
     # ------Prepare to start Routine "Blank_Screen"-------
-    t = 0
-    Blank_ScreenClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(0.500000)
     # update component parameters for each repeat
     # keep track of which components have finished
@@ -3511,28 +3698,38 @@ for thisEmotion_evaluation_n in emotion_evaluation_n:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Blank_Screen"-------
+    # -------Run Routine "Blank_Screen"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Blank_ScreenClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *text_blank* updates
-        if t >= 0.0 and text_blank.status == NOT_STARTED:
+        if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_blank.tStart = t  # not accounting for scr refresh
             text_blank.frameNStart = frameN  # exact frame index
+            text_blank.tStart = t  # local t and not account for scr refresh
+            text_blank.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
             text_blank.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if text_blank.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            text_blank.tStop = t  # not accounting for scr refresh
-            text_blank.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-            text_blank.setAutoDraw(False)
+        if text_blank.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_blank.tStop = t  # not accounting for scr refresh
+                text_blank.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+                text_blank.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3557,14 +3754,12 @@ for thisEmotion_evaluation_n in emotion_evaluation_n:
             thisComponent.setAutoDraw(False)
     
     # ------Prepare to start Routine "Emotion_Evaluation_N_T"-------
-    t = 0
-    Emotion_Evaluation_N_TClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     # update component parameters for each repeat
+    image_emotion_n_eval_t.setSize((n_new_width*0.3, n_new_height*0.3))
+    image_emotion_n_eval_t.setImage(n_pictures)
     rating_emotion_n_eval_t.reset()
     # keep track of which components have finished
-    Emotion_Evaluation_N_TComponents = [text_emotion_n_eval_t, rating_emotion_n_eval_t]
+    Emotion_Evaluation_N_TComponents = [image_emotion_n_eval_t, text_emotion_n_eval_t, rating_emotion_n_eval_t]
     for thisComponent in Emotion_Evaluation_N_TComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3572,26 +3767,45 @@ for thisEmotion_evaluation_n in emotion_evaluation_n:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Emotion_Evaluation_N_TClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Emotion_Evaluation_N_T"-------
+    # -------Run Routine "Emotion_Evaluation_N_T"-------
     while continueRoutine:
         # get current time
         t = Emotion_Evaluation_N_TClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Emotion_Evaluation_N_TClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *text_emotion_n_eval_t* updates
-        if t >= 0.0 and text_emotion_n_eval_t.status == NOT_STARTED:
+        # *image_emotion_n_eval_t* updates
+        if image_emotion_n_eval_t.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_emotion_n_eval_t.tStart = t  # not accounting for scr refresh
+            image_emotion_n_eval_t.frameNStart = frameN  # exact frame index
+            image_emotion_n_eval_t.tStart = t  # local t and not account for scr refresh
+            image_emotion_n_eval_t.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(image_emotion_n_eval_t, 'tStartRefresh')  # time at next scr refresh
+            image_emotion_n_eval_t.setAutoDraw(True)
+        
+        # *text_emotion_n_eval_t* updates
+        if text_emotion_n_eval_t.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
             text_emotion_n_eval_t.frameNStart = frameN  # exact frame index
+            text_emotion_n_eval_t.tStart = t  # local t and not account for scr refresh
+            text_emotion_n_eval_t.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_emotion_n_eval_t, 'tStartRefresh')  # time at next scr refresh
             text_emotion_n_eval_t.setAutoDraw(True)
         # *rating_emotion_n_eval_t* updates
-        if t >= 0.0 and rating_emotion_n_eval_t.status == NOT_STARTED:
+        if rating_emotion_n_eval_t.status == NOT_STARTED and t >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            rating_emotion_n_eval_t.tStart = t  # not accounting for scr refresh
             rating_emotion_n_eval_t.frameNStart = frameN  # exact frame index
+            rating_emotion_n_eval_t.tStart = t  # local t and not account for scr refresh
+            rating_emotion_n_eval_t.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(rating_emotion_n_eval_t, 'tStartRefresh')  # time at next scr refresh
             rating_emotion_n_eval_t.setAutoDraw(True)
         continueRoutine &= rating_emotion_n_eval_t.noResponse  # a response ends the trial
@@ -3626,10 +3840,6 @@ for thisEmotion_evaluation_n in emotion_evaluation_n:
     routineTimer.reset()
     
     # ------Prepare to start Routine "Blank_Screen"-------
-    t = 0
-    Blank_ScreenClock.reset()  # clock
-    frameN = -1
-    continueRoutine = True
     routineTimer.add(0.500000)
     # update component parameters for each repeat
     # keep track of which components have finished
@@ -3641,28 +3851,38 @@ for thisEmotion_evaluation_n in emotion_evaluation_n:
         thisComponent.tStopRefresh = None
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    continueRoutine = True
     
-    # -------Start Routine "Blank_Screen"-------
+    # -------Run Routine "Blank_Screen"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
         t = Blank_ScreenClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
         # *text_blank* updates
-        if t >= 0.0 and text_blank.status == NOT_STARTED:
+        if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            text_blank.tStart = t  # not accounting for scr refresh
             text_blank.frameNStart = frameN  # exact frame index
+            text_blank.tStart = t  # local t and not account for scr refresh
+            text_blank.tStartRefresh = tThisFlipGlobal  # on global time
             win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
             text_blank.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if text_blank.status == STARTED and t >= frameRemains:
-            # keep track of stop time/frame for later
-            text_blank.tStop = t  # not accounting for scr refresh
-            text_blank.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-            text_blank.setAutoDraw(False)
+        if text_blank.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+                # keep track of stop time/frame for later
+                text_blank.tStop = t  # not accounting for scr refresh
+                text_blank.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+                text_blank.setAutoDraw(False)
         
         # check for quit (typically the Esc key)
         if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3703,10 +3923,6 @@ emotion_evaluation_n.saveAsText(filename + 'emotion_evaluation_n.csv', delim=','
     dataOut=['n','all_mean','all_std', 'all_raw'])
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -3718,28 +3934,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3764,10 +3990,6 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Cooldown_Screen"-------
-t = 0
-Cooldown_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(5.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -3779,43 +4001,55 @@ for thisComponent in Cooldown_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Cooldown_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Cooldown_Screen"-------
+# -------Run Routine "Cooldown_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Cooldown_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Cooldown_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_cooldown_title* updates
-    if t >= 0.0 and text_cooldown_title.status == NOT_STARTED:
+    if text_cooldown_title.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_title.tStart = t  # not accounting for scr refresh
         text_cooldown_title.frameNStart = frameN  # exact frame index
+        text_cooldown_title.tStart = t  # local t and not account for scr refresh
+        text_cooldown_title.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_title, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_title.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_cooldown_title.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_cooldown_title.tStop = t  # not accounting for scr refresh
-        text_cooldown_title.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_cooldown_title, 'tStopRefresh')  # time at next scr refresh
-        text_cooldown_title.setAutoDraw(False)
+    if text_cooldown_title.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_cooldown_title.tStartRefresh + 5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_cooldown_title.tStop = t  # not accounting for scr refresh
+            text_cooldown_title.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_cooldown_title, 'tStopRefresh')  # time at next scr refresh
+            text_cooldown_title.setAutoDraw(False)
     
     # *text_cooldown* updates
-    if t >= 0.0 and text_cooldown.status == NOT_STARTED:
+    if text_cooldown.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown.tStart = t  # not accounting for scr refresh
         text_cooldown.frameNStart = frameN  # exact frame index
+        text_cooldown.tStart = t  # local t and not account for scr refresh
+        text_cooldown.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown, 'tStartRefresh')  # time at next scr refresh
         text_cooldown.setAutoDraw(True)
-    frameRemains = 0.0 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_cooldown.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_cooldown.tStop = t  # not accounting for scr refresh
-        text_cooldown.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_cooldown, 'tStopRefresh')  # time at next scr refresh
-        text_cooldown.setAutoDraw(False)
+    if text_cooldown.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_cooldown.tStartRefresh + 5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_cooldown.tStop = t  # not accounting for scr refresh
+            text_cooldown.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_cooldown, 'tStopRefresh')  # time at next scr refresh
+            text_cooldown.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3840,10 +4074,6 @@ for thisComponent in Cooldown_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -3855,28 +4085,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -3901,12 +4141,9 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Cooldown_Instructions"-------
-t = 0
-Cooldown_InstructionsClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 # update component parameters for each repeat
-key_resp_cooldown_instructions = keyboard.Keyboard()
+key_resp_cooldown_instructions.keys = []
+key_resp_cooldown_instructions.rt = []
 # keep track of which components have finished
 Cooldown_InstructionsComponents = [text_cooldown_instructions, text_cooldown_instructions_title, key_resp_cooldown_instructions]
 for thisComponent in Cooldown_InstructionsComponents:
@@ -3916,41 +4153,54 @@ for thisComponent in Cooldown_InstructionsComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Cooldown_InstructionsClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Cooldown_Instructions"-------
+# -------Run Routine "Cooldown_Instructions"-------
 while continueRoutine:
     # get current time
     t = Cooldown_InstructionsClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Cooldown_InstructionsClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_cooldown_instructions* updates
-    if t >= 0.0 and text_cooldown_instructions.status == NOT_STARTED:
+    if text_cooldown_instructions.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_instructions.tStart = t  # not accounting for scr refresh
         text_cooldown_instructions.frameNStart = frameN  # exact frame index
+        text_cooldown_instructions.tStart = t  # local t and not account for scr refresh
+        text_cooldown_instructions.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_instructions, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_instructions.setAutoDraw(True)
     
     # *text_cooldown_instructions_title* updates
-    if t >= 0.0 and text_cooldown_instructions_title.status == NOT_STARTED:
+    if text_cooldown_instructions_title.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_instructions_title.tStart = t  # not accounting for scr refresh
         text_cooldown_instructions_title.frameNStart = frameN  # exact frame index
+        text_cooldown_instructions_title.tStart = t  # local t and not account for scr refresh
+        text_cooldown_instructions_title.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_instructions_title, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_instructions_title.setAutoDraw(True)
     
     # *key_resp_cooldown_instructions* updates
-    if t >= 0.0 and key_resp_cooldown_instructions.status == NOT_STARTED:
+    waitOnFlip = False
+    if key_resp_cooldown_instructions.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        key_resp_cooldown_instructions.tStart = t  # not accounting for scr refresh
         key_resp_cooldown_instructions.frameNStart = frameN  # exact frame index
+        key_resp_cooldown_instructions.tStart = t  # local t and not account for scr refresh
+        key_resp_cooldown_instructions.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(key_resp_cooldown_instructions, 'tStartRefresh')  # time at next scr refresh
         key_resp_cooldown_instructions.status = STARTED
         # keyboard checking is just starting
+        waitOnFlip = True
         win.callOnFlip(key_resp_cooldown_instructions.clock.reset)  # t=0 on next screen flip
-        key_resp_cooldown_instructions.clearEvents(eventType='keyboard')
-    if key_resp_cooldown_instructions.status == STARTED:
+        win.callOnFlip(key_resp_cooldown_instructions.clearEvents, eventType='keyboard')  # clear events on next screen flip
+    if key_resp_cooldown_instructions.status == STARTED and not waitOnFlip:
         theseKeys = key_resp_cooldown_instructions.getKeys(keyList=['space'], waitRelease=False)
         if len(theseKeys):
             theseKeys = theseKeys[0]  # at least one key was pressed
@@ -3995,10 +4245,6 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -4010,28 +4256,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4056,10 +4312,6 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Countdown_Screen_10"-------
-t = 0
-Countdown_Screen_10Clock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(10.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -4071,28 +4323,38 @@ for thisComponent in Countdown_Screen_10Components:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Countdown_Screen_10Clock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Countdown_Screen_10"-------
+# -------Run Routine "Countdown_Screen_10"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Countdown_Screen_10Clock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Countdown_Screen_10Clock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_countdown* updates
-    if t >= 0.0 and text_countdown.status == NOT_STARTED:
+    if text_countdown.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_countdown.tStart = t  # not accounting for scr refresh
         text_countdown.frameNStart = frameN  # exact frame index
+        text_countdown.tStart = t  # local t and not account for scr refresh
+        text_countdown.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_countdown, 'tStartRefresh')  # time at next scr refresh
         text_countdown.setAutoDraw(True)
-    frameRemains = 0.0 + 10- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_countdown.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_countdown.tStop = t  # not accounting for scr refresh
-        text_countdown.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_countdown, 'tStopRefresh')  # time at next scr refresh
-        text_countdown.setAutoDraw(False)
+    if text_countdown.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_countdown.tStartRefresh + 10-frameTolerance:
+            # keep track of stop time/frame for later
+            text_countdown.tStop = t  # not accounting for scr refresh
+            text_countdown.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_countdown, 'tStopRefresh')  # time at next scr refresh
+            text_countdown.setAutoDraw(False)
     if text_countdown.status == STARTED:  # only update if drawing
         text_countdown.setText(str(round(routineTimer.getTime(),0)) , log=False)
     
@@ -4119,10 +4381,6 @@ for thisComponent in Countdown_Screen_10Components:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -4134,28 +4392,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4180,10 +4448,6 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Cooldown_Measurement"-------
-t = 0
-Cooldown_MeasurementClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(300.000000)
 # update component parameters for each repeat
 thisExp.addData("start_cooldown_measurement", time.strftime("%Y-%m-%d_%H:%M:%S"))
@@ -4196,28 +4460,38 @@ for thisComponent in Cooldown_MeasurementComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Cooldown_MeasurementClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Cooldown_Measurement"-------
+# -------Run Routine "Cooldown_Measurement"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Cooldown_MeasurementClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Cooldown_MeasurementClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_cooldown_measurement* updates
-    if t >= 0.0 and text_cooldown_measurement.status == NOT_STARTED:
+    if text_cooldown_measurement.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_measurement.tStart = t  # not accounting for scr refresh
         text_cooldown_measurement.frameNStart = frameN  # exact frame index
+        text_cooldown_measurement.tStart = t  # local t and not account for scr refresh
+        text_cooldown_measurement.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_measurement, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_measurement.setAutoDraw(True)
-    frameRemains = 0.0 + 300- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_cooldown_measurement.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_cooldown_measurement.tStop = t  # not accounting for scr refresh
-        text_cooldown_measurement.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_cooldown_measurement, 'tStopRefresh')  # time at next scr refresh
-        text_cooldown_measurement.setAutoDraw(False)
+    if text_cooldown_measurement.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_cooldown_measurement.tStartRefresh + 300-frameTolerance:
+            # keep track of stop time/frame for later
+            text_cooldown_measurement.tStop = t  # not accounting for scr refresh
+            text_cooldown_measurement.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_cooldown_measurement, 'tStopRefresh')  # time at next scr refresh
+            text_cooldown_measurement.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4243,10 +4517,6 @@ for thisComponent in Cooldown_MeasurementComponents:
 thisExp.addData("end_cooldown_measurement", time.strftime("%Y-%m-%d_%H:%M:%S"))
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -4258,28 +4528,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4304,10 +4584,6 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Cooldown_Evaluation"-------
-t = 0
-Cooldown_EvaluationClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 # update component parameters for each repeat
 rating_cooldown_evaluation.reset()
 # keep track of which components have finished
@@ -4319,34 +4595,45 @@ for thisComponent in Cooldown_EvaluationComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Cooldown_EvaluationClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Cooldown_Evaluation"-------
+# -------Run Routine "Cooldown_Evaluation"-------
 while continueRoutine:
     # get current time
     t = Cooldown_EvaluationClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Cooldown_EvaluationClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_cooldown_evaluation_title* updates
-    if t >= 0.0 and text_cooldown_evaluation_title.status == NOT_STARTED:
+    if text_cooldown_evaluation_title.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_evaluation_title.tStart = t  # not accounting for scr refresh
         text_cooldown_evaluation_title.frameNStart = frameN  # exact frame index
+        text_cooldown_evaluation_title.tStart = t  # local t and not account for scr refresh
+        text_cooldown_evaluation_title.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_evaluation_title, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_evaluation_title.setAutoDraw(True)
     
     # *text_cooldown_evaluation* updates
-    if t >= 0.0 and text_cooldown_evaluation.status == NOT_STARTED:
+    if text_cooldown_evaluation.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_cooldown_evaluation.tStart = t  # not accounting for scr refresh
         text_cooldown_evaluation.frameNStart = frameN  # exact frame index
+        text_cooldown_evaluation.tStart = t  # local t and not account for scr refresh
+        text_cooldown_evaluation.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_cooldown_evaluation, 'tStartRefresh')  # time at next scr refresh
         text_cooldown_evaluation.setAutoDraw(True)
     # *rating_cooldown_evaluation* updates
-    if t >= 0.0 and rating_cooldown_evaluation.status == NOT_STARTED:
+    if rating_cooldown_evaluation.status == NOT_STARTED and t >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        rating_cooldown_evaluation.tStart = t  # not accounting for scr refresh
         rating_cooldown_evaluation.frameNStart = frameN  # exact frame index
+        rating_cooldown_evaluation.tStart = t  # local t and not account for scr refresh
+        rating_cooldown_evaluation.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(rating_cooldown_evaluation, 'tStartRefresh')  # time at next scr refresh
         rating_cooldown_evaluation.setAutoDraw(True)
     continueRoutine &= rating_cooldown_evaluation.noResponse  # a response ends the trial
@@ -4380,10 +4667,6 @@ thisExp.nextEntry()
 routineTimer.reset()
 
 # ------Prepare to start Routine "Blank_Screen"-------
-t = 0
-Blank_ScreenClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(0.500000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -4395,28 +4678,38 @@ for thisComponent in Blank_ScreenComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Blank_ScreenClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Blank_Screen"-------
+# -------Run Routine "Blank_Screen"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Blank_ScreenClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Blank_ScreenClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_blank* updates
-    if t >= 0.0 and text_blank.status == NOT_STARTED:
+    if text_blank.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_blank.tStart = t  # not accounting for scr refresh
         text_blank.frameNStart = frameN  # exact frame index
+        text_blank.tStart = t  # local t and not account for scr refresh
+        text_blank.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_blank, 'tStartRefresh')  # time at next scr refresh
         text_blank.setAutoDraw(True)
-    frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_blank.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_blank.tStop = t  # not accounting for scr refresh
-        text_blank.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
-        text_blank.setAutoDraw(False)
+    if text_blank.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_blank.tStartRefresh + 0.5-frameTolerance:
+            # keep track of stop time/frame for later
+            text_blank.tStop = t  # not accounting for scr refresh
+            text_blank.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_blank, 'tStopRefresh')  # time at next scr refresh
+            text_blank.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -4441,10 +4734,6 @@ for thisComponent in Blank_ScreenComponents:
         thisComponent.setAutoDraw(False)
 
 # ------Prepare to start Routine "Emotion_End"-------
-t = 0
-Emotion_EndClock.reset()  # clock
-frameN = -1
-continueRoutine = True
 routineTimer.add(10.000000)
 # update component parameters for each repeat
 # keep track of which components have finished
@@ -4456,43 +4745,55 @@ for thisComponent in Emotion_EndComponents:
     thisComponent.tStopRefresh = None
     if hasattr(thisComponent, 'status'):
         thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+Emotion_EndClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+continueRoutine = True
 
-# -------Start Routine "Emotion_End"-------
+# -------Run Routine "Emotion_End"-------
 while continueRoutine and routineTimer.getTime() > 0:
     # get current time
     t = Emotion_EndClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=Emotion_EndClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
     frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
     # update/draw components on each frame
     
     # *text_ending_screen* updates
-    if t >= 0.0 and text_ending_screen.status == NOT_STARTED:
+    if text_ending_screen.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_ending_screen.tStart = t  # not accounting for scr refresh
         text_ending_screen.frameNStart = frameN  # exact frame index
+        text_ending_screen.tStart = t  # local t and not account for scr refresh
+        text_ending_screen.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_ending_screen, 'tStartRefresh')  # time at next scr refresh
         text_ending_screen.setAutoDraw(True)
-    frameRemains = 0.0 + 10- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_ending_screen.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_ending_screen.tStop = t  # not accounting for scr refresh
-        text_ending_screen.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_ending_screen, 'tStopRefresh')  # time at next scr refresh
-        text_ending_screen.setAutoDraw(False)
+    if text_ending_screen.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_ending_screen.tStartRefresh + 10-frameTolerance:
+            # keep track of stop time/frame for later
+            text_ending_screen.tStop = t  # not accounting for scr refresh
+            text_ending_screen.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_ending_screen, 'tStopRefresh')  # time at next scr refresh
+            text_ending_screen.setAutoDraw(False)
     
     # *text_ending_subtitle* updates
-    if t >= 0.0 and text_ending_subtitle.status == NOT_STARTED:
+    if text_ending_subtitle.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        text_ending_subtitle.tStart = t  # not accounting for scr refresh
         text_ending_subtitle.frameNStart = frameN  # exact frame index
+        text_ending_subtitle.tStart = t  # local t and not account for scr refresh
+        text_ending_subtitle.tStartRefresh = tThisFlipGlobal  # on global time
         win.timeOnFlip(text_ending_subtitle, 'tStartRefresh')  # time at next scr refresh
         text_ending_subtitle.setAutoDraw(True)
-    frameRemains = 0.0 + 10- win.monitorFramePeriod * 0.75  # most of one frame period left
-    if text_ending_subtitle.status == STARTED and t >= frameRemains:
-        # keep track of stop time/frame for later
-        text_ending_subtitle.tStop = t  # not accounting for scr refresh
-        text_ending_subtitle.frameNStop = frameN  # exact frame index
-        win.timeOnFlip(text_ending_subtitle, 'tStopRefresh')  # time at next scr refresh
-        text_ending_subtitle.setAutoDraw(False)
+    if text_ending_subtitle.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > text_ending_subtitle.tStartRefresh + 10-frameTolerance:
+            # keep track of stop time/frame for later
+            text_ending_subtitle.tStop = t  # not accounting for scr refresh
+            text_ending_subtitle.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(text_ending_subtitle, 'tStopRefresh')  # time at next scr refresh
+            text_ending_subtitle.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
