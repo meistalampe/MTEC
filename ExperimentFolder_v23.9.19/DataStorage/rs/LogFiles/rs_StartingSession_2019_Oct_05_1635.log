@@ -1,0 +1,77 @@
+10.1974 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', color=array([0., 0., 0.]), colorSpace='rgb', fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001B062DC7CC0>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001B062F98358>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.1976 	EXP 	window1: recordFrameIntervals = False
+10.3612 	EXP 	window1: recordFrameIntervals = True
+10.5450 	EXP 	window1: recordFrameIntervals = False
+10.7731 	EXP 	Created text_welcome_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_welcome_screen', opacity=1.0, ori=0, pos=array([0. , 0.1]), rgb=array([255., 255., 255.]), text='  Welcome \n     to the \nExperiment', units='height', win=Window(...), wrapWidth=1)
+10.7904 	EXP 	Created text_welcome_screen_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_welcome_screen_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([255., 255., 255.]), text="(Press 'SPACE' to continue)", units='height', win=Window(...), wrapWidth=1)
+10.7910 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+10.8040 	EXP 	Created text_baseline_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='    Baseline \nMeasurement', units='height', win=Window(...), wrapWidth=1)
+10.8098 	EXP 	Created text_baseline_screen_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_screen_title', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([255., 255., 255.]), text='Session One:', units='height', win=Window(...), wrapWidth=1)
+10.8103 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+10.8145 	EXP 	Created text_baseline_instructions_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_instructions_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([255., 255., 255.]), text='Instructions:', units='height', win=Window(...), wrapWidth=1)
+10.8412 	EXP 	Created text_baseline_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_baseline_instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+10.8417 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+10.8798 	EXP 	Created text_countdown = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.2, italic=False, languageStyle='LTR', name='text_countdown', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+10.8803 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+10.9277 	EXP 	Created text_baseline_measurement = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.4, italic=False, languageStyle='LTR', name='text_baseline_measurement', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='+', units='height', win=Window(...), wrapWidth=1)
+10.9283 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+10.9374 	EXP 	Created text_baseline_evaluation_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_evaluation_title', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([255., 255., 255.]), text='Task finished:', units='height', win=Window(...), wrapWidth=1)
+10.9458 	EXP 	Created text_baseline_evaluation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text_baseline_evaluation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Please rate your current stress level.', units='height', win=Window(...), wrapWidth=1)
+10.9885 	EXP 	Created rating_baseline = RatingScale(__class__=type(...), acceptKeys=['return'], acceptPreText=UNKNOWN, acceptSize=UNKNOWN, acceptText='accept?', autoLog=True, choices=False, depth=0, disappear=False, flipVert=False, high=10, kwargs=UNKNOWN, labels=list(...), leftKeys=['left'], lineColor='White', low=1, marker=ShapeStim(...), markerColor='DarkBlue', markerExpansion=UNKNOWN, markerStart=5.0, maxTime=0.0, minTime=0.4, mouseOnly=False, name='rating_baseline', noMouse=False, pos=[0.0, -0.4], precision=1, respKeys=[], rightKeys=['right'], scale='', self=UNKNOWN, showAccept=True, showValue=True, singleClick=False, size=0.6, skipKeys=['tab'], stretch=1.0, textColor='LightGray', textFont='Helvetica Bold', textSize=0.12, tickHeight=1.0, tickMarks=9.0, win=Window(...))
+10.9890 	EXP 	Created text_blank_screen = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_blank_screen', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='', units='height', win=Window(...), wrapWidth=1)
+11.0034 	EXP 	Created text_baseline_end = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='text_baseline_end', opacity=1.0, ori=0, pos=array([0. , 0.1]), rgb=array([255., 255., 255.]), text='Ending Session One.', units='height', win=Window(...), wrapWidth=1)
+11.0094 	EXP 	Created text_baseline_end_instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz='center', alignVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='text_baseline_end_instructions', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([255., 255., 255.]), text="(Press 'SPACE' to exit)", units='height', win=Window(...), wrapWidth=1)
+11.0503 	EXP 	rating_baseline: flipVert = False
+11.0503 	EXP 	rating_baseline: autoLog = True
+11.0503 	EXP 	text_welcome_screen: autoDraw = True
+11.0503 	EXP 	text_welcome_screen_continue: autoDraw = True
+13.7657 	DATA 	Keypress: space
+13.7766 	EXP 	text_welcome_screen: autoDraw = False
+13.7766 	EXP 	text_welcome_screen_continue: autoDraw = False
+13.7766 	EXP 	text_blank_screen: autoDraw = True
+14.2781 	EXP 	text_blank_screen: autoDraw = False
+14.2781 	EXP 	text_blank_screen: autoDraw = False
+14.2781 	EXP 	text_baseline_screen: autoDraw = True
+14.2781 	EXP 	text_baseline_screen_title: autoDraw = True
+19.2936 	EXP 	text_baseline_screen: autoDraw = False
+19.2936 	EXP 	text_baseline_screen_title: autoDraw = False
+19.2936 	EXP 	text_blank_screen: autoDraw = True
+19.7936 	EXP 	text_blank_screen: autoDraw = False
+19.7936 	EXP 	text_baseline_instructions_title: autoDraw = True
+19.7936 	EXP 	text_baseline_instructions: autoDraw = True
+110.3113 	DATA 	Keypress: space
+110.3208 	EXP 	text_baseline_instructions_title: autoDraw = False
+110.3208 	EXP 	text_baseline_instructions: autoDraw = False
+110.3208 	EXP 	text_blank_screen: autoDraw = True
+110.8457 	EXP 	text_blank_screen: autoDraw = False
+110.8457 	EXP 	text_blank_screen: autoDraw = False
+110.8457 	EXP 	text_countdown: autoDraw = True
+120.8358 	EXP 	text_countdown: autoDraw = False
+120.8358 	EXP 	text_blank_screen: autoDraw = True
+121.3355 	EXP 	text_blank_screen: autoDraw = False
+121.3355 	EXP 	text_baseline_measurement: autoDraw = True
+421.3304 	EXP 	text_baseline_measurement: autoDraw = False
+421.3304 	EXP 	text_blank_screen: autoDraw = True
+421.8185 	EXP 	RatingScale rating_baseline: reset()
+421.8432 	EXP 	text_blank_screen: autoDraw = False
+421.8432 	EXP 	text_baseline_evaluation_title: autoDraw = True
+421.8432 	EXP 	text_baseline_evaluation: autoDraw = True
+421.8432 	EXP 	rating_baseline: autoDraw = True
+445.7459 	DATA 	Mouse: Left button down, pos=(683,326)
+445.8274 	DATA 	Mouse:  Left button up, pos=(683,326)
+456.6247 	DATA 	Mouse: Left button down, pos=(906,196)
+456.6410 	DATA 	RatingScale rating_baseline: (mouse response) rating=1
+456.6410 	DATA 	RatingScale rating_baseline: rating RT=34.818
+456.6410 	DATA 	RatingScale rating_baseline: history=[(5.0, 0.0), (1, 23.923), (1, 34.818)]
+456.6711 	EXP 	text_baseline_evaluation_title: autoDraw = False
+456.6711 	EXP 	text_baseline_evaluation: autoDraw = False
+456.6711 	EXP 	rating_baseline: autoDraw = False
+456.6711 	EXP 	text_blank_screen: autoDraw = True
+456.7251 	DATA 	Mouse:  Left button up, pos=(906,196)
+457.1738 	EXP 	text_blank_screen: autoDraw = False
+457.1738 	EXP 	text_baseline_end: autoDraw = True
+457.1738 	EXP 	text_baseline_end_instructions: autoDraw = True
+461.4940 	DATA 	Keypress: space
+461.5207 	EXP 	text_baseline_end: autoDraw = False
+461.5207 	EXP 	text_baseline_end_instructions: autoDraw = False
+461.7287 	EXP 	window1: mouseVisible = True
