@@ -66,9 +66,9 @@ def main():
     stream = read_list_from_text_file(file_path=file_path)
 
     segment_starts_at: str = input('Please enter the starting time of the segment in seconds from the start of the '
-                              'measurement.')
+                                   'measurement.')
     segment_ends_at: str = input('Please enter the ending time of the segment in seconds from the start of the '
-                            'measurement.')
+                                 'measurement.')
 
     total_length = len(stream)/fs
     if 0 <= int(segment_starts_at) <= total_length:
@@ -79,8 +79,10 @@ def main():
             segment = stream[start_sample:end_sample]
         else:
             print('Invalid end sample.')
+            segment = []
     else:
         print('Invalid start sample.')
+        segment = []
 
     # enter segment label
     label_segment = '_' + input('Please label the segment.') + '_' + segment_starts_at + '_' + segment_ends_at

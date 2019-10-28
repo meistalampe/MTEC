@@ -95,20 +95,30 @@ def main():
                     gsr_mov_avg = gsr_generate_moving_averages(data=gsr_raw_array, sampling_frequency=gsr_fs, window=4,
                                                                mode='same',
                                                                verbose=set_verbose)
-                    print(gsr_raw_array)
+                    # print(gsr_raw_array)
                     gsr_filtered = gsr_zero_phase_filtering(data=gsr_raw_array, sampling_frequency=gsr_fs, f_cut=1.0,
                                                             filter_order=4, verbose=set_verbose)
                     # feature extraction
-                    gsr_min = min(gsr_filtered)
-                    gsr_max = max(gsr_filtered)
-                    gsr_mean = statistics.mean(gsr_filtered)    # related to arousal , Lang
+                    gsr_min_zf = min(gsr_filtered)
+                    gsr_max_zf = max(gsr_filtered)
+                    gsr_mean_zf = statistics.mean(gsr_filtered)    # related to arousal , Lang
+                    gsr_sd_zf = statistics.stdev(gsr_filtered)
 
+                    gsr_min_ma = min(gsr_mov_avg)
+                    gsr_max_ma = max(gsr_mov_avg)
+                    gsr_mean_ma = statistics.mean(gsr_mov_avg)  # related to arousal , Lang
+                    gsr_sd_ma = statistics.stdev(gsr_mov_avg)
                     # peaks per minute
 
                     gsr_features = {
-                        'gsr_min': gsr_min,
-                        'gsr_max': gsr_max,
-                        'gsr_mean': gsr_mean
+                        'gsr_min_ma': gsr_min_ma,
+                        'gsr_max_ma': gsr_max_ma,
+                        'gsr_mean_ma': gsr_mean_ma,
+                        'gsr_sd_ma': gsr_sd_ma,
+                        'gsr_min_zf': gsr_min_zf,
+                        'gsr_max_zf': gsr_max_zf,
+                        'gsr_mean_zf': gsr_mean_zf,
+                        'gsr_sd_zf': gsr_sd_zf
                     }
 
                     write_dict_to_csv(my_dict=gsr_features, file_name='gsr_features', file_index=subject)
@@ -117,7 +127,7 @@ def main():
                         plt.figure()
                         plt.plot(gsr_raw_array)
                         plt.plot(gsr_filtered)
-                        plt.plot(gsr_mov_avg)
+                        # plt.plot(gsr_mov_avg)
                         plt.show()
                 break
             elif 'temp' in file_name:
@@ -141,15 +151,28 @@ def main():
                     temp_mov_avg = gsr_generate_moving_averages(data=temp_raw_array, sampling_frequency=temp_fs,
                                                                 window=5,
                                                                 mode='same', verbose=set_verbose)
+                    temp_filtered = gsr_zero_phase_filtering(data=temp_raw_array, sampling_frequency=temp_fs, f_cut=1.0,
+                                                             filter_order=4, verbose=set_verbose)
                     # feature extraction
-                    temp_min = min(temp_mov_avg)
-                    temp_max = max(temp_mov_avg)
-                    temp_mean = statistics.mean(temp_mov_avg)
+                    temp_min_ma = min(temp_mov_avg)
+                    temp_max_ma = max(temp_mov_avg)
+                    temp_mean_ma = statistics.mean(temp_mov_avg)
+                    temp_sd_ma = statistics.stdev(temp_mov_avg)
+
+                    temp_min_zf = min(temp_filtered)
+                    temp_max_zf = max(temp_filtered)
+                    temp_mean_zf = statistics.mean(temp_filtered)
+                    temp_sd_zf = statistics.stdev(temp_filtered)
 
                     temp_features = {
-                        'temp_min': temp_min,
-                        'temp_max': temp_max,
-                        'temp_mean': temp_mean
+                        'temp_min_ma': temp_min_ma,
+                        'temp_max_ma': temp_max_ma,
+                        'temp_mean_ma': temp_mean_ma,
+                        'temp_sd_ma': temp_sd_ma,
+                        'temp_min_zf': temp_min_zf,
+                        'temp_max_zf': temp_max_zf,
+                        'temp_mean_zf': temp_mean_zf,
+                        'temp_sd_zf': temp_sd_zf
                     }
 
                     write_dict_to_csv(my_dict=temp_features, file_name='temp_features', file_index=subject)

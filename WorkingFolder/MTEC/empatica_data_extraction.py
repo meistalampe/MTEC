@@ -375,8 +375,9 @@ def get_stream_time(stream: List[Sample], verbose: bool = False) -> np.ndarray:
         # transform timestamps into values of seconds
 
         time = np.array(times)
-        time_in_seconds = time - time[0]
-        return time_in_seconds
+        # time_in_seconds = time - time[0]
+        # return time_in_seconds
+        return time
     else:
         if verbose:
             print('The stream is empty! Could not extract time.')

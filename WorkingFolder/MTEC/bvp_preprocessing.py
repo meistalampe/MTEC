@@ -110,7 +110,7 @@ def bvp_peak_detection(bvp_raw_data: np.ndarray, sampling_frequency: int = 64, v
 
     if verbose:
         # plotting
-        plt.figure(dpi=1200)
+        plt.figure()
         plt.plot(squared_clipped_signal, color='blue', linewidth=0.3, linestyle='-')
         plt.plot(MA_peak, color='red', linewidth=0.3, linestyle='-.')
         plt.plot(first_threshold, color='black', linewidth=0.3, linestyle=':')
@@ -218,6 +218,7 @@ def zero_phase_filtering(data: np.ndarray, f_min: float, f_max: float, sampling_
         plt.plot(data, linewidth=1.0, label='input')
         plt.plot(s_n_gust, color='black', linewidth=1.0, label='gust')
         plt.show()
+
     return s_n_gust
 
 
