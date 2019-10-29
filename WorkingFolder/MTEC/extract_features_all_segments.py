@@ -17,33 +17,40 @@ import statistics
 
 
 def main():
-    # todo: solve I/O error, write to csv won't create a file
-    # todo: revisit the whole console feedback to make sure everything works
-    # todo: implement input to add rating to the dictionary
-    # todo: create a clear console log for every file processed.
-    # todo: check if a segment is rejected..if so..make it visible in the name of the saved file
+    # todo: resolve issue with freq feature extraction
+
     # ----------------- DATA EXTRACTION ----------------- #
     label = 'FEATURE EXTRACTION'
     print_header(program_label=label)
 
-    # Get user input
+    # get user input
     folder = get_folder_from_user(default_folder_name='ProcessingRepository')
     if not folder:
-        print("We can't search file in this location.")
+        print("ERROR: We can't search file in this location.")
         return
     else:
-        print(folder)
+        print('Using path: ' + folder)
+        print()
 
     # set info display
     set_verbose = False
     set_save = True
     set_plot = False
 
-    # Get user input: subject name
-    subject = input('Please enter subject initials.')
-    # Create a handle to identify files that should be analysed
+    # list of all subject initials
+    subject_ids = ['ap', 'ar', 'es', 'fw', 'ka', 'lb', 'lp', 'lw', 'mb', 'mch', 'md', 'mf', 'pg', 'rs']
+    # get user input: subject name
+    while True:
+        subject = input('Please enter subject initials.')
+        if subject in subject_ids:
+            print('Subject {} identified.'.format(subject))
+            break
+        else:
+            print('ERROR: Unknown subject.')
+
+    # create a handle to identify files that should be analysed
     identifier = "_data_" + subject + "_"
-    # Find all Files in the folder
+    # find all Files in the folder
     all_file_paths = [f for f in listdir(folder) if isfile(join(folder, f))]
 
     for fp in all_file_paths:
@@ -52,11 +59,37 @@ def main():
         print('Next Up:' + file_name)
 
         saving_name = fp[:-4]
-        # Create a handle to identify files that should be analysed
+        # create a handle to identify files that should be analysed
 
-        # Go through matches
+        # go through matches
         if identifier in file_name:
             print('Match! Processing file.')
+
+            # get user input: Rating: List[float, float]
+            if 'stress' in file_name:
+                rating = [float(input('Please enter segment STRESS rating.')),
+                          float(input('Please enter segment DIFFICULTY rating.'))]
+                rating_type = 1
+            elif 'emotion' in file_name:
+                rating = [float(input('Please enter segment AROUSAL rating.')),
+                          float(input('Please enter segment VALENCE rating.'))]
+                rating_type = 2
+            elif 'cd_one' in file_name:
+                rating = [float(input('Please enter segment STRESS rating.')), 0.0]
+                rating_type = 0
+            elif 'cd_two' in file_name:
+                rating = [float(input('Please enter segment EMOTION rating.')), 0.0]
+                rating_type = 3
+            elif 'cd_three' in file_name:
+                rating = [float(input('Please enter segment EMOTION rating.')), 0.0]
+                rating_type = 3
+            elif 'baseline' in file_name:
+                rating = [float(input('Please enter segment STRESS rating.')), 0.0]
+                rating_type = 0
+            else:
+                rating_type = -1
+                print('ERROR: Could not identify rating_type.')
+
             file_path = os.path.abspath(os.path.join(folder, file_name))
             stream_data = read_list_from_text_file(file_path=file_path)
             stream_data_float = [float(dp) for dp in stream_data]
@@ -76,24 +109,50 @@ def main():
                     get_nn_intervals(inter_beat_intervals=inter_beat_intervals_list, low_ibi=300, high_ibi=2000,
                                      interpolation_method='linear', ectopic_beats_removal_method='kamath',
                                      verbose=set_verbose)
+
                 # feature extraction
                 time_domain_features = get_time_domain_features(interpolated_inter_beat_intervals)
                 frequency_domain_features = get_frequency_domain_features(interpolated_nn_intervals)
+                # add rating
+                if rating_type == 1:
+                    time_domain_features['stress level'] = rating[0]
+                    time_domain_features['difficulty level'] = rating[1]
+                    frequency_domain_features['stress level'] = rating[0]
+                    frequency_domain_features['difficulty level'] = rating[1]
+                elif rating_type == 2:
+                    time_domain_features['arousal'] = rating[0]
+                    time_domain_features['valence'] = rating[1]
+                    frequency_domain_features['arousal'] = rating[0]
+                    frequency_domain_features['valence'] = rating[1]
+                elif rating_type == 3:
+                    time_domain_features['emotional rating'] = rating[0]
+                    frequency_domain_features['emotional rating'] = rating[0]
+                elif rating_type == 0:
+                    time_domain_features['stress level'] = rating[0]
+                    frequency_domain_features['stress level'] = rating[0]
+
+                print('Processing done.')
+
+                # if sample is valid save it
+                if validation_result:
+                    validation = '_valid'
+                else:
+                    validation = '_invalid'
+
                 # save results
-                write_dict_to_csv(my_dict=time_domain_features, file_name=saving_name + '_time_features',
-                                  file_index=subject)
-                write_dict_to_csv(my_dict=frequency_domain_features, file_name=saving_name + '_freq_features',
-                                  file_index=subject)
+                write_dict_to_csv(my_dict=time_domain_features, file_name=saving_name + '_time_features' + validation)
+                write_dict_to_csv(my_dict=frequency_domain_features,
+                                  file_name=saving_name + '_freq_features' + validation)
 
                 if set_save:
                     save_dict_to_mat(dictionary=time_domain_features, data_file_name=saving_name + '_',
-                                     save_file_label='time_domain_features', verbose=set_verbose)
+                                     save_file_label='time_domain_features' + validation, verbose=set_verbose)
                     save_dict_to_mat(dictionary=frequency_domain_features, data_file_name=saving_name + '_',
-                                     save_file_label='freq_domain_features', verbose=set_verbose)
+                                     save_file_label='freq_domain_features' + validation, verbose=set_verbose)
 
-                print('Processing done.')
+                print('Features saved.')
                 print('-------------------------------------')
-
+                print()
                 # plot results
                 if set_plot:
                     plot_psd(interpolated_nn_intervals, method="welch")
@@ -143,20 +202,38 @@ def main():
                         'gsr_min_zf': gsr_min_zf,
                         'gsr_max_zf': gsr_max_zf,
                         'gsr_mean_zf': gsr_mean_zf,
-                        'gsr_sd_zf': gsr_sd_zf
+                        'gsr_sd_zf': gsr_sd_zf,
                     }
 
-                    write_dict_to_csv(my_dict=gsr_features, file_name=saving_name + '_features', file_index=subject)
+                    print('Processing done.')
+
+                    if rating_type == 1:
+                        gsr_features['stress level'] = rating[0]
+                        gsr_features['difficulty level'] = rating[1]
+                    elif rating_type == 2:
+                        gsr_features['arousal'] = rating[0]
+                        gsr_features['valence'] = rating[1]
+                    elif rating_type == 3:
+                        gsr_features['emotional rating'] = rating[0]
+                    elif rating_type == 0:
+                        gsr_features['stress level'] = rating[0]
+
+                    write_dict_to_csv(my_dict=gsr_features, file_name=saving_name + '_features')
 
                     if set_save:
                         save_dict_to_mat(dictionary=gsr_features, data_file_name=saving_name + '_',
                                          save_file_label='features', verbose=set_verbose)
+
+                    print('Features saved.')
+                    print('-------------------------------------')
+                    print()
+
                     # plot results
                     if set_plot:
                         plt.figure()
-                        plt.plot(gsr_raw_array)
-                        plt.plot(gsr_filtered)
-                        # plt.plot(gsr_mov_avg)
+                        plt.plot(gsr_raw_array, label='input')
+                        plt.plot(gsr_filtered, label='filtered')
+                        plt.plot(gsr_mov_avg, label='averages')
                         plt.show()
 
             elif 'temp' in file_name:
@@ -201,14 +278,30 @@ def main():
                         'temp_min_zf': temp_min_zf,
                         'temp_max_zf': temp_max_zf,
                         'temp_mean_zf': temp_mean_zf,
-                        'temp_sd_zf': temp_sd_zf
+                        'temp_sd_zf': temp_sd_zf,
                     }
 
-                    write_dict_to_csv(my_dict=temp_features, file_name=saving_name + '_features', file_index=subject)
+                    print('Processing done.')
+                    if rating_type == 1:
+                        temp_features['stress level'] = rating[0]
+                        temp_features['difficulty level'] = rating[1]
+                    elif rating_type == 2:
+                        temp_features['arousal'] = rating[0]
+                        temp_features['valence'] = rating[1]
+                    elif rating_type == 3:
+                        temp_features['emotional rating'] = rating[0]
+                    elif rating_type == 0:
+                        temp_features['stress level'] = rating[0]
+
+                    write_dict_to_csv(my_dict=temp_features, file_name=saving_name + '_features')
 
                     if set_save:
                         save_dict_to_mat(dictionary=temp_features, data_file_name=saving_name + '_',
                                          save_file_label='features', verbose=set_verbose)
+
+                    print('Features saved.')
+                    print('-------------------------------------')
+                    print()
                     # plot results
                     if set_plot:
                         plt.figure()

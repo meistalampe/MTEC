@@ -2,105 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cceb26c-0173-4b95-b2b1-d5f78585e4fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../ExperimentFolder_v23.9.19/DataStorage/Segmententabelle.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../ExperimentFolder_v23.9.19/DataStorage/Segmententabelle.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/merged_raw_data_md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-05-07" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-06-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-07-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-08-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-09-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-10-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-11-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-12-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-13-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-14-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-15-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-16-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-17-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-18-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-19-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-20-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-21-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-22-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-23-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-24-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-25-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-26-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-27-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-28-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-29-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-30-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-31-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-32-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-33-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-34-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-35-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-36-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-37-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-38-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-39-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-40-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-41-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-42-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-43-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-44-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-45-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-46-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-47-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-48-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-49-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-50-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-51-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-52-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-53-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-54-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-55-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-56-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-57-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-58-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-12-59-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-00-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-01-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-02-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-03-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-04-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-05-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-06-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-07-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-08-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-09-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-10-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-11-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-12-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-13-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-14-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-15-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-16-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-17-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-18-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-19-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/MergeRepository/recording_2019-09-05-13-20-08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_bvp_data_md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_bvp_data_md_baseline_221_521.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_bvp_time_md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_bvp_time_md_baseline_221_521.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_gsr_data_md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_gsr_data_md_baseline_221_521.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_gsr_time_md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_gsr_time_md_baseline_221_521.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_tag_data_md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_tag_time_md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_temp_data_md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_temp_data_md_baseline_221_521.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_temp_time_md.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProcessingRepository/_temp_time_md_baseline_221_521.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bvp_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/bvp_preprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cut_segment.py" beforeDir="false" afterPath="$PROJECT_DIR$/cut_segment.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cut_all_segments.py" beforeDir="false" afterPath="$PROJECT_DIR$/cut_all_segments.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/empatica_data_extraction.py" beforeDir="false" afterPath="$PROJECT_DIR$/empatica_data_extraction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/extract_features.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract_features.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extract_features_all_segments.py" beforeDir="false" afterPath="$PROJECT_DIR$/extract_features_all_segments.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extracting_features.py" beforeDir="false" afterPath="$PROJECT_DIR$/extracting_features.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -172,7 +79,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.process_raw">
+  <component name="RunManager" selected="Python.extract_features_all_segments">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="MTEC" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -195,7 +102,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="extract_features" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="cut_all_segments" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="MTEC" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -205,7 +112,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/extract_features.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cut_all_segments.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -240,6 +147,9 @@
       <module name="MTEC" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="E:\GitHub\MTEC\WorkingFolder\MTEC\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
       <option name="IS_MODULE_SDK" value="true" />
@@ -259,6 +169,9 @@
       <module name="MTEC" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="E:\GitHub\MTEC\WorkingFolder\MTEC\venv\Scripts\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/.." />
       <option name="IS_MODULE_SDK" value="true" />
@@ -320,11 +233,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.extract_features_all_segments" />
+        <item itemvalue="Python.cut_all_segments" />
         <item itemvalue="Python.process_raw" />
         <item itemvalue="Python.merge_csv_files" />
-        <item itemvalue="Python.extract_features_all_segments" />
         <item itemvalue="Python.testingScript" />
-        <item itemvalue="Python.extract_features" />
       </list>
     </recent_temporary>
   </component>
@@ -417,6 +330,7 @@
       <workItem from="1572272018189" duration="599000" />
       <workItem from="1572272651251" duration="6383000" />
       <workItem from="1572290827689" duration="12083000" />
+      <workItem from="1572329352868" duration="18325000" />
     </task>
     <servers />
   </component>
@@ -488,19 +402,24 @@
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/testingScript.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="139" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/testingScript.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="140" />
+          <url>file://$PROJECT_DIR$/extract_features_all_segments.py</url>
+          <line>196</line>
+          <option name="timeStamp" value="167" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/extract_features_all_segments.py</url>
-          <line>57</line>
-          <option name="timeStamp" value="142" />
+          <line>207</line>
+          <option name="timeStamp" value="168" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/extract_features_all_segments.py</url>
+          <line>272</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/extract_features_all_segments.py</url>
+          <line>283</line>
+          <option name="timeStamp" value="170" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -529,7 +448,7 @@
     <SUITE FILE_PATH="coverage/MTEC$hellobuubuu.coverage" NAME="hellobuubuu Coverage Results" MODIFIED="1566466654002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/MTEC$empatica_data_extraction.coverage" NAME="empatica_data_extraction Coverage Results" MODIFIED="1564080614258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/MTEC$process_raw.coverage" NAME="process_raw Coverage Results" MODIFIED="1568219398174" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
-    <SUITE FILE_PATH="coverage/MTEC$extract_features_all_segments.coverage" NAME="extract_features_all_segments Coverage Results" MODIFIED="1572300908502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/MTEC$extract_features_all_segments.coverage" NAME="extract_features_all_segments Coverage Results" MODIFIED="1572354957802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/MTEC$artifact_interpolation_algorithm.coverage" NAME="artifact_interpolation_algorithm Coverage Results" MODIFIED="1563978323383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/MTEC$cut_all_segments.coverage" NAME="cut_all_segments Coverage Results" MODIFIED="1572274150742" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
   </component>

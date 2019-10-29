@@ -45,6 +45,8 @@ def main():
                                  'measurement.')
     for f in all_files:
         file_name = f + subject
+        print('-------------------------------------')
+        print('Next Up:' + file_name)
 
         if 'bvp' in file_name:
             fs = 64
@@ -67,22 +69,34 @@ def main():
         stream = read_list_from_text_file(file_path=file_path)
 
         total_length = len(stream) / fs
+        print('Data Length: ' + str(total_length) + 'seconds')
+
         if 0 <= int(segment_starts_at) <= total_length:
             start_sample = int(int(segment_starts_at) * fs)
 
-            if 0 <= int(segment_ends_at) <= total_length:
+            if int(segment_starts_at) <= int(segment_ends_at) <= total_length:
                 end_sample = int(int(segment_ends_at) * fs)
                 segment = stream[start_sample:end_sample]
+
+                print('Processing Successful.')
+                # Use segment label
+                label_segment = '_' + s_label + '_' + segment_starts_at + '_' + segment_ends_at
+                write_to_text_file(file_name=file_name, file_index=label_segment, folder=folder, data_list=segment)
+
+                print('File saved under ' + label_segment + '.')
+                print('-------------------------------------')
+                print()
+
             else:
-                print('Invalid end sample.')
+                print('ERROR: Invalid end sample in' + full_name)
+                print('-------------------------------------')
+                print()
                 segment = []
         else:
-            print('Invalid start sample.')
+            print('ERROR: Invalid start sample in' + full_name)
+            print('-------------------------------------')
+            print()
             segment = []
-
-        # enter segment label
-        label_segment = '_' + s_label + '_' + segment_starts_at + '_' + segment_ends_at
-        write_to_text_file(file_name=file_name, file_index=label_segment, folder=folder, data_list=segment)
 
 
 if __name__ == '__main__':

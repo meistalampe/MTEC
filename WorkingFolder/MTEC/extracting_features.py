@@ -245,7 +245,7 @@ def get_frequency_domain_features(nn_intervals: List[float], method: str = WELCH
 
 
 def _get_freq_psd_from_nn_intervals(nn_intervals: List[float], method: str = WELCH_METHOD,
-                                    sampling_frequency: int = 4,
+                                    sampling_frequency: int = 7,
                                     interpolation_method: str = "linear",
                                     vlf_band: namedtuple = VlfBand(0.003, 0.04),
                                     hf_band: namedtuple = HfBand(0.15, 0.40)) -> Tuple:

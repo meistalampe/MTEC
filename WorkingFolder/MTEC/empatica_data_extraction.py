@@ -480,7 +480,7 @@ def read_list_from_text_file(file_path: str):
     return stream
 
 
-def write_dict_to_csv(my_dict: dict, file_name: str, file_index: str, folder: str = 'FeatureRepository',
+def write_dict_to_csv(my_dict: dict, file_name: str, folder: str = 'FeatureRepository',
                       header: List[str] = ['feature', 'value']):
     """
     A function that takes a dictionary and writes its content to a csv file.
@@ -492,9 +492,6 @@ def write_dict_to_csv(my_dict: dict, file_name: str, file_index: str, folder: st
 
         file_name: str
             name of the data file that will be created
-
-        file_index: str
-            index, which is added to the file_name for identification, usually subject initials
 
         folder: str
             folder to which the file will be saved, default is set to FeatureRepository
@@ -516,18 +513,30 @@ def write_dict_to_csv(my_dict: dict, file_name: str, file_index: str, folder: st
     dict_data = my_dict
 
     # create file name
-    csv_file = file_name + file_index + '.csv'
-    file_path = os.path.abspath(os.path.join(folder, csv_file))
+    csv_file = file_name + '.txt'
+    file_path = os.path.abspath(os.path.join('MTEC', folder, csv_file))
+
+    # if os.path.isfile(file_path):
+    #     # clear and then write
+    #     print('File found.')
+    #     file = open(file_path, 'w')
+    #     file.truncate()
+    #     print('File cleared.')
+    #     file.close()
+    # else:
+    #     file = open(file_path, 'w')
+    #     print('New file created.')
+    #     file.close()
 
     try:
-        with open(file_path, 'w') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=csv_columns)
-            writer.writeheader()
+        with open(file_path, 'w', newline='') as csvout:
+            my_writer = csv.writer(csvout, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+            my_writer.writerow(header)
             for key in dict_data.keys():
-                # writer.writerow(data)
-                csvfile.write('{}, {} \n'.format(key, my_dict[key]))
+                my_writer.writerow([key] + [dict_data[key]])
+
     except IOError:
-        print("I/O error")
+        print("I/O ERROR")
 
 
 if __name__ == '__main__':

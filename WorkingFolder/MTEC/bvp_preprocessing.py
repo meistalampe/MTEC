@@ -214,7 +214,7 @@ def zero_phase_filtering(data: np.ndarray, f_min: float, f_max: float, sampling_
 
     if verbose:
         # plot the result
-        plt.figure(dpi=1200)
+        plt.figure()
         plt.plot(data, linewidth=1.0, label='input')
         plt.plot(s_n_gust, color='black', linewidth=1.0, label='gust')
         plt.show()
@@ -258,7 +258,7 @@ def clipping(data, verbose: bool = False) -> np.ndarray:
 
     if verbose:
         # plot the result
-        plt.figure(dpi=1200)
+        plt.figure()
         plt.plot(s_n, linewidth=1.0, label='input')
         plt.plot(z_n, linewidth=1.0, label='clipped')
         plt.show()
@@ -296,7 +296,7 @@ def squaring(data: np.ndarray, verbose: bool = False) -> np.ndarray:
 
     if verbose:
         # plot the result
-        plt.figure(dpi=1200)
+        plt.figure()
         plt.plot(z_n, linewidth=2.0, label='input')
         plt.plot(y_n, linewidth=2.0, label='squared')
         plt.show()
@@ -856,10 +856,12 @@ def calculate_substitution_intervals(inter_beat_intervals: list, outlier_indices
                         sum_of_btr / ((new_ibi_data[start_index - 1] + new_ibi_data[target_index + 1]) / 2))
                 # number_of_beats_to_insert[s].append(beats_to_insert)
                 number_of_beats_to_insert[s] = beats_to_insert
-                print('Replace {} outlier(s) with {} interpolated value(s), starting from index {}'
-                      .format(number_of_beats_to_replace[s], number_of_beats_to_insert[s], indices_to_replace[s][0]))
+                if verbose:
+                    print('Replace {} outlier(s) with {} interpolated value(s), starting from index {}'
+                          .format(number_of_beats_to_replace[s], number_of_beats_to_insert[s], indices_to_replace[s][0]))
         else:
-            print('No sequences found. ')
+            if verbose:
+                print('No sequences found. ')
     return number_of_beats_to_replace, number_of_beats_to_insert, interpolation_mode, new_ibi_data, indices_to_replace
 
 
@@ -929,9 +931,9 @@ def prepare_interpolation(inter_beat_intervals: list, interpolation_mode: list, 
     index_correction = 0
     temp_ibi_data = inter_beat_intervals
     for m in range(len(interpolation_mode)):
-        print(interpolation_mode[m])
+        # print(interpolation_mode[m])
         if interpolation_mode[m] == mode:
-            print(indices_to_replace[m])
+            # print(indices_to_replace[m])
             replacement = list([])
             discrepancy = number_of_beats_to_insert[m] - len(indices_to_replace[m])
             if discrepancy == 0:
