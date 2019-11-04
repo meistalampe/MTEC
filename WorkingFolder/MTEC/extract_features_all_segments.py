@@ -5,7 +5,7 @@ from gsr_preprocessing import *
 from artifact_interpolation_algorithm import get_inter_beat_intervals
 from extracting_features import (get_time_domain_features, get_frequency_domain_features,
                                  get_geometrical_features, get_csi_cvi_features,
-                                 get_poincare_plot_features, get_sampen)
+                                 get_poincare_plot_features, get_sampen, LOMB_METHOD, WELCH_METHOD)
 
 from plot import (plot_timeseries, plot_distrib, plot_psd, plot_poincare)
 import numpy as np
@@ -33,8 +33,8 @@ def main():
         print()
 
     # set info display
-    set_verbose = False
-    set_save = True
+    set_verbose = True
+    set_save = False
     set_plot = False
 
     # list of all subject initials
@@ -88,6 +88,7 @@ def main():
                 rating_type = 0
             else:
                 rating_type = -1
+                rating = [0.0, 0.0]
                 print('ERROR: Could not identify rating_type.')
 
             file_path = os.path.abspath(os.path.join(folder, file_name))
@@ -105,31 +106,85 @@ def main():
                                                                      verbose=set_verbose)
                 inter_beat_intervals = get_inter_beat_intervals(peak_data=peak_locations)
                 inter_beat_intervals_list = list(inter_beat_intervals)
+                # low_ibi is calculated from the avg age of all subjects with this equation 60/(220 - avg. age)
+                # with an avg. age of 29 this results in 314 ms
                 interpolated_nn_intervals, interpolated_inter_beat_intervals, validation_result = \
-                    get_nn_intervals(inter_beat_intervals=inter_beat_intervals_list, low_ibi=300, high_ibi=2000,
+                    get_nn_intervals(inter_beat_intervals=inter_beat_intervals_list, low_ibi=300, high_ibi=1333,
                                      interpolation_method='linear', ectopic_beats_removal_method='kamath',
                                      verbose=set_verbose)
 
+                # NaN check
+                first_check = sum(np.isnan(interpolated_inter_beat_intervals))
+                second_check = sum(np.isnan(interpolated_nn_intervals))
                 # feature extraction
-                time_domain_features = get_time_domain_features(interpolated_inter_beat_intervals)
-                frequency_domain_features = get_frequency_domain_features(interpolated_nn_intervals)
+                # plt.close('all')
+                # non_interpolated_inter_beat_intervals = [int((ibi/fs)*1000) for ibi in inter_beat_intervals_list]
+                raw_inter_beat_intervals = [(ibi/fs)*1000 for ibi in inter_beat_intervals_list]
+                time_domain_features_raw = get_time_domain_features(nn_intervals=raw_inter_beat_intervals,
+                                                                    dict_name='raw (peak data)')
+                time_domain_features_no_artifacts = \
+                    get_time_domain_features(nn_intervals=interpolated_inter_beat_intervals,
+                                             dict_name='interpolated (no artifacts)')
+                time_domain_features_nn = get_time_domain_features(nn_intervals=interpolated_nn_intervals,
+                                                                   dict_name='nn_intervals (no artifacts or ectopic beats)')
+
+                frequency_domain_features = get_frequency_domain_features(nn_intervals=interpolated_nn_intervals,
+                                                                          dict_name='nn_intervals (no artifacts or ectopic beats)',
+                                                                          sampling_frequency=7, method=WELCH_METHOD)
+
+                non_linear_features_raw = get_csi_cvi_features(nn_intervals=raw_inter_beat_intervals,
+                                                               dict_name='raw (peak data)')
+                non_linear_features_no_artifacts = get_csi_cvi_features(nn_intervals=interpolated_inter_beat_intervals,
+                                                                        dict_name='interpolated (no artifacts)')
+                non_linear_features_nn = get_csi_cvi_features(nn_intervals=interpolated_nn_intervals,
+                                                              dict_name='nn_intervals (no artifacts or ectopic beats)')
                 # add rating
                 if rating_type == 1:
-                    time_domain_features['stress level'] = rating[0]
-                    time_domain_features['difficulty level'] = rating[1]
+                    time_domain_features_raw['stress level'] = rating[0]
+                    time_domain_features_raw['difficulty level'] = rating[1]
+                    time_domain_features_no_artifacts['stress level'] = rating[0]
+                    time_domain_features_no_artifacts['difficulty level'] = rating[1]
+                    time_domain_features_nn['stress level'] = rating[0]
+                    time_domain_features_nn['difficulty level'] = rating[1]
                     frequency_domain_features['stress level'] = rating[0]
                     frequency_domain_features['difficulty level'] = rating[1]
+                    non_linear_features_raw['stress level'] = rating[0]
+                    non_linear_features_raw['difficulty level'] = rating[1]
+                    non_linear_features_no_artifacts['stress level'] = rating[0]
+                    non_linear_features_no_artifacts['difficulty level'] = rating[1]
+                    non_linear_features_nn['stress level'] = rating[0]
+                    non_linear_features_nn['difficulty level'] = rating[1]
                 elif rating_type == 2:
-                    time_domain_features['arousal'] = rating[0]
-                    time_domain_features['valence'] = rating[1]
+                    time_domain_features_raw['arousal'] = rating[0]
+                    time_domain_features_raw['valence'] = rating[1]
+                    time_domain_features_no_artifacts['arousal'] = rating[0]
+                    time_domain_features_no_artifacts['valence'] = rating[1]
+                    time_domain_features_nn['arousal'] = rating[0]
+                    time_domain_features_nn['valence'] = rating[1]
                     frequency_domain_features['arousal'] = rating[0]
                     frequency_domain_features['valence'] = rating[1]
+                    non_linear_features_raw['arousal'] = rating[0]
+                    non_linear_features_raw['valence'] = rating[1]
+                    non_linear_features_no_artifacts['arousal'] = rating[0]
+                    non_linear_features_no_artifacts['valence'] = rating[1]
+                    non_linear_features_nn['arousal'] = rating[0]
+                    non_linear_features_nn['valence'] = rating[1]
                 elif rating_type == 3:
-                    time_domain_features['emotional rating'] = rating[0]
+                    time_domain_features_raw['emotional rating'] = rating[0]
+                    time_domain_features_no_artifacts['emotional rating'] = rating[0]
+                    time_domain_features_nn['emotional rating'] = rating[0]
                     frequency_domain_features['emotional rating'] = rating[0]
+                    non_linear_features_raw['emotional rating'] = rating[0]
+                    non_linear_features_no_artifacts['emotional rating'] = rating[0]
+                    non_linear_features_nn['emotional rating'] = rating[0]
                 elif rating_type == 0:
-                    time_domain_features['stress level'] = rating[0]
+                    time_domain_features_raw['stress level'] = rating[0]
+                    time_domain_features_no_artifacts['stress level'] = rating[0]
+                    time_domain_features_nn['stress level'] = rating[0]
                     frequency_domain_features['stress level'] = rating[0]
+                    non_linear_features_raw['stress level'] = rating[0]
+                    non_linear_features_no_artifacts['stress level'] = rating[0]
+                    non_linear_features_nn['stress level'] = rating[0]
 
                 print('Processing done.')
 
@@ -140,15 +195,25 @@ def main():
                     validation = '_invalid'
 
                 # save results
-                write_dict_to_csv(my_dict=time_domain_features, file_name=saving_name + '_time_features' + validation)
+                time_dicts = [time_domain_features_raw, time_domain_features_no_artifacts, time_domain_features_nn]
+                non_linear_dicts = [non_linear_features_raw, non_linear_features_no_artifacts, non_linear_features_nn]
+
+                write_multiple_dicts_to_csv(my_dicts=time_dicts, file_name=saving_name + '_time_features' + validation)
                 write_dict_to_csv(my_dict=frequency_domain_features,
                                   file_name=saving_name + '_freq_features' + validation)
-
+                write_multiple_dicts_to_csv(my_dicts=non_linear_dicts,
+                                            file_name=saving_name + '_non_linear_features' + validation)
                 if set_save:
-                    save_dict_to_mat(dictionary=time_domain_features, data_file_name=saving_name + '_',
-                                     save_file_label='time_domain_features' + validation, verbose=set_verbose)
+                    for d in time_dicts:
+                        save_dict_to_mat(dictionary=d, data_file_name=saving_name + '_' + str(d['name']),
+                                         save_file_label='time_domain_features' + validation, verbose=set_verbose)
+
                     save_dict_to_mat(dictionary=frequency_domain_features, data_file_name=saving_name + '_',
                                      save_file_label='freq_domain_features' + validation, verbose=set_verbose)
+
+                    for d in non_linear_dicts:
+                        save_dict_to_mat(dictionary=d, data_file_name=saving_name + '_' + str(d['name']),
+                                         save_file_label='non_linear_features' + validation, verbose=set_verbose)
 
                 print('Features saved.')
                 print('-------------------------------------')

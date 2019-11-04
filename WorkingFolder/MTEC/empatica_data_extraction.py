@@ -44,8 +44,8 @@ data_tags = list(['E4_Acc', 'E4_Bvp', 'E4_Gsr', 'E4_Temperature', 'E4_Ibi', 'E4_
 #   - The tags taken from the device. Time values.
 
 __all__ = ['data_extraction', 'print_header', 'get_folder_from_user', 'search_for_latest_file', 'parse_file_for_tag',
-           'get_stream_data', 'get_stream_time', 'extract_all','save_dict_to_mat', 'write_to_text_file',
-           'read_list_from_text_file', 'write_dict_to_csv']
+           'get_stream_data', 'get_stream_time', 'extract_all', 'save_dict_to_mat', 'write_to_text_file',
+           'read_list_from_text_file', 'write_dict_to_csv', 'write_multiple_dicts_to_csv']
 
 
 # ----------------- UI / User Input ----------------- #
@@ -534,6 +534,53 @@ def write_dict_to_csv(my_dict: dict, file_name: str, folder: str = 'FeatureRepos
             my_writer.writerow(header)
             for key in dict_data.keys():
                 my_writer.writerow([key] + [dict_data[key]])
+
+    except IOError:
+        print("I/O ERROR")
+
+
+def write_multiple_dicts_to_csv(my_dicts: List[dict], file_name: str, folder: str = 'FeatureRepository',
+                                header: List[str] = ['feature', 'value']):
+    """
+    A function that takes a dictionary and writes its content to a csv file.
+
+    Parameters
+        ----------
+        my_dicts: List[dict]
+            the dictionaries that will be saved to the file
+
+        file_name: str
+            name of the data file that will be created
+
+        folder: str
+            folder to which the file will be saved, default is set to FeatureRepository
+
+        header: List[str]
+            first line of the csv file, contains all keys of the dictionary, default is set to feature and value
+
+
+        Returns
+        ----------
+        None
+
+        References
+        -----------
+        No references needed.
+        """
+
+    csv_columns = header
+
+    # create file name
+    csv_file = file_name + '.txt'
+    file_path = os.path.abspath(os.path.join('MTEC', folder, csv_file))
+
+    try:
+        with open(file_path, 'w+', newline='') as csvout:
+            my_writer = csv.writer(csvout, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
+            my_writer.writerow(header)
+            for d in my_dicts:
+                for key in d.keys():
+                    my_writer.writerow([key] + [d[key]])
 
     except IOError:
         print("I/O ERROR")

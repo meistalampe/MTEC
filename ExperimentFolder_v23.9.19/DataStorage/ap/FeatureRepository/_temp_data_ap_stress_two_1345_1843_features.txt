@@ -1,0 +1,11 @@
+feature,value
+temp_min_ma,16.09952380952381
+temp_max_ma,31.356666666666662
+temp_mean_ma,30.954149933065594
+temp_sd_ma,0.9297379906285083
+temp_min_zf,30.727536044217075
+temp_max_zf,31.374451934920863
+temp_mean_zf,31.035782883646917
+temp_sd_zf,0.16868159450954098
+stress level,2.0
+difficulty level,3.0

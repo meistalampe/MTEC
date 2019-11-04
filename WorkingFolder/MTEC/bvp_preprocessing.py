@@ -84,17 +84,16 @@ def bvp_peak_detection(bvp_raw_data: np.ndarray, sampling_frequency: int = 64, v
     filtered_signal = zero_phase_filtering(data=bvp_raw_data, f_min=0.5, f_max=8.0,
                                            sampling_frequency=sampling_frequency, filter_order=2, verbose=verbose)
     # step 2: Clipping
-    clipped_signal = clipping(data=filtered_signal, verbose=verbose)
+    clipped_signal = clipping(data=filtered_signal)
     # step 3: Squaring
-    squared_clipped_signal = squaring(data=clipped_signal, verbose=verbose)
+    squared_clipped_signal = squaring(data=clipped_signal)
     # step 4: Moving averages
     MA_peak, MA_beat, samples_peak = generate_moving_averages(data=squared_clipped_signal,
                                                               sampling_frequency=sampling_frequency,
-                                                              window_for_peak=0.111, window_for_beat=0.667,
-                                                              verbose=verbose)
+                                                              window_for_peak=0.111, window_for_beat=0.667)
     # step 5: Thresholds and Offset
     first_threshold, second_threshold = thresholding(data=squared_clipped_signal, moving_average_beat=MA_beat,
-                                                     window_for_peak_in_samples=samples_peak, verbose=verbose)
+                                                     window_for_peak_in_samples=samples_peak)
     # step 6: generate blocks of interest
     blocks_of_interest = np.zeros(len(MA_peak))
 
@@ -116,7 +115,7 @@ def bvp_peak_detection(bvp_raw_data: np.ndarray, sampling_frequency: int = 64, v
         plt.plot(first_threshold, color='black', linewidth=0.3, linestyle=':')
         # plt.legend(('input', 'MA peak', 'MA beat'))
         plt.plot(blocks_of_interest, color='grey', linewidth=0.3, linestyle='--')
-        plt.plot(peak_locations, peak_amplitudes, '*y', markersize=0.3)
+        plt.plot(peak_locations, peak_amplitudes, 'vy', markersize=5.0)
         plt.show()
 
     return peak_amplitudes, peak_locations
@@ -518,17 +517,18 @@ def samples_to_ms(inter_beat_intervals: List[float], sampling_frequency: int = 6
     """
     # Conversion sample units to ms units
     # ibi (samples) --> number of samples / sampling frequency * 1000 = ibi (ms)
-    inter_beat_intervals_ms = [int((x / sampling_frequency) * 1000) for x in inter_beat_intervals]
+    # inter_beat_intervals_ms = [int((x / sampling_frequency) * 1000) for x in inter_beat_intervals]
+    inter_beat_intervals_ms = [(x / sampling_frequency) * 1000 for x in inter_beat_intervals]
     return inter_beat_intervals_ms
 
 
 # ----------------- Remove outliers and ectopic beats ----------------- #
 
 
-def remove_outliers(inter_beat_intervals: List[float], verbose: bool = True, low_ibi: int = 300,
-                    high_ibi: int = 2000):
+def remove_outliers(inter_beat_intervals: List[float], verbose: bool = True, low_ibi: int = 314,
+                    high_ibi: int = 1333):
     """
-    Function that replace inter beat interval outliers by nan. Outliers are values that are considered physiologically
+    Function that replaces inter beat interval outliers by nan. Outliers are values that are considered physiologically
     impossible and therefore must be artifacts.
 
     Parameters
@@ -549,7 +549,7 @@ def remove_outliers(inter_beat_intervals: List[float], verbose: bool = True, low
     outliers_list: list
         a list of all outlier values that have been removed from inter_beat_intervals.
     outliers_indices: list
-        a list of all the indices of the removed ourliers in outliers_list.
+        a list of all the indices of the removed outliers in outliers_list.
     valid_list: list
         a list of all valid interval values.
     valid_indices: list
@@ -685,7 +685,8 @@ def find_sequences(outlier_indices: list, outlier_values: list, verbose: bool = 
 
 
 def calculate_substitution_intervals(inter_beat_intervals: list, outlier_indices: list, sequence_indices: list,
-                                     sequence_values: list, valid_intervals: list, verbose: bool = False):
+                                     sequence_values: list, valid_intervals: list, ibi_max: float = 1333,
+                                     ibi_min: float = 300, verbose: bool = False):
     """
     A function that calculates the number of beats that have to be inserted to interpolate the ectopic beat and
     artifact intervals. The function uses the equation provided by Lippman (1994). The number of inserted intervals B
@@ -707,6 +708,10 @@ def calculate_substitution_intervals(inter_beat_intervals: list, outlier_indices
         a list holding the corresponding values to sequence_indices, also in the form of lists grouped by sequences.
     valid_intervals: list
         a list of all valid inter beat intervals detected in inter_beat_intervals.
+    ibi_max: float
+        value to check if a ibi value can be used for calculation
+    ibi_min: float
+        vlaue to check if a ibi value can be used for calculation
     verbose : bool
         Print information about deleted outliers.
 
@@ -727,10 +732,6 @@ def calculate_substitution_intervals(inter_beat_intervals: list, outlier_indices
     References
     ----------
     """
-    # todo: implement a catch for alternating ectopic beats in calculate substitution intervals...
-    #  possible solution: if ibi = [ NaN Valid NaN]  calculating the substitution interval for ibi[0] would require to
-    #  delete ibi[0, 1] and use ibi[2] for calculation but as ibi[2] is also NaN the calculation fails check for ibi[2]
-    #  being NaN and if so replace by random valid ibi
     # check if there were any ectopic beats in ibi_data
     if len(outlier_indices) == 0:
         number_of_beats_to_replace = []
@@ -811,14 +812,15 @@ def calculate_substitution_intervals(inter_beat_intervals: list, outlier_indices
                     rnd = random.randint(0, len(valid_intervals) - 1)
 
                     # grab random value from normal beat collection
-                    extension_value = list(valid_intervals[rnd])
+                    extension_value = [valid_intervals[rnd]]
                     # extend ibi data set
                     new_ibi_data = extension_value + new_ibi_data
                     # account for shift in the data
                     index_correction += 1
                     start_index += index_correction
                     target_index += index_correction
-                    # calculation with new ibi data set and target index
+
+                # calculation with new ibi data set and target index
                 beats_to_replace = sequence_values[s]
                 beats_to_replace.append(new_ibi_data[target_index])
                 # adapt indices
@@ -837,7 +839,7 @@ def calculate_substitution_intervals(inter_beat_intervals: list, outlier_indices
                 # calculate the total duration of the interval that needs to be replaced
                 sum_of_btr = sum(beats_to_replace)
                 # we decide the way of interpolation according to the length of the interval
-                if sum_of_btr > 3000:
+                if sum_of_btr >= 3000.0:
                     # according to Kamath, artifact sequences over 3 sec should be deleted from the data
                     # interpolation_mode[s].append('delete')
                     interpolation_mode[s] = 'delete'
@@ -845,23 +847,59 @@ def calculate_substitution_intervals(inter_beat_intervals: list, outlier_indices
                     # interpolation_mode[s].append('interpolate')
                     interpolation_mode[s] = 'interpolate'
 
+                # solution for alternating beats
+                # find out if the beat in front of the sequence is a number, if not replace with random for calculation
+                if np.isnan(new_ibi_data[start_index - 1]):
+                    rnd = random.randint(0, len(valid_intervals) - 1)
+                    # grab random value from normal beat collection
+                    pre_sequence_beat = valid_intervals[rnd]
+                else:
+                    # find out if the beat in front of the sequence is valid, if not replace with random for calculation
+                    count_matches = 0
+                    test_index = start_index - 1
+                    for indseq in indices_to_replace:
+                        if indseq.count(test_index) == 0:
+                            count_matches += 0
+                        else:
+                            count_matches += 1
+
+                    if count_matches > 0:
+                        rnd = random.randint(0, len(valid_intervals) - 1)
+                        # grab random value from normal beat collection
+                        pre_sequence_beat = valid_intervals[rnd]
+                    else:
+                        pre_sequence_beat = new_ibi_data[start_index - 1]
+                # find out if the beat following the sequence is valid, if not replace with random for calculation
                 if np.isnan(new_ibi_data[target_index + 1]):
                     rnd = random.randint(0, len(valid_intervals) - 1)
                     # grab random value from normal beat collection
-                    random_valid = valid_intervals[rnd]
-                    beats_to_insert = round(
-                        sum_of_btr / ((new_ibi_data[start_index - 1] + random_valid) / 2))
+                    post_sequence_beat = valid_intervals[rnd]
                 else:
-                    beats_to_insert = round(
-                        sum_of_btr / ((new_ibi_data[start_index - 1] + new_ibi_data[target_index + 1]) / 2))
+                    # find out if the beat following the sequence is valid, if not replace with random for calculation
+                    test_index = target_index + 1
+
+                    if ibi_max >= new_ibi_data[test_index] >= ibi_min:
+                        post_sequence_beat = new_ibi_data[target_index + 1]
+                    else:
+                        rnd = random.randint(0, len(valid_intervals) - 1)
+                        # grab random value from normal beat collection
+                        post_sequence_beat = valid_intervals[rnd]
+                # calculate the number of beats that need to be inserted
+                beats_to_insert = \
+                    round(sum_of_btr / ((pre_sequence_beat + post_sequence_beat) / 2))
                 # number_of_beats_to_insert[s].append(beats_to_insert)
-                number_of_beats_to_insert[s] = beats_to_insert
+                # old
+                # number_of_beats_to_insert[s] = beats_to_insert
+
+                # new
+                number_of_beats_to_insert[s] = int(beats_to_insert)
                 if verbose:
                     print('Replace {} outlier(s) with {} interpolated value(s), starting from index {}'
                           .format(number_of_beats_to_replace[s], number_of_beats_to_insert[s], indices_to_replace[s][0]))
         else:
             if verbose:
                 print('No sequences found. ')
+
     return number_of_beats_to_replace, number_of_beats_to_insert, interpolation_mode, new_ibi_data, indices_to_replace
 
 
@@ -939,7 +977,7 @@ def prepare_interpolation(inter_beat_intervals: list, interpolation_mode: list, 
             if discrepancy == 0:
                 for i in range(len(indices_to_replace[m])):
                     temp_ibi_data[indices_to_replace[m][i] + index_correction] = np.nan
-                    index_correction = 0
+                index_correction += discrepancy
             else:
                 rep_len = number_of_beats_to_insert[m]
                 # correct the indices according to the discrepancy of earlier iterations
@@ -950,13 +988,12 @@ def prepare_interpolation(inter_beat_intervals: list, interpolation_mode: list, 
 
                 # remove indices to replace
                 if before_rep_seq == 0:
-                    ibi_head = temp_ibi_data[before_rep_seq]
+                    ibi_head = [temp_ibi_data[before_rep_seq]]
                 else:
-                    ibi_head = temp_ibi_data[0:before_rep_seq]
-                    ibi_head.append(temp_ibi_data[before_rep_seq])
+                    ibi_head = temp_ibi_data[0:before_rep_seq] + [temp_ibi_data[before_rep_seq]]
 
                 if after_rep_seq == len(inter_beat_intervals):
-                    ibi_tail = temp_ibi_data[after_rep_seq]
+                    ibi_tail = [temp_ibi_data[after_rep_seq]]
                 else:
                     ibi_tail = temp_ibi_data[after_rep_seq:]
 
@@ -1210,9 +1247,13 @@ def interpolate_nan_values(inter_beat_intervals: list, interpolation_method: str
     """
     ibi_series = pd.Series(inter_beat_intervals)
     # Interpolate nan values and convert pandas object to list of values
-    interpolated_inter_beat_intervals = ibi_series.interpolate(method=interpolation_method,
-                                                               limit=limit,
-                                                               limit_area="inside")
+    while True:
+        interpolated_inter_beat_intervals = ibi_series.interpolate(method=interpolation_method, limit=limit,
+                                                                   limit_area="inside")
+        nan_check_interpolation = sum(np.isnan(interpolated_inter_beat_intervals))
+
+        if nan_check_interpolation == 0:
+            break
     return interpolated_inter_beat_intervals.values.tolist()
 
 
@@ -1249,10 +1290,12 @@ def get_nn_intervals_old(inter_beat_intervals: List[float], low_ibi: int = 300, 
     interpolated_nn_intervals = interpolate_nan_values(nn_intervals, interpolation_method)
     return interpolated_nn_intervals
 
+# -------------------------------------------------------------------------------------------------------------------- #
 
-def get_nn_intervals(inter_beat_intervals: List[float], low_ibi: int = 300, high_ibi: int = 2000,
+
+def get_nn_intervals(inter_beat_intervals: List[float], low_ibi: int = 300, high_ibi: int = 1333,
                      interpolation_method: str = "linear", ectopic_beats_removal_method: str = KAMATH_RULE,
-                     sampling_frequency: int = 64, verbose: bool = True):
+                     sampling_frequency: int = 64, verbose: bool = False):
     """
     Function that computes NN Intervals from inter beat intervals.
 
@@ -1288,7 +1331,7 @@ def get_nn_intervals(inter_beat_intervals: List[float], low_ibi: int = 300, high
     if not empty_check(outlier_list):
         # check for sequences of outliers
         o_sequence_indices, o_sequence_values = find_sequences(outlier_indices=outlier_indices,
-                                                               outlier_values=outlier_list, verbose=True)
+                                                               outlier_values=outlier_list, verbose=verbose)
 
         # calculate size of substitution intervals
         outliers_to_replace, outliers_to_insert, interpolation_mode, new_ibi_data, outlier_indices_to_replace = \
@@ -1426,7 +1469,7 @@ def is_valid_sample(nn_intervals: List[float], outlier_count: int, removing_rule
         True if sample is valid, False if not
     """
     result = True
-    if outlier_count / len(nn_intervals) > removing_rule:
+    if (outlier_count / len(nn_intervals)) > removing_rule:
         print("Too much outlier for analyses ! You should discard the sample.")
         result = False
     if len(nn_intervals) < 240:

@@ -44,7 +44,7 @@ def lowpass_butterworth(filter_order: int, cutoff_frequency: float, sampling_fre
 
     nyquist_frequency = 0.5 * sampling_frequency
     low_cut = cutoff_frequency / nyquist_frequency
-    print(low_cut)
+    print('Low_cut:' + str(low_cut))
     if low_cut == 1.0:
         low_cut = 0.99
     b, a = butter(filter_order, [low_cut], btype='low')
@@ -103,7 +103,7 @@ def gsr_zero_phase_filtering(data: np.ndarray, sampling_frequency: int, f_cut: f
 
     if verbose:
         # plot the result
-        plt.figure(dpi=1200)
+        plt.figure()
         plt.plot(data, linewidth=1.0, label='input')
         plt.plot(s_n_gust, color='black', linewidth=1.0, label='gust')
         plt.show()

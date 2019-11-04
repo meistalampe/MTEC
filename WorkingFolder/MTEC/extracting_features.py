@@ -10,6 +10,7 @@ import nolds
 from scipy import interpolate
 from scipy import signal
 from astropy.stats import LombScargle
+import matplotlib.pyplot as plt
 
 # limit functions that user might import using "from hrv-analysis import *"
 __all__ = ['get_time_domain_features', 'get_frequency_domain_features',
@@ -28,7 +29,7 @@ HfBand = namedtuple("Hf_band", ["low", "high"])
 # ----------------- TIME DOMAIN FEATURES ----------------- #
 
 
-def get_time_domain_features(nn_intervals: List[float]) -> dict:
+def get_time_domain_features(nn_intervals: List[float], dict_name: str) -> dict:
     """
     Returns a dictionary containing time domain features for HRV analysis.
     Mostly used on long term recordings (24h) but some studies use some of those features on
@@ -37,6 +38,8 @@ def get_time_domain_features(nn_intervals: List[float]) -> dict:
     ----------
     nn_intervals : list
         list of Normal to Normal Interval
+    dict_name : str
+        a name tag to identify contents of the dictionary
     Returns
     -------
     time_domain_features : dict
@@ -105,6 +108,7 @@ def get_time_domain_features(nn_intervals: List[float]) -> dict:
     std_hr = np.std(heart_rate_list)
 
     time_domain_features = {
+        'name': dict_name,
         'mean_nni': mean_nni,
         'sdnn': sdnn,
         'sdsd': sdsd,
@@ -157,11 +161,11 @@ def get_geometrical_features(nn_intervals: List[float]) -> dict:
 
     triang_idx = len(nn_intervals) / max(np.histogram(nn_intervals, bins=range(300, 2000, 8))[0])
     # TODO
-    tinn = None
+    # tinn = None
 
     geometrical_features = {
         "triangular_index": triang_idx,
-        "tinn": tinn
+        # "tinn": tinn
     }
 
     return geometrical_features
@@ -170,8 +174,8 @@ def get_geometrical_features(nn_intervals: List[float]) -> dict:
 # ----------------- FREQUENCY DOMAIN FEATURES ----------------- #
 
 
-def get_frequency_domain_features(nn_intervals: List[float], method: str = WELCH_METHOD,
-                                  sampling_frequency: int = 4, interpolation_method: str = "linear",
+def get_frequency_domain_features(nn_intervals: List[float], dict_name: str, method: str = WELCH_METHOD,
+                                  sampling_frequency: int = 7, interpolation_method: str = "linear",
                                   vlf_band: namedtuple = VlfBand(0.003, 0.04),
                                   lf_band: namedtuple = LfBand(0.04, 0.15),
                                   hf_band: namedtuple = HfBand(0.15, 0.40)) -> dict:
@@ -183,6 +187,8 @@ def get_frequency_domain_features(nn_intervals: List[float], method: str = WELCH
     ---------
     nn_intervals : list
         list of Normal to Normal Interval
+    dict_name : str
+        name to identify contents of a dictionary
     method : str
         Method used to calculate the psd. Choice are Welch's FFT or Lomb method.
     sampling_frequency : int
@@ -236,7 +242,7 @@ def get_frequency_domain_features(nn_intervals: List[float], method: str = WELCH
                                                 vlf_band=vlf_band, hf_band=hf_band)
 
     # ---------- Features calculation ---------- #
-    freqency_domain_features = _get_features_from_psd(freq=freq, psd=psd,
+    freqency_domain_features = _get_features_from_psd(freq=freq, psd=psd, dict_name=dict_name,
                                                       vlf_band=vlf_band,
                                                       lf_band=lf_band,
                                                       hf_band=hf_band)
@@ -288,13 +294,20 @@ def _get_freq_psd_from_nn_intervals(nn_intervals: List[float], method: str = WEL
         nni_normalized = nni_interpolation - np.mean(nni_interpolation)
 
         #  --------- Compute Power Spectral Density  --------- #
-        freq, psd = signal.welch(x=nni_normalized, fs=sampling_frequency, window='hann',
-                                 nfft=4096)
+        freq, psd = signal.welch(x=nni_normalized, fs=sampling_frequency, window='hann', nfft=4096)
+        # plt.semilogy(freq, psd)
+        # plt.xlabel('frequency [Hz]')
+        # plt.ylabel('PSD [V**2/Hz]')
+        # plt.show()
 
     elif method == LOMB_METHOD:
         freq, psd = LombScargle(timestamp_list, nn_intervals,
                                 normalization='psd').autopower(minimum_frequency=vlf_band[0],
                                                                maximum_frequency=hf_band[1])
+        # plt.semilogy(freq, psd)
+        # plt.xlabel('frequency [Hz]')
+        # plt.ylabel('PSD [V**2/Hz]')
+        # plt.show()
     else:
         raise ValueError("Not a valid method. Choose between 'lomb' and 'welch'")
 
@@ -340,7 +353,8 @@ def _create_interpolated_timestamp_list(nn_intervals: List[float], sampling_freq
     return nni_interpolation_tmstp
 
 
-def _get_features_from_psd(freq: List[float], psd: List[float], vlf_band: namedtuple = VlfBand(0.003, 0.04),
+def _get_features_from_psd(freq: List[float], psd: List[float], dict_name: str,
+                           vlf_band: namedtuple = VlfBand(0.003, 0.04),
                            lf_band: namedtuple = LfBand(0.04, 0.15),
                            hf_band: namedtuple = HfBand(0.15, 0.40)) -> dict:
     """
@@ -351,6 +365,8 @@ def _get_features_from_psd(freq: List[float], psd: List[float], vlf_band: namedt
         Array of sample frequencies.
     psd : list
         Power spectral density or power spectrum.
+    dict_name: str
+        a name to identify a dictionaries content
     vlf_band : tuple
         Very low frequency bands for features extraction from power spectral density.
     lf_band : tuple
@@ -359,7 +375,7 @@ def _get_features_from_psd(freq: List[float], psd: List[float], vlf_band: namedt
         High frequency bands for features extraction from power spectral density.
     Returns
     ---------
-    freqency_domain_features : dict
+    frequency_domain_features : dict
         Dictionary containing frequency domain features for HRV analyses. There are details
         about each features given below.
     """
@@ -381,7 +397,8 @@ def _get_features_from_psd(freq: List[float], psd: List[float], vlf_band: namedt
     lfnu = (lf / (lf + hf)) * 100
     hfnu = (hf / (lf + hf)) * 100
 
-    freqency_domain_features = {
+    frequency_domain_features = {
+        'name': dict_name,
         'lf': lf,
         'hf': hf,
         'lf_hf_ratio': lf_hf_ratio,
@@ -391,13 +408,13 @@ def _get_features_from_psd(freq: List[float], psd: List[float], vlf_band: namedt
         'vlf': vlf
     }
 
-    return freqency_domain_features
+    return frequency_domain_features
 
 
-# ----------------- NON lINEAR DOMAIN FEATURES ----------------- #
+# ----------------- NON LINEAR DOMAIN FEATURES ----------------- #
 
 
-def get_csi_cvi_features(nn_intervals: List[float]) -> dict:
+def get_csi_cvi_features(nn_intervals: List[float], dict_name: str) -> dict:
     """
     Returns a dictionary containing 3 features from non linear domain for HRV analyses.
     Known practise is to use this function on short term recordings, on 30 , 50, 100 RR-intervals (or
@@ -406,6 +423,8 @@ def get_csi_cvi_features(nn_intervals: List[float]) -> dict:
     ---------
     nn_intervals : list
         Normal to Normal Intervals.
+    dict_name: str
+        a name to identify the contents of the dictionary
     Returns
     ---------
     csi_cvi_features : dict
@@ -432,6 +451,7 @@ def get_csi_cvi_features(nn_intervals: List[float]) -> dict:
     modified_csi = L ** 2 / T
 
     csi_cvi_features = {
+        'name': dict_name,
         'csi': csi,
         'cvi': cvi,
         'Modified_csi': modified_csi
