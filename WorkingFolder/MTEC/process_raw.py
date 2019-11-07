@@ -1,4 +1,7 @@
 from empatica_data_extraction import *
+import matplotlib.pyplot as plt
+from datetime import datetime
+import numpy as np
 
 
 def main():
@@ -48,6 +51,17 @@ def main():
                        data_list=stream_data['E4_Bvp_data'])
     write_to_text_file(file_name='_bvp_time_', file_index=subject, folder=target_folder,
                        data_list=stream_data['E4_Bvp_time'])
+
+    # plot
+    y = stream_data['E4_Bvp_data']
+    x = stream_data['E4_Bvp_time']
+    # time_axis = [datetime.time(datetime.fromtimestamp(s)).strftime('%M:%S') for s in stream_data['E4_Bvp_time']]
+    time_length = list(range(len(y)))
+    time = [(s+1) / 64 for s in time_length]
+    # plt.xticks(time_length, time_axis)
+    plt.plot(time, y)
+    plt.show()
+
     # ----------------- GALVANIC SKIN RESPONSE ----------------- #
     write_to_text_file(file_name='_gsr_data_', file_index=subject, folder=target_folder,
                        data_list=stream_data['E4_Gsr_data'])

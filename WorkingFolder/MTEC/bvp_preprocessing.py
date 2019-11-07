@@ -686,7 +686,7 @@ def find_sequences(outlier_indices: list, outlier_values: list, verbose: bool = 
 
 def calculate_substitution_intervals(inter_beat_intervals: list, outlier_indices: list, sequence_indices: list,
                                      sequence_values: list, valid_intervals: list, ibi_max: float = 1333,
-                                     ibi_min: float = 300, verbose: bool = False):
+                                     ibi_min: float = 314, verbose: bool = False):
     """
     A function that calculates the number of beats that have to be inserted to interpolate the ectopic beat and
     artifact intervals. The function uses the equation provided by Lippman (1994). The number of inserted intervals B
@@ -992,7 +992,7 @@ def prepare_interpolation(inter_beat_intervals: list, interpolation_mode: list, 
                 else:
                     ibi_head = temp_ibi_data[0:before_rep_seq] + [temp_ibi_data[before_rep_seq]]
 
-                if after_rep_seq == len(inter_beat_intervals):
+                if after_rep_seq == len(temp_ibi_data):
                     ibi_tail = [temp_ibi_data[after_rep_seq]]
                 else:
                     ibi_tail = temp_ibi_data[after_rep_seq:]
@@ -1145,6 +1145,8 @@ def is_outlier(inter_beat_interval: float, next_inter_beat_interval: float, meth
     if method == MALIK_RULE:
         outlier = abs(inter_beat_interval - next_inter_beat_interval) <= 0.2 * inter_beat_interval
     elif method == KAMATH_RULE:
+        # According to Kamath’s suggestion, we considered an abnormal heartbeat when the heartbeat interval increased
+        # by more than 32.5 % or decreased by more than 24.5 %
         outlier = 0 <= (next_inter_beat_interval - inter_beat_interval) <= 0.325 * inter_beat_interval or 0 <= \
                   (inter_beat_interval - next_inter_beat_interval) <= 0.245 * inter_beat_interval
     else:
@@ -1388,12 +1390,12 @@ def get_nn_intervals(inter_beat_intervals: List[float], low_ibi: int = 300, high
         interpolated_nn_intervals = interpolate_nan_values(inter_beat_intervals=nn_intervals,
                                                            interpolation_method=interpolation_method, limit=2)
         # if any NaN are left run interpolation again
-        nan_found = nan_check(interpolated_nn_intervals)
+        # nan_found = nan_check(interpolated_nn_intervals)
     else:
         interpolated_nn_intervals = interpolated_inter_beat_intervals
 
     # data sample validation
-    outlier_total = len(outlier_list) + len(ectopic_beat_list)
+    outlier_total = len(outlier_list)
     validation_result = is_valid_sample(nn_intervals=interpolated_nn_intervals, outlier_count=outlier_total,
                                         removing_rule=0.2)
 

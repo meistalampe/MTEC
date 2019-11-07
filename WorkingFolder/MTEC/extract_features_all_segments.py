@@ -109,13 +109,13 @@ def main():
                 # low_ibi is calculated from the avg age of all subjects with this equation 60/(220 - avg. age)
                 # with an avg. age of 29 this results in 314 ms
                 interpolated_nn_intervals, interpolated_inter_beat_intervals, validation_result = \
-                    get_nn_intervals(inter_beat_intervals=inter_beat_intervals_list, low_ibi=300, high_ibi=1333,
+                    get_nn_intervals(inter_beat_intervals=inter_beat_intervals_list, low_ibi=314, high_ibi=1333,
                                      interpolation_method='linear', ectopic_beats_removal_method='kamath',
                                      verbose=set_verbose)
 
                 # NaN check
-                first_check = sum(np.isnan(interpolated_inter_beat_intervals))
-                second_check = sum(np.isnan(interpolated_nn_intervals))
+                # first_check = sum(np.isnan(interpolated_inter_beat_intervals))
+                # second_check = sum(np.isnan(interpolated_nn_intervals))
                 # feature extraction
                 # plt.close('all')
                 # non_interpolated_inter_beat_intervals = [int((ibi/fs)*1000) for ibi in inter_beat_intervals_list]
@@ -128,9 +128,14 @@ def main():
                 time_domain_features_nn = get_time_domain_features(nn_intervals=interpolated_nn_intervals,
                                                                    dict_name='nn_intervals (no artifacts or ectopic beats)')
 
-                frequency_domain_features = get_frequency_domain_features(nn_intervals=interpolated_nn_intervals,
-                                                                          dict_name='nn_intervals (no artifacts or ectopic beats)',
-                                                                          sampling_frequency=7, method=WELCH_METHOD)
+                frequency_domain_features_no_artifacts = \
+                    get_frequency_domain_features(nn_intervals=interpolated_inter_beat_intervals,
+                                                  dict_name='nn_intervals (no artifacts or ectopic beats)',
+                                                  sampling_frequency=4, method=WELCH_METHOD)
+                frequency_domain_features_nn = \
+                    get_frequency_domain_features(nn_intervals=interpolated_nn_intervals,
+                                                  dict_name='nn_intervals (no artifacts or ectopic beats)',
+                                                  sampling_frequency=4, method=WELCH_METHOD)
 
                 non_linear_features_raw = get_csi_cvi_features(nn_intervals=raw_inter_beat_intervals,
                                                                dict_name='raw (peak data)')
@@ -146,8 +151,10 @@ def main():
                     time_domain_features_no_artifacts['difficulty level'] = rating[1]
                     time_domain_features_nn['stress level'] = rating[0]
                     time_domain_features_nn['difficulty level'] = rating[1]
-                    frequency_domain_features['stress level'] = rating[0]
-                    frequency_domain_features['difficulty level'] = rating[1]
+                    frequency_domain_features_no_artifacts['stress level'] = rating[0]
+                    frequency_domain_features_no_artifacts['difficulty level'] = rating[1]
+                    frequency_domain_features_nn['stress level'] = rating[0]
+                    frequency_domain_features_nn['difficulty level'] = rating[1]
                     non_linear_features_raw['stress level'] = rating[0]
                     non_linear_features_raw['difficulty level'] = rating[1]
                     non_linear_features_no_artifacts['stress level'] = rating[0]
@@ -161,8 +168,10 @@ def main():
                     time_domain_features_no_artifacts['valence'] = rating[1]
                     time_domain_features_nn['arousal'] = rating[0]
                     time_domain_features_nn['valence'] = rating[1]
-                    frequency_domain_features['arousal'] = rating[0]
-                    frequency_domain_features['valence'] = rating[1]
+                    frequency_domain_features_no_artifacts['arousal'] = rating[0]
+                    frequency_domain_features_no_artifacts['valence'] = rating[1]
+                    frequency_domain_features_nn['arousal'] = rating[0]
+                    frequency_domain_features_nn['valence'] = rating[1]
                     non_linear_features_raw['arousal'] = rating[0]
                     non_linear_features_raw['valence'] = rating[1]
                     non_linear_features_no_artifacts['arousal'] = rating[0]
@@ -173,7 +182,8 @@ def main():
                     time_domain_features_raw['emotional rating'] = rating[0]
                     time_domain_features_no_artifacts['emotional rating'] = rating[0]
                     time_domain_features_nn['emotional rating'] = rating[0]
-                    frequency_domain_features['emotional rating'] = rating[0]
+                    frequency_domain_features_no_artifacts['emotional rating'] = rating[0]
+                    frequency_domain_features_nn['emotional rating'] = rating[0]
                     non_linear_features_raw['emotional rating'] = rating[0]
                     non_linear_features_no_artifacts['emotional rating'] = rating[0]
                     non_linear_features_nn['emotional rating'] = rating[0]
@@ -181,7 +191,8 @@ def main():
                     time_domain_features_raw['stress level'] = rating[0]
                     time_domain_features_no_artifacts['stress level'] = rating[0]
                     time_domain_features_nn['stress level'] = rating[0]
-                    frequency_domain_features['stress level'] = rating[0]
+                    frequency_domain_features_no_artifacts['stress level'] = rating[0]
+                    frequency_domain_features_nn['stress level'] = rating[0]
                     non_linear_features_raw['stress level'] = rating[0]
                     non_linear_features_no_artifacts['stress level'] = rating[0]
                     non_linear_features_nn['stress level'] = rating[0]
@@ -196,11 +207,11 @@ def main():
 
                 # save results
                 time_dicts = [time_domain_features_raw, time_domain_features_no_artifacts, time_domain_features_nn]
+                freq_dicts = [frequency_domain_features_no_artifacts, frequency_domain_features_nn]
                 non_linear_dicts = [non_linear_features_raw, non_linear_features_no_artifacts, non_linear_features_nn]
 
                 write_multiple_dicts_to_csv(my_dicts=time_dicts, file_name=saving_name + '_time_features' + validation)
-                write_dict_to_csv(my_dict=frequency_domain_features,
-                                  file_name=saving_name + '_freq_features' + validation)
+                write_multiple_dicts_to_csv(my_dicts=freq_dicts, file_name=saving_name + '_freq_features' + validation)
                 write_multiple_dicts_to_csv(my_dicts=non_linear_dicts,
                                             file_name=saving_name + '_non_linear_features' + validation)
                 if set_save:
