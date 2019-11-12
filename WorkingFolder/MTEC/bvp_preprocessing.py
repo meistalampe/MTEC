@@ -1006,7 +1006,11 @@ def prepare_interpolation(inter_beat_intervals: list, interpolation_mode: list, 
             seq_len.append(number_of_beats_to_insert[m])
 
     # set limit for interpolation
-    limit = max(seq_len) * 2
+    if len(seq_len) > 0:
+        limit = max(seq_len) * 2
+    else:
+        limit = 3
+
     inter_beat_intervals_cleaned = list([])
     for ibi in temp_ibi_data:
         if ibi == 0:
@@ -1248,14 +1252,25 @@ def interpolate_nan_values(inter_beat_intervals: list, interpolation_method: str
         new list with outliers replaced by interpolated values.
     """
     ibi_series = pd.Series(inter_beat_intervals)
+    cycles = 0
     # Interpolate nan values and convert pandas object to list of values
+    interpolated_inter_beat_intervals = ibi_series.interpolate(method=interpolation_method, limit=limit,
+                                                               limit_area="inside")
+
     while True:
-        interpolated_inter_beat_intervals = ibi_series.interpolate(method=interpolation_method, limit=limit,
-                                                                   limit_area="inside")
         nan_check_interpolation = sum(np.isnan(interpolated_inter_beat_intervals))
 
         if nan_check_interpolation == 0:
             break
+        elif cycles > 2:
+            i_ibi_series = [ibi for ibi in interpolated_inter_beat_intervals if not np.isnan(ibi)]
+            interpolated_inter_beat_intervals = pd.Series(i_ibi_series)
+        else:
+            interpolated_inter_beat_intervals = \
+                interpolated_inter_beat_intervals.interpolate(method=interpolation_method, limit=limit,
+                                                              limit_area="inside")
+            cycles += 1
+
     return interpolated_inter_beat_intervals.values.tolist()
 
 

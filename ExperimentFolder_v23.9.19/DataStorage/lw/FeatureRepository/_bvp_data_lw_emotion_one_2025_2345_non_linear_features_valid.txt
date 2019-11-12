@@ -1,0 +1,19 @@
+feature,value
+name,raw (peak data)
+csi,1.3703108563137651
+cvi,6.05036686999938
+Modified_csi,1699.8558048721277
+arousal,4.94
+valence,5.31
+name,interpolated (no artifacts)
+csi,1.6406617800811136
+cvi,5.45319080935981
+Modified_csi,1119.7575422999303
+arousal,4.94
+valence,5.31
+name,nn_intervals (no artifacts or ectopic beats)
+csi,2.727144164148294
+cvi,5.215254514462287
+Modified_csi,1824.6913026857192
+arousal,4.94
+valence,5.31

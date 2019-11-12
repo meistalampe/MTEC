@@ -39,6 +39,10 @@ def main():
 
     # list of all subject initials
     subject_ids = ['ap', 'ar', 'es', 'fw', 'ka', 'lb', 'lp', 'lw', 'mb', 'mch', 'md', 'mf', 'pg', 'rs']
+    gsr_baseline_mean_zf = 0.0
+    gsr_baseline_mean_ma = 0.0
+    temp_baseline_mean_zf = 0.0
+    temp_baseline_mean_ma = 0.0
     # get user input: subject name
     while True:
         subject = input('Please enter subject initials.')
@@ -219,8 +223,9 @@ def main():
                         save_dict_to_mat(dictionary=d, data_file_name=saving_name + '_' + str(d['name']),
                                          save_file_label='time_domain_features' + validation, verbose=set_verbose)
 
-                    save_dict_to_mat(dictionary=frequency_domain_features, data_file_name=saving_name + '_',
-                                     save_file_label='freq_domain_features' + validation, verbose=set_verbose)
+                    for d in freq_dicts:
+                        save_dict_to_mat(dictionary=d, data_file_name=saving_name + '_',
+                                         save_file_label='freq_domain_features' + validation, verbose=set_verbose)
 
                     for d in non_linear_dicts:
                         save_dict_to_mat(dictionary=d, data_file_name=saving_name + '_' + str(d['name']),
@@ -253,32 +258,59 @@ def main():
                     # gsr_time = stream_data['E4_Gsr_time']
                     # gsr_time_array = np.array(gsr_time)
                     gsr_mov_avg = gsr_generate_moving_averages(data=gsr_raw_array, sampling_frequency=gsr_fs, window=4,
-                                                               mode='same',
-                                                               verbose=set_verbose)
+                                                               mode='same')
                     # print(gsr_raw_array)
                     gsr_filtered = gsr_zero_phase_filtering(data=gsr_raw_array, sampling_frequency=gsr_fs, f_cut=1.0,
-                                                            filter_order=4, verbose=set_verbose)
+                                                            filter_order=4)
+
+                    # generate baseline mean for correction
+                    if 'baseline' in file_name:
+                        # global gsr_baseline_mean_zf, gsr_baseline_mean_ma
+                        gsr_baseline_mean_zf = statistics.mean(gsr_filtered)
+                        gsr_baseline_mean_ma = statistics.mean(gsr_mov_avg)
+
                     # feature extraction
+                    # on filtered signal
                     gsr_min_zf = min(gsr_filtered)
                     gsr_max_zf = max(gsr_filtered)
                     gsr_mean_zf = statistics.mean(gsr_filtered)    # related to arousal , Lang
                     gsr_sd_zf = statistics.stdev(gsr_filtered)
-
+                    # on moving average signal
                     gsr_min_ma = min(gsr_mov_avg)
                     gsr_max_ma = max(gsr_mov_avg)
                     gsr_mean_ma = statistics.mean(gsr_mov_avg)  # related to arousal , Lang
                     gsr_sd_ma = statistics.stdev(gsr_mov_avg)
-                    # peaks per minute
+                    # on baseline corrected signal
+                    gsr_corrected_zf = gsr_filtered - gsr_baseline_mean_zf
+                    gsr_min_corr_zf = min(gsr_corrected_zf)
+                    gsr_max_corr_zf = max(gsr_corrected_zf)
+                    gsr_mean_corr_zf = statistics.mean(gsr_corrected_zf)
+                    gsr_sd_corr_zf = statistics.stdev(gsr_corrected_zf)
+                    gsr_corrected_ma = gsr_mov_avg - gsr_baseline_mean_ma
+                    gsr_min_corr_ma = min(gsr_corrected_ma)
+                    gsr_max_corr_ma = max(gsr_corrected_ma)
+                    gsr_mean_corr_ma = statistics.mean(gsr_corrected_ma)
+                    gsr_sd_corr_ma = statistics.stdev(gsr_corrected_ma)
 
                     gsr_features = {
                         'gsr_min_ma': gsr_min_ma,
                         'gsr_max_ma': gsr_max_ma,
                         'gsr_mean_ma': gsr_mean_ma,
                         'gsr_sd_ma': gsr_sd_ma,
+                        'gsr_min_corr_ma': gsr_min_corr_ma,
+                        'gsr_max_corr_ma': gsr_max_corr_ma,
+                        'gsr_mean_corr_ma': gsr_mean_corr_ma,
+                        'gsr_sd_corr_ma': gsr_sd_corr_ma,
+                        'gsr_baseline_mean_ma': gsr_baseline_mean_ma,
                         'gsr_min_zf': gsr_min_zf,
                         'gsr_max_zf': gsr_max_zf,
                         'gsr_mean_zf': gsr_mean_zf,
                         'gsr_sd_zf': gsr_sd_zf,
+                        'gsr_min_corr_zf': gsr_min_corr_zf,
+                        'gsr_max_corr_zf': gsr_max_corr_zf,
+                        'gsr_mean_corr_zf': gsr_mean_corr_zf,
+                        'gsr_sd_corr_zf': gsr_sd_corr_zf,
+                        'gsr_baseline_mean_zf': gsr_baseline_mean_zf
                     }
 
                     print('Processing done.')
@@ -305,12 +337,14 @@ def main():
                     print()
 
                     # plot results
-                    if set_plot:
-                        plt.figure()
-                        plt.plot(gsr_raw_array, label='input')
-                        plt.plot(gsr_filtered, label='filtered')
-                        plt.plot(gsr_mov_avg, label='averages')
-                        plt.show()
+                    # if set_plot:
+                    #     plt.figure()
+                    #     plt.plot(gsr_raw_array, label='input')
+                    #     plt.plot(gsr_filtered, label='filtered')
+                    #     plt.plot(gsr_mov_avg, label='averages')
+                    #     plt.show()
+                else:
+                    print('No GSR data found.')
 
             elif 'temp' in file_name:
                 fs = 4
@@ -331,30 +365,58 @@ def main():
                     # temp_time_array = np.array(temp_time)
 
                     temp_mov_avg = gsr_generate_moving_averages(data=temp_raw_array, sampling_frequency=temp_fs,
-                                                                window=5,
-                                                                mode='same', verbose=set_verbose)
+                                                                window=5, mode='same')
                     temp_filtered = gsr_zero_phase_filtering(data=temp_raw_array, sampling_frequency=temp_fs, f_cut=1.0,
-                                                             filter_order=4, verbose=set_verbose)
+                                                             filter_order=4)
+
+                    # generate baseline mean for correction
+                    if 'baseline' in file_name:
+                        # global temp_baseline_mean_zf, temp_baseline_mean_ma
+                        temp_baseline_mean_zf = statistics.mean(temp_filtered)
+                        temp_baseline_mean_ma = statistics.mean(temp_mov_avg)
+
                     # feature extraction
+                    # on moving average signal
                     temp_min_ma = min(temp_mov_avg)
                     temp_max_ma = max(temp_mov_avg)
                     temp_mean_ma = statistics.mean(temp_mov_avg)
                     temp_sd_ma = statistics.stdev(temp_mov_avg)
-
+                    # on filtered signal
                     temp_min_zf = min(temp_filtered)
                     temp_max_zf = max(temp_filtered)
                     temp_mean_zf = statistics.mean(temp_filtered)
                     temp_sd_zf = statistics.stdev(temp_filtered)
+                    # on baseline corrected signal
+                    temp_corrected_zf = temp_filtered - temp_baseline_mean_zf
+                    temp_min_corr_zf = min(temp_corrected_zf)
+                    temp_max_corr_zf = max(temp_corrected_zf)
+                    temp_mean_corr_zf = statistics.mean(temp_corrected_zf)
+                    temp_sd_corr_zf = statistics.stdev(temp_corrected_zf)
+                    temp_corrected_ma = temp_mov_avg - temp_baseline_mean_ma
+                    temp_min_corr_ma = min(temp_corrected_ma)
+                    temp_max_corr_ma = max(temp_corrected_ma)
+                    temp_mean_corr_ma = statistics.mean(temp_corrected_ma)
+                    temp_sd_corr_ma = statistics.stdev(temp_corrected_ma)
 
                     temp_features = {
                         'temp_min_ma': temp_min_ma,
                         'temp_max_ma': temp_max_ma,
                         'temp_mean_ma': temp_mean_ma,
                         'temp_sd_ma': temp_sd_ma,
+                        'temp_min_corr_ma': temp_min_corr_ma,
+                        'temp_max_corr_ma': temp_max_corr_ma,
+                        'temp_mean_corr_ma': temp_mean_corr_ma,
+                        'temp_sd_corr_ma': temp_sd_corr_ma,
+                        'temp_baseline_mean_ma': temp_baseline_mean_ma,
                         'temp_min_zf': temp_min_zf,
                         'temp_max_zf': temp_max_zf,
                         'temp_mean_zf': temp_mean_zf,
                         'temp_sd_zf': temp_sd_zf,
+                        'temp_min_corr_zf': temp_min_corr_zf,
+                        'temp_max_corr_zf': temp_max_corr_zf,
+                        'temp_mean_corr_zf': temp_mean_corr_zf,
+                        'temp_sd_corr_zf': temp_sd_corr_zf,
+                        'temp_baseline_mean_zf': temp_baseline_mean_zf
                     }
 
                     print('Processing done.')
@@ -379,11 +441,13 @@ def main():
                     print('-------------------------------------')
                     print()
                     # plot results
-                    if set_plot:
-                        plt.figure()
-                        plt.plot(temp_raw)
-                        plt.plot(temp_mov_avg)
-                        plt.show()
+                    # if set_plot:
+                    #     plt.figure()
+                    #     plt.plot(temp_raw)
+                    #     plt.plot(temp_mov_avg)
+                    #     plt.show()
+                else:
+                    print('No Temp data found.')
 
             elif 'tag' in file_name:
                 fs = 0
