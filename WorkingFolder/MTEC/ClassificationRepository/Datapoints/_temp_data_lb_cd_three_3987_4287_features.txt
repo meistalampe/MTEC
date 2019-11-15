@@ -1,0 +1,20 @@
+feature,value
+temp_min_ma,13.634761904761904
+temp_max_ma,26.276666666666664
+temp_mean_ma,26.02654365079365
+temp_sd_ma,0.9919939019531103
+temp_min_corr_ma,-15.051194444444443
+temp_max_corr_ma,-2.409289682539683
+temp_mean_corr_ma,-2.6594126984126962
+temp_sd_corr_ma,0.9919939019531103
+temp_baseline_mean_ma,28.685956349206347
+temp_min_zf,26.006177679610126
+temp_max_zf,26.292229994898953
+temp_mean_zf,26.140717774684408
+temp_sd_zf,0.06640577584948054
+temp_min_corr_zf,-2.805540696006066
+temp_max_corr_zf,-2.519488380717238
+temp_mean_corr_zf,-2.6710006009317837
+temp_sd_corr_zf,0.06640577584948054
+temp_baseline_mean_zf,28.81171837561619
+emotional rating,5.0

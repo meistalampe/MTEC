@@ -1,0 +1,21 @@
+feature,value
+temp_min_ma,16.604285714285716
+temp_max_ma,31.82142857142857
+temp_mean_ma,31.66216477895506
+temp_sd_ma,1.0611164505421697
+temp_min_corr_ma,-14.056226190476188
+temp_max_corr_ma,1.1609166666666653
+temp_mean_corr_ma,1.0016528741931536
+temp_sd_corr_ma,1.0611164505421697
+temp_baseline_mean_ma,30.660511904761904
+temp_min_zf,31.66518162691315
+temp_max_zf,31.836003728086705
+temp_mean_zf,31.768363251017764
+temp_sd_zf,0.033850215269443394
+temp_min_corr_zf,0.8701816037536751
+temp_max_corr_zf,1.0410037049272312
+temp_mean_corr_zf,0.97336322785829
+temp_sd_corr_zf,0.033850215269443394
+temp_baseline_mean_zf,30.795000023159474
+stress level,5.0
+difficulty level,8.0

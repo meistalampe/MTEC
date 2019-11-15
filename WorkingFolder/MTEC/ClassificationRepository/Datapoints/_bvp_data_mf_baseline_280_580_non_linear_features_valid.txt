@@ -1,0 +1,16 @@
+feature,value
+name,raw (peak data)
+csi,1.061867122011264
+cvi,6.071330901876387
+Modified_csi,1187.8749178324142
+stress level,2.0
+name,interpolated (no artifacts)
+csi,1.515387068813081
+cvi,5.3503900217222835
+Modified_csi,883.0399992157933
+stress level,2.0
+name,nn_intervals (no artifacts or ectopic beats)
+csi,1.9723080406026208
+cvi,5.200988366726414
+Modified_csi,1103.9675329061633
+stress level,2.0

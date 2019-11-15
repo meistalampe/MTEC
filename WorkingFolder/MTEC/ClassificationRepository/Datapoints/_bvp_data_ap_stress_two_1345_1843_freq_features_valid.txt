@@ -1,0 +1,21 @@
+feature,value
+name,nn_intervals (no artifacts or ectopic beats)
+lf,938.2054080397318
+hf,622.3871244586934
+lf_hf_ratio,1.507430618613317
+lfnu,60.118537574809174
+hfnu,39.88146242519083
+total_power,2418.9737675532315
+vlf,858.3812350548064
+stress level,2.0
+difficulty level,3.0
+name,nn_intervals (no artifacts or ectopic beats)
+lf,1023.9885658334415
+hf,761.1385116814787
+lf_hf_ratio,1.345338003685143
+lfnu,57.36222248440367
+hfnu,42.63777751559634
+total_power,2642.046413598021
+vlf,856.9193360831008
+stress level,2.0
+difficulty level,3.0

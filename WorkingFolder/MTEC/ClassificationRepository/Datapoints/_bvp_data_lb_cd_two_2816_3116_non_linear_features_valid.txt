@@ -1,0 +1,16 @@
+feature,value
+name,raw (peak data)
+csi,1.164932876705429
+cvi,5.701634791323276
+Modified_csi,891.8026300104309
+emotional rating,5.0
+name,interpolated (no artifacts)
+csi,0.816741680063728
+cvi,5.309672393288226
+Modified_csi,333.3982188590548
+emotional rating,5.0
+name,nn_intervals (no artifacts or ectopic beats)
+csi,1.9755206062109893
+cvi,5.109484741614134
+Modified_csi,996.0123349627972
+emotional rating,5.0
