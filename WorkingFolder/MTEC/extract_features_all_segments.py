@@ -134,8 +134,9 @@ def main():
 
                 frequency_domain_features_no_artifacts = \
                     get_frequency_domain_features(nn_intervals=interpolated_inter_beat_intervals,
-                                                  dict_name='nn_intervals (no artifacts or ectopic beats)',
-                                                  sampling_frequency=4, method=WELCH_METHOD)
+                                                  dict_name='nn_intervals (no artifacts)',
+                                                  sampling_frequency=4, method=WELCH_METHOD)  # dict_name was changed
+                # after
                 frequency_domain_features_nn = \
                     get_frequency_domain_features(nn_intervals=interpolated_nn_intervals,
                                                   dict_name='nn_intervals (no artifacts or ectopic beats)',

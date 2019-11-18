@@ -45,7 +45,7 @@ data_tags = list(['E4_Acc', 'E4_Bvp', 'E4_Gsr', 'E4_Temperature', 'E4_Ibi', 'E4_
 
 __all__ = ['data_extraction', 'print_header', 'get_folder_from_user', 'search_for_latest_file', 'parse_file_for_tag',
            'get_stream_data', 'get_stream_time', 'extract_all', 'save_dict_to_mat', 'write_to_text_file',
-           'read_list_from_text_file', 'write_dict_to_csv', 'write_multiple_dicts_to_csv']
+           'read_list_from_text_file', 'read_csv_from_text_file', 'write_dict_to_csv', 'write_multiple_dicts_to_csv']
 
 
 # ----------------- UI / User Input ----------------- #
@@ -422,33 +422,33 @@ def save_dict_to_mat(dictionary: dict, data_file_name: str, save_file_label: str
 
 def write_to_text_file(file_name: str, file_index: str, folder: str, data_list: List, file_type: str = '.txt'):
     """
-        A function that writes a list to a text file, line by line.
+    A function that writes a list to a text file, line by line.
 
-        Parameters
-        ----------
-        file_name: str
-            name of the data file that will be created
+    Parameters
+    ----------
+    file_name: str
+        name of the data file that will be created
 
-        file_index: str
-            index, which is added to the file_name for identification, usually subject initials
+    file_index: str
+        index, which is added to the file_name for identification, usually subject initials
 
-        folder: str
-            folder to which the file will be saved
+    folder: str
+        folder to which the file will be saved
 
-        data_list: List[Sample]
-            list that will be stored in the new file.
+    data_list: List[Sample]
+        list that will be stored in the new file.
 
-        file_type: str
-            file ending, file type
+    file_type: str
+        file ending, file type
 
-        Returns
-        ----------
-        None
+    Returns
+    ----------
+    None
 
-        References
-        -----------
-        No references needed.
-        """
+    References
+    -----------
+    No references needed.
+    """
     # create file name
     file_name = file_name + file_index + file_type
     file_path = os.path.abspath(os.path.join(folder, file_name))
@@ -473,11 +473,60 @@ def write_to_text_file(file_name: str, file_index: str, folder: str, data_list: 
 
 
 def read_list_from_text_file(file_path: str):
+    """
+    A function that reads contents of a text file line by line and stores them in a list.
+
+    Parameters
+    ----------
+    file_path: str
+        complete file path of the text file
+
+    Returns
+    ----------
+    stream: List([str])
+        a list of strings, each element corresponds to a line of the previously read text file
+
+    References
+    -----------
+        No references needed.
+    """
     stream = list()
     with open(file_path) as f:
         for line in f:
             stream.append(line.rstrip('\n'))
     return stream
+
+
+def read_csv_from_text_file(file_path: str, read_from_row: int = 0, read_to_row: int = -1):
+    """
+    A function that reads a text file line by line and stores its content into a dictionary.
+
+    Parameters
+    ----------
+    file_path: str
+        complete file path of the text file that will be read
+    read_from_row: int
+        sets starting row, default at 0 to read file from the top
+    read_to_row: int
+        sets final row, default at -1 to read file till the end
+    Returns
+    ----------
+    my_dict
+        dictionary holding contents of the csv file
+    References
+    -----------
+    No references needed.
+    """
+    import csv
+
+    with open(file_path, mode='r') as infile:
+        reader = csv.reader(infile)
+        reader_rows = [r for r in reader]
+        target_rows = reader_rows[read_from_row:read_to_row]
+        target_rows.append(reader_rows[read_to_row])
+        my_dict = {rows[0]: rows[1] for rows in target_rows}
+
+    return my_dict
 
 
 def write_dict_to_csv(my_dict: dict, file_name: str, folder: str = 'FeatureRepository',
@@ -486,28 +535,27 @@ def write_dict_to_csv(my_dict: dict, file_name: str, folder: str = 'FeatureRepos
     A function that takes a dictionary and writes its content to a csv file.
 
     Parameters
-        ----------
-        my_dict: dict
-            the dictionary that will be saved to the file
+    ----------
+    my_dict: dict
+        the dictionary that will be saved to the file
 
-        file_name: str
-            name of the data file that will be created
+    file_name: str
+        name of the data file that will be created
 
-        folder: str
-            folder to which the file will be saved, default is set to FeatureRepository
+    folder: str
+        folder to which the file will be saved, default is set to FeatureRepository
 
-        header: List[str]
-            first line of the csv file, contains all keys of the dictionary, default is set to feature and value
+    header: List[str]
+        first line of the csv file, contains all keys of the dictionary, default is set to feature and value
 
+    Returns
+    ----------
+    None
 
-        Returns
-        ----------
-        None
-
-        References
-        -----------
-        No references needed.
-        """
+    References
+    -----------
+    No references needed.
+    """
 
     csv_columns = header
     dict_data = my_dict
@@ -545,28 +593,27 @@ def write_multiple_dicts_to_csv(my_dicts: List[dict], file_name: str, folder: st
     A function that takes a dictionary and writes its content to a csv file.
 
     Parameters
-        ----------
-        my_dicts: List[dict]
-            the dictionaries that will be saved to the file
+    ----------
+    my_dicts: List[dict]
+        the dictionaries that will be saved to the file
 
-        file_name: str
-            name of the data file that will be created
+    file_name: str
+        name of the data file that will be created
 
-        folder: str
-            folder to which the file will be saved, default is set to FeatureRepository
+    folder: str
+        folder to which the file will be saved, default is set to FeatureRepository
 
-        header: List[str]
-            first line of the csv file, contains all keys of the dictionary, default is set to feature and value
+    header: List[str]
+        first line of the csv file, contains all keys of the dictionary, default is set to feature and value
 
+    Returns
+    ----------
+    None
 
-        Returns
-        ----------
-        None
-
-        References
-        -----------
-        No references needed.
-        """
+    References
+    -----------
+    No references needed.
+    """
 
     csv_columns = header
 
