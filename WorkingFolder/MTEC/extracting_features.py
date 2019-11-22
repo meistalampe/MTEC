@@ -15,7 +15,7 @@ import matplotlib.pyplot as plt
 # limit functions that user might import using "from hrv-analysis import *"
 __all__ = ['get_time_domain_features', 'get_frequency_domain_features',
            'get_geometrical_features', 'get_poincare_plot_features',
-           "get_csi_cvi_features", "get_sampen", "_get_freq_psd_from_nn_intervals"]
+           'get_csi_cvi_features', 'get_sampen', '_get_freq_psd_from_nn_intervals']
 
 # Frequency Methods name
 WELCH_METHOD = "welch"
