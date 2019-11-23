@@ -398,8 +398,8 @@ def create_data_samples(repository_name: str = 'ClassificationRepository', folde
         'name': 'complete_dict',
         'data': data_point_array_f[:, :-1],
         'target': label_array_f,
-        'target_names': ['baseline', 'cd_one', 'cd_two', 'cd_three', 'emotion_one', 'emotion_two', 'stress_one'
-                                  , 'stress_two'],
+        'target_names': ['baseline', 'cd_one', 'cd_two', 'cd_three', 'emotion_one', 'emotion_two', 'stress_one',
+                         'stress_two'],
         'feature_names': complete_feat_list[:-1],
         'description': complete_description,
     }
