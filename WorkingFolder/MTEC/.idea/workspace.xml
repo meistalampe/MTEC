@@ -2,9 +2,83 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cceb26c-0173-4b95-b2b1-d5f78585e4fe" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/bibliography/bibliography.bib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/bibliography/bibliography.bib.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/build.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/build.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/abstract.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/appendix.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/conclusions_and_future_work.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/discussion.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/introduction.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/materials_and_methods.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/materials_and_methods.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/materials_and_methods.tex.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/problem_analysis_and_goals.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/problem_analysis_and_goals.tex.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/results.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/zusammenfassung.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/glossary/glossary.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/E4overview.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/E4piece.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/E4sensorpos.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/E4wearing.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/cc_by_nc_nd.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/eeg_leads.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/logo.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.acn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.aux" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.bbl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.blg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.glo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.ist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lof" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.synctex.gz" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.tex" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.tex.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.toc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_data_samples.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_data_samples.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassificationRepository/Log/dtrf_grid_results_cv3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ClassificationRepository/Log/dtrf_grid_results_cv3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassificationRepository/Log/dtrf_grid_results_cv5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ClassificationRepository/Log/dtrf_grid_results_cv5.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassificationRepository/Log/svc_grid_results_cv3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ClassificationRepository/Log/svc_grid_results_cv3.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassificationRepository/Log/svc_grid_results_cv5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ClassificationRepository/Log/svc_grid_results_cv5.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/machine_learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rf_best_complete_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rf_best_rest_v_all_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rf_best_stress_v_all_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rf_best_stress_v_rest_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_complete_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_complete_dict_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_complete_dict_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_complete_dict_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_all_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_all_dict_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_all_dict_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_emotion_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_emotion_dict_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_emotion_dict_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_rest_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_rest_dict_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_rest_dict_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_rest_v_all_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_rest_v_all_dict_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_rest_v_all_dict_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_rest_v_all_dict_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_all_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_all_dict_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_all_dict_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_all_dict_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_rest_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_rest_dict_10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_rest_dict_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_rest_dict_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_stress_dict.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_stress_dict_3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_stress_dict_5.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -355,6 +429,8 @@
       <workItem from="1574241095655" duration="23871000" />
       <workItem from="1574326463209" duration="58187000" />
       <workItem from="1574461057492" duration="23091000" />
+      <workItem from="1574501147180" duration="15606000" />
+      <workItem from="1574699999387" duration="543000" />
     </task>
     <servers />
   </component>
@@ -421,26 +497,6 @@
           <line>65</line>
           <option name="timeStamp" value="366" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/machine_learning.py</url>
-          <line>797</line>
-          <option name="timeStamp" value="367" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/machine_learning.py</url>
-          <line>677</line>
-          <option name="timeStamp" value="369" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/machine_learning.py</url>
-          <line>545</line>
-          <option name="timeStamp" value="370" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/machine_learning.py</url>
-          <line>918</line>
-          <option name="timeStamp" value="371" />
-        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -457,7 +513,7 @@
     <SUITE FILE_PATH="coverage/MTEC$merge_csv_files.coverage" NAME="merge_csv_files Coverage Results" MODIFIED="1568129470578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/MTEC$bvp_preprocessing.coverage" NAME="bvp_preprocessing Coverage Results" MODIFIED="1572708092811" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/MTEC$testingScript.coverage" NAME="testingScript Coverage Results" MODIFIED="1572295845450" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
-    <SUITE FILE_PATH="coverage/MTEC$machine_learning.coverage" NAME="machine_learning Coverage Results" MODIFIED="1574482871032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+    <SUITE FILE_PATH="coverage/MTEC$machine_learning.coverage" NAME="machine_learning Coverage Results" MODIFIED="1574700497414" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
     <SUITE FILE_PATH="coverage/MTEC$MTEC.coverage" NAME="program Coverage Results" MODIFIED="1559940200542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MTEC$program.coverage" NAME="program Coverage Results" MODIFIED="1564586962581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/MTEC$cut_segment.coverage" NAME="cut_segment Coverage Results" MODIFIED="1568336188691" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />

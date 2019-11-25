@@ -1,0 +1,100 @@
+['Dataset: complete_dict', "Best Parameters: {'max_depth': 2, 'max_features': 31, 'n_estimators': 100, 'random_state': 0}", 'Best Score Cross Validation: 0.539', 'Accuracy Test Data: 0.500', 'ConfusionMatrix(RightNegative: 0, FalseNegative: 0, RightPositive: 9, FalsePositive: 4)', 'F1-Score (micro): 0.500, F1-Score (macro): 0.295']
+Classification Report: 
+               precision    recall  f1-score   support
+
+    baseline       0.00      0.00      0.00         4
+          cd       0.47      0.90      0.62        10
+ emotion_one       0.00      0.00      0.00         3
+ emotion_two       0.00      0.00      0.00         3
+  stress_one       0.60      1.00      0.75         3
+  stress_two       0.50      0.33      0.40         3
+
+    accuracy                           0.50        26
+   macro avg       0.26      0.37      0.30        26
+weighted avg       0.31      0.50      0.37        26
+
+[]
+['Dataset: rest_v_all_dict', "Best Parameters: {'max_depth': 2, 'max_features': 45, 'n_estimators': 5, 'random_state': 0}", 'Best Score Cross Validation: 0.961', 'Accuracy Test Data: 0.885', 'ConfusionMatrix(RightNegative: 20, FalseNegative: 0, RightPositive: 3, FalsePositive: 3)', 'F1-Score: 0.67, Average Precision (Relevanz): 0.567, AUC: 0.949']
+Classification Report: 
+               precision    recall  f1-score   support
+
+     no_rest       1.00      0.87      0.93        23
+        rest       0.50      1.00      0.67         3
+
+    accuracy                           0.88        26
+   macro avg       0.75      0.93      0.80        26
+weighted avg       0.94      0.88      0.90        26
+
+[]
+['Dataset: stress_v_all_dict', "Best Parameters: {'max_depth': 2, 'max_features': 31, 'n_estimators': 250, 'random_state': 0}", 'Best Score Cross Validation: 0.934', 'Accuracy Test Data: 0.923', 'ConfusionMatrix(RightNegative: 18, FalseNegative: 0, RightPositive: 6, FalsePositive: 2)', 'F1-Score: 0.86, Average Precision (Relevanz): 0.931, AUC: 0.975']
+Classification Report: 
+               precision    recall  f1-score   support
+
+   no_stress       1.00      0.90      0.95        20
+      stress       0.75      1.00      0.86         6
+
+    accuracy                           0.92        26
+   macro avg       0.88      0.95      0.90        26
+weighted avg       0.94      0.92      0.93        26
+
+[]
+['Dataset: stress_v_rest_dict', "Best Parameters: {'max_depth': 1, 'max_features': 5, 'n_estimators': 25, 'random_state': 0}", 'Best Score Cross Validation: 0.893', 'Accuracy Test Data: 0.900', 'ConfusionMatrix(RightNegative: 2, FalseNegative: 0, RightPositive: 7, FalsePositive: 1)', 'F1-Score: 0.93, Average Precision (Relevanz): 1.000, AUC: 1.000']
+Classification Report: 
+               precision    recall  f1-score   support
+
+        rest       1.00      0.67      0.80         3
+      stress       0.88      1.00      0.93         7
+
+    accuracy                           0.90        10
+   macro avg       0.94      0.83      0.87        10
+weighted avg       0.91      0.90      0.89        10
+
+[]
+['Dataset: stress_v_stress_dict', "Best Parameters: {'max_depth': 1, 'max_features': 5, 'n_estimators': 100, 'random_state': 0}", 'Best Score Cross Validation: 0.889', 'Accuracy Test Data: 0.429', 'ConfusionMatrix(RightNegative: 1, FalseNegative: 2, RightPositive: 2, FalsePositive: 2)', 'F1-Score: 0.50, Average Precision (Relevanz): 0.668, AUC: 0.417']
+Classification Report: 
+               precision    recall  f1-score   support
+
+  stress_one       0.33      0.33      0.33         3
+  stress_two       0.50      0.50      0.50         4
+
+    accuracy                           0.43         7
+   macro avg       0.42      0.42      0.42         7
+weighted avg       0.43      0.43      0.43         7
+
+[]
+['Dataset: emotion_v_all_dict', "Best Parameters: {'max_depth': 2, 'max_features': 5, 'n_estimators': 25, 'random_state': 0}", 'Best Score Cross Validation: 0.763', 'Accuracy Test Data: 0.692', 'ConfusionMatrix(RightNegative: 18, FalseNegative: 7, RightPositive: 0, FalsePositive: 1)', 'F1-Score: 0.00, Average Precision (Relevanz): 0.231, AUC: 0.353']
+Classification Report: 
+               precision    recall  f1-score   support
+
+  no emotion       0.72      0.95      0.82        19
+     emotion       0.00      0.00      0.00         7
+
+    accuracy                           0.69        26
+   macro avg       0.36      0.47      0.41        26
+weighted avg       0.53      0.69      0.60        26
+
+[]
+['Dataset: emotion_v_rest_dict', "Best Parameters: {'max_depth': 1, 'max_features': 15, 'n_estimators': 500, 'random_state': 0}", 'Best Score Cross Validation: 0.931', 'Accuracy Test Data: 0.800', 'ConfusionMatrix(RightNegative: 2, FalseNegative: 1, RightPositive: 6, FalsePositive: 1)', 'F1-Score: 0.86, Average Precision (Relevanz): 0.957, AUC: 0.857']
+Classification Report: 
+               precision    recall  f1-score   support
+
+        rest       0.67      0.67      0.67         3
+     emotion       0.86      0.86      0.86         7
+
+    accuracy                           0.80        10
+   macro avg       0.76      0.76      0.76        10
+weighted avg       0.80      0.80      0.80        10
+
+[]
+['Dataset: emotion_v_emotion_dict', "Best Parameters: {'max_depth': 1, 'max_features': 5, 'n_estimators': 5, 'random_state': 0}", 'Best Score Cross Validation: 0.526', 'Accuracy Test Data: 0.286', 'ConfusionMatrix(RightNegative: 1, FalseNegative: 2, RightPositive: 1, FalsePositive: 3)', 'F1-Score: 0.29, Average Precision (Relevanz): 0.421, AUC: 0.292']
+Classification Report: 
+               precision    recall  f1-score   support
+
+ emotion_one       0.33      0.25      0.29         4
+ emotion_two       0.25      0.33      0.29         3
+
+    accuracy                           0.29         7
+   macro avg       0.29      0.29      0.29         7
+weighted avg       0.30      0.29      0.29         7
+
+[]
