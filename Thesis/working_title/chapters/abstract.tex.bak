@@ -1,0 +1,7 @@
+
+% Abstract
+Physical illness, distress and injury are all well known to be possible consequences of a stressful workplace. 
+Therefore, stress management not only has become a key component in today's industry, but also a common research topic in recent years. Where disciplines such as organizational psychology attempt to address this matter by offering practical guidelines for the assessment and mitigation of workplace stressors, neuroergonomics merges the disciplines of neuroscience and ergonomics to provide for a deeper understanding of the neural bases of perceptual and cognitive functions in relation to technologies and settings in the real world. 
+In this thesis, we take a neuroergonomic approach to optimize stress management in collaborative workplaces by regulating the information flow of a human-robot-interface (\gls{hri}) according to changes in the mental state of the user. 
+Using a commercial device, we created a wearable system that is capable of obtaining and interpreting psycho-physiological information in real-time.
+We believe that the application of such a system could be a potent tool in risk management and therefore be greatly beneficial for the overall reduction of stress related incidents at collaborative workplaces.
