@@ -2,83 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cceb26c-0173-4b95-b2b1-d5f78585e4fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/bibliography/bibliography.bib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/bibliography/bibliography.bib.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/build.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/build.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/abstract.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/appendix.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/conclusions_and_future_work.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/discussion.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/introduction.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/materials_and_methods.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/materials_and_methods.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/materials_and_methods.tex.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/problem_analysis_and_goals.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/problem_analysis_and_goals.tex.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/results.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/zusammenfassung.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/glossary/glossary.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/E4overview.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/E4piece.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/E4sensorpos.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/E4wearing.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/cc_by_nc_nd.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/eeg_leads.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/images/logo.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.acn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.aux" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.bbl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.blg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.glo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.ist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lof" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.synctex.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.tex" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.tex.bak" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.toc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassificationRepository/Log/dtrf_grid_results_cv3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ClassificationRepository/Log/dtrf_grid_results_cv3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassificationRepository/Log/dtrf_grid_results_cv5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ClassificationRepository/Log/dtrf_grid_results_cv5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassificationRepository/Log/svc_grid_results_cv3.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ClassificationRepository/Log/svc_grid_results_cv3.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassificationRepository/Log/svc_grid_results_cv5.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ClassificationRepository/Log/svc_grid_results_cv5.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/machine_learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rf_best_complete_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rf_best_rest_v_all_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rf_best_stress_v_all_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../rf_best_stress_v_rest_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_complete_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_complete_dict_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_complete_dict_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_complete_dict_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_all_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_all_dict_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_all_dict_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_emotion_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_emotion_dict_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_emotion_dict_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_rest_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_rest_dict_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_emotion_v_rest_dict_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_rest_v_all_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_rest_v_all_dict_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_rest_v_all_dict_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_rest_v_all_dict_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_all_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_all_dict_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_all_dict_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_all_dict_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_rest_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_rest_dict_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_rest_dict_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_rest_dict_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_stress_dict.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_stress_dict_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../scores_grid_search_stress_v_stress_dict_5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/abstract.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/abstract.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/introduction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/introduction.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/problem_analysis_and_goals.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/problem_analysis_and_goals.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.glo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.glo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.ist" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.ist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lof" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lot" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.toc" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -431,6 +367,7 @@
       <workItem from="1574461057492" duration="23091000" />
       <workItem from="1574501147180" duration="15606000" />
       <workItem from="1574699999387" duration="543000" />
+      <workItem from="1575061795570" duration="152000" />
     </task>
     <servers />
   </component>
