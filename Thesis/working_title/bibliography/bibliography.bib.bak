@@ -1,1 +1,20 @@
-﻿% A Journal Paper@article{SS02,	author = {Strauss, D. J. and Steidl, G.},	title = {{Hybrid Wavelet-Support Vector Classifiers of Waveforms}},	journal = {Journal of Computational and Applied Mathematics},	volume = {148},	pages = {375-400},	year = {2002}}% A Conference Paper@inproceedings{DSP02,	author = {Delb, W. and Strauss, D. J. and Plinkert, P. K.},	title = {{Binaural evozierte Potentiale bei Kindern und Erwachsenen im Zeit- und Zeit-Frequenzbereich}},	booktitle = {Deutsche Gesellschaft f\"{u}r Audiologie, F\"{u}nfte Jahrestagung},	year = {2002}}% A Book@misc{MP95,    author = {Malmivuo, J. and Plonsey, R.},    publisher = {Oxford University Press},    title = {{Bioelectromagnetism. Principles and Applications of Bioelectric and Biomagnetic Fields}},    year = {1995}} % An Internet Source@misc{Sig15,	author = {{Sigma-Aldrich Co. LLC}},    title = {{Syringe Needle Gauge Chart}},	url = {http://www.sigmaaldrich.com/chemistry/stockroom-reagents/learning-center/technical-library/needle-gauge-chart.html},    month = {June 1,},    year = 2015}
+% Encoding: UTF-8
+
+@Manual{e4,
+  title        = {E4 wristband from empatica. User's manual},
+  organization = {Empatica},
+  address      = {Via Stendhal 36, 20144 Milano (MI)},
+  url          = {www.empatica.com},
+}
+
+@Article{Byrne2006,
+  author  = {Byrne, E. A. and Parasuraman, R.},
+  journal = {Biological Psychology},
+  title   = {Psychophyiology and adaptive automation},
+  year    = {2006},
+}
+
+@Article{,
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
