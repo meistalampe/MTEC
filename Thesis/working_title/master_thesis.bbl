@@ -1,9 +1,14 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{2}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Byrne and Parasuraman(2006)]{Byrne2006}
+E.~A. Byrne and R.~Parasuraman.
+\newblock Psychophyiology and adaptive automation.
+\newblock \emph{Biological Psychology}, 2006.
 
 \bibitem[Emp()]{e4}
 \emph{E4 wristband from empatica. User's manual}.

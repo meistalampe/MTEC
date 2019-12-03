@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.13)  1 DEC 2019 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.13)  3 DEC 2019 23:22
 entering extended mode
 **./master_thesis.tex
 (master_thesis.tex
@@ -1060,7 +1060,7 @@ LaTeX Info: Redefining \nameref on input line 65.
 \openout6 = `master_thesis.out'.
 
 
-<images/logo.pdf, id=105, 495.8525pt x 449.68pt>
+<images/logo.pdf, id=101, 495.8525pt x 449.68pt>
 File: images/logo.pdf Graphic file (type pdf)
  <use images/logo.pdf>
 Package pdftex.def Info: images/logo.pdf used on input line 68.
@@ -1112,7 +1112,7 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 116.
 
-<images/cc_by_nc_nd.png, id=122, 516.9714pt x 125.268pt>
+<images/cc_by_nc_nd.png, id=118, 516.9714pt x 125.268pt>
 File: images/cc_by_nc_nd.png Graphic file (type png)
 
 <use images/cc_by_nc_nd.png>
@@ -1161,37 +1161,37 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 16
 chapter 1.
 (chapters/introduction.tex) [5
 
-]
+] [6]
 chapter 2.
-(chapters/problem_analysis_and_goals.tex) [6
+(chapters/problem_analysis_and_goals.tex) [7
 
 ]
 chapter 3.
 (chapters/materials_and_methods.tex
 
-LaTeX Warning: Reference `e4overview' on page 7 undefined on input line 18.
+LaTeX Warning: Reference `e4overview' on page 8 undefined on input line 18.
 
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 21.
 
-LaTeX Warning: Reference `e4overview' on page 7 undefined on input line 27.
+LaTeX Warning: Reference `e4overview' on page 8 undefined on input line 27.
 
-[7
+[8
 
-] [8] [9]) [10] [11]
+] [9] [10]) [11] [12]
 chapter 4.
-(chapters/results.tex) [12
+(chapters/results.tex) [13
 
 ]
 chapter 5.
-(chapters/discussion.tex) [13
+(chapters/discussion.tex) [14
 
 ]
 chapter 6.
 (chapters/conclusions_and_future_work.tex) (chapters/appendix.tex
 No file master_thesis.gls.
 No file master_thesis.acr.
-) [14
+) [15
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 21
@@ -1200,7 +1200,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 21
 \tf@lof=\write8
 \openout8 = `master_thesis.lof'.
 
- [15
+ [16
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 21
@@ -1211,10 +1211,10 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 21
 
 
 No file master_thesis.gls.
-[16
+[17
 
 ] (master_thesis.bbl
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 11.
+LaTeX Font Info:    Try loading font information for T1+lmtt on input line 16.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1224,7 +1224,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 232.
-[17
+[18
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
@@ -1232,18 +1232,18 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 232.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 232.
 Package rerunfilecheck Info: File `master_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: A6A34E08119853DC7DF5893BABFAA69C;1513.
+(rerunfilecheck)             Checksum: 7C2368E81395F1BAE4EEFD0FEFC02195;1455.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 18474 strings out of 493328
- 313595 string characters out of 3139118
- 571973 words of memory out of 3000000
- 21539 multiletter control sequences out of 15000+200000
- 51553 words of font info for 81 fonts, out of 3000000 for 9000
+ 18481 strings out of 493328
+ 313687 string characters out of 3139118
+ 572015 words of memory out of 3000000
+ 21541 multiletter control sequences out of 15000+200000
+ 51773 words of font info for 83 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,7n,66p,8826b,394s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
@@ -1256,9 +1256,9 @@ ic/lm/lmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C
 :/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmri12.pfb><C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
 ype1/public/lm/lmtt12.pfb>
-Output written on master_thesis.pdf (19 pages, 395481 bytes).
+Output written on master_thesis.pdf (20 pages, 399114 bytes).
 PDF statistics:
- 280 PDF objects out of 1000 (max. 8388607)
- 45 named destinations out of 1000 (max. 500000)
- 15067 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 284 PDF objects out of 1000 (max. 8388607)
+ 46 named destinations out of 1000 (max. 500000)
+ 15059 words of extra memory for PDF output out of 17280 (max. 10000000)
 
