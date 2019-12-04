@@ -35,7 +35,7 @@
 
 \usepackage[
 	pdftitle={Master Thesis},
-	pdfauthor={Max Mustermann},
+	pdfauthor={Dominik Limbach},
 	pdfcreator={\fmtname \space \fmtversion},
 	pdfsubject={Subject of Master Thesis},
 	pdfkeywords={}
