@@ -1,39 +1,61 @@
 
 % Introduction
-\section{Motivation}
-Physical illness, distress, and injury are all well known to be possible consequences of a stressful workplace. 
-Therefore, stress management not only has become a key component in today's industry, but also a common research topic in recent years. Where disciplines such as organizational psychology attempt to address this matter by offering practical guidelines for the assessment and mitigation of workplace stressors, neuroergonomics merges the disciplines of neuroscience and ergonomics to provide for a deeper understanding of the neural bases of perceptual and cognitive functions in relation to technologies and settings in the real world. 
-We take a neuroergonomic approach which attempts to optimize stress management in collaborative workplaces by regulating the information flow of a human-robot-interface (\gls{hri}) according to changes in the mental state of the user. 
-Using a commercial wrist worn device in combination with a processing unit, we designed a  system that is capable of obtaining and interpreting psychophysiologic information in real-time.
-We believe that such a system could not only be a potent tool in risk management, greatly reducing stress related incidents at collaborative workplaces, but also improve overall operating performance.
-
-%In this chapter we will start by giving a brief introduction to the field of automation. Discussing various forms, their benefits, as well as possible downsides. Then we will take a closer look at neuroergonomics and why it could be a crucial adaption to automated systems. Finally we will address stress in the context of human emotions and focus on its connection to the psychophysiologic measures that were used in the scope of this thesis.
-%
-%\subsection{Automation}
-%Automation, in one form or another, has been a dominating force in almost every branch of industry for what has been the better part of two centuries now. It can be defined as the creation and application of technology by which the production and delivery of various goods and services is controlled and monitored with minimal human assistance. 
-%Automation can be encountered in many different forms, from a simple control loop in a hydraulic system up to an artificial intelligence handling emergency breaking in cars, based on scans of the surroundings.\\[10pt]
-%\textbf{Static automation}\\[10pt]
-%Static automation is the traditional form of automation. In this form, automation is an all-or-none technology either performing a task for us or not \cite{Byrne2006}. 
-%Although, this brings numerous benefits, such as relieving workers from the strain of performing repetitive tasks, there is increasing evidence that static automation comes at the price of impaired decision making, manual skill degradation, loss of situational awareness, and monitoring inefficiency \cite{Byrne2006}. 
-%Introducing static automation into a work environment causes a significant change in roles. 
-%This means that workers, once active operators of machines and technology, become passive monitors. In their new position workers often face monitoring workloads that are inherently different and often significantly higher than the manual control conditions of a non automated work environment. In addition to this, the safety of most automated systems is relying heavily on the operators ability to adapt and to achieve their monitoring goals.  
-%%All these problems could be linked to the shift in the quality and the quantity of the mental workload, that is caused by static automation. 
-%%Further the change in the quality and the quantity of the mental workload, caused by automation, could also be the reason for behavioral adaption, inappropriate trust as well as decreasing job satisfaction. 
-%Studies by Parasuraman et al. (1993,1994) tested subjects in a multi-task flight simulator with optionally automatable components and reported a substantial decrease of human operator detection of automation failures after short periods of time in a static automation scenario with constant task assignment of both operator and the automated system \cite{Byrne2006}.
-%%Considering these results the negative influences of long-term static automation on system performance become apparent.\\
-%These results reflect the negative effects the careless application of long-term static automation could spell on both system performance and operator safety.\\[10pt]
-%\textbf{Adaptive automation}\\[10pt]
-%Adaptive automation is a concept that has been proposed to resolve the problems of long-term static automation. Whereas static automation is considered to be an agent working for the operator, adaptive automation is viewed as an interactive aid working with the operator \cite{Byrne2006}. It attempts to optimize system performance by adjusting the task assignment between the human operator and automation dynamically. This task reallocation is based on task demands, user capabilities, and system requirements. Another advantage of adaptive over static automation is the ability to reconstruct the task environment in terms of what is automated, how it is automated, what tasks may be shared, and when changes occur \cite{Byrne2006}. However, for these possible regulations to be efficient we require both the operator and the automated system to have sufficient knowledge of each other's current capabilities, performance and state \cite{Byrne2006}.
-%As discussed by Byrne et al. (2006), there are three main approaches to address this issue, which either use model-based prediction or continuous measurements to determine the operators current state. In the scope of this thesis we will focus on the latter.
-%In conclusion, adaptive automation provides a significant advantage over static automation. Due to the fact that operator capability is emphasized in the process of maximizing system performance, we see a reduction in monitoring efficiency and an incline job satisfaction levels.
-
-\section{Theoretical Background}
 % outline
 % define Neuroergonomics
 % describe goals 
 % describe approaches
 % go over application
 % see https://en.wikipedia.org/wiki/Neuroergonomics
+Neuroergonomics is often described as the study of brain and behavior at work. As the name suggests, neuroergonomics is comprised of two disciplines, neuroscience and ergonomics (also known as human factors). Neuroscience is concerned with the structure and the function of the brain. It is a highly interdisciplinary body of research spanning disciplines such as physiology, psychology, medicine, computer science, or mathematics. Human factors on the other hand is focused on examining the human use technology at work or other real-world settings. As the intersection of these two fields, neuroergonomics addresses both the brain and humans at work, but even more so their dynamic interaction \cite{Parasuraman2003}
+. By understanding the neural bases of perceptual and cognitive functions, such as seeing, hearing, planing and decision making in relation to technology and settings in the real world, neuroergonomics strives to develop new optimization methods for various areas of applications. The additional value neuroergonomics can provide, compared to 'traditional' neuroscience and 'conventional' ergonomics, promises substantial economical benefits as well as significant improvements to health care and therefore society at large. 
+In the scope of this thesis, we will focus primarily on applications in work settings such as modern automated systems. An area in which the effects of neuroergonomics are expected to be even greater, considering the difficulty of obtaining measures of overt behavior \cite{Parasuraman2003}.\\
+Automated systems, in one form or another have been present in almost every branch of industry for the better part of what has been two centuries. Automation itself can be defined as the creation and application of technology by which the production and delivery of various goods and services is controlled and monitored with minimal human assistance. Automation can be encountered in many different places, from a simple control loop in a hydraulic system up to an artificial intelligence handling emergency breaking in cars, based on scans of the car's environment. 
+Static automation is the original form of automation. In this form, automation is an all-or-none technology either performing a task for us or not \cite{Byrne2006}.
+Although, there are numerous benefits (i.e. relieving workers from the strain of performing repetitive tasks) to it, there also is increasing evidence that static automation comes at the price of impaired decision making, manual skill degradation, loss of situational awareness, and monitoring inefficiency \cite{Byrne2006}.
+These problems stem from the significant change of roles that automation causes in a work environment. What this means is that workers, once active operators of machines and technology, are now passive monitors who often face monitoring workloads that are inherently different and often significantly higher than the manual control conditions of a non automated work environment.
+A fact that often results in increased levels of stress in the workforce. 
+this causes stress
+stress is bad because injuries
+
+To resolve the issues adaptive automation has been introduced
+
+
+% wiki
+%Adaptive automation, a novel neuroergonomic concept, refers to a human-machine system that uses real-time assessment of the operator's workload to make the necessary changes to enhance performance. For adaptive automation to work, the system must utilize an accurate operator-state classifier for the real-time assessment. Operator-state classifiers such as discriminant analysis and artificial neural networks show an accuracy of 70% to 85% in real-time. An important part to properly implementing adaptive automation is figuring out how big a workload needs to be to require intervention. Implementing neuroergonomic adaptive automation would require the development of nonintrusive sensors and even techniques to track eye movement. Current research into assessing a person's mental state includes using facial electromyography to detect confusion.[3]
+%
+%Experiments show that a human-robot team performs better at controlling air and ground vehicles than either a human or robot (i.e. the automatic target recognition system). When compared to 100% human control and static automation, participants showed higher trust and self-confidence, as well as lower perceived workload, when using adaptive automation.[4]
+%
+%In adaptive automation, getting the machine to accurately reason how to respond to the changes and get back to peak performance is the biggest challenge. The machine has to be able to determine to what extent it must make the changes. This is also a consequence of the complexity of the system and factors such as: how easily can the sensed parameter be quantified, how many parameters in the machine's system can be changed, and how well can these different machine parameters be coordinated. 
+
+
+
+
+%\section{Motivation}
+%Physical illness, distress, and injury are all well known to be possible consequences of a stressful workplace. 
+%Therefore, stress management not only has become a key component in today's industry, but also a common research topic in recent years. Where disciplines such as organizational psychology attempt to address this matter by offering practical guidelines for the assessment and mitigation of workplace stressors, neuroergonomics merges the disciplines of neuroscience and ergonomics to provide for a deeper understanding of the neural bases of perceptual and cognitive functions in relation to technologies and settings in the real world. 
+%We take a neuroergonomic approach which attempts to optimize stress management in collaborative workplaces by regulating the information flow of a human-robot-interface (\gls{hri}) according to changes in the mental state of the user. 
+%Using a commercial wrist worn device in combination with a processing unit, we designed a  system that is capable of obtaining and interpreting psychophysiologic information in real-time.
+%We believe that such a system could not only be a potent tool in risk management, greatly reducing stress related incidents at collaborative workplaces, but also improve overall operating performance.
+
+%In this chapter we will start by giving a brief introduction to the field of automation. Discussing various forms, their benefits, as well as possible downsides. Then we will take a closer look at neuroergonomics and why it could be a crucial adaption to automated systems. Finally we will address stress in the context of human emotions and focus on its connection to the psychophysiologic measures that were used in the scope of this thesis.
+%
+\subsection{Automation}
+Automation, in one form or another, has been a dominating force in almost every branch of industry for what has been the better part of two centuries now. It can be defined as the creation and application of technology by which the production and delivery of various goods and services is controlled and monitored with minimal human assistance. 
+Automation can be encountered in many different forms, from a simple control loop in a hydraulic system up to an artificial intelligence handling emergency breaking in cars, based on scans of the surroundings.\\[10pt]
+\textbf{Static automation}\\[10pt]
+Static automation is the traditional form of automation. In this form, automation is an all-or-none technology either performing a task for us or not \cite{Byrne2006}. 
+Although, this brings numerous benefits, such as relieving workers from the strain of performing repetitive tasks, there is increasing evidence that static automation comes at the price of impaired decision making, manual skill degradation, loss of situational awareness, and monitoring inefficiency \cite{Byrne2006}. 
+Introducing static automation into a work environment causes a significant change in roles. 
+This means that workers, once active operators of machines and technology, become passive monitors. In their new position workers often face monitoring workloads that are inherently different and often significantly higher than the manual control conditions of a non automated work environment. In addition to this, the safety of most automated systems is relying heavily on the operators ability to adapt and to achieve their monitoring goals.  
+%All these problems could be linked to the shift in the quality and the quantity of the mental workload, that is caused by static automation. 
+%Further the change in the quality and the quantity of the mental workload, caused by automation, could also be the reason for behavioral adaption, inappropriate trust as well as decreasing job satisfaction. 
+Studies by Parasuraman et al. (1993,1994) tested subjects in a multi-task flight simulator with optionally automatable components and reported a substantial decrease of human operator detection of automation failures after short periods of time in a static automation scenario with constant task assignment of both operator and the automated system \cite{Byrne2006}.
+%Considering these results the negative influences of long-term static automation on system performance become apparent.\\
+These results reflect the negative effects the careless application of long-term static automation could spell on both system performance and operator safety.\\[10pt]
+\textbf{Adaptive automation}\\[10pt]
+Adaptive automation is a concept that has been proposed to resolve the problems of long-term static automation. Whereas static automation is considered to be an agent working for the operator, adaptive automation is viewed as an interactive aid working with the operator \cite{Byrne2006}. It attempts to optimize system performance by adjusting the task assignment between the human operator and automation dynamically. This task reallocation is based on task demands, user capabilities, and system requirements. Another advantage of adaptive over static automation is the ability to reconstruct the task environment in terms of what is automated, how it is automated, what tasks may be shared, and when changes occur \cite{Byrne2006}. However, for these possible regulations to be efficient we require both the operator and the automated system to have sufficient knowledge of each other's current capabilities, performance and state \cite{Byrne2006}.
+As discussed by Byrne et al. (2006), there are three main approaches to address this issue, which either use model-based prediction or continuous measurements to determine the operators current state. In the scope of this thesis we will focus on the latter.
+%In conclusion, adaptive automation provides a significant advantage over static automation. Due to the fact that operator capability is emphasized in the process of maximizing system performance, we see a reduction in monitoring efficiency and an incline job satisfaction levels.
 
 \section{Acknowledgments}
 

@@ -2,29 +2,25 @@
 \BOOKMARK [0][-]{chapter*.2}{Zusammenfassung}{}% 2
 \BOOKMARK [0][-]{chapter*.3}{Declaration}{}% 3
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
-\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.2}{Theoretical Background}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.1.2.1}{Automation}{section.1.2}% 7
-\BOOKMARK [2][-]{subsection.1.2.2}{Neuroergonomics}{section.1.2}% 8
-\BOOKMARK [2][-]{subsection.1.2.3}{Psychophysiology}{section.1.2}% 9
-\BOOKMARK [1][-]{section.1.3}{Acknowledgments}{chapter.1}% 10
-\BOOKMARK [0][-]{chapter.2}{Problem Analysis and Goals}{}% 11
-\BOOKMARK [1][-]{section.2.1}{State of the Art}{chapter.2}% 12
-\BOOKMARK [1][-]{section.2.2}{Recent Advances in Research}{chapter.2}% 13
-\BOOKMARK [0][-]{chapter.3}{Materials and Methods}{}% 14
-\BOOKMARK [1][-]{section.3.1}{Materials}{chapter.3}% 15
-\BOOKMARK [2][-]{subsection.3.1.1}{System Components}{section.3.1}% 16
-\BOOKMARK [2][-]{subsection.3.1.2}{Hardware}{section.3.1}% 17
-\BOOKMARK [1][-]{section.3.2}{Methods}{chapter.3}% 18
-\BOOKMARK [2][-]{subsection.3.2.1}{Experiment}{section.3.2}% 19
-\BOOKMARK [1][-]{section.3.3}{Signal Analysis}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.3.1}{Heart Rate Variability}{section.3.3}% 21
-\BOOKMARK [2][-]{subsection.3.3.2}{GSR}{section.3.3}% 22
-\BOOKMARK [2][-]{subsection.3.3.3}{Temperature}{section.3.3}% 23
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 24
-\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 25
-\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 26
-\BOOKMARK [0][-]{chapter.6}{List of Figures}{}% 27
-\BOOKMARK [0][-]{chapter*.5}{List of Tables}{}% 28
-\BOOKMARK [0][-]{chapter*.6}{List of Abbreviations}{}% 29
-\BOOKMARK [0][-]{chapter*.6}{Bibliography}{}% 30
+\BOOKMARK [1][-]{subsection.1.0.1}{Automation}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.1}{Acknowledgments}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Problem Analysis and Goals}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Theoretical Background}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.2}{Related Work}{chapter.2}% 9
+\BOOKMARK [0][-]{chapter.3}{Materials and Methods}{}% 10
+\BOOKMARK [1][-]{section.3.1}{Materials}{chapter.3}% 11
+\BOOKMARK [2][-]{subsection.3.1.1}{System Components}{section.3.1}% 12
+\BOOKMARK [2][-]{subsection.3.1.2}{Hardware}{section.3.1}% 13
+\BOOKMARK [1][-]{section.3.2}{Methods}{chapter.3}% 14
+\BOOKMARK [2][-]{subsection.3.2.1}{Experiment}{section.3.2}% 15
+\BOOKMARK [1][-]{section.3.3}{Signal Analysis}{chapter.3}% 16
+\BOOKMARK [2][-]{subsection.3.3.1}{Heart Rate Variability}{section.3.3}% 17
+\BOOKMARK [2][-]{subsection.3.3.2}{GSR}{section.3.3}% 18
+\BOOKMARK [2][-]{subsection.3.3.3}{Temperature}{section.3.3}% 19
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 20
+\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 21
+\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 22
+\BOOKMARK [0][-]{chapter.6}{List of Figures}{}% 23
+\BOOKMARK [0][-]{chapter*.5}{List of Tables}{}% 24
+\BOOKMARK [0][-]{chapter*.6}{List of Abbreviations}{}% 25
+\BOOKMARK [0][-]{chapter*.6}{Bibliography}{}% 26
