@@ -21,4 +21,18 @@
   year    = {2018},
 }
 
+@Article{Parasuraman2003,
+  author  = {Parasuraman, R.},
+  title   = {Neuroergonomics: Research and practice},
+  journal = {Theoretical Issues in Ergonomics Science},
+  year    = {2003},
+}
+
+@Book{Clarke2004,
+  author    = {Clarke, S. and Cooper, C. L.},
+  publisher = {Routledge - Taylor and Francis Group. London and New York},
+  title     = {Managing the Risk of Workplace Stress. Health and safety hazards.},
+  year      = {2004},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
