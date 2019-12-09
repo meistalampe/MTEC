@@ -1,4 +1,4 @@
-\begin{thebibliography}{3}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,6 +14,25 @@ R.~Parasuraman.
 E.~A. Byrne and R.~Parasuraman.
 \newblock Psychophyiology and adaptive automation.
 \newblock \emph{Biological Psychology}, 2006.
+
+\bibitem[Mehta and Parasuraman(2013)]{Mehta2013}
+R.~K. Mehta and R.~Parasuraman.
+\newblock Neuroergonomics: a review of applications to physical and cognitive
+  work.
+\newblock \emph{frontiers in Human Neuroscience}, 2013.
+
+\bibitem[Clarke and Cooper(2004)]{Clarke2004}
+S.~Clarke and C.~L. Cooper.
+\newblock \emph{Managing the Risk of Workplace Stress. Health and safety
+  hazards.}
+\newblock Routledge. London and New York, 2004.
+
+\bibitem[Parasuraman and M.(2008)]{Parasuraman2008}
+R.~Parasuraman and Rizzo M.
+\newblock \emph{Neuroergonomics}, volume~3 of \emph{Human-Technology
+  Interaction Series}.
+\newblock Oxford University Press, 2008.
+\newblock ISBN 0195368657, 9780195368659.
 
 \bibitem[Emp()]{e4}
 \emph{E4 wristband from empatica. User's manual}.

@@ -30,9 +30,26 @@
 
 @Book{Clarke2004,
   author    = {Clarke, S. and Cooper, C. L.},
-  publisher = {Routledge - Taylor and Francis Group. London and New York},
+  publisher = {Routledge. London and New York},
   title     = {Managing the Risk of Workplace Stress. Health and safety hazards.},
   year      = {2004},
+}
+
+@Article{Mehta2013,
+  author  = {Mehta, R. K. and Parasuraman, R.},
+  title   = {Neuroergonomics: a review of applications to physical and cognitive work},
+  journal = {frontiers in Human Neuroscience},
+  year    = {2013},
+}
+
+@Book{Parasuraman2008,
+  title     = {Neuroergonomics},
+  publisher = {Oxford University Press},
+  year      = {2008},
+  author    = {Parasuraman, R. and Rizzo M.},
+  volume    = {3},
+  series    = {Human-Technology Interaction Series},
+  isbn      = {0195368657, 9780195368659},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
