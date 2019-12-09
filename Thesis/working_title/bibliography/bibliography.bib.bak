@@ -7,11 +7,11 @@
   url          = {www.empatica.com},
 }
 
-@Article{Byrne2006,
+@Article{Byrne1996,
   author  = {Byrne, E. A. and Parasuraman, R.},
-  journal = {Biological Psychology},
   title   = {Psychophyiology and adaptive automation},
-  year    = {2006},
+  journal = {Biological Psychology},
+  year    = {1996},
 }
 
 @Article{DAddona2018,
