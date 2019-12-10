@@ -1,30 +1,30 @@
-\select@language {english}
+\babel@toc {english}{}
 \contentsline {chapter}{Abstract}{1}{chapter*.1}
 \contentsline {chapter}{Zusammenfassung}{2}{chapter*.2}
 \contentsline {chapter}{Declaration}{3}{chapter*.3}
-\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
-\contentsline {section}{\numberline {1.1}Acknowledgments}{7}{section.1.1}
-\contentsline {chapter}{\numberline {2}Theoretical Background}{8}{chapter.2}
-\contentsline {section}{\numberline {2.1}Psychophysiology}{8}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Theory}{8}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Measures}{8}{subsection.2.1.2}
-\contentsline {chapter}{\numberline {3}Materials and Methods}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Materials}{9}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}System Components}{9}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Hardware}{9}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Methods}{11}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Participants}{11}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Stroop Test}{11}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Visual Stimulation}{11}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Procedure}{11}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Signal Analysis}{13}{subsection.3.2.5}
-\contentsline {subsubsection}{\nonumberline Heart Rate Variability}{13}{section*.5}
-\contentsline {subsubsection}{\nonumberline GSR}{13}{section*.6}
-\contentsline {subsubsection}{\nonumberline Temperature}{13}{section*.7}
-\contentsline {chapter}{\numberline {4}Results}{14}{chapter.4}
-\contentsline {chapter}{\numberline {5}Discussion}{15}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{16}{chapter.6}
-\contentsline {chapter}{List of Figures}{17}{chapter.6}
-\contentsline {chapter}{List of Tables}{18}{chapter*.8}
-\contentsline {chapter}{List of Abbreviations}{18}{chapter*.9}
-\contentsline {chapter}{Bibliography}{19}{chapter*.9}
+\contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}
+\contentsline {section}{\numberline {1.1}Acknowledgments}{8}{section.1.1}
+\contentsline {chapter}{\numberline {2}Theoretical Background}{9}{chapter.2}
+\contentsline {section}{\numberline {2.1}Psychophysiological Framework}{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}Psychophysiological Measures}{9}{section.2.2}
+\contentsline {section}{\numberline {2.3}Photoplethysmography}{10}{section.2.3}
+\contentsline {chapter}{\numberline {3}Materials and Methods}{11}{chapter.3}
+\contentsline {section}{\numberline {3.1}Materials}{11}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}System Components}{11}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Hardware}{11}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Methods}{13}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Participants}{13}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Stroop Test}{13}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Visual Stimulation}{13}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Procedure}{13}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Signal Analysis}{15}{subsection.3.2.5}
+\contentsline {subsubsection}{\nonumberline Heart Rate Variability}{15}{section*.5}
+\contentsline {subsubsection}{\nonumberline GSR}{15}{section*.6}
+\contentsline {subsubsection}{\nonumberline Temperature}{15}{section*.7}
+\contentsline {chapter}{\numberline {4}Results}{16}{chapter.4}
+\contentsline {chapter}{\numberline {5}Discussion}{17}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{18}{chapter.6}
+\contentsline {chapter}{List of Figures}{19}{chapter.6}
+\contentsline {chapter}{List of Tables}{20}{chapter*.8}
+\contentsline {chapter}{List of Abbreviations}{20}{chapter*.9}
+\contentsline {chapter}{Bibliography}{21}{chapter*.9}

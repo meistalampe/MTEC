@@ -18,13 +18,13 @@ The Empatica E4 wristband is a wearable wireless device designed for comfortable
 Figure \ref{e4overview} shows an overview of the entire E4 wristband from either side indicating key attributes as wells as a total of four different sensors that will be discussed briefly in the following:
 
 \begin{itemize}
-\item \textbf{Photoplethysmography (\gls{ppb})} to provide blood volume pulse (\gls{bvp}), from which heart rate, heart rate variability and other cardiovascular features may be derived
-\item \textbf{Electrodermal activity (\gls{eda})} is used to measure sympathetic nervous system arousal and to derive features related to stress, engagement and excitement
+\item \textbf{Photoplethysmography (\gls{ppg})} to provide blood volume pulse (\gls{bvp}), from which heart rate, heart rate variability and other cardiovascular features may be derived
+\item \textbf{Electrodermal activity (\gls{gsr})} is used to measure sympathetic nervous system arousal and to derive features related to stress, engagement and excitement
 \item \textbf{3-Axis accelerometer} to capture motion-based activity
 \item \textbf{Infrared thermopile} for reading skin temperature
 \end{itemize}
 
-As the E4 is intended to be worn on the wrist these sensors are set up in a specific way to provide for optimal use. As can be seen on \ref{e4overview} the majority of the sensors are located on the backside of the main unit not including the \gls{eda}-sensor, which is located on the wristband itself. 
+As the E4 is intended to be worn on the wrist these sensors are set up in a specific way to provide for optimal use. As can be seen on \ref{e4overview} the majority of the sensors are located on the backside of the main unit not including the \gls{gsr}-sensor, which is located on the wristband itself. 
 
 Wearing the E4 wristband is equally intrusive to wearing a watch and therefore providing a high level of convenience compared to other physiologic measures such as electrocardiogram \gls{ecg} or electroencephalogram \gls{eeg}.
 
@@ -72,19 +72,19 @@ from the heart cycle).
 \end{itemize}
 
 \section{Methods}
-\subsection{Experiment}
-\textbf{Participants}
+\subsection{Participants}
 % talk about composition of subject group
-
-\textbf{Paradigm}
+\subsection{Stroop Test}
+\subsection{Visual Stimulation}
+\subsection{Procedure}
 One of the most important parts to this project was the collection of authentic data that could be used later on to develop a reliable classifier for our system. For that reason a experiment, specifically designed to elicit certain emotional and cognitive states in a subject, was conducted. The following section is focused on the procedure applied in this experiment.
 
 The procedure was comprised of a total of five sessions. Every experiment was initiated with a short briefing session. Containing a short questionnaire, covering personal information of the participant as well as habits that may have a influence on the measurement. Further a series of questions, regarding their handedness, use and frequency of use of watches or other wearables was posed, to estimate the additional influence that may be caused by wearing the Empatica E4 wristband.
 Concluding the first session, the participants were given a coarse outline of the experiment covering the structure and a basic description of their responsibilities.
 
-The second session consisted of a baseline measurement used to log the participants form of the day and also to be able to account for environmental influences in the following processing steps. Before the start of the measurement the subject was placed on a chair in front of a monitor (24 inches, Resolution: 1080p) with a approximated distance of 1m. The Empatica E4 was then put on the wrist of the non-dominant hand and secured in a position that caused minimal light leakage to the PPG-sensor and provided optimal contact for the \gls{eda} electrodes. After the participants were comfortable with the device a one minute test sequence was measured to verify the functionality of the system.
+The second session consisted of a baseline measurement used to log the participants form of the day and also to be able to account for environmental influences in the following processing steps. Before the start of the measurement the subject was placed on a chair in front of a monitor (24 inches, Resolution: 1080p) with a approximated distance of 1m. The Empatica E4 was then put on the wrist of the non-dominant hand and secured in a position that caused minimal light leakage to the PPG-sensor and provided optimal contact for the \gls{gsr} electrodes. After the participants were comfortable with the device a one minute test sequence was measured to verify the functionality of the system.
 Consequently the paradigm was displayed on the monitor and the session was started. After reading the instructions, in which the subjects were asked to relax and remain still, and confirmation with the participant the measurement was initiated with a ten second countdown to give some additional time for preparation.
-During the measurement the \gls{eda}, \gls{bvp}, and temperature of the subject were measured for a duration of five minutes.
+During the measurement the \gls{gsr}, \gls{bvp}, and temperature of the subject were measured for a duration of five minutes.
 Afterwards, to conclude the second session, the participants had to give a subjective rating of their current mental state, regarding their stress level, ranging from 1 (completely relaxed) to 10 (stressed out).
 
 The third session was comprised of three separate measurements, two cognitive tasks and a relaxation segment. As before a rating followed the recording. The ratings consisted of a subjective assessment by the subjects regarding their stress level. Additionally subjects had to rate the test difficulty on a scale from 1 (very easy) to 10 (very difficult) for both tasks. 
@@ -112,12 +112,12 @@ The second task consisted of a Stroop-Word-Color test. The test featured 11 diff
 %	\label{e4wearing}
 %\end{figure}
 
-\section{Signal Analysis}
+\subsection{Signal Analysis}
 
 
 
 
-\subsection{Heart Rate Variability}
+\subsubsection{Heart Rate Variability}
 % BVP PRE PROCESSING
 % 	- PEAK DETECTION
 %		- bandpass zero phase filtering
@@ -137,13 +137,13 @@ The second task consisted of a Stroop-Word-Color test. The test featured 11 diff
 % FEATURE EXTRACTION
 % CLASSIFICATION AND EVALUATION
 
-\subsection{GSR}
+\subsubsection{GSR}
 % GSR PRE PROCESSING
 %	- low pass zero phase filtering
 %	- smoothing: moving average filtering
 % FEATURE EXTRACTION
 
-\subsection{Temperature}
+\subsubsection{Temperature}
 % TEMPERATURE PRE PROCESSING
 %	- smoothing: moving average filtering
 % FEATURE EXTRACTION

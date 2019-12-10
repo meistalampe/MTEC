@@ -52,4 +52,18 @@
   isbn      = {0195368657, 9780195368659},
 }
 
+@Book{Kahneman1973,
+  title     = {Attention and Effort},
+  publisher = {Prentice-Hall Inc.},
+  year      = {1973},
+  author    = {Kahneman, D.},
+}
+
+@Article{Allan2007,
+  author  = {Allan, J.},
+  journal = {Physiological Measurement},
+  title   = {Photoplethysmography and its application in clinical physiological measurement},
+  year    = {2007},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
