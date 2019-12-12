@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -33,6 +33,12 @@ R.~Parasuraman and Rizzo M.
   Interaction Series}.
 \newblock Oxford University Press, 2008.
 \newblock ISBN 0195368657, 9780195368659.
+
+\bibitem[Allan(2007)]{Allan2007}
+J.~Allan.
+\newblock Photoplethysmography and its application in clinical physiological
+  measurement.
+\newblock \emph{Physiological Measurement}, 2007.
 
 \bibitem[Emp()]{e4}
 \emph{E4 wristband from empatica. User's manual}.

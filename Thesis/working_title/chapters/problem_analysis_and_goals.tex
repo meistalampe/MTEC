@@ -20,12 +20,26 @@ The most common light sources in PPG produce wavelengths in the red or near infr
 
 The PPG waveform is comprised of two major components. The pulsatile component, often referred to as the "AC" component, possesses a fundamental frequency of approximately 1 Hz, and it represents the increased light attenuation associated with the increase in microvascular blood volume with each heartbeat \cite{Allan2007}. It is superimposed onto the much larger "DC" component, which relates to the tissue and the average blood volume contained in the observation area. Variations in the DC component are slower and caused by respiration, vasomotor activity and vasoconstrictor waves, as well as thermoregulation \cite{Allan2007}.\\ 
 
-[insert: ppg_raw.jpg, source: \cite{Allan2007}]
+%[insert: ppg_raw.jpg, source: \cite{Allan2007}]
 
-Its synchronization with the heart beat makes the AC pulse of the PPG waveform a valuable source of information on heart functions and condition. Based on the appearance of the AC pulse, two phases have been defined, reflecting its two most important properties. The first was labeled as the anacrotic phase and describes the rising edge of the pulse. This part of the waveform is primarily related to the systole. The second phase, that shows the effects of diastole and wave reflections from the periphery of the vascular system, can be observed in the successive falling edge of the pulse. This phase is called catacrotic.
+Its synchronization with the heart beat makes the AC pulse of the PPG waveform a valuable source of information on heart functions and condition. Based on the appearance of the AC pulse, two phases have been defined, reflecting its two most important properties. The first was labeled as the anacrotic phase and describes the rising edge of the pulse. This part of the waveform is primarily related to the systole. The second phase, shows the effects of diastole and wave reflections from the periphery of the vascular system. This phase is called catacrotic and can be observed in the successive falling edge of the pulse. In healthy subjects there usually is an observable dicrotic notch during this phase.
+%[insert: ppg_pw.jpg, source: \cite{Allan2007}]
+\begin{figure}[ht]
+	\centering
+  \includegraphics[width=0.33\textwidth, angle=0]{images/ppg_pw.jpg}
+	\caption{Characteristics of the PPG pulse waveform in relation to the ECG.}
+	\label{ppg_pw}
+\end{figure}
+
+In addition to this coarse classification, a number of key landmarks have been defined to facilitate the analysis of the waveform and the underlying physiology. Depicted in \ref{ppg_pw} are the three main features that are derived from a single pulse. The pulse transit time to the foot (\gls{pttf}), and the pulse transit time to the peak (\gls{pttp}) are defined as the time delay between a heartbeat, indicated by the R-wave of the \gls{ecg}, to the onset and the peak of the subsequent AC pulse, respectively.
+The amplitude of a pulse is determined by the absolute value of the displacement between its foot and its peak.\\
+However, the scale of these characteristics, as well as the overall appearance of the waveform are still subject to change. It is believed that these changes are largely caused by reflection of the pulse wave and the tapering down of the arteries towards the periphery \cite{Allan2007}.\\
+Also, there is a certain susceptibility of PPG to artifacts.
 
 
+Although there have been many features extracted from the pulse wave, such as ..., we are mainly interested in peak to peak distances , as we will extract heart rate variability from it.
 
+\subsection{Heart Rate Variability}
 
 
 
