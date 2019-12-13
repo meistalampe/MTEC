@@ -14,7 +14,9 @@ As the recent work is determined to employ the Empatica E4 wristband, we are lim
 
 \section{Photoplethysmography}
 Photoplethysmography \gls{ppg} is an optical measurement technique, used to detect blood volume changes in the microvascular bed of tissue \cite{Allan2007}. To work PPG only requires a few opto-electronic components. First, a light source is used to illuminate the tissue. Then a photodetector measures the variations in light intensity associated with changes in perfusion in the catchment area. 
-The most common light sources in PPG produce wavelengths in the red or near infrared area. This specific part of the spectrum, also referred to as the optical water window, is chosen for its ability to pass through biological tissue with relative ease. Therefore, influences associated with light-tissue interactions are widely reduced and the measurement of blood flow or volume is facilitated at these wavelengths.\\
+The most common light sources in PPG produce wavelengths in the red or near infrared area. This specific part of the spectrum, also referred to as the optical water window, is chosen for its ability to pass through biological tissue with relative ease. Therefore, influences associated with light-tissue interactions are widely reduced and the measurement of blood flow or volume is facilitated at these wavelengths.
+Even so, because the PPG is representing an average of all blood volume in the arteries, capillaries, and any other tissue through which the light has passed. The
+PPG signal is dependent on the thickness and composition of the tissue beneath the sensor, as well as the position of the source in relation to the receiver of the infrared light \cite{Peper2007}.\\
 
 \subsection{The PPG waveform: characteristics and analysis} 
 
@@ -53,11 +55,12 @@ Another important consideration in the analysis of PPG signals is their suscepti
 This concludes the section on the general waveform morphology and the reasoning for its variations. Lastly, we will take a closer look at the features we derived from the PPG measurement, specifically heart rate, and heart rate variability.
 
 \subsection{Heart Rate Variability}
-Variations in the length of the intervals between consecutive heart beats are called heart rate variability (\gls{hrv}). Typically HRV these inter beat intervals (\gls{ibi}s) are derived from distances between subsequent R-peaks of an ECG. However, they can also be determined using PPG signals. Again \gls{ibi}s are the time periods between the maxima of subsequent AC pulses. A 
-
-what is hrv
-why we use it (task force, automation paper quote)
-features from it (programm code and bachelor thesis, bzw task force)
+Variations in the length of the intervals between consecutive heart beats are called heart rate variability (\gls{hrv}). Typically these inter beat intervals (\gls{ibi}s) are determined by calculating the distance between two subsequent R-peaks of an ECG signal. However, they can also be derived from PPG signals. Again, \gls{ibi}s are the time periods between the maxima of subsequent AC pulses. Since its first appreciation in 1965 HRV experienced a significant increase in popularity due to the apparent ease of derivation from widespread measures, such as ECG and PPG. In 1981, Akselrod et al. introduced power spectral analysis of HRV, contributing to the understanding of its autonomic background by relating the power content of certain frequency bands to sympathetic and parasympathetic activity \cite{TheEuropeanSocietyofCardiology1996}.
+In more recent years the increased interest in the application of psychophysiological measures in the field of adaptive automation led to an extensive discussion on HRV as a candidate measure. Byrne et al. (1996) argued in support of HRV as a possible index for both cognitive effort and compensatory effort. But, they also warned against the negligence of situation-related influences (e.g. the given task environment) in the process of signal interpretation. Thereby, a careless approach could have considerable consequences on the efficacy of adaptive automation.\\
+In addition, the significance and meaning of the many different HRV measures are more complex than generally appreciated and consequently there is a high potential for incorrect conclusions and for excessive or unfounded extrapolation \cite{TheEuropeanSocietyofCardiology1996}.
+In 1996, the European Society of Cardiology and the North American Society of Pacing and Electrophysiology put together a Task Force to address these problem by developing appropriate standards for the acquisition and analysis of HRV.
+These standards remain valid until today and help preserving the integrity of HRV analysis if applied correctly.\\
+Measures of the HRV can be divided into three general groups, the time domain methods, the frequency domain methods and non-linear methods.
 
 %\section{Related Work}
 % outline

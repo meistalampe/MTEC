@@ -2,19 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cceb26c-0173-4b95-b2b1-d5f78585e4fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/abstract.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/abstract.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/introduction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/introduction.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/bibliography/bibliography.bib" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/bibliography/bibliography.bib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/bibliography/bibliography.bib.sav" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/bibliography/bibliography.bib.sav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/problem_analysis_and_goals.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/problem_analysis_and_goals.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.aux" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.glo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.glo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.ist" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.ist" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lof" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lot" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -368,6 +367,7 @@
       <workItem from="1574501147180" duration="15606000" />
       <workItem from="1574699999387" duration="543000" />
       <workItem from="1575061795570" duration="152000" />
+      <workItem from="1576262671588" duration="612000" />
     </task>
     <servers />
   </component>

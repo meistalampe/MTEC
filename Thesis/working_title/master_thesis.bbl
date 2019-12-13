@@ -1,4 +1,4 @@
-\begin{thebibliography}{7}
+\begin{thebibliography}{9}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -39,6 +39,21 @@ J.~Allan.
 \newblock Photoplethysmography and its application in clinical physiological
   measurement.
 \newblock \emph{Physiological Measurement}, 2007.
+
+\bibitem[Peper et~al.(2007)Peper, Harvey, Lin, Tylova, and Moss]{Peper2007}
+E.~Peper, R.~Harvey, I.~Lin, H.~Tylova, and D.~Moss.
+\newblock Is there more to blood volume pulse than heart rate variability,
+  respiratory sinus arrhythmia, and cardiorespiratory synchrony?
+\newblock \emph{Biofeedback}, 2007.
+
+\bibitem[of~The European Society~of Cardiology et~al.(1996)of~The European
+  Society~of Cardiology, of~Pacing, and
+  Electrophysiology]{TheEuropeanSocietyofCardiology1996}
+Task~Force of~The European Society~of Cardiology, The North American~Society
+  of~Pacing, and Electrophysiology.
+\newblock Heart rate variability. standards of measurement, physiological
+  interpretation, and clinical use.
+\newblock \emph{European Heart Journal}, 1996.
 
 \bibitem[Emp()]{e4}
 \emph{E4 wristband from empatica. User's manual}.

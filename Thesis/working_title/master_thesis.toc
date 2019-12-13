@@ -1,4 +1,4 @@
-\babel@toc {english}{}
+\select@language {english}
 \contentsline {chapter}{Abstract}{1}{chapter*.1}
 \contentsline {chapter}{Zusammenfassung}{2}{chapter*.2}
 \contentsline {chapter}{Declaration}{3}{chapter*.3}
@@ -10,23 +10,23 @@
 \contentsline {section}{\numberline {2.3}Photoplethysmography}{10}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}The PPG waveform: characteristics and analysis}{10}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Heart Rate Variability}{12}{subsection.2.3.2}
-\contentsline {chapter}{\numberline {3}Materials and Methods}{14}{chapter.3}
-\contentsline {section}{\numberline {3.1}Materials}{14}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}System Components}{14}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Hardware}{14}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Methods}{16}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Participants}{16}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Stroop Test}{16}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Visual Stimulation}{16}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Procedure}{16}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Signal Analysis}{18}{subsection.3.2.5}
-\contentsline {subsubsection}{\nonumberline Heart Rate Variability}{18}{section*.8}
-\contentsline {subsubsection}{\nonumberline GSR}{18}{section*.9}
-\contentsline {subsubsection}{\nonumberline Temperature}{18}{section*.10}
-\contentsline {chapter}{\numberline {4}Results}{19}{chapter.4}
-\contentsline {chapter}{\numberline {5}Discussion}{20}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{21}{chapter.6}
-\contentsline {chapter}{List of Figures}{22}{chapter.6}
-\contentsline {chapter}{List of Tables}{23}{chapter*.11}
-\contentsline {chapter}{List of Abbreviations}{23}{chapter*.12}
-\contentsline {chapter}{Bibliography}{24}{chapter*.12}
+\contentsline {chapter}{\numberline {3}Materials and Methods}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Materials}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}System Components}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Hardware}{15}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Methods}{17}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Participants}{17}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Stroop Test}{17}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Visual Stimulation}{17}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Procedure}{17}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Signal Analysis}{19}{subsection.3.2.5}
+\contentsline {subsubsection}{\nonumberline Heart Rate Variability}{19}{section*.8}
+\contentsline {subsubsection}{\nonumberline GSR}{19}{section*.9}
+\contentsline {subsubsection}{\nonumberline Temperature}{19}{section*.10}
+\contentsline {chapter}{\numberline {4}Results}{20}{chapter.4}
+\contentsline {chapter}{\numberline {5}Discussion}{21}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{22}{chapter.6}
+\contentsline {chapter}{List of Figures}{23}{chapter.6}
+\contentsline {chapter}{List of Tables}{24}{chapter*.11}
+\contentsline {chapter}{List of Abbreviations}{24}{chapter*.12}
+\contentsline {chapter}{Bibliography}{25}{chapter*.12}
