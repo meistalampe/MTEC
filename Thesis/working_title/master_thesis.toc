@@ -1,4 +1,4 @@
-\select@language {english}
+\babel@toc {english}{}
 \contentsline {chapter}{Abstract}{1}{chapter*.1}
 \contentsline {chapter}{Zusammenfassung}{2}{chapter*.2}
 \contentsline {chapter}{Declaration}{3}{chapter*.3}
@@ -9,7 +9,7 @@
 \contentsline {section}{\numberline {2.2}Psychophysiological Measures}{9}{section.2.2}
 \contentsline {section}{\numberline {2.3}Photoplethysmography}{10}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}The PPG waveform: characteristics and analysis}{10}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Heart Rate and Heart Rate Variability}{12}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.2}Heart Rate Variability}{12}{subsection.2.3.2}
 \contentsline {chapter}{\numberline {3}Materials and Methods}{14}{chapter.3}
 \contentsline {section}{\numberline {3.1}Materials}{14}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}System Components}{14}{subsection.3.1.1}

@@ -42,3 +42,27 @@
 	name={PET},
 	description={Positron Emission Tomography}
 }
+\newglossaryentry{pttf}{
+	name={PTTf},
+	description={Pulse Transit Time to the Foot}
+}
+\newglossaryentry{pttp}{
+	name={PTTp},
+	description={Pulse Transit Time to the Peak}
+}
+\newglossaryentry{hr}{
+	name={HR},
+	description={Heart Rate}
+}
+\newglossaryentry{hrv}{
+	name={HRV},
+	description={Heart Rate Variability}
+}
+\newglossaryentry{ibi}{
+	name={IBI},
+	description={Inter Beat Interval}
+}
+\newglossaryentry{hp}{
+	name={HP},
+	description={Heart Period}
+}
