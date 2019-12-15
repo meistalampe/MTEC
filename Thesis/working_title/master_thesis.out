@@ -2,27 +2,35 @@
 \BOOKMARK [0][-]{chapter*.2}{Zusammenfassung}{}% 2
 \BOOKMARK [0][-]{chapter*.3}{Declaration}{}% 3
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
-\BOOKMARK [1][-]{section.1.1}{Acknowledgments}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{Theoretical Background}{}% 6
-\BOOKMARK [1][-]{section.2.1}{Psychophysiological Framework}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.2}{Psychophysiological Measures}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.3}{Photoplethysmography}{chapter.2}% 9
-\BOOKMARK [2][-]{subsection.2.3.1}{The PPG waveform: characteristics and analysis}{section.2.3}% 10
-\BOOKMARK [2][-]{subsection.2.3.2}{Heart Rate Variability}{section.2.3}% 11
-\BOOKMARK [0][-]{chapter.3}{Materials and Methods}{}% 12
-\BOOKMARK [1][-]{section.3.1}{Materials}{chapter.3}% 13
-\BOOKMARK [2][-]{subsection.3.1.1}{System Components}{section.3.1}% 14
-\BOOKMARK [2][-]{subsection.3.1.2}{Hardware}{section.3.1}% 15
-\BOOKMARK [1][-]{section.3.2}{Methods}{chapter.3}% 16
-\BOOKMARK [2][-]{subsection.3.2.1}{Participants}{section.3.2}% 17
-\BOOKMARK [2][-]{subsection.3.2.2}{Stroop Test}{section.3.2}% 18
-\BOOKMARK [2][-]{subsection.3.2.3}{Visual Stimulation}{section.3.2}% 19
-\BOOKMARK [2][-]{subsection.3.2.4}{Procedure}{section.3.2}% 20
-\BOOKMARK [2][-]{subsection.3.2.5}{Signal Analysis}{section.3.2}% 21
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 22
-\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 23
-\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 24
-\BOOKMARK [0][-]{chapter.6}{List of Figures}{}% 25
-\BOOKMARK [0][-]{chapter*.11}{List of Tables}{}% 26
-\BOOKMARK [0][-]{chapter*.12}{List of Abbreviations}{}% 27
-\BOOKMARK [0][-]{chapter*.12}{Bibliography}{}% 28
+\BOOKMARK [1][-]{section.1.1}{Introduction to the Field}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.2}{Theoretical Background}{chapter.1}% 6
+\BOOKMARK [2][-]{subsection.1.2.1}{Psychophysiology}{section.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.2.2}{Psychophysiological Framework}{section.1.2}% 8
+\BOOKMARK [1][-]{section.1.3}{Psychophysiological Measures}{chapter.1}% 9
+\BOOKMARK [1][-]{section.1.4}{Photoplethysmography}{chapter.1}% 10
+\BOOKMARK [2][-]{subsection.1.4.1}{The PPG waveform: characteristics and analysis}{section.1.4}% 11
+\BOOKMARK [2][-]{subsection.1.4.2}{Heart Rate Variability}{section.1.4}% 12
+\BOOKMARK [1][-]{section.1.5}{Machine Learning Techniques}{chapter.1}% 13
+\BOOKMARK [2][-]{subsection.1.5.1}{K-NN Classifier}{section.1.5}% 14
+\BOOKMARK [2][-]{subsection.1.5.2}{Support Vector Machine}{section.1.5}% 15
+\BOOKMARK [2][-]{subsection.1.5.3}{Decision Trees}{section.1.5}% 16
+\BOOKMARK [2][-]{subsection.1.5.4}{Multi Layer Perceptron}{section.1.5}% 17
+\BOOKMARK [1][-]{section.1.6}{Acknowledgments}{chapter.1}% 18
+\BOOKMARK [0][-]{chapter.2}{Aims, Objectives and Scope}{}% 19
+\BOOKMARK [0][-]{chapter.3}{Materials and Methods}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Materials}{chapter.3}% 21
+\BOOKMARK [2][-]{subsection.3.1.1}{System Components}{section.3.1}% 22
+\BOOKMARK [2][-]{subsection.3.1.2}{Hardware}{section.3.1}% 23
+\BOOKMARK [1][-]{section.3.2}{Methods}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.2.1}{Participants}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.2}{Stroop Test}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.3}{Visual Stimulation}{section.3.2}% 27
+\BOOKMARK [2][-]{subsection.3.2.4}{Procedure}{section.3.2}% 28
+\BOOKMARK [2][-]{subsection.3.2.5}{Signal Analysis}{section.3.2}% 29
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 30
+\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 31
+\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 32
+\BOOKMARK [0][-]{chapter.6}{List of Figures}{}% 33
+\BOOKMARK [0][-]{chapter*.11}{List of Tables}{}% 34
+\BOOKMARK [0][-]{chapter*.12}{List of Abbreviations}{}% 35
+\BOOKMARK [0][-]{chapter*.12}{Bibliography}{}% 36
