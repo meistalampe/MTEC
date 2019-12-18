@@ -73,4 +73,33 @@
   year    = {1996},
 }
 
+@Article{Peper2007,
+  author  = {Peper, E. and Harvey, R. and Lin, I. and Tylova, H. and Moss, D.},
+  title   = {Is There More to Blood Volume Pulse Than Heart Rate Variability, Respiratory Sinus Arrhythmia, and Cardiorespiratory Synchrony?},
+  journal = {Biofeedback},
+  year    = {2007},
+}
+
+@Misc{,
+  title        = {What is Machine Learning? A definition},
+  howpublished = {Blog, Machine Learning},
+  month        = mar,
+  year         = {2017},
+  url          = {https://expertsystem.com/machine-learning-definition/},
+}
+
+@Article{Wu2008,
+  author  = {Wu, X. and Kumar, V. and Quinlan, J. R. and Gosh, J. and Yang, Q. and Motoda, H. and McLachlan, G. J. and Ng, A. and Liu, B. and Yu, P. S. and Zhou, Z.-H. and Steinbach, M. and Hand, D. J. and Steinberg, D.},
+  title   = {Top 10 algorithms in data mining},
+  journal = {Knowl Inf Syst},
+  year    = {2008},
+}
+
+@Book{Mueller2017,
+  title     = {Einführung in Machine Learning mit Python. Praxiswissen Data Science},
+  publisher = {O'Reilly},
+  year      = {2017},
+  author    = {Müller, A. C. and Guido, S.},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
