@@ -10,27 +10,30 @@
 \BOOKMARK [1][-]{section.1.4}{Photoplethysmography}{chapter.1}% 10
 \BOOKMARK [2][-]{subsection.1.4.1}{The PPG waveform: characteristics and analysis}{section.1.4}% 11
 \BOOKMARK [2][-]{subsection.1.4.2}{Heart Rate Variability}{section.1.4}% 12
-\BOOKMARK [1][-]{section.1.5}{Machine Learning Techniques}{chapter.1}% 13
-\BOOKMARK [2][-]{subsection.1.5.1}{K-NN Classifier}{section.1.5}% 14
-\BOOKMARK [2][-]{subsection.1.5.2}{Support Vector Machine}{section.1.5}% 15
-\BOOKMARK [2][-]{subsection.1.5.3}{Decision Trees}{section.1.5}% 16
-\BOOKMARK [2][-]{subsection.1.5.4}{Multi Layer Perceptron}{section.1.5}% 17
-\BOOKMARK [1][-]{section.1.6}{Acknowledgments}{chapter.1}% 18
-\BOOKMARK [0][-]{chapter.2}{Aims, Objectives and Scope}{}% 19
-\BOOKMARK [0][-]{chapter.3}{Materials and Methods}{}% 20
-\BOOKMARK [1][-]{section.3.1}{Materials}{chapter.3}% 21
-\BOOKMARK [2][-]{subsection.3.1.1}{System Components}{section.3.1}% 22
-\BOOKMARK [2][-]{subsection.3.1.2}{Hardware}{section.3.1}% 23
-\BOOKMARK [1][-]{section.3.2}{Methods}{chapter.3}% 24
-\BOOKMARK [2][-]{subsection.3.2.1}{Participants}{section.3.2}% 25
-\BOOKMARK [2][-]{subsection.3.2.2}{Stroop Test}{section.3.2}% 26
-\BOOKMARK [2][-]{subsection.3.2.3}{Visual Stimulation}{section.3.2}% 27
-\BOOKMARK [2][-]{subsection.3.2.4}{Procedure}{section.3.2}% 28
-\BOOKMARK [2][-]{subsection.3.2.5}{Signal Analysis}{section.3.2}% 29
-\BOOKMARK [0][-]{chapter.4}{Results}{}% 30
-\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 31
-\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 32
-\BOOKMARK [0][-]{chapter.6}{List of Figures}{}% 33
-\BOOKMARK [0][-]{chapter*.11}{List of Tables}{}% 34
-\BOOKMARK [0][-]{chapter*.12}{List of Abbreviations}{}% 35
-\BOOKMARK [0][-]{chapter*.12}{Bibliography}{}% 36
+\BOOKMARK [1][-]{section.1.5}{Machine Learning}{chapter.1}% 13
+\BOOKMARK [2][-]{subsection.1.5.1}{Algorithm Selection}{section.1.5}% 14
+\BOOKMARK [2][-]{subsection.1.5.2}{k-NN Classifier}{section.1.5}% 15
+\BOOKMARK [2][-]{subsection.1.5.3}{Support Vector Machine}{section.1.5}% 16
+\BOOKMARK [2][-]{subsection.1.5.4}{Decision Trees}{section.1.5}% 17
+\BOOKMARK [2][-]{subsection.1.5.5}{Multi Layer Perceptron}{section.1.5}% 18
+\BOOKMARK [1][-]{section.1.6}{Acknowledgments}{chapter.1}% 19
+\BOOKMARK [0][-]{chapter.2}{Problem Analysis and Goals}{}% 20
+\BOOKMARK [1][-]{section.2.1}{Aim, Objective, and Goals}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.2}{Research Questions}{chapter.2}% 22
+\BOOKMARK [0][-]{chapter.3}{Materials and Methods}{}% 23
+\BOOKMARK [1][-]{section.3.1}{Materials}{chapter.3}% 24
+\BOOKMARK [2][-]{subsection.3.1.1}{System Components}{section.3.1}% 25
+\BOOKMARK [2][-]{subsection.3.1.2}{Hardware}{section.3.1}% 26
+\BOOKMARK [1][-]{section.3.2}{Methods}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.2.1}{Participants}{section.3.2}% 28
+\BOOKMARK [2][-]{subsection.3.2.2}{Stroop Test}{section.3.2}% 29
+\BOOKMARK [2][-]{subsection.3.2.3}{Visual Stimulation}{section.3.2}% 30
+\BOOKMARK [2][-]{subsection.3.2.4}{Procedure}{section.3.2}% 31
+\BOOKMARK [2][-]{subsection.3.2.5}{Signal Analysis}{section.3.2}% 32
+\BOOKMARK [0][-]{chapter.4}{Results}{}% 33
+\BOOKMARK [0][-]{chapter.5}{Discussion}{}% 34
+\BOOKMARK [0][-]{chapter.6}{Conclusions and Future Work}{}% 35
+\BOOKMARK [0][-]{chapter.6}{List of Figures}{}% 36
+\BOOKMARK [0][-]{chapter*.11}{List of Tables}{}% 37
+\BOOKMARK [0][-]{chapter*.12}{List of Abbreviations}{}% 38
+\BOOKMARK [0][-]{chapter*.12}{Bibliography}{}% 39

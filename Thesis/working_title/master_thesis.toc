@@ -1,40 +1,43 @@
-\babel@toc {english}{}
+\select@language {english}
 \contentsline {chapter}{Abstract}{1}{chapter*.1}
 \contentsline {chapter}{Zusammenfassung}{2}{chapter*.2}
 \contentsline {chapter}{Declaration}{3}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{6}{chapter.1}
 \contentsline {section}{\numberline {1.1}Introduction to the Field}{6}{section.1.1}
-\contentsline {section}{\numberline {1.2}Theoretical Background}{9}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Psychophysiology}{9}{subsection.1.2.1}
+\contentsline {section}{\numberline {1.2}Theoretical Background}{8}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Psychophysiology}{8}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}Psychophysiological Framework}{9}{subsection.1.2.2}
 \contentsline {section}{\numberline {1.3}Psychophysiological Measures}{9}{section.1.3}
 \contentsline {section}{\numberline {1.4}Photoplethysmography}{10}{section.1.4}
 \contentsline {subsection}{\numberline {1.4.1}The PPG waveform: characteristics and analysis}{10}{subsection.1.4.1}
 \contentsline {subsection}{\numberline {1.4.2}Heart Rate Variability}{12}{subsection.1.4.2}
-\contentsline {section}{\numberline {1.5}Machine Learning Techniques}{13}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}K-NN Classifier}{13}{subsection.1.5.1}
-\contentsline {subsection}{\numberline {1.5.2}Support Vector Machine}{13}{subsection.1.5.2}
-\contentsline {subsection}{\numberline {1.5.3}Decision Trees}{13}{subsection.1.5.3}
-\contentsline {subsection}{\numberline {1.5.4}Multi Layer Perceptron}{13}{subsection.1.5.4}
-\contentsline {section}{\numberline {1.6}Acknowledgments}{13}{section.1.6}
-\contentsline {chapter}{\numberline {2}Aims, Objectives and Scope}{15}{chapter.2}
-\contentsline {chapter}{\numberline {3}Materials and Methods}{16}{chapter.3}
-\contentsline {section}{\numberline {3.1}Materials}{16}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}System Components}{16}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Hardware}{16}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Methods}{18}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Participants}{18}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Stroop Test}{18}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Visual Stimulation}{18}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Procedure}{18}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Signal Analysis}{20}{subsection.3.2.5}
-\contentsline {subsubsection}{\nonumberline Heart Rate Variability}{20}{section*.8}
-\contentsline {subsubsection}{\nonumberline GSR}{20}{section*.9}
-\contentsline {subsubsection}{\nonumberline Temperature}{20}{section*.10}
-\contentsline {chapter}{\numberline {4}Results}{21}{chapter.4}
-\contentsline {chapter}{\numberline {5}Discussion}{22}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{23}{chapter.6}
-\contentsline {chapter}{List of Figures}{24}{chapter.6}
-\contentsline {chapter}{List of Tables}{25}{chapter*.11}
-\contentsline {chapter}{List of Abbreviations}{25}{chapter*.12}
-\contentsline {chapter}{Bibliography}{26}{chapter*.12}
+\contentsline {section}{\numberline {1.5}Machine Learning}{13}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Algorithm Selection}{14}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}k-NN Classifier}{14}{subsection.1.5.2}
+\contentsline {subsection}{\numberline {1.5.3}Support Vector Machine}{14}{subsection.1.5.3}
+\contentsline {subsection}{\numberline {1.5.4}Decision Trees}{14}{subsection.1.5.4}
+\contentsline {subsection}{\numberline {1.5.5}Multi Layer Perceptron}{15}{subsection.1.5.5}
+\contentsline {section}{\numberline {1.6}Acknowledgments}{15}{section.1.6}
+\contentsline {chapter}{\numberline {2}Problem Analysis and Goals}{17}{chapter.2}
+\contentsline {section}{\numberline {2.1}Aim, Objective, and Goals}{17}{section.2.1}
+\contentsline {section}{\numberline {2.2}Research Questions}{17}{section.2.2}
+\contentsline {chapter}{\numberline {3}Materials and Methods}{18}{chapter.3}
+\contentsline {section}{\numberline {3.1}Materials}{18}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}System Components}{18}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Hardware}{18}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Methods}{20}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Participants}{20}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Stroop Test}{20}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Visual Stimulation}{20}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Procedure}{20}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Signal Analysis}{22}{subsection.3.2.5}
+\contentsline {subsubsection}{\nonumberline Heart Rate Variability}{22}{section*.8}
+\contentsline {subsubsection}{\nonumberline GSR}{22}{section*.9}
+\contentsline {subsubsection}{\nonumberline Temperature}{22}{section*.10}
+\contentsline {chapter}{\numberline {4}Results}{23}{chapter.4}
+\contentsline {chapter}{\numberline {5}Discussion}{24}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusions and Future Work}{25}{chapter.6}
+\contentsline {chapter}{List of Figures}{26}{chapter.6}
+\contentsline {chapter}{List of Tables}{27}{chapter*.11}
+\contentsline {chapter}{List of Abbreviations}{27}{chapter*.12}
+\contentsline {chapter}{Bibliography}{28}{chapter*.12}

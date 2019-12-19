@@ -1,4 +1,4 @@
-\begin{thebibliography}{9}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -54,6 +54,14 @@ Task~Force of~The European Society~of Cardiology, The North American~Society
 \newblock Heart rate variability. standards of measurement, physiological
   interpretation, and clinical use.
 \newblock \emph{European Heart Journal}, 1996.
+
+\bibitem[Wu et~al.(2008)Wu, Kumar, Quinlan, Gosh, Yang, Motoda, McLachlan, Ng,
+  Liu, Yu, Zhou, Steinbach, Hand, and Steinberg]{Wu2008}
+X.~Wu, V.~Kumar, J.~R. Quinlan, J.~Gosh, Q.~Yang, H.~Motoda, G.~J. McLachlan,
+  A.~Ng, B.~Liu, P.~S. Yu, Z.-H. Zhou, M.~Steinbach, D.~J. Hand, and
+  D.~Steinberg.
+\newblock Top 10 algorithms in data mining.
+\newblock \emph{Knowl Inf Syst}, 2008.
 
 \bibitem[Emp()]{e4}
 \emph{E4 wristband from empatica. User's manual}.

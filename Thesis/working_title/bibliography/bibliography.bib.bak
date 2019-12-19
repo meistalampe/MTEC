@@ -102,4 +102,13 @@
   author    = {Müller, A. C. and Guido, S.},
 }
 
+@InBook{Buddeberg2004,
+  chapter   = {Psychophysiologie},
+  pages     = {pp 447-498},
+  title     = {Psychosoziale Medizin},
+  publisher = {Springer, Berlin, Heidelberg},
+  year      = {2004},
+  author    = {Buddeberg, C. and von Känel, R. and Laederach, K.},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
