@@ -691,7 +691,8 @@ def main():
                     'C': [0.001, 0.01, 0.1, 1, 10, 100, 150, 200],
                     'gamma': [0.0001, 0.001, 0.01, 0.1, 1, 10, 50, 100]},
                    {'kernel': ['linear'],
-                   'C': [0.001, 0.01, 0.1, 1, 10, 100]}]
+                   'C': [0.001, 0.01, 0.1, 1, 10, 100]},
+                   ]
 
     appendices = ['', '_no_ma', '_no_zf', '_bvp_sel_only', '_bvp_only', '_gsr_only', '_temp_only']
     for k in [3, 5]:
@@ -832,7 +833,7 @@ def main():
                                'ConfusionMatrix': svc_confusion_matrix,
                                'Evaluation Metrics': svc_eval,
                                })
-        svc_df.to_excel('svc_{}.xlsx'.format(k), sheet_name='sheet1', index=False)
+        svc_df.to_excel('svc_poly_{}.xlsx'.format(k), sheet_name='sheet1', index=False)
 
     # # --- Random Forest --- #
     # # Set parameter grid for gridsearch
