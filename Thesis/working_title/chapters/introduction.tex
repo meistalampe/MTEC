@@ -88,8 +88,26 @@ Measures of the HRV can be divided into three general groups, the time domain me
 Of the three, time measures are perhaps the simplest to perform. These methods either determine the heart rate at any point in time or the intervals between successive normal complexes (in our case inter beat intervals) to calculate a series of statistical, and geometrical variables \cite{TheEuropeanSocietyofCardiology1996}. 
 Statistical methods can be divided into two classes: those that are derived form direct measurements of inter beat intervals or instantaneous heart rate, and those derived from difference in inter beat intervals. Geometrical methods on the other hand, convert a series of \gls{ibi} into a geometric pattern, such as the sample density distribution
 of \gls{ibi} duration, sample density distribution of differences between adjacent \gls{ibi}, Lorenz plot of \gls{ibi}, etc., and then use a simple
-formula which judges the variability based on the geometric and/or graphic properties of the resulting pattern \cite{TheEuropeanSocietyofCardiology1996}.
-
+formula which judges the variability based on the geometric and/or graphic properties of the resulting pattern\cite{TheEuropeanSocietyofCardiology1996}. Figure \ref{tdf} shows a variety of time-domain measures of HRV that have been recommended by the Task Force of The European Society of Cardiology.
+%[insert: SelectedTimeDomainMeasures.jpg, source: \cite{Allan2007}]
+\begin{figure}[ht]
+	\centering
+  \includegraphics[width=0.5\textwidth, angle=0]{imagesSelectedTimeDomainMeasures.jpg}
+	\caption[Selected time-domain measures of HRV]{Summary of recommended time-domain measures \cite{TheEuropeanSocietyofCardiology1996}. }
+	\label{tdf}
+\end{figure}
+Other common methods of HRV measures involve frequency-domain methods. By the means of power spectral density (\gls{psd}) analysis, these methods provide basic information on power distribution (i.e. variance) as a function of frequency. There are two ways to calculate \gls{psd}, non-parametric and parametric methods, both of which provide comparable results. In most cases non-parametric methods offer easier and faster calculation, whereas parametric methods, if applied correctly, can provide smoother spectral components which can be distinguished independently of pre-selected frequency bands. There are three main spectral components that are distinguished in a spectrum calculated from short-term
+recordings of 2 to 5 min: very low frequency (VLF), low frequency (LF), and high frequency (HF) components \cite{TheEuropeanSocietyofCardiology1996}. The distribution of the power and the central frequency of LF and HF are subject to changes in autonomic modulations of the heart period and therefore widely used measures in emotion recognition. 
+%[insert: SelectedFrequencyDomainMeasures.jpg, source: \cite{Allan2007}]
+\begin{figure}[ht]
+	\centering
+  \includegraphics[width=0.5\textwidth, angle=0]{imagesSelectedFrequencyDomainMeasures.jpg}
+	\caption[Selected frequency-domain measures of HRV]{Summary of recommended frequency-domain measures \cite{TheEuropeanSocietyofCardiology1996}. }
+	\label{tdf}
+\end{figure}
+Finally, we will have a look at non-linear methods. Although, the utility of these methods is still discussed by researchers, they are believed to provide valuable information for the physiological interpretation of HRV. Non-linear measures reflect the complex interactions of haemodynamic, electrophysiological and humoral variables, as well as autonomic and central
+nervous regulations involved in the genesis of HRV. At the moment, non-linear methods are speculated to be potentially promising tools for HRV assessment, but standards are lacking and the full scope of these methods
+cannot be assessed.
 
 \section{Machine Learning}
 Machine learning is a scientific study revolving around the development of algorithms and statistical models that provide computer systems with the ability to automatically learn and improve without being explicitly programmed. Machine learning techniques are commonly categorized as either supervised or unsupervised. This distinction is based on the type of input and output data they use as well as the type of problem they are intended to solve. Supervised learning algorithms require a set of data that contains both the inputs and the desired outputs to a certain problem. Based on this data, often referred to as training data, supervised algorithms derive a function that can be used to predict the output associated with new inputs. Supervised learning algorithms are generally used to solve classification and regression tasks. In contrast unsupervised learning algorithms are able to function on datasets that do not provide any output at all. They attempt to find a structure in the training data, by identifying commonalities. Based on the absence or presence of these similarities in new data they are then able to make predictions. 
