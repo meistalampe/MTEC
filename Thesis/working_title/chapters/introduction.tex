@@ -1,6 +1,6 @@
 
 % Introduction
-In this chapter we will introduce the role of neuroergonomics in adaptive automation work environments and look at some of the problems that led to the current state of the field. 
+In this chapter we will introduce the role of neuroergonomics in adaptive automation work environments and look at some of the problems that led to the current state of the field. Additionally, we will provide background information  on crucial topics, such as psychophysiological measures, machine learning techniques, and emotion classification.
 
 \section{Introduction to the Field}
 Neuroergonomics is often described as the study of brain and behavior at work. As the name suggests, neuroergonomics is comprised of two disciplines, neuroscience and ergonomics (also known as human factors). Neuroscience is concerned with the structure and the function of the brain. It is a highly interdisciplinary body of research spanning disciplines such as physiology, psychology, medicine, computer science, or mathematics. Human factors on the other hand is focused on examining the human use technology at work or other real-world settings. As the intersection of these two fields, neuroergonomics addresses both the brain and humans at work, but even more so their dynamic interaction \cite{Parasuraman2003}
@@ -77,13 +77,19 @@ Another important consideration in the analysis of PPG signals is their suscepti
 
 This concludes the section on the general waveform morphology and the reasoning for its variations. Lastly, we will take a closer look at the features we derived from the PPG measurement, specifically heart rate, and heart rate variability.
 
-\subsubsection{Heart Rate Variability}
+\subsection{Heart Rate Variability}
 Variations in the length of the intervals between consecutive heart beats are called heart rate variability (\gls{hrv}). Typically these inter beat intervals (\gls{ibi}s) are determined by calculating the distance between two subsequent R-peaks of an ECG signal. However, they can also be derived from PPG signals. Again, \gls{ibi}s are the time periods between the maxima of subsequent AC pulses. Since its first appreciation in 1965 HRV experienced a significant increase in popularity due to the apparent ease of derivation from widespread measures, such as ECG and PPG. In 1981, Akselrod et al. introduced power spectral analysis of HRV, contributing to the understanding of its autonomic background by relating the power content of certain frequency bands to sympathetic and parasympathetic activity \cite{TheEuropeanSocietyofCardiology1996}.
 In more recent years the increased interest in the application of psychophysiological measures in the field of adaptive automation led to an extensive discussion on HRV as a candidate measure. Byrne et al. (1996) argued in support of HRV as a possible index for both cognitive effort and compensatory effort. But, they also warned against the negligence of situation-related influences (e.g. the given task environment) in the process of signal interpretation. Thereby, a careless approach could have considerable consequences on the efficacy of adaptive automation.\\
 In addition, the significance and meaning of the many different HRV measures are more complex than generally appreciated and consequently there is a high potential for incorrect conclusions and for excessive or unfounded extrapolation \cite{TheEuropeanSocietyofCardiology1996}.
-In 1996, the European Society of Cardiology and the North American Society of Pacing and Electrophysiology put together a Task Force to address these problem by developing appropriate standards for the acquisition and analysis of HRV.
+In 1996, the European Society of Cardiology and the North American Society of Pacing and Electrophysiology put together a Task Force to address this problem by developing appropriate standards for the acquisition and analysis of HRV.
 These standards remain valid until today and help preserving the integrity of HRV analysis if applied correctly.\\
-Measures of the HRV can be divided into three general groups, the time domain methods, the frequency domain methods and non-linear methods.
+Measures of the HRV can be divided into three general groups, the time domain methods, the frequency domain methods and non-linear methods. 
+\subsubsection{HRV Measures}
+Of the three, time measures are perhaps the simplest to perform. These methods either determine the heart rate at any point in time or the intervals between successive normal complexes (in our case inter beat intervals) to calculate a series of statistical, and geometrical variables \cite{TheEuropeanSocietyofCardiology1996}. 
+Statistical methods can be divided into two classes: those that are derived form direct measurements of inter beat intervals or instantaneous heart rate, and those derived from difference in inter beat intervals. Geometrical methods on the other hand, convert a series of \gls{ibi} into a geometric pattern, such as the sample density distribution
+of \gls{ibi} duration, sample density distribution of differences between adjacent \gls{ibi}, Lorenz plot of \gls{ibi}, etc., and then use a simple
+formula which judges the variability based on the geometric and/or graphic properties of the resulting pattern \cite{TheEuropeanSocietyofCardiology1996}.
+
 
 \section{Machine Learning}
 Machine learning is a scientific study revolving around the development of algorithms and statistical models that provide computer systems with the ability to automatically learn and improve without being explicitly programmed. Machine learning techniques are commonly categorized as either supervised or unsupervised. This distinction is based on the type of input and output data they use as well as the type of problem they are intended to solve. Supervised learning algorithms require a set of data that contains both the inputs and the desired outputs to a certain problem. Based on this data, often referred to as training data, supervised algorithms derive a function that can be used to predict the output associated with new inputs. Supervised learning algorithms are generally used to solve classification and regression tasks. In contrast unsupervised learning algorithms are able to function on datasets that do not provide any output at all. They attempt to find a structure in the training data, by identifying commonalities. Based on the absence or presence of these similarities in new data they are then able to make predictions. 
@@ -124,54 +130,10 @@ The input layer is the leftmost layer of the network. It consists of a set of pe
 \gls{mlp} allow for complex models that capable of handling large datasets. However, a high complexity comes at the price of a high sensitivity to parameter changes, and data scaling methods, as well as longer training times. 
 
 \section{Classification of Emotion}
-(wiki) emotion classification
-Emotion classification, the means by which one may distinguish one emotion from another, is a contested issue in emotion research and in affective science. Researchers have approached the classification of emotions from one of two fundamental viewpoints:
+The means by which emotions can be distinguished from one another are called emotion classification. Over the last couple of decades this has been a strongly contested topic in emotion research and in affective science. One prominent approach to emotion classification, that has been widely accepted to this date, are dimensional models. Dimensional models of emotion attempt to characterize human emotions by determining their position in a two, or sometimes three dimensional space. After years of debate about the identity of these dimension two measures have claimed their place in most emotion models. Usually, the dimensions include some measure of valence or pleasantness and some measure of intensity or arousal \cite{Rubin2009}. For our work we employed the circumplex model by J. Russel (1980), one of the most prominent two-dimensional models for emotion classification. According to this model emotions are distributed in a two-dimensional circular space. The model space is represented by arousal (on the vertical axis) and valence (on the horizontal axis) and is centered on medium arousal and neutral valence. This allows for the possibility of emotions, or emotional stimuli that have high arousal and neutral valence (e.g. astonished, exited) \cite{Rubin2009} which separates the circumplex model from the rest of the two-dimensional models.
 
-    that emotions are discrete and fundamentally different constructs
-    that emotions can be characterized on a dimensional basis in groupings
-    
-For both theoretical and practical reasons researchers define emotions according to one or more dimensions. Wilhelm Max Wundt, the father of modern psychology, proposed in 1897 that emotions can be described by three dimensions: "pleasurable versus unpleasurable", "arousing or subduing" and "strain or relaxation".[6] In 1954 Harold Schlosberg named three dimensions of emotion: "pleasantness–unpleasantness", "attention–rejection" and "level of activation".[7]
-
-Dimensional models of emotion attempt to conceptualize human emotions by defining where they lie in two or three dimensions. Most dimensional models incorporate valence and arousal or intensity dimensions. Dimensional models of emotion suggest that a common and interconnected neurophysiological system is responsible for all affective states.[8] These models contrast theories of basic emotion, which propose that different emotions arise from separate neural systems.[8] Several dimensional models of emotion have been developed, though there are just a few that remain as the dominant models currently accepted by most.[9] The two-dimensional models that are most prominent are the circumplex model, the vector model, and the Positive Activation – Negative Activation (PANA) model.[9]
-Circumplex model
-
-The circumplex model of emotion was developed by James Russell.[10] This model suggests that emotions are distributed in a two-dimensional circular space, containing arousal and valence dimensions. Arousal represents the vertical axis and valence represents the horizontal axis, while the center of the circle represents a neutral valence and a medium level of arousal.[9] In this model, emotional states can be represented at any level of valence and arousal, or at a neutral level of one or both of these factors. Circumplex models have been used most commonly to test stimuli of emotion words, emotional facial expressions, and affective states.[11]
-
-Russell and Lisa Feldman Barrett describe their modified circumplex model as representative of core affect, or the most elementary feelings that are not necessarily directed toward anything. Different prototypical emotional episodes, or clear emotions that are evoked or directed by specific objects, can be plotted on the circumplex, according to their levels of arousal and pleasure.[12]
-
-Trnka et al. (2016) pointed out "the reductionist nature of the two-dimensional paradigm in the psychological theory of emotions and challenge the circumplex model” and constructed a 3D hypercube-projection.[13] 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\subsection{Emotion Elicitation}
+The American Psychological Association defines emotions as complex reaction patterns, involving experiential, behavioral, and physiological elements, by which an individual attempts to deal with a personally significant matter or event. The specific quality of an emotion, such as fear or shame, is determined by the specific significance of the event. For example, if the significance involves threat, fear is likely to be generated; if the significance involves disapproval from another person, shame is likely to be generated. Emotion typically involves feeling but differs from feeling in having an overt or implicit engagement with the world. This suggests that emotions can be elicited by using appropriate stimuli. In general, there are two types of stimuli in emotion elicitation are visual stimuli (e.g. pictures or films) and acoustic stimuli (e.g. sounds, speech, music) that are widely accepted in psychology and emotion research. During our experiments we attempted to elicit emotions by displaying images, which is one of the most practiced methods in the elicitation of emotional and affective states. As stimuli we used a selected subset of the International Affective Picture System (\gls{iaps}).
 
 
 %\section{Motivation}

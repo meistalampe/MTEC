@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{12}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -62,6 +62,21 @@ X.~Wu, V.~Kumar, J.~R. Quinlan, J.~Gosh, Q.~Yang, H.~Motoda, G.~J. McLachlan,
   D.~Steinberg.
 \newblock Top 10 algorithms in data mining.
 \newblock \emph{Knowl Inf Syst}, 2008.
+
+\bibitem[Pedregosa et~al.(2011)Pedregosa, Varoquaux, Gramfort, Michel, Thirion,
+  Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
+  Cournapeau, Brucher, Perrot, and Duchesnay]{Pedregosa2011}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock \emph{Journal of Machine Learning Research}, 2011.
+
+\bibitem[Rubin and Talarico(2009)]{Rubin2009}
+D.~C. Rubin and J.~M. Talarico.
+\newblock A comparison of dimensional models of emotion: Evidence fromemotions,
+  prototypical events, autobiographical memories, andwords.
+\newblock \emph{Memory}, 2009.
 
 \bibitem[Emp()]{e4}
 \emph{E4 wristband from empatica. User's manual}.

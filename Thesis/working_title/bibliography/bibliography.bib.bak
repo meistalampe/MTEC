@@ -126,4 +126,25 @@
   volume  = {50},
 }
 
+@Article{Rubin2009,
+  author  = {Rubin, D. C. and Talarico, J. M.},
+  title   = {A Comparison of Dimensional Models of Emotion: Evidence fromEmotions, Prototypical Events, Autobiographical Memories, andWords},
+  journal = {Memory},
+  year    = {2009},
+}
+
+@Article{Russell1980,
+  author  = {Russell, J. A.},
+  title   = {A Circumplex Model of Affect},
+  journal = {Journal of Personality and Social Psychology},
+  year    = {1980},
+}
+
+@Article{Remington2000,
+  author  = {Remington, N. A. and Fabrigar, L. R. and Visser, P. S.},
+  title   = {Reexamining the Circumplex Model of Affect},
+  journal = {Journal of Personality and Social Psychology},
+  year    = {2000},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}
