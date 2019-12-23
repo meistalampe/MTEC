@@ -147,4 +147,19 @@
   year    = {2000},
 }
 
+@Misc{,
+  title  = {APA Dictionary of Psychology.},
+  year   = {2019},
+  groups = {American Psychological Association},
+  url    = {https://dictionary.apa.org/emotion},
+}
+
+@TechReport{Lang2008,
+  author      = {Lang, P.J. and Bradley, M.M. and Cuthbert, B.N.},
+  title       = {International affective picture system (IAPS): Affective ratings of pictures and instruction manual},
+  institution = {University of Florida, Gainesville, FL.},
+  year        = {2008},
+  number      = {A-8},
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

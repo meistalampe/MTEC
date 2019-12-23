@@ -89,6 +89,12 @@ def main():
         d['X_test_temp_only'] = d['X_test_temp_zf']
         d['X_train_temp_only'] = d['X_train_temp_zf']
 
+        # simplistic set
+        bvp_test_simplistic = d['X_test_bvp_time'][:, 12:16]
+        bvp_train_simplistic = d['X_train_bvp_time'][:, 12:16]
+        d['X_test_simple'] = np.concatenate((bvp_test_simplistic, d['X_test_gsr_only'], d['X_test_temp_only']), axis=1)
+        d['X_train_simple'] = np.concatenate((bvp_train_simplistic, d['X_train_gsr_only'], d['X_train_temp_only']),
+                                             axis=1)
     # ------------------- Data Visualisation ------------------- #
 
     # # create a DataFrame of x_train
@@ -558,7 +564,7 @@ def main():
 
     # ------------------- kNN Classifier ------------------- #
     param_grid = [{'n_neighbors': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}]
-    appendices = ['', '_no_ma', '_no_zf', '_bvp_sel_only', '_bvp_only', '_gsr_only', '_temp_only']
+    appendices = ['', '_no_ma', '_no_zf', '_bvp_sel_only', '_bvp_only', '_gsr_only', '_temp_only', '_simple']
     for k in [3, 5]:
         k_NN_appendices = list([])
         k_NN_datasets = list([])
@@ -694,7 +700,7 @@ def main():
                    'C': [0.001, 0.01, 0.1, 1, 10, 100]},
                    ]
 
-    appendices = ['', '_no_ma', '_no_zf', '_bvp_sel_only', '_bvp_only', '_gsr_only', '_temp_only']
+    appendices = ['', '_no_ma', '_no_zf', '_bvp_sel_only', '_bvp_only', '_gsr_only', '_temp_only', '_simple']
     for k in [3, 5]:
         svc_appendices = list([])
         svc_datasets = list([])
@@ -726,11 +732,11 @@ def main():
                 scores = np.array(results.mean_test_score).reshape(len(param_grids[0]['C']), len(param_grids[0]['gamma']))
                 scores_image = mglearn.tools.heatmap(scores, xlabel='gamma', xticklabels=param_grids[0]['gamma'], ylabel='C',
                                                      yticklabels=param_grids[0]['C'], cmap='viridis')
-                plt.title('CV-Scores for Set: {} and k={}'.format(d['name'], k))
-                plt.colorbar(scores_image)
-                plt.savefig('svc_cv_scores_grid_search_{}_{}.png'.format(d['name'], k))
-                # plt.show()
-                plt.close()
+                # plt.title('CV-Scores for Set: {} and k={}'.format(d['name'], k))
+                # plt.colorbar(scores_image)
+                # plt.savefig('svc_cv_scores_grid_search_{}_{}.png'.format(d['name'], k))
+                # # plt.show()
+                # plt.close()
 
                 # print('Best Parameters: {}'.format(svc_grid_search.best_params_))
                 # print('Best Score Cross Validation: {:.3f}'.format(svc_grid_search.best_score_))
@@ -802,11 +808,11 @@ def main():
                                                      xticklabels=target_names, yticklabels=target_names,
                                                      cmap=plt.get_cmap("gray_r"), fmt="%d")
 
-                    plt.title("Confusion Matrix: {}".format(d['name']))
-                    plt.gca().invert_yaxis()
-                    plt.colorbar(cm_image)
-                    plt.savefig("svc_confusion_matrix_{}_{}".format(d['name'], k))
-                    plt.close()
+                    # plt.title("Confusion Matrix: {}".format(d['name']))
+                    # plt.gca().invert_yaxis()
+                    # plt.colorbar(cm_image)
+                    # plt.savefig("svc_confusion_matrix_{}_{}".format(d['name'], k))
+                    # plt.close()
                     cr = classification_report(test_labels, svc_grid_search.predict(test_data),
                                                target_names=target_names)
                     f1_micro = f1_score(test_labels, svc_grid_search.predict(test_data), average="micro")

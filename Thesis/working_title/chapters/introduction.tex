@@ -24,8 +24,8 @@ Within the scope of this thesis we designed a wearable system to facilitate this
 \subsection{Psychophysiology}
 Psychophysiology is a field of study that investigates the relationship between reasoning, feeling, behavior, and the physiological correlates associated with them. Advances in neuroscience, endocrinology, immunology, and molecular biology led to great insights in the interdependence of physiological and psychological processes. The translation of psychological functional states, emotions, and behavioral patterns into physiological reactions and processes is essentially controlled by three different systems: the autonomic nervous system (\gls{ans}), the neuroendocrine system (\gls{nes}), and the neuroimmunological system (\gls{nis}). A common use of psychophysiological measures is the study of physiological correlates of emotions, attention, stress, and other cognitive processes.  
 
-\subsection{Psychophysiological Framework}
-To fully understand the role of psychophysiology in adaptive automation we will take a look at the theoretical frameworks behind it. However, providing a complete overview on this topic would be far too extensive for the scope of this thesis. Therefore, we will only give a short summary of the work done by Byrne and Parasuraman (1996).\\
+\subsection{Psychophysiological in Adaptive Automation}
+To fully understand the role of psychophysiology in adaptive automation we will take a look at the theoretical framework behind it. However, providing a complete overview on this topic would be far too extensive for the scope of this thesis. Therefore, we will only give a short summary of the work done by Byrne and Parasuraman (1996).\\
 The application of physiological measures in adaptive automation is built on the premise that there is indeed an ideal mental state for human operators in a given task environment and that any deviation from this state would be detectable in the measurement. 
 This hypothesis is based on resource and capacity theories of information processing, which suggest that humans draw from a limited pool of resources whenever they process information \cite{Byrne1996}. Over the years, many researcher delivered evidence for a connection between this resource utilization and physiological measures of activation, therefore establishing the importance of psychophysiological measures in the field of adaptive automation.\\
 %For instance, while both cognitive and compensatory effort were associated with physiological measures, psychological and physiological strain, arising from mental overload or underload, were detected in psychophysiological measurements. \\
@@ -35,6 +35,46 @@ However, psychophysiological measures perform a dual role in adaptive automation
 The identification of suitable psychophysiological measures plays a vital role to the success of an adaptive work environment. Considering the dual role framework of psychophysiology, there is a distinction to be made between the two applications in adaptive automation. Because the developmental approach is in alignment with the majority of applications in psychophysiological research, the often stated criteria of specificity, diagnosticity, and intrusiveness for selecting workload assessment techniques also hold for adaptive automation \cite{Byrne1996}. On the other hand, criteria for the regulatory role of psychophysiology in adaptive automation have to be more strict. As they become part of closed-loop systems operating in real-time their potential impact is far greater, and their effects more immediate compared to when used for developmental measures.  
 In addition, the cost in terms of intrusiveness and technical requirements have to be weighed against the explanatory power of a certain measure. If the gain in predictive value does not offset the cost of implementation, a measure is not considered for applications outside of laboratory environment.\\
 As the recent work is determined to employ the Empatica E4 wristband, we are limited to the measures that are provided by this platform. These measures are blood volume pulse (\gls{bvp}), skin response (\gls{gsr}), and surface temperature.
+%\subsection{Suitability}
+%In this section we will explain the correlations of the abovementioned measures and emotions.
+%The cardiac function is controlled via an internal pacemaker located in the right atrium of the heart. The sinoatrial node is capable of producing electrical impulses, which will then propagate throughout the heart and ultimately cause the heart contraction. Its activity is regulated by both branches of the autonomic nervous system. The activity level of the sympathetic nervous system is presented to the sino-atrial node by a postganglionic fibre, and that of the parasympathetic nervous system is given by a vagal nerve. %Kim,Bang,Kim 
+%The sino-atrial node can be thought of
+%as a spike train generator whose inter-spike interval is modulated
+%by the integration of the activity levels of the parasympathetic
+%and sympathetic nervous system. In other words, if we treat the
+%heartbeat as a random point process, its rate is dependent on the
+%activity level of the autonomic nervous system, which in turn
+%is dependent on emotional stimuli. This information can be
+%extracted from the change in heart rate as a function of time and
+%thus can be extracted from the ECG. Photoplethysmography
+%(PPG) can also be used to extract heart rate and is better suited
+%420 Medical & Biological Engineering & Computing 2004, Vol. 42
+%for the simplification of the sensor module. Degradation of the
+%signal quality of PPG due to motion artifact should be reduced
+%before it is adopted for our purposes.
+%Electrodermal activity (EDA) is another signal that can easily
+%be measured from the body surface and represents the activity of
+%the autonomic nervous system. It is also called galvanic skin
+%response (BOUCSEIN, 1992). It characterizes changes in the
+%electrical properties of the skin due to the activity of sweat
+%glands and is physically interpreted as conductance. Sweat
+%glands distributed on the skin receive input from the sympathetic
+%nervous system only, and thus this is a good indicator of arousal
+%level due to external sensory and cognitive stimuli. It has
+%frequently been adopted for polygraphic lie detectors (JIANG
+%et al., 2000).
+%Variations in the skin temperature (SKT) mainly come from
+%localized changes in blood flow caused by vascular resistance or
+%arterial blood pressure. Local vascular resistance is modulated
+%by smooth muscle tone, which is mediated by the sympathetic
+%nervous system. The mechanism of arterial blood pressure
+%variation can be described by a complicated model of cardiovascular
+%regulation by the autonomic nervous system. Thus it is
+%evident that the SKT variation reflects autonomic nervous
+%system activity and is another effective indicator of emotional
+%status. The variation is SKT due to emotional stimuli was
+%studied by SHUSTERMAN and BARNEA (1995) and KATAOKA
+%et al. (1998).
 
 \subsection{Photoplethysmography}
 Photoplethysmography \gls{ppg} is an optical measurement technique, used to detect blood volume changes in the microvascular bed of tissue \cite{Allan2007}. To work PPG only requires a few opto-electronic components. First, a light source is used to illuminate the tissue. Then a photodetector measures the variations in light intensity associated with changes in perfusion in the catchment area. 

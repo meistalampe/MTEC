@@ -1,13 +1,28 @@
 
 % Problem Analysis and Goals
-\section{Problem Oriented}
-The ability to detect human emotion...super important in HMI.
-From before we know that psychophysiological measures are an approach worth taking because they can access emotion directly , methods such as face recognition based emotion detection can be deceived more easily.
-And although there have been some approaches using psychophysiology measure in combination with ML that achieved significant scores..some problems remain.
-They used clean data sets, stationary measures, one subject only and so on
-We will attempt to evaluate measurements from multiple subjects with realistic data from the same device we could actually apply
-\section{Aim, Objective, and Goals}
-The objective of this thesis is mainly engineering a well functioning system.
+\section{Related Work}
+In the past a substantial part of research in the field of Human Machine Interaction has been focused on the use of emotion recognition to give robots the ability to perceive and appropriately react to human emotions. With the appreciation of psychophysiological signals as potent markers of emotional states, a new wave of studies has been conducted on their deployment in the recognition process of adaptive human machine interaction.
+///
+In this section we will take a look at some studies because the are representative of the achievements as well as problems of the field.
+///
+ 
+%From before we know that psychophysiological measures are an approach worth taking because they can access emotion directly , methods such as face recognition based emotion detection can be deceived more easily.
+%And although there have been some approaches using psychophysiology measure in combination with ML that achieved significant scores..some problems remain.
+%They used clean data sets, stationary measures, one subject only and so on
+%We will attempt to evaluate measurements from multiple subjects with realistic data from the same device we could actually apply
+\section{Problem Focused}
+The classification of human emotion by the means of psychophysiological measures is a challenging task.
+\section{Aim, Objective, and Scope}
+The aim of this thesis is to facilitate the neuroergonomic assessment of human robot interaction based on real-time measurement of psychophysiological signals using the Empatica E4 wristband. 
+///
+Our scope is limited to engineering and testing the system that provides automated signal acquisition and interpretation. 
+///
+
+Therefore, our first objective was the development of a data extraction method that provided for real-time access on the raw signal data, as the E4 is actually designed for downstream data analysis only.
+Secondly, we built a signal processing pipeline that compensates for artifacts while upholding signal integrity for feature extraction.
+Next, we built a database for machine learning by using our system in a series of measurements  
+///
+
 Therefore we first need to establish a stable datastream of raw data. to be able to even  be able to access the physiological measures.
 After this the next goal is to develop an algorithm for preprocessing that allows valid feature extraction.
 Choosing the right features.
