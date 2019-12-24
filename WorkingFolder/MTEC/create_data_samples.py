@@ -404,6 +404,48 @@ def create_data_samples(repository_name: str = 'ClassificationRepository', folde
         'description': complete_description,
     }
 
+    # ------------------- Complete no cd------------------- #
+    complete_no_cd_description = "reduced dataset containing all datapoints except for cds, with a single label " \
+                                 "for each state [baseline = 0, emotion_one = 1, emotion_two = 2, stress_one = 3, " \
+                                 "stress_two = 4], Cave: remove last feature!"
+    # convert label list to array
+    label_array = np.array(labels)
+    # delete row 11 and 22 due to flawed measurements data
+    dp_twenty_two_del = np.delete(data_point_array, 22, 0)
+    dp_eleven_del = np.delete(dp_twenty_two_del, 11, 0)
+    l_twenty_two_del = np.delete(label_array, 22, 0)
+    l_eleven_del = np.delete(l_twenty_two_del, 11, 0)
+    # final dataset
+    # convert sample array and label array to type float
+    data_point_array_f = dp_eleven_del.astype(np.float64)
+    label_array_f = l_eleven_del.astype(np.float64)
+
+    # find cd samples and mark them for removal
+    label_no_cd = [-1 if lab == 1 else lab for lab in label_array_f]
+    label_no_cd_2 = [lab if lab == 0 or lab == -1 else lab-1 for lab in label_no_cd]
+    # convert placeholder list for new, reduced label list
+    label_no_cd_r = list([])
+    # create placeholder array for samples
+    no_cd_array = np.empty((0, len(complete_feat_list)))
+    for row_index in range(len(label_no_cd_2)):
+        if label_no_cd_2[row_index] != -1:
+            new_row = np.array(data_points[row_index])
+            no_cd_array = np.vstack((no_cd_array, new_row))
+            label_no_cd_r.append(label_no_cd_2[row_index])
+
+    # final dataset
+    no_cd_array_f = no_cd_array.astype(np.float64)
+    label_no_cd_array_f = np.array(label_no_cd_r).astype(np.float64)
+    # create dictionary
+    complete_no_cd_dict = {
+        'name': 'complete_no_cd_dict',
+        'data': no_cd_array_f[:, :-1],
+        'target': label_no_cd_array_f,
+        'target_names': ['baseline', 'emotion_one', 'emotion_two', 'stress_one',
+                         'stress_two'],
+        'feature_names': complete_feat_list[:-1],
+        'description': complete_no_cd_description,
+    }
     # ------------------- Rest vs All ------------------- #
     rest_v_all_description = "complete dataset, with only two labels (baseline vs rest) [baseline = 1, cd (1-3) =0, " \
                              "emotion_one = 0, emotion_two = 0, stress_one = 0, stress_two = 0], " \
@@ -600,8 +642,8 @@ def create_data_samples(repository_name: str = 'ClassificationRepository', folde
     }
 
     # create a dictionary holding al datasets
-    datasets_dict = [complete_dict, rest_v_all_dict, stress_v_all_dict, stress_v_rest_dict, stress_v_stress_dict,
-                     emotion_v_all_dict, emotion_v_rest_dict, emotion_v_emotion_dict]
+    datasets_dict = [complete_dict, complete_no_cd_dict, rest_v_all_dict, stress_v_all_dict, stress_v_rest_dict,
+                     stress_v_stress_dict, emotion_v_all_dict, emotion_v_rest_dict, emotion_v_emotion_dict]
 
     return datasets_dict
 
