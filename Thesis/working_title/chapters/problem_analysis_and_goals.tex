@@ -1,49 +1,46 @@
 
 % Problem Analysis and Goals
-\section{Related Work}
+\section{Related Work}\label{relwo}
 In the past a substantial part of research in the field of Human Machine Interaction has been focused on the use of emotion recognition to give robots the ability to perceive and appropriately react to human emotions. With the appreciation of psychophysiological signals as potent markers of emotional states, a new wave of studies has been conducted on their deployment in the recognition process of adaptive human machine interaction.
 We will now have a look at three studies that are closely related to ours. In this process we will investigate key aspects and show potential problems. The primary goal of all studies was to distinguish emotional states in subjects using a combination of psychophysiological measures and some machine learning technique. Measures of heart rate such as BVP or ECG, as well as galvanic skin response were used in all three as physiological indicators of emotion. In addition, respiration and EMG were used by both Maaoui and Pruski (2010) and Picard et al. (2001). Lastly, Maaoui and Pruski (2010) as well as Kim et al. (2004) employed skin temperature in their work. All measures were applied in their default measurement locations. Although, this might be acceptable for scientific settings in a lab, we argue that some of these location need to be adjusted or entirely ruled out to provide the minimum comfort to be applicable in a real-world setting. Especially, the negative effects of facial EMG, as well as the finger sensors used to measure GSR and BVP to user acceptance are easily comprehensible in an work environment where workers are physically engaged. Also, most of the sensors that were used in these studies still relied on a wired connection to deliver their data to a main processing device. A fact that further reduces practicability and in some workplaces may even increase the risk of injury.
 Proceeding to the classification of emotion, we find that all three studies reported above average results. A classification accuracy of 81\% was achieved by Picard et al. (2001) while using Sequential Floating Forward Search and Fisher Projection methods to classify a total of 8 different emotional states. They used data they collected from a single subject over a time period of 30 days, with an average recording time of 25 minutes per day. Although, this method may account extremely well for daily changes in the recorded signal, it creates a  classification that is strongly dependent on a single subject. The customization of an emotion recognition system to a single user may be of interest in the final stages of implementation, but one could argue that at this stage of research a user-independent system is far more beneficial due to its universal applicability. Next, we will consider the work of Maaoui and Pruski (2010) who achieved remarkable results. They were able to reach a classification accuracy of 92\% over 6 emotions by using SVM and Fisher Linear Discriminant analysis. However they used a set of elaborate protocols for emotion
 induction in combination with the IAPS and an extensive lab setting, which would again not be feasible to use in an adaptive automation workplace. Lastly, Kim et al. (2004) who attempted a user independent emotion detection system, using visually and acoustically stimuli in combination with the IAPS to elicit specific emotion in large groups (group 1: n = 125, group 2: n = 50) of children below the age of 9. Although, this strategy might be able to elicit stronger emotions that are much better represented by physiological correlates, it could be argued to be counter productive towards the generalization ability of their machine learning algorithm in an adult target population. 
 
 \section{Problem Oriented}
-From this we can see that there is still much work to be done in the field and we think that the introduction of a really unobstrusive system would allow for research to progress into the direction of application.
-Lab settings generally deliver good results when paired witch sufficient ML strategies but they are not representative of the final conditions.
-Further almost all research is done on detection single emotional states. Which will not occur this clearly in a real setting.
-Therefore we will try to detect different emotional intervals.
-Representing different levels of workload and broader emotional areas such as pleasant and unpleasant.
-Further we will create our database with multiple subjects, representative of a working population to attempt a user independent system as this is what we believe is needed.
-
-We will not use facial emg and respiration as they are to obstrusive and choose an alternate and very localized measurement location. the wrist as most people dont feel any discomfort and are not inhibited in their movement when working.
-Other than this we will use what is available on the E4: bvp, gsr, temp which have been used with success before
+Section \ref{relwo} shows that regardless of the significant accomplishments and overall advance of the field, there are still problems that are left to be resolved. As we pointed out earlier, although there were some attempts to conduct emotion recognition experiments in more realistic scenarios, the recording systems, and most of all the recording techniques (i.e. sensor locations) remained widely unimproved. Therefore, we will stray away from this pattern and use the Empatica E4, a wrist-worn system that is capable of wireless data transmission and features a single measurement site for all sensors. We believe that this is the right step towards truly unobtrusive emotion recognition allowing the field to advance by enabling more realistic experimental settings.
+Another important aspect we gathered from our literature research is the apparent focus on detecting only pure emotional states. Although, this may be useful in some applications, emotions are rarely presented in this form under realistic circumstances. Considering the setting of an adaptive automation workplace we will attempt to elicit and classify more generalized mental states (e.g. is the subject feeling pleasant or unpleasant?).
+%Representing different levels of workload and broader emotional areas such as pleasant and unpleasant.
+Further, we will create our own database for classification including multiple subjects, representative of a working population to attempt a user independent system.
+%We will not use facial emg and respiration as they are to obtrusive and choose an alternate and very localized measurement location. the wrist as most people dont feel any discomfort and are not inhibited in their movement when working.
+Regarding the selection of psychophysiological measures we will comply with the studies we have presented in \ref{relwo}. However, as we have only access to a subset of these measures, we will use what is available to us: BVP, GSR, and skin temperature.
 %From before we know that psychophysiological measures are an approach worth taking because they can access emotion directly , methods such as face recognition based emotion detection can be deceived more easily.
 %And although there have been some approaches using psychophysiology measure in combination with ML that achieved significant scores..some problems remain.
 %They used clean data sets, stationary measures, one subject only and so on
 %We will attempt to evaluate measurements from multiple subjects with realistic data from the same device we could actually apply
-\section{Problem Focused}
-The classification of human emotion by the means of psychophysiological measures is a challenging task.
+
 \section{Aim, Objective, and Scope}
-The aim of this thesis is to facilitate the neuroergonomic assessment of human robot interaction based on real-time measurement of psychophysiological signals using the Empatica E4 wristband. 
-///
-Our scope is limited to engineering and testing the system that provides automated signal acquisition and interpretation. 
-///
+As mentioned before, the aim of this thesis was to facilitate the neuroergonomic assessment of human robot interaction based on the real-time measurement of psychophysiological signals using the Empatica E4 wristband. 
+Meaning, we are faced with the daunting task of developing a compact emotion classification system that is capable of consistently gathering high quality data and reliably performing classification based on meaningful features.
+Therefore, we focused heavily on the development of such a system, limiting our scope to the engineering, and assembling of all system components and the final evaluation, based on system performance.\\
+In the following we listed all the milestones that were necessary to complete this task.
 
-Therefore, our first objective was the development of a data extraction method that provided for real-time access on the raw signal data, as the E4 is actually designed for downstream data analysis only.
-Secondly, we built a signal processing pipeline that compensates for artifacts while upholding signal integrity for feature extraction.
-Next, we built a database for machine learning by using our system in a series of measurements  
-///
-
-Therefore we first need to establish a stable datastream of raw data. to be able to even  be able to access the physiological measures.
-After this the next goal is to develop an algorithm for preprocessing that allows valid feature extraction.
-Choosing the right features.
-Applying ML methods. i.e. emotion recognition pipeline
+\begin{center}
+\begin{enumerate}
+\item[MS 1:] Development of a data extraction method that provides for real-time access on the raw signal data, as the E4 is actually designed for downstream data analysis only.
+\item[MS 2:] Construction of a signal processing pipeline that compensates for artifacts while upholding signal integrity for feature extraction.
+\item[MS 3:] Building a database for machine learning using authentic data gathered with our system in a series of measurements. 
+\item[MS 4:] Evaluation of system capabilities using different machine learning techniques.
+\end{enumerate}
+\end{center}
 
 \section{Research Questions}
-RQ1: Confirmation of suitability of the Empatica E4 for real time measurement.
-
-RQ2: Is it possible to detect different degrees of workload using standard machine learning techniques on extracted features from the Empatica E4?
-
-RQ3: Is it possible to make a distinction between to emotional states?
+\begin{center}
+\begin{enumerate}
+\item[RQ 1:] Is it possible to record meaningful real-time data using the Empatica E4?
+\item[RQ 2:] Is it possible to detect and distinguish different degrees of mental workload using standard machine learning techniques on three physiological signals that were recorded with the Empatica E4 in an experimental setting?
+\item[RQ 3:] Is it possible to detect and distinguish two emotional states, such as pleasant and unpleasant, using the same approach as in RQ2?
+\end{enumerate}
+\end{center}
 %\section{Related Work}
 % outline
 % https://books.google.de/books?hl=de&lr=&id=9ERRDAAAQBAJ&oi=fnd&pg=PA239&dq=neuroergonomics+adaptive+automation&ots=bvcjBrmrib&sig=xR__KHbEoDxTgcRrmyzaz6mUuX8#v=onepage&q=neuroergonomics%20adaptive%20automation&f=false

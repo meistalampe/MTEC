@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.13)  20 DEC 2019 16:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.13)  25 DEC 2019 17:11
 entering extended mode
 **./master_thesis.tex
 (master_thesis.tex
@@ -972,6 +972,9 @@ Package glossaries Info: Writing glossary file master_thesis.acn on input line
 
 LaTeX Warning: Label `ppg_pw' multiply defined.
 
+
+LaTeX Warning: Label `tdf' multiply defined.
+
 )
 \openout1 = `master_thesis.aux'.
 
@@ -1063,7 +1066,7 @@ LaTeX Info: Redefining \nameref on input line 65.
 \openout6 = `master_thesis.out'.
 
 
-<images/logo.pdf, id=161, 495.8525pt x 449.68pt>
+<images/logo.pdf, id=173, 495.8525pt x 449.68pt>
 File: images/logo.pdf Graphic file (type pdf)
  <use images/logo.pdf>
 Package pdftex.def Info: images/logo.pdf used on input line 68.
@@ -1115,7 +1118,7 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 116.
 
-<images/cc_by_nc_nd.png, id=178, 516.9714pt x 125.268pt>
+<images/cc_by_nc_nd.png, id=190, 516.9714pt x 125.268pt>
 File: images/cc_by_nc_nd.png Graphic file (type png)
 
 <use images/cc_by_nc_nd.png>
@@ -1170,71 +1173,88 @@ Package natbib Warning: Citation `Byrne2006' on page 6 undefined on input line
 [6
 
 ] [7] [8] [9]
-Underfull \hbox (badness 10000) in paragraph at lines 40--44
+Underfull \hbox (badness 10000) in paragraph at lines 80--84
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-[10] <images/ppg_raw.jpg, id=296, 369.17924pt x 200.54926pt>
+[10] <images/ppg_raw.jpg, id=311, 369.17924pt x 200.54926pt>
 File: images/ppg_raw.jpg Graphic file (type jpg)
 
 <use images/ppg_raw.jpg>
-Package pdftex.def Info: images/ppg_raw.jpg used on input line 51.
+Package pdftex.def Info: images/ppg_raw.jpg used on input line 91.
 (pdftex.def)             Requested size: 313.69029pt x 170.41563pt.
 
-<images/ppg_pw.jpg, id=297, 426.09187pt x 274.77657pt>
+<images/ppg_pw.jpg, id=312, 426.09187pt x 274.77657pt>
 File: images/ppg_pw.jpg Graphic file (type jpg)
  <use images/ppg_pw.jpg>
-Package pdftex.def Info: images/ppg_pw.jpg used on input line 60.
+Package pdftex.def Info: images/ppg_pw.jpg used on input line 100.
 (pdftex.def)             Requested size: 313.69029pt x 202.30423pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 65--69
+Underfull \hbox (badness 10000) in paragraph at lines 105--109
 
  []
 
 [11 <./images/ppg_raw.jpg>]
-<images/ppg_a.jpg, id=309, 218.31563pt x 420.82219pt>
+<images/ppg_a.jpg, id=324, 218.31563pt x 420.82219pt>
 File: images/ppg_a.jpg Graphic file (type jpg)
  <use images/ppg_a.jpg>
-Package pdftex.def Info: images/ppg_a.jpg used on input line 73.
+Package pdftex.def Info: images/ppg_a.jpg used on input line 113.
 (pdftex.def)             Requested size: 224.06548pt x 431.9106pt.
 
-[12 <./images/ppg_pw.jpg>] [13] [14] [15] [16] [17]) [18] [19 <./images/ppg_a.j
-pg>]
-chapter 2.
-(chapters/problem_analysis_and_goals.tex) [20
+[12 <./images/ppg_pw.jpg>]
+<images/SelectedTimeDomainMeasures.jpg, id=335, 816.80156pt x 436.63126pt>
+File: images/SelectedTimeDomainMeasures.jpg Graphic file (type jpg)
 
-]
+<use images/SelectedTimeDomainMeasures.jpg>
+Package pdftex.def Info: images/SelectedTimeDomainMeasures.jpg used on input li
+ne 135.
+(pdftex.def)             Requested size: 224.06548pt x 119.77081pt.
+
+<images/SelectedFrequencyDomainMeasures.jpg, id=339, 589.4522pt x 419.31656pt>
+File: images/SelectedFrequencyDomainMeasures.jpg Graphic file (type jpg)
+
+<use images/SelectedFrequencyDomainMeasures.jpg>
+Package pdftex.def Info: images/SelectedFrequencyDomainMeasures.jpg used on inp
+ut line 144.
+(pdftex.def)             Requested size: 224.06548pt x 159.39313pt.
+ [13] [14] [15] [16] [17]
+[18]) [19] [20 <./images/ppg_a.jpg>] [21 <./images/SelectedTimeDomainMeasures.j
+pg> <./images/SelectedFrequencyDomainMeasures.jpg>]
+chapter 2.
+(chapters/problem_analysis_and_goals.tex [22
+
+] [23]) [24]
 chapter 3.
 (chapters/materials_and_methods.tex
 
-LaTeX Warning: Reference `e4overview' on page 21 undefined on input line 18.
+LaTeX Warning: Reference `e4overview' on page 25 undefined on input line 18.
 
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 21.
 
-LaTeX Warning: Reference `e4overview' on page 21 undefined on input line 27.
+LaTeX Warning: Reference `e4overview' on page 25 undefined on input line 27.
 
-[21
+[25
 
-] [22] [23]) [24] [25]
+] [26] [27]) [28] [29]
 chapter 4.
-(chapters/results.tex) [26
+(chapters/results.tex) [30
 
 ]
 chapter 5.
-(chapters/discussion.tex) [27
+(chapters/discussion.tex) [31
 
 ]
 chapter 6.
 (chapters/conclusions_and_future_work.tex) (chapters/appendix.tex
 No file master_thesis.gls.
 No file master_thesis.acr.
-) [28
+) [32
 
 ]
 Package tocbasic Info: character protrusion at lof deactivated on input line 21
@@ -1243,7 +1263,7 @@ Package tocbasic Info: character protrusion at lof deactivated on input line 21
 \tf@lof=\write8
 \openout8 = `master_thesis.lof'.
 
- [29
+ [33
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 21
@@ -1254,9 +1274,9 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 21
 
 
 No file master_thesis.gls.
-[30
+[34
 
-] (master_thesis.bbl [31
+] (master_thesis.bbl [35
 
 ]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 84.
@@ -1273,13 +1293,13 @@ Package microtype Info: Loading generic protrusion settings for font family
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 232.
-[32]
+[36]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 232.
  (master_thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 232.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 232.
 Package rerunfilecheck Info: File `master_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: DD125A92ADCB4B1176B94CEE5BF27CDF;2574.
+(rerunfilecheck)             Checksum: 39087B0403C1F0FA684D895C9CA9A699;2784.
 
 
 LaTeX Warning: There were undefined references.
@@ -1289,10 +1309,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19095 strings out of 493328
- 322679 string characters out of 3139118
- 591918 words of memory out of 3000000
- 22092 multiletter control sequences out of 15000+200000
+ 19179 strings out of 493328
+ 324110 string characters out of 3139118
+ 592383 words of memory out of 3000000
+ 22165 multiletter control sequences out of 15000+200000
  52319 words of font info for 89 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,9n,77p,8826b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1307,9 +1327,9 @@ ic/lm/lmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C
 KTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/lm/lmri12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmtt12.pfb>
-Output written on master_thesis.pdf (34 pages, 574271 bytes).
+Output written on master_thesis.pdf (38 pages, 834538 bytes).
 PDF statistics:
- 487 PDF objects out of 1000 (max. 8388607)
- 93 named destinations out of 1000 (max. 500000)
- 15194 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 538 PDF objects out of 1000 (max. 8388607)
+ 102 named destinations out of 1000 (max. 500000)
+ 15228 words of extra memory for PDF output out of 17280 (max. 10000000)
 

@@ -982,12 +982,12 @@ def main():
     # Set parameter grid for gridsearch
 
     param_grids = {'max_depth': [1, 2, 3],
-                   'max_features': [5, 15, 31, 45, 62],
+                   'max_features': [0.10, 0.25, 0.5, 0.75, 1.0],
                    'n_estimators': [5, 25, 50, 100, 250, 500, 1000],
                    'random_state': [0]}
 
     appendices = ['', '_no_ma', '_no_zf', '_bvp_sel_only', '_gsr_only', '_temp_only', '_simple']
-    my_cv = [LeaveOneOut(), 3, 5]
+    my_cv = [3, 5, LeaveOneOut()]
     for k in my_cv:
         dt_appendices = list([])
         dt_datasets = list([])
@@ -1099,8 +1099,8 @@ def main():
                     f1_macro = f1_score(test_labels, dt_grid_search.predict(test_data), average="macro")
                     str_for_results = 'F1-Score (micro): {:.3f}, F1-Score (macro): {:.3f}'.format(f1_micro, f1_macro)
 
-                best = dt_grid_search.best_estimator_
-                plot_feature_importance_random_forest(model=best, dataset=d, fold=k)
+                # best = dt_grid_search.best_estimator_
+                # plot_feature_importance_random_forest(model=best, dataset=d, fold=k)
 
                 dt_appendices.append(appendix)
                 dt_datasets.append(d['name'])
