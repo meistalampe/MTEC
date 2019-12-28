@@ -4,6 +4,11 @@
 	description={Blood Volume Pulse}
 }
 
+\newglossaryentry{ide}{
+	name={IDE},
+	description={Integrated Development Environment}
+}
+
 \newglossaryentry{ppg}{
 	name={PPG},
 	description={Photoplethysmography}
@@ -65,4 +70,36 @@
 \newglossaryentry{hp}{
 	name={HP},
 	description={Heart Period}
+}
+\newglossaryentry{ans}{
+	name={ANS},
+	description={Autonomic Nervous System}
+}
+\newglossaryentry{nes}{
+	name={NES},
+	description={Neuroendocrine System}
+}
+\newglossaryentry{nis}{
+	name={NIS},
+	description={Neuroimmunological System}
+}
+\newglossaryentry{svm}{
+	name={SVM},
+	description={Support Vector Machines}
+}
+\newglossaryentry{mlp}{
+	name={MLP},
+	description={Multi-Layer Perceptron}
+}
+\newglossaryentry{iaps}{
+	name={IAPS},
+	description={International Affective Picture System}
+}
+\newglossaryentry{psd}{
+	name={PSD},
+	description={Power Spectral Density}
+}
+\newglossaryentry{emg}{
+	name={EMG},
+	description={Electromyography}
 }
