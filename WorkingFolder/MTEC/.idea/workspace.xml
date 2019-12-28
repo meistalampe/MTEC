@@ -2,18 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1cceb26c-0173-4b95-b2b1-d5f78585e4fe" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/introduction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/introduction.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.glo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.glo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.ist" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.ist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lof" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.lof" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.synctex.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/materials_and_methods.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/materials_and_methods.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/machine_learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_ROC_curve_emotion_v_all_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_ROC_curve_emotion_v_all_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_ROC_curve_emotion_v_emotion_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_ROC_curve_emotion_v_emotion_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_ROC_curve_emotion_v_rest_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_ROC_curve_emotion_v_rest_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_ROC_curve_rest_v_all_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_ROC_curve_rest_v_all_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_ROC_curve_stress_v_all_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_ROC_curve_stress_v_all_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_ROC_curve_stress_v_rest_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_ROC_curve_stress_v_rest_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_ROC_curve_stress_v_stress_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_ROC_curve_stress_v_stress_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_confusion_matrix_complete_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_confusion_matrix_complete_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_confusion_matrix_complete_no_cd_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_confusion_matrix_complete_no_cd_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_confusion_matrix_emotion_v_all_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_confusion_matrix_emotion_v_all_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_confusion_matrix_emotion_v_emotion_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_confusion_matrix_emotion_v_emotion_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_confusion_matrix_emotion_v_rest_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_confusion_matrix_emotion_v_rest_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_confusion_matrix_rest_v_all_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_confusion_matrix_rest_v_all_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_confusion_matrix_stress_v_all_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_confusion_matrix_stress_v_all_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_confusion_matrix_stress_v_rest_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_confusion_matrix_stress_v_rest_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_confusion_matrix_stress_v_stress_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_confusion_matrix_stress_v_stress_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_prc_emotion_v_all_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_prc_emotion_v_all_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_prc_emotion_v_emotion_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_prc_emotion_v_emotion_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_prc_emotion_v_rest_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_prc_emotion_v_rest_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_prc_rest_v_all_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_prc_rest_v_all_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_prc_stress_v_all_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_prc_stress_v_all_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_prc_stress_v_rest_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_prc_stress_v_rest_dict_LeaveOneOut().png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dtrf_prc_stress_v_stress_dict_LeaveOneOut().png" beforeDir="false" afterPath="$PROJECT_DIR$/../dtrf_prc_stress_v_stress_dict_LeaveOneOut().png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -377,7 +391,7 @@
       <workItem from="1577089833995" duration="1270000" />
       <workItem from="1577126228556" duration="1225000" />
       <workItem from="1577188982801" duration="14576000" />
-      <workItem from="1577257685473" duration="3338000" />
+      <workItem from="1577257685473" duration="4598000" />
     </task>
     <servers />
   </component>

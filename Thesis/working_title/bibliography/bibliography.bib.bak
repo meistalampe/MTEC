@@ -147,11 +147,11 @@
   year    = {2000},
 }
 
-@Misc{,
-  title  = {APA Dictionary of Psychology.},
+@Electronic{apa2019,
   year   = {2019},
-  groups = {American Psychological Association},
+  title  = {APA Dictionary of Psychology.},
   url    = {https://dictionary.apa.org/emotion},
+  groups = {American Psychological Association},
 }
 
 @TechReport{Lang2008,
@@ -160,6 +160,45 @@
   institution = {University of Florida, Gainesville, FL.},
   year        = {2008},
   number      = {A-8},
+}
+
+@Electronic{E4BLE,
+  author = {Saha, D.},
+  year   = {2019},
+  title  = {Empatica-Matlab BLE Client},
+  url    = {https://www.github.com/debapratimsaha/EmpaticaMatlabBLEClient},
+}
+
+@Electronic{E4SS,
+  month        = may,
+  year         = {2018},
+  title        = {E4 streaming server for Windows. Reference guide},
+  organization = {Empatica},
+  url          = {https://developer.empatica.com/windows-streaming-server.html},
+}
+
+@Electronic{E4MP,
+  month        = jan,
+  year         = {2019},
+  title        = {E4 streaming server. Message protocol and command structure},
+  organization = {Empatica},
+  url          = {https://developer.empatica.com/windows-streaming-server-commands.html#protocol-example},
+}
+
+@Electronic{E4DP,
+  month        = jan,
+  year         = {2019},
+  title        = {E4 streaming server. Data streaming packets},
+  organization = {Empatica},
+  url          = {https://developer.empatica.com/windows-streaming-server-data.html},
+}
+
+@Book{MATLAB2015,
+  title     = {version 8.5.0.197613},
+  publisher = {The MathWorks Inc.},
+  year      = {2015},
+  author    = {MATLAB},
+  address   = {Natick, MA 01760-2098},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}
