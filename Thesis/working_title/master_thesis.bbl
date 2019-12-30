@@ -1,4 +1,4 @@
-\begin{thebibliography}{12}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -82,5 +82,16 @@ D.~C. Rubin and J.~M. Talarico.
 \emph{E4 wristband from empatica. User's manual}.
 \newblock Empatica, Via Stendhal 36, 20144 Milano (MI).
 \newblock URL \url{www.empatica.com}.
+
+\bibitem[E4S(2018)]{E4SS}
+E4 streaming server for windows. reference guide, May 2018.
+\newblock URL
+  \url{https://developer.empatica.com/windows-streaming-server.html}.
+
+\bibitem[Lang et~al.(2008)Lang, Bradley, and Cuthbert]{Lang2008}
+P.J. Lang, M.M. Bradley, and B.N. Cuthbert.
+\newblock International affective picture system (iaps): Affective ratings of
+  pictures and instruction manual.
+\newblock Technical Report A-8, University of Florida, Gainesville, FL., 2008.
 
 \end{thebibliography}

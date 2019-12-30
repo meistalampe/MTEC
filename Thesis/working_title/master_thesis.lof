@@ -1,10 +1,14 @@
 \select@language {english}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces PPG signal}}{11}{figure.caption.6}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces PPG pulse characteristics}}{12}{figure.caption.7}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Types of measurement artifacts}}{20}{figure.caption.8}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Selected time-domain measures of HRV}}{21}{figure.caption.10}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces Selected frequency-domain measures of HRV}}{21}{figure.caption.11}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces PPG signal}}{12}{figure.caption.6}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces PPG pulse characteristics}}{13}{figure.caption.7}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Types of measurement artifacts}}{21}{figure.caption.8}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Selected time-domain measures of HRV}}{22}{figure.caption.10}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces Selected frequency-domain measures of HRV}}{22}{figure.caption.11}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of the Empatica E4 wristband.\relax }}{28}{figure.caption.12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Illustration of the connectivity and function of the E4 streaming server}}{31}{figure.caption.18}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

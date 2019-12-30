@@ -5,3 +5,63 @@ future work: Existing psychophysiological research does not provide adequate inf
 on how potential metrics might be used to regulate mental state in a closedloop
 environment. (byrne 1996)
 - and this was not the scope of this thesis we only provide the tools to measure and extract features.
+
+\section{Effectiveness of signal processing}
+we observe some issues in one subject with our pre processing of bvp, due to a extreme reflection peak on every pulse wave causing false peak detection and dismissal of the data. This gives us reason to believe that there is still potential to improve. We can not assess the probability of such a failure because of the limited subject group. Or if in some way it was only circumstantial.
+
+However in the filter function for suitable data segments for feature extraction, based on condition A and B proofed to work well and prevented for faulty data to enter the ML algorithm therefore upholding its integrity.
+\section{Feature Selection}
+Create additional features is also possible, see (one of the three studies in related work, i think it was Picard) which achieved great results this way
+\section{subject selection and access conditions}
+- we had some subjects that came from a scientific background, in particular the SNNU and were due to their work there already exposed to the IAPS. This could have had an influence on the ability to elicit emotion during the respective experimental sequences 
+- also some of the subjects stated that they were able to do the experiment, but afterwards stated that they did suffer from bad mood, or a mild headache. Again we can not completely estimate the influence of this on the measurement, or rule out that there is any influence at all
+
+Consequently we need to be more strict with subject admission conditions in the future
+
+\section{Effect of Group size on the success of ML}
+some ML algorithms are known to work well on small sample sizes, but there are also others that improve on bigger sample sizes.
+
+Also there is a certain inequality in the distribution of emotional states we elicited during the main experiment e.g. only one true baseline, 2 workload segments and therefore only one for each degree, and only 1 sample for each emotional state. Better representation of each state, will definitively improve the ability to recognize them via ML  
+
+Further Grid search comparison between 3 fold , 5 fold ,leave one out:
+3 u 5 similar with 3 mostly better due to balance related to our small sample size. bigger group size would allow for higher k fold
+
+Leave one out has to be ruled out due to extremely long training time on the more complex algorithms but seems to be suitable for more simpler ones.
+
+\section{Improvement of emotional segments}
+Maybe we could achieve better results on emotional state classification, if we only consider the presentation time of the measurement.
+
+Also our selection of stimuli did not resonate well with some of the subjects, meaning that their valence arousal rating  varied vastly from our expectations.
+
+Therefore  we are uncertain if the right emotion was elicited during the measurement. This would mean that the low success rate in classifying the two emotional states could have its roots in the missing difference. This would also explain why the overall accuracy on detecting emotional states opposed to the rest of the segments was constantly high in all ML algorithms but the accuracy in inter-emotion classification was generally low.
+
+This problem could also be caused by the small sample size, meaning that measuring a far greater subject group may actually represent the intended two emotional states and therefore cause better results with our ML algorithms
+
+Also if data overlaps to much for different workload degrees as well as similar emotional states methods for unsupervised learning (principal component analysis) or linear discriminant analysis may be successful.
+
+\section{Suitability of ML algorithms}
+We touched upon the influence of sample size on the accuracy of ML algorithms but we also have to consider training times, which show substantial differences among some of the algorithms.
+
+Feature selection has noticeable influence on accuracy. Except for variations in bvp features..the accuracy is mostly consistent when they are used which leads to the assumption that they are dominant.
+
+But we were able to achieve good result with a reduced set of features and for some of the binary classifications even with only gsr and temp features.
+
+We propose to try the method of combining a lot of simple binary classifiers and fuse them together in a linear fashion (like the Chinese fellows did) quote paper and reference their results
+
+\section{suitability of E4 - Motion Artifacts}
+overall a good device but the reliance on optical sensors still causes a lot of motion artifacts. expecially the large disturbances caused even by miniscule muscle tremors of fingers could lead to long intervals of measurement that cant be used for classification. This requires an elaborate data collection system and extremely strict pre-processing, as well as signal admission.
+
+We propose a more adaptive algorithm that recognizes motion artifacts and instead of filtering them shifts the weight of the signals in the classification algorithm in a way that if a signal suffers from heavy artifacts in a certain time interval its influence is reduced by adjusting the weight and therefor other signal tribute more to the classification instead..until no artifact is recognized for a certain period of time. If we consider the model of fusion from the chinese guys that is
+
+Otherwise it would be wise to explore contact free forms of emotion recognition, although their implementation may present some obstacles too.
+
+\section{Environmental Effects}
+To minimize environmental effects we conducted the experiment in laboratories with controlled climate. Although this is general procedure for GSR and skin temperature this approach is generally far from real life application, this could therefore provide a false representation and render these measures useless in a real setting.
+
+Further we darkened the room which leads to similar arguments regarding PPG sensors.
+
+Although we tried to create similar conditions in both labs there still may be some differences remaining, resulting from changes in lighting or AC ( which we could not control in the green lab). This could mean that our data base is split and therefore even smaller. Rendering it obsolete for ML. We advise future studies to account for that.
+
+\section{Extend and Success of Neuroergonomic assessment}
+Although we achieved XY results in the classification of emotional states and workload with all target labels. It could be argued that the accuracy is still to low to be used in a more advanced study, demanding prior optimization.
+But we achieved YZ results for binary classification task UV. Although they may provide only coarse classification this may still be of great use in future neuroergonomic studies as we are still providing a completely independent and universal system, unobtrusive in nature and therefore well suited to further the research in this field. (quote byrne 2006 , they said that even coarse estimation is useful)
