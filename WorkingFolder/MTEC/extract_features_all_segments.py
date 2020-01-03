@@ -17,7 +17,6 @@ import statistics
 
 
 def main():
-    # todo: resolve issue with freq feature extraction
 
     # ----------------- DATA EXTRACTION ----------------- #
     label = 'FEATURE EXTRACTION'

@@ -368,12 +368,6 @@ def artifact_interpolation_bvp(peak_locations):
                                                  indices_to_replace=indices_to_replace)
 
     return interpolated_ibi_data
-    # todo: find some solution for the possibility of alternating ectopic beats, eb nb eb,
-    #  (interpolating algorithm as is would use an eb to interpolate), if distance initial eb to next eb_index == 2 :
-    #  use a random value from a normal beat pool
-
-    # todo: plot the initial ibi data against the corrected, showing the interpolated beats in a different color
-
 
 if __name__ == '__main__':
     main()
