@@ -64,26 +64,33 @@
 \contentsline {subsection}{\numberline {4.2.5}Procedure}{38}{subsection.4.2.5}
 \contentsline {chapter}{\numberline {5}Data Analysis and Interpretation}{40}{chapter.5}
 \contentsline {section}{\numberline {5.1}Data Collection}{40}{section.5.1}
-\contentsline {section}{\numberline {5.2}Data Analysis}{40}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Signal Processing}{40}{subsection.5.2.1}
-\contentsline {subsubsection}{\nonumberline Heart Rate Variability}{40}{section*.22}
-\contentsline {subsubsection}{\nonumberline GSR}{40}{section*.23}
-\contentsline {subsubsection}{\nonumberline Temperature}{40}{section*.24}
-\contentsline {subsection}{\numberline {5.2.2}Feature Extraction and Selection}{40}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Data Interpretation}{40}{section.5.3}
-\contentsline {chapter}{\numberline {6}Results}{41}{chapter.6}
-\contentsline {chapter}{\numberline {7}Discussion}{42}{chapter.7}
-\contentsline {section}{\numberline {7.1}Effectiveness of signal processing}{42}{section.7.1}
-\contentsline {section}{\numberline {7.2}Feature Selection}{42}{section.7.2}
-\contentsline {section}{\numberline {7.3}subject selection and access conditions}{42}{section.7.3}
-\contentsline {section}{\numberline {7.4}Effect of Group size on the success of ML}{43}{section.7.4}
-\contentsline {section}{\numberline {7.5}Improvement of emotional segments}{43}{section.7.5}
-\contentsline {section}{\numberline {7.6}Suitability of ML algorithms}{44}{section.7.6}
-\contentsline {section}{\numberline {7.7}suitability of E4 - Motion Artifacts}{44}{section.7.7}
-\contentsline {section}{\numberline {7.8}Environmental Effects}{45}{section.7.8}
-\contentsline {section}{\numberline {7.9}Extend and Success of Neuroergonomic assessment}{45}{section.7.9}
-\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{46}{chapter.8}
-\contentsline {chapter}{List of Figures}{48}{chapter.8}
-\contentsline {chapter}{List of Tables}{49}{chapter*.25}
-\contentsline {chapter}{List of Abbreviations}{49}{chapter*.26}
-\contentsline {chapter}{Bibliography}{50}{chapter*.26}
+\contentsline {section}{\numberline {5.2}Data Preparation}{41}{section.5.2}
+\contentsline {section}{\numberline {5.3}Data Analysis}{41}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}BVP}{41}{subsection.5.3.1}
+\contentsline {subsubsection}{\nonumberline Pre-Processing}{41}{section*.22}
+\contentsline {subsubsection}{\nonumberline Inter-Beat-Intervals}{43}{section*.24}
+\contentsline {subsubsection}{\nonumberline Data Validation}{43}{section*.25}
+\contentsline {subsubsection}{\nonumberline Feature Extraction}{43}{section*.26}
+\contentsline {subsection}{\numberline {5.3.2}GSR}{44}{subsection.5.3.2}
+\contentsline {subsubsection}{\nonumberline Pre-Processing}{44}{section*.27}
+\contentsline {subsubsection}{\nonumberline Feature Extraction}{44}{section*.28}
+\contentsline {subsection}{\numberline {5.3.3}Skin Temperature}{44}{subsection.5.3.3}
+\contentsline {subsubsection}{\nonumberline Pre-Processing}{44}{section*.29}
+\contentsline {subsubsection}{\nonumberline Feature Extraction}{44}{section*.30}
+\contentsline {section}{\numberline {5.4}Data Interpretation}{44}{section.5.4}
+\contentsline {chapter}{\numberline {6}Results}{45}{chapter.6}
+\contentsline {chapter}{\numberline {7}Discussion}{46}{chapter.7}
+\contentsline {section}{\numberline {7.1}Effectiveness of signal processing}{46}{section.7.1}
+\contentsline {section}{\numberline {7.2}Feature Selection}{46}{section.7.2}
+\contentsline {section}{\numberline {7.3}subject selection and access conditions}{46}{section.7.3}
+\contentsline {section}{\numberline {7.4}Effect of Group size on the success of ML}{47}{section.7.4}
+\contentsline {section}{\numberline {7.5}Improvement of emotional segments}{47}{section.7.5}
+\contentsline {section}{\numberline {7.6}Suitability of ML algorithms}{48}{section.7.6}
+\contentsline {section}{\numberline {7.7}suitability of E4 - Motion Artifacts}{48}{section.7.7}
+\contentsline {section}{\numberline {7.8}Environmental Effects}{49}{section.7.8}
+\contentsline {section}{\numberline {7.9}Extend and Success of Neuroergonomic assessment}{49}{section.7.9}
+\contentsline {chapter}{\numberline {8}Conclusions and Future Work}{50}{chapter.8}
+\contentsline {chapter}{List of Figures}{52}{chapter.8}
+\contentsline {chapter}{List of Tables}{53}{chapter*.31}
+\contentsline {chapter}{List of Abbreviations}{53}{chapter*.32}
+\contentsline {chapter}{Bibliography}{54}{chapter*.32}

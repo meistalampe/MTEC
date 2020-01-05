@@ -1,4 +1,4 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -106,5 +106,12 @@ M.~Mitrushina, K.B. Boone, J.~Razani, and L.F. D'Elia.
 \newblock Oxford University Press, USA, 2005.
 \newblock ISBN 9780195169300.
 \newblock URL \url{https://books.google.de/books?id=Ygndi8UlmxkC}.
+
+\bibitem[Elgendi et~al.(2013)Elgendi, Norton, Brearley, Abbott, and
+  Schuurmans]{Elgendi2013}
+M.~Elgendi, I.~Norton, M.~Brearley, D.~Abbott, and D.~Schuurmans.
+\newblock Systolic peak detection in acceleration photoplethysmograms measured
+  from emergency responders in tropical conditions.
+\newblock \emph{PLoS ONE}, 2013.
 
 \end{thebibliography}
