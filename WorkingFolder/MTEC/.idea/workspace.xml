@@ -3,17 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="1cceb26c-0173-4b95-b2b1-d5f78585e4fe" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/data_analysis_and_interpretation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/data_analysis_and_interpretation.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/experiments.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/experiments.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/introduction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/introduction.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/chapters/materials_and_methods.tex" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/chapters/materials_and_methods.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.aux" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.aux" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.glo" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.glo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.log" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.out" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.out" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.synctex.gz" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../../Thesis/working_title/master_thesis.toc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/machine_learning.py" beforeDir="false" afterPath="$PROJECT_DIR$/machine_learning.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -386,6 +384,7 @@
       <workItem from="1578044643859" duration="1622000" />
       <workItem from="1578145361110" duration="5646000" />
       <workItem from="1578172455090" duration="1984000" />
+      <workItem from="1578220860202" duration="12305000" />
     </task>
     <servers />
   </component>
@@ -420,9 +419,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="656" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1578172458980">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="-1264" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1578220861815">
+      <screen x="-1920" y="0" width="1920" height="1050" />
     </state>
+    <state x="-1264" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1920.1050@-1920.0.1920.1050" timestamp="1578220861815" />
     <state x="656" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1050/-1920.0.1920.1050@0.0.1920.1050" timestamp="1578172458980" />
   </component>
   <component name="XDebuggerManager">

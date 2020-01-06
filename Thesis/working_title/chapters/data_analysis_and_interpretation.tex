@@ -69,35 +69,161 @@ Where $\beta$ was set to a constant value of 0,02 and $\bar{z}$ was the statisti
 	\caption[Peak Detection Algorithm]{Blocks of interest are shown as grey squares over the filtered signal (in blue). The blocks are generated, using the two moving averages $MA_{peak}$ and $MA_{beat}$, which are depicted as a black dotted signal and a dashed red signal respectively. (source: doi:10.1371/journal.pone.0076585.g009)}
 	\label{bvp_dta}
 \end{figure}
-Although this process generated many blocks, only some would contain the desired feature (i.e. the systolic peak). Therefore, it was necessary to reject the blocks that resulted from diastolic waves and noise. This rejection was based on the second threshold $THR_{2}$, which corresponded to the anticipated width of a systolic peak and was set to $W_{1}$. Whenever a block was wider than or equal to $THR_{2}$ it was classified as valid.\\
-\textbf{Peak Detection.} In the last step of the algorithm systolic peaks were detected by localizing the maximum absolute value in valid blocks of interests. 
+Although this process generated many blocks, only some would contain the desired feature (i.e. the systolic peak). Therefore, it was necessary to reject the blocks that resulted from diastolic waves and noise. The rejection was based on the second threshold $THR_{2}$, which corresponded to the anticipated width of a systolic peak and was set to $W_{1}$. Whenever a block was wider than or equal to $THR_{2}$ it was classified as valid.\\
+\textbf{Peak Detection.}\label{pkdet} In the last step of the algorithm systolic peaks were detected by localizing the maximum absolute value in valid blocks of interest. 
 
 \subsubsection{Inter-Beat-Intervals}
- INTER BEAT INTERVALS
-	- DETECT OUTLIER
-	- DETECT ECTOPIC BEATS
-	- ARTIFACT DECLARATION
-	- LINEAR INTERPOLATION
-\subsubsection{Data Validation}
- DATA VALIDATION
+Using the indices of valid systolic peaks that were detected in \ref{pkdet}, the Inter-beat-interval tachogram was calculated as follows.
+\begin{equation}
+IBI_{i} = R_{i}-R_{i-1}
+\end{equation}
+Where Peaks are symbolically labeled $R$ to express their correspondence to the R-waves of the ECG, which are commonly used to calculate IBIs, and $i$ is the index value of the peak series.
+Initially calculated in samples, the IBIs were then translated into milliseconds.
+
+\subsubsection{Data Correction}
+This section is dedicated to the treatment of ectopic beats, arrhythmic events, missing data, and artifacts in the IBI series. \\
+\textbf{Outlier Rejection.} All IBIs that were considered physiologically impossible were marked as outliers. We used the HR-related thresholds $HR_{max}$ and $HR_{min}$ to calculate the shortest ($IBI_{min}$) and the longest ($IBI_{max}$) acceptable interval duration. $HR_{max}$ was determined using \ref{hrmax} and $HR_{min}$ was set to 45 beats per minute.
+\begin{align}\label{hrmax}
+HR_{max} &= \text{Maximum Physiological HR} - \text{Average Subject Age}\\
+IBI_{min} &= \frac{60000}{HR_{max}}	[ms]\\
+IBI_{max} &= \frac{60000}{HR_{min}}	[ms]
+\end{align}
+The resulting values for the new IBI-related thresholds $IBI_{max}$ and $IBI_{min}$ were rounded to the next full integer and then used to identify outliers in the IBI series. Afterwards, all marked IBI were replaced using linear interpolation.\\
+\textbf{Ectopic Beat Identification.} To identify IBIs that resulted from ectopic beats we considered Kamath's suggestion. Thereby, a heartbeat interval was considered abnormal when the heartbeat interval increased by more than 32.5\% decreased by more than 24.5\% compared to the previous heartbeat \cite{Choi2016}. Equation \ref{kamath} shows the mathematical expression that was used for the thresholding method to identify ectopic beats. 
+\begin{equation} \label{kamath}
+IBI_{EB} = \lbrace IBI\vert 0.675 IBI_{n-1} < IBI_{n} < 1.245 IBI_{n-1}\rbrace  
+\end{equation}
+\textbf{Artifact Rejection} To increase the robustness of the HRV analysis all regions with the presence of ectopic beats or noise for more than 3 seconds were removed entirely \cite{Clifford2002}.\\
+\textbf{Linear Interpolation.} We used linear interpolation to replace outliers and ectopic beats. First, IBIs immediately preceding and after the ectopic beat were marked for replacement. Afterwards, the total time encompassed by all marked IBIs was determined and the number of new beats $B$, that were inserted to replace them, was computed equation \ref{Bsingle} for single ectopic beats and equation \ref{Bseq} for a sequence of ectopic beats.
+\begin{equation}\label{Bsingle}
+B = \frac{IBI_{i}+IBI_{i+1}}{(IBI_{i-1}+IBI_{i+2})/2}
+\end{equation}
+\begin{equation}\label{Bseq}
+B = \frac{\sum_{j=i}^{i+N} IBI_{i}}{(IBI_{i-1}+IBI_{i+N+1})/2}
+\end{equation}
+As $B$ would in general not be an integer value, the computed values were rounded to obtain the nearest integer. After the determination of the number of IBIs to insert was completed, the values of said IBIs were computed using linear interpolation. The basic principle is shown in figure \ref{ebrep}.
+
+%[insert: bvp_dt.jpg, source: \cite{Lippman1994}]
+\begin{figure}[ht]
+	\centering
+  \includegraphics[width=1.0\textwidth, angle=0]{images/eb_replacement.jpg}
+	\caption[Linear Interpolation of Ectopic Beats]{A schematic of linear interpolation of ectopic beats on an ECG signal. RR-intervals before and after the ectopic beat are marked for replacement (vertival arrows). RR-intervals before and after the marked segment are used for interpolation (diagonal arrows). source: \cite{Lippman1994}}
+	\label{ebrep}
+\end{figure}
+\textbf{Data Rejection.} For short term recordings, such as the ones we conducted in this thesis, it is recommended that at least 80\% of a 5 minute segment of data should contain acceptable IBIs \cite{Clifford2002}. Therefore, recordings that failed this condition were bared from the subsequent feature extraction.
+
+% INTER BEAT INTERVALS
+%	- DETECT OUTLIER
+%	- DETECT ECTOPIC BEATS
+%	- ARTIFACT DECLARATION
+%	- LINEAR INTERPOLATION
+%DATA VALIDATION
+\newpage
 \subsubsection{Feature Extraction}
- FEATURE EXTRACTION
+ %FEATURE EXTRACTION
+HRV feature extraction was based entirely on the recommendations given by the Task Force (1996). The selected measures are shown in the tabular below sorted by their domains.\\[10pt]
+\begin{flushleft}
+\begin{tabular}{cccc}
+\multicolumn{4}{c}{\thead{Time Domain Measures}} \\
+\hline 
+\thead{Variable} & \thead{Units} & \thead{Description} & \\ 
+\multicolumn{4}{c}{Statistical Measures} \\ 
+ & & & \\
+\hline
+ & & & \\
+SDNN & $ms$ & \multicolumn{2}{c}{\makecell[l]{Standard deviation of all inter beat  intervals}} \\ 
+RMSSD & $ms$ & \multicolumn{2}{c}{\makecell[l]{The square root of the mean of the sum of the squares \\ of differences between adjacent inter beat intervals}} \\ 
+SDSD & $ms$ & \multicolumn{2}{c}{\makecell[l]{Standard deviation of differences between adjacent \\ inter beat intervals}} \\ 
+IBI50 &  & \multicolumn{2}{c}{\makecell[l]{Number of pairs of adjacent inter beat intervals \\ differing by more than 50 ms in the entire recording}} \\ 
+pIBI50 & $\%$ & \multicolumn{2}{c}{\makecell[l]{IBI50 divided by the total number of all inter beat intervals}} \\ 
+mIBI & $ms$ & \multicolumn{2}{c}{\makecell[l]{Mean of all inter beat intervals}} \\
+mHR & $bpm$ & \multicolumn{2}{c}{ \makecell[l]{Mean heart rate of the entire recording}}\\
+rIBI & $ms$ & \multicolumn{2}{c}{\makecell[l]{The difference between the longest and the shortest \\ inter beat interval}}\\
+ & & & \\
+\multicolumn{4}{c}{\thead{Frequency Domain Measures}} \\
+\hline 
+\thead{Variable} & \thead{Units} & \thead{Description} & \thead{Frequency range}\\ 
+\multicolumn{4}{c}{Analysis of short-term recordings (5min)} \\ 
+ & & & \\
+\hline
+ & & & \\
+Total power & $ms^2$ & \makecell[l]{The variance of inter beat intervals \\ over the temporal segment} & $\leq$ 0.4 Hz\\
+VLF & $ms^2$ & \makecell[l]{Power in very low frequency range} & $\leq$ 0.04 Hz\\
+LF & $ms^2$ & \makecell[l]{Power in low frequency range} & 0.04-0.15 Hz\\
+nLF & $n.u.$ & \makecell[l]{LF power in normalized units \\ LF/(Total Power–VLF)$\cdot$100} & \\
+HF & $ms^2$ & \makecell[l]{Power in high frequency range} & 0.15-0.4 Hz\\
+nHF & $n.u.$ & \makecell[l]{HF power in normalized units \\ HF/(Total Power–VLF)$\cdot$100} & \\
+LF/HF &  & \makecell[l]{Ratio of LF power to HF power} & \\
+& & & \\
+\hline
+\end{tabular} 
+\end{flushleft}
 
 \subsection{GSR}
-\subsubsection{Pre-Processing}
+\subsubsection{Pre-Processing}\label{gsrpp}
 % GSR PRE PROCESSING
 %	- low pass zero phase filtering
 %	- smoothing: moving average filtering
-\subsubsection{Feature Extraction}
+As we were only interested in the tonic component of GSR, pre-processing was focused primarily on artifact removal and noise reduction. The following paragraph covers all measures that were applied in the process of pre-processing.\\
+\textbf{Lowpass Filtering.} A zero-phase fourth-order Butterworth lowpass filter, with a cutoff frequency of 1.0 Hz was implemented to remove high frequency artifacts, caused by electrode movement or electrical noise.\\
+\textbf{Mean Correction.} To account for environmental influences such as temperature and humidity the filtered signal was corrected using the mean GSR value of the baseline measurement. The mean corrected data was then subjected to the feature extraction methods.
+\subsubsection{Feature Extraction}\label{gsrfe}
 % FEATURE EXTRACTION
+GSR feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the tabular below.\\[10pt]
+\begin{flushleft}
+\begin{tabular}{cccc}
+\multicolumn{4}{c}{\thead{Time Domain Measures}} \\
+\hline 
+\thead{Variable} & \thead{Units} & \thead{Description} & \\ 
+\multicolumn{4}{c}{Statistical Measures} \\ 
+ & & & \\
+\hline
+ & & & \\
+mGSR & $\mu S$ & \multicolumn{2}{c}{\makecell[l]{Mean value of the entire recording}} \\ 
+rGSR & $\mu S$ & \multicolumn{2}{c}{\makecell[l]{The difference between the lowest and the highest \\ GSR value}} \\
+sdGSR & $\mu S$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of the entire recording}} \\
+& & & \\
+\hline
+\end{tabular} 
+\end{flushleft}
 
 \subsection{Skin Temperature}
 \subsubsection{Pre-Processing}
 % TEMPERATURE PRE PROCESSING
 %	- smoothing: moving average filtering
+The pre-processing of the skin temperature signal was identical to the methods applied to the GSR signal. Therefore, we refer to section \ref{gsrpp} at this point.
 \subsubsection{Feature Extraction}
 % FEATURE EXTRACTION
-
+Similar to \ref{gsrfe}, feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the tabular below.\\[10pt]
+\begin{flushleft}
+\begin{tabular}{cccc}
+\multicolumn{4}{c}{\thead{Time Domain Measures}} \\
+\hline 
+\thead{Variable} & \thead{Units} & \thead{Description} & \\ 
+\multicolumn{4}{c}{Statistical Measures} \\ 
+ & & & \\
+\hline
+ & & & \\
+mST & $^{\circ}C$ & \multicolumn{2}{c}{\makecell[l]{Mean temperature of the entire recording}} \\ 
+rST & $^{\circ}C$ & \multicolumn{2}{c}{\makecell[l]{The difference between the lowest and the highest \\ temperature value}} \\
+sdST & $^{\circ}C$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of the entire recording}} \\
+& & & \\
+\hline
+\end{tabular} 
+\end{flushleft}
 \section{Data Interpretation}
 % ml methods
+we conducted a gridsearch with multiple ML algorithms for a number of different data sets and feature constellations and crossvalidation.
+The best parameters for each algorithm, set, and features were u
+\subsection{Machine Learning Algorithms}
+The following ML algorithms were used. They are all included the sklearn package of Python.
+- k-NN, Random Forest Tree, SVM, and NN
+To evaluate the effectiveness of these algorithms we conducted a grid search for essential parameters
+\subsection{Data Sets}
+we created a number of different datasets to evaluate the classification capabilities of the system.
+- complete, b stress, b emotion, i stress, i emotion
 
+tabular (dataset, description, number of classes)
+
+\subsection{Feature Sets}
+- complete, with bvp time, with bvp freq, gsr only, temp only

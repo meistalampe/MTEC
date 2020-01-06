@@ -12,6 +12,17 @@ we observe some issues in one subject with our pre processing of bvp, due to a e
 However in the filter function for suitable data segments for feature extraction, based on condition A and B proofed to work well and prevented for faulty data to enter the ML algorithm therefore upholding its integrity.
 \section{Feature Selection}
 Create additional features is also possible, see (one of the three studies in related work, i think it was Picard) which achieved great results this way
+
+no geometrical features 
+The major advantage of geometric methods lies
+in their relative insensitivity to the analytical quality of
+the series of NN intervals[20]. The major disadvantage is
+the need for a reasonable number of NN intervals to
+construct the geometric pattern. In practice, recordings
+of at least 20 min (but preferably 24 h) should be used
+to ensure the correct performance of the geometric
+methods, i.e. the current geometric methods are inappropriate
+to assess short-term changes in HRV.
 \section{subject selection and access conditions}
 - we had some subjects that came from a scientific background, in particular the SNNU and were due to their work there already exposed to the IAPS. This could have had an influence on the ability to elicit emotion during the respective experimental sequences 
 - also some of the subjects stated that they were able to do the experiment, but afterwards stated that they did suffer from bad mood, or a mild headache. Again we can not completely estimate the influence of this on the measurement, or rule out that there is any influence at all
@@ -40,6 +51,9 @@ This problem could also be caused by the small sample size, meaning that measuri
 Also if data overlaps to much for different workload degrees as well as similar emotional states methods for unsupervised learning (principal component analysis) or linear discriminant analysis may be successful.
 
 Emotion elicitation paradigm: maybe better next time to provide 3 different sets, neutral, happy, unhappy...we used weak happy and unhappy which were rated as neutral.. therefore the 2 emotional states may overlap too much
+\section{Recording time}
+task force suggest 5 minute recordings, but necessary are only 1 min for HF and 2 min for LF, as the recording interval should be at least 10 times the length of the wavelength of the lowest frequency component.
+Therefore, we may be able to achieve more precise classification results by reducing the recording interval. Pro, this would make a system feel more adaptive and reduce processing time for each decision. The effects on the evaluation of frequency features should be tested, as task force suggests to prefer frequency domain methods for short time analysis.
 \section{Suitability of ML algorithms}
 We touched upon the influence of sample size on the accuracy of ML algorithms but we also have to consider training times, which show substantial differences among some of the algorithms.
 
@@ -63,6 +77,6 @@ Further we darkened the room which leads to similar arguments regarding PPG sens
 
 Although we tried to create similar conditions in both labs there still may be some differences remaining, resulting from changes in lighting or AC ( which we could not control in the green lab). This could mean that our data base is split and therefore even smaller. Rendering it obsolete for ML. We advise future studies to account for that.
 
-\section{Extend and Success of Neuroergonomic assessment}
+\section{Extent and Success of Neuroergonomic assessment}
 Although we achieved XY results in the classification of emotional states and workload with all target labels. It could be argued that the accuracy is still to low to be used in a more advanced study, demanding prior optimization.
 But we achieved YZ results for binary classification task UV. Although they may provide only coarse classification this may still be of great use in future neuroergonomic studies as we are still providing a completely independent and universal system, unobtrusive in nature and therefore well suited to further the research in this field. (quote byrne 2006 , they said that even coarse estimation is useful)

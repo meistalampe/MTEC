@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{20}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -113,5 +113,22 @@ M.~Elgendi, I.~Norton, M.~Brearley, D.~Abbott, and D.~Schuurmans.
 \newblock Systolic peak detection in acceleration photoplethysmograms measured
   from emergency responders in tropical conditions.
 \newblock \emph{PLoS ONE}, 2013.
+
+\bibitem[Choi and Shin(2016)]{Choi2016}
+A.~Choi and H.~Shin.
+\newblock Quantative analysis of the effect of an extopic beat on the heart
+  rate variability in the resting condition.
+\newblock \emph{Frontiers in Physiology}, 2016.
+
+\bibitem[Clifford(2002)]{Clifford2002}
+G.D. Clifford.
+\newblock \emph{Signal Processing Methods for Heart Rate Variability}.
+\newblock PhD thesis, St. Cross College, 2002.
+
+\bibitem[Lippman et~al.(1994)Lippman, Stein, and Lerman]{Lippman1994}
+N.~Lippman, K.~M. Stein, and B.B. Lerman.
+\newblock Comparison of methods for removal of extopy in measurement of heart
+  rate variablility.
+\newblock \emph{American Journal of Physiology}, 1994.
 
 \end{thebibliography}

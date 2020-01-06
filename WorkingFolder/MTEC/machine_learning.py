@@ -85,9 +85,9 @@ def main():
         # d['X_train_bvp_only'] = np.concatenate((d['X_train_bvp_time'], d['X_train_bvp_freq'], d['X_train_bvp_nl']), axis=1)
         # only bvp, -cvsd, -cvnni, - geometrical features
 
-        d['X_test_bvp_sel_only'] = np.concatenate((bvp_test_selected, d['X_test_bvp_freq'], d['X_test_bvp_nl']), axis=1)
-        d['X_train_bvp_sel_only'] = np.concatenate((bvp_train_selected, d['X_train_bvp_freq'], d['X_train_bvp_nl']),
-                                                   axis=1)
+        # d['X_test_bvp_sel_only'] = np.concatenate((bvp_test_selected, d['X_test_bvp_freq'], d['X_test_bvp_nl']), axis=1)
+        # d['X_train_bvp_sel_only'] = np.concatenate((bvp_train_selected, d['X_train_bvp_freq'], d['X_train_bvp_nl']),
+        #                                            axis=1)
         d['X_test_gsr_only'] = d['X_test_gsr_zf']
         d['X_train_gsr_only'] = d['X_train_gsr_zf']
         d['X_test_temp_only'] = d['X_test_temp_zf']
@@ -96,9 +96,14 @@ def main():
         # simplistic set
         # only contains statistical time features
         d['X_test_simple'] = np.concatenate((bvp_test_selected, d['X_test_gsr_only'], d['X_test_temp_only']), axis=1)
-        d['X_train_simple'] = np.concatenate((bvp_train_selected, d['X_train_gsr_only'], d['X_train_temp_only']),
-                                             axis=1)
-
+        d['X_train_simple'] = np.concatenate((bvp_train_selected, d['X_train_gsr_only'], d['X_train_temp_only'])
+                                             , axis=1)
+        # only freq domain bvp
+        # because task force suggest bvp freq domain only in short term analysis
+        d['X_test_simple_freq'] = np.concatenate((d['X_test_bvp_freq'], d['X_test_gsr_only'], d['X_test_temp_only'])
+                                                 , axis=1)
+        d['X_train_simple_freq'] = np.concatenate((d['X_train_bvp_freq'], d['X_train_gsr_only'], d['X_train_temp_only'])
+                                                  , axis=1)
     # ------------------- Data Visualisation ------------------- #
 
     # # create a DataFrame of x_train
