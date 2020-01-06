@@ -271,13 +271,13 @@ According to the procedure described in section \red{mlsel}, we selected the fol
 \item \textbf{Neural Networks}
 \end{enumerate}
  
-\subsubsection{Preparation}
+\subsubsection{Procedure}
 \textbf{Generating Training & Test Sets.} First, all subsets were divided into training and test samples. Approximately 25\% of data points were reserved for algorithm testing, and the remaining 75\% were used for training purposes.\\
-\textbf{Crossvalidation} Then we employed k-fold Crossvalidation to compensate for the small sample sizes of some of our data sets. \\
-\textbf{Feature Preparation.} The performance of some machine learning techniques is extremely dependent on data representation. In particular, SVM and Neural Networks benefit from data Normalization (i.e. features are represented as values between 0 and 1).  
+\textbf{k-fold Crossvalidation} Nextthe small sample sizes of some of the data sets we employed k-fold Crossvalidation (with k= 3, 5) to improve algorithm performance. \\
+\textbf{Feature Preparation.} The performance of some machine learning techniques is extremely dependent on data representation. In particular, SVM and Neural Networks benefit from data Normalization (i.e. features are represented as values between 0 and 1). We used 
 
-\subsubsection{Gridsearch}
-Gridsearch is a common method used in machine learning to 
+
+
 we conducted a gridsearch with multiple ML algorithms for a number of different data sets and feature constellations and crossvalidation.
 The best parameters for each algorithm, set, and features were u
 \subsection{Machine Learning Algorithms}

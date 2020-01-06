@@ -31,6 +31,14 @@
 \usepackage[numbers, square]{natbib}
 \usepackage{microtype}
 
+% tabular management
+\usepackage{makecell}
+
+\renewcommand\theadalign{bc}
+\renewcommand\theadfont{\bfseries}
+\renewcommand\theadgape{\Gape[4pt]}
+\renewcommand\cellgape{\Gape[4pt]}
+
 \usepackage{blindtext} % Remove this later
 
 \usepackage[
