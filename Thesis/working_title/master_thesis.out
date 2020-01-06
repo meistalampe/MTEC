@@ -59,20 +59,24 @@
 \BOOKMARK [2][-]{subsection.5.3.2}{GSR}{section.5.3}% 59
 \BOOKMARK [2][-]{subsection.5.3.3}{Skin Temperature}{section.5.3}% 60
 \BOOKMARK [1][-]{section.5.4}{Data Interpretation}{chapter.5}% 61
-\BOOKMARK [0][-]{chapter.6}{Results}{}% 62
-\BOOKMARK [0][-]{chapter.7}{Discussion}{}% 63
-\BOOKMARK [1][-]{section.7.1}{Effectiveness of signal processing}{chapter.7}% 64
-\BOOKMARK [1][-]{section.7.2}{Feature Selection}{chapter.7}% 65
-\BOOKMARK [1][-]{section.7.3}{subject selection and access conditions}{chapter.7}% 66
-\BOOKMARK [1][-]{section.7.4}{Effect of Group size on the success of ML}{chapter.7}% 67
-\BOOKMARK [1][-]{section.7.5}{Improvement of emotional segments}{chapter.7}% 68
-\BOOKMARK [1][-]{section.7.6}{Recording time}{chapter.7}% 69
-\BOOKMARK [1][-]{section.7.7}{Suitability of ML algorithms}{chapter.7}% 70
-\BOOKMARK [1][-]{section.7.8}{suitability of E4 - Motion Artifacts}{chapter.7}% 71
-\BOOKMARK [1][-]{section.7.9}{Environmental Effects}{chapter.7}% 72
-\BOOKMARK [1][-]{section.7.10}{Extent and Success of Neuroergonomic assessment}{chapter.7}% 73
-\BOOKMARK [0][-]{chapter.8}{Conclusions and Future Work}{}% 74
-\BOOKMARK [0][-]{chapter.8}{List of Figures}{}% 75
-\BOOKMARK [0][-]{chapter*.32}{List of Tables}{}% 76
-\BOOKMARK [0][-]{chapter*.33}{List of Abbreviations}{}% 77
-\BOOKMARK [0][-]{chapter*.33}{Bibliography}{}% 78
+\BOOKMARK [2][-]{subsection.5.4.1}{Preparation}{section.5.4}% 62
+\BOOKMARK [2][-]{subsection.5.4.2}{Machine Learning Algorithms}{section.5.4}% 63
+\BOOKMARK [2][-]{subsection.5.4.3}{Data Sets}{section.5.4}% 64
+\BOOKMARK [2][-]{subsection.5.4.4}{Feature Sets}{section.5.4}% 65
+\BOOKMARK [0][-]{chapter.6}{Results}{}% 66
+\BOOKMARK [0][-]{chapter.7}{Discussion}{}% 67
+\BOOKMARK [1][-]{section.7.1}{Effectiveness of signal processing}{chapter.7}% 68
+\BOOKMARK [1][-]{section.7.2}{Feature Selection}{chapter.7}% 69
+\BOOKMARK [1][-]{section.7.3}{subject selection and access conditions}{chapter.7}% 70
+\BOOKMARK [1][-]{section.7.4}{Effect of Group size on the success of ML}{chapter.7}% 71
+\BOOKMARK [1][-]{section.7.5}{Improvement of emotional segments}{chapter.7}% 72
+\BOOKMARK [1][-]{section.7.6}{Recording time}{chapter.7}% 73
+\BOOKMARK [1][-]{section.7.7}{Suitability of ML algorithms}{chapter.7}% 74
+\BOOKMARK [1][-]{section.7.8}{suitability of E4 - Motion Artifacts}{chapter.7}% 75
+\BOOKMARK [1][-]{section.7.9}{Environmental Effects}{chapter.7}% 76
+\BOOKMARK [1][-]{section.7.10}{Extent and Success of Neuroergonomic assessment}{chapter.7}% 77
+\BOOKMARK [0][-]{chapter.8}{Conclusions and Future Work}{}% 78
+\BOOKMARK [0][-]{chapter.8}{List of Figures}{}% 79
+\BOOKMARK [0][-]{chapter*.36}{List of Tables}{}% 80
+\BOOKMARK [0][-]{chapter*.37}{List of Abbreviations}{}% 81
+\BOOKMARK [0][-]{chapter*.37}{Bibliography}{}% 82

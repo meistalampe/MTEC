@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.13)  6 JAN 2020 02:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.7.13)  6 JAN 2020 18:33
 entering extended mode
 **./master_thesis.tex
 (master_thesis.tex
@@ -1078,7 +1078,7 @@ LaTeX Info: Redefining \nameref on input line 73.
 \openout6 = `master_thesis.out'.
 
 
-<images/logo.pdf, id=313, 495.8525pt x 449.68pt>
+<images/logo.pdf, id=329, 495.8525pt x 449.68pt>
 File: images/logo.pdf Graphic file (type pdf)
  <use images/logo.pdf>
 Package pdftex.def Info: images/logo.pdf used on input line 76.
@@ -1130,7 +1130,7 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 124.
 
-<images/cc_by_nc_nd.png, id=330, 516.9714pt x 125.268pt>
+<images/cc_by_nc_nd.png, id=346, 516.9714pt x 125.268pt>
 File: images/cc_by_nc_nd.png Graphic file (type png)
 
 <use images/cc_by_nc_nd.png>
@@ -1189,14 +1189,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--87
 
  []
 
-[11] <images/ppg_raw.jpg, id=492, 369.17924pt x 200.54926pt>
+[11] <images/ppg_raw.jpg, id=512, 369.17924pt x 200.54926pt>
 File: images/ppg_raw.jpg Graphic file (type jpg)
 
 <use images/ppg_raw.jpg>
 Package pdftex.def Info: images/ppg_raw.jpg used on input line 91.
 (pdftex.def)             Requested size: 313.69029pt x 170.41563pt.
 
-<images/ppg_pw.jpg, id=493, 426.09187pt x 274.77657pt>
+<images/ppg_pw.jpg, id=513, 426.09187pt x 274.77657pt>
 File: images/ppg_pw.jpg Graphic file (type jpg)
  <use images/ppg_pw.jpg>
 Package pdftex.def Info: images/ppg_pw.jpg used on input line 100.
@@ -1207,14 +1207,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--109
  []
 
 [12 <./images/ppg_raw.jpg>]
-<images/ppg_a.jpg, id=504, 218.31563pt x 420.82219pt>
+<images/ppg_a.jpg, id=524, 218.31563pt x 420.82219pt>
 File: images/ppg_a.jpg Graphic file (type jpg)
  <use images/ppg_a.jpg>
 Package pdftex.def Info: images/ppg_a.jpg used on input line 113.
 (pdftex.def)             Requested size: 224.06548pt x 431.9106pt.
 
 [13 <./images/ppg_pw.jpg>]
-<images/SelectedTimeDomainMeasures.jpg, id=515, 816.80156pt x 436.63126pt>
+<images/SelectedTimeDomainMeasures.jpg, id=535, 816.80156pt x 436.63126pt>
 File: images/SelectedTimeDomainMeasures.jpg Graphic file (type jpg)
 
 <use images/SelectedTimeDomainMeasures.jpg>
@@ -1222,7 +1222,7 @@ Package pdftex.def Info: images/SelectedTimeDomainMeasures.jpg used on input li
 ne 135.
 (pdftex.def)             Requested size: 224.06548pt x 119.77081pt.
 
-<images/SelectedFrequencyDomainMeasures.jpg, id=519, 589.4522pt x 419.31656pt>
+<images/SelectedFrequencyDomainMeasures.jpg, id=539, 589.4522pt x 419.31656pt>
 File: images/SelectedFrequencyDomainMeasures.jpg Graphic file (type jpg)
 
 <use images/SelectedFrequencyDomainMeasures.jpg>
@@ -1248,7 +1248,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 53--54
 ) [26]
 chapter 3.
 (chapters/materials_and_methods.tex
-<images/E4overview.JPG, id=598, 642.14906pt x 617.30624pt>
+<images/E4overview.JPG, id=618, 642.14906pt x 617.30624pt>
 File: images/E4overview.JPG Graphic file (type jpg)
 
 <use images/E4overview.JPG>
@@ -1268,7 +1268,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--79
 
  []
 
-<images/E4streamingServer.JPG, id=621, 456.95718pt x 279.29344pt>
+<images/E4streamingServer.JPG, id=641, 456.95718pt x 279.29344pt>
 File: images/E4streamingServer.JPG Graphic file (type jpg)
 
 <use images/E4streamingServer.JPG>
@@ -1293,61 +1293,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--56
 
  []
 
-<images/bvp_dta.jpg, id=706, 531.48563pt x 179.92218pt>
+<images/bvp_dta.jpg, id=726, 531.48563pt x 179.92218pt>
 File: images/bvp_dta.jpg Graphic file (type jpg)
 
 <use images/bvp_dta.jpg>
-Package pdftex.def Info: images/bvp_dta.jpg used on input line 68.
+Package pdftex.def Info: images/bvp_dta.jpg used on input line 69.
 (pdftex.def)             Requested size: 448.13095pt x 151.70738pt.
  [42] [43 <./images/bvp_dta.jpg>]
-<images/eb_replacement.jpg, id=736, 452.4403pt x 219.82124pt>
+<images/eb_replacement.jpg, id=756, 452.4403pt x 219.82124pt>
 File: images/eb_replacement.jpg Graphic file (type jpg)
 
 <use images/eb_replacement.jpg>
-Package pdftex.def Info: images/eb_replacement.jpg used on input line 109.
+Package pdftex.def Info: images/eb_replacement.jpg used on input line 111.
 (pdftex.def)             Requested size: 448.13095pt x 217.72766pt.
  [44]
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
 
- []
+LaTeX Warning: Float too large for page by 36.99944pt on input line 163.
 
-[45 <./images/eb_replacement.jpg>]
-Overfull \vbox (5.49945pt too high) has occurred while \output is active []
+[45 <./images/eb_replacement.jpg>] [46]
+
+Package caption Warning: \label without proper reference on input line 226.
+See the caption package documentation for explanation.
 
 
-[46]
-Underfull \hbox (badness 10000) in paragraph at lines 172--173
+LaTeX Warning: Reference `MLDS' on page 47 undefined on input line 225.
 
- []
-
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
-
- []
-
-) [48]
+[47] [48] [49]) [50]
 chapter 6.
-(chapters/results.tex) [49
+(chapters/results.tex) [51
 
 ]
 chapter 7.
-(chapters/discussion.tex [50
+(chapters/discussion.tex [52
 
-] [51] [52]) [53] [54]
+] [53] [54]) [55] [56]
 chapter 8.
-(chapters/conclusions_and_future_work.tex) [55
+(chapters/conclusions_and_future_work.tex) [57
 
 ] (chapters/appendix.tex
 No file master_thesis.gls.
 No file master_thesis.acr.
-) [56]
+) [58]
 Package tocbasic Info: character protrusion at lof deactivated on input line 22
 8.
  (master_thesis.lof)
 \tf@lof=\write8
 \openout8 = `master_thesis.lof'.
 
- [57
+ [59
 
 ]
 Package tocbasic Info: character protrusion at lot deactivated on input line 23
@@ -1358,9 +1351,9 @@ Package tocbasic Info: character protrusion at lot deactivated on input line 23
 
 
 No file master_thesis.gls.
-[58
+[60
 
-] (master_thesis.bbl [59
+] (master_thesis.bbl [61
 
 ]
 LaTeX Font Info:    Try loading font information for T1+lmtt on input line 84.
@@ -1374,26 +1367,29 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
 )
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 248.
- [60]
+ [62]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 248.
  (master_thesis.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 248.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 248.
 Package rerunfilecheck Info: File `master_thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F08338C3104A2B89D71C0CD7778945B1;5185.
+(rerunfilecheck)             Checksum: 576DBA564B58E899085273ACDD52E332;5464.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19631 strings out of 493328
- 330148 string characters out of 3139118
- 597816 words of memory out of 3000000
- 22494 multiletter control sequences out of 15000+200000
+ 19647 strings out of 493328
+ 330392 string characters out of 3139118
+ 597898 words of memory out of 3000000
+ 22500 multiletter control sequences out of 15000+200000
  58644 words of font info for 94 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,15n,77p,8826b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,25n,77p,8826b,590s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program Files/M
 iKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/e
 nc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm
@@ -1408,9 +1404,9 @@ ype1/public/lm/lmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr
  Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/lm/lmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/lm/lmtt12.pfb>
-Output written on master_thesis.pdf (62 pages, 1123351 bytes).
+Output written on master_thesis.pdf (64 pages, 1131505 bytes).
 PDF statistics:
- 931 PDF objects out of 1000 (max. 8388607)
- 200 named destinations out of 1000 (max. 500000)
- 16552 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 969 PDF objects out of 1000 (max. 8388607)
+ 210 named destinations out of 1000 (max. 500000)
+ 16584 words of extra memory for PDF output out of 17280 (max. 10000000)
 

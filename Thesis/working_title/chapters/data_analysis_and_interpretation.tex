@@ -61,7 +61,8 @@ MA_{beat}[n] = \frac{1}{W_{2}}\cdot(y[n-\frac{W_{2}-1}{2}]+...+y[n]+...+y[n+\fra
 THR_{1} &= MA_{beat}[n]+\alpha \\
 \alpha &= \beta\cdot\bar{z}
 \end{align}
-Where $\beta$ was set to a constant value of 0,02 and $\bar{z}$ was the statistical mean of $y[n]$. Figure \ref{bvp_dta} demonstrates the idea of using two moving averages to generate blocks of interest.\\ 
+Where $\beta$ was set to a constant value of 0,02 and $\bar{z}$ was the statistical mean of $y[n]$. Figure \ref{bvp_dta} demonstrates the idea of using two moving averages to generate blocks of interest.
+
 %[insert: bvp_dta.jpg, source: \cite{Elgendi2013}]
 \begin{figure}[ht]
 	\centering
@@ -69,7 +70,8 @@ Where $\beta$ was set to a constant value of 0,02 and $\bar{z}$ was the statisti
 	\caption[Peak Detection Algorithm]{Blocks of interest are shown as grey squares over the filtered signal (in blue). The blocks are generated, using the two moving averages $MA_{peak}$ and $MA_{beat}$, which are depicted as a black dotted signal and a dashed red signal respectively. (source: doi:10.1371/journal.pone.0076585.g009)}
 	\label{bvp_dta}
 \end{figure}
-Although this process generated many blocks, only some would contain the desired feature (i.e. the systolic peak). Therefore, it was necessary to reject the blocks that resulted from diastolic waves and noise. The rejection was based on the second threshold $THR_{2}$, which corresponded to the anticipated width of a systolic peak and was set to $W_{1}$. Whenever a block was wider than or equal to $THR_{2}$ it was classified as valid.\\
+
+Although this process generated many blocks, only some of them would contain the desired feature (i.e. the systolic peak). Therefore, it was necessary to identify and reject the blocks that resulted from diastolic waves and noise. The rejection was based on the second threshold $THR_{2}$, which corresponded to the anticipated width of a systolic peak and was set to $W_{1}$. Whenever a block was wider than or equal to $THR_{2}$ it was classified as valid.\\
 \textbf{Peak Detection.}\label{pkdet} In the last step of the algorithm systolic peaks were detected by localizing the maximum absolute value in valid blocks of interest. 
 
 \subsubsection{Inter-Beat-Intervals}
@@ -89,7 +91,7 @@ IBI_{min} &= \frac{60000}{HR_{max}}	[ms]\\
 IBI_{max} &= \frac{60000}{HR_{min}}	[ms]
 \end{align}
 The resulting values for the new IBI-related thresholds $IBI_{max}$ and $IBI_{min}$ were rounded to the next full integer and then used to identify outliers in the IBI series. Afterwards, all marked IBI were replaced using linear interpolation.\\
-\textbf{Ectopic Beat Identification.} To identify IBIs that resulted from ectopic beats we considered Kamath's suggestion. Thereby, a heartbeat interval was considered abnormal when the heartbeat interval increased by more than 32.5\% decreased by more than 24.5\% compared to the previous heartbeat \cite{Choi2016}. Equation \ref{kamath} shows the mathematical expression that was used for the thresholding method to identify ectopic beats. 
+\textbf{Ectopic Beat Identification.} To identify IBIs that resulted from ectopic beats we considered Kamath's suggestion. Thereby, a heartbeat interval was considered abnormal when the heartbeat interval increased by more than 32.5\% decreased by more than 24.5\% compared to the previous heartbeat \cite{Choi2016}. Equation \ref{kamath} shows the mathematical expression that was used as thresholding method for ectopic beat identification. 
 \begin{equation} \label{kamath}
 IBI_{EB} = \lbrace IBI\vert 0.675 IBI_{n-1} < IBI_{n} < 1.245 IBI_{n-1}\rbrace  
 \end{equation}
@@ -122,7 +124,8 @@ As $B$ would in general not be an integer value, the computed values were rounde
 \subsubsection{Feature Extraction}
  %FEATURE EXTRACTION
 HRV feature extraction was based entirely on the recommendations given by the Task Force (1996). The selected measures are shown in the tabular below sorted by their domains.\\[10pt]
-\begin{flushleft}
+\begin{table}
+\caption[HRV Feature Selection]{HRV Feature Selection}
 \begin{tabular}{cccc}
 \multicolumn{4}{c}{\thead{Time Domain Measures}} \\
 \hline 
@@ -157,7 +160,7 @@ LF/HF &  & \makecell[l]{Ratio of LF power to HF power} & \\
 & & & \\
 \hline
 \end{tabular} 
-\end{flushleft}
+\end{table}
 
 \subsection{GSR}
 \subsubsection{Pre-Processing}\label{gsrpp}
@@ -170,7 +173,8 @@ As we were only interested in the tonic component of GSR, pre-processing was foc
 \subsubsection{Feature Extraction}\label{gsrfe}
 % FEATURE EXTRACTION
 GSR feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the tabular below.\\[10pt]
-\begin{flushleft}
+\begin{table}
+\caption[GSR Feature Selection]{GSR Feature Selection}
 \begin{tabular}{cccc}
 \multicolumn{4}{c}{\thead{Time Domain Measures}} \\
 \hline 
@@ -180,12 +184,12 @@ GSR feature extraction was focused on deriving a number of basic statistical tim
 \hline
  & & & \\
 mGSR & $\mu S$ & \multicolumn{2}{c}{\makecell[l]{Mean value of the entire recording}} \\ 
-rGSR & $\mu S$ & \multicolumn{2}{c}{\makecell[l]{The difference between the lowest and the highest \\ GSR value}} \\
+rGSR & $\mu S$ & \multicolumn{2}{c}{\makecell[l]{The difference between the lowest and the highest value}} \\
 sdGSR & $\mu S$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of the entire recording}} \\
 & & & \\
 \hline
 \end{tabular} 
-\end{flushleft}
+\end{table}
 
 \subsection{Skin Temperature}
 \subsubsection{Pre-Processing}
@@ -195,7 +199,8 @@ The pre-processing of the skin temperature signal was identical to the methods a
 \subsubsection{Feature Extraction}
 % FEATURE EXTRACTION
 Similar to \ref{gsrfe}, feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the tabular below.\\[10pt]
-\begin{flushleft}
+\begin{table}
+\caption[Skin Temperature Feature Selection]{Skin Temperature Feature Selection}
 \begin{tabular}{cccc}
 \multicolumn{4}{c}{\thead{Time Domain Measures}} \\
 \hline 
@@ -205,14 +210,50 @@ Similar to \ref{gsrfe}, feature extraction was focused on deriving a number of b
 \hline
  & & & \\
 mST & $^{\circ}C$ & \multicolumn{2}{c}{\makecell[l]{Mean temperature of the entire recording}} \\ 
-rST & $^{\circ}C$ & \multicolumn{2}{c}{\makecell[l]{The difference between the lowest and the highest \\ temperature value}} \\
+rST & $^{\circ}C$ & \multicolumn{2}{c}{\makecell[l]{The difference between the lowest and the highest value}} \\
 sdST & $^{\circ}C$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of the entire recording}} \\
 & & & \\
 \hline
 \end{tabular} 
-\end{flushleft}
+\end{table}
+
 \section{Data Interpretation}
 % ml methods
+\subsection{Preparation} 
+During the feature extraction process, extracted features from one session were separated by signal type and stored in Python dictionaries. Therefore, a preparation subroutine was built to extract the features from their individual dictionaries and sort them by the session they originated from. The resulting data points were comprised of all features that were extracted from one recording session (e.g. a 5 minute baseline recording).
+Afterwards, those data points were converted into a NumPy array with the dimensions $n \times f$, where $n$ was the number of data points (i.e. the sum of all recorded sessions of all the subjects) and $f$ was the number of features that were extracted for each data point.\\
+\textbf{Creating Subsets.} Next, a number of subsets were created to explore classification accuracy for a variety of different scenarios. Therefore, data points were sorted by their session type and recombined to build the subsets shown in \ref{MLDS}.\\
+\begin{table}\label{MLDS}
+\caption[Machine Learning Data Set Selection]{Machine Learning Data Sets}
+\begin{flushleft}
+\begin{tabular}{cccc}
+\hline 
+\thead{\makecell[c]{Set Name}} & & \thead{Description} & \thead{\makecell[c]{Targets}}\\ 
+\multicolumn{4}{c}{Complete Sets } \\ 
+ & & & \\
+\hline
+ & & & \\
+Original & \multicolumn{2}{c}{\makecell[l]{The set contains all recording sessions. \\ Each session type has an individual label.}} & 6 \\
+Rest Vs All & \multicolumn{2}{c}{\makecell[l]{The set contains all recording sessions. \\ All session types, except for the baseline sessions, \\ have the same label.}} & 2 \\ 
+Stress Vs All & \multicolumn{2}{c}{\makecell[l]{The set contains all recording sessions. \\ All session types, except for the stress sessions, \\ have the same label.}} & 2 \\ 
+Emotion Vs All & \multicolumn{2}{c}{\makecell[l]{The set contains all recording sessions. \\ All session types, except for the visual \\ stimulation sessions, have the same label.}} & 2 \\ 
+ & & & \\
+\multicolumn{4}{c}{Reduced Sets} \\ 
+ & & & \\
+\hline
+ & & & \\
+Stress Vs Rest & \multicolumn{2}{c}{\makecell[l]{The set contains only stress and baseline sessions. \\ Each session type has an individual label.}} & 2 \\
+Stress Vs Stress & \multicolumn{2}{c}{\makecell[l]{The set contains only stress sessions. \\ Each session type has an individual label.}} & 2 \\
+Emotion Vs Emotion & \multicolumn{2}{c}{\makecell[l]{The set contains only visual stimulation sessions. \\ Each session type has an individual label.}} & 2 \\
+& & & \\
+\hline
+\end{tabular} 
+\end{flushleft}
+\end{table}
+
+\textbf{Creating Feature Sets.} Optimizing feature selection is a key component for the success of machine learning. Therefore, a number of feature sets were created to explore the effects on the classification accuracy of the chosen machine learning algorithms. The individual sets, as well as their composition is shown in \ref{MLFS}.\\
+-'_all', '_bvp_time_only', '_bvp_freq_only', '_gsr_only', '_temp_only', '_red_time', '_red_freq'
+
 we conducted a gridsearch with multiple ML algorithms for a number of different data sets and feature constellations and crossvalidation.
 The best parameters for each algorithm, set, and features were u
 \subsection{Machine Learning Algorithms}
