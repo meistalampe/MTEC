@@ -219,13 +219,18 @@ sdST & $^{\circ}C$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of t
 
 \section{Data Interpretation}
 % ml methods
+Similar to data analysis, we handled data interpretation using the programming language Python in combination with the PyCharm IDE. In particular, we used the scikit-learn package to implement data and feature preparation methods, as well as parameter optimization in the training process.
+
 \subsection{Preparation} 
-During the feature extraction process, extracted features from one session were separated by signal type and stored in Python dictionaries. Therefore, a preparation subroutine was built to extract the features from their individual dictionaries and sort them by the session they originated from. The resulting data points were comprised of all features that were extracted from one recording session (e.g. a 5 minute baseline recording).
-Afterwards, those data points were converted into a NumPy array with the dimensions $n \times f$, where $n$ was the number of data points (i.e. the sum of all recorded sessions of all the subjects) and $f$ was the number of features that were extracted for each data point.
+\textbf{Formatting.}During the feature extraction process, extracted features from one session were separated by signal type and stored in individual Python dictionaries. Therefore, a subroutine was built to extract the features from their individual dictionaries and sort them by the session they originated from. The resulting data points were comprised of all features that were extracted from one recording session (e.g. a 5 minute baseline recording).
+Afterwards, those data points were converted into a NumPy array with the dimensions $n \times f$, where $n$ was the number of data points (i.e. the sum of all recorded sessions of all the subjects) and $f$ was the number of features that were extracted for each data point.\\
+\textbf{Generating Training and Test Sets.} A common practice in machine learning to prevent a classifier from overfitting is to reserve some of the data for testing and validation purposes. Therefore, the data set was divided into training and test samples. Approximately 25\% of data points were reserved for algorithm testing, and the remaining 75\% were used for training purposes. This step was implemented using the $\text{\_train\_test\_split}$ helper function in the scikit-learn toolbox.\\
+\textbf{K-fold Crossvalidation} is a convenient way to facilitate the evaluation of the training process without having to resort to the test samples. By employing k-fold Crossvalidation on the training set we were able to compensate for the small sample size of our data set while still reserving the test samples for the final validation.\\
+\textbf{Feature Preparation.} The performance of some machine learning techniques is extremely dependent on data representation. In particular, SVM and Neural Networks benefit from data Normalization (i.e. features are represented as values between 0 and 1). Therefore, we used Python's $\text{MinMaxScaler}$ function to translate each feature individually to a range of 0 to 1.\\
 
 \subsection{Data Sets} 
 A number of subsets were created to explore classification accuracy for a variety of different scenarios. Therefore, data points were sorted by their session type and recombined to build the subsets shown in \ref{MLDS}.\\
-\begin{table}\label{MLDS}
+\begin{table}
 \caption[Machine Learning Data Sets]{Machine Learning Data Sets}
 \begin{flushleft}
 \begin{tabular}{cccc}
@@ -249,7 +254,7 @@ Stress Vs Stress & \multicolumn{2}{c}{\makecell[l]{The set contains only stress 
 Emotion Vs Emotion & \multicolumn{2}{c}{\makecell[l]{The set contains only visual stimulation sessions. \\ Each session type has an individual label.}} & 2 \\
 & & & \\
 \hline
-\end{tabular} 
+\end{tabular} \label{MLDS}
 \end{flushleft}
 \end{table}
 
@@ -262,25 +267,67 @@ Optimizing feature selection is a key component for the success of machine learn
 \item \textbf{Single Sets:} These sets were only comprised of a certain feature group of one physiological measures. Resulting in a set for each of the following: HRV time measures (8 features), HRV frequency measures (7 features), GSR time measures (3 features), and skin temperature time methods (3 features).
 \end{itemize}
 
-\subsection{Machine Learning Techniques}
-According to the procedure described in section \red{mlsel}, we selected the following four machine learning algorithms for classification.
+\subsection{Data Classification}
+As described in section \ref{mlsel}, we selected the following four machine learning algorithms for classification.
 \begin{enumerate}
 \item \textbf{k-NN Classifier}
 \item \textbf{Random Forest Classifier}
 \item \textbf{Support Vector Machines}
 \item \textbf{Neural Networks}
 \end{enumerate}
- 
-\subsubsection{Preparation}
-\textbf{Generating Training & Test Sets.} First, all subsets were divided into training and test samples. Approximately 25\% of data points were reserved for algorithm testing, and the remaining 75\% were used for training purposes.\\
-\textbf{Crossvalidation} Then we employed k-fold Crossvalidation to compensate for the small sample sizes of some of our data sets. \\
-\textbf{Feature Preparation.} The performance of some machine learning techniques is extremely dependent on data representation. In particular, SVM and Neural Networks benefit from data Normalization (i.e. features are represented as values between 0 and 1).  
 
-\subsubsection{Gridsearch}
-Gridsearch is a common method used in machine learning to 
-we conducted a gridsearch with multiple ML algorithms for a number of different data sets and feature constellations and crossvalidation.
-The best parameters for each algorithm, set, and features were u
-\subsection{Machine Learning Algorithms}
-The following ML algorithms were used. They are all included the sklearn package of Python.
-- k-NN, Random Forest Tree, SVM, and NN
-To evaluate the effectiveness of these algorithms we conducted a grid search for essential parameters
+After coding subroutines for each of the above, using their respective implementations in scikit-learn we conducted a gridsearch for algorithm specific hyper-parameters with the goal of performance optimization. Hyper-parameters are parameters that are not directly learned within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes (e.g. C, kernel and gamma for SVM).
+The gridsearch was managed using the $\text{GridSearchCV}$ method, which exhaustively generates candidates from a grid of parameter values ($\text{param\_grid}$). Tables \ref{paramgrids1} and \ref{paramgrids2} show the parameter grids that were employed in this process. Also, k-fold Crossvalidation (k=3, 5) was applied in the process.\\
+\begin{table}
+\caption[Gridsearch Parameters Part 1]{Gridsearch Parameters Part 1}
+\begin{flushleft}
+\begin{tabular}{cccc}
+\hline 
+\thead{\makecell[c]{Parameter}} & \thead{Description} & & \thead{\makecell[c]{Values}}\\ 
+\multicolumn{4}{c}{\textbf{k-NN Classifier}} \\ 
+ & & & \\
+\hline
+ & & & \\
+$\text{n\_neighbors}$ & \multicolumn{2}{c}{\makecell[l]{The number of neighbors that is considered.}} & 1-12 \\
+ & & & \\
+\multicolumn{4}{c}{\textbf{Support Vector Classifier}} \\ 
+ & & & \\
+\hline
+ & & & \\
+$\text{kernel}$ & \multicolumn{2}{c}{\makecell[l]{Specifies the kernel type to be \\used in the algorithm.}} & rbf \\
+$\text{C}$ & \multicolumn{2}{c}{\makecell[l]{Regularization parameter. The \\strength of the regularization is \\ inversely proportional to C. }} & \makecell[c]{0.001, 0.01, 0.1, 1,\\ 10, 100, 150, 200} \\
+$\text{gamma}$ & \multicolumn{2}{c}{\makecell[l]{The kernel coefficient. }} & \makecell[c]{0.0001, 0.001, 0.01, 0.1,\\ 1, 10, 50, 100}\\
+ & & & \\
+\hline
+\end{tabular} \label{paramgrids1}
+\end{flushleft}
+\end{table}
+\begin{table}
+\caption[Gridsearch Parameters Part 2]{Gridsearch Parameters Part 2}
+\begin{flushleft}
+\begin{tabular}{cccc}
+\hline 
+\thead{\makecell[c]{Parameter}} & \thead{Description} & & \thead{\makecell[c]{Values}}\\ 
+\multicolumn{4}{c}{\textbf{Random Forest Classifier}} \\ 
+ & & & \\
+\hline
+ & & & \\
+$\text{n\_estimators}$ & \multicolumn{2}{c}{\makecell[l]{The number of trees in the forest}} &  \makecell[c]{5, 25, 50, 100,\\ 250, 500, 1000}\\
+$\text{max\_depth}$ & \multicolumn{2}{c}{\makecell[l]{The maximum depth of the tree.}} &  \makecell[c]{1-5}\\
+$\text{max\_features}$ & \multicolumn{2}{c}{\makecell[l]{The number of features to consider \\when looking for the best split. Because we\\ use float values int($\text{max\_features} \cdot \text{n\_features}$)\\ features are considered at each split.}} &  \makecell[c]{0.10, 0.25, 0.5,\\ 0.75, 1.0}\\
+ & & & \\
+\multicolumn{4}{c}{\textbf{Neural Networks}} \\ 
+ & & & \\
+\hline
+ & & & \\
+$\text{solver}$ & \multicolumn{2}{c}{\makecell[l]{The solver for weight optimization.}} &  \makecell[c]{lbfgs}\\
+$\text{activation}$ & \multicolumn{2}{c}{\makecell[l]{The activation function for the\\ hidden layer.}} &  \makecell[c]{tanh, relu}\\
+$\text{hidden\_layer\_size}$ & \multicolumn{2}{c}{\makecell[l]{The number of neurons in each layer. \\We used 1-3 layers, with identical\\ amounts of neurons, determined by \\int($\text{max\_features} \cdot \text{hidden\_layer\_size}$).}} &  \makecell[c]{0.5, 1, 2}\\
+$\text{alpha}$ & \multicolumn{2}{c}{\makecell[l]{L2 penalty (regularization term)\\ parameter.}} &  \makecell[c]{0.00001, 0.0001,\\ 0.0005, 0.001, 0.005, \\0.01, 0.05, 0.1, 0.5, 1}\\
+$\text{learning\_rate}$ & \multicolumn{2}{c}{\makecell[l]{The learning rate is used to control the \\step-size in updating the weights.}} &  \makecell[c]{0.001, 0.01, 0.1}\\
+ & & & \\
+\hline
+\end{tabular} \label{paramgrids2}
+\end{flushleft}
+\end{table}
+Afterwards, the best estimators for each feature and data set combination   were determined by comparing crossvalidation scores. Lastly, the final validation was conducted using the best estimators on the reserved test data sets.

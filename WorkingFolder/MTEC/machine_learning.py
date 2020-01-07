@@ -1014,147 +1014,147 @@ def main():
 
     # --- Random Forest --- #
     # Set parameter grid for gridsearch
-
-    param_grids = {'max_depth': [1, 2, 3, 4, 5],
-                   'max_features': [0.10, 0.25, 0.5, 0.75, 1.0],
-                   'n_estimators': [5, 25, 50, 100, 250, 500, 1000],
-                   'random_state': [0]}
-
-    appendices = ['_all', '_bvp_time_only', '_bvp_freq_only', '_gsr_only', '_temp_only', '_red_time', '_red_freq']
-    my_cv = [3, 5]
-    for k in my_cv:
-        dt_appendices = list([])
-        dt_datasets = list([])
-        dt_cv = list([])
-        dt_parameters = list([])
-        dt_best_score_cv = list([])
-        dt_test_accuracy = list([])
-        dt_confusion_matrix = list([])
-        dt_eval = list([])
-        for a in appendices:
-            appendix = a
-
-            for d in dataset_dicts:
-                train_data = d['X_train' + appendix]
-                train_labels = d['y_train']
-                test_data = d['X_test' + appendix]
-                test_labels = d['y_test']
-
-                # create model for rbf param grid
-                dt_grid_search = GridSearchCV(RandomForestClassifier(), param_grids, cv=k)
-                # train model
-                dt_grid_search.fit(train_data, train_labels)
-                # transform results into a dataframe for plotting
-                results = pd.DataFrame(dt_grid_search.cv_results_)
-                # print('Best Parameters: {}'.format(dt_grid_search.best_params_))
-                # print('Best Score Cross Validation: {:.3f}'.format(dt_grid_search.best_score_))
-                # print('Accuracy Test Data: {:.3f}'.format(dt_grid_search.score(test_data, test_labels)))
-                # evaluation metrics
-                if len(d['target_names']) == 2:
-                    # binary classifier
-                    target_names = d['target_names']
-                    # confusion matrix
-                    cm = confusion_matrix(test_labels, dt_grid_search.predict(test_data))
-                    # cm_image = mglearn.tools.heatmap(cm, xlabel="Predicted Label", ylabel="True Label",
-                    #                                  xticklabels=target_names, yticklabels=target_names,
-                    #                                  cmap=plt.get_cmap("gray_r"), fmt="%d")
-                    # plt.title("Confusion Matrix: {}".format(d['name']))
-                    # plt.gca().invert_yaxis()
-                    # plt.colorbar(cm_image)
-                    # plt.savefig("dtrf_confusion_matrix_{}_{}".format(d['name'], k))
-                    # plt.close()
-                    # print("Confusion Matrix: \n{}".format(confusion))
-                    # print('RightNegative: {}, FalseNegative: {}, RightPositive: {}, falsePositive: {}'.format(
-                    #     confusion[0, 0], confusion[1, 0], confusion[1, 1], confusion[0, 1]))
-
-                    # f1 score
-                    f1 = f1_score(test_labels, dt_grid_search.predict(test_data))
-                    # print('F1-Score: {:.2f}'.format(f1_score(test_labels, dt_grid_search.predict(test_data))))
-                    # classification report
-                    cr = classification_report(test_labels, dt_grid_search.predict(test_data),
-                                               target_names=target_names)
-                    # print(classification_report(test_labels, dt_grid_search.predict(test_data),
-                    #                             target_names=d['target_names']))
-
-                    # precision recall curve
-                    # RandomForestClassifier has no predict_function -> use predict_proba_
-                    precision, recall, thresholds = \
-                        precision_recall_curve(test_labels, dt_grid_search.predict_proba(test_data)[:, 1])
-                    # find threshold closest to 0
-                    close_default = np.argmin(np.abs(thresholds - 0.5))
-                    # plt.plot(precision[close_default], recall[close_default], 'o', markersize=10, label="threshold 0.5",
-                    #          fillstyle="none", c='k', mew=2)
-                    # plt.plot(precision, recall, label="precision recall curve")
-                    # plt.xlabel("Precision (Relevanz)")
-                    # plt.ylabel("Recall (Sensitivität)")
-                    # plt.legend(loc='best')
-                    # plt.savefig("dtrf_prc_{}_{}".format(d['name'], k))
-                    # plt.close()
-                    # average precision score
-                    avps = average_precision_score(test_labels, dt_grid_search.predict_proba(test_data)[:, 1])
-                    # print("Average Precision (Relevanz): {}".format(avps))
-                    # ROC curve
-                    fpr, tpr, thresholds_roc = roc_curve(test_labels, dt_grid_search.predict_proba(test_data)[:, 1])
-                    # plt.plot(fpr, tpr, label="ROC Curve")
-                    # plt.xlabel("FRR")
-                    # plt.ylabel("RPR (Sensitivität)")
-                    # close_default_roc = np.argmin(np.abs(thresholds_roc - 0.5))
-                    # plt.plot(fpr[close_default_roc], tpr[close_default_roc], 'o', markersize=10, label="ROC threshold 0.5",
-                    #          fillstyle="none", c='k', mew=2)
-                    # plt.savefig("dtrf_ROC_curve_{}_{}".format(d['name'], k))
-                    # plt.close()
-                    # ROC/AUC Score
-                    auc = roc_auc_score(test_labels, dt_grid_search.predict_proba(test_data)[:, 1])
-                    # print("AUC: {:.3f}".format(auc))
-
-                    str_for_results = "F1-Score: {:.2f}, Average Precision (Relevanz): {:.3f}, AUC: {:.3f}".format(f1, avps, auc)
-
-                else:
-                    # multiple category classifier
-                    if d['name'] == 'complete_no_cd_dict':
-                        target_names = ['baseline', 'emotion_one', 'emotion_two', 'stress_one',
-                                        'stress_two']
-                    else:
-                        target_names = ['baseline', 'cd', 'emotion_one', 'emotion_two', 'stress_one',
-                                        'stress_two']
-                    cm = confusion_matrix(test_labels, dt_grid_search.predict(test_data))
-                    # cm_image = mglearn.tools.heatmap(cm, xlabel="Predicted Label", ylabel="True Label",
-                    #                                  xticklabels=target_names, yticklabels=target_names,
-                    #                                  cmap=plt.get_cmap("gray_r"), fmt="%d")
-                    # plt.title("Confusion Matrix: {}".format(d['name']))
-                    # plt.gca().invert_yaxis()
-                    # plt.colorbar(cm_image)
-                    # plt.savefig("dtrf_confusion_matrix_{}_{}".format(d['name'], k))
-                    # plt.close()
-
-                    cr = classification_report(test_labels, dt_grid_search.predict(test_data),
-                                               target_names=target_names)
-                    f1_micro = f1_score(test_labels, dt_grid_search.predict(test_data), average="micro")
-                    f1_macro = f1_score(test_labels, dt_grid_search.predict(test_data), average="macro")
-                    str_for_results = 'F1-Score (micro): {:.3f}, F1-Score (macro): {:.3f}'.format(f1_micro, f1_macro)
-
-                # best = dt_grid_search.best_estimator_
-                # plot_feature_importance_random_forest(model=best, dataset=d, fold=k)
-
-                dt_appendices.append(appendix)
-                dt_datasets.append(d['name'])
-                dt_cv.append(k)
-                dt_parameters.append(dt_grid_search.best_params_)
-                dt_best_score_cv.append(round(dt_grid_search.best_score_, 3) * 100)
-                dt_test_accuracy.append(round(dt_grid_search.score(test_data, test_labels), 3) * 100)
-                dt_confusion_matrix.append(cm)
-                dt_eval.append(str_for_results)
-
-        dt_df = pd.DataFrame({'Feature Selection': dt_appendices,
-                              'Dataset': dt_datasets,
-                              'CV [k_fold]': dt_cv,
-                              'Best Parameters': dt_parameters,
-                              'Best Accuracy CV [%]': dt_best_score_cv,
-                              'Accuracy Test Data [%]': dt_test_accuracy,
-                              'ConfusionMatrix': dt_confusion_matrix,
-                              'Evaluation Metrics': dt_eval,
-                              })
-        dt_df.to_excel('dt_{}.xlsx'.format(k), sheet_name='sheet1', index=False)
+    #
+    # param_grids = {'max_depth': [1, 2, 3, 4, 5],
+    #                'max_features': [0.10, 0.25, 0.5, 0.75, 1.0],
+    #                'n_estimators': [5, 25, 50, 100, 250, 500, 1000],
+    #                'random_state': [0]}
+    #
+    # appendices = ['_all', '_bvp_time_only', '_bvp_freq_only', '_gsr_only', '_temp_only', '_red_time', '_red_freq']
+    # my_cv = [3, 5]
+    # for k in my_cv:
+    #     dt_appendices = list([])
+    #     dt_datasets = list([])
+    #     dt_cv = list([])
+    #     dt_parameters = list([])
+    #     dt_best_score_cv = list([])
+    #     dt_test_accuracy = list([])
+    #     dt_confusion_matrix = list([])
+    #     dt_eval = list([])
+    #     for a in appendices:
+    #         appendix = a
+    #
+    #         for d in dataset_dicts:
+    #             train_data = d['X_train' + appendix]
+    #             train_labels = d['y_train']
+    #             test_data = d['X_test' + appendix]
+    #             test_labels = d['y_test']
+    #
+    #             # create model for rbf param grid
+    #             dt_grid_search = GridSearchCV(RandomForestClassifier(), param_grids, cv=k)
+    #             # train model
+    #             dt_grid_search.fit(train_data, train_labels)
+    #             # transform results into a dataframe for plotting
+    #             results = pd.DataFrame(dt_grid_search.cv_results_)
+    #             # print('Best Parameters: {}'.format(dt_grid_search.best_params_))
+    #             # print('Best Score Cross Validation: {:.3f}'.format(dt_grid_search.best_score_))
+    #             # print('Accuracy Test Data: {:.3f}'.format(dt_grid_search.score(test_data, test_labels)))
+    #             # evaluation metrics
+    #             if len(d['target_names']) == 2:
+    #                 # binary classifier
+    #                 target_names = d['target_names']
+    #                 # confusion matrix
+    #                 cm = confusion_matrix(test_labels, dt_grid_search.predict(test_data))
+    #                 # cm_image = mglearn.tools.heatmap(cm, xlabel="Predicted Label", ylabel="True Label",
+    #                 #                                  xticklabels=target_names, yticklabels=target_names,
+    #                 #                                  cmap=plt.get_cmap("gray_r"), fmt="%d")
+    #                 # plt.title("Confusion Matrix: {}".format(d['name']))
+    #                 # plt.gca().invert_yaxis()
+    #                 # plt.colorbar(cm_image)
+    #                 # plt.savefig("dtrf_confusion_matrix_{}_{}".format(d['name'], k))
+    #                 # plt.close()
+    #                 # print("Confusion Matrix: \n{}".format(confusion))
+    #                 # print('RightNegative: {}, FalseNegative: {}, RightPositive: {}, falsePositive: {}'.format(
+    #                 #     confusion[0, 0], confusion[1, 0], confusion[1, 1], confusion[0, 1]))
+    #
+    #                 # f1 score
+    #                 f1 = f1_score(test_labels, dt_grid_search.predict(test_data))
+    #                 # print('F1-Score: {:.2f}'.format(f1_score(test_labels, dt_grid_search.predict(test_data))))
+    #                 # classification report
+    #                 cr = classification_report(test_labels, dt_grid_search.predict(test_data),
+    #                                            target_names=target_names)
+    #                 # print(classification_report(test_labels, dt_grid_search.predict(test_data),
+    #                 #                             target_names=d['target_names']))
+    #
+    #                 # precision recall curve
+    #                 # RandomForestClassifier has no predict_function -> use predict_proba_
+    #                 precision, recall, thresholds = \
+    #                     precision_recall_curve(test_labels, dt_grid_search.predict_proba(test_data)[:, 1])
+    #                 # find threshold closest to 0
+    #                 close_default = np.argmin(np.abs(thresholds - 0.5))
+    #                 # plt.plot(precision[close_default], recall[close_default], 'o', markersize=10, label="threshold 0.5",
+    #                 #          fillstyle="none", c='k', mew=2)
+    #                 # plt.plot(precision, recall, label="precision recall curve")
+    #                 # plt.xlabel("Precision (Relevanz)")
+    #                 # plt.ylabel("Recall (Sensitivität)")
+    #                 # plt.legend(loc='best')
+    #                 # plt.savefig("dtrf_prc_{}_{}".format(d['name'], k))
+    #                 # plt.close()
+    #                 # average precision score
+    #                 avps = average_precision_score(test_labels, dt_grid_search.predict_proba(test_data)[:, 1])
+    #                 # print("Average Precision (Relevanz): {}".format(avps))
+    #                 # ROC curve
+    #                 fpr, tpr, thresholds_roc = roc_curve(test_labels, dt_grid_search.predict_proba(test_data)[:, 1])
+    #                 # plt.plot(fpr, tpr, label="ROC Curve")
+    #                 # plt.xlabel("FRR")
+    #                 # plt.ylabel("RPR (Sensitivität)")
+    #                 # close_default_roc = np.argmin(np.abs(thresholds_roc - 0.5))
+    #                 # plt.plot(fpr[close_default_roc], tpr[close_default_roc], 'o', markersize=10, label="ROC threshold 0.5",
+    #                 #          fillstyle="none", c='k', mew=2)
+    #                 # plt.savefig("dtrf_ROC_curve_{}_{}".format(d['name'], k))
+    #                 # plt.close()
+    #                 # ROC/AUC Score
+    #                 auc = roc_auc_score(test_labels, dt_grid_search.predict_proba(test_data)[:, 1])
+    #                 # print("AUC: {:.3f}".format(auc))
+    #
+    #                 str_for_results = "F1-Score: {:.2f}, Average Precision (Relevanz): {:.3f}, AUC: {:.3f}".format(f1, avps, auc)
+    #
+    #             else:
+    #                 # multiple category classifier
+    #                 if d['name'] == 'complete_no_cd_dict':
+    #                     target_names = ['baseline', 'emotion_one', 'emotion_two', 'stress_one',
+    #                                     'stress_two']
+    #                 else:
+    #                     target_names = ['baseline', 'cd', 'emotion_one', 'emotion_two', 'stress_one',
+    #                                     'stress_two']
+    #                 cm = confusion_matrix(test_labels, dt_grid_search.predict(test_data))
+    #                 # cm_image = mglearn.tools.heatmap(cm, xlabel="Predicted Label", ylabel="True Label",
+    #                 #                                  xticklabels=target_names, yticklabels=target_names,
+    #                 #                                  cmap=plt.get_cmap("gray_r"), fmt="%d")
+    #                 # plt.title("Confusion Matrix: {}".format(d['name']))
+    #                 # plt.gca().invert_yaxis()
+    #                 # plt.colorbar(cm_image)
+    #                 # plt.savefig("dtrf_confusion_matrix_{}_{}".format(d['name'], k))
+    #                 # plt.close()
+    #
+    #                 cr = classification_report(test_labels, dt_grid_search.predict(test_data),
+    #                                            target_names=target_names)
+    #                 f1_micro = f1_score(test_labels, dt_grid_search.predict(test_data), average="micro")
+    #                 f1_macro = f1_score(test_labels, dt_grid_search.predict(test_data), average="macro")
+    #                 str_for_results = 'F1-Score (micro): {:.3f}, F1-Score (macro): {:.3f}'.format(f1_micro, f1_macro)
+    #
+    #             # best = dt_grid_search.best_estimator_
+    #             # plot_feature_importance_random_forest(model=best, dataset=d, fold=k)
+    #
+    #             dt_appendices.append(appendix)
+    #             dt_datasets.append(d['name'])
+    #             dt_cv.append(k)
+    #             dt_parameters.append(dt_grid_search.best_params_)
+    #             dt_best_score_cv.append(round(dt_grid_search.best_score_, 3) * 100)
+    #             dt_test_accuracy.append(round(dt_grid_search.score(test_data, test_labels), 3) * 100)
+    #             dt_confusion_matrix.append(cm)
+    #             dt_eval.append(str_for_results)
+    #
+    #     dt_df = pd.DataFrame({'Feature Selection': dt_appendices,
+    #                           'Dataset': dt_datasets,
+    #                           'CV [k_fold]': dt_cv,
+    #                           'Best Parameters': dt_parameters,
+    #                           'Best Accuracy CV [%]': dt_best_score_cv,
+    #                           'Accuracy Test Data [%]': dt_test_accuracy,
+    #                           'ConfusionMatrix': dt_confusion_matrix,
+    #                           'Evaluation Metrics': dt_eval,
+    #                           })
+    #     dt_df.to_excel('dt_{}.xlsx'.format(k), sheet_name='sheet1', index=False)
 
     # # --- Gradient Boosting --- #
     # # Set parameter grid for gridsearch
@@ -1311,11 +1311,13 @@ def main():
                 train_labels = d['y_train']
                 test_data = d['X_test' + appendix]
                 test_labels = d['y_test']
-                dim = [len(d['X_test_all'][0])]
+                dim = len(d['X_test_all'][0])
                 param_grids['hidden_layer_sizes'] = [[int(dim/2)], [int(dim/2), int(dim/2)], [int(dim/2), int(dim/2), int(dim/2)],
                                                      [dim], [dim, dim], [dim, dim, dim],
                                                      [dim*2], [dim*2, dim*2], [dim*2, dim*2, dim*2],
                                                      [100], [100, 100], [100, 100, 100]]
+                print(dim)
+                print(param_grids['hidden_layer_sizes'])
                 # Min Max Scaling
                 scaler = MinMaxScaler()
                 scaler.fit(train_data)
@@ -1346,14 +1348,14 @@ def main():
                     target_names = d['target_names']
                     # confusion matrix
                     cm = confusion_matrix(test_labels, mlp_grid_search.predict(test_data_min_max_scaled))
-                    cm_image = mglearn.tools.heatmap(cm, xlabel="Predicted Label", ylabel="True Label",
-                                                     xticklabels=target_names, yticklabels=target_names,
-                                                     cmap=plt.get_cmap("gray_r"), fmt="%d")
-                    plt.title("Confusion Matrix: {}".format(d['name']))
-                    plt.gca().invert_yaxis()
-                    plt.colorbar(cm_image)
-                    plt.savefig("mlp_confusion_matrix_{}_{}".format(d['name'], k))
-                    plt.close()
+                    # cm_image = mglearn.tools.heatmap(cm, xlabel="Predicted Label", ylabel="True Label",
+                    #                                  xticklabels=target_names, yticklabels=target_names,
+                    #                                  cmap=plt.get_cmap("gray_r"), fmt="%d")
+                    # plt.title("Confusion Matrix: {}".format(d['name']))
+                    # plt.gca().invert_yaxis()
+                    # plt.colorbar(cm_image)
+                    # plt.savefig("mlp_confusion_matrix_{}_{}".format(d['name'], k))
+                    # plt.close()
                     # print("Confusion Matrix: \n{}".format(confusion))
                     # print('RightNegative: {}, FalseNegative: {}, RightPositive: {}, falsePositive: {}'.format(
                     #     confusion[0, 0], confusion[1, 0], confusion[1, 1], confusion[0, 1]))
@@ -1368,40 +1370,38 @@ def main():
                     #                             target_names=d['target_names']))
 
                     # precision recall curve
-                    precision, recall, thresholds = \
-                        precision_recall_curve(test_labels, mlp_grid_search.decision_function(test_data_min_max_scaled))
+                    #precision, recall, thresholds = \
+                    #    precision_recall_curve(test_labels, mlp_grid_search.decision_function(test_data_min_max_scaled))
                     # find threshold closest to 0
-                    close_zero = np.argmin(np.abs(thresholds))
-                    plt.plot(precision[close_zero], recall[close_zero], 'o', markersize=10, label="threshold zero",
-                             fillstyle="none", c='k', mew=2)
-                    plt.plot(precision, recall, label="precision recall curve")
-                    plt.xlabel("Precision (Relevanz)")
-                    plt.ylabel("Recall (Sensitivität)")
-                    plt.legend(loc='best')
-                    plt.savefig("mlp_prc_{}_{}".format(d['name'], k))
-                    plt.close()
+                    #close_zero = np.argmin(np.abs(thresholds))
+                    # plt.plot(precision[close_zero], recall[close_zero], 'o', markersize=10, label="threshold zero",
+                    #          fillstyle="none", c='k', mew=2)
+                    # plt.plot(precision, recall, label="precision recall curve")
+                    # plt.xlabel("Precision (Relevanz)")
+                    # plt.ylabel("Recall (Sensitivität)")
+                    # plt.legend(loc='best')
+                    # plt.savefig("mlp_prc_{}_{}".format(d['name'], k))
+                    # plt.close()
                     # average precision score
-                    avps = average_precision_score(test_labels,
-                                                   mlp_grid_search.decision_function(test_data_min_max_scaled))
+                    # avps = average_precision_score(test_labels,
+                    #                               mlp_grid_search.decision_function(test_data_min_max_scaled))
                     # print("Average Precision (Relevanz): {}".format(avps))
                     # ROC curve
-                    fpr, tpr, thresholds_roc = roc_curve(test_labels,
-                                                         mlp_grid_search.decision_function(test_data_min_max_scaled))
-                    plt.plot(fpr, tpr, label="ROC Curve")
-                    plt.xlabel("FRR")
-                    plt.ylabel("RPR (Sensitivität)")
-                    close_zero_roc = np.argmin(np.abs(thresholds_roc))
-                    plt.plot(fpr[close_zero_roc], tpr[close_zero_roc], 'o', markersize=10, label="ROC threshold zero",
-                             fillstyle="none", c='k', mew=2)
-                    plt.savefig("mlp_ROC_curve_{}_{}".format(d['name'], k))
-                    plt.close()
+                    # fpr, tpr, thresholds_roc = roc_curve(test_labels,
+                    #                                     mlp_grid_search.decision_function(test_data_min_max_scaled))
+                    # plt.plot(fpr, tpr, label="ROC Curve")
+                    # plt.xlabel("FRR")
+                    # plt.ylabel("RPR (Sensitivität)")
+                    # close_zero_roc = np.argmin(np.abs(thresholds_roc))
+                    # plt.plot(fpr[close_zero_roc], tpr[close_zero_roc], 'o', markersize=10, label="ROC threshold zero",
+                    #          fillstyle="none", c='k', mew=2)
+                    # plt.savefig("mlp_ROC_curve_{}_{}".format(d['name'], k))
+                    # plt.close()
                     # ROC/AUC Score
-                    auc = roc_auc_score(test_labels, mlp_grid_search.decision_function(test_data_min_max_scaled))
+                    # auc = roc_auc_score(test_labels, mlp_grid_search.decision_function(test_data_min_max_scaled))
                     # print("AUC: {:.3f}".format(auc))
 
-                    str_for_results = "F1-Score: {:.2f}, Average Precision (Relevanz): {:.3f}, AUC: {:.3f}".format(f1,
-                                                                                                                   avps,
-                                                                                                                   auc)
+                    str_for_results = "F1-Score: {:.2f}".format(f1)
 
                 else:
                     # multiple category classifier
@@ -1412,15 +1412,15 @@ def main():
                         target_names = ['baseline', 'cd', 'emotion_one', 'emotion_two', 'stress_one',
                                         'stress_two']
                     cm = confusion_matrix(test_labels, mlp_grid_search.predict(test_data_min_max_scaled))
-                    cm_image = mglearn.tools.heatmap(cm, xlabel="Predicted Label", ylabel="True Label",
-                                                     xticklabels=target_names, yticklabels=target_names,
-                                                     cmap=plt.get_cmap("gray_r"), fmt="%d")
-
-                    plt.title("Confusion Matrix: {}".format(d['name']))
-                    plt.gca().invert_yaxis()
-                    plt.colorbar(cm_image)
-                    plt.savefig("mlp_confusion_matrix_{}_{}".format(d['name'], k))
-                    plt.close()
+                    # cm_image = mglearn.tools.heatmap(cm, xlabel="Predicted Label", ylabel="True Label",
+                    #                                  xticklabels=target_names, yticklabels=target_names,
+                    #                                  cmap=plt.get_cmap("gray_r"), fmt="%d")
+                    #
+                    # plt.title("Confusion Matrix: {}".format(d['name']))
+                    # plt.gca().invert_yaxis()
+                    # plt.colorbar(cm_image)
+                    # plt.savefig("mlp_confusion_matrix_{}_{}".format(d['name'], k))
+                    # plt.close()
                     cr = classification_report(test_labels, mlp_grid_search.predict(test_data_min_max_scaled),
                                                target_names=target_names)
                     f1_micro = f1_score(test_labels, mlp_grid_search.predict(test_data_min_max_scaled), average="micro")
