@@ -1311,7 +1311,7 @@ def main():
                 train_labels = d['y_train']
                 test_data = d['X_test' + appendix]
                 test_labels = d['y_test']
-                dim = len(d['X_test_all'][0])
+                dim = len(d['X_test' + appendix][0])
                 param_grids['hidden_layer_sizes'] = [[int(dim/2)], [int(dim/2), int(dim/2)], [int(dim/2), int(dim/2), int(dim/2)],
                                                      [dim], [dim, dim], [dim, dim, dim],
                                                      [dim*2], [dim*2, dim*2], [dim*2, dim*2, dim*2],
@@ -1436,16 +1436,16 @@ def main():
                 mlp_confusion_matrix.append(cm)
                 mlp_eval.append(str_for_results)
 
-            mlp_df = pd.DataFrame({'Feature Selection': mlp_appendices,
-                                   'Dataset': mlp_datasets,
-                                   'CV [k_fold]': mlp_cv,
-                                   'Best Parameters': mlp_parameters,
-                                   'Best Accuracy CV [%]': mlp_best_score_cv,
-                                   'Accuracy Test Data [%]': mlp_test_accuracy,
-                                   'ConfusionMatrix': mlp_confusion_matrix,
-                                   'Evaluation Metrics': mlp_eval,
-                                   })
-            mlp_df.to_excel('mlp_{}.xlsx'.format(k), sheet_name='sheet1', index=False)
+        mlp_df = pd.DataFrame({'Feature Selection': mlp_appendices,
+                               'Dataset': mlp_datasets,
+                               'CV [k_fold]': mlp_cv,
+                               'Best Parameters': mlp_parameters,
+                               'Best Accuracy CV [%]': mlp_best_score_cv,
+                               'Accuracy Test Data [%]': mlp_test_accuracy,
+                               'ConfusionMatrix': mlp_confusion_matrix,
+                               'Evaluation Metrics': mlp_eval,
+                               })
+        mlp_df.to_excel('mlp_{}.xlsx'.format(k), sheet_name='sheet1', index=False)
         #     scaler = MinMaxScaler()
         #     scaler.fit(train_data)
         #     # Transform Training Data
