@@ -1,4 +1,4 @@
-\babel@toc {english}{}
+\select@language {english}
 \contentsline {chapter}{Abstract}{1}{chapter*.1}
 \contentsline {chapter}{Zusammenfassung}{2}{chapter*.2}
 \contentsline {chapter}{Declaration}{3}{chapter*.3}
@@ -87,10 +87,10 @@
 \contentsline {section}{\numberline {7.1}Research Question 1}{65}{section.7.1}
 \contentsline {section}{\numberline {7.2}Research Question 2}{65}{section.7.2}
 \contentsline {section}{\numberline {7.3}Research Question 3}{65}{section.7.3}
-\contentsline {section}{\numberline {7.4}Effectiveness of signal processing}{65}{section.7.4}
+\contentsline {section}{\numberline {7.4}Effectiveness of signal processing}{66}{section.7.4}
 \contentsline {section}{\numberline {7.5}Feature Selection}{66}{section.7.5}
 \contentsline {section}{\numberline {7.6}subject selection and access conditions}{66}{section.7.6}
-\contentsline {section}{\numberline {7.7}Effect of Group size on the success of ML}{66}{section.7.7}
+\contentsline {section}{\numberline {7.7}Effect of Group size on the success of ML}{67}{section.7.7}
 \contentsline {section}{\numberline {7.8}Improvement of emotional segments}{67}{section.7.8}
 \contentsline {section}{\numberline {7.9}Recording time}{68}{section.7.9}
 \contentsline {section}{\numberline {7.10}Suitability of ML algorithms}{68}{section.7.10}
