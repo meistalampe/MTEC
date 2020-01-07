@@ -1194,8 +1194,8 @@ NN & 77 & NN & 66\\
 \end{center}
 \end{table}
 
-\newpage
-Lastly, we calculated classification accuracies for individual data sets (see \ref{aadb}), as well as individual feature sets (see \ref{aafb}) using the collective performance average of all four algorithms.
+
+Lastly, we calculated the average classification accura
 % average performance of all classifier based on feature set
 \begin{tikzpicture}
   \centering
@@ -1244,7 +1244,7 @@ Lastly, we calculated classification accuracies for individual data sets (see \r
       (ST, 66) };
     \legend{avg. Acc (\%)}
   \end{axis}
-\end{tikzpicture}\label{aafb}
+\end{tikzpicture}
 
 % Average Classification Accuracy Data Based
 \begin{tikzpicture}
@@ -1293,6 +1293,6 @@ Lastly, we calculated classification accuracies for individual data sets (see \r
       (RvS, 77) };
     \legend{avg. Acc (\%)}
   \end{axis}
-\end{tikzpicture}\label{aadb}
+\end{tikzpicture}
 	
 	
