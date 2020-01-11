@@ -11,27 +11,22 @@ With the methods we described in \ref{datainterpretation} we were able to classi
 Further, we were able to achieve even higher performances for binary classification tasks, aiming to identify specific emotional states. Considering the average performances of all four algorithms we achieved accuracies of 89\% for stress sessions, 72\% for visual stimulation (i.e. both emotional states), and 91\% for resting intervals using again all 21 features.\\
 Addressing the distinction of similar emotional states, we assessed the performances of all four classifiers using data sets, only comprised of session from either visual stimulation or stress sessions. Considering again the full feature set we achieved performances of 77\% for resting and stress conditions, and 45\% for both medium and high stress levels, as well as emotional states.\\
 Lastly, we report feature dependent accuracies of 61-69\% for all of the abovementioned classification tasks. These values were computed using the average performances of all four classifiers on the respective feature sets.\\
-Considering these results, we conclude that our methods are more sensitive to the presence or absence of a certain state opposed to small or gradient changes. But much like Byrne et al. (1996) we believe this type of "coarse" state assessment not necessarily to be a problem. The application of such a binary assessment of workload or emotion may still provide significant information to adaptive logic (e.g. on-task versus off-task) \cite{byrne1996}. Therefore, we again answer in the affirmative and believe in the potential of our system for the neuroergonomic assessment in adaptive workplaces. 
+Considering these results, we conclude that our methods are more sensitive to the presence or absence of a certain state opposed to small or gradient changes. But much like Byrne et al. (1996) we believe this type of "coarse" state assessment not necessarily to be a problem. The application of such a binary assessment of workload or emotion may still provide significant information to adaptive logic (e.g. on-task versus off-task) \cite{Byrne1996}. Therefore, we again answer in the affirmative and believe in the potential of our system for the neuroergonomic assessment in adaptive workplaces. 
 
 \subsection{Research Question 3}  
 Which algorithm is best suited for the classification task introduced in RQ2?
 
-We found that SVM with 5-fold crossvalidation performed best when used in combination the reduced time feature set. However, when compared over all feature sets all four algorithms achieve similar results ranging from 65 to 67 \%.
+We found that overall SVM with 5-fold Crossvalidation performed best when used in combination the reduced time feature set. However, when compared over all feature sets all four algorithms achieve similar results ranging from 65 to 67 \%.
 
+\section{Success and Limitations of Neuroergonomic Assessment}
+Although, we achieved accuracies well above chance for the classification of 6 different emotions using our selected features, and reached even higher performances on the binary classification of subsets using a variety of feature combination, we still believe that there is room for improvement. Therefore, in the following section, we will discuss the limitations of the present and the possibilities of future work.
 
-\subsection{credibility}
-Considering a constant performance of all classifier on the EvA data set we choose to mistrust accuracy as a measure of quality. Considering the confusion matrix, which revealed faulty decision patterns for most of the algorithms, we think of the learning process as unsuccessful. Regarding the small sample size, as well as the crossvalidation process as possible reasons.
-In particular, k-NN classifier performed exceptionally compared to the others on distinguishing among similar emotional states. We believe this discrepancy arises from the overall better performance of nearest neighbor methods on smaller sample sizes.
-\section{Extent and Success of Neuroergonomic assessment}
-Although we achieved XY results in the classification of emotional states and workload with all target labels. It could be argued that the accuracy is still to low to be used in a more advanced study, demanding prior optimization.
-But we achieved YZ results for binary classification task UV. Although they may provide only coarse classification this may still be of great use in future neuroergonomic studies as we are still providing a completely independent and universal system, unobtrusive in nature and therefore well suited to further the research in this field. (quote byrne 2006 , they said that even coarse estimation is useful)
-
-\section{Feature Selection}
-Create additional features is also possible, see (one of the three studies in related work, i think it was Picard) which achieved great results this way
+\subsection{Limitations}
+\textbf{Signal Processing.}
 
 no geometrical features 
 The major advantage of geometric methods lies
-in their relative insensitivity to the analytical quality of
+in their relative insensitivity to the analytic quality of
 the series of NN intervals[20]. The major disadvantage is
 the need for a reasonable number of NN intervals to
 construct the geometric pattern. In practice, recordings
@@ -39,6 +34,15 @@ of at least 20 min (but preferably 24 h) should be used
 to ensure the correct performance of the geometric
 methods, i.e. the current geometric methods are inappropriate
 to assess short-term changes in HRV.
+\subsection{Future Work}
+
+\section{credibility}
+Considering a constant performance of all classifier on the EvA data set we choose to mistrust accuracy as a measure of quality. Considering the confusion matrix, which revealed faulty decision patterns for most of the algorithms, we think of the learning process as unsuccessful. Regarding the small sample size, as well as the Crossvalidation process as possible reasons.
+In particular, k-NN classifier performed exceptionally compared to the others on distinguishing among similar emotional states. We believe this discrepancy arises from the overall better performance of nearest neighbor methods on smaller sample sizes.
+\section{Feature Selection}
+Create additional features is also possible, see (one of the three studies in related work, i think it was Picard) which achieved great results this way
+
+
 
 \section{Effectiveness of signal processing}
 we observe some issues in one subject with our pre processing of bvp, due to a extreme reflection peak on every pulse wave causing false peak detection and dismissal of the data. This gives us reason to believe that there is still potential to improve. We can not assess the probability of such a failure because of the limited subject group. Or if in some way it was only circumstantial.

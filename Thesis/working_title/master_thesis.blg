@@ -1,7 +1,12 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: master_thesis.aux
+Case mismatch error between cite keys byrne1996 and Byrne1996
+---line 239 of file master_thesis.aux
+ : \citation{byrne1996
+ :                    }
+I'm skipping whatever remains of this command
 The style file: unsrtnat.bst
 Database file #1: bibliography/bibliography.bib
 Warning--entry type for "E4SS" isn't style-file defined
 --line 172 of file bibliography/bibliography.bib
 Warning--empty year in e4
-(There were 2 warnings)
+(There was 1 error message)
