@@ -22,84 +22,72 @@ We found that overall SVM with 5-fold Crossvalidation performed best when used i
 Although, we achieved accuracies well above chance for the classification of 6 different emotions using our selected features, and reached even higher performances on the binary classification of subsets using a variety of feature combination, we still believe that there is room for improvement. Therefore, in the following section, we will discuss the limitations of the present and the possibilities of future work.
 
 \subsection{Limitations}
-\textbf{Signal Processing.}
+\textbf{Signal Quality.}
+In the sense of the concept of "Garbage In Garbage Out" the recent work focused heavily on the quality of data extraction and processing methods. The overall morphology and quality of the signal we derived, using the E4 wristband, were adequate and similar to other commercial devices. Further, we were not able to identify any drop-off in quality caused by the derivation from the standard measurement locations of PPG and GSR. We did however notice disproportional artifact levels in the BVP signal during break intervals of our experiment, in which the restrictions to the participants movement were lifted. This suggests the susceptibility of wrist based signal detection to motion artifacts caused by muscle activity and subsequent sensor displacement. Even though these implications cast an unfavorable light on the E4, we could argue that this is an inherent problem to all optical sensors. However, at this point and without further investigation we are not able to determine the effects on future applications.\\[10pt]
 
-no geometrical features 
-The major advantage of geometric methods lies
-in their relative insensitivity to the analytic quality of
-the series of NN intervals[20]. The major disadvantage is
-the need for a reasonable number of NN intervals to
-construct the geometric pattern. In practice, recordings
-of at least 20 min (but preferably 24 h) should be used
-to ensure the correct performance of the geometric
-methods, i.e. the current geometric methods are inappropriate
-to assess short-term changes in HRV.
+%\section{suitability of E4 - Motion Artifacts}
+%overall a good device but the reliance on optical sensors still causes a lot of motion artifacts. expecially the large disturbances caused even by miniscule muscle tremors of fingers could lead to long intervals of measurement that cant be used for classification. This requires an elaborate data collection system and extremely strict pre-processing, as well as signal admission.
+%
+%We propose a more adaptive algorithm that recognizes motion artifacts and instead of filtering them shifts the weight of the signals in the classification algorithm in a way that if a signal suffers from heavy artifacts in a certain time interval its influence is reduced by adjusting the weight and therefor other signal tribute more to the classification instead..until no artifact is recognized for a certain period of time. If we consider the model of fusion from the chinese guys that is
+%
+%Otherwise it would be wise to explore contact free forms of emotion recognition, although their implementation may present some obstacles too.
+
+
+%\textbf{BVP Peak Detection Algorithm.}
+%we observe some issues in one subject with our pre processing of bvp, due to a extreme reflection peak on every pulse wave causing false peak detection and dismissal of the data. This gives us reason to believe that there is still potential to improve. We can not assess the probability of such a failure because of the limited subject group. Or if in some way it was only circumstantial.
+%
+%However in the filter function for suitable data segments for feature extraction, based on condition A and B proofed to work well and prevented for faulty data to enter the ML algorithm therefore upholding its integrity.\\
+
+%\textbf{Feature Selection.}
+%As expected we were able to observe the influence of feature selection on classification accuracy among all learning algorithms. 
+%
+%
+%But we were able to achieve good result with a reduced set of features and for some of the binary classifications even with only gsr and temp features.
+%
+%We propose to try the method of combining a lot of simple binary classifiers and fuse them together in a linear fashion (like the Chinese fellows did) quote paper and reference their results
+%
+%Create additional features is also possible, see (one of the three studies in related work, i think it was Picard) which achieved great results this way
+%
+%
+%no geometrical features 
+%The major advantage of geometric methods lies
+%in their relative insensitivity to the analytic quality of
+%the series of NN intervals[20]. The major disadvantage is
+%the need for a reasonable number of NN intervals to
+%construct the geometric pattern. In practice, recordings
+%of at least 20 min (but preferably 24 h) should be used
+%to ensure the correct performance of the geometric
+%methods, i.e. the current geometric methods are inappropriate
+%to assess short-term changes in HRV.\\
+
+\textbf{Crossvalidation.} We have already touched upon the use of k-fold Crossvalidation as a way to increase the performance of machine learning algorithms.
+However, our results do not clearly indicate the benefits of different degrees of Crossvalidation. Again, we propose that the limited number of data points to be a possible reason for this phenomenon. Thereby, using an excessive degree of k-fold Crossvalidation, which causes the individual validation sets to shrink and ultimately a distortion in the results, will lead to sub par or worse performances. Therefore, we would expect to observe further improvement by extending the data base and reassess k-fold parameters. One possibility could be to use the Leave One Out method. It is a rather extreme form of k-fold Crossvalidation, in which each sample is used once as a test set (singleton) while the remaining form the training set. We applied this method in the earlier stages of development, and very quickly ruled it out due to its extremely high computational cost. To conclude, even if the benefits of k-fold Crossvalidation were not immediately noticeable in our experiment its general usefulness and potential in future applications should be considered.\\[10pt]
+\textbf{Evaluation Metric.}
+In the scope of this thesis we used accuracy as a primary metric for algorithm evaluation. Although this is common practice, accuracy is known to be deceptive in some cases. For example, training learning algorithms on asymmetrical data sets. As most of our binary classification tasks featured a very asymmetrical data base (i.e. one of the emotional states was heavily favored), we faced some complications in the learning process. Especially during the classification of visual stimulation sessions in the complete data set. We achieved very similar performances for all algorithms across all feature sets, which lead to doubts in the validity of the results. Therefore, we employed additional metrics such as the Confusion Matrix, which indicates the number of correct and incorrect decisions for each of the target labels. Applying this method revealed faulty decision patterns for most of the algorithms on the above mentioned data set, which suggested some issues in the learning process. We believe that the small sample size in combination with the strong imbalance of the data set are the most likely reasons for these results and that the best approach would be to conduct further experiments, creating a larger data set with more equally distributed states. \\[10pt] 
+\textbf{Sample Size.}
+Sample size, or the size of the data set, is known to be a great influence to the success of machine learning algorithms. Considering the algorithms that were selected for this project, we were able to witness the effects of sample size first hand. For example we noticed that algorithms such as Random Forest, Support Vector Machines, and Neural Networks, which are all known to be better suited for medium to large data sets, significantly underperformed on most of the smaller sub sets (i.e. SvS, EvE) when compared to the larger subsets (i.e. SvA, EvA, RvA). Also, the k-NN classifier, which is commonly known to perform well even on thinner data sets, performed exceptionally compared to the others on distinguishing among similar emotional states (i.e. SvS, EvE). Considering these results, we believe that the acquisition of further data could greatly improve the performance of some of the more complex learning algorithms and our system overall.\\[10pt]
+\textbf{Emotion Elicitation.}
+According to our initial approach we used visual stimulation to elicit two emotional states in our subjects: pleasant and unpleasant. As described in \ref{visstim} we presented a selected set of images, taken from the IAPS, for each emotion. Image selection was based on rating according to a two dimensional model (arousal and valence). In addition, subjective ratings (which used the same metric) on all presented images were gathered for all subjects directly after the visual stimulation sessions. After careful evaluation of the subjective ratings (supported by our observations during the experiment) we detected a number of discrepancies. Meaning that the emotion participants perceived from a certain picture would deviate from the one we intended to display. This misconception raised our concern due to its inevitably effects on the quality of the features we derived from the respective sessions. But, because this phenomenon was limited to a minuscule percentage of data points and the fact that our subject group was already very limited in size, we hesitated to filter out the flawed sessions. It is not clear to which extent the results of the respective classification tasks (i.e. EvA, EvE) were affected by this decision. On the other hand, it could be argued that these findings were coincidental and would have been rendered insignificant in a larger group of people. Nevertheless, we propose a more elaborate emotion elicitation paradigm, which firstly separates neutral and pleasant stimuli and secondly features stimuli that are more representative of the respective emotions, for future iterations.\\[10pt]
+\textbf{Qualification Criteria}
+As described in section \ref{exppar} we included a total of 14 healthy subjects in our experiment. All of which reported to be healthy and willing to partake in the experiment. In retrospective we identified the following issues with the subject admission process.
+\begin{itemize}
+\item Recruited from the student body of HTW Saar and SNNU, most of our subjects came from a scientific background and were already familiar with the laboratory and experimental procedures. In addition, some of the participants had already worked with the IAPS. We can only assume the effects this familiarity had on the emotion elicitation capability of our visual stimulation tasks.
+\item Although all participants gave their confirmation, some stated afterwards that they either were not feeling well, suffered from bad mood, or a mild headache but still wanted to partake. Again we can not completely estimate the influence of this on the measurement, or rule out that there is any influence at all
+\end{itemize}
+ 
+
+
 \subsection{Future Work}
+In this section we present a list of possible additions to the recent work, that were derived during the evaluation process and could be the addressed in subsequent projects.
 
-\section{credibility}
-Considering a constant performance of all classifier on the EvA data set we choose to mistrust accuracy as a measure of quality. Considering the confusion matrix, which revealed faulty decision patterns for most of the algorithms, we think of the learning process as unsuccessful. Regarding the small sample size, as well as the Crossvalidation process as possible reasons.
-In particular, k-NN classifier performed exceptionally compared to the others on distinguishing among similar emotional states. We believe this discrepancy arises from the overall better performance of nearest neighbor methods on smaller sample sizes.
-\section{Feature Selection}
-Create additional features is also possible, see (one of the three studies in related work, i think it was Picard) which achieved great results this way
+\textbf{Large scale data collection.}
+featuring more subjects, for ml purposes but also with more refined emotion elictitation paradigm, better subject selection
+\textbf{Deploy artifact compensation based on acceleration data.}
+acceleration data. Artifact filtering was handled rather primitive. Investigate strategies to adapt signal analysis or detection based on acceleration data derived from the empatica wristband.
+\textbf{Classification Interval.}
+As we were dedicated to follow the recommendations of the Task Force of The European Society of Cardiology and The North American Society of Pacing and Electrophysiology (1996) we used HRV features that were extracted from 5 minute recordings in our emotion classification process. However, it is also stated that the necessary interval length lies only between 1 min for HF and 2 min for LF, as the recording interval should be at least 10 times the length of the wavelength of the lowest frequency component. Considering real life settings, the reduction in classification time we could provide with this method, could greatly benefit the responsiveness and the overall accuracy of adaptive automation. Furthermore, we argue that due to the E4's susceptibility to motion artifacts the classification on 5 minute intervals is far too impractical for real world applications. However, the effects on HRV frequency features should be evaluated first before deploying such a method.
+\textbf{Linear fusion of simple classifier}
+To our surprise single signal feature sets such as GSR and Temp performed well on some of the classification tasks. Inspired by the work of Wei et al. (2018) we propose the investigation of the effects of Weighted Fusion Strategy.
 
-
-
-\section{Effectiveness of signal processing}
-we observe some issues in one subject with our pre processing of bvp, due to a extreme reflection peak on every pulse wave causing false peak detection and dismissal of the data. This gives us reason to believe that there is still potential to improve. We can not assess the probability of such a failure because of the limited subject group. Or if in some way it was only circumstantial.
-
-However in the filter function for suitable data segments for feature extraction, based on condition A and B proofed to work well and prevented for faulty data to enter the ML algorithm therefore upholding its integrity.
-
-\section{subject selection and access conditions}
-- we had some subjects that came from a scientific background, in particular the SNNU and were due to their work there already exposed to the IAPS. This could have had an influence on the ability to elicit emotion during the respective experimental sequences 
-- also some of the subjects stated that they were able to do the experiment, but afterwards stated that they did suffer from bad mood, or a mild headache. Again we can not completely estimate the influence of this on the measurement, or rule out that there is any influence at all
-
-Consequently we need to be more strict with subject admission conditions in the future
-
-\section{Effect of Group size on the success of ML}
-some ML algorithms are known to work well on small sample sizes, but there are also others that improve on bigger sample sizes.
-
-Also there is a certain inequality in the distribution of emotional states we elicited during the main experiment e.g. only one true baseline, 2 workload segments and therefore only one for each degree, and only 1 sample for each emotional state. Better representation of each state, will definitively improve the ability to recognize them via ML  
-
-Further Grid search comparison between 3 fold , 5 fold ,leave one out:
-3 u 5 similar with 3 mostly better due to balance related to our small sample size. bigger group size would allow for higher k fold
-
-Leave one out has to be ruled out due to extremely long training time on the more complex algorithms but seems to be suitable for more simpler ones.
-
-\section{Improvement of emotional segments}
-Maybe we could achieve better results on emotional state classification, if we only consider the presentation time of the measurement.
-
-Also our selection of stimuli did not resonate well with some of the subjects, meaning that their valence arousal rating  varied vastly from our expectations.
-
-Therefore  we are uncertain if the right emotion was elicited during the measurement. This would mean that the low success rate in classifying the two emotional states could have its roots in the missing difference. This would also explain why the overall accuracy on detecting emotional states opposed to the rest of the segments was constantly high in all ML algorithms but the accuracy in inter-emotion classification was generally low.
-
-This problem could also be caused by the small sample size, meaning that measuring a far greater subject group may actually represent the intended two emotional states and therefore cause better results with our ML algorithms
-
-Also if data overlaps to much for different workload degrees as well as similar emotional states methods for unsupervised learning (principal component analysis) or linear discriminant analysis may be successful.
-
-Emotion elicitation paradigm: maybe better next time to provide 3 different sets, neutral, happy, unhappy...we used weak happy and unhappy which were rated as neutral.. therefore the 2 emotional states may overlap too much
-\section{Recording time}
-task force suggest 5 minute recordings, but necessary are only 1 min for HF and 2 min for LF, as the recording interval should be at least 10 times the length of the wavelength of the lowest frequency component.
-Therefore, we may be able to achieve more precise classification results by reducing the recording interval. Pro, this would make a system feel more adaptive and reduce processing time for each decision. The effects on the evaluation of frequency features should be tested, as task force suggests to prefer frequency domain methods for short time analysis.
-\section{Suitability of ML algorithms}
-We touched upon the influence of sample size on the accuracy of ML algorithms but we also have to consider training times, which show substantial differences among some of the algorithms.
-
-Feature selection has noticeable influence on accuracy. Except for variations in bvp features..the accuracy is mostly consistent when they are used which leads to the assumption that they are dominant.
-
-But we were able to achieve good result with a reduced set of features and for some of the binary classifications even with only gsr and temp features.
-
-We propose to try the method of combining a lot of simple binary classifiers and fuse them together in a linear fashion (like the Chinese fellows did) quote paper and reference their results
-
-\section{suitability of E4 - Motion Artifacts}
-overall a good device but the reliance on optical sensors still causes a lot of motion artifacts. expecially the large disturbances caused even by miniscule muscle tremors of fingers could lead to long intervals of measurement that cant be used for classification. This requires an elaborate data collection system and extremely strict pre-processing, as well as signal admission.
-
-We propose a more adaptive algorithm that recognizes motion artifacts and instead of filtering them shifts the weight of the signals in the classification algorithm in a way that if a signal suffers from heavy artifacts in a certain time interval its influence is reduced by adjusting the weight and therefor other signal tribute more to the classification instead..until no artifact is recognized for a certain period of time. If we consider the model of fusion from the chinese guys that is
-
-Otherwise it would be wise to explore contact free forms of emotion recognition, although their implementation may present some obstacles too.
-
-\section{Environmental Effects}
-To minimize environmental effects we conducted the experiment in laboratories with controlled climate. Although this is general procedure for GSR and skin temperature this approach is generally far from real life application, this could therefore provide a false representation and render these measures useless in a real setting.
-
-Further we darkened the room which leads to similar arguments regarding PPG sensors.
-
-Although we tried to create similar conditions in both labs there still may be some differences remaining, resulting from changes in lighting or AC ( which we could not control in the green lab). This could mean that our data base is split and therefore even smaller. Rendering it obsolete for ML. We advise future studies to account for that.
+\end{itemize}
 
