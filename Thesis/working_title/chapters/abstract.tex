@@ -1,18 +1,11 @@
 
 % Abstract
 
-In recent years a growing body of research on Human Robot Interaction has reported the benefits of signal based emotion recognition for both system performance and the mental health of the user. 
-
-
-However, the majority of studies employed devices and measures that are obtrusive in nature and therefore far too impractical for the application in a realistic setting.
-
-
-The present thesis introduces a novel approach for unobtrusive emotion recognition in Human-Robot-Interaction.  
-Using the Empatica E4, a medical-grade wearable, we designed a wireless monitoring system that is capable of performing feature based emotion classification.
-In order to build the system we conducted a data collection experiment, recording three physiological signals (blood volume pulse, galvanic skin response, and skin temperature) of 14 individuals. During the experiment the participants had to first perform two cognitive tasks (Mental Arithmetic Stress Test, STROOP Test) and then undergo two sessions of visual stimulation. Each session used a set pictures specifically selected (from the International Affective Picture System) to elicit a certain emotional state.
-Afterwards, we handled feature extraction and created a variety of data-, and feature sets for the purpose of machine learning.
+In recent years a growing body of research on Human Robot Interaction has reported the benefits of signal based emotion recognition for both system performance and the mental health of the user. However, the vast majority of these studies was limited to artificial environments, employing physiological measures that are obtrusive in nature and therefore far too impractical for the application in a realistic setting.\\
+The present thesis introduces a novel approach for unobtrusive emotion recognition in Human-Robot-Interaction. Using the Empatica E4, a medical-grade wearable, we designed a wireless monitoring system that is capable of performing feature based emotion classification.\\
+In order to build the system we conducted a data collection experiment, recording three physiological signals (blood volume pulse, galvanic skin response, and skin temperature) of 14 individuals. During the experiment the participants had to first perform two cognitive tasks (Mental Arithmetic Stress Test, STROOP Test) and then undergo two sessions of visual stimulation. Each session used a unique set of pictures, specifically selected (from the International Affective Picture System) to elicit a certain emotional state.
+Afterwards, we implemented feature extraction algorithms for all signals and created a variety of data-, and feature sets for the purpose of machine learning.
 Lastly, we evaluated the performance of four machine learning algorithms (k-Nearest Neighbor, Support Vector Machines, Random Forest Classifier, and Neural Networks) based on their classification accuracy.\\
 With this approach we were able to classify a total of 6 different emotional states, with accuracies as high as 58\% for individual classifiers, and an average of 44\% for all machine learning algorithms. 
-Further, we were able to achieve even higher performances for binary classification tasks, aiming to identify specific emotional states. Considering the average performances of all four algorithms we achieved accuracies of 89\% for stress sessions, 72\% for visual stimulation sessions, and 91\% for resting intervals.\\
-
- Closing statement
+Further, we were able to achieve even higher performances for binary classification tasks, aiming to identify specific emotional states. Considering the average performances of all four algorithms we achieved accuracies of 89\% for stress sessions, 72\% for visual stimulation sessions, and 91\% for resting intervals.\\ 
+In light of these results we have great confidence in the applicability of our system and its capability to advance the research on signal based emotion recognition in Human Robot Interaction.  

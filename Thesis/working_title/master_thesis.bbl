@@ -1,134 +1,344 @@
-\begin{thebibliography}{20}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\begin{thebibliography}{10}
 
-\bibitem[Parasuraman(2003)]{Parasuraman2003}
-R.~Parasuraman.
-\newblock Neuroergonomics: Research and practice.
-\newblock \emph{Theoretical Issues in Ergonomics Science}, 2003.
+\bibitem{2017}
+{What is Machine Learning? A definition}.
+\newblock Blog, Machine Learning, March 2017.
 
-\bibitem[Byrne and Parasuraman(1996)]{Byrne1996}
-E.~A. Byrne and R.~Parasuraman.
-\newblock Psychophyiology and adaptive automation.
-\newblock \emph{Biological Psychology}, 1996.
+\bibitem{E4SS}
+{E4 streaming server for Windows. Reference guide}, May 2018.
 
-\bibitem[Mehta and Parasuraman(2013)]{Mehta2013}
-R.~K. Mehta and R.~Parasuraman.
-\newblock Neuroergonomics: a review of applications to physical and cognitive
-  work.
-\newblock \emph{frontiers in Human Neuroscience}, 2013.
+\bibitem{apa2019}
+{APA Dictionary of Psychology.}, 2019.
 
-\bibitem[Clarke and Cooper(2004)]{Clarke2004}
-S.~Clarke and C.~L. Cooper.
-\newblock \emph{Managing the Risk of Workplace Stress. Health and safety
-  hazards.}
-\newblock Routledge. London and New York, 2004.
+\bibitem{E4DP}
+{E4 streaming server. Data streaming packets}, January 2019.
 
-\bibitem[Parasuraman and M.(2008)]{Parasuraman2008}
-R.~Parasuraman and Rizzo M.
-\newblock \emph{Neuroergonomics}, volume~3 of \emph{Human-Technology
-  Interaction Series}.
-\newblock Oxford University Press, 2008.
-\newblock ISBN 0195368657, 9780195368659.
+\bibitem{E4MP}
+{E4 streaming server. Message protocol and command structure}, January 2019.
 
-\bibitem[Allan(2007)]{Allan2007}
+\bibitem{Allan2007}
 J.~Allan.
 \newblock Photoplethysmography and its application in clinical physiological
   measurement.
-\newblock \emph{Physiological Measurement}, 2007.
+\newblock {\em Physiological Measurement}, 2007.
 
-\bibitem[Peper et~al.(2007)Peper, Harvey, Lin, Tylova, and Moss]{Peper2007}
-E.~Peper, R.~Harvey, I.~Lin, H.~Tylova, and D.~Moss.
-\newblock Is there more to blood volume pulse than heart rate variability,
-  respiratory sinus arrhythmia, and cardiorespiratory synchrony?
-\newblock \emph{Biofeedback}, 2007.
+\bibitem{Bernston1997}
+G.G. Bernston, J.T. Bigger, D.L. Eckberg, P.~Grossman, P.G. Kaufmann, M.~Malik,
+  H.N. Nagaraja, S.W. Pogres, J.P. Saul, P.H. Stone, and M.W. Van Der~Molen.
+\newblock Heart rate vatiability: Origins, methods, and interpretive caveats.
+\newblock {\em Psychophysiology}, 1997.
 
-\bibitem[of~The European Society~of Cardiology et~al.(1996)of~The European
-  Society~of Cardiology, of~Pacing, and
-  Electrophysiology]{TheEuropeanSocietyofCardiology1996}
-Task~Force of~The European Society~of Cardiology, The North American~Society
-  of~Pacing, and Electrophysiology.
-\newblock Heart rate variability. standards of measurement, physiological
-  interpretation, and clinical use.
-\newblock \emph{European Heart Journal}, 1996.
+\bibitem{Buddeberg2004}
+C.~Buddeberg, R.~von Känel, and K.~Laederach.
+\newblock {\em Psychosoziale Medizin}, chapter Psychophysiologie, pages pp
+  447--498.
+\newblock Springer, Berlin, Heidelberg, 2004.
 
-\bibitem[Wu et~al.(2008)Wu, Kumar, Quinlan, Gosh, Yang, Motoda, McLachlan, Ng,
-  Liu, Yu, Zhou, Steinbach, Hand, and Steinberg]{Wu2008}
-X.~Wu, V.~Kumar, J.~R. Quinlan, J.~Gosh, Q.~Yang, H.~Motoda, G.~J. McLachlan,
-  A.~Ng, B.~Liu, P.~S. Yu, Z.-H. Zhou, M.~Steinbach, D.~J. Hand, and
-  D.~Steinberg.
-\newblock Top 10 algorithms in data mining.
-\newblock \emph{Knowl Inf Syst}, 2008.
+\bibitem{Byrne1996}
+E.~A. Byrne and R.~Parasuraman.
+\newblock Psychophyiology and adaptive automation.
+\newblock {\em Biological Psychology}, 1996.
 
-\bibitem[Pedregosa et~al.(2011)Pedregosa, Varoquaux, Gramfort, Michel, Thirion,
-  Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
-  Cournapeau, Brucher, Perrot, and Duchesnay]{Pedregosa2011}
-F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
-  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
-  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
-\newblock Scikit-learn: Machine learning in {P}ython.
-\newblock \emph{Journal of Machine Learning Research}, 2011.
+\bibitem{Castaldo2019}
+R.~Castaldo, L.~Montesinos, P.~Melilo, C.~James, and L.~Pecchia.
+\newblock Ultra-short term hrv features as surrogates of short term hrv: a case
+  study on mental stress detection in real life.
+\newblock {\em BMC Medical Informatics and Decision Making}, 2019.
 
-\bibitem[Rubin and Talarico(2009)]{Rubin2009}
-D.~C. Rubin and J.~M. Talarico.
-\newblock A comparison of dimensional models of emotion: Evidence fromemotions,
-  prototypical events, autobiographical memories, andwords.
-\newblock \emph{Memory}, 2009.
+\bibitem{Choi2016}
+A.~Choi and H.~Shin.
+\newblock Quantative analysis of the effect of an extopic beat on the heart
+  rate variability in the resting condition.
+\newblock {\em Frontiers in Physiology}, 2016.
 
-\bibitem[Emp()]{e4}
-\emph{E4 wristband from empatica. User's manual}.
-\newblock Empatica, Via Stendhal 36, 20144 Milano (MI).
-\newblock URL \url{www.empatica.com}.
+\bibitem{Choi2017}
+K.-H. Choi, J.~Kim, O.~Sang~Kwon, M.J. Kim, Y.~H. Ryu, and J.-E. Park.
+\newblock Is heart rate variability (hrv) an adequate tool for evaluating human
+  emotions? – a focus on the use of the international affective picture
+  system (iaps).
+\newblock {\em Psychiatric Research}, 2017.
 
-\bibitem[E4S(2018)]{E4SS}
-E4 streaming server for windows. reference guide, May 2018.
-\newblock URL
-  \url{https://developer.empatica.com/windows-streaming-server.html}.
+\bibitem{Clarke2004}
+S.~Clarke and C.~L. Cooper.
+\newblock {\em Managing the Risk of Workplace Stress. Health and safety
+  hazards.}
+\newblock Routledge. London and New York, 2004.
 
-\bibitem[Lang et~al.(2008)Lang, Bradley, and Cuthbert]{Lang2008}
+\bibitem{Clifford2002}
+G.D. Clifford.
+\newblock {\em Signal Processing Methods for Heart Rate Variability}.
+\newblock PhD thesis, St. Cross College, 2002.
+
+\bibitem{Cowie2001}
+R.~Cowie, N.~Douglas-Cowie, E.~andTsapatsoulis, G.~Votsis, S.~Kollias,
+  W.~Fellenz, and J.G. Taylor.
+\newblock Emotion recognition in human-computer interaction.
+\newblock {\em IEEE Signal Processing Magazine}, 2001.
+
+\bibitem{DAddona2018}
+D.~M. et~al. D'Addona.
+\newblock Adaptive automation and human factors in manufacturing: An
+  experimental assessment for a cognitive approach.
+\newblock {\em CIRP Annals - Manufacturing Technology}, 2018.
+
+\bibitem{dorschonline}
+Dorsch~Lexikon der Psychologie.
+\newblock International affective picture system (iaps) - dorsch lexikon der
+  psychologie - verlag hans huber, 2019.
+\newblock [Online; Stand 29.12.2019].
+
+\bibitem{Elgendi2013}
+M.~Elgendi, I.~Norton, M.~Brearley, D.~Abbott, and D.~Schuurmans.
+\newblock Systolic peak detection in acceleration photoplethysmograms measured
+  from emergency responders in tropical conditions.
+\newblock {\em PLoS ONE}, 2013.
+
+\bibitem{e4}
+Empatica, Via Stendhal 36, 20144 Milano (MI).
+\newblock {\em {E4 wristband from empatica. User's manual}}.
+
+\bibitem{Fedota2010}
+J.R. Fedota and R.~Parasuraman.
+\newblock Neuroergonomics and human error.
+\newblock {\em Theoretical Issues in Ergonomics Science}, 2010.
+
+\bibitem{Gil2010}
+E.~Gil, M.~Orini, R.~Bailón, J.M. Vergara, L.~Mainardi, and P.~Laguna.
+\newblock Photoplethysmography pulse rate variability as a surrogate
+  measurement of heart rate variability during non-stationary conditions.
+\newblock {\em Physiological Measures}, 2010.
+
+\bibitem{Goodrich2007}
+M.A. Goodrich and A.C. Schultz.
+\newblock Human-robot interaction: A survey.
+\newblock {\em Foundations and Trends in Human-Computer Interaction}, 2007.
+
+\bibitem{Gulati2010}
+M.~Gulati, L.J. Shaw, R.A. Thisted, H.R. Black, C.N. Bairey-Merz, and M.F.
+  Arnsdorf.
+\newblock Heart rate response to exercise stress testing in asymptomatic women.
+  the st. james women take heart project.
+\newblock {\em Circulation}, 2010.
+
+\bibitem{Healey2000}
+J.~A. Healey.
+\newblock {\em Wearable and Automotive Systems for Affect Recognition from
+  Physiology}.
+\newblock PhD thesis, Massachusetts Institute of Technology, 2000.
+
+\bibitem{Inbar1994}
+O.~Inbar, A.~Oren, M.~Shceinowitz, A.~Rotstein, R.~Dlin, and R.~Casaburi.
+\newblock Normal cardiopulmonary responses during incremental ecercise in 20-
+  to 70-yr-old men.
+\newblock {\em Medicine \& Science in Sports \& Exercise}, 1994.
+
+\bibitem{Jern1991}
+S.~Jern, M.~Pillhall, C.~Jern, and S.G. Carlsson.
+\newblock Short-term reproducibility of a mental arithmetic stress test.
+\newblock {\em Clinical Science}, 1991.
+
+\bibitem{Kahneman1973}
+D.~Kahneman.
+\newblock {\em Attention and Effort}.
+\newblock Prentice-Hall Inc., 1973.
+
+\bibitem{Kim2004}
+K.H. Kim, S.W. Bang, and S.R Kim.
+\newblock Emotion recognition system using short-term monitoring of
+  physiological signals.
+\newblock {\em Medical and Biological Engineering and Computing}, 2004.
+
+\bibitem{Lang1995}
+P.~J. Lang.
+\newblock The emotion probe. studies of motivation and attention.
+\newblock {\em American Psychologist}, 50, 1995.
+
+\bibitem{Lang2008}
 P.J. Lang, M.M. Bradley, and B.N. Cuthbert.
 \newblock International affective picture system (iaps): Affective ratings of
   pictures and instruction manual.
 \newblock Technical Report A-8, University of Florida, Gainesville, FL., 2008.
 
-\bibitem[Jern et~al.(1991)Jern, Pillhall, Jern, and Carlsson]{Jern1991}
-S.~Jern, M.~Pillhall, C.~Jern, and S.G. Carlsson.
-\newblock Short-term reproducibility of a mental arithmetic stress test.
-\newblock \emph{Clinical Science}, 1991.
-
-\bibitem[Mitrushina et~al.(2005)Mitrushina, Boone, Razani, and
-  D'Elia]{mitrushina2005handbook}
-M.~Mitrushina, K.B. Boone, J.~Razani, and L.F. D'Elia.
-\newblock \emph{Handbook of Normative Data for Neuropsychological Assessment}.
-\newblock Oxford University Press, USA, 2005.
-\newblock ISBN 9780195169300.
-\newblock URL \url{https://books.google.de/books?id=Ygndi8UlmxkC}.
-
-\bibitem[Elgendi et~al.(2013)Elgendi, Norton, Brearley, Abbott, and
-  Schuurmans]{Elgendi2013}
-M.~Elgendi, I.~Norton, M.~Brearley, D.~Abbott, and D.~Schuurmans.
-\newblock Systolic peak detection in acceleration photoplethysmograms measured
-  from emergency responders in tropical conditions.
-\newblock \emph{PLoS ONE}, 2013.
-
-\bibitem[Choi and Shin(2016)]{Choi2016}
-A.~Choi and H.~Shin.
-\newblock Quantative analysis of the effect of an extopic beat on the heart
-  rate variability in the resting condition.
-\newblock \emph{Frontiers in Physiology}, 2016.
-
-\bibitem[Clifford(2002)]{Clifford2002}
-G.D. Clifford.
-\newblock \emph{Signal Processing Methods for Heart Rate Variability}.
-\newblock PhD thesis, St. Cross College, 2002.
-
-\bibitem[Lippman et~al.(1994)Lippman, Stein, and Lerman]{Lippman1994}
+\bibitem{Lippman1994}
 N.~Lippman, K.~M. Stein, and B.B. Lerman.
 \newblock Comparison of methods for removal of extopy in measurement of heart
   rate variablility.
-\newblock \emph{American Journal of Physiology}, 1994.
+\newblock {\em American Journal of Physiology}, 1994.
+
+\bibitem{Maaoui2010}
+C.~Maaoui and A.~Pruski.
+\newblock Emotion recognition through physiological signals for human-machine
+  communication.
+\newblock {\em Cutting Edge Robotics}, 2010.
+
+\bibitem{Massaro2016}
+S.~Massaro and Pecchia.
+\newblock Heart rate variability (hrv) analysis: A methodology for
+  organizational neurocience.
+\newblock {\em Organizational Research Methods}, 2016.
+
+\bibitem{MATLAB2015}
+MATLAB.
+\newblock {\em version 8.5.0.197613}.
+\newblock The MathWorks Inc., Natick, MA 01760-2098, 2015.
+
+\bibitem{Mehta2013}
+R.~K. Mehta and R.~Parasuraman.
+\newblock Neuroergonomics: a review of applications to physical and cognitive
+  work.
+\newblock {\em frontiers in Human Neuroscience}, 2013.
+
+\bibitem{Miller1993}
+W.~Miller, J.~Wallace, and K.~Eggert.
+\newblock Predicting max hr and the hr-vo2 relationship for exercise
+  prescription in obesity.
+\newblock {\em Medicine \& Science in Sports \& Exercise}, 1993.
+
+\bibitem{mitrushina2005handbook}
+M.~Mitrushina, K.B. Boone, J.~Razani, and L.F. D'Elia.
+\newblock {\em Handbook of Normative Data for Neuropsychological Assessment}.
+\newblock Oxford University Press, USA, 2005.
+
+\bibitem{Mueller2017}
+A.~C. Müller and S.~Guido.
+\newblock {\em Einführung in Machine Learning mit Python. Praxiswissen Data
+  Science}.
+\newblock O'Reilly, 2017.
+
+\bibitem{TheEuropeanSocietyofCardiology1996}
+Task~Force of~The European Society~of Cardiology, The North American~Society
+  of~Pacing, and Electrophysiology.
+\newblock Heart rate variability. standards of measurement, physiological
+  interpretation, and clinical use.
+\newblock {\em European Heart Journal}, 1996.
+
+\bibitem{Parasuraman2003}
+R.~Parasuraman.
+\newblock Neuroergonomics: Research and practice.
+\newblock {\em Theoretical Issues in Ergonomics Science}, 2003.
+
+\bibitem{Parasuraman2011}
+R.~Parasuraman.
+\newblock Neuroergonomics: Brain, cognition, and performance at work.
+\newblock {\em Current Directions in Psychological Science}, 2011.
+
+\bibitem{Parasuraman2008}
+R.~Parasuraman and Rizzo M.
+\newblock {\em Neuroergonomics}, volume~3 of {\em Human-Technology Interaction
+  Series}.
+\newblock Oxford University Press, 2008.
+
+\bibitem{Parasuraman1996}
+R.~Parasuraman, M.~Mouloua, and R.~Molloy.
+\newblock Effects of adaptive task allocation on monitoring of automated
+  systems.
+\newblock {\em Human Factors}, 1996.
+
+\bibitem{Pedregosa2011}
+F.~Pedregosa, G.~Varoquaux, A.~Gramfort, V.~Michel, B.~Thirion, O.~Grisel,
+  M.~Blondel, P.~Prettenhofer, R.~Weiss, V.~Dubourg, J.~Vanderplas, A.~Passos,
+  D.~Cournapeau, M.~Brucher, M.~Perrot, and E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 2011.
+
+\bibitem{Peirce2019}
+J.~Peirce, J.R. Gray, S.~Simpson, M.~R. MacAskill, R.~Höchenberger, H.~Sogo,
+  E.~Kastman, and J.~Lindeløv.
+\newblock Psychopy2: Experiments in behavior made easy.
+\newblock {\em Behavior Research}, 2019.
+
+\bibitem{Peirce2007}
+J.~W. Peirce.
+\newblock Psychopy - pychophysics software in python.
+\newblock {\em Journal of Neuroscience Methods}, 2007.
+
+\bibitem{Peirce2009}
+J.~W. Peirce.
+\newblock Generating stimuli for neuroscience using psychopy.
+\newblock {\em Frontiers in Neuroinformatics}, 2009.
+
+\bibitem{Peirce20018}
+J.~W. Peirce and M.~R. MacAskill.
+\newblock Building experiments in psychopy.
+\newblock {\em London: Sage}, 20018.
+
+\bibitem{Peltola2012}
+M.A. Peltola.
+\newblock Role of editing of r-r intervals in the analysis of heart rate
+  variability.
+\newblock {\em frontiers in Physiology}, 2012.
+
+\bibitem{Peper2007}
+E.~Peper, R.~Harvey, I.~Lin, H.~Tylova, and D.~Moss.
+\newblock Is there more to blood volume pulse than heart rate variability,
+  respiratory sinus arrhythmia, and cardiorespiratory synchrony?
+\newblock {\em Biofeedback}, 2007.
+
+\bibitem{Picard2001}
+R.W. Picard, E.~Vyzas, and J.~Healey.
+\newblock Toward machine emotional intelligence: Analysis of affective
+  physiological state.
+\newblock {\em IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  2001.
+
+\bibitem{Remington2000}
+N.~A. Remington, L.~R. Fabrigar, and P.~S. Visser.
+\newblock Reexamining the circumplex model of affect.
+\newblock {\em Journal of Personality and Social Psychology}, 2000.
+
+\bibitem{Robinson}
+O.J. Robinson, C.~Grillon, and B.J. Sahakian.
+\newblock {\em The Mood Induction Task: A standardized, computerized laboratory
+  procedure for altering mood state in humans}.
+
+\bibitem{Rubin2009}
+D.~C. Rubin and J.~M. Talarico.
+\newblock A comparison of dimensional models of emotion: Evidence fromemotions,
+  prototypical events, autobiographical memories, andwords.
+\newblock {\em Memory}, 2009.
+
+\bibitem{Russell1980}
+J.~A. Russell.
+\newblock A circumplex model of affect.
+\newblock {\em Journal of Personality and Social Psychology}, 1980.
+
+\bibitem{E4BLE}
+D.~Saha.
+\newblock Empatica-matlab ble client, 2019.
+
+\bibitem{Singh1993}
+I.L. Singh, R.~Molloy, and R.~Parasuraman.
+\newblock Automation-induced "complacency": Development of the
+  complacency-potential rating scale.
+\newblock {\em The International Journal of Aviation Psychology}, 1993.
+
+\bibitem{Tanaka2001}
+H.~Tanaka, K.~D. Monahan, and D.~R. Seals.
+\newblock Age-predicted maximal heart rate revisited.
+\newblock {\em Journal of the American College of Cardiology}, 2001.
+
+\bibitem{Tesfaye2013}
+A.K. Tesfaye and A.~Pandey.
+\newblock Empirical evaluation of machine learning algorithms based on emg,
+  ecg, and gsr data to classify emotional states.
+\newblock Master's thesis, Blekinge Institute of Technology, 2013.
+
+\bibitem{Wei2018}
+Wei Wei, Qingxuan Jia, Yongli Feng, and Gang Chen.
+\newblock Emotion recognition based on weighted fusion strategy of multichannel
+  physiological signals.
+\newblock {\em Computational Intelligence and Neuroscience}, 2018.
+
+\bibitem{Wickens1999}
+C.D Wickens and J~Hollands.
+\newblock {\em Engineering Psychology and Human Performance}.
+\newblock Prentice Hall, 3 edition, 1999.
+
+\bibitem{Wu2008}
+X.~Wu, V.~Kumar, J.~R. Quinlan, J.~Gosh, Q.~Yang, H.~Motoda, G.~J. McLachlan,
+  A.~Ng, B.~Liu, P.~S. Yu, Z.-H. Zhou, M.~Steinbach, D.~J. Hand, and
+  D.~Steinberg.
+\newblock Top 10 algorithms in data mining.
+\newblock {\em Knowl Inf Syst}, 2008.
 
 \end{thebibliography}

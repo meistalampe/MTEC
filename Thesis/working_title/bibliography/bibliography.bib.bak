@@ -1,7 +1,7 @@
 % Encoding: UTF-8
 
 @Manual{e4,
-  title        = {E4 wristband from empatica. User's manual},
+  title        = {{E4 wristband from empatica. User's manual}},
   organization = {Empatica},
   address      = {Via Stendhal 36, 20144 Milano (MI)},
   url          = {www.empatica.com},
@@ -80,7 +80,7 @@
   year    = {2007},
 }
 
-@Misc{,
+@Misc{2017,
   title        = {What is Machine Learning? A definition},
   howpublished = {Blog, Machine Learning},
   month        = mar,
@@ -149,7 +149,7 @@
 
 @Electronic{apa2019,
   year   = {2019},
-  title  = {APA Dictionary of Psychology.},
+  title  = {{APA Dictionary of Psychology.}},
   url    = {https://dictionary.apa.org/emotion},
   groups = {American Psychological Association},
 }
@@ -172,7 +172,7 @@
 @Electronic{E4SS,
   month        = may,
   year         = {2018},
-  title        = {E4 streaming server for Windows. Reference guide},
+  title        = {{E4 streaming server for Windows. Reference guide}},
   organization = {Empatica},
   url          = {https://developer.empatica.com/windows-streaming-server.html},
 }
@@ -180,7 +180,7 @@
 @Electronic{E4MP,
   month        = jan,
   year         = {2019},
-  title        = {E4 streaming server. Message protocol and command structure},
+  title        = {{E4 streaming server. Message protocol and command structure}},
   organization = {Empatica},
   url          = {https://developer.empatica.com/windows-streaming-server-commands.html#protocol-example},
 }
@@ -188,7 +188,7 @@
 @Electronic{E4DP,
   month        = jan,
   year         = {2019},
-  title        = {E4 streaming server. Data streaming packets},
+  title        = {{E4 streaming server. Data streaming packets}},
   organization = {Empatica},
   url          = {https://developer.empatica.com/windows-streaming-server-data.html},
 }
@@ -309,6 +309,147 @@
   title   = {Comparison of methods for removal of extopy in measurement of heart rate variablility},
   journal = {American Journal of Physiology},
   year    = {1994},
+}
+
+@Article{Wei2018,
+  author  = {Wei Wei and Qingxuan Jia and Yongli Feng and Gang Chen},
+  title   = {Emotion Recognition Based on Weighted Fusion Strategy of Multichannel Physiological Signals},
+  journal = {Computational Intelligence and Neuroscience},
+  year    = {2018},
+}
+
+@PhdThesis{Healey2000,
+  author = {Healey, J. A.},
+  title  = {Wearable and Automotive Systems for Affect Recognition from Physiology},
+  school = {Massachusetts Institute of Technology},
+  year   = {2000},
+}
+
+@Article{Kim2004,
+  author  = {Kim, K.H. and Bang, S.W. and Kim, S.R},
+  title   = {Emotion recognition system using short-term monitoring of physiological signals},
+  journal = {Medical and Biological Engineering and Computing},
+  year    = {2004},
+}
+
+@Article{Fedota2010,
+  author  = {Fedota, J.R. and Parasuraman, R.},
+  title   = {Neuroergonomics and human error},
+  journal = {Theoretical Issues in Ergonomics Science},
+  year    = {2010},
+}
+
+@Article{Goodrich2007,
+  author  = {Goodrich, M.A. and Schultz, A.C.},
+  title   = {Human-Robot Interaction: A Survey},
+  journal = {Foundations and Trends in Human-Computer Interaction},
+  year    = {2007},
+}
+
+@Article{Maaoui2010,
+  author  = {Maaoui, C. and Pruski, A.},
+  title   = {Emotion Recognition through Physiological Signals for Human-Machine Communication},
+  journal = {Cutting Edge Robotics},
+  year    = {2010},
+}
+
+@Article{Parasuraman1996,
+  author  = {Parasuraman, R. and Mouloua, M. and Molloy, R.},
+  title   = {Effects of Adaptive Task Allocation on Monitoring of Automated Systems},
+  journal = {Human Factors},
+  year    = {1996},
+}
+
+@Article{Picard2001,
+  author  = {Picard, R.W. and Vyzas, E. and Healey, J.},
+  title   = {Toward Machine Emotional Intelligence: Analysis of Affective Physiological State},
+  journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year    = {2001},
+}
+
+@Article{Singh1993,
+  author  = {Singh, I.L. and Molloy, R. and Parasuraman, R.},
+  title   = {Automation-Induced "Complacency": Development of the Complacency-Potential Rating Scale},
+  journal = {The International Journal of Aviation Psychology},
+  year    = {1993},
+}
+
+@MastersThesis{Tesfaye2013,
+  author  = {Tesfaye, A.K. and Pandey, A.},
+  title   = {Empirical Evaluation of Machine Learning Algorithms based on EMG, ECG, and GSR Data to Classify Emotional States},
+  school  = {Blekinge Institute of Technology},
+  year    = {2013},
+  comment = {Structural Guidance Paper},
+}
+
+@Book{Wickens1999,
+  title     = {Engineering Psychology and Human Performance},
+  publisher = {Prentice Hall},
+  year      = {1999},
+  author    = {Wickens, C.D and Hollands, J},
+  editor    = {Roberts, N.},
+  edition   = {3},
+}
+
+@Article{Parasuraman2011,
+  author  = {Parasuraman, R.},
+  title   = {Neuroergonomics: Brain, Cognition, and Performance at Work},
+  journal = {Current Directions in Psychological Science},
+  year    = {2011},
+}
+
+@Article{Bernston1997,
+  author  = {Bernston, G.G. and Bigger, J.T. and Eckberg, D.L. and Grossman, P. and Kaufmann, P.G. and Malik, M. and Nagaraja, H.N. and Pogres, S.W. and Saul, J.P. and Stone, P.H. and Van Der Molen, M.W.},
+  title   = {Heart rate vatiability: Origins, methods, and interpretive caveats},
+  journal = {Psychophysiology},
+  year    = {1997},
+}
+
+@Article{Massaro2016,
+  author  = {Massaro, S. and Pecchia},
+  title   = {Heart Rate Variability (HRV) Analysis: A Methodology for Organizational Neurocience},
+  journal = {Organizational Research Methods},
+  year    = {2016},
+}
+
+@Article{Gil2010,
+  author  = {Gil, E. and Orini, M. and Bailón, R. and Vergara, J.M. and Mainardi, L. and Laguna, P.},
+  title   = {Photoplethysmography pulse rate variability as a surrogate measurement of heart rate variability during non-stationary conditions},
+  journal = {Physiological Measures},
+  year    = {2010},
+}
+
+@Article{Peltola2012,
+  author  = {Peltola, M.A.},
+  title   = {Role of editing of R-R intervals in the analysis of heart rate variability},
+  journal = {frontiers in Physiology},
+  year    = {2012},
+}
+
+@Article{Castaldo2019,
+  author  = {Castaldo, R. and Montesinos, L. and Melilo, P. and James, C. and Pecchia, L.},
+  title   = {Ultra-short term HRV features as surrogates of short term HRV: a case study on mental stress detection in real life},
+  journal = {BMC Medical Informatics and Decision Making},
+  year    = {2019},
+}
+
+@Article{Choi2017,
+  author  = {Choi, K.-H. and Kim, J. and Sang Kwon, O. and Kim, M.J. and Ryu, Y. H. and Park, J.-E.},
+  title   = {Is heart rate variability (HRV) an adequate tool for evaluating human emotions? – A focus on the use of the International Affective Picture System (IAPS)},
+  journal = {Psychiatric Research},
+  year    = {2017},
+}
+
+@Manual{Robinson,
+  title  = {The Mood Induction Task: A standardized, computerized laboratory procedure for altering mood state in humans},
+  author = {Robinson, O.J. and Grillon, C. and Sahakian, B.J.},
+}
+
+@Article{Cowie2001,
+  author  = {Cowie, R. and Douglas-Cowie, E. andTsapatsoulis, N. and Votsis, G. and Kollias, S. and Fellenz, W. and Taylor, J.G.},
+  title   = {Emotion Recognition in Human-Computer Interaction},
+  journal = {IEEE Signal Processing Magazine},
+  year    = {2001},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

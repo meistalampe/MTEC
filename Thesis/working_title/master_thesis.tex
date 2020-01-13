@@ -27,7 +27,29 @@
 \usepackage{color}
 \usepackage{caption}
 \usepackage{amsmath}
-\usepackage[acronym]{glossaries}
+% hyperref
+\usepackage[
+	pdftitle={Master Thesis},
+	pdfauthor={Dominik Limbach},
+	pdfcreator={\fmtname \space \fmtversion},
+	pdfsubject={Subject of Master Thesis},
+	pdfkeywords={}
+]{hyperref}
+
+\hypersetup{
+	colorlinks=true,
+	frenchlinks=true,
+	breaklinks=true,
+	menucolor=black,
+	linkcolor=darkblue,
+	urlcolor=darkblue,
+	citecolor=darkblue
+}
+% glossary
+\usepackage{glossaries}
+%\makeglossaries
+\makenoidxglossaries
+
 \usepackage[numbers, square]{natbib}
 \usepackage{microtype}
 \usepackage{pgfplots}
@@ -42,27 +64,7 @@
 \renewcommand\theadgape{\Gape[4pt]}
 \renewcommand\cellgape{\Gape[4pt]}
 
-\usepackage{blindtext} % Remove this later
-
-\usepackage[
-	pdftitle={Master Thesis},
-	pdfauthor={Dominik Limbach},
-	pdfcreator={\fmtname \space \fmtversion},
-	pdfsubject={Subject of Master Thesis},
-	pdfkeywords={}
-]{hyperref}
-
 \definecolor{darkblue}{rgb}{0.06275, 0.25882, 0.47843} % SNN-Unit color scheme
-
-\hypersetup{
-	colorlinks=true,
-	frenchlinks=true,
-	breaklinks=true,
-	menucolor=black,
-	linkcolor=darkblue,
-	urlcolor=darkblue,
-	citecolor=darkblue
-}
 
 \setkomafont{sectioning}{\normalfont\bfseries}
 \setkomafont{descriptionlabel}{\normalfont\bfseries}
@@ -70,8 +72,113 @@
 \def\registered{\textsuperscript{\textregistered}}
 \def\trademark{\textsuperscript{\texttrademark}}
 
-\makeglossaries
-\input{glossary/glossary.tex}
+
+%\input{glossary/glossary.tex}
+% glossary entries
+\newglossaryentry{bvp}{
+	name={BVP},
+	description={Blood Volume Pulse},
+}
+
+\newglossaryentry{ide}{
+	name={IDE},
+	description={Integrated Development Environment},
+}
+
+\newglossaryentry{ppg}{
+	name={PPG},
+	description={Photoplethysmography},
+}
+
+\newglossaryentry{gsr}{
+	name={GSR},
+	description={Galvanic Skin Response},
+}
+
+\newglossaryentry{ecg}{
+	name={ECG},
+	description={Electrocardiogram},
+}
+\newglossaryentry{eeg}{
+	name={EEG},
+	description={Electroencephalogram},
+}	
+\newglossaryentry{hri}{
+	name={HRI},
+	description={Human-Robot-Interface},
+}
+\newglossaryentry{erp}{
+	name={ERPs},
+	description={Event-Related Potentials},
+}
+\newglossaryentry{fmri}{
+	name={fMRI},
+	description={Functional Magnetic Resonance Imaging},
+}
+\newglossaryentry{meg}{
+	name={MEG},
+	description={Magnetencephalography},
+}
+\newglossaryentry{pet}{
+	name={PET},
+	description={Positron Emission Tomography},
+}
+\newglossaryentry{pttf}{
+	name={PTTf},
+	description={Pulse Transit Time to the Foot},
+}
+\newglossaryentry{pttp}{
+	name={PTTp},
+	description={Pulse Transit Time to the Peak},
+}
+\newglossaryentry{hr}{
+	name={HR},
+	description={Heart Rate},
+}
+\newglossaryentry{hrv}{
+	name={HRV},
+	description={Heart Rate Variability},
+}
+\newglossaryentry{ibi}{
+	name={IBI},
+	description={Inter Beat Interval},
+}
+\newglossaryentry{hp}{
+	name={HP},
+	description={Heart Period},
+}
+\newglossaryentry{ans}{
+	name={ANS},
+	description={Autonomic Nervous System},
+}
+\newglossaryentry{nes}{
+	name={NES},
+	description={Neuroendocrine System},
+}
+\newglossaryentry{nis}{
+	name={NIS},
+	description={Neuroimmunological System},
+}
+\newglossaryentry{svm}{
+	name={SVM},
+	description={Support Vector Machines},
+}
+\newglossaryentry{mlp}{
+	name={MLP},
+	description={Multi-Layer Perceptron},
+}
+\newglossaryentry{iaps}{
+	name={IAPS},
+	description={International Affective Picture System},
+}
+\newglossaryentry{psd}{
+	name={PSD},
+	description={Power Spectral Density},
+}
+\newglossaryentry{emg}{
+	name={EMG},
+	description={Electromyography},
+}
 
 \begin{document}
 
@@ -155,7 +262,7 @@
 \newpage 
 
 \chapter*{Acknowledgements}
-\addcontentsline{toc}{chapter}{Acknowledgement}
+\addcontentsline{toc}{chapter}{Acknowledgements}
 
 \input{chapters/acknowledgements}
 
@@ -223,14 +330,12 @@ Dominik Limbach, B.Sc.
 
 \input{chapters/conclusions_and_future_work}
 
-\newpage
 
 \appendix
-
+\chapter{Appendix}
 \input{chapters/appendix}
 
 \newpage
-
 
 \addcontentsline{toc}{chapter}{List of Figures}
 \hypersetup{linkcolor=black}
@@ -245,13 +350,18 @@ Dominik Limbach, B.Sc.
 \hypersetup{linkcolor=darkblue}
 
 \addcontentsline{toc}{chapter}{List of Abbreviations}
-\printglossary[type=main, title={List of Abbreviations}]
-
+%\printglossary[type=main, title={List of Abbreviations}]
+\printnoidxglossaries
 \newpage
 
 \renewcommand{\bibname}{Bibliography}
 \addcontentsline{toc}{chapter}{Bibliography}
-\bibliographystyle{unsrtnat}
+\nocite{*}
+\bibliographystyle{plain}
 \bibliography{bibliography/bibliography}
 
 \end{document}
+
+pdflatex master_thesis
+makeglossaries master_thesis
+pdflatex master_thesis

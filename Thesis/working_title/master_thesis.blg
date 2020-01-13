@@ -1,7 +1,20 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: master_thesis.aux
-The style file: unsrtnat.bst
+The style file: plain.bst
 Database file #1: bibliography/bibliography.bib
+Warning--entry type for "apa2019" isn't style-file defined
+--line 150 of file bibliography/bibliography.bib
+Warning--entry type for "E4BLE" isn't style-file defined
+--line 165 of file bibliography/bibliography.bib
 Warning--entry type for "E4SS" isn't style-file defined
 --line 172 of file bibliography/bibliography.bib
-Warning--empty year in e4
-(There were 2 warnings)
+Warning--entry type for "E4MP" isn't style-file defined
+--line 180 of file bibliography/bibliography.bib
+Warning--entry type for "E4DP" isn't style-file defined
+--line 188 of file bibliography/bibliography.bib
+Warning--to sort, need author or key in E4SS
+Warning--to sort, need author or key in 2017
+Warning--to sort, need author or key in apa2019
+Warning--to sort, need author or key in E4MP
+Warning--to sort, need author or key in E4DP
+Warning--can't use both author and editor fields in Wickens1999
+(There were 11 warnings)
