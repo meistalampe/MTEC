@@ -1,7 +1,18 @@
 
 % Abstract
-In recent years wearables have become a staple in our society. In the form of Smartwatches and fitness-tracking devices wearables have made their way into nearly a third of german households. Aside from the basic functions of a phone or a watch these devices offer a wide array of functionalities, many of which revolve around monitoring the user's vital parameters for health reasons as well as improving their physical performance in recreational activities. \\
-Research suggests that there is great potential in the application of psycho-physiologic monitoring in highly demanding workplaces of today's industry, an area in which wearables are still largely underrepresented. \\
-Therefore, we built a new system based on a wrist worn device capable of monitoring workers in stressful workplaces, specifically collaborative workplaces involving Human-Robot-Interaction (HRI), and predicting their current mental state on a real-time basis. 
-With the deployment of such a system we are able to create neuroergonomic workplaces that are sensitive to a persons mental capability and capable of eliminating stress as one of the leading causes of injury and disease in the working population.
 
+In recent years a growing body of research on Human Robot Interaction has reported the benefits of signal based emotion recognition for both system performance and the mental health of the user. 
+
+
+However, the majority of studies employed devices and measures that are obtrusive in nature and therefore far too impractical for the application in a realistic setting.
+
+
+The present thesis introduces a novel approach for unobtrusive emotion recognition in Human-Robot-Interaction.  
+Using the Empatica E4, a medical-grade wearable, we designed a wireless monitoring system that is capable of performing feature based emotion classification.
+In order to build the system we conducted a data collection experiment, recording three physiological signals (blood volume pulse, galvanic skin response, and skin temperature) of 14 individuals. During the experiment the participants had to first perform two cognitive tasks (Mental Arithmetic Stress Test, STROOP Test) and then undergo two sessions of visual stimulation. Each session used a set pictures specifically selected (from the International Affective Picture System) to elicit a certain emotional state.
+Afterwards, we handled feature extraction and created a variety of data-, and feature sets for the purpose of machine learning.
+Lastly, we evaluated the performance of four machine learning algorithms (k-Nearest Neighbor, Support Vector Machines, Random Forest Classifier, and Neural Networks) based on their classification accuracy.\\
+With this approach we were able to classify a total of 6 different emotional states, with accuracies as high as 58\% for individual classifiers, and an average of 44\% for all machine learning algorithms. 
+Further, we were able to achieve even higher performances for binary classification tasks, aiming to identify specific emotional states. Considering the average performances of all four algorithms we achieved accuracies of 89\% for stress sessions, 72\% for visual stimulation sessions, and 91\% for resting intervals.\\
+
+ Closing statement

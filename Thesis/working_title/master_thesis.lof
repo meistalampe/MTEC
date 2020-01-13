@@ -1,18 +1,18 @@
 \select@language {english}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces PPG, and ECG Waveform}}{12}{figure.caption.6}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces PPG Pulse Characteristics}}{13}{figure.caption.7}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Types of Measurement Artifacts}}{21}{figure.caption.8}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces HRV Time-Domain Measures Recommendation}}{22}{figure.caption.10}
-\contentsline {figure}{\numberline {1.5}{\ignorespaces HRV Frequency-Domain Measures Recommendation}}{22}{figure.caption.11}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces PPG, and ECG Waveform}}{13}{figure.caption.7}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces PPG Pulse Characteristics}}{14}{figure.caption.8}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Types of Measurement Artifacts}}{22}{figure.caption.9}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces HRV Time-Domain Measures Recommendation}}{23}{figure.caption.11}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces HRV Frequency-Domain Measures Recommendation}}{23}{figure.caption.12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of the Empatica E4 wristband.\relax }}{28}{figure.caption.12}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces E4 streaming server: connectivity and function}}{31}{figure.caption.18}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of the Empatica E4 wristband.\relax }}{29}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces E4 streaming server: connectivity and function}}{32}{figure.caption.19}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Peak Detection Algorithm}}{43}{figure.caption.23}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Linear Interpolation of Ectopic Beats}}{45}{figure.caption.26}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Peak Detection Algorithm}}{44}{figure.caption.24}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Linear Interpolation of Ectopic Beats}}{46}{figure.caption.27}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

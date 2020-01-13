@@ -1,24 +1,24 @@
 \BOOKMARK [0][-]{chapter*.1}{Abstract}{}% 1
 \BOOKMARK [0][-]{chapter*.2}{Zusammenfassung}{}% 2
-\BOOKMARK [0][-]{chapter*.3}{Declaration}{}% 3
-\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 4
-\BOOKMARK [1][-]{section.1.1}{Introduction to the Field}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.2}{Theoretical Background}{chapter.1}% 6
-\BOOKMARK [2][-]{subsection.1.2.1}{Psychophysiology}{section.1.2}% 7
-\BOOKMARK [2][-]{subsection.1.2.2}{Psychophysiology in Adaptive Automation}{section.1.2}% 8
-\BOOKMARK [1][-]{section.1.3}{Psychophysiological Measures}{chapter.1}% 9
-\BOOKMARK [2][-]{subsection.1.3.1}{Photoplethysmography}{section.1.3}% 10
-\BOOKMARK [2][-]{subsection.1.3.2}{Heart Rate Variability}{section.1.3}% 11
-\BOOKMARK [1][-]{section.1.4}{Machine Learning}{chapter.1}% 12
-\BOOKMARK [2][-]{subsection.1.4.1}{Algorithm Selection}{section.1.4}% 13
-\BOOKMARK [2][-]{subsection.1.4.2}{k-NN Classifier}{section.1.4}% 14
-\BOOKMARK [2][-]{subsection.1.4.3}{Support Vector Machine}{section.1.4}% 15
-\BOOKMARK [2][-]{subsection.1.4.4}{Decision Trees}{section.1.4}% 16
-\BOOKMARK [2][-]{subsection.1.4.5}{Ensemble Techniques}{section.1.4}% 17
-\BOOKMARK [2][-]{subsection.1.4.6}{Multi Layer Perceptron}{section.1.4}% 18
-\BOOKMARK [1][-]{section.1.5}{Classification of Emotion}{chapter.1}% 19
-\BOOKMARK [2][-]{subsection.1.5.1}{Emotion Elicitation}{section.1.5}% 20
-\BOOKMARK [1][-]{section.1.6}{Acknowledgments}{chapter.1}% 21
+\BOOKMARK [0][-]{chapter*.3}{Acknowledgement}{}% 3
+\BOOKMARK [0][-]{chapter*.4}{Declaration}{}% 4
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 5
+\BOOKMARK [1][-]{section.1.1}{Introduction to the Field}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.2}{Theoretical Background}{chapter.1}% 7
+\BOOKMARK [2][-]{subsection.1.2.1}{Psychophysiology}{section.1.2}% 8
+\BOOKMARK [2][-]{subsection.1.2.2}{Psychophysiology in Adaptive Automation}{section.1.2}% 9
+\BOOKMARK [1][-]{section.1.3}{Psychophysiological Measures}{chapter.1}% 10
+\BOOKMARK [2][-]{subsection.1.3.1}{Photoplethysmography}{section.1.3}% 11
+\BOOKMARK [2][-]{subsection.1.3.2}{Heart Rate Variability}{section.1.3}% 12
+\BOOKMARK [1][-]{section.1.4}{Machine Learning}{chapter.1}% 13
+\BOOKMARK [2][-]{subsection.1.4.1}{Algorithm Selection}{section.1.4}% 14
+\BOOKMARK [2][-]{subsection.1.4.2}{k-NN Classifier}{section.1.4}% 15
+\BOOKMARK [2][-]{subsection.1.4.3}{Support Vector Machine}{section.1.4}% 16
+\BOOKMARK [2][-]{subsection.1.4.4}{Decision Trees}{section.1.4}% 17
+\BOOKMARK [2][-]{subsection.1.4.5}{Ensemble Techniques}{section.1.4}% 18
+\BOOKMARK [2][-]{subsection.1.4.6}{Multi Layer Perceptron}{section.1.4}% 19
+\BOOKMARK [1][-]{section.1.5}{Classification of Emotion}{chapter.1}% 20
+\BOOKMARK [2][-]{subsection.1.5.1}{Emotion Elicitation}{section.1.5}% 21
 \BOOKMARK [0][-]{chapter.2}{Problem Analysis and Goals}{}% 22
 \BOOKMARK [1][-]{section.2.1}{Related Work}{chapter.2}% 23
 \BOOKMARK [1][-]{section.2.2}{Problem Oriented}{chapter.2}% 24
@@ -72,9 +72,8 @@
 \BOOKMARK [1][-]{section.7.2}{Success and Limitations of Neuroergonomic Assessment}{chapter.7}% 72
 \BOOKMARK [2][-]{subsection.7.2.1}{Limitations}{section.7.2}% 73
 \BOOKMARK [2][-]{subsection.7.2.2}{Future Work}{section.7.2}% 74
-\BOOKMARK [0][-]{chapter.8}{Conclusions}{}% 75
-\BOOKMARK [1][-]{section.8.1}{Conclusion}{chapter.8}% 76
-\BOOKMARK [0][-]{section.8.1}{List of Figures}{}% 77
-\BOOKMARK [0][-]{chapter*.40}{List of Tables}{}% 78
-\BOOKMARK [0][-]{chapter*.41}{List of Abbreviations}{}% 79
-\BOOKMARK [0][-]{chapter*.41}{Bibliography}{}% 80
+\BOOKMARK [0][-]{chapter.8}{Conclusion}{}% 75
+\BOOKMARK [0][-]{chapter.8}{List of Figures}{}% 76
+\BOOKMARK [0][-]{chapter*.41}{List of Tables}{}% 77
+\BOOKMARK [0][-]{chapter*.42}{List of Abbreviations}{}% 78
+\BOOKMARK [0][-]{chapter*.42}{Bibliography}{}% 79
