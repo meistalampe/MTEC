@@ -8,40 +8,40 @@
 \contentsline {section}{\numberline {1.2}Theoretical Background}{11}{section.1.2}
 \contentsline {subsection}{\numberline {1.2.1}Psychophysiology}{11}{subsection.1.2.1}
 \contentsline {subsection}{\numberline {1.2.2}Psychophysiology in Adaptive Automation}{11}{subsection.1.2.2}
-\contentsline {section}{\numberline {1.3}Psychophysiological Measures}{12}{section.1.3}
-\contentsline {subsection}{\numberline {1.3.1}Photoplethysmography}{12}{subsection.1.3.1}
-\contentsline {subsubsection}{\nonumberline The PPG waveform: characteristics and analysis}{13}{section*.6}
-\contentsline {subsection}{\numberline {1.3.2}Heart Rate Variability}{15}{subsection.1.3.2}
-\contentsline {subsubsection}{\nonumberline HRV Measures}{15}{section*.10}
-\contentsline {section}{\numberline {1.4}Machine Learning}{16}{section.1.4}
-\contentsline {subsection}{\numberline {1.4.1}Algorithm Selection}{17}{subsection.1.4.1}
-\contentsline {subsection}{\numberline {1.4.2}k-NN Classifier}{17}{subsection.1.4.2}
-\contentsline {subsection}{\numberline {1.4.3}Support Vector Machine}{18}{subsection.1.4.3}
-\contentsline {subsection}{\numberline {1.4.4}Decision Trees}{18}{subsection.1.4.4}
-\contentsline {subsection}{\numberline {1.4.5}Ensemble Techniques}{19}{subsection.1.4.5}
-\contentsline {subsection}{\numberline {1.4.6}Multi Layer Perceptron}{19}{subsection.1.4.6}
-\contentsline {section}{\numberline {1.5}Classification of Emotion}{20}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Emotion Elicitation}{20}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.2.3}Psychophysiological Measures}{12}{subsection.1.2.3}
+\contentsline {subsubsection}{\nonumberline Photoplethysmography}{12}{section*.6}
+\contentsline {subsubsection}{\nonumberline The PPG waveform: characteristics and analysis}{13}{section*.7}
+\contentsline {subsubsection}{\nonumberline Heart Rate Variability}{16}{section*.11}
+\contentsline {subsubsection}{\nonumberline HRV Measures}{16}{section*.12}
+\contentsline {subsection}{\numberline {1.2.4}Machine Learning}{18}{subsection.1.2.4}
+\contentsline {subsubsection}{\nonumberline Algorithm Selection}{19}{section*.15}
+\contentsline {subsubsection}{\nonumberline k-NN Classifier}{19}{section*.16}
+\contentsline {subsubsection}{\nonumberline Support Vector Machine}{20}{section*.17}
+\contentsline {subsubsection}{\nonumberline Decision Trees}{20}{section*.18}
+\contentsline {subsubsection}{\nonumberline Ensemble Techniques}{21}{section*.19}
+\contentsline {subsubsection}{\nonumberline Multi Layer Perceptron}{21}{section*.20}
+\contentsline {subsection}{\numberline {1.2.5}Classification of Emotion}{22}{subsection.1.2.5}
+\contentsline {subsubsection}{\nonumberline Emotion Elicitation}{22}{section*.21}
 \contentsline {chapter}{\numberline {2}Problem Analysis and Goals}{24}{chapter.2}
 \contentsline {section}{\numberline {2.1}Related Work}{24}{section.2.1}
 \contentsline {section}{\numberline {2.2}Problem Oriented}{25}{section.2.2}
-\contentsline {section}{\numberline {2.3}Aim, Objective, and Scope}{25}{section.2.3}
+\contentsline {section}{\numberline {2.3}Aim, Objective, and Scope}{26}{section.2.3}
 \contentsline {section}{\numberline {2.4}Research Questions}{26}{section.2.4}
-\contentsline {section}{\numberline {2.5}Research Methodology}{26}{section.2.5}
+\contentsline {section}{\numberline {2.5}Research Methodology}{27}{section.2.5}
 \contentsline {chapter}{\numberline {3}Materials and Methods}{28}{chapter.3}
 \contentsline {section}{\numberline {3.1}Hardware}{28}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Empatica E4}{28}{subsection.3.1.1}
-\contentsline {subsubsection}{\nonumberline Sampling Specifications}{29}{section*.14}
-\contentsline {subsubsection}{\nonumberline EDA sensor}{29}{section*.15}
-\contentsline {subsubsection}{\nonumberline PPG sensor}{30}{section*.16}
-\contentsline {subsubsection}{\nonumberline Infrared Thermopile}{30}{section*.17}
-\contentsline {subsubsection}{\nonumberline Real-time clock}{31}{section*.18}
+\contentsline {subsubsection}{\nonumberline Sampling Specifications}{29}{section*.23}
+\contentsline {subsubsection}{\nonumberline EDA sensor}{30}{section*.24}
+\contentsline {subsubsection}{\nonumberline PPG sensor}{30}{section*.25}
+\contentsline {subsubsection}{\nonumberline Infrared Thermopile}{31}{section*.26}
+\contentsline {subsubsection}{\nonumberline Real-time clock}{31}{section*.27}
 \contentsline {subsection}{\numberline {3.1.2}Processing Unit}{31}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Software}{31}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}E4 Streaming Server}{31}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}MATLAB}{31}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}PyCharm}{32}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}PsychoPy}{32}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.2}Software}{32}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}E4 Streaming Server}{32}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}MATLAB}{33}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}PyCharm}{33}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}PsychoPy}{33}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}IAPS}{33}{subsection.3.2.5}
 \contentsline {chapter}{\numberline {4}Experimental Work}{34}{chapter.4}
 \contentsline {section}{\numberline {4.1}Pilot Experiment}{34}{section.4.1}
@@ -53,47 +53,47 @@
 \contentsline {subsection}{\numberline {4.1.6}Problem Oriented}{36}{subsection.4.1.6}
 \contentsline {subsection}{\numberline {4.1.7}Solution Oriented}{36}{subsection.4.1.7}
 \contentsline {subsection}{\numberline {4.1.8}Results and Conclusion}{36}{subsection.4.1.8}
-\contentsline {section}{\numberline {4.2}Main Experiment}{36}{section.4.2}
+\contentsline {section}{\numberline {4.2}Main Experiment}{37}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Introduction}{37}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Participants}{37}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}Methods}{37}{subsection.4.2.3}
-\contentsline {subsubsection}{\nonumberline Mental Arithmetic Stress Test}{37}{section*.20}
-\contentsline {subsubsection}{\nonumberline Stroop Test}{38}{section*.21}
-\contentsline {subsubsection}{\nonumberline Visual Stimulation}{39}{section*.22}
+\contentsline {subsubsection}{\nonumberline Mental Arithmetic Stress Test}{37}{section*.29}
+\contentsline {subsubsection}{\nonumberline Stroop Test}{38}{section*.30}
+\contentsline {subsubsection}{\nonumberline Visual Stimulation}{39}{section*.31}
 \contentsline {subsection}{\numberline {4.2.4}Experimental Design}{39}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}Procedure}{39}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.5}Procedure}{40}{subsection.4.2.5}
 \contentsline {chapter}{\numberline {5}Data Analysis and Interpretation}{41}{chapter.5}
 \contentsline {section}{\numberline {5.1}Data Collection}{41}{section.5.1}
 \contentsline {section}{\numberline {5.2}Data Preparation}{42}{section.5.2}
 \contentsline {section}{\numberline {5.3}Data Analysis}{42}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}BVP}{42}{subsection.5.3.1}
-\contentsline {subsubsection}{\nonumberline Pre-Processing}{42}{section*.23}
-\contentsline {subsubsection}{\nonumberline Inter-Beat-Intervals}{44}{section*.25}
-\contentsline {subsubsection}{\nonumberline Data Correction}{44}{section*.26}
-\contentsline {subsubsection}{\nonumberline Feature Extraction}{46}{section*.28}
-\contentsline {subsection}{\numberline {5.3.2}GSR}{46}{subsection.5.3.2}
-\contentsline {subsubsection}{\nonumberline Pre-Processing}{46}{section*.30}
-\contentsline {subsubsection}{\nonumberline Feature Extraction}{48}{section*.31}
-\contentsline {subsection}{\numberline {5.3.3}Skin Temperature}{48}{subsection.5.3.3}
-\contentsline {subsubsection}{\nonumberline Pre-Processing}{48}{section*.33}
-\contentsline {subsubsection}{\nonumberline Feature Extraction}{48}{section*.34}
-\contentsline {section}{\numberline {5.4}Data Interpretation}{49}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Preparation}{49}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Data Sets}{50}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3}Feature Sets}{50}{subsection.5.4.3}
-\contentsline {subsection}{\numberline {5.4.4}Data Classification}{52}{subsection.5.4.4}
-\contentsline {chapter}{\numberline {6}Results}{55}{chapter.6}
-\contentsline {chapter}{\numberline {7}Discussion}{66}{chapter.7}
-\contentsline {section}{\numberline {7.1}Answering Research Questions}{66}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Research Question 1}{66}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Research Question 2}{66}{subsection.7.1.2}
-\contentsline {subsection}{\numberline {7.1.3}Research Question 3}{67}{subsection.7.1.3}
-\contentsline {section}{\numberline {7.2}Success and Limitations of Neuroergonomic Assessment}{67}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Limitations}{67}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Future Work}{70}{subsection.7.2.2}
-\contentsline {chapter}{\numberline {8}Conclusion}{72}{chapter.8}
-\contentsline {chapter}{\numberline {A}Appendix}{73}{appendix.A}
-\contentsline {chapter}{List of Figures}{75}{table.caption.42}
-\contentsline {chapter}{List of Tables}{76}{chapter*.43}
-\contentsline {chapter}{List of Abbreviations}{76}{chapter*.44}
-\contentsline {chapter}{Bibliography}{79}{chapter*.46}
+\contentsline {subsubsection}{\nonumberline Pre-Processing}{42}{section*.32}
+\contentsline {subsubsection}{\nonumberline Inter-Beat-Intervals}{44}{section*.34}
+\contentsline {subsubsection}{\nonumberline Data Correction}{45}{section*.35}
+\contentsline {subsubsection}{\nonumberline Feature Extraction}{47}{section*.37}
+\contentsline {subsection}{\numberline {5.3.2}GSR}{48}{subsection.5.3.2}
+\contentsline {subsubsection}{\nonumberline Pre-Processing}{48}{section*.40}
+\contentsline {subsubsection}{\nonumberline Feature Extraction}{49}{section*.41}
+\contentsline {subsection}{\numberline {5.3.3}Skin Temperature}{50}{subsection.5.3.3}
+\contentsline {subsubsection}{\nonumberline Pre-Processing}{50}{section*.43}
+\contentsline {subsubsection}{\nonumberline Feature Extraction}{50}{section*.44}
+\contentsline {section}{\numberline {5.4}Data Interpretation}{51}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Preparation}{51}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Data Sets}{52}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3}Feature Sets}{53}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.4}Data Classification}{53}{subsection.5.4.4}
+\contentsline {chapter}{\numberline {6}Results}{56}{chapter.6}
+\contentsline {chapter}{\numberline {7}Discussion}{67}{chapter.7}
+\contentsline {section}{\numberline {7.1}Answering Research Questions}{67}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Research Question 1}{67}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Research Question 2}{67}{subsection.7.1.2}
+\contentsline {subsection}{\numberline {7.1.3}Research Question 3}{68}{subsection.7.1.3}
+\contentsline {section}{\numberline {7.2}Success and Limitations of Neuroergonomic Assessment}{68}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Limitations}{68}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Future Work}{71}{subsection.7.2.2}
+\contentsline {chapter}{\numberline {8}Conclusion}{73}{chapter.8}
+\contentsline {chapter}{\numberline {A}Appendix}{74}{appendix.A}
+\contentsline {chapter}{List of Figures}{76}{table.caption.52}
+\contentsline {chapter}{List of Tables}{77}{chapter*.53}
+\contentsline {chapter}{List of Abbreviations}{77}{chapter*.54}
+\contentsline {chapter}{Bibliography}{80}{chapter*.56}

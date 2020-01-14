@@ -59,12 +59,13 @@ MA_{beat}[n] = \frac{1}{W_{2}}\cdot(y[n-\frac{W_{2}-1}{2}]+...+y[n]+...+y[n+\fra
 \textbf{Thresholding.} The first dynamic threshold $THR_{1}$ was used to mark potential peak areas in $y[n]$ by creating a block of interest for every interval where $THR_{1}$ was greater than $MA_{peak}$. $THR_{1}$ was derived from $MA_{beat}$ following equation \ref{thr1}.
 \begin{align} \label{thr1}
 THR_{1} &= MA_{beat}[n]+\alpha \\
-\alpha &= \beta\cdot\bar{z}
+\alpha &= \beta\cdot\overline{z}
 \end{align}
-Where $\beta$ was set to a constant value of 0,02 and $\bar{z}$ was the statistical mean of $y[n]$. Figure \ref{bvp_dta} demonstrates the idea of using two moving averages to generate blocks of interest.
+\newpage
+Where $\beta$ was set to a constant value of 0,02 and $\overline{z}$ was the statistical mean of $y[n]$. Figure \ref{bvp_dta} demonstrates the idea of using two moving averages to generate blocks of interest.
 
 %[insert: bvp_dta.jpg, source: \cite{Elgendi2013}]
-\begin{figure}[ht]
+\begin{figure}[h!]
 	\centering
   \includegraphics[width=1.0\textwidth, angle=0]{images/bvp_dta.jpg}
 	\caption[Peak Detection Algorithm]{Blocks of interest are shown as grey squares over the filtered signal (in blue). The blocks are generated, using the two moving averages $MA_{peak}$ and $MA_{beat}$, which are depicted as a black dotted signal and a dashed red signal respectively. (source: doi:10.1371/journal.pone.0076585.g009)}
@@ -106,7 +107,7 @@ B = \frac{\sum_{j=i}^{i+N} IBI_{i}}{(IBI_{i-1}+IBI_{i+N+1})/2}
 As $B$ would in general not be an integer value, the computed values were rounded to obtain the nearest integer. After the determination of the number of IBIs to insert was completed, the values of said IBIs were computed using linear interpolation. The basic principle is shown in figure \ref{ebrep}.
 
 %[insert: bvp_dt.jpg, source: \cite{Lippman1994}]
-\begin{figure}[ht]
+\begin{figure}[h!]
 	\centering
   \includegraphics[width=1.0\textwidth, angle=0]{images/eb_replacement.jpg}
 	\caption[Linear Interpolation of Ectopic Beats]{A schematic of linear interpolation of ectopic beats on an ECG signal. RR-intervals before and after the ectopic beat are marked for replacement (vertival arrows). RR-intervals before and after the marked segment are used for interpolation (diagonal arrows). source: \cite{Lippman1994}}
@@ -120,12 +121,14 @@ As $B$ would in general not be an integer value, the computed values were rounde
 %	- ARTIFACT DECLARATION
 %	- LINEAR INTERPOLATION
 %DATA VALIDATION
+
 \newpage
 \subsubsection{Feature Extraction}
  %FEATURE EXTRACTION
-HRV feature extraction was based entirely on the recommendations given by the Task Force (1996). The selected measures are shown in the tabular below sorted by their domains.\\[10pt]
-\begin{table}
-\caption[HRV Feature Selection]{HRV Feature Selection}
+HRV feature extraction was based entirely on the recommendations given by the Task Force (1996). The selected measures are shown in the tabular below sorted by their domains.
+
+\begin{table}[h!]
+\caption[HRV Feature Selection 1]{HRV Feature Selection 1}
 \begin{tabular}{cccc}
 \multicolumn{4}{c}{\thead{Time Domain Measures}} \\
 \hline 
@@ -142,7 +145,14 @@ pIBI50 & $\%$ & \multicolumn{2}{c}{\makecell[l]{IBI50 divided by the total numbe
 mIBI & $ms$ & \multicolumn{2}{c}{\makecell[l]{Mean of all inter beat intervals}} \\
 mHR & $bpm$ & \multicolumn{2}{c}{ \makecell[l]{Mean heart rate of the entire recording}}\\
 rIBI & $ms$ & \multicolumn{2}{c}{\makecell[l]{The difference between the longest and the shortest \\ inter beat interval}}\\
- & & & \\
+& & & \\
+\hline
+\end{tabular} 
+\end{table}
+
+\begin{table}[h!]
+\caption[HRV Feature Selection 2]{HRV Feature Selection 2}
+\begin{tabular}{cccc}
 \multicolumn{4}{c}{\thead{Frequency Domain Measures}} \\
 \hline 
 \thead{Variable} & \thead{Units} & \thead{Description} & \thead{Frequency range}\\ 
@@ -162,6 +172,8 @@ LF/HF &  & \makecell[l]{Ratio of LF power to HF power} & \\
 \end{tabular} 
 \end{table}
 
+\newpage
+
 \subsection{GSR}
 \subsubsection{Pre-Processing}\label{gsrpp}
 % GSR PRE PROCESSING
@@ -172,8 +184,8 @@ As we were only interested in the tonic component of GSR, pre-processing was foc
 \textbf{Mean Correction.} To account for environmental influences such as temperature and humidity the filtered signal was corrected using the mean GSR value of the baseline measurement. The mean corrected data was then subjected to the feature extraction methods.
 \subsubsection{Feature Extraction}\label{gsrfe}
 % FEATURE EXTRACTION
-GSR feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the tabular below.\\[10pt]
-\begin{table}
+GSR feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the tabular below.
+\begin{table}[h!]
 \caption[GSR Feature Selection]{GSR Feature Selection}
 \begin{tabular}{cccc}
 \multicolumn{4}{c}{\thead{Time Domain Measures}} \\
@@ -191,6 +203,7 @@ sdGSR & $\mu S$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of the 
 \end{tabular} 
 \end{table}
 
+\newpage
 \subsection{Skin Temperature}
 \subsubsection{Pre-Processing}
 % TEMPERATURE PRE PROCESSING
@@ -198,8 +211,8 @@ sdGSR & $\mu S$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of the 
 The pre-processing of the skin temperature signal was identical to the methods applied to the GSR signal. Therefore, we refer to section \ref{gsrpp} at this point.
 \subsubsection{Feature Extraction}
 % FEATURE EXTRACTION
-Similar to \ref{gsrfe}, feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the tabular below.\\[10pt]
-\begin{table}
+Similar to \ref{gsrfe}, feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the tabular below.
+\begin{table}[h!]
 \caption[Skin Temperature Feature Selection]{Skin Temperature Feature Selection}
 \begin{tabular}{cccc}
 \multicolumn{4}{c}{\thead{Time Domain Measures}} \\
@@ -217,6 +230,7 @@ sdST & $^{\circ}C$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of t
 \end{tabular} 
 \end{table}
 
+\newpage
 \section{Data Interpretation}\label{datainterpretation}
 % ml methods
 Similar to data analysis, we handled data interpretation using the programming language Python in combination with the PyCharm IDE. In particular, we used the scikit-learn package to implement data and feature preparation methods, as well as parameter optimization in the training process.
@@ -228,9 +242,10 @@ Afterwards, those data points were converted into a NumPy array with the dimensi
 \textbf{K-fold Crossvalidation} is a convenient way to facilitate the evaluation of the training process without having to resort to the test samples. By employing k-fold Crossvalidation on the training set we were able to compensate for the small sample size of our data set while still reserving the test samples for the final validation.\\
 \textbf{Feature Preparation.} The performance of some machine learning techniques is extremely dependent on data representation. In particular, SVM and Neural Networks benefit from data Normalization (i.e. features are represented as values between 0 and 1). Therefore, we used Python's $\text{MinMaxScaler}$ function to translate each feature individually to a range of 0 to 1.\\
 
+\newpage
 \subsection{Data Sets} 
-A number of subsets were created to explore classification accuracy for a variety of different scenarios. Therefore, data points were sorted by their session type and recombined to build the subsets shown in \ref{MLDS}.\\
-\begin{table}
+A number of subsets were created to explore classification accuracy for a variety of different scenarios. Therefore, data points were sorted by their session type and recombined to build the subsets shown in \ref{MLDS}.
+\begin{table}[h!]
 \caption[Machine Learning Data Sets]{Machine Learning Data Sets}
 \begin{flushleft}
 \begin{tabular}{cccc}
@@ -276,9 +291,9 @@ As described in section \ref{mlsel}, we selected the following four machine lear
 \item \textbf{Neural Networks}
 \end{enumerate}
 
-After coding subroutines for each of the above, using their respective implementations in scikit-learn we conducted a gridsearch for algorithm specific hyper-parameters with the goal of performance optimization. Hyper-parameters are parameters that are not directly learned within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes (e.g. C, kernel and gamma for SVM).
-The gridsearch was managed using the $\text{GridSearchCV}$ method, which exhaustively generates candidates from a grid of parameter values ($\text{param\_grid}$). Tables \ref{paramgrids1} and \ref{paramgrids2} show the parameter grids that were employed in this process. Also, k-fold Crossvalidation (k=3, 5) was applied in the process.\\
-\begin{table}
+After coding subroutines for each of the above, using their respective implementations in scikit-learn we conducted a Gridsearch for algorithm specific hyper-parameters with the goal of performance optimization. Hyper-parameters are parameters that are not directly learned within estimators. In scikit-learn they are passed as arguments to the constructor of the estimator classes (e.g. C, kernel and gamma for SVM).
+The Gridsearch was managed using the $\text{GridSearchCV}$ method, which exhaustively generates candidates from a grid of parameter values ($\text{param\_grid}$). Tables \ref{paramgrids1} and \ref{paramgrids2} show the parameter grids that were employed in this process. Also, k-fold Crossvalidation (k=3, 5) was applied in the process.
+\begin{table}[h!]
 \caption[Gridsearch Parameters Part 1]{Gridsearch Parameters Part 1}
 \begin{flushleft}
 \begin{tabular}{cccc}
@@ -302,7 +317,8 @@ $\text{gamma}$ & \multicolumn{2}{c}{\makecell[l]{The kernel coefficient. }} & \m
 \end{tabular} \label{paramgrids1}
 \end{flushleft}
 \end{table}
-\begin{table}
+
+\begin{table}[h!]
 \caption[Gridsearch Parameters Part 2]{Gridsearch Parameters Part 2}
 \begin{flushleft}
 \begin{tabular}{cccc}
@@ -330,4 +346,4 @@ $\text{learning\_rate}$ & \multicolumn{2}{c}{\makecell[l]{The learning rate is u
 \end{tabular} \label{paramgrids2}
 \end{flushleft}
 \end{table}
-Afterwards, the best estimators for each feature and data set combination were determined by comparing crossvalidation scores. Lastly, the final validation was conducted using the best estimators on the reserved test data sets.
+Afterwards, the best estimators for each feature and data set combination were determined by comparing Crossvalidation scores. Lastly, the final validation was conducted using the best estimators on the reserved test data sets.

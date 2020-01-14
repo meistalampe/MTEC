@@ -4,17 +4,18 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces HRV Feature Selection}}{47}{table.caption.29}
-\contentsline {table}{\numberline {5.2}{\ignorespaces GSR Feature Selection}}{48}{table.caption.32}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Skin Temperature Feature Selection}}{49}{table.caption.35}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Machine Learning Data Sets}}{51}{table.caption.36}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Gridsearch Parameters Part 1}}{53}{table.caption.37}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Gridsearch Parameters Part 2}}{54}{table.caption.38}
+\contentsline {table}{\numberline {5.1}{\ignorespaces HRV Feature Selection 1}}{47}{table.caption.38}
+\contentsline {table}{\numberline {5.2}{\ignorespaces HRV Feature Selection 2}}{48}{table.caption.39}
+\contentsline {table}{\numberline {5.3}{\ignorespaces GSR Feature Selection}}{49}{table.caption.42}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Skin Temperature Feature Selection}}{50}{table.caption.45}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Machine Learning Data Sets}}{52}{table.caption.46}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Gridsearch Parameters Part 1}}{54}{table.caption.47}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Gridsearch Parameters Part 2}}{55}{table.caption.48}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Algorithm Performance: Feature Based}}{63}{table.caption.39}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Algorithm Performance: Data Based}}{64}{table.caption.40}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Algorithm Performance: Feature Based}}{64}{table.caption.49}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Algorithm Performance: Data Based}}{65}{table.caption.50}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Visual Stimuli Set 1}}{73}{table.caption.41}
-\contentsline {table}{\numberline {A.2}{\ignorespaces Visual Stimuli Set 2}}{74}{table.caption.42}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Visual Stimuli Set 1}}{74}{table.caption.51}
+\contentsline {table}{\numberline {A.2}{\ignorespaces Visual Stimuli Set 2}}{75}{table.caption.52}

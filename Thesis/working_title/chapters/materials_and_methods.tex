@@ -8,28 +8,30 @@ In this chapter, we present all the hardware components and software application
 \subsection{Empatica E4}\label{e4spec}
 The Empatica E4 wristband is a wearable wireless device designed for comfortable, continuous, real-time data acquisition. It is a class IIa medical device in the EU, according to CE Cert. No. 1876/MDD (93/42/EEC Directive) and was designed for daily life usage \cite{e4}.
 
-\begin{figure}[ht]
+\begin{figure}[h!]
 	\centering
   \includegraphics[width=0.7\textwidth]{images/E4overview.JPG}
 	\caption{Overview of the Empatica E4 wristband.}
 	\label{e4overview}
 \end{figure}
 
-Figure \ref{e4overview} shows an overview of the entire E4 wristband from either side indicating key attributes as wells as a total of four different sensors that will be discussed briefly in the following:
+Figure \ref{e4overview} shows an overview of the entire E4 wristband from either side indicating key attributes as well as a total of four different sensors that will be discussed briefly in the following:
 
 \begin{itemize}
-\item \textbf{Photoplethysmography (\gls{ppg})} to provide blood volume pulse (\gls{bvp}), from which heart rate, heart rate variability and other cardiovascular features may be derived
-\item \textbf{Electrodermal activity (\gls{gsr})} is used to measure sympathetic nervous system arousal and to derive features related to stress, engagement and excitement
-\item \textbf{3-Axis accelerometer} to capture motion-based activity
-\item \textbf{Infrared thermopile} for reading skin temperature
+\item \textbf{Photoplethysmography (\gls{ppg})} to provide blood volume pulse (\gls{bvp}), from which heart rate, heart rate variability and other cardiovascular features may be derived.
+\item \textbf{Electrodermal Activity (\gls{gsr})} is used to measure sympathetic nervous system arousal and to derive features related to stress, engagement and excitement.
+\item \textbf{3-Axis Accelerometer} to capture motion-based activity.
+\item \textbf{Infrared Thermopile} to measure the skin temperature.
 \end{itemize}
 
-As the E4 is intended to be worn on the wrist these sensors are set up in a specific way to provide for optimal use. As can be seen on \ref{e4overview} the majority of the sensors are located on the backside of the main unit not including the \gls{gsr}-sensor, which is located on the wristband itself.\\
+%As the E4 is intended to be worn on the wrist these sensors are set up in a specific way to provide for optimal use. 
+As can be seen on \ref{e4overview} the majority of the sensors are located on the backside of the main unit not including the \gls{gsr}-sensor, which is located on the wristband itself.\\
+\newpage
 Wearing the E4 wristband is equally intrusive to wearing a watch and therefore providing a high level of convenience compared to other physiologic measures such as electrocardiogram \gls{ecg} or electroencephalogram \gls{eeg}.\\
 
 \subsubsection{Sampling Specifications}
 All recordings were performed using only software licensed by Empatica. Using the approved streaming server application and the compatible Bluetooth dongle, the recorded data was streamed directly to an operator's personal computer via a Bluetooth connection. 
-
+\newpage
 \subsubsection{EDA sensor}
 \begin{itemize}
 \item Sampling frequency: 4 Hz (Non customizable).
@@ -54,7 +56,7 @@ from the heart cycle).
 \item Sensor output resolution 0.9 nW / Digit.
 \item Motion artifact removal algorithm: Combines different light wavelengths. Tolerates external lighting conditions.
 \end{itemize}
-
+\newpage
 \subsubsection{Infrared Thermopile}
 \begin{itemize}
 \item Sampling frequency: 4 Hz (Non customizable).
@@ -73,11 +75,12 @@ from the heart cycle).
 \subsection{Processing Unit}
 The processing unit it the expression given to the computer, which is used to run any software that is essential for data transmission and data processing, such as the Empatica streaming server application, MATLAB, and PyCharm. We used a Lenovo ThinkPad, with an Intel(R) Core(TM) i5-6200U, CPU @ 2.3 GHz, 8 GB RAM, running a 64-Bit version of Windows 10. 
 
+\newpage
 \section{Software}
 \subsection{E4 Streaming Server}
-The E4 streaming server for Windows (version of May,2018) is a software application that allows to forward real-time data of one or multiple Empatica E4 devices to one or multiple TCP socket connections. However, as each TCP connection is limited to receiving data from only one Empatica E4 device, the connection to multiple devices would also require multiple TCP connections. The E4 streaming server is intended to provide access to the data streams using scripts and applications of any programming language \cite{E4SS}.\\
+The E4 streaming server for Windows (version of May, 2018) is a software application that allows to forward real-time data of one or multiple Empatica E4 devices to one or multiple TCP socket connections. However, as each TCP connection is limited to receiving data from only one Empatica E4 device, the connection to multiple devices would also require multiple TCP connections. The E4 streaming server is intended to provide access to the data streams using scripts and applications of any programming language \cite{E4SS}.
 
-\begin{figure}[ht]
+\begin{figure}[h!]
 	\centering
   \includegraphics[width=0.75\textwidth]{images/E4streamingServer.JPG}
 	\caption[E4 streaming server: connectivity and function]{Illustration of the connectivity and function of the E4 streaming server. On one side are E4s, connected over BTLE to the E4 streaming server using the BLED112 dongle. On the other side are TCP clients, connected to the E4 streaming server through TCP connections over the network. The lines originating from the E4s illustrate the data flow from the E4 through the E4 streaming server to the subscribed TCP client. For example, the data from the first E4 is forwarded by the E4 streaming server to the first and third TCP client. \cite{E4SS}}
@@ -85,6 +88,7 @@ The E4 streaming server for Windows (version of May,2018) is a software applicat
 \end{figure}
 
 %Once the TCP clients are connected to the network, as shown in \ref{e4ss}, they are able to communicate with the E4 streaming server. This communication follows a specific message protocol that provides a general structure for client commands and server messages. In general, messages and commands are ASCII strings terminated with a newline character and encoded with UTF-8 \cite{E4MP}. 
+\newpage
 \subsection{MATLAB}
 MATLAB is a computing and visualization software package, published by MathWorks. It combines a desktop environment tuned for iterative analysis and design processes with a high level programming language for matrix-based mathematics. We used MATLAB (version R2015a) to create a TCP client that was deployed in our data extraction pipeline to send commands to, and receive messages from, the E4 streaming server. Thereby, allowing us to connect an E4 device and control data transmission via a simple user interface.
 \subsection{PyCharm}
