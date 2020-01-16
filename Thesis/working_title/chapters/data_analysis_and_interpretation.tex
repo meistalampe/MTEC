@@ -96,7 +96,7 @@ The resulting values for the new IBI-related thresholds $IBI_{max}$ and $IBI_{mi
 \begin{equation} \label{kamath}
 IBI_{EB} = \lbrace IBI\vert 0.675 IBI_{n-1} < IBI_{n} < 1.245 IBI_{n-1}\rbrace  
 \end{equation}
-\textbf{Artifact Rejection} To increase the robustness of the HRV analysis all regions with the presence of ectopic beats or noise for more than 3 seconds were removed entirely \cite{Clifford2002}.\\
+\textbf{Artifact Rejection.} To increase the robustness of the HRV analysis all regions with the presence of ectopic beats or noise for more than 3 seconds were removed entirely \cite{Clifford2002}.\\
 \textbf{Linear Interpolation.} We used linear interpolation to replace outliers and ectopic beats. First, IBIs immediately preceding and after the ectopic beat were marked for replacement. Afterwards, the total time encompassed by all marked IBIs was determined and the number of new beats $B$, that were inserted to replace them, was computed equation \ref{Bsingle} for single ectopic beats and equation \ref{Bseq} for a sequence of ectopic beats.
 \begin{equation}\label{Bsingle}
 B = \frac{IBI_{i}+IBI_{i+1}}{(IBI_{i-1}+IBI_{i+2})/2}
@@ -113,7 +113,7 @@ As $B$ would in general not be an integer value, the computed values were rounde
 	\caption[Linear Interpolation of Ectopic Beats]{A schematic of linear interpolation of ectopic beats on an ECG signal. RR-intervals before and after the ectopic beat are marked for replacement (vertival arrows). RR-intervals before and after the marked segment are used for interpolation (diagonal arrows). source: \cite{Lippman1994}}
 	\label{ebrep}
 \end{figure}
-\textbf{Data Rejection.} For short term recordings, such as the ones we conducted in this thesis, it is recommended that at least 80\% of a 5 minute segment of data should contain acceptable IBIs \cite{Clifford2002}. Therefore, recordings that failed this condition were bared from the subsequent feature extraction.
+\textbf{Data Rejection.} For short term recordings, such as the ones we conducted in this thesis, it is recommended that at least 80\% of a 5 minute segment of data should contain acceptable IBIs \cite{Clifford2002}. Therefore, recordings that failed this condition were barred from the subsequent feature extraction.
 
 % INTER BEAT INTERVALS
 %	- DETECT OUTLIER
@@ -125,7 +125,7 @@ As $B$ would in general not be an integer value, the computed values were rounde
 \newpage
 \subsubsection{Feature Extraction}
  %FEATURE EXTRACTION
-HRV feature extraction was based entirely on the recommendations given by the Task Force (1996). The selected measures are shown in the tabular below sorted by their domains.
+HRV feature extraction was based entirely on the recommendations given by the Task Force (1996). The selected measures are shown in the tables below, sorted by their domains.
 
 \begin{table}[h!]
 \caption[HRV Feature Selection 1]{HRV Feature Selection 1}
@@ -160,7 +160,7 @@ rIBI & $ms$ & \multicolumn{2}{c}{\makecell[l]{The difference between the longest
  & & & \\
 \hline
  & & & \\
-Total power & $ms^2$ & \makecell[l]{The variance of inter beat intervals \\ over the temporal segment} & $\leq$ 0.4 Hz\\
+Total power & $ms^2$ & \makecell[l]{The variance of all \gls{ibi}} & $\leq$ 0.4 Hz\\
 VLF & $ms^2$ & \makecell[l]{Power in very low frequency range} & $\leq$ 0.04 Hz\\
 LF & $ms^2$ & \makecell[l]{Power in low frequency range} & 0.04-0.15 Hz\\
 nLF & $n.u.$ & \makecell[l]{LF power in normalized units \\ LF/(Total Power–VLF)$\cdot$100} & \\
@@ -169,8 +169,11 @@ nHF & $n.u.$ & \makecell[l]{HF power in normalized units \\ HF/(Total Power–VL
 LF/HF &  & \makecell[l]{Ratio of LF power to HF power} & \\
 & & & \\
 \hline
-\end{tabular} 
+\end{tabular} \label{freqfeat}
 \end{table}
+
+The power for the three spectral components (see \ref{freqfeat}) is represented by the average bandpower in the respective frequency range. In order to calculate the average bandpower, we used Welch's method in conjunction with a Hann window. Which is a commonly used method to compute an estimate of the spectral density by dividing the data into overlapping segments, computing a modified periodogram for each segment, and averaging the periodograms. Afterwards, the resulting frequency bins were assigned to the respective bands and the absolute power was approximated by integration ,using the composite trapezoidal rule. The data that was subjected to spectral analysis was obtained by creating a discrete event series, using the \gls{ibi} tachogram, and interpolating it with a sampling frequency of 7 Hz. 
+
 
 \newpage
 
@@ -184,7 +187,7 @@ As we were only interested in the tonic component of GSR, pre-processing was foc
 \textbf{Mean Correction.} To account for environmental influences such as temperature and humidity the filtered signal was corrected using the mean GSR value of the baseline measurement. The mean corrected data was then subjected to the feature extraction methods.
 \subsubsection{Feature Extraction}\label{gsrfe}
 % FEATURE EXTRACTION
-GSR feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the tabular below.
+GSR feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the table below.
 \begin{table}[h!]
 \caption[GSR Feature Selection]{GSR Feature Selection}
 \begin{tabular}{cccc}
@@ -211,7 +214,7 @@ sdGSR & $\mu S$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of the 
 The pre-processing of the skin temperature signal was identical to the methods applied to the GSR signal. Therefore, we refer to section \ref{gsrpp} at this point.
 \subsubsection{Feature Extraction}
 % FEATURE EXTRACTION
-Similar to \ref{gsrfe}, feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the tabular below.
+Similar to \ref{gsrfe}, feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the table below.
 \begin{table}[h!]
 \caption[Skin Temperature Feature Selection]{Skin Temperature Feature Selection}
 \begin{tabular}{cccc}
@@ -236,7 +239,7 @@ sdST & $^{\circ}C$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of t
 Similar to data analysis, we handled data interpretation using the programming language Python in combination with the PyCharm IDE. In particular, we used the scikit-learn package to implement data and feature preparation methods, as well as parameter optimization in the training process.
 
 \subsection{Preparation} 
-\textbf{Formatting.}During the feature extraction process, extracted features from one session were separated by signal type and stored in individual Python dictionaries. Therefore, a subroutine was built to extract the features from their individual dictionaries and sort them by the session they originated from. The resulting data points were comprised of all features that were extracted from one recording session (e.g. a 5 minute baseline recording).
+\textbf{Formatting.} During the feature extraction process, extracted features from one session were separated by signal type and stored in individual Python dictionaries. Therefore, a subroutine was built to extract the features from their individual dictionaries and sort them by the session they originated from. The resulting data points were comprised of all features that were extracted from one recording session (e.g. a 5 minute baseline recording).
 Afterwards, those data points were converted into a NumPy array with the dimensions $n \times f$, where $n$ was the number of data points (i.e. the sum of all recorded sessions of all the subjects) and $f$ was the number of features that were extracted for each data point.\\
 \textbf{Generating Training and Test Sets.} A common practice in machine learning to prevent a classifier from overfitting is to reserve some of the data for testing and validation purposes. Therefore, the data set was divided into training and test samples. Approximately 25\% of data points were reserved for algorithm testing, and the remaining 75\% were used for training purposes. This step was implemented using the $\text{\_train\_test\_split}$ helper function in the scikit-learn toolbox.\\
 \textbf{K-fold Crossvalidation} is a convenient way to facilitate the evaluation of the training process without having to resort to the test samples. By employing k-fold Crossvalidation on the training set we were able to compensate for the small sample size of our data set while still reserving the test samples for the final validation.\\
@@ -346,4 +349,4 @@ $\text{learning\_rate}$ & \multicolumn{2}{c}{\makecell[l]{The learning rate is u
 \end{tabular} \label{paramgrids2}
 \end{flushleft}
 \end{table}
-Afterwards, the best estimators for each feature and data set combination were determined by comparing Crossvalidation scores. Lastly, the final validation was conducted using the best estimators on the reserved test data sets.
+Afterwards, the best estimators for each feature- and data set combination were determined by comparing Crossvalidation scores. Lastly, the final validation was conducted using the best estimators on the reserved test data sets.

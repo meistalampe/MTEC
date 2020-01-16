@@ -13,15 +13,15 @@
 \contentsline {subsubsection}{\nonumberline The PPG waveform: characteristics and analysis}{13}{section*.7}
 \contentsline {subsubsection}{\nonumberline Heart Rate Variability}{16}{section*.11}
 \contentsline {subsubsection}{\nonumberline HRV Measures}{16}{section*.12}
-\contentsline {subsection}{\numberline {1.2.4}Machine Learning}{18}{subsection.1.2.4}
+\contentsline {subsection}{\numberline {1.2.4}Machine Learning}{19}{subsection.1.2.4}
 \contentsline {subsubsection}{\nonumberline Algorithm Selection}{19}{section*.15}
-\contentsline {subsubsection}{\nonumberline k-NN Classifier}{19}{section*.16}
+\contentsline {subsubsection}{\nonumberline k-NN Classifier}{20}{section*.16}
 \contentsline {subsubsection}{\nonumberline Support Vector Machine}{20}{section*.17}
-\contentsline {subsubsection}{\nonumberline Decision Trees}{20}{section*.18}
+\contentsline {subsubsection}{\nonumberline Decision Trees}{21}{section*.18}
 \contentsline {subsubsection}{\nonumberline Ensemble Techniques}{21}{section*.19}
-\contentsline {subsubsection}{\nonumberline Multi Layer Perceptron}{21}{section*.20}
+\contentsline {subsubsection}{\nonumberline Multi Layer Perceptron}{22}{section*.20}
 \contentsline {subsection}{\numberline {1.2.5}Classification of Emotion}{22}{subsection.1.2.5}
-\contentsline {subsubsection}{\nonumberline Emotion Elicitation}{22}{section*.21}
+\contentsline {subsubsection}{\nonumberline Emotion Elicitation}{23}{section*.21}
 \contentsline {chapter}{\numberline {2}Problem Analysis and Goals}{24}{chapter.2}
 \contentsline {section}{\numberline {2.1}Related Work}{24}{section.2.1}
 \contentsline {section}{\numberline {2.2}Problem Oriented}{25}{section.2.2}

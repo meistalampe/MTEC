@@ -380,7 +380,7 @@ def _get_features_from_psd(freq: List[float], psd: List[float], dict_name: str,
         about each features given below.
     """
 
-    # Calcul of indices between desired frequency bands
+    # Calculation of indices between desired frequency bands
     vlf_indexes = np.logical_and(freq >= vlf_band[0], freq < vlf_band[1])
     lf_indexes = np.logical_and(freq >= lf_band[0], freq < lf_band[1])
     hf_indexes = np.logical_and(freq >= hf_band[0], freq < hf_band[1])
