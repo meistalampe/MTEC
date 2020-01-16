@@ -3,23 +3,23 @@ The signals we obtained from the experiment were analyzed and interpreted using 
 \section{Data Collection}
 As mentioned in section \ref{physmeas}, the psychophysiological measures, selected for this thesis, were blood volume pulse (\gls{bvp}), galvanic skin response (\gls{gsr}), and skin temperature. These signals were recorded using the integrated Photoplethysmography (\gls{ppg}), Electrodermal Activity (EDA), and Infrared Thermopile sensors of the Empatica E4 wristband. All recordings were conducted using a sampling frequency of 64Hz for \gls{bvp}, and 4Hz for both \gls{gsr}, and skin temperature. 
 From the 14 subjects that partook in our experiment we obtained 14 sets of physiological data. The data of one subject was removed due to substantial artifact contamination, resulting in a total of 13 sets of physiological data that were used in the subsequent process. Each set was comprised of roughly 80-90 minutes of recordings, which complied to approximately 326.400 samples for \gls{bvp}, and 20.400 samples for \gls{gsr}, and skin temperature. 
-The collected data was continuously streamed to a TCP client, running on the nearby Processing Unit, via a Bluetooth connection and saved into csv files after every full minute of recording. The saved files contained data samples of all three data streams and were named following the pattern shown in \ref{recpattern}.
+The collected data was continuously streamed to a \gls{tcp} client, running on the nearby Processing Unit, via a Bluetooth connection and saved into \gls{csv} files after every full minute of recording. The saved files contained data samples of all three data streams and were named following the pattern shown in \ref{recpattern}.
 \begin{equation} \label{recpattern}
 \text{recording\_yyyy-mm-dd-hh-mm-ss}
 \end{equation}
-Then again, each data sample was comprised of three components which identified the data stream, the sample time, and the sample value. An example of this pattern is shown in \ref{samplepattern} for a sample of the BVP signal stream. 
+Then again, each data sample was comprised of three components which identified the data stream, the sample time, and the sample value. An example of this pattern is shown in \ref{samplepattern} for a sample of the \gls{bvp} signal stream. 
 \begin{equation}\label{samplepattern}
 \text{E4\_Bvp 1569592961,01857 25,33795}
 \end{equation}
 
 \section{Data Preparation}
-As the data was saved in a number of individual csv files the goal of the initial step of data processing was dedicated to translate the data samples into a usable format and separate the individual data stream (i.e. BVP, GSR, and skin temperature). This goal was achieved using two simple python scripts. The first program would locate all csv files in a certain folder and seamlessly merge them to a single csv file. Afterwards, the second script was used to scan all entries of this new file and sort them by their stream tag, which was indicated by the first portion of each data sample (see \ref{samplepattern}), using a simple string comparison method. This process resulted in a total of 6 data files (i.e. 2 files per data stream), of which each file contained either the sample values or the sample times of a single data stream. This format made the data easily distinguishable and accessible for the final step of data preparation, which was data segmentation. We divided the data streams into segments that were associated with the individual sessions of the experiment, using automatic timestamps that were generated during the experiment. The extracted segments were then saved in individual files that were appropriately named to provide explicit information about their content to facilitate subsequent processing steps. The naming pattern is shown in \ref{segmentpattern}.
+As the data was saved in a number of individual csv files the goal of the initial step of data processing was dedicated to translate the data samples into a usable format and separate the individual data stream (i.e. \gls{bvp}, \gls{gsr}, and skin temperature). This goal was achieved using two simple python scripts. The first program would locate all csv files in a certain folder and seamlessly merge them to a single csv file. Afterwards, the second script was used to scan all entries of this new file and sort them by their stream tag, which was indicated by the first portion of each data sample (see \ref{samplepattern}), using a simple string comparison method. This process resulted in a total of 6 data files (i.e. 2 files per data stream), of which each file contained either the sample values or the sample times of a single data stream. This format made the data easily distinguishable and accessible for the final step of data preparation, which was data segmentation. We divided the data streams into segments that were associated with the individual sessions of the experiment, using automatic timestamps that were generated during the experiment. The extracted segments were then saved in individual files that were appropriately named to provide explicit information about their content to facilitate subsequent processing steps. The naming pattern is shown in \ref{segmentpattern}.
 \begin{equation}\label{segmentpattern}
 \text{\_DataStream\_Datatype\_SubjectID\_SessionLabel\_StartTime\_EndTime}
 \end{equation}
 
 \section{Data Analysis}
-All aspects of data analysis were handled using the programming language Python in combination with the PyCharm IDE. Therefore, this section is dedicated to explaining the general strategy, as well as the scripts that were built in the process of managing data processing, and feature extraction tasks.
+All aspects of data analysis were handled using the programming language Python in combination with the PyCharm \gls{ide}. Therefore, this section is dedicated to explaining the general strategy, as well as the scripts that were built in the process of managing data processing, and feature extraction tasks.
 
 \subsection{BVP}
 \subsubsection{Pre-Processing}
@@ -32,7 +32,7 @@ All aspects of data analysis were handled using the programming language Python 
 %		- blocks of interest
 %		- peak detection
 %		- peak validation
-The main objective of BVP pre-processing was the detection of AC pulses, or $\alpha$ waves, in the BVP signal. To guarantee high quality peak detection even under challenging conditions, we implemented an algorithm that was introduced by Elgendi et al. (2013) for this very reason. The peak detection algorithm is based on event-related moving averages with dynamic thresholds, and is comprised of three main stages: pre-processing (bandpass filtering and squaring), feature extraction (generating potential blocks using two moving averages), and classification (thresholding)\cite{Elgendi2013}. 
+The main objective of \gls{bvp} pre-processing was the detection of AC pulses, or $\alpha$ waves, in the \gls{bvp} signal. To guarantee high quality peak detection even under challenging conditions, we implemented an algorithm that was introduced by Elgendi et al. (2013) for this very reason. The peak detection algorithm is based on event-related moving averages with dynamic thresholds, and is comprised of three main stages: pre-processing (bandpass filtering and squaring), feature extraction (generating potential blocks using two moving averages), and classification (thresholding) \cite{Elgendi2013}. 
 
 %[insert: bvp_dt.jpg, source: \cite{Elgendi2013}]
 %\begin{figure}[ht]
@@ -44,7 +44,7 @@ The main objective of BVP pre-processing was the detection of AC pulses, or $\al
 
 %The general structure of the algorithm is shown in \ref{bvp_dt}. 
 The following paragraph will elaborate on the individual steps of the algorithm.\\
-\textbf{Bandpass Filtering.} A zero-phase second-order Butterworth filter, with a bandpass of 0.5-8 Hz was implemented to remove baseline wander and non-peak-related high frequency components. The filter output was then applied to the raw PPG signal resulting in the filtered signal $S[n]$.\\
+\textbf{Bandpass Filtering.} A zero-phase second-order Butterworth filter, with a bandpass of 0.5-8 Hz was implemented to remove baseline wander and non-peak-related high frequency components. The filter output was then applied to the raw \gls{ppg} signal resulting in the filtered signal $S[n]$.\\
 \textbf{Clipping.} In preparation of the next step of the algorithm, the filtered signal was clipped by removing the signal below zero. This resulted in the clipped signal $Z[n]$.\\
 \textbf{Squaring.} Squaring was used to emphasize large differences resulting from the systolic waves, while simultaneously suppressing smaller differences caused by diastolic waves and noise \cite{Elgendi2013}.
 This resulted in the signal $y[n]$ which is equal to $Z[n]^{2}$\\
@@ -68,7 +68,7 @@ Where $\beta$ was set to a constant value of 0,02 and $\overline{z}$ was the sta
 \begin{figure}[h!]
 	\centering
   \includegraphics[width=1.0\textwidth, angle=0]{images/bvp_dta.jpg}
-	\caption[Peak Detection Algorithm]{Blocks of interest are shown as grey squares over the filtered signal (in blue). The blocks are generated, using the two moving averages $MA_{peak}$ and $MA_{beat}$, which are depicted as a black dotted signal and a dashed red signal respectively. (source: doi:10.1371/journal.pone.0076585.g009)}
+	\caption[Peak Detection Algorithm]{Blocks of interest are shown as grey squares over the filtered signal (in blue). The blocks are generated, using the two moving averages $MA_{peak}$ and $MA_{beat}$, which are depicted as a black dotted signal and a dashed red signal respectively. Source: \cite{Elgendi2013}}
 	\label{bvp_dta}
 \end{figure}
 
@@ -80,40 +80,40 @@ Using the indices of valid systolic peaks that were detected in \ref{pkdet}, the
 \begin{equation}
 IBI_{i} = R_{i}-R_{i-1}
 \end{equation}
-Where Peaks are symbolically labeled $R$ to express their correspondence to the R-waves of the ECG, which are commonly used to calculate IBIs, and $i$ is the index value of the peak series.
-Initially calculated in samples, the IBIs were then translated into milliseconds.
+Where Peaks are symbolically labeled $R$ to express their correspondence to the R-waves of the \gls{ecg}, which are commonly used to calculate \gls{ibi}s, and $i$ is the index value of the peak series.
+Initially calculated in samples, the \gls{ibi}s were then translated into milliseconds.
 
 \subsubsection{Data Correction}
-This section is dedicated to the treatment of ectopic beats, arrhythmic events, missing data, and artifacts in the IBI series. \\
-\textbf{Outlier Rejection.} All IBIs that were considered physiologically impossible were marked as outliers. We used the HR-related thresholds $HR_{max}$ and $HR_{min}$ to calculate the shortest ($IBI_{min}$) and the longest ($IBI_{max}$) acceptable interval duration. $HR_{max}$ was determined using \ref{hrmax} and $HR_{min}$ was set to 45 beats per minute.
+This section is dedicated to the treatment of ectopic beats, arrhythmic events, missing data, and artifacts in the \gls{ibi} series. \\
+\textbf{Outlier Rejection.} All \gls{ibi}s that were considered physiologically impossible were marked as outliers. We used the HR-related thresholds $HR_{max}$ and $HR_{min}$ to calculate the shortest ($IBI_{min}$) and the longest ($IBI_{max}$) acceptable interval duration. $HR_{max}$ was determined using \ref{hrmax} and $HR_{min}$ was set to 45 beats per minute.
 \begin{align}\label{hrmax}
 HR_{max} &= \text{Maximum Physiological HR} - \text{Average Subject Age}\\
 IBI_{min} &= \frac{60000}{HR_{max}}	[ms]\\
 IBI_{max} &= \frac{60000}{HR_{min}}	[ms]
 \end{align}
-The resulting values for the new IBI-related thresholds $IBI_{max}$ and $IBI_{min}$ were rounded to the next full integer and then used to identify outliers in the IBI series. Afterwards, all marked IBI were replaced using linear interpolation.\\
-\textbf{Ectopic Beat Identification.} To identify IBIs that resulted from ectopic beats we considered Kamath's suggestion. Thereby, a heartbeat interval was considered abnormal when the heartbeat interval increased by more than 32.5\% decreased by more than 24.5\% compared to the previous heartbeat \cite{Choi2016}. Equation \ref{kamath} shows the mathematical expression that was used as thresholding method for ectopic beat identification. 
+The resulting values for the new \gls{ibi}-related thresholds $IBI_{max}$ and $IBI_{min}$ were rounded to the next full integer and then used to identify outliers in the \gls{ibi} series. Afterwards, all marked \gls{ibi} were replaced using linear interpolation.\\
+\textbf{Ectopic Beat Identification.} To identify \gls{ibi}s that resulted from ectopic beats we considered Kamath's suggestion. Thereby, a heartbeat interval was considered abnormal when the heartbeat interval increased by more than 32.5\% decreased by more than 24.5\% compared to the previous heartbeat \cite{Choi2016}. Equation \ref{kamath} shows the mathematical expression that was used as thresholding method for ectopic beat identification. 
 \begin{equation} \label{kamath}
 IBI_{EB} = \lbrace IBI\vert 0.675 IBI_{n-1} < IBI_{n} < 1.245 IBI_{n-1}\rbrace  
 \end{equation}
-\textbf{Artifact Rejection.} To increase the robustness of the HRV analysis all regions with the presence of ectopic beats or noise for more than 3 seconds were removed entirely \cite{Clifford2002}.\\
-\textbf{Linear Interpolation.} We used linear interpolation to replace outliers and ectopic beats. First, IBIs immediately preceding and after the ectopic beat were marked for replacement. Afterwards, the total time encompassed by all marked IBIs was determined and the number of new beats $B$, that were inserted to replace them, was computed equation \ref{Bsingle} for single ectopic beats and equation \ref{Bseq} for a sequence of ectopic beats.
+\textbf{Artifact Rejection.} To increase the robustness of the \gls{hrv} analysis all regions with the presence of ectopic beats or noise for more than 3 seconds were removed entirely \cite{Clifford2002}.\\
+\textbf{Linear Interpolation.} We used linear interpolation to replace outliers and ectopic beats. First, \gls{ibi}s immediately preceding and after the ectopic beat were marked for replacement. Afterwards, the total time encompassed by all marked \gls{ibi}s was determined and the number of new beats $B$, that were inserted to replace them, was computed equation \ref{Bsingle} for single ectopic beats and equation \ref{Bseq} for a sequence of ectopic beats.
 \begin{equation}\label{Bsingle}
 B = \frac{IBI_{i}+IBI_{i+1}}{(IBI_{i-1}+IBI_{i+2})/2}
 \end{equation}
 \begin{equation}\label{Bseq}
 B = \frac{\sum_{j=i}^{i+N} IBI_{i}}{(IBI_{i-1}+IBI_{i+N+1})/2}
 \end{equation}
-As $B$ would in general not be an integer value, the computed values were rounded to obtain the nearest integer. After the determination of the number of IBIs to insert was completed, the values of said IBIs were computed using linear interpolation. The basic principle is shown in figure \ref{ebrep}.
+As $B$ would in general not be an integer value, the computed values were rounded to obtain the nearest integer. After the determination of the number of \gls{ibi}s to insert was completed, the values of said \gls{ibi}s were computed using linear interpolation. The basic principle is shown in figure \ref{ebrep}.
 
 %[insert: bvp_dt.jpg, source: \cite{Lippman1994}]
 \begin{figure}[h!]
 	\centering
   \includegraphics[width=1.0\textwidth, angle=0]{images/eb_replacement.jpg}
-	\caption[Linear Interpolation of Ectopic Beats]{A schematic of linear interpolation of ectopic beats on an ECG signal. RR-intervals before and after the ectopic beat are marked for replacement (vertival arrows). RR-intervals before and after the marked segment are used for interpolation (diagonal arrows). source: \cite{Lippman1994}}
+	\caption[Linear Interpolation of Ectopic Beats]{A schematic of linear interpolation of ectopic beats on an ECG signal. RR-intervals before and after the ectopic beat are marked for replacement (vertival arrows). RR-intervals before and after the marked segment are used for interpolation (diagonal arrows). Source: \cite{Lippman1994}}
 	\label{ebrep}
 \end{figure}
-\textbf{Data Rejection.} For short term recordings, such as the ones we conducted in this thesis, it is recommended that at least 80\% of a 5 minute segment of data should contain acceptable IBIs \cite{Clifford2002}. Therefore, recordings that failed this condition were barred from the subsequent feature extraction.
+\textbf{Data Rejection.} For short term recordings, such as the ones we conducted in this thesis, it is recommended that at least 80\% of a 5 minute segment of data should contain acceptable \gls{ibi}s \cite{Clifford2002}. Therefore, recordings that failed this condition were barred from the subsequent feature extraction.
 
 % INTER BEAT INTERVALS
 %	- DETECT OUTLIER
@@ -125,7 +125,16 @@ As $B$ would in general not be an integer value, the computed values were rounde
 \newpage
 \subsubsection{Feature Extraction}
  %FEATURE EXTRACTION
-HRV feature extraction was based entirely on the recommendations given by the Task Force (1996). The selected measures are shown in the tables below, sorted by their domains.
+\gls{hrv} feature extraction was based entirely on the recommendations given by the Task Force (1996). The selected measures are shown in the tables below, sorted by their domains. %no geometrical features 
+%The major advantage of geometric methods lies
+%in their relative insensitivity to the analytic quality of
+%the series of NN intervals[20]. The major disadvantage is
+%the need for a reasonable number of NN intervals to
+%construct the geometric pattern. In practice, recordings
+%of at least 20 min (but preferably 24 h) should be used
+%to ensure the correct performance of the geometric
+%methods, i.e. the current geometric methods are inappropriate
+%to assess short-term changes in HRV.\\
 
 \begin{table}[h!]
 \caption[HRV Feature Selection 1]{HRV Feature Selection 1}
@@ -160,7 +169,7 @@ rIBI & $ms$ & \multicolumn{2}{c}{\makecell[l]{The difference between the longest
  & & & \\
 \hline
  & & & \\
-Total power & $ms^2$ & \makecell[l]{The variance of all \gls{ibi}} & $\leq$ 0.4 Hz\\
+Total power & $ms^2$ & \makecell[l]{The variance of all inter beat  intervals} & $\leq$ 0.4 Hz\\
 VLF & $ms^2$ & \makecell[l]{Power in very low frequency range} & $\leq$ 0.04 Hz\\
 LF & $ms^2$ & \makecell[l]{Power in low frequency range} & 0.04-0.15 Hz\\
 nLF & $n.u.$ & \makecell[l]{LF power in normalized units \\ LF/(Total Power–VLF)$\cdot$100} & \\
@@ -174,7 +183,6 @@ LF/HF &  & \makecell[l]{Ratio of LF power to HF power} & \\
 
 The power for the three spectral components (see \ref{freqfeat}) is represented by the average bandpower in the respective frequency range. In order to calculate the average bandpower, we used Welch's method in conjunction with a Hann window. Which is a commonly used method to compute an estimate of the spectral density by dividing the data into overlapping segments, computing a modified periodogram for each segment, and averaging the periodograms. Afterwards, the resulting frequency bins were assigned to the respective bands and the absolute power was approximated by integration ,using the composite trapezoidal rule. The data that was subjected to spectral analysis was obtained by creating a discrete event series, using the \gls{ibi} tachogram, and interpolating it with a sampling frequency of 7 Hz. 
 
-
 \newpage
 
 \subsection{GSR}
@@ -182,12 +190,12 @@ The power for the three spectral components (see \ref{freqfeat}) is represented 
 % GSR PRE PROCESSING
 %	- low pass zero phase filtering
 %	- smoothing: moving average filtering
-As we were only interested in the tonic component of GSR, pre-processing was focused primarily on artifact removal and noise reduction. The following paragraph covers all measures that were applied in the process of pre-processing.\\
+As we were only interested in the tonic component of \gls{gsr}, pre-processing was focused primarily on artifact removal and noise reduction. The following paragraph covers all measures that were applied in the process of pre-processing.\\
 \textbf{Lowpass Filtering.} A zero-phase fourth-order Butterworth lowpass filter, with a cutoff frequency of 1.0 Hz was implemented to remove high frequency artifacts, caused by electrode movement or electrical noise.\\
-\textbf{Mean Correction.} To account for environmental influences such as temperature and humidity the filtered signal was corrected using the mean GSR value of the baseline measurement. The mean corrected data was then subjected to the feature extraction methods.
+\textbf{Mean Correction.} To account for environmental influences such as temperature and humidity the filtered signal was corrected using the mean \gls{gsr} value of the baseline measurement. The mean corrected data was then subjected to the feature extraction methods.
 \subsubsection{Feature Extraction}\label{gsrfe}
 % FEATURE EXTRACTION
-GSR feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the table below.
+\gls{gsr} feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the table below.
 \begin{table}[h!]
 \caption[GSR Feature Selection]{GSR Feature Selection}
 \begin{tabular}{cccc}
@@ -211,7 +219,7 @@ sdGSR & $\mu S$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of the 
 \subsubsection{Pre-Processing}
 % TEMPERATURE PRE PROCESSING
 %	- smoothing: moving average filtering
-The pre-processing of the skin temperature signal was identical to the methods applied to the GSR signal. Therefore, we refer to section \ref{gsrpp} at this point.
+The pre-processing of the skin temperature signal was identical to the methods applied to the \gls{gsr} signal. Therefore, we refer to section \ref{gsrpp} at this point.
 \subsubsection{Feature Extraction}
 % FEATURE EXTRACTION
 Similar to \ref{gsrfe}, feature extraction was focused on deriving a number of basic statistical time domain measures. The selected measures are shown in the table below.
@@ -236,14 +244,14 @@ sdST & $^{\circ}C$ & \multicolumn{2}{c}{\makecell[l]{The standard deviation of t
 \newpage
 \section{Data Interpretation}\label{datainterpretation}
 % ml methods
-Similar to data analysis, we handled data interpretation using the programming language Python in combination with the PyCharm IDE. In particular, we used the scikit-learn package to implement data and feature preparation methods, as well as parameter optimization in the training process.
+Similar to data analysis, we handled data interpretation using the programming language Python in combination with the PyCharm \gls{ide}. In particular, we used the scikit-learn package to implement data and feature preparation methods, as well as parameter optimization in the training process.
 
 \subsection{Preparation} 
 \textbf{Formatting.} During the feature extraction process, extracted features from one session were separated by signal type and stored in individual Python dictionaries. Therefore, a subroutine was built to extract the features from their individual dictionaries and sort them by the session they originated from. The resulting data points were comprised of all features that were extracted from one recording session (e.g. a 5 minute baseline recording).
 Afterwards, those data points were converted into a NumPy array with the dimensions $n \times f$, where $n$ was the number of data points (i.e. the sum of all recorded sessions of all the subjects) and $f$ was the number of features that were extracted for each data point.\\
 \textbf{Generating Training and Test Sets.} A common practice in machine learning to prevent a classifier from overfitting is to reserve some of the data for testing and validation purposes. Therefore, the data set was divided into training and test samples. Approximately 25\% of data points were reserved for algorithm testing, and the remaining 75\% were used for training purposes. This step was implemented using the $\text{\_train\_test\_split}$ helper function in the scikit-learn toolbox.\\
 \textbf{K-fold Crossvalidation} is a convenient way to facilitate the evaluation of the training process without having to resort to the test samples. By employing k-fold Crossvalidation on the training set we were able to compensate for the small sample size of our data set while still reserving the test samples for the final validation.\\
-\textbf{Feature Preparation.} The performance of some machine learning techniques is extremely dependent on data representation. In particular, SVM and Neural Networks benefit from data Normalization (i.e. features are represented as values between 0 and 1). Therefore, we used Python's $\text{MinMaxScaler}$ function to translate each feature individually to a range of 0 to 1.\\
+\textbf{Feature Preparation.} The performance of some machine learning techniques is extremely dependent on data representation. In particular, \gls{svm} and Neural Networks benefit from data Normalization (i.e. features are represented as values between 0 and 1). Therefore, we used Python's $\text{MinMaxScaler}$ function to translate each feature individually to a range of 0 to 1.\\
 
 \newpage
 \subsection{Data Sets} 

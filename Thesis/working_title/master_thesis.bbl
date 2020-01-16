@@ -1,20 +1,20 @@
 \begin{thebibliography}{10}
 
 \bibitem{2017}
-{What is Machine Learning? A definition}.
+{What Is Machine Learning? A Definition}.
 \newblock {Blog, Machine Learning}, March 2017.
 
 \bibitem{E4SS}
-{E4 streaming server for Windows. Reference guide}, May 2018.
+{E4 Streaming Server For Windows. Reference Guide}, May 2018.
 
 \bibitem{apa2019}
 {APA Dictionary of Psychology.}, 2019.
 
 \bibitem{E4DP}
-{E4 streaming server. Data streaming packets}, January 2019.
+{E4 Streaming Server. Data Streaming Packets}, January 2019.
 
 \bibitem{E4MP}
-{E4 streaming server. Message protocol and command structure}, January 2019.
+{E4 Streaming Server. Message Protocol And Command Structure}, January 2019.
 
 \bibitem{Allan2007}
 J.~Allan.
@@ -96,7 +96,7 @@ M.~Elgendi, I.~Norton, M.~Brearley, D.~Abbott, and D.~Schuurmans.
 
 \bibitem{e4}
 Empatica, Via Stendhal 36, 20144 Milano (MI).
-\newblock {\em {E4 wristband from empatica. User's manual}}.
+\newblock {\em {E4 Wristband From Empatica. User's Manual}}.
 
 \bibitem{Fedota2010}
 J.~R. Fedota and R.~Parasuraman.
@@ -344,7 +344,7 @@ C.~D. Wickens and J.~Hollands.
 X.~Wu, V.~Kumar, J.~R. Quinlan, J.~Gosh, Q.~Yang, H.~Motoda, G.~J. McLachlan,
   A.~Ng, B.~Liu, P.~S. Yu, Z.-H. Zhou, M.~Steinbach, D.~J. Hand, and
   D.~Steinberg.
-\newblock {Top 10 algorithms in data mining}.
+\newblock {Top 10 Algorithms In Data Mining}.
 \newblock {\em {Knowl Inf Syst}}, 2008.
 
 \end{thebibliography}

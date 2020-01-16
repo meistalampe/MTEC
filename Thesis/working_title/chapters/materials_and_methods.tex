@@ -11,7 +11,7 @@ The Empatica E4 wristband is a wearable wireless device designed for comfortable
 \begin{figure}[h!]
 	\centering
   \includegraphics[width=0.7\textwidth]{images/E4overview.JPG}
-	\caption{Overview of the Empatica E4 wristband.}
+	\caption[Overview of the Empatica E4 wristband]{Overview of the Empatica E4 wristband. Source: \cite{e4}}
 	\label{e4overview}
 \end{figure}
 
@@ -50,7 +50,7 @@ $\mu$Siemens).
 \item Sampling frequency 64 Hz (Non customizable).
 \item LEDs: Green (2 LEDs), Red (2 LEDs) Photodiodes: 2
 units, total 15.5 $mm^{2}$ sensitive area.
-\item Sensor output: Blood Volume Pulse (BVP) (variation
+\item Sensor output: Blood Volume Pulse (variation
 of volume of arterial blood under the skin resulting
 from the heart cycle).
 \item Sensor output resolution 0.9 nW / Digit.
@@ -60,15 +60,15 @@ from the heart cycle).
 \subsubsection{Infrared Thermopile}
 \begin{itemize}
 \item Sampling frequency: 4 Hz (Non customizable).
-\item Range(Ambient temperature): -40...85$\deg$C (if available).
-\item Range(Skin temperature): -40...115$\deg$C.
-\item Resolution: 0.02$\deg$C.
-\item Accuracy $\pm$0.2$\deg$C within 36-39$\deg$C.
+\item Range(Ambient temperature): -40...85$^{\circ}$C (if available).
+\item Range(Skin temperature): -40...115$^{\circ}$C.
+\item Resolution: 0.02$^{\circ}$C.
+\item Accuracy $\pm$0.2$^{\circ}$C within 36-39$^{\circ}$C.
 \end{itemize}
 
 \subsubsection{Real-time clock}
 \begin{itemize}
-\item Resolution(Recording mode): 5s synchronization resolution. Average of 6 seconds in 6 million seconds drift.
+\item Resolution(Recording mode): 5 second synchronization resolution. Average of 6 seconds in 6 million seconds drift.
 \item Resolution(Streaming mode): Temporal resolution up to 0.2 seconds with connected device.
 \end{itemize}
 
@@ -78,19 +78,19 @@ The processing unit it the expression given to the computer, which is used to ru
 \newpage
 \section{Software}
 \subsection{E4 Streaming Server}
-The E4 streaming server for Windows (version of May, 2018) is a software application that allows to forward real-time data of one or multiple Empatica E4 devices to one or multiple TCP socket connections. However, as each TCP connection is limited to receiving data from only one Empatica E4 device, the connection to multiple devices would also require multiple TCP connections. The E4 streaming server is intended to provide access to the data streams using scripts and applications of any programming language \cite{E4SS}.
+The E4 streaming server for Windows (version of May, 2018) is a software application that allows to forward real-time data of one or multiple Empatica E4 devices to one or multiple \gls{tcp} socket connections. However, as each \gls{tcp} connection is limited to receiving data from only one Empatica E4 device, the connection to multiple devices would also require multiple \gls{tcp} connections. The E4 streaming server is intended to provide access to the data streams using scripts and applications of any programming language \cite{E4SS}.
 
 \begin{figure}[h!]
 	\centering
   \includegraphics[width=0.75\textwidth]{images/E4streamingServer.JPG}
-	\caption[E4 streaming server: connectivity and function]{Illustration of the connectivity and function of the E4 streaming server. On one side are E4s, connected over BTLE to the E4 streaming server using the BLED112 dongle. On the other side are TCP clients, connected to the E4 streaming server through TCP connections over the network. The lines originating from the E4s illustrate the data flow from the E4 through the E4 streaming server to the subscribed TCP client. For example, the data from the first E4 is forwarded by the E4 streaming server to the first and third TCP client. \cite{E4SS}}
+	\caption[E4 streaming server: connectivity and function]{Illustration of the connectivity and function of the E4 streaming server. On one side are E4s, connected over BTLE to the E4 streaming server using the BLED112 dongle. On the other side are TCP clients, connected to the E4 streaming server through TCP connections over the network. The lines originating from the E4s illustrate the data flow from the E4 through the E4 streaming server to the subscribed TCP client. For example, the data from the first E4 is forwarded by the E4 streaming server to the first and third TCP client. Source: \cite{E4SS}}
 	\label{e4ss}
 \end{figure}
 
 %Once the TCP clients are connected to the network, as shown in \ref{e4ss}, they are able to communicate with the E4 streaming server. This communication follows a specific message protocol that provides a general structure for client commands and server messages. In general, messages and commands are ASCII strings terminated with a newline character and encoded with UTF-8 \cite{E4MP}. 
 \newpage
 \subsection{MATLAB}
-MATLAB is a computing and visualization software package, published by MathWorks. It combines a desktop environment tuned for iterative analysis and design processes with a high level programming language for matrix-based mathematics. We used MATLAB (version R2015a) to create a TCP client that was deployed in our data extraction pipeline to send commands to, and receive messages from, the E4 streaming server. Thereby, allowing us to connect an E4 device and control data transmission via a simple user interface.
+MATLAB is a computing and visualization software package, published by MathWorks. It combines a desktop environment tuned for iterative analysis and design processes with a high level programming language for matrix-based mathematics. We used MATLAB (version R2015a) to create a \gls{tcp} client that was deployed in our data extraction pipeline to send commands to, and receive messages from, the E4 streaming server. Thereby, allowing us to connect an E4 device and control data transmission via a simple user interface.
 \subsection{PyCharm}
 PyCharm is an integrated development environment (\gls{ide}) for the Python programming language. It is developed by the company JetBrains and provides easy access to a large collection of scientific tools, used for data analysis and visualization. We used PyCharm to manage all data related tasks, such as pre-processing, feature extraction, and machine learning implementation. 
 
@@ -98,4 +98,4 @@ PyCharm is an integrated development environment (\gls{ide}) for the Python prog
 PsychoPy is an open-source package for running experiments in Python. PsychoPy combines the graphical strengths of OpenGL with the easy Python syntax to give scientists a free and simple stimulus presentation and control package. It is used for psychophysics, cognitive neuroscience and experimental psychology. We used PsychoPy to create and display the paradigm for our experiments. 
 
 \subsection{IAPS}
-The International Affective Picture System (IAPS) is being developed to provide a set of normative emotional stimuli for experimental investigations of emotion and attention. The goal of the IAPS is to develop a large set of standardized, emotionally-evocative, internationally-accessible, color photographs that includes contents across a wide range of semantic categories. The IAPS is being developed and distributed by the Center for Emotion and Attention (CSEA) at the University of Florida \cite{Lang2008}.
+The International Affective Picture System (\gls{iaps}) is being developed to provide a set of normative emotional stimuli for experimental investigations of emotion and attention. The goal of the \gls{iaps} is to develop a large set of standardized, emotionally-evocative, internationally-accessible, color photographs that includes contents across a wide range of semantic categories. The \gls{iaps} is being developed and distributed by the Center for Emotion and Attention (CSEA) at the University of Florida \cite{Lang2008}.
