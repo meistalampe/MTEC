@@ -369,6 +369,7 @@ def artifact_interpolation_bvp(peak_locations):
 
     return interpolated_ibi_data
 
+
 if __name__ == '__main__':
     main()
 

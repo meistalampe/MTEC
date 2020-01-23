@@ -82,7 +82,7 @@ def bvp_peak_detection(bvp_raw_data: np.ndarray, sampling_frequency: int = 64, v
     """
     # step 1: Bandpass filtering
     filtered_signal = zero_phase_filtering(data=bvp_raw_data, f_min=0.5, f_max=8.0,
-                                           sampling_frequency=sampling_frequency, filter_order=2, verbose=verbose)
+                                           sampling_frequency=sampling_frequency, filter_order=2)
     # step 2: Clipping
     clipped_signal = clipping(data=filtered_signal)
     # step 3: Squaring
@@ -99,7 +99,7 @@ def bvp_peak_detection(bvp_raw_data: np.ndarray, sampling_frequency: int = 64, v
 
     for n in range(len(MA_peak)):
         if MA_peak[n] >= first_threshold[n]:
-            np.put(blocks_of_interest, [n], 5000.0)
+            np.put(blocks_of_interest, [n], 2500.0)
         else:
             np.put(blocks_of_interest, [n], 0.0)
 
@@ -109,13 +109,23 @@ def bvp_peak_detection(bvp_raw_data: np.ndarray, sampling_frequency: int = 64, v
 
     if verbose:
         # plotting
+        time = list(range(0, len(filtered_signal)))
+        timed = [x / 64 for x in time]
+        x_axis = np.array(timed)
+        peaked = [x / 64 for x in peak_locations]
+        p_axis = np.array(peaked)
         plt.figure()
-        plt.plot(squared_clipped_signal, color='blue', linewidth=0.3, linestyle='-')
-        plt.plot(MA_peak, color='red', linewidth=0.3, linestyle='-.')
-        plt.plot(first_threshold, color='black', linewidth=0.3, linestyle=':')
+        # plt.plot(x_axis, filtered_signal, color='blue', linewidth=0.5, linestyle='-', label='S[n]')
+        # plt.plot(x_axis, clipped_signal, color='blue', linewidth=0.5, linestyle='-', label='Z[n]')
+        plt.plot(x_axis, squared_clipped_signal, color='blue', linewidth=0.5, linestyle='-', label='Z[n] **2')
+        plt.plot(x_axis, MA_peak, color='red', linewidth=0.5, linestyle='-.', label='MA_peak')
+        plt.plot(x_axis, first_threshold, color='black', linewidth=0.5, linestyle=':', label='MA_beat')
         # plt.legend(('input', 'MA peak', 'MA beat'))
-        plt.plot(blocks_of_interest, color='grey', linewidth=0.3, linestyle='--')
-        plt.plot(peak_locations, peak_amplitudes, 'vy', markersize=5.0)
+        plt.plot(x_axis, blocks_of_interest, color='grey', linewidth=0.5, linestyle='--')
+        plt.plot(p_axis, peak_amplitudes, 'vy', markersize=5.0)
+        #plt.plot(peak_locations, peak_amplitudes, 'vy', markersize=5.0)
+        plt.xlabel('time (seconds)')
+        plt.legend()
         plt.show()
 
     return peak_amplitudes, peak_locations
@@ -213,9 +223,14 @@ def zero_phase_filtering(data: np.ndarray, f_min: float, f_max: float, sampling_
 
     if verbose:
         # plot the result
+        time = list(range(0, len(s_n_gust)))
+        timed = [x / 64 for x in time]
+        x_axis = np.array(timed)
         plt.figure()
-        plt.plot(data, linewidth=1.0, label='input')
-        plt.plot(s_n_gust, color='black', linewidth=1.0, label='gust')
+        # plt.plot(data, linewidth=1.0, label='x[n]')
+        plt.plot(x_axis, s_n_gust, color='blue', linewidth=1.0, label='S[n]')
+        plt.xlabel('time (seconds)')
+        plt.legend()
         plt.show()
 
     return s_n_gust
@@ -257,9 +272,14 @@ def clipping(data, verbose: bool = False) -> np.ndarray:
 
     if verbose:
         # plot the result
+        time = list(range(0, len(s_n)))
+        timed = [x / 64 for x in time]
+        x_axis = np.array(timed)
         plt.figure()
-        plt.plot(s_n, linewidth=1.0, label='input')
-        plt.plot(z_n, linewidth=1.0, label='clipped')
+        plt.plot(x_axis, s_n, linewidth=1.0, label='S[n]')
+        plt.plot(x_axis, z_n, linewidth=1.0, label='Z[n]')
+        plt.xlabel('time (seconds)')
+        plt.legend()
         plt.show()
     return z_n
 
